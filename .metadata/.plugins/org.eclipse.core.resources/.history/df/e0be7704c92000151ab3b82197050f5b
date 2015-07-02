@@ -1,0 +1,9 @@
+
+public class Apple extends Droop/* Droop *//* Fruit */{
+	
+	int seedCount;
+	
+	public int getSeedCount(){
+		return seedCount;
+	}
+}

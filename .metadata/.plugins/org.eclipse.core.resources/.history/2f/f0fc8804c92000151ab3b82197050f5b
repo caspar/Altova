@@ -1,0 +1,12 @@
+public class Fruit {
+
+	protected String color;
+	
+	public Fruit(){
+		
+	}
+	
+	public String getColor(){
+		return color;
+	}
+}

@@ -1,0 +1,16 @@
+
+public class Legume{
+	protected int nitrogenContent;
+	// protected Fruit /* Property1 */;
+
+
+	public void setNitrogenContent(int nitrogenContent){
+		nitrogenContent = this.nitrogenContent;
+	}
+
+	public int getNitrogenContent(){
+		return nitrogenContent;
+	}
+
+}
+
