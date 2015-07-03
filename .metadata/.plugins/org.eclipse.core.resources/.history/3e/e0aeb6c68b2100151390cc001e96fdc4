@@ -1,0 +1,41 @@
+package oldExamples;
+
+import com.sun.javadoc.*;
+import java.lang.annotation.*;
+
+public class AnnotationViewer {
+    public static boolean start(RootDoc root)
+    {
+        ClassDoc[] classes = root.classes();
+
+        for (ClassDoc cls : classes) {
+            showAnnotations(cls);
+        }
+        return(true);
+    }
+
+    static void showAnnotations(ClassDoc cls)
+    {
+        System.out.println("Annotations for class [" + cls + "]");
+        process(cls.annotations());
+
+        System.out.println();
+        for(MethodDoc m : cls.methods()) {
+            System.out.println("Annotations for method [" + m + "]");
+            process(m.annotations());
+            System.out.println();
+        }
+    }
+
+    static void process(AnnotationDesc[] anns)
+    {
+        for (AnnotationDesc ad : anns) {
+            AnnotationDesc.ElementValuePair evp[] = ad.elementValues();
+
+            for(AnnotationDesc.ElementValuePair e : evp) {
+                System.out.println("  NAME: " + e.element() + ", VALUE=" + e.value());
+            }
+
+        }
+    }
+}
