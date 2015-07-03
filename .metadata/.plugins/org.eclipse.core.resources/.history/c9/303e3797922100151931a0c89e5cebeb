@@ -3,11 +3,6 @@ package methodReference;
 /*
  * @author Caspar Lant
  */
-
-interface Item{
-	public void constructor();
-}
-
 public class MethodReference {
 	
 	public static String staticMethodReference(){
@@ -24,7 +19,6 @@ public class MethodReference {
 	}
 	
 	public static void main(String[] args){
-		MethodReference constructorReference = Item::new;
-		Item item = constructorReference.constructor(); 
+		String::staticMethodReference();
 	}
 }

@@ -1,0 +1,20 @@
+package methodReference;
+
+public class MethodReference {
+	
+	public static void staicMethodReference(){
+		//static reference
+	}
+	
+	public MethodReference(){
+		//constructor reference
+	}
+	
+	public void instanceMethodReference(){
+		
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}
