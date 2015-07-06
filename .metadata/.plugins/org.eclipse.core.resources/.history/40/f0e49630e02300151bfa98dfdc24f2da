@@ -1,0 +1,19 @@
+package annotations;
+
+public class Annotations {
+
+	@Deprecated
+	public void deprecatedMethod(){
+		/*this method intentionally left blank*/
+	}
+	
+	@Author(value = "Caspar")
+	public void repeatingAnnotation(){
+		//do nothing
+	}
+	
+	public static void main(String[] args){
+		Annotations an = new Annotations();
+		an.repeatingAnnotation();
+	}
+}

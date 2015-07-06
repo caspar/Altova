@@ -1,0 +1,1749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Settings ReadJavaDocs="true" WriteJavaDocs="true" ReadCSharpDocComments="true" WriteCSharpDocComments="true" ReadVBasicDocComments="true" WriteVBasicDocComments="true">
+		<ProjectStyles showdotnetproperties="0" showregionnames="1"/>
+	</Settings>
+	<OpenDiagrams activeDiagram="3d03fc6b-14da-496f-bb25-2a5d62ce589c">
+		<OpenDiagramEntry>2c1f13a5-a289-4d7a-97a2-8269b96779b2</OpenDiagramEntry>
+		<OpenDiagramEntry>3d03fc6b-14da-496f-bb25-2a5d62ce589c</OpenDiagramEntry>
+	</OpenDiagrams>
+	<Model>
+		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<packagedElement>
+				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public">
+					<packagedElement>
+						<Component uuid="7ec30801-d8f8-4576-9d45-3c9549aae20d" name="TestSTMAirCondition" visibility="public" usedForCodeSyncronization="true" codeLang="C#4.0" isCodeProjectFile="true" codeProjectFileOrDirectory="TestSTMAirCondition.csproj">
+							<realization>
+								<ComponentRealization uuid="86ff89b1-8ed8-4dc8-aefa-086cc7159096" visibility="public" realizingClassifier="0120a42e-d6fe-4e8d-a59e-9b58181c1d2d"/>
+								<ComponentRealization uuid="9ebea589-6513-42c4-a156-c4a12fd04aa5" visibility="public" realizingClassifier="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6"/>
+								<ComponentRealization uuid="5d117de3-5899-4e92-a3ce-d690ec5d6bee" visibility="public" realizingClassifier="0644545d-a296-406e-bee2-8f8b4da7b712"/>
+								<ComponentRealization uuid="74a20dbb-0929-463a-afb6-bae48e5907fb" visibility="public" realizingClassifier="6ad80ae3-ec36-43c3-8911-80ea26b1c7f1"/>
+								<ComponentRealization uuid="bb10810c-8fe9-4648-80e3-09d2969f339e" visibility="public" realizingClassifier="25ad457c-f2b7-42d3-93f5-a91ba94f87f3"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package uuid="b9dfc4f7-6015-4ea8-bedb-9532b71c16d2" name="TestSTMAirCondition" visibility="public">
+					<packagedElement>
+						<Package uuid="9e6d282d-5601-4b5c-89c7-bc4e4547e841" name="AirCondition" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="e46d20a4-72b7-4859-8620-113e336c8188" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+							</appliedStereotype>
+							<packagedElement>
+								<CallEvent uuid="786763f5-ee94-44c7-9ce7-efdc35ca7a98" visibility="public" operation="a2d3442b-9497-48c7-9115-c2ea72ea4004"/>
+								<CallEvent uuid="d6ed8496-f964-49f1-a068-5c56f252b500" visibility="public" operation="e3cf433c-b4b9-4c66-b05c-d51fd5040198"/>
+								<CallEvent uuid="76d72f2f-6fb0-401a-8152-8c862e112e0f" visibility="public" operation="135e6437-fbd5-4076-9ee2-0955c7e9305d"/>
+								<CallEvent uuid="83d1702f-84d5-4f71-b640-34fb56cd424f" visibility="public" operation="f62aa8e1-3724-4d7b-9a54-5b700977eba3"/>
+								<CallEvent uuid="9cf439f3-4c80-4d65-8783-ba1d5acd023b" visibility="public" operation="f62aa8e1-3724-4d7b-9a54-5b700977eba3"/>
+								<CallEvent uuid="f0d3f11c-b793-463c-9107-9a23988d4d81" visibility="public" operation="f62aa8e1-3724-4d7b-9a54-5b700977eba3"/>
+								<CallEvent uuid="dd03a781-c7bd-4766-8f92-4da6d0bc629d" visibility="public" operation="a2d3442b-9497-48c7-9115-c2ea72ea4004"/>
+								<CallEvent uuid="7b61ba99-d75f-4261-b10f-127d1be4e91d" visibility="public" operation="e3cf433c-b4b9-4c66-b05c-d51fd5040198"/>
+								<Class uuid="0120a42e-d6fe-4e8d-a59e-9b58181c1d2d" name="AirConditionController" visibility="public" usedForCodeSyncronization="true">
+									<codeFileName>
+										<CodeFileName name="AirConditionController.cs"/>
+									</codeFileName>
+									<ownedBehavior>
+										<StateMachine uuid="0188b2a0-2242-4993-8e12-c94528e65095" name="AirCondition" visibility="public" autoUpdateCode="true">
+											<codeGenerationOptions/>
+											<region>
+												<Region uuid="bc7e1493-c2aa-426d-bfe0-8cbc20b42bf1" name="MainRegion">
+													<subvertex>
+														<Pseudostate uuid="d046816e-df14-4d0b-b0b7-dbe10bed6e62"/>
+														<State uuid="5df37687-2cb3-428a-b0a4-3a4729745fc8" name="Operating">
+															<region>
+																<Region uuid="aaa44671-6a4c-4927-a276-7db5a970c462" name="RegionMode">
+																	<subvertex>
+																		<State uuid="7edff010-fa1b-4600-af0d-7d8e53624afe" name="Heater">
+																			<entry>
+																				<Activity uuid="5b10b18e-920b-4332-b763-4792da1bc004" name="OnEntryHeater" visibility="public" specification="010fba7c-9624-4df6-82a9-0bac4dd185d8"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="da7555e6-12d1-4309-a085-6a400a14f99a" name="OnExitHeater" visibility="public" specification="6b75bfd1-dd54-4014-9a83-dfc087f1e7e6"/>
+																			</exit>
+																		</State>
+																		<State uuid="6153f019-74bd-488f-af40-c2d44979fabc" name="Cooler">
+																			<entry>
+																				<Activity uuid="cabe8362-0715-4e27-a010-721d953d31ff" name="OnEntryCooler" visibility="public" specification="53e8ef46-c946-40fe-81ab-f1c57903c3c3"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="b682f345-aa7b-4cf1-874f-516ab4c072fd" name="OnExitCooler" visibility="public" specification="82ed77ea-a767-4c68-8b16-d38c097be33f"/>
+																			</exit>
+																		</State>
+																		<Pseudostate kind="shallowHistory" uuid="e08544dc-1d7c-4492-81e9-d3d6b4bbc40d"/>
+																		<Pseudostate uuid="62557795-6a16-4d35-85de-dfa00950d1d5"/>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="7f7cc52b-665b-47bd-8853-703a98e8418a" source="6153f019-74bd-488f-af40-c2d44979fabc" target="7edff010-fa1b-4600-af0d-7d8e53624afe">
+																			<trigger>
+																				<Trigger uuid="fc870b56-43c4-4537-a39d-800c142ca121" event="7b61ba99-d75f-4261-b10f-127d1be4e91d"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="9ea32c45-1058-4367-8df0-b908fb6d8347" source="7edff010-fa1b-4600-af0d-7d8e53624afe" target="6153f019-74bd-488f-af40-c2d44979fabc">
+																			<trigger>
+																				<Trigger uuid="e8f99132-c725-42d7-ba0c-e65123c35ba7" event="d6ed8496-f964-49f1-a068-5c56f252b500"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="c362f7a2-2922-47a7-bd4a-94bdb7b0368b" source="62557795-6a16-4d35-85de-dfa00950d1d5" target="7edff010-fa1b-4600-af0d-7d8e53624afe"/>
+																	</transition>
+																</Region>
+																<Region uuid="60375408-64ff-4bd0-ba3b-4612bd64293b" name="RegionSpeed">
+																	<subvertex>
+																		<State uuid="9ea78cbf-711a-4c49-9006-6988862d9fd1" name="High"/>
+																		<State uuid="d6eaa690-951d-4e9b-a65d-c05980124c74" name="Off"/>
+																		<State uuid="498cfa6e-4983-4c86-bd95-7f4458702f22" name="Low"/>
+																		<Pseudostate uuid="b0a5f113-35a1-4573-b109-203537d51aca"/>
+																		<Pseudostate kind="shallowHistory" uuid="ddba2605-1cb4-4faa-8194-cf0545b3c3e1"/>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="0cd1090b-a015-49c9-af2b-1027b9b466f0" source="b0a5f113-35a1-4573-b109-203537d51aca" target="d6eaa690-951d-4e9b-a65d-c05980124c74"/>
+																		<Transition uuid="c229866a-c234-4415-8e86-28bf6d969c14" source="498cfa6e-4983-4c86-bd95-7f4458702f22" target="9ea78cbf-711a-4c49-9006-6988862d9fd1">
+																			<trigger>
+																				<Trigger uuid="65779413-9bfc-4d64-af00-5533a7df9e94" event="83d1702f-84d5-4f71-b640-34fb56cd424f"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="c98c7902-8aed-4711-af14-036c83e7a4e5" source="9ea78cbf-711a-4c49-9006-6988862d9fd1" target="d6eaa690-951d-4e9b-a65d-c05980124c74">
+																			<trigger>
+																				<Trigger uuid="e41a7735-d03a-4a50-af94-27f834286817" event="9cf439f3-4c80-4d65-8783-ba1d5acd023b"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="56a19c1d-d030-4074-97d3-f4be94988082" source="d6eaa690-951d-4e9b-a65d-c05980124c74" target="498cfa6e-4983-4c86-bd95-7f4458702f22">
+																			<trigger>
+																				<Trigger uuid="709ece95-6f5f-4f18-aafa-bcf04fc36c02" event="f0d3f11c-b793-463c-9107-9a23988d4d81"/>
+																			</trigger>
+																		</Transition>
+																	</transition>
+																</Region>
+															</region>
+															<entry>
+																<Activity uuid="9ae11ba3-7ee0-4992-b52d-13dcade1bd09" name="OnEntryOperating" visibility="public" specification="33df535c-449c-4fdf-b050-f4b1b4c36909"/>
+															</entry>
+															<exit>
+																<Activity uuid="2d8a65a7-c167-430d-a293-ad063da7c6ad" name="OnExitOperating" visibility="public" specification="412d8a34-be8e-4fa0-b622-434eebeaf19b"/>
+															</exit>
+														</State>
+														<State uuid="c7b6de45-212e-459c-8705-ea59830aa06f" name="Off"/>
+														<State uuid="f4ec5182-2732-452d-86b0-be6f2b11e6a0" name="Standby">
+															<entry>
+																<Activity uuid="90b81766-aaf8-4e39-91aa-13d71ab823eb" name="OnEntryStandby" visibility="public" specification="b7b8cc15-742c-404e-b594-2bc8375668ab"/>
+															</entry>
+															<exit>
+																<Activity uuid="ae989ac5-2c40-4fcc-b1e6-1f20f77301fb" name="OnExitStandby" visibility="public" specification="92d369cc-8df6-44f7-a5a3-934c6e173c9a"/>
+															</exit>
+														</State>
+														<Pseudostate kind="fork" uuid="16bd204b-8601-4b0e-b5f7-d5e638c355ed"/>
+														<Pseudostate kind="fork" uuid="4560e08a-7b89-417f-b9cb-e1207190993c"/>
+													</subvertex>
+													<transition>
+														<Transition uuid="e1fd37ce-fae7-4091-a346-7e2bb48eb7da" source="d046816e-df14-4d0b-b0b7-dbe10bed6e62" target="c7b6de45-212e-459c-8705-ea59830aa06f"/>
+														<Transition uuid="7ecf6ef4-68b3-408e-b506-77e935b570c0" source="5df37687-2cb3-428a-b0a4-3a4729745fc8" target="c7b6de45-212e-459c-8705-ea59830aa06f">
+															<effect>
+																<Activity uuid="a056a1f3-6796-483c-803b-3d0dd7702da4" name="effect" visibility="public" specification="e5c21546-3ee0-4fd3-ba9e-bae6e9407f88"/>
+															</effect>
+															<trigger>
+																<Trigger uuid="1b3b5c71-8d9c-4c6c-b4aa-1e92ea35ae9a" event="76d72f2f-6fb0-401a-8152-8c862e112e0f"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="5de28b8a-fadd-4fcf-ab36-92023769f49b" source="5df37687-2cb3-428a-b0a4-3a4729745fc8" target="f4ec5182-2732-452d-86b0-be6f2b11e6a0">
+															<trigger>
+																<Trigger uuid="08d0ec36-581a-465c-bc94-ae8641860c89" event="dd03a781-c7bd-4766-8f92-4da6d0bc629d"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="ca6e5172-4b30-4184-b0f0-99c136484745" source="f4ec5182-2732-452d-86b0-be6f2b11e6a0" target="16bd204b-8601-4b0e-b5f7-d5e638c355ed">
+															<trigger>
+																<Trigger uuid="6c4bd6e0-7323-42b3-88f2-cf8060ac03f7" event="786763f5-ee94-44c7-9ce7-efdc35ca7a98"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="006f9597-5451-4751-914d-a5823e7b0da5" source="16bd204b-8601-4b0e-b5f7-d5e638c355ed" target="e08544dc-1d7c-4492-81e9-d3d6b4bbc40d"/>
+														<Transition uuid="cb5b2797-abb3-4be6-9fe5-1f04ecb56701" source="16bd204b-8601-4b0e-b5f7-d5e638c355ed" target="ddba2605-1cb4-4faa-8194-cf0545b3c3e1"/>
+														<Transition uuid="7236f6ac-c32e-4a55-8181-ef3bdad7b7d7" source="c7b6de45-212e-459c-8705-ea59830aa06f" target="4560e08a-7b89-417f-b9cb-e1207190993c">
+															<trigger>
+																<Trigger uuid="e367e01e-68cf-4d00-b792-cd89de4a2e73" event="71613672-0f7f-4fa1-b33b-e95922654b9a"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="a4e1ebb2-fa9f-45c4-be45-15d47ff1dba3" source="4560e08a-7b89-417f-b9cb-e1207190993c" target="498cfa6e-4983-4c86-bd95-7f4458702f22"/>
+														<Transition uuid="e76527ec-5ae8-4117-9244-7a05b0ce3223" source="4560e08a-7b89-417f-b9cb-e1207190993c" target="7edff010-fa1b-4600-af0d-7d8e53624afe"/>
+													</transition>
+												</Region>
+											</region>
+										</StateMachine>
+									</ownedBehavior>
+									<nestedClassifier>
+										<Enumeration uuid="506058b5-f9a2-4e6f-8d82-bc7aa8aa3e05" name="TStateId" visibility="public" usedForCodeSyncronization="true">
+											<ownedLiteral>
+												<EnumerationLiteral uuid="c16b9991-bc66-4682-8fd6-4b3f343c1acc" name="AirCondition_Root" visibility="public"/>
+												<EnumerationLiteral uuid="75a64dd5-868f-463a-b959-02c22c863b4c" name="AirCondition_MainRegion_Operating" visibility="public"/>
+												<EnumerationLiteral uuid="d8f7f718-d638-47fd-9068-25f0c287c8e1" name="AirCondition_MainRegion_Operating_RegionMode_Heater" visibility="public"/>
+												<EnumerationLiteral uuid="de62777f-5bac-400b-a197-0682422bb991" name="AirCondition_MainRegion_Operating_RegionMode_Cooler" visibility="public"/>
+												<EnumerationLiteral uuid="302bc01b-80d4-48e8-8ca0-4137abba3391" name="AirCondition_MainRegion_Operating_RegionSpeed_High" visibility="public"/>
+												<EnumerationLiteral uuid="44a4dc98-fb4e-496e-8edc-df6304d32084" name="AirCondition_MainRegion_Operating_RegionSpeed_Off" visibility="public"/>
+												<EnumerationLiteral uuid="33c1a250-7043-4e05-b110-60592cfe5aef" name="AirCondition_MainRegion_Operating_RegionSpeed_Low" visibility="public"/>
+												<EnumerationLiteral uuid="9f9a92fd-f73c-45e9-b975-250809ae0cfe" name="AirCondition_MainRegion_Off" visibility="public"/>
+												<EnumerationLiteral uuid="620225ae-6ff9-47b8-a478-aa1c29aea5e0" name="AirCondition_MainRegion_Standby" visibility="public"/>
+											</ownedLiteral>
+										</Enumeration>
+										<Interface uuid="5f5ef4f9-eb2a-4834-9c13-c089174ed2aa" name="IState" visibility="public" usedForCodeSyncronization="true">
+											<ownedOperation>
+												<Operation uuid="b564797f-f931-4c6c-ae51-f104050bd331" name="getName" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="1cc4a4c9-2bd8-4cb0-b969-de3602234299" name="return" direction="return" type="000e2103-7510-11d9-86f2-000476a22f44"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="5d37da5c-4003-465d-8689-ca50d87110df" name="getId" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="e29c3263-34d2-4e61-bff8-4c2a03b5925f" name="return" direction="return" type="506058b5-f9a2-4e6f-8d82-bc7aa8aa3e05"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="e1dc6122-d07e-4598-8a9e-3b0880c3a0c9" name="getRegions" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="109f3042-4dc6-49b6-8fa6-1a085eb04ccd" name="return" direction="return" type="3110f49d-bd6a-4710-8ed7-30d17e0d190b">
+															<lowerValue>
+																<LiteralString uuid="036a95c3-6b9f-4dcb-b994-50f68a22bbb6" visibility="public" value="*"/>
+															</lowerValue>
+															<upperValue>
+																<LiteralString uuid="00b5929a-d52c-4d1d-8654-c05099fdf579" visibility="public" value="*"/>
+															</upperValue>
+														</Parameter>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Interface>
+										<Interface uuid="3110f49d-bd6a-4710-8ed7-30d17e0d190b" name="IRegion" visibility="public" usedForCodeSyncronization="true">
+											<ownedOperation>
+												<Operation uuid="d7ab32e7-be94-47be-8bea-edd467fe0dd0" name="getName" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="2464bd0a-1dbb-4077-bf98-bb5da42e231c" name="return" direction="return" type="000e2103-7510-11d9-86f2-000476a22f44"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="d400dd67-be69-4716-b086-2cbce06d423a" name="getStates" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="4ea706ee-e4bb-4a47-a995-a6f5f14d1fdc" name="return" direction="return" type="5f5ef4f9-eb2a-4834-9c13-c089174ed2aa">
+															<lowerValue>
+																<LiteralString uuid="a32ba4e8-7c69-464b-9725-5b29679627b8" visibility="public" value="*"/>
+															</lowerValue>
+															<upperValue>
+																<LiteralString uuid="135987a2-b12c-48b0-87e2-b9840de69a6e" visibility="public" value="*"/>
+															</upperValue>
+														</Parameter>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="3079d6e6-fc38-4689-9bb0-4b2e988c32a1" name="getCurrentState" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="a32a7e5a-92f3-427f-b58c-f33e10a8dff7" name="return" direction="return" type="5f5ef4f9-eb2a-4834-9c13-c089174ed2aa"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Interface>
+										<Class uuid="20c14353-144e-4f7a-920f-1167ac7b93fc" name="CallEventAction" visibility="public" usedForCodeSyncronization="true">
+											<appliedStereotype>
+												<StereotypeApplication uuid="2c4fc1c0-6a5c-492b-947e-ce5977ae7d69" classifier="00161103-7510-11d9-86f2-000476a22f44"/>
+											</appliedStereotype>
+											<ownedOperation>
+												<Operation uuid="01d5d697-8409-4484-8007-30e9ef46d8e0" name="delegate" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="2bd30ac7-21ea-41dc-ace7-f659f4757e94" name="return" direction="return" type="00072103-7510-11d9-86f2-000476a22f44"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+									</nestedClassifier>
+									<ownedOperation>
+										<Operation uuid="135e6437-fbd5-4076-9ee2-0955c7e9305d" name="powerButton" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="96eca770-0357-47af-b35f-667f195446e7" name="return" direction="return" type="00072103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="f62aa8e1-3724-4d7b-9a54-5b700977eba3" name="speedSelect" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="016c079e-5aab-48a9-addd-b1e639e99822" name="return" direction="return" type="00072103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="e3cf433c-b4b9-4c66-b05c-d51fd5040198" name="modeSelect" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="1dd8781f-7fac-4d03-9430-f9f5468d72e4" name="return" direction="return" type="00072103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="a2d3442b-9497-48c7-9115-c2ea72ea4004" name="standbyButton" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="d81edd15-9041-4cfc-b408-adb6ee75c472" name="return" direction="return" type="00072103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="33df535c-449c-4fdf-b050-f4b1b4c36909" name="OnEntryOperating" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="a0e229b3-f8d4-4a73-ab6b-954e9c6f6c99" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="412d8a34-be8e-4fa0-b622-434eebeaf19b" name="OnExitOperating" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="18054c63-b9c6-4c1a-8fb5-8b08fd00ff60" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="010fba7c-9624-4df6-82a9-0bac4dd185d8" name="OnEntryHeater" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f3c8abfb-d417-4c54-b2cb-9867591fe688" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="6b75bfd1-dd54-4014-9a83-dfc087f1e7e6" name="OnExitHeater" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="bc95747c-124c-4d12-9425-4e4b1678ec89" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="53e8ef46-c946-40fe-81ab-f1c57903c3c3" name="OnEntryCooler" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="9cd28af1-3e0d-41fc-b425-c545ee7d5f9a" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="82ed77ea-a767-4c68-8b16-d38c097be33f" name="OnExitCooler" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="19fb67ad-9f31-4089-8695-a9fc0066aefc" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="b7b8cc15-742c-404e-b594-2bc8375668ab" name="OnEntryStandby" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f71c22c7-f3de-4762-907f-fd80b1f5a0e8" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="92d369cc-8df6-44f7-a5a3-934c6e173c9a" name="OnExitStandby" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="0a848599-390f-4cea-b5be-3a0043648d5c" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="e5c21546-3ee0-4fd3-ba9e-bae6e9407f88" name="On_Off_Operating_Effect" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="3b2321d7-cd25-4307-b5a7-db97ecb440c5" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="ab84477a-719b-4397-bae3-033a619635c8" name="OnDebugMessage" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="b786e711-8f90-48a2-bc24-20ae2ed80f54" classifier="00021103-7510-11d9-86f2-000476a22f44"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="6353f926-0f9c-4d81-9b3d-6a445b0e093c" name="str" type="000e2103-7510-11d9-86f2-000476a22f44"/>
+												<Parameter uuid="1bff9a05-0cc1-4e0e-87c8-6c5bf56e4fd8" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<CallEvent uuid="71613672-0f7f-4fa1-b33b-e95922654b9a" visibility="public" operation="135e6437-fbd5-4076-9ee2-0955c7e9305d"/>
+							</packagedElement>
+						</Package>
+						<Package uuid="a514ad7a-31db-4918-9890-3f1fec65368e" name="TestSTM" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="bf5afbe8-1569-4244-8263-a44a31856eca" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+							</appliedStereotype>
+							<hyperlink>
+								<Hyperlink2GuiElement uuid="5b4b65f2-81b8-4e3d-8bb2-5332ce331b52" hyperlinkedGuiElement="2c1f13a5-a289-4d7a-97a2-8269b96779b2"/>
+							</hyperlink>
+							<packagedElement>
+								<Class uuid="25ad457c-f2b7-42d3-93f5-a91ba94f87f3" name="Form1" visibility="public" usedForCodeSyncronization="true">
+									<codeFileName>
+										<CodeFileName name="Form1.cs"/>
+										<CodeFileName name="Form1.Designer.cs"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication uuid="47791c5d-764e-442e-b415-2bab7bac019a" classifier="00301103-7510-11d9-86f2-000476a22f44"/>
+									</appliedStereotype>
+									<generalization>
+										<Generalization uuid="2d562dd9-9719-4579-9e40-3cd64bcde7f0" general="573fed18-ec3a-4b28-a92b-d9f447853c86"/>
+									</generalization>
+									<ownedAttribute>
+										<Property uuid="a7e4be5f-36cd-493a-a6a7-8aa61b75b715" name="m_STM" visibility="private" type="f91ece18-4769-4cb4-94e0-cfe1157b6497">
+											<defaultValue>
+												<LiteralString uuid="18117ed6-9467-4c39-9288-a096a794c928" visibility="public" value="new MySTM()"/>
+											</defaultValue>
+										</Property>
+										<Property uuid="039aa796-9ae0-47ef-b434-3334b5dcbd41" name="m_nEventCounter" visibility="private" type="00032103-7510-11d9-86f2-000476a22f44">
+											<defaultValue>
+												<LiteralString uuid="4a271705-7e3c-4182-8c44-10ac23d769e6" visibility="public" value="0"/>
+											</defaultValue>
+										</Property>
+										<Property uuid="5050659a-4654-467b-a5c4-e8c8520d556d" name="components" visibility="private" type="2fda7a94-c639-4d43-80cf-c5ee97bcf394" DocComment="158664a9-1773-4a4c-9435-375870bab96e">
+											<ownedComment>
+												<Comment uuid="158664a9-1773-4a4c-9435-375870bab96e" body="&lt;summary&gt;&#13;Required designer variable.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="5050659a-4654-467b-a5c4-e8c8520d556d"/>
+												</Comment>
+											</ownedComment>
+											<defaultValue>
+												<LiteralString uuid="47140fd3-9e88-4fbc-baf8-dcd63fb10aa7" visibility="public" value="null"/>
+											</defaultValue>
+										</Property>
+										<Property uuid="11eecacb-61fc-4063-81a7-add41b072dff" name="m_ToolStrip" visibility="private" type="9540d5d4-c6d9-48dc-b934-51b64ecdb67a"/>
+										<Property uuid="46e59223-e864-4a05-8d14-3636323168c5" name="m_ToolStripButton" visibility="private" type="5cecfa62-6608-4427-aaae-e2874c59b01b"/>
+										<Property uuid="6cbd42fd-14ae-4f39-b923-5760d9b6ec02" name="label2" visibility="private" type="7fa8de7b-24b0-45df-be20-721924876f45"/>
+										<Property uuid="ee898ce2-6cb0-495e-90f9-db20f7dcdacb" name="label1" visibility="private" type="7fa8de7b-24b0-45df-be20-721924876f45"/>
+										<Property uuid="4cb95589-77a0-46d9-bc8b-ce49c13244de" name="m_CurrentStateTree" visibility="private" type="1502a990-e017-429e-b6ee-a9d1ebca6dbd"/>
+										<Property uuid="5bd285d6-781b-49c8-a460-76fe6f5f48be" name="m_DebugOutputTextBox" visibility="private" type="059c7b8b-4b59-4f4d-9129-6a24552076ce"/>
+										<Property uuid="ba9b3241-3721-488a-9bd8-561df0b9a5e1" name="splitContainer1" visibility="private" type="f6e18a58-7a7f-4457-b42a-2067da47a5f8"/>
+									</ownedAttribute>
+									<nestedClassifier>
+										<Class uuid="f91ece18-4769-4cb4-94e0-cfe1157b6497" name="MySTM" visibility="public" usedForCodeSyncronization="true" DocComment="92408c73-8685-40b3-b614-cdd0dbde2ce3">
+											<ownedComment>
+												<Comment uuid="92408c73-8685-40b3-b614-cdd0dbde2ce3" body="&lt;summary&gt;&#13;derive from generated controller class to customize behavior, implement guard conditions,&#13;entry/exit/do actions, forward transition effects, handle debug messages...&#13;&lt;/summary&gt;">
+													<annotatedElement idref="f91ece18-4769-4cb4-94e0-cfe1157b6497"/>
+												</Comment>
+											</ownedComment>
+											<generalization>
+												<Generalization uuid="3c45004e-635f-4c72-b2c3-1df4c8bdcb6c" general="0120a42e-d6fe-4e8d-a59e-9b58181c1d2d"/>
+											</generalization>
+											<ownedAttribute>
+												<Property uuid="75c27231-5e8e-47b0-b7cd-01106e2cb878" name="m_sDebugMessage" visibility="public" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+													<defaultValue>
+														<LiteralString uuid="14313d5a-9886-4f2a-80b9-3fae2587a897" visibility="public" value="&quot;&quot;"/>
+													</defaultValue>
+												</Property>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="be306728-a859-4e9e-94f4-a5b7d886c552" name="OnDebugMessage" visibility="public">
+													<appliedStereotype>
+														<StereotypeApplication uuid="83d6f0d3-7a86-4d49-afb1-ffcca0eaa695" classifier="00011103-7510-11d9-86f2-000476a22f44"/>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="f907ea11-481a-4d14-aafa-9d8c6b371363" name="str" type="000e2103-7510-11d9-86f2-000476a22f44"/>
+														<Parameter uuid="e0460dae-2a59-4420-b603-8206ec424ec9" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+										<Class uuid="b2895de1-5eaf-4195-b5fd-c0960fedd9d0" name="STMEventSender" visibility="public" usedForCodeSyncronization="true" DocComment="ccd222d5-d584-4a23-9c6c-fe9719e757e0">
+											<ownedComment>
+												<Comment uuid="ccd222d5-d584-4a23-9c6c-fe9719e757e0" body="&lt;summary&gt;&#13;STMEventSender is used to forward ToolStripItem &apos;Click&apos; events by using the generated CallEventAction delegate&#13;&lt;/summary&gt;">
+													<annotatedElement idref="b2895de1-5eaf-4195-b5fd-c0960fedd9d0"/>
+												</Comment>
+											</ownedComment>
+											<ownedAttribute>
+												<Property uuid="a5ee7ce0-238e-4753-9a17-a91226f2206b" name="m_Action" visibility="private" type="20c14353-144e-4f7a-920f-1167ac7b93fc"/>
+												<Property uuid="fba6b756-2933-4ec4-b7f7-28a2722cc2ae" name="m_Form" visibility="private" type="25ad457c-f2b7-42d3-93f5-a91ba94f87f3"/>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="b226d297-e4ec-486d-b0e7-46756544ebf2" name="STMEventSender" visibility="public">
+													<appliedStereotype>
+														<StereotypeApplication uuid="56c16cfa-4979-443d-9919-d7e06b8fa04e" classifier="00531103-7510-11d9-86f2-000476a22f44"/>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="7209d032-f840-4f3e-96ba-041682be07ad" name="f" type="25ad457c-f2b7-42d3-93f5-a91ba94f87f3"/>
+														<Parameter uuid="77d9cef9-5164-46d3-a05d-2792571cff61" name="a" type="20c14353-144e-4f7a-920f-1167ac7b93fc"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="d21d4a50-532a-45bc-9c87-ea2ffa5141d6" name="CallEvent" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="cb4cb743-cd08-4154-9a68-a160841db92d" name="sender" type="000f2103-7510-11d9-86f2-000476a22f44"/>
+														<Parameter uuid="8a9f11f9-0318-4b74-9fd7-8b2aab2f2586" name="e" type="351ff587-4771-4975-8bd7-fb3ed0f66c0c"/>
+														<Parameter uuid="50583f55-d240-42fd-bc93-be80f88cadca" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+									</nestedClassifier>
+									<ownedOperation>
+										<Operation uuid="c75d104c-3740-4522-9438-9dc1a17e10da" name="Form1" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="dd16636c-381a-4136-8981-8cdc17a13a81" classifier="00531103-7510-11d9-86f2-000476a22f44"/>
+											</appliedStereotype>
+										</Operation>
+										<Operation uuid="5e1ff131-39e8-427b-80a7-2f2aa0113bc3" name="UpdateDisplay" visibility="private">
+											<ownedParameter>
+												<Parameter uuid="d63c925e-7d33-48ce-a191-a691b3cbca7f" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="67ed4037-0b0e-4e94-8316-ce249b4bf871" name="UpdateCurrentStateTree" visibility="private">
+											<ownedParameter>
+												<Parameter uuid="dc5445b0-1bc0-46ab-9af0-7142975f7952" name="state" type="5f5ef4f9-eb2a-4834-9c13-c089174ed2aa"/>
+												<Parameter uuid="38928790-0513-437e-b048-ec00b38373c0" name="node" type="ae981246-dafa-482a-9cac-4410b992dc5c"/>
+												<Parameter uuid="9425abb9-9af8-4fe8-a146-ca8be6dc4c38" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="40286980-23d8-4132-9cff-6d0c2d3c41a0" name="Dispose" visibility="protected" DocComment="ed54c5ca-42cb-44b3-931d-c2d331f1ba3e">
+											<ownedComment>
+												<Comment uuid="ed54c5ca-42cb-44b3-931d-c2d331f1ba3e" body="&lt;summary&gt;&#13;Clean up any resources being used.&#13;&lt;/summary&gt;&#13;&lt;param name=&quot;disposing&quot;&gt;true if managed resources should be disposed; otherwise, false.&lt;/param&gt;">
+													<annotatedElement idref="40286980-23d8-4132-9cff-6d0c2d3c41a0"/>
+												</Comment>
+											</ownedComment>
+											<appliedStereotype>
+												<StereotypeApplication uuid="ffede39c-4b16-4d84-a3f4-1b09f6f7aa72" classifier="00011103-7510-11d9-86f2-000476a22f44"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="6a919985-aac5-4dcd-9c72-107ce28713e5" name="disposing" type="00072103-7510-11d9-86f2-000476a22f44"/>
+												<Parameter uuid="7778e222-3636-4efc-82d3-b3af23f25422" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="326d096a-ce6f-4662-987d-f2203267ea7a" name="InitializeComponent" visibility="private" DocComment="3e9e8f27-393b-48ac-9437-0852a77a68b0">
+											<ownedComment>
+												<Comment uuid="3e9e8f27-393b-48ac-9437-0852a77a68b0" body="&lt;summary&gt;&#13;Required method for Designer support - do not modify&#13;the contents of this method with the code editor.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="326d096a-ce6f-4662-987d-f2203267ea7a"/>
+												</Comment>
+											</ownedComment>
+											<ownedParameter>
+												<Parameter uuid="a3607403-6be8-4d76-8939-c1dd811ae57d" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<Class uuid="6ad80ae3-ec36-43c3-8911-80ea26b1c7f1" name="Program" visibility="package" usedForCodeSyncronization="true">
+									<codeFileName>
+										<CodeFileName name="Program.cs"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication uuid="20445062-f307-4e0c-adb1-d577e49903c4" classifier="00441103-7510-11d9-86f2-000476a22f44"/>
+									</appliedStereotype>
+									<ownedOperation>
+										<Operation uuid="aae52859-0296-4e70-ac1d-54f8b5c90f95" name="Main" visibility="private" isStatic="true" DocComment="7ebf9e34-e36f-4cfd-8c4f-05128123b413">
+											<ownedComment>
+												<Comment uuid="7ebf9e34-e36f-4cfd-8c4f-05128123b413" body="&lt;summary&gt;&#13;The main entry point for the application.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="aae52859-0296-4e70-ac1d-54f8b5c90f95"/>
+												</Comment>
+											</ownedComment>
+											<appliedStereotype>
+												<StereotypeApplication uuid="b8ac8867-678f-4f50-94d3-5ba1c6657a1b" classifier="00191103-7510-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="b2727123-4486-4ed9-8293-6e21528d6da5" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="d97593eb-6523-4717-bd7c-d4c501cc5c93" visibility="public" instance="00601103-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="7615d898-1299-4366-9fa4-95566bcbe9d6" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<Association uuid="421db7f6-ba02-4abe-ae62-d511182b642a" visibility="public">
+									<memberEnd idref="a7e4be5f-36cd-493a-a6a7-8aa61b75b715"/>
+									<ownedEnd>
+										<Property uuid="e808e758-ab14-487d-ba66-5b94f0978158" type="25ad457c-f2b7-42d3-93f5-a91ba94f87f3"/>
+									</ownedEnd>
+								</Association>
+								<Association uuid="06cd549d-3dca-4b8e-b9e1-6439c1b9b9d8" visibility="public">
+									<memberEnd idref="fba6b756-2933-4ec4-b7f7-28a2722cc2ae"/>
+									<ownedEnd>
+										<Property uuid="193974d9-6348-4dab-af5b-b30142b2315b" type="b2895de1-5eaf-4195-b5fd-c0960fedd9d0"/>
+									</ownedEnd>
+								</Association>
+							</packagedElement>
+						</Package>
+						<Package uuid="f79078ac-1323-48b5-ae62-199c2fc09545" name="TestSTMAirCondition" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="e0cf4b0a-b0ec-4f8f-a4a2-ee7a74b74a00" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Package uuid="c07b1af2-5448-4648-bc2d-797aafe77f6a" name="Properties" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication uuid="d347d97f-0d3c-4b67-8089-78381ab95c0e" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+									</appliedStereotype>
+									<packagedElement>
+										<Class uuid="0644545d-a296-406e-bee2-8f8b4da7b712" name="Resources" visibility="package" usedForCodeSyncronization="true" DocComment="d037a8ef-29b5-4866-a92a-d29f339bba38">
+											<codeFileName>
+												<CodeFileName name="Properties\Resources.Designer.cs"/>
+											</codeFileName>
+											<ownedComment>
+												<Comment uuid="d037a8ef-29b5-4866-a92a-d29f339bba38" body="&lt;summary&gt;&#13;  A strongly-typed resource class, for looking up localized strings, etc.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="0644545d-a296-406e-bee2-8f8b4da7b712"/>
+												</Comment>
+											</ownedComment>
+											<appliedStereotype>
+												<StereotypeApplication uuid="79e1a564-6e6d-454d-a2c4-347d2cc58d8e" classifier="001b1103-7510-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="49025bce-4828-4b06-a127-ef1fa6430082" definingFeature="001c1103-7510-11d9-86f2-000476a22f44">
+															<value>
+																<LiteralString uuid="cee9f49f-0489-4818-ab8e-6532af3302c4" visibility="public" value="global::System.CodeDom.Compiler.GeneratedCodeAttribute(&quot;System.Resources.Tools.StronglyTypedResourceBuilder&quot;, &quot;2.0.0.0&quot;)"/>
+																<LiteralString uuid="04bad017-3c78-42ce-826c-17639c33a271" visibility="public" value="global::System.Diagnostics.DebuggerNonUserCodeAttribute()"/>
+																<LiteralString uuid="17066ec7-e3c1-4c0e-ae43-747f35c0a215" visibility="public" value="global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedAttribute>
+												<Property uuid="94c939cd-9225-4971-8c8e-ac02b22cbb09" name="resourceMan" visibility="private" isStatic="true" type="88b1d3de-4e13-487d-8fd6-cb4b087d3f3f"/>
+												<Property uuid="696dc647-6fe5-4106-af21-172298e2129e" name="resourceCulture" visibility="private" isStatic="true" type="3bb2553b-5c48-47eb-8329-f397f6079e3c"/>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="648cb940-84f1-43de-8096-92c70e2fd8bf" name="Resources" visibility="package">
+													<appliedStereotype>
+														<StereotypeApplication uuid="d6aad079-9066-4482-8e0a-5169afeff0d5" classifier="00531103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="67a53417-29f2-4453-95cd-25b7b8daf3b1" classifier="00191103-7510-11d9-86f2-000476a22f44">
+															<slot>
+																<Slot uuid="8538f6d5-4b0d-4f43-bb9d-54134a24376d" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+																	<value>
+																		<LiteralString uuid="82d0a826-42da-4ab6-b5f9-f3904b665cc6" visibility="public" value="global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(&quot;Microsoft.Performance&quot;, &quot;CA1811:AvoidUncalledPrivateCode&quot;)"/>
+																	</value>
+																</Slot>
+															</slot>
+														</StereotypeApplication>
+													</appliedStereotype>
+												</Operation>
+												<Operation uuid="cd334822-68cc-429f-b747-aba1042a195b" name="ResourceManager" visibility="package" isStatic="true" DocComment="86dd023d-80ee-4654-889e-ef58d0855f53">
+													<ownedComment>
+														<Comment uuid="86dd023d-80ee-4654-889e-ef58d0855f53" body="&lt;summary&gt;&#13;  Returns the cached ResourceManager instance used by this class.&#13;&lt;/summary&gt;">
+															<annotatedElement idref="cd334822-68cc-429f-b747-aba1042a195b"/>
+														</Comment>
+													</ownedComment>
+													<appliedStereotype>
+														<StereotypeApplication uuid="3701eb47-492b-4c48-ae17-72eaa3fe8a67" classifier="00271103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="ad202195-aa4b-471d-9853-8d21d83b1362" classifier="00251103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="29aa2b93-6b1b-4240-b90f-7051fbab8317" classifier="00191103-7510-11d9-86f2-000476a22f44">
+															<slot>
+																<Slot uuid="00ad159a-4ba2-42b7-a9b5-263ac34afe7e" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+																	<value>
+																		<LiteralString uuid="6049b65c-2fbb-46d7-9877-72af35b59d86" visibility="public" value="global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)"/>
+																	</value>
+																</Slot>
+															</slot>
+														</StereotypeApplication>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="76e021a2-4c9a-467d-9a01-5ccf7f29526e" name="return" direction="return" type="88b1d3de-4e13-487d-8fd6-cb4b087d3f3f"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="2f229026-4939-4380-8fe6-05f16593f22a" name="Culture" visibility="package" isStatic="true" DocComment="d750fe1a-d5b1-4e06-92f4-eecadaae2709">
+													<ownedComment>
+														<Comment uuid="d750fe1a-d5b1-4e06-92f4-eecadaae2709" body="&lt;summary&gt;&#13;  Overrides the current thread&apos;s CurrentUICulture property for all&#13;  resource lookups using this strongly typed resource class.&#13;&lt;/summary&gt;">
+															<annotatedElement idref="2f229026-4939-4380-8fe6-05f16593f22a"/>
+														</Comment>
+													</ownedComment>
+													<appliedStereotype>
+														<StereotypeApplication uuid="fd81ef34-37f0-4a2c-b6d6-7c43b1219065" classifier="00271103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="de5bf4f3-99c2-4857-bfae-807c9fdff488" classifier="00251103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="47c54678-b4e0-42c0-bb42-5445076b46a5" classifier="00261103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="ec8c7eb6-c44b-4327-b75d-38ffe380a025" classifier="00191103-7510-11d9-86f2-000476a22f44">
+															<slot>
+																<Slot uuid="791e229a-9b35-4d5e-8ed8-8b8759c499cd" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+																	<value>
+																		<LiteralString uuid="72216497-dac6-4bfc-8343-b993d82497ed" visibility="public" value="global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)"/>
+																	</value>
+																</Slot>
+															</slot>
+														</StereotypeApplication>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="65479fef-08a7-4a20-89a7-9abadcfda5b8" name="return" direction="return" type="3bb2553b-5c48-47eb-8329-f397f6079e3c"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+										<Class uuid="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6" name="Settings" visibility="package" isFinalSpecialization="true" usedForCodeSyncronization="true">
+											<codeFileName>
+												<CodeFileName name="Properties\Settings.Designer.cs"/>
+											</codeFileName>
+											<appliedStereotype>
+												<StereotypeApplication uuid="6a4c28c3-506d-4a4a-8d97-43e77a73c1bc" classifier="00301103-7510-11d9-86f2-000476a22f44"/>
+												<StereotypeApplication uuid="c2b1928c-8ef9-4d76-9df7-cb6c9f13051b" classifier="001b1103-7510-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="87ed8dc1-abd1-4957-afaf-6e5867d1fbbb" definingFeature="001c1103-7510-11d9-86f2-000476a22f44">
+															<value>
+																<LiteralString uuid="cc2ff7c3-c264-4a45-979b-7630f98529ce" visibility="public" value="global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()"/>
+																<LiteralString uuid="41a55c7e-5923-4357-a9aa-1097fa8a0e60" visibility="public" value="global::System.CodeDom.Compiler.GeneratedCodeAttribute(&quot;Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator&quot;, &quot;8.0.0.0&quot;)"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<generalization>
+												<Generalization uuid="5003659a-3252-4f53-87e3-6e9d51cfc32f" general="bc389fc9-fc64-402c-a05a-23aa708b90d7"/>
+											</generalization>
+											<ownedAttribute>
+												<Property uuid="9eca39e5-69c3-4e8f-97e2-66da3774a636" name="defaultInstance" visibility="private" isStatic="true" type="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6">
+													<defaultValue>
+														<LiteralString uuid="9c32524a-0f18-4c2f-b7a3-0bab353d88ed" visibility="public" value="((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())))"/>
+													</defaultValue>
+												</Property>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="ed588d97-6f21-43a7-b17c-761af299d188" name="Default" visibility="public" isStatic="true">
+													<appliedStereotype>
+														<StereotypeApplication uuid="6a4ae69a-9151-46c4-afd8-e2813f49a702" classifier="00271103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="5af2e035-8f2a-479a-b7d3-cb98d24fb6b0" classifier="00251103-7510-11d9-86f2-000476a22f44"/>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="a12d6b35-5d15-4e6a-9839-442a61061be3" name="return" direction="return" type="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+										<Association uuid="77ea50fe-c30b-4875-b1c5-7965f694e71d" visibility="public">
+											<memberEnd idref="9eca39e5-69c3-4e8f-97e2-66da3774a636"/>
+											<ownedEnd>
+												<Property uuid="8293eaf2-af1f-4b58-b27f-fdd154ff08f5" type="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6"/>
+											</ownedEnd>
+										</Association>
+									</packagedElement>
+								</Package>
+							</packagedElement>
+						</Package>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication uuid="62cc0633-078d-4fda-96ef-25bd52382a73" appliedProfile="00000103-7510-11d9-86f2-000476a22f44"/>
+					</profileApplication>
+				</Package>
+				<Package uuid="00000004-7510-11d9-86f2-000476a22f44" name="Unknown Externals" visibility="public" editable="false">
+					<packagedElement>
+						<Class uuid="d95b43b0-037d-4ede-8de7-6f8b7157bf66" name="String" visibility="public"/>
+						<Class uuid="2fda7a94-c639-4d43-80cf-c5ee97bcf394" name="System.ComponentModel.IContainer" visibility="public"/>
+						<Class uuid="9540d5d4-c6d9-48dc-b934-51b64ecdb67a" name="System.Windows.Forms.ToolStrip" visibility="public"/>
+						<Class uuid="5cecfa62-6608-4427-aaae-e2874c59b01b" name="System.Windows.Forms.ToolStripButton" visibility="public"/>
+						<Class uuid="059c7b8b-4b59-4f4d-9129-6a24552076ce" name="System.Windows.Forms.TextBox" visibility="public"/>
+						<Class uuid="1502a990-e017-429e-b6ee-a9d1ebca6dbd" name="System.Windows.Forms.TreeView" visibility="public"/>
+						<Class uuid="7fa8de7b-24b0-45df-be20-721924876f45" name="System.Windows.Forms.Label" visibility="public"/>
+						<Class uuid="f6e18a58-7a7f-4457-b42a-2067da47a5f8" name="System.Windows.Forms.SplitContainer" visibility="public"/>
+						<Class uuid="ae981246-dafa-482a-9cac-4410b992dc5c" name="TreeNode" visibility="public"/>
+						<Class uuid="573fed18-ec3a-4b28-a92b-d9f447853c86" name="Form" visibility="public"/>
+						<Class uuid="bc389fc9-fc64-402c-a05a-23aa708b90d7" name="global::System.Configuration.ApplicationSettingsBase" visibility="public"/>
+						<Class uuid="351ff587-4771-4975-8bd7-fb3ed0f66c0c" name="EventArgs" visibility="public"/>
+						<Class uuid="88b1d3de-4e13-487d-8fd6-cb4b087d3f3f" name="global::System.Resources.ResourceManager" visibility="public"/>
+						<Class uuid="3bb2553b-5c48-47eb-8329-f397f6079e3c" name="global::System.Globalization.CultureInfo" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Profile href="C# Profile.ump#00000103-7510-11d9-86f2-000476a22f44" editable="false"/>
+			</packagedElement>
+		</Package>
+	</Model>
+	<Diagrams>
+		<RootElement uuid="00000002-7510-11d9-86f2-000476a22f44">
+			<guiRootGuiDiagram>
+				<StateMachineDiagram uuid="3d03fc6b-14da-496f-bb25-2a5d62ce589c" name="AirConditionStateMachineDiagram" guiDiagramLinkedOwner="0188b2a0-2242-4993-8e12-c94528e65095">
+					<style snaptogrid="0"/>
+					<guiDiagramGuiLink>
+						<ConstrainedNode uuid="6607564a-da1e-4323-8439-5e57143398dc" constrainingAreaIndex="-1" guiLink_Element="d046816e-df14-4d0b-b0b7-dbe10bed6e62">
+							<nodeRect Left="21" Top="75" Right="41" Bottom="95"/>
+							<attached>
+								<AttachedNode uuid="062176bb-151a-40dd-9215-c25412d7c2a6" attachedNodeKind="13">
+									<nodeRect Left="31" Top="105" Right="45" Bottom="120"/>
+								</AttachedNode>
+							</attached>
+						</ConstrainedNode>
+						<SeparatedNodeLink uuid="1183d510-f88d-4916-be87-180137ad46a7" guiLink_Element="5df37687-2cb3-428a-b0a4-3a4729745fc8">
+							<style autosize="0"/>
+							<nodeRect Left="210" Top="-60" Right="525" Bottom="375"/>
+							<Separators>
+								<separator position="241"/>
+							</Separators>
+							<guiNodeLinkGuiNodeLink>
+								<SeparatedNodeLink uuid="185476dd-8790-412c-ae81-f842f2659501" guiLink_Element="9ea78cbf-711a-4c49-9006-6988862d9fd1">
+									<nodeRect Left="420" Top="315" Right="471" Bottom="348"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="96a013fd-305a-42f2-8862-48e47eda7044" guiLink_Element="d6eaa690-951d-4e9b-a65d-c05980124c74">
+									<nodeRect Left="255" Top="315" Right="306" Bottom="348"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="3773d87a-8b33-49fa-86b2-9dd32b8b2fac" guiLink_Element="498cfa6e-4983-4c86-bd95-7f4458702f22">
+									<nodeRect Left="330" Top="210" Right="381" Bottom="243"/>
+								</SeparatedNodeLink>
+								<ConstrainedNode uuid="92bccf0a-b051-4922-abb4-4293c74dc51b" constrainingAreaIndex="-1" guiLink_Element="b0a5f113-35a1-4573-b109-203537d51aca">
+									<nodeRect Left="225" Top="270" Right="245" Bottom="290"/>
+								</ConstrainedNode>
+								<SeparatedNodeLink uuid="93d06e47-17b5-4d1b-b746-f59dfdaab9ac" guiLink_Element="7edff010-fa1b-4600-af0d-7d8e53624afe">
+									<style autosize="1"/>
+									<nodeRect Left="285" Right="424" Bottom="69"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="9902b2ee-9c83-4186-aab5-979657adbbc3" guiLink_Element="6153f019-74bd-488f-af40-c2d44979fabc">
+									<style autosize="0"/>
+									<nodeRect Left="285" Top="105" Right="424" Bottom="174"/>
+								</SeparatedNodeLink>
+								<ConstrainedNode uuid="4d540a8a-e04b-4b09-a62e-8eb2ac7b6ab5" constrainingAreaIndex="-1" guiLink_Element="e08544dc-1d7c-4492-81e9-d3d6b4bbc40d">
+									<nodeRect Left="480" Top="135" Right="500" Bottom="155"/>
+								</ConstrainedNode>
+								<ConstrainedNode uuid="60789c51-3121-4f1a-a4ef-93c0edc49926" constrainingAreaIndex="-1" guiLink_Element="ddba2605-1cb4-4faa-8194-cf0545b3c3e1">
+									<nodeRect Left="480" Top="210" Right="500" Bottom="230"/>
+								</ConstrainedNode>
+								<ConstrainedNode uuid="6eafcf02-a331-4192-aad7-acfb2c03e64a" constrainingAreaIndex="-1" guiLink_Element="62557795-6a16-4d35-85de-dfa00950d1d5">
+									<nodeRect Left="460" Top="18" Right="480" Bottom="38"/>
+								</ConstrainedNode>
+							</guiNodeLinkGuiNodeLink>
+						</SeparatedNodeLink>
+						<SeparatedNodeLink uuid="70fc3791-f562-48ea-bc1e-1f9643d274ad" guiLink_Element="c7b6de45-212e-459c-8705-ea59830aa06f">
+							<style autosize="0"/>
+							<nodeRect Left="-15" Top="135" Right="75" Bottom="204"/>
+						</SeparatedNodeLink>
+						<LineLink uuid="51891d55-8d7e-41f9-86ee-373eec7f4b43" guiLink_Element="e1fd37ce-fae7-4091-a346-7e2bb48eb7da" guiLineLink_LineBegin="6607564a-da1e-4323-8439-5e57143398dc" guiLineLink_LineEnd="70fc3791-f562-48ea-bc1e-1f9643d274ad">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="259c7ebe-412d-4ff6-9339-715e1ef1d6fe">
+									<pos X="30" Y="114"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c1e60b8a-7dda-4ce7-8016-0478a0df4a92" alignment="3">
+									<pos X="30" Y="94"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="4c64390f-2c92-459b-a0ba-145eb400d503" alignment="2">
+									<pos X="30" Y="135"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="fc2708f5-dca4-455f-8145-1884276ffd71" guiLink_Element="7ecf6ef4-68b3-408e-b506-77e935b570c0" guiLineLink_LineBegin="1183d510-f88d-4916-be87-180137ad46a7" guiLineLink_LineEnd="70fc3791-f562-48ea-bc1e-1f9643d274ad">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="36697888-1574-4b0f-bfe4-e0763025f7f0">
+									<pos X="57" Y="330"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="d7e8b1e5-618c-4d15-a380-12bf67cf2cec" textLabel="23" guiTextLabel_Element="7ecf6ef4-68b3-408e-b506-77e935b570c0">
+											<pos X="-72" Y="7"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="db0a5b8c-27ca-4a58-a126-eade06b0b2b0" alignment="4">
+									<pos X="210" Y="330"/>
+								</EndWaypoint>
+								<Waypoint uuid="d5e4425c-27b0-4b15-8b47-a681ae2f04f4">
+									<pos X="30" Y="330"/>
+								</Waypoint>
+								<EndWaypoint uuid="7829bb12-897d-4e30-8536-ac5ee87fd042" alignment="1">
+									<pos X="30" Y="204"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="4c740e40-7cc8-4fd2-bce0-440b09bacd3f" guiLink_Element="0cd1090b-a015-49c9-af2b-1027b9b466f0" guiLineLink_LineBegin="92bccf0a-b051-4922-abb4-4293c74dc51b" guiLineLink_LineEnd="96a013fd-305a-42f2-8862-48e47eda7044">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="de939788-8e57-4c38-9cc2-65fc31cd304f">
+									<pos X="253" Y="301"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="2b85335e-00ad-4d03-9010-b6bb151e57c5" alignment="3">
+									<pos X="241" Y="287"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="6d877205-ca88-4cbb-b0a5-43c385e29ae9" alignment="2">
+									<pos X="266" Y="317"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="ba89c1e4-805e-4fd4-a712-db8be0f69fc5" guiLink_Element="c229866a-c234-4415-8e86-28bf6d969c14" guiLineLink_LineBegin="3773d87a-8b33-49fa-86b2-9dd32b8b2fac" guiLineLink_LineEnd="185476dd-8790-412c-ae81-f842f2659501">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="f66a3e11-e5ef-4b4e-b49d-cad761aadf05">
+									<pos X="399" Y="279"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="e1c0e87d-31d9-4c3b-bfd6-172e98ec2d5c" textLabel="23" guiTextLabel_Element="c229866a-c234-4415-8e86-28bf6d969c14">
+											<pos X="3" Y="-18"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="6597b545-12ce-420b-967d-14948a507391" alignment="4">
+									<pos X="369" Y="242"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="0c520b0a-5f88-4698-9dbf-11cd55a218aa" alignment="1">
+									<pos X="431" Y="317"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="e5fafd34-95c4-4498-a936-b154261b00fe" guiLink_Element="c98c7902-8aed-4711-af14-036c83e7a4e5" guiLineLink_LineBegin="185476dd-8790-412c-ae81-f842f2659501" guiLineLink_LineEnd="96a013fd-305a-42f2-8862-48e47eda7044">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="8d12c042-1741-42ac-972a-9983a3e313bd">
+									<pos X="363" Y="331"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="74dcf5b6-62ed-42e5-9eaf-7f27453ecc4a" textLabel="23" guiTextLabel_Element="c98c7902-8aed-4711-af14-036c83e7a4e5">
+											<pos X="-36" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="cc380a0f-0565-4abb-bed2-d8bbe15ee586" alignment="4">
+									<pos X="420" Y="331"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="de05e4ae-3834-4990-8173-a7f4e9e1a6ab" alignment="1">
+									<pos X="306" Y="331"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="316a2011-9b96-483f-871d-309ad1bdec12" guiLink_Element="56a19c1d-d030-4074-97d3-f4be94988082" guiLineLink_LineBegin="96a013fd-305a-42f2-8862-48e47eda7044" guiLineLink_LineEnd="3773d87a-8b33-49fa-86b2-9dd32b8b2fac">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="02689938-cbf8-4520-80de-dd7084e121c7">
+									<pos X="318" Y="279"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="7009427f-f478-40e1-825c-c5187663eec1" textLabel="23" guiTextLabel_Element="56a19c1d-d030-4074-97d3-f4be94988082">
+											<pos X="-65" Y="-24"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="848caaf8-f6c8-4fcd-a5f7-e4720d9bc3b2" alignment="1">
+									<pos X="292" Y="315"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="688b1312-bf88-4c2e-a22e-d53d52dfbeee" alignment="4">
+									<pos X="344" Y="243"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="29853aa3-5596-4f6e-a06b-714209a8bfaf" guiLink_Element="7f7cc52b-665b-47bd-8853-703a98e8418a" guiLineLink_LineBegin="9902b2ee-9c83-4186-aab5-979657adbbc3" guiLineLink_LineEnd="93d06e47-17b5-4d1b-b746-f59dfdaab9ac">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="7b5d720b-22e8-439e-a890-14d22d7efe4c">
+									<pos X="365" Y="87"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="1383590a-f700-49f5-8508-58d098fe8220" textLabel="23" guiTextLabel_Element="7f7cc52b-665b-47bd-8853-703a98e8418a">
+											<pos X="8" Y="-7"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="d9ad0956-51a7-43eb-b674-b921a3db7453" alignment="2">
+									<pos X="365" Y="105"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="9719dc28-d6f5-4878-8a21-56383fdf44bf" alignment="3">
+									<pos X="365" Y="69"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="2db6a60c-a922-4781-96ee-339c6ebc5394" guiLink_Element="9ea32c45-1058-4367-8df0-b908fb6d8347" guiLineLink_LineBegin="93d06e47-17b5-4d1b-b746-f59dfdaab9ac" guiLineLink_LineEnd="9902b2ee-9c83-4186-aab5-979657adbbc3">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="0074aa5a-cf79-43e6-a3bf-0e609e995f04">
+									<pos X="325" Y="87"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="150fcda1-91b3-4a1d-9df7-6f2dd5c56514" textLabel="23" guiTextLabel_Element="9ea32c45-1058-4367-8df0-b908fb6d8347">
+											<pos X="-72" Y="-10"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="b632e298-4a03-49d3-bee2-f87e713ce560" alignment="3">
+									<pos X="325" Y="69"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="535223d0-a7a7-429e-a91c-2095c312e583" alignment="2">
+									<pos X="325" Y="105"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<SeparatedNodeLink uuid="b9fc6bf4-d993-4dea-b5d3-3fa0fc438a80" guiLink_Element="f4ec5182-2732-452d-86b0-be6f2b11e6a0">
+							<nodeRect Left="680" Top="134" Right="827" Bottom="203"/>
+						</SeparatedNodeLink>
+						<LineLink uuid="3cc625eb-c295-43f1-b061-e2085f57dc1a" guiLink_Element="5de28b8a-fadd-4fcf-ab36-92023769f49b" guiLineLink_LineBegin="1183d510-f88d-4916-be87-180137ad46a7" guiLineLink_LineEnd="b9fc6bf4-d993-4dea-b5d3-3fa0fc438a80">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="e9a74dc5-ad90-42ba-b111-9c7061ff1f9f">
+									<pos X="702" Y="330"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="4930e536-d01a-429a-bd27-02a5635cddce" textLabel="23" guiTextLabel_Element="5de28b8a-fadd-4fcf-ab36-92023769f49b">
+											<pos X="-48" Y="-22"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="9b8a9a1c-faee-4424-acbb-415e6ffe60b8" alignment="1">
+									<pos X="525" Y="330"/>
+								</EndWaypoint>
+								<Waypoint uuid="eeba919b-5690-41f3-ab23-5ff1c2c3ee09">
+									<pos X="753" Y="330"/>
+								</Waypoint>
+								<EndWaypoint uuid="251b44bd-de02-420e-bb0e-b2e95d6cbc60" alignment="4">
+									<pos X="753" Y="203"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<ConstrainedNode uuid="541c8c2d-4854-46d1-9b04-95e7b155ca80" constrainingAreaIndex="-1" guiLink_Element="16bd204b-8601-4b0e-b5f7-d5e638c355ed">
+							<style autosize="0"/>
+							<nodeRect Left="570" Top="135" Right="580" Bottom="240"/>
+						</ConstrainedNode>
+						<LineLink uuid="bc9c4392-681b-4d58-9769-5a5bea334b76" guiLink_Element="ca6e5172-4b30-4184-b0f0-99c136484745" guiLineLink_LineBegin="b9fc6bf4-d993-4dea-b5d3-3fa0fc438a80" guiLineLink_LineEnd="541c8c2d-4854-46d1-9b04-95e7b155ca80">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="bf2a75b4-c8a1-4376-84c3-e2023f7c1962">
+									<pos X="630" Y="174"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="e75ae338-6b76-4088-9cdf-1d9129bf732b" textLabel="23" guiTextLabel_Element="ca6e5172-4b30-4184-b0f0-99c136484745">
+											<pos X="-39" Y="-23"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="46bf7cf3-326d-4205-84f9-95ff07ee828a" alignment="3">
+									<pos X="680" Y="174"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="1f3c17b8-bc36-4f5a-8f41-20ecde6f68fc" alignment="2">
+									<pos X="580" Y="174"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="77881710-cac7-4b3c-8f8f-4b198d9c2ddd" guiLink_Element="006f9597-5451-4751-914d-a5823e7b0da5" guiLineLink_LineBegin="541c8c2d-4854-46d1-9b04-95e7b155ca80" guiLineLink_LineEnd="4d540a8a-e04b-4b09-a62e-8eb2ac7b6ab5">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="b54310dc-fe3c-4b0a-acad-205e728f7573">
+									<pos X="535" Y="144"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="f49201a0-efcc-4bed-a951-9a72984f3002" alignment="4">
+									<pos X="570" Y="144"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="c29f3115-94be-4c73-9035-b224545fe26b" alignment="1">
+									<pos X="499" Y="144"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="b460d28a-819f-46e0-ae79-93774e529d44" guiLink_Element="cb5b2797-abb3-4be6-9fe5-1f04ecb56701" guiLineLink_LineBegin="541c8c2d-4854-46d1-9b04-95e7b155ca80" guiLineLink_LineEnd="60789c51-3121-4f1a-a4ef-93c0edc49926">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="b1bb1698-fad6-40be-bc44-7c46a8db9df4">
+									<pos X="535" Y="220"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="70d8c57e-ae29-4080-b058-f5b4d4994949" alignment="4">
+									<pos X="570" Y="220"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="e7865535-e825-4ea2-93c6-a2091e9e51f1" alignment="1">
+									<pos X="500" Y="220"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="1a7a3e4c-588b-40f1-aa14-edfb55c0b8d5" guiLink_Element="c362f7a2-2922-47a7-bd4a-94bdb7b0368b" guiLineLink_LineBegin="6eafcf02-a331-4192-aad7-acfb2c03e64a" guiLineLink_LineEnd="93d06e47-17b5-4d1b-b746-f59dfdaab9ac">
+							<style linestyle="1"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="c5e54f64-8006-4dbc-aa31-5343b2175956">
+									<pos X="442" Y="26"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="b2db81ad-7707-49c4-90c1-e5301e6b0737" alignment="4">
+									<pos X="460" Y="26"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="ba812f44-943b-4543-9c94-dcf25da2885d" alignment="1">
+									<pos X="424" Y="26"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<ConstrainedNode uuid="d67a2398-412c-4e98-92e9-c9214cf59a1b" constrainingAreaIndex="-1" guiLink_Element="4560e08a-7b89-417f-b9cb-e1207190993c">
+							<style autosize="0"/>
+							<nodeRect Left="150" Top="135" Right="160" Bottom="240"/>
+						</ConstrainedNode>
+						<LineLink uuid="841d35a2-c0b7-4774-aff0-53946476f8e4" guiLink_Element="7236f6ac-c32e-4a55-8181-ef3bdad7b7d7" guiLineLink_LineBegin="70fc3791-f562-48ea-bc1e-1f9643d274ad" guiLineLink_LineEnd="d67a2398-412c-4e98-92e9-c9214cf59a1b">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="98f4cc3d-d09e-4026-814e-3990e228ef64">
+									<pos X="112" Y="174"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="bb342629-9dc3-438a-afc7-30d044eb0c3c" textLabel="23" guiTextLabel_Element="7236f6ac-c32e-4a55-8181-ef3bdad7b7d7">
+											<pos X="-34" Y="-21"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="61166b52-9351-4e5e-8fe9-effbd2eaacb2" alignment="1">
+									<pos X="75" Y="174"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="784104e9-479d-4c4f-a621-e18479f22513" alignment="4">
+									<pos X="150" Y="174"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="341a70e6-82e4-4b1c-8b1d-ac299119d847" guiLink_Element="a4e1ebb2-fa9f-45c4-be45-15d47ff1dba3" guiLineLink_LineBegin="d67a2398-412c-4e98-92e9-c9214cf59a1b" guiLineLink_LineEnd="3773d87a-8b33-49fa-86b2-9dd32b8b2fac">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="2114d36e-b7f3-4224-9f8d-a69f1c0fb7ed">
+									<pos X="245" Y="224"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="75fb7aa1-6cb0-49d2-81d7-04198df16981" alignment="1">
+									<pos X="160" Y="224"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="8c748005-8560-41d6-abbb-dfe647d8fc8a" alignment="4">
+									<pos X="330" Y="224"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="09b30d2f-58f8-4d3e-8c73-e54fd49402a4" guiLink_Element="e76527ec-5ae8-4117-9244-7a05b0ce3223" guiLineLink_LineBegin="d67a2398-412c-4e98-92e9-c9214cf59a1b" guiLineLink_LineEnd="93d06e47-17b5-4d1b-b746-f59dfdaab9ac">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="e9bbb5c0-349c-4070-94ba-6dcb4fd6f2b1">
+									<pos X="186" Y="53"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="9ecb6dc0-b325-446f-b1b8-dc002c04d0a1" alignment="1">
+									<pos X="160" Y="149"/>
+								</EndWaypoint>
+								<Waypoint uuid="809c30c7-91c9-4503-bf24-85d6b2b7b047">
+									<pos X="186" Y="149"/>
+								</Waypoint>
+								<Waypoint uuid="d3f004d6-5e38-47b7-994c-aaf3eaa19013">
+									<pos X="186" Y="30"/>
+								</Waypoint>
+								<EndWaypoint uuid="c5484b9f-aaa8-44b8-88c9-3219410d5833" alignment="4">
+									<pos X="285" Y="30"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="b3e38ed6-532e-449a-9ccc-7c92fbb0d247" name="Default"/>
+					</guiDiagramLayer>
+				</StateMachineDiagram>
+				<ClassDiagram uuid="2c1f13a5-a289-4d7a-97a2-8269b96779b2" name="TestSTMAirCondition" guiDiagramLinkedOwner="b9dfc4f7-6015-4ea8-bedb-9532b71c16d2" guiDiagram_GenerationSettingsElement="a514ad7a-31db-4918-9890-3f1fec65368e">
+					<guiDiagramGenerationSettings kind="2" showNestedClassifierOnDgrm="true" showAttributes="true" showNestedClassifier="true" showEnumerationLiterals="true" showTaggedValues="true" doAutoLayout="true"/>
+					<guiDiagramGuiLink>
+						<NodeLink uuid="ef6bd596-2f9b-4307-9f33-9be2d7ce854f" guiLink_Element="f91ece18-4769-4cb4-94e0-cfe1157b6497">
+							<style showop="1"/>
+							<nodeRect Left="180" Top="480" Right="446" Bottom="575"/>
+						</NodeLink>
+						<NodeLink uuid="e73a6824-6b1d-43f9-bac9-a9cfeb12ef3c" guiLink_Element="bf5afbe8-1569-4244-8263-a44a31856eca">
+							<nodeRect Left="10" Top="10" Right="60" Bottom="60"/>
+						</NodeLink>
+						<NodeLink uuid="fc0100ee-c523-403b-97b3-60f0ac190160" guiLink_Element="25ad457c-f2b7-42d3-93f5-a91ba94f87f3">
+							<style showatt="0" shownested="0" showop="0"/>
+							<nodeRect Left="30" Top="510" Right="115" Bottom="563"/>
+						</NodeLink>
+						<NodeLink uuid="e282e074-cc2a-46af-bd3b-807579cc0a80" guiLink_Element="0120a42e-d6fe-4e8d-a59e-9b58181c1d2d">
+							<nodeRect Left="180" Top="30" Right="435" Bottom="424"/>
+						</NodeLink>
+						<LineLink uuid="e8065e58-4784-4ee0-bdf1-73415d962268" guiLink_Element="3c45004e-635f-4c72-b2c3-1df4c8bdcb6c" guiLineLink_LineBegin="ef6bd596-2f9b-4307-9f33-9be2d7ce854f" guiLineLink_LineEnd="e282e074-cc2a-46af-bd3b-807579cc0a80">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="6ba470b9-9a24-4fbb-9454-89fcebb98e9c">
+									<pos X="311" Y="452"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="85634a97-0baf-4af7-9a4e-c68e0dde564a" alignment="4">
+									<pos X="311" Y="480"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="27c7b360-9512-4ac3-97b5-1a707a485689" alignment="1">
+									<pos X="311" Y="424"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<NodeLink uuid="1bddc3b2-b28e-461b-b797-62fcf7e51603" guiLink_Element="506058b5-f9a2-4e6f-8d82-bc7aa8aa3e05">
+							<nodeRect Left="525" Top="30" Right="812" Bottom="256"/>
+						</NodeLink>
+						<NodeLink uuid="c9454954-5e09-4692-85fa-258f2e0a56d8" guiLink_Element="5f5ef4f9-eb2a-4834-9c13-c089174ed2aa">
+							<nodeRect Left="525" Top="270" Right="736" Bottom="401"/>
+						</NodeLink>
+						<NodeLink uuid="6c265229-f47c-4df5-9ad8-276bd943dc69" guiLink_Element="3110f49d-bd6a-4710-8ed7-30d17e0d190b">
+							<nodeRect Left="525" Top="420" Right="736" Bottom="551"/>
+						</NodeLink>
+						<ContainmentLink uuid="2ae6687e-ccdf-4a6a-ba4b-f4d7a74b31ff" guiLineLink_LineBegin="ef6bd596-2f9b-4307-9f33-9be2d7ce854f" guiLineLink_LineEnd="fc0100ee-c523-403b-97b3-60f0ac190160">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="2b108998-36b7-44c1-ad9c-93318698882f">
+									<pos X="148" Y="529"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="dfe863da-62ea-412d-b234-d1aad0340742" alignment="1">
+									<pos X="180" Y="529"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="90098d94-cae9-4dce-b0cb-42b45c86198b" alignment="4">
+									<pos X="115" Y="529"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="cce87381-05dd-4d24-94f9-12932b10fd73" guiLineLink_LineBegin="1bddc3b2-b28e-461b-b797-62fcf7e51603" guiLineLink_LineEnd="e282e074-cc2a-46af-bd3b-807579cc0a80">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="f847fec3-ee1b-4c22-86bc-7d885f5ac3ad">
+									<pos X="480" Y="143"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="e2c597d2-eec8-43f9-af46-1b8d278565fe" alignment="1">
+									<pos X="525" Y="143"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="47333305-ca55-43d0-be88-59ef21caf152" alignment="4">
+									<pos X="435" Y="143"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="75e1984a-51ef-4931-b0e4-10cdb7b06bc6" guiLineLink_LineBegin="c9454954-5e09-4692-85fa-258f2e0a56d8" guiLineLink_LineEnd="e282e074-cc2a-46af-bd3b-807579cc0a80">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="ebc72536-28bd-4113-ae73-562fbf5055e3">
+									<pos X="480" Y="337"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="40044357-ad53-48f4-88b2-06123a8ceb70" alignment="1">
+									<pos X="525" Y="337"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="6f1f2a80-a4ac-4b29-bfeb-75719005ad1d" alignment="4">
+									<pos X="435" Y="337"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="148054be-1f94-4aa8-9db2-27f2eaa15301" guiLineLink_LineBegin="6c265229-f47c-4df5-9ad8-276bd943dc69" guiLineLink_LineEnd="e282e074-cc2a-46af-bd3b-807579cc0a80">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="658c2056-8a9f-4b44-b26f-be37693591d6">
+									<pos X="480" Y="424"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="29c8fd27-d509-4fa9-9baa-64eb22f55abe" alignment="1">
+									<pos X="525" Y="424"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="a07d82b6-ff62-4bc8-844d-a5c0be04e3a7" alignment="4">
+									<pos X="435" Y="424"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<NodeLink uuid="9b0c7b46-324e-4d93-a79d-1dd5baa11955" guiLink_Element="92408c73-8685-40b3-b614-cdd0dbde2ce3">
+							<nodeRect Left="90" Top="615" Right="548" Bottom="676"/>
+						</NodeLink>
+						<NoteLink uuid="95194894-6b2d-4cf5-9357-b2073d3e3ef8" guiLineLink_LineBegin="9b0c7b46-324e-4d93-a79d-1dd5baa11955" guiLineLink_LineEnd="ef6bd596-2f9b-4307-9f33-9be2d7ce854f">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="cbdfcc76-4fd4-4a8d-b566-49752435a8e5">
+									<pos X="312" Y="595"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="a2d31aab-0240-4b70-a32b-cc400bc7ed02" alignment="1">
+									<pos X="312" Y="615"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="d36d5df5-689a-4de8-8118-4886b1e82047" alignment="4">
+									<pos X="312" Y="575"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</NoteLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="a36240b2-2e45-4afb-b630-38eefa7325e5" name="Default"/>
+					</guiDiagramLayer>
+				</ClassDiagram>
+			</guiRootGuiDiagram>
+		</RootElement>
+	</Diagrams>
+	<ModelHistory>
+		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<packagedElement>
+				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public">
+					<packagedElement>
+						<Component uuid="7ec30801-d8f8-4576-9d45-3c9549aae20d" name="TestSTMAirCondition" visibility="public" usedForCodeSyncronization="true" codeLang="C#4.0" isCodeProjectFile="true" codeProjectFileOrDirectory="TestSTMAirCondition.csproj">
+							<realization>
+								<ComponentRealization uuid="86ff89b1-8ed8-4dc8-aefa-086cc7159096" visibility="public" realizingClassifier="0120a42e-d6fe-4e8d-a59e-9b58181c1d2d"/>
+								<ComponentRealization uuid="bb10810c-8fe9-4648-80e3-09d2969f339e" visibility="public" realizingClassifier="25ad457c-f2b7-42d3-93f5-a91ba94f87f3"/>
+								<ComponentRealization uuid="74a20dbb-0929-463a-afb6-bae48e5907fb" visibility="public" realizingClassifier="6ad80ae3-ec36-43c3-8911-80ea26b1c7f1"/>
+								<ComponentRealization uuid="5d117de3-5899-4e92-a3ce-d690ec5d6bee" visibility="public" realizingClassifier="0644545d-a296-406e-bee2-8f8b4da7b712"/>
+								<ComponentRealization uuid="9ebea589-6513-42c4-a156-c4a12fd04aa5" visibility="public" realizingClassifier="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package uuid="b9dfc4f7-6015-4ea8-bedb-9532b71c16d2" name="TestSTMAirCondition" visibility="public">
+					<packagedElement>
+						<Package uuid="9e6d282d-5601-4b5c-89c7-bc4e4547e841" name="AirCondition" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="027b841d-de2c-49f2-9c05-15fb943f0170" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Class uuid="0120a42e-d6fe-4e8d-a59e-9b58181c1d2d" name="AirConditionController" visibility="public">
+									<nestedClassifier>
+										<Class uuid="20c14353-144e-4f7a-920f-1167ac7b93fc" name="CallEventAction" visibility="public"/>
+										<Interface uuid="5f5ef4f9-eb2a-4834-9c13-c089174ed2aa" name="IState" visibility="public"/>
+									</nestedClassifier>
+								</Class>
+							</packagedElement>
+						</Package>
+						<Package uuid="a514ad7a-31db-4918-9890-3f1fec65368e" name="TestSTM" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="fe21a85d-2cfe-444b-9682-dc41dec1c458" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Class uuid="6ad80ae3-ec36-43c3-8911-80ea26b1c7f1" name="Program" visibility="package" usedForCodeSyncronization="true">
+									<codeFileName>
+										<CodeFileName name="Program.cs"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication uuid="20445062-f307-4e0c-adb1-d577e49903c4" classifier="00441103-7510-11d9-86f2-000476a22f44"/>
+									</appliedStereotype>
+									<ownedOperation>
+										<Operation uuid="aae52859-0296-4e70-ac1d-54f8b5c90f95" name="Main" visibility="private" isStatic="true" DocComment="7ebf9e34-e36f-4cfd-8c4f-05128123b413">
+											<ownedComment>
+												<Comment uuid="7ebf9e34-e36f-4cfd-8c4f-05128123b413" body="&lt;summary&gt;&#13;The main entry point for the application.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="aae52859-0296-4e70-ac1d-54f8b5c90f95"/>
+												</Comment>
+											</ownedComment>
+											<appliedStereotype>
+												<StereotypeApplication uuid="b8ac8867-678f-4f50-94d3-5ba1c6657a1b" classifier="00191103-7510-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="b2727123-4486-4ed9-8293-6e21528d6da5" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="d97593eb-6523-4717-bd7c-d4c501cc5c93" visibility="public" instance="00601103-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="7615d898-1299-4366-9fa4-95566bcbe9d6" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<Class uuid="25ad457c-f2b7-42d3-93f5-a91ba94f87f3" name="Form1" visibility="public" usedForCodeSyncronization="true">
+									<codeFileName>
+										<CodeFileName name="Form1.cs"/>
+										<CodeFileName name="Form1.Designer.cs"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication uuid="47791c5d-764e-442e-b415-2bab7bac019a" classifier="00301103-7510-11d9-86f2-000476a22f44"/>
+									</appliedStereotype>
+									<generalization>
+										<Generalization uuid="2d562dd9-9719-4579-9e40-3cd64bcde7f0" general="573fed18-ec3a-4b28-a92b-d9f447853c86"/>
+									</generalization>
+									<ownedAttribute>
+										<Property uuid="a7e4be5f-36cd-493a-a6a7-8aa61b75b715" name="m_STM" visibility="private" type="f91ece18-4769-4cb4-94e0-cfe1157b6497">
+											<defaultValue>
+												<LiteralString uuid="18117ed6-9467-4c39-9288-a096a794c928" visibility="public" value="new MySTM()"/>
+											</defaultValue>
+										</Property>
+										<Property uuid="039aa796-9ae0-47ef-b434-3334b5dcbd41" name="m_nEventCounter" visibility="private" type="00032103-7510-11d9-86f2-000476a22f44">
+											<defaultValue>
+												<LiteralString uuid="4a271705-7e3c-4182-8c44-10ac23d769e6" visibility="public" value="0"/>
+											</defaultValue>
+										</Property>
+										<Property uuid="5050659a-4654-467b-a5c4-e8c8520d556d" name="components" visibility="private" type="2fda7a94-c639-4d43-80cf-c5ee97bcf394" DocComment="158664a9-1773-4a4c-9435-375870bab96e">
+											<ownedComment>
+												<Comment uuid="158664a9-1773-4a4c-9435-375870bab96e" body="&lt;summary&gt;&#13;Required designer variable.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="5050659a-4654-467b-a5c4-e8c8520d556d"/>
+												</Comment>
+											</ownedComment>
+											<defaultValue>
+												<LiteralString uuid="47140fd3-9e88-4fbc-baf8-dcd63fb10aa7" visibility="public" value="null"/>
+											</defaultValue>
+										</Property>
+										<Property uuid="11eecacb-61fc-4063-81a7-add41b072dff" name="m_ToolStrip" visibility="private" type="9540d5d4-c6d9-48dc-b934-51b64ecdb67a"/>
+										<Property uuid="46e59223-e864-4a05-8d14-3636323168c5" name="m_ToolStripButton" visibility="private" type="5cecfa62-6608-4427-aaae-e2874c59b01b"/>
+										<Property uuid="6cbd42fd-14ae-4f39-b923-5760d9b6ec02" name="label2" visibility="private" type="7fa8de7b-24b0-45df-be20-721924876f45"/>
+										<Property uuid="ee898ce2-6cb0-495e-90f9-db20f7dcdacb" name="label1" visibility="private" type="7fa8de7b-24b0-45df-be20-721924876f45"/>
+										<Property uuid="4cb95589-77a0-46d9-bc8b-ce49c13244de" name="m_CurrentStateTree" visibility="private" type="1502a990-e017-429e-b6ee-a9d1ebca6dbd"/>
+										<Property uuid="5bd285d6-781b-49c8-a460-76fe6f5f48be" name="m_DebugOutputTextBox" visibility="private" type="059c7b8b-4b59-4f4d-9129-6a24552076ce"/>
+										<Property uuid="ba9b3241-3721-488a-9bd8-561df0b9a5e1" name="splitContainer1" visibility="private" type="f6e18a58-7a7f-4457-b42a-2067da47a5f8"/>
+									</ownedAttribute>
+									<nestedClassifier>
+										<Class uuid="f91ece18-4769-4cb4-94e0-cfe1157b6497" name="MySTM" visibility="public" usedForCodeSyncronization="true" DocComment="92408c73-8685-40b3-b614-cdd0dbde2ce3">
+											<ownedComment>
+												<Comment uuid="92408c73-8685-40b3-b614-cdd0dbde2ce3" body="&lt;summary&gt;&#13;derive from generated controller class to customize behavior, implement guard conditions,&#13;entry/exit/do actions, forward transition effects, handle debug messages...&#13;&lt;/summary&gt;">
+													<annotatedElement idref="f91ece18-4769-4cb4-94e0-cfe1157b6497"/>
+												</Comment>
+											</ownedComment>
+											<generalization>
+												<Generalization uuid="3c45004e-635f-4c72-b2c3-1df4c8bdcb6c" general="0120a42e-d6fe-4e8d-a59e-9b58181c1d2d"/>
+											</generalization>
+											<ownedAttribute>
+												<Property uuid="75c27231-5e8e-47b0-b7cd-01106e2cb878" name="m_sDebugMessage" visibility="public" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+													<defaultValue>
+														<LiteralString uuid="14313d5a-9886-4f2a-80b9-3fae2587a897" visibility="public" value="&quot;&quot;"/>
+													</defaultValue>
+												</Property>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="be306728-a859-4e9e-94f4-a5b7d886c552" name="OnDebugMessage" visibility="public">
+													<appliedStereotype>
+														<StereotypeApplication uuid="83d6f0d3-7a86-4d49-afb1-ffcca0eaa695" classifier="00011103-7510-11d9-86f2-000476a22f44"/>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="f907ea11-481a-4d14-aafa-9d8c6b371363" name="str" type="000e2103-7510-11d9-86f2-000476a22f44"/>
+														<Parameter uuid="e0460dae-2a59-4420-b603-8206ec424ec9" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+										<Class uuid="b2895de1-5eaf-4195-b5fd-c0960fedd9d0" name="STMEventSender" visibility="public" usedForCodeSyncronization="true" DocComment="ccd222d5-d584-4a23-9c6c-fe9719e757e0">
+											<ownedComment>
+												<Comment uuid="ccd222d5-d584-4a23-9c6c-fe9719e757e0" body="&lt;summary&gt;&#13;STMEventSender is used to forward ToolStripItem &apos;Click&apos; events by using the generated CallEventAction delegate&#13;&lt;/summary&gt;">
+													<annotatedElement idref="b2895de1-5eaf-4195-b5fd-c0960fedd9d0"/>
+												</Comment>
+											</ownedComment>
+											<ownedAttribute>
+												<Property uuid="a5ee7ce0-238e-4753-9a17-a91226f2206b" name="m_Action" visibility="private" type="20c14353-144e-4f7a-920f-1167ac7b93fc"/>
+												<Property uuid="fba6b756-2933-4ec4-b7f7-28a2722cc2ae" name="m_Form" visibility="private" type="25ad457c-f2b7-42d3-93f5-a91ba94f87f3"/>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="b226d297-e4ec-486d-b0e7-46756544ebf2" name="STMEventSender" visibility="public">
+													<appliedStereotype>
+														<StereotypeApplication uuid="56c16cfa-4979-443d-9919-d7e06b8fa04e" classifier="00531103-7510-11d9-86f2-000476a22f44"/>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="7209d032-f840-4f3e-96ba-041682be07ad" name="f" type="25ad457c-f2b7-42d3-93f5-a91ba94f87f3"/>
+														<Parameter uuid="77d9cef9-5164-46d3-a05d-2792571cff61" name="a" type="20c14353-144e-4f7a-920f-1167ac7b93fc"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="d21d4a50-532a-45bc-9c87-ea2ffa5141d6" name="CallEvent" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="cb4cb743-cd08-4154-9a68-a160841db92d" name="sender" type="000f2103-7510-11d9-86f2-000476a22f44"/>
+														<Parameter uuid="8a9f11f9-0318-4b74-9fd7-8b2aab2f2586" name="e" type="351ff587-4771-4975-8bd7-fb3ed0f66c0c"/>
+														<Parameter uuid="50583f55-d240-42fd-bc93-be80f88cadca" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+									</nestedClassifier>
+									<ownedOperation>
+										<Operation uuid="c75d104c-3740-4522-9438-9dc1a17e10da" name="Form1" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="dd16636c-381a-4136-8981-8cdc17a13a81" classifier="00531103-7510-11d9-86f2-000476a22f44"/>
+											</appliedStereotype>
+										</Operation>
+										<Operation uuid="5e1ff131-39e8-427b-80a7-2f2aa0113bc3" name="UpdateDisplay" visibility="private">
+											<ownedParameter>
+												<Parameter uuid="d63c925e-7d33-48ce-a191-a691b3cbca7f" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="67ed4037-0b0e-4e94-8316-ce249b4bf871" name="UpdateCurrentStateTree" visibility="private">
+											<ownedParameter>
+												<Parameter uuid="dc5445b0-1bc0-46ab-9af0-7142975f7952" name="state" type="5f5ef4f9-eb2a-4834-9c13-c089174ed2aa"/>
+												<Parameter uuid="38928790-0513-437e-b048-ec00b38373c0" name="node" type="ae981246-dafa-482a-9cac-4410b992dc5c"/>
+												<Parameter uuid="9425abb9-9af8-4fe8-a146-ca8be6dc4c38" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="40286980-23d8-4132-9cff-6d0c2d3c41a0" name="Dispose" visibility="protected" DocComment="ed54c5ca-42cb-44b3-931d-c2d331f1ba3e">
+											<ownedComment>
+												<Comment uuid="ed54c5ca-42cb-44b3-931d-c2d331f1ba3e" body="&lt;summary&gt;&#13;Clean up any resources being used.&#13;&lt;/summary&gt;&#13;&lt;param name=&quot;disposing&quot;&gt;true if managed resources should be disposed; otherwise, false.&lt;/param&gt;">
+													<annotatedElement idref="40286980-23d8-4132-9cff-6d0c2d3c41a0"/>
+												</Comment>
+											</ownedComment>
+											<appliedStereotype>
+												<StereotypeApplication uuid="ffede39c-4b16-4d84-a3f4-1b09f6f7aa72" classifier="00011103-7510-11d9-86f2-000476a22f44"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="6a919985-aac5-4dcd-9c72-107ce28713e5" name="disposing" type="00072103-7510-11d9-86f2-000476a22f44"/>
+												<Parameter uuid="7778e222-3636-4efc-82d3-b3af23f25422" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="326d096a-ce6f-4662-987d-f2203267ea7a" name="InitializeComponent" visibility="private" DocComment="3e9e8f27-393b-48ac-9437-0852a77a68b0">
+											<ownedComment>
+												<Comment uuid="3e9e8f27-393b-48ac-9437-0852a77a68b0" body="&lt;summary&gt;&#13;Required method for Designer support - do not modify&#13;the contents of this method with the code editor.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="326d096a-ce6f-4662-987d-f2203267ea7a"/>
+												</Comment>
+											</ownedComment>
+											<ownedParameter>
+												<Parameter uuid="a3607403-6be8-4d76-8939-c1dd811ae57d" name="return" direction="return" type="00082103-7510-11d9-86f2-000476a22f44"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</packagedElement>
+						</Package>
+						<Package uuid="f79078ac-1323-48b5-ae62-199c2fc09545" name="TestSTMAirCondition" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="f1c4ffb0-7875-4dc0-97d5-20fe0fb2adec" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Package uuid="c07b1af2-5448-4648-bc2d-797aafe77f6a" name="Properties" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication uuid="d9152ed9-1e60-44a3-a6f2-4e56c0a2fa65" classifier="00001103-7510-11d9-86f2-000476a22f44"/>
+									</appliedStereotype>
+									<packagedElement>
+										<Class uuid="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6" name="Settings" visibility="package" isFinalSpecialization="true" usedForCodeSyncronization="true">
+											<codeFileName>
+												<CodeFileName name="Properties\Settings.Designer.cs"/>
+											</codeFileName>
+											<appliedStereotype>
+												<StereotypeApplication uuid="6a4c28c3-506d-4a4a-8d97-43e77a73c1bc" classifier="00301103-7510-11d9-86f2-000476a22f44"/>
+												<StereotypeApplication uuid="c2b1928c-8ef9-4d76-9df7-cb6c9f13051b" classifier="001b1103-7510-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="87ed8dc1-abd1-4957-afaf-6e5867d1fbbb" definingFeature="001c1103-7510-11d9-86f2-000476a22f44">
+															<value>
+																<LiteralString uuid="cc2ff7c3-c264-4a45-979b-7630f98529ce" visibility="public" value="global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()"/>
+																<LiteralString uuid="41a55c7e-5923-4357-a9aa-1097fa8a0e60" visibility="public" value="global::System.CodeDom.Compiler.GeneratedCodeAttribute(&quot;Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator&quot;, &quot;8.0.0.0&quot;)"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<generalization>
+												<Generalization uuid="5003659a-3252-4f53-87e3-6e9d51cfc32f" general="bc389fc9-fc64-402c-a05a-23aa708b90d7"/>
+											</generalization>
+											<ownedAttribute>
+												<Property uuid="9eca39e5-69c3-4e8f-97e2-66da3774a636" name="defaultInstance" visibility="private" isStatic="true" type="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6">
+													<defaultValue>
+														<LiteralString uuid="9c32524a-0f18-4c2f-b7a3-0bab353d88ed" visibility="public" value="((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())))"/>
+													</defaultValue>
+												</Property>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="ed588d97-6f21-43a7-b17c-761af299d188" name="Default" visibility="public" isStatic="true">
+													<appliedStereotype>
+														<StereotypeApplication uuid="6a4ae69a-9151-46c4-afd8-e2813f49a702" classifier="00271103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="5af2e035-8f2a-479a-b7d3-cb98d24fb6b0" classifier="00251103-7510-11d9-86f2-000476a22f44"/>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="a12d6b35-5d15-4e6a-9839-442a61061be3" name="return" direction="return" type="02e5fbe0-d67a-49a9-a6d1-e77f007c89c6"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+										<Class uuid="0644545d-a296-406e-bee2-8f8b4da7b712" name="Resources" visibility="package" usedForCodeSyncronization="true" DocComment="d037a8ef-29b5-4866-a92a-d29f339bba38">
+											<codeFileName>
+												<CodeFileName name="Properties\Resources.Designer.cs"/>
+											</codeFileName>
+											<ownedComment>
+												<Comment uuid="d037a8ef-29b5-4866-a92a-d29f339bba38" body="&lt;summary&gt;&#13;  A strongly-typed resource class, for looking up localized strings, etc.&#13;&lt;/summary&gt;">
+													<annotatedElement idref="0644545d-a296-406e-bee2-8f8b4da7b712"/>
+												</Comment>
+											</ownedComment>
+											<appliedStereotype>
+												<StereotypeApplication uuid="79e1a564-6e6d-454d-a2c4-347d2cc58d8e" classifier="001b1103-7510-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="49025bce-4828-4b06-a127-ef1fa6430082" definingFeature="001c1103-7510-11d9-86f2-000476a22f44">
+															<value>
+																<LiteralString uuid="cee9f49f-0489-4818-ab8e-6532af3302c4" visibility="public" value="global::System.CodeDom.Compiler.GeneratedCodeAttribute(&quot;System.Resources.Tools.StronglyTypedResourceBuilder&quot;, &quot;2.0.0.0&quot;)"/>
+																<LiteralString uuid="04bad017-3c78-42ce-826c-17639c33a271" visibility="public" value="global::System.Diagnostics.DebuggerNonUserCodeAttribute()"/>
+																<LiteralString uuid="17066ec7-e3c1-4c0e-ae43-747f35c0a215" visibility="public" value="global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedAttribute>
+												<Property uuid="94c939cd-9225-4971-8c8e-ac02b22cbb09" name="resourceMan" visibility="private" isStatic="true" type="88b1d3de-4e13-487d-8fd6-cb4b087d3f3f"/>
+												<Property uuid="696dc647-6fe5-4106-af21-172298e2129e" name="resourceCulture" visibility="private" isStatic="true" type="3bb2553b-5c48-47eb-8329-f397f6079e3c"/>
+											</ownedAttribute>
+											<ownedOperation>
+												<Operation uuid="648cb940-84f1-43de-8096-92c70e2fd8bf" name="Resources" visibility="package">
+													<appliedStereotype>
+														<StereotypeApplication uuid="d6aad079-9066-4482-8e0a-5169afeff0d5" classifier="00531103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="67a53417-29f2-4453-95cd-25b7b8daf3b1" classifier="00191103-7510-11d9-86f2-000476a22f44">
+															<slot>
+																<Slot uuid="8538f6d5-4b0d-4f43-bb9d-54134a24376d" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+																	<value>
+																		<LiteralString uuid="82d0a826-42da-4ab6-b5f9-f3904b665cc6" visibility="public" value="global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(&quot;Microsoft.Performance&quot;, &quot;CA1811:AvoidUncalledPrivateCode&quot;)"/>
+																	</value>
+																</Slot>
+															</slot>
+														</StereotypeApplication>
+													</appliedStereotype>
+												</Operation>
+												<Operation uuid="cd334822-68cc-429f-b747-aba1042a195b" name="ResourceManager" visibility="package" isStatic="true" DocComment="86dd023d-80ee-4654-889e-ef58d0855f53">
+													<ownedComment>
+														<Comment uuid="86dd023d-80ee-4654-889e-ef58d0855f53" body="&lt;summary&gt;&#13;  Returns the cached ResourceManager instance used by this class.&#13;&lt;/summary&gt;">
+															<annotatedElement idref="cd334822-68cc-429f-b747-aba1042a195b"/>
+														</Comment>
+													</ownedComment>
+													<appliedStereotype>
+														<StereotypeApplication uuid="3701eb47-492b-4c48-ae17-72eaa3fe8a67" classifier="00271103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="ad202195-aa4b-471d-9853-8d21d83b1362" classifier="00251103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="29aa2b93-6b1b-4240-b90f-7051fbab8317" classifier="00191103-7510-11d9-86f2-000476a22f44">
+															<slot>
+																<Slot uuid="00ad159a-4ba2-42b7-a9b5-263ac34afe7e" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+																	<value>
+																		<LiteralString uuid="6049b65c-2fbb-46d7-9877-72af35b59d86" visibility="public" value="global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)"/>
+																	</value>
+																</Slot>
+															</slot>
+														</StereotypeApplication>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="76e021a2-4c9a-467d-9a01-5ccf7f29526e" name="return" direction="return" type="88b1d3de-4e13-487d-8fd6-cb4b087d3f3f"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="2f229026-4939-4380-8fe6-05f16593f22a" name="Culture" visibility="package" isStatic="true" DocComment="d750fe1a-d5b1-4e06-92f4-eecadaae2709">
+													<ownedComment>
+														<Comment uuid="d750fe1a-d5b1-4e06-92f4-eecadaae2709" body="&lt;summary&gt;&#13;  Overrides the current thread&apos;s CurrentUICulture property for all&#13;  resource lookups using this strongly typed resource class.&#13;&lt;/summary&gt;">
+															<annotatedElement idref="2f229026-4939-4380-8fe6-05f16593f22a"/>
+														</Comment>
+													</ownedComment>
+													<appliedStereotype>
+														<StereotypeApplication uuid="fd81ef34-37f0-4a2c-b6d6-7c43b1219065" classifier="00271103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="de5bf4f3-99c2-4857-bfae-807c9fdff488" classifier="00251103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="47c54678-b4e0-42c0-bb42-5445076b46a5" classifier="00261103-7510-11d9-86f2-000476a22f44"/>
+														<StereotypeApplication uuid="ec8c7eb6-c44b-4327-b75d-38ffe380a025" classifier="00191103-7510-11d9-86f2-000476a22f44">
+															<slot>
+																<Slot uuid="791e229a-9b35-4d5e-8ed8-8b8759c499cd" definingFeature="001a1103-7510-11d9-86f2-000476a22f44">
+																	<value>
+																		<LiteralString uuid="72216497-dac6-4bfc-8343-b993d82497ed" visibility="public" value="global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)"/>
+																	</value>
+																</Slot>
+															</slot>
+														</StereotypeApplication>
+													</appliedStereotype>
+													<ownedParameter>
+														<Parameter uuid="65479fef-08a7-4a20-89a7-9abadcfda5b8" name="return" direction="return" type="3bb2553b-5c48-47eb-8329-f397f6079e3c"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Class>
+									</packagedElement>
+								</Package>
+							</packagedElement>
+						</Package>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication uuid="62cc0633-078d-4fda-96ef-25bd52382a73" appliedProfile="00000103-7510-11d9-86f2-000476a22f44"/>
+					</profileApplication>
+				</Package>
+				<Profile uuid="00000103-7510-11d9-86f2-000476a22f44" name="C# Profile" visibility="public" editable="false">
+					<packagedElement>
+						<Enumeration uuid="00351103-7510-11d9-86f2-000476a22f44" name="AccessorVisibility" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral uuid="00361103-7510-11d9-86f2-000476a22f44" name="internal" visibility="public"/>
+								<EnumerationLiteral uuid="00371103-7510-11d9-86f2-000476a22f44" name="protected" visibility="public"/>
+								<EnumerationLiteral uuid="003d1103-7510-11d9-86f2-000476a22f44" name="protected internal" visibility="public"/>
+								<EnumerationLiteral uuid="00381103-7510-11d9-86f2-000476a22f44" name="private" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<Enumeration uuid="00451103-7510-11d9-86f2-000476a22f44" name="EnumBaseType" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral uuid="00461103-7510-11d9-86f2-000476a22f44" name="byte" visibility="public"/>
+								<EnumerationLiteral uuid="00481103-7510-11d9-86f2-000476a22f44" name="int" visibility="public"/>
+								<EnumerationLiteral uuid="00491103-7510-11d9-86f2-000476a22f44" name="long" visibility="public"/>
+								<EnumerationLiteral uuid="004a1103-7510-11d9-86f2-000476a22f44" name="sbyte" visibility="public"/>
+								<EnumerationLiteral uuid="004b1103-7510-11d9-86f2-000476a22f44" name="short" visibility="public"/>
+								<EnumerationLiteral uuid="004c1103-7510-11d9-86f2-000476a22f44" name="uint" visibility="public"/>
+								<EnumerationLiteral uuid="004d1103-7510-11d9-86f2-000476a22f44" name="ulong" visibility="public"/>
+								<EnumerationLiteral uuid="004e1103-7510-11d9-86f2-000476a22f44" name="ushort" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<Enumeration uuid="00551103-7510-11d9-86f2-000476a22f44" name="AttributePresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral uuid="00561103-7510-11d9-86f2-000476a22f44" name="AttributeUsage" visibility="public"/>
+								<EnumerationLiteral uuid="00571103-7510-11d9-86f2-000476a22f44" name="CLSCompliant" visibility="public"/>
+								<EnumerationLiteral uuid="00581103-7510-11d9-86f2-000476a22f44" name="ContextStatic" visibility="public"/>
+								<EnumerationLiteral uuid="00591103-7510-11d9-86f2-000476a22f44" name="Flags" visibility="public"/>
+								<EnumerationLiteral uuid="005a1103-7510-11d9-86f2-000476a22f44" name="LoaderOptimization" visibility="public"/>
+								<EnumerationLiteral uuid="005b1103-7510-11d9-86f2-000476a22f44" name="MTAThread" visibility="public"/>
+								<EnumerationLiteral uuid="005c1103-7510-11d9-86f2-000476a22f44" name="NonSerialized" visibility="public"/>
+								<EnumerationLiteral uuid="005d1103-7510-11d9-86f2-000476a22f44" name="Obsolete" visibility="public"/>
+								<EnumerationLiteral uuid="005e1103-7510-11d9-86f2-000476a22f44" name="ParamArray" visibility="public"/>
+								<EnumerationLiteral uuid="005f1103-7510-11d9-86f2-000476a22f44" name="Serializable" visibility="public"/>
+								<EnumerationLiteral uuid="00601103-7510-11d9-86f2-000476a22f44" name="STAThread" visibility="public"/>
+								<EnumerationLiteral uuid="00611103-7510-11d9-86f2-000476a22f44" name="ThreadStatic" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<Enumeration uuid="00651103-7510-11d9-86f2-000476a22f44" name="TypeParameterVariance" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral uuid="00661103-7510-11d9-86f2-000476a22f44" name="in" visibility="public"/>
+								<EnumerationLiteral uuid="00671103-7510-11d9-86f2-000476a22f44" name="out" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<Stereotype uuid="00131103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="Property" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00141103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00191103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="Operation" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="001a1103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="001b1103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="Class" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="001c1103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="001d1103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="Interface" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="001e1103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="001f1103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="Enumeration" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00201103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00211103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="Parameter" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00221103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00231103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="EnumerationLiteral" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00241103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00321103-7510-11d9-86f2-000476a22f44" name="attributes" visibility="public" baseClass="ClassifierTemplateParameter" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00331103-7510-11d9-86f2-000476a22f44" name="sections" visibility="public" type="00551103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00281103-7510-11d9-86f2-000476a22f44" name="AddRemoveAccessor" visibility="public" baseClass="Operation" guiSortPriority="665"/>
+						<Stereotype uuid="004f1103-7510-11d9-86f2-000476a22f44" name="BaseType" visibility="public" baseClass="Enumeration" guiSortPriority="290">
+							<ownedAttribute>
+								<Property uuid="00501103-7510-11d9-86f2-000476a22f44" name="type" visibility="public" multipleSlotValues="false" type="00451103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00681103-7510-11d9-86f2-000476a22f44" name="Variance" visibility="public" baseClass="ClassifierTemplateParameter" guiSortPriority="290">
+							<ownedAttribute>
+								<Property uuid="00691103-7510-11d9-86f2-000476a22f44" name="kind" visibility="public" multipleSlotValues="false" slotValueDescription="2" type="00651103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00151103-7510-11d9-86f2-000476a22f44" name="const" visibility="public" baseClass="Property" guiSortPriority="690"/>
+						<Stereotype uuid="00531103-7510-11d9-86f2-000476a22f44" name="constructor" visibility="public" baseClass="Operation" guiSortPriority="698"/>
+						<Stereotype uuid="00411103-7510-11d9-86f2-000476a22f44" name="ConstructorConstraint" visibility="public" baseClass="ClassifierTemplateParameter" guiSortPriority="290"/>
+						<Stereotype uuid="00161103-7510-11d9-86f2-000476a22f44" name="delegate" visibility="public" baseClass="Class" guiSortPriority="680"/>
+						<Stereotype uuid="00541103-7510-11d9-86f2-000476a22f44" name="destructor" visibility="public" baseClass="Operation" guiSortPriority="694"/>
+						<Stereotype uuid="00181103-7510-11d9-86f2-000476a22f44" name="event" visibility="public" baseClass="Operation" guiSortPriority="670"/>
+						<Stereotype uuid="000b1103-7510-11d9-86f2-000476a22f44" name="extern" visibility="public" baseClass="Operation" guiSortPriority="320"/>
+						<Stereotype uuid="00341103-7510-11d9-86f2-000476a22f44" name="fixed" visibility="public" baseClass="Property" guiSortPriority="690"/>
+						<Stereotype uuid="00171103-7510-11d9-86f2-000476a22f44" name="indexer" visibility="public" baseClass="Operation" guiSortPriority="680"/>
+						<Stereotype uuid="002a1103-7510-11d9-86f2-000476a22f44" name="internal" visibility="public" baseClass="Class" guiSortPriority="490"/>
+						<Stereotype uuid="002b1103-7510-11d9-86f2-000476a22f44" name="internal" visibility="public" baseClass="Interface" guiSortPriority="490"/>
+						<Stereotype uuid="002c1103-7510-11d9-86f2-000476a22f44" name="internal" visibility="public" baseClass="Enumeration" guiSortPriority="490"/>
+						<Stereotype uuid="002d1103-7510-11d9-86f2-000476a22f44" name="internal" visibility="public" baseClass="Operation" guiSortPriority="490"/>
+						<Stereotype uuid="002e1103-7510-11d9-86f2-000476a22f44" name="internal" visibility="public" baseClass="Property" guiSortPriority="490"/>
+						<Stereotype uuid="002f1103-7510-11d9-86f2-000476a22f44" name="internal" visibility="public" baseClass="Parameter" guiSortPriority="490"/>
+						<Stereotype uuid="00251103-7510-11d9-86f2-000476a22f44" name="GetAccessor" visibility="public" baseClass="Operation" guiSortPriority="675">
+							<ownedAttribute>
+								<Property uuid="00391103-7510-11d9-86f2-000476a22f44" name="visibility" visibility="public" multipleSlotValues="false" slotValueDescription="1" type="00351103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00001103-7510-11d9-86f2-000476a22f44" name="namespace" visibility="public" baseClass="Package" guiSortPriority="690"/>
+						<Stereotype uuid="00071103-7510-11d9-86f2-000476a22f44" name="new" visibility="public" baseClass="Class" guiSortPriority="390"/>
+						<Stereotype uuid="000f1103-7510-11d9-86f2-000476a22f44" name="new" visibility="public" baseClass="Interface" guiSortPriority="390"/>
+						<Stereotype uuid="000e1103-7510-11d9-86f2-000476a22f44" name="new" visibility="public" baseClass="Enumeration" guiSortPriority="390"/>
+						<Stereotype uuid="00081103-7510-11d9-86f2-000476a22f44" name="new" visibility="public" baseClass="Property" guiSortPriority="390"/>
+						<Stereotype uuid="00091103-7510-11d9-86f2-000476a22f44" name="new" visibility="public" baseClass="Operation" guiSortPriority="390"/>
+						<Stereotype uuid="00511103-7510-11d9-86f2-000476a22f44" name="this" visibility="public" baseClass="Parameter" guiSortPriority="340"/>
+						<Stereotype uuid="003b1103-7510-11d9-86f2-000476a22f44" name="nullable" visibility="public" baseClass="Parameter" guiSortPriority="290"/>
+						<Stereotype uuid="003c1103-7510-11d9-86f2-000476a22f44" name="nullable" visibility="public" baseClass="Property" guiSortPriority="290"/>
+						<Stereotype uuid="00121103-7510-11d9-86f2-000476a22f44" name="operator" visibility="public" baseClass="Operation" guiSortPriority="660"/>
+						<Stereotype uuid="00011103-7510-11d9-86f2-000476a22f44" name="override" visibility="public" baseClass="Operation" guiSortPriority="360"/>
+						<Stereotype uuid="00301103-7510-11d9-86f2-000476a22f44" name="partial" visibility="public" baseClass="Class" guiSortPriority="310"/>
+						<Stereotype uuid="00311103-7510-11d9-86f2-000476a22f44" name="partial" visibility="public" baseClass="Interface" guiSortPriority="310"/>
+						<Stereotype uuid="00521103-7510-11d9-86f2-000476a22f44" name="partial" visibility="public" baseClass="Operation" guiSortPriority="310"/>
+						<Stereotype uuid="00271103-7510-11d9-86f2-000476a22f44" name="property" visibility="public" baseClass="Operation" guiSortPriority="690"/>
+						<Stereotype uuid="00421103-7510-11d9-86f2-000476a22f44" name="ReferenceTypeConstraint" visibility="public" baseClass="ClassifierTemplateParameter" guiSortPriority="280"/>
+						<Stereotype uuid="00261103-7510-11d9-86f2-000476a22f44" name="SetAccessor" visibility="public" baseClass="Operation" guiSortPriority="674">
+							<ownedAttribute>
+								<Property uuid="003a1103-7510-11d9-86f2-000476a22f44" name="visibility" visibility="public" multipleSlotValues="false" slotValueDescription="1" type="00351103-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00441103-7510-11d9-86f2-000476a22f44" name="static" visibility="public" baseClass="Class" guiSortPriority="385"/>
+						<Stereotype uuid="00111103-7510-11d9-86f2-000476a22f44" name="struct" visibility="public" baseClass="Class" guiSortPriority="690"/>
+						<Stereotype uuid="00061103-7510-11d9-86f2-000476a22f44" name="unsafe" visibility="public" baseClass="Class" guiSortPriority="350"/>
+						<Stereotype uuid="00101103-7510-11d9-86f2-000476a22f44" name="unsafe" visibility="public" baseClass="Interface" guiSortPriority="350"/>
+						<Stereotype uuid="00041103-7510-11d9-86f2-000476a22f44" name="unsafe" visibility="public" baseClass="Property" guiSortPriority="350"/>
+						<Stereotype uuid="000c1103-7510-11d9-86f2-000476a22f44" name="unsafe" visibility="public" baseClass="Operation" guiSortPriority="350"/>
+						<Stereotype uuid="00431103-7510-11d9-86f2-000476a22f44" name="ValueTypeConstraint" visibility="public" baseClass="ClassifierTemplateParameter" guiSortPriority="270"/>
+						<Stereotype uuid="00021103-7510-11d9-86f2-000476a22f44" name="virtual" visibility="public" baseClass="Operation" guiSortPriority="370"/>
+						<Stereotype uuid="00031103-7510-11d9-86f2-000476a22f44" name="volatile" visibility="public" baseClass="Property" guiSortPriority="380"/>
+						<Stereotype uuid="00ca1103-7510-11d9-86f2-000476a22f44" name="get" visibility="public" baseClass="Message" guiSortPriority="675"/>
+						<Stereotype uuid="00cb1103-7510-11d9-86f2-000476a22f44" name="set" visibility="public" baseClass="Message" guiSortPriority="675"/>
+						<PrimitiveType uuid="00072103-7510-11d9-86f2-000476a22f44" name="bool" visibility="public"/>
+						<PrimitiveType uuid="00002103-7510-11d9-86f2-000476a22f44" name="byte" visibility="public"/>
+						<PrimitiveType uuid="00012103-7510-11d9-86f2-000476a22f44" name="char" visibility="public"/>
+						<PrimitiveType uuid="000d2103-7510-11d9-86f2-000476a22f44" name="decimal" visibility="public"/>
+						<PrimitiveType uuid="00062103-7510-11d9-86f2-000476a22f44" name="double" visibility="public"/>
+						<PrimitiveType uuid="00052103-7510-11d9-86f2-000476a22f44" name="float" visibility="public"/>
+						<PrimitiveType uuid="00032103-7510-11d9-86f2-000476a22f44" name="int" visibility="public"/>
+						<PrimitiveType uuid="00042103-7510-11d9-86f2-000476a22f44" name="long" visibility="public"/>
+						<PrimitiveType uuid="000f2103-7510-11d9-86f2-000476a22f44" name="object" visibility="public"/>
+						<PrimitiveType uuid="00092103-7510-11d9-86f2-000476a22f44" name="sbyte" visibility="public"/>
+						<PrimitiveType uuid="00022103-7510-11d9-86f2-000476a22f44" name="short" visibility="public"/>
+						<PrimitiveType uuid="000e2103-7510-11d9-86f2-000476a22f44" name="string" visibility="public"/>
+						<PrimitiveType uuid="000b2103-7510-11d9-86f2-000476a22f44" name="uint" visibility="public"/>
+						<PrimitiveType uuid="000c2103-7510-11d9-86f2-000476a22f44" name="ulong" visibility="public"/>
+						<PrimitiveType uuid="000a2103-7510-11d9-86f2-000476a22f44" name="ushort" visibility="public"/>
+						<PrimitiveType uuid="00082103-7510-11d9-86f2-000476a22f44" name="void" visibility="public"/>
+						<PrimitiveType uuid="00102103-7510-11d9-86f2-000476a22f44" name="dynamic" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package uuid="00000004-7510-11d9-86f2-000476a22f44" name="Unknown Externals" visibility="public" editable="false">
+					<packagedElement>
+						<Class uuid="3bb2553b-5c48-47eb-8329-f397f6079e3c" name="global::System.Globalization.CultureInfo" visibility="public"/>
+						<Class uuid="88b1d3de-4e13-487d-8fd6-cb4b087d3f3f" name="global::System.Resources.ResourceManager" visibility="public"/>
+						<Class uuid="f6e18a58-7a7f-4457-b42a-2067da47a5f8" name="System.Windows.Forms.SplitContainer" visibility="public"/>
+						<Class uuid="059c7b8b-4b59-4f4d-9129-6a24552076ce" name="System.Windows.Forms.TextBox" visibility="public"/>
+						<Class uuid="1502a990-e017-429e-b6ee-a9d1ebca6dbd" name="System.Windows.Forms.TreeView" visibility="public"/>
+						<Class uuid="7fa8de7b-24b0-45df-be20-721924876f45" name="System.Windows.Forms.Label" visibility="public"/>
+						<Class uuid="5cecfa62-6608-4427-aaae-e2874c59b01b" name="System.Windows.Forms.ToolStripButton" visibility="public"/>
+						<Class uuid="9540d5d4-c6d9-48dc-b934-51b64ecdb67a" name="System.Windows.Forms.ToolStrip" visibility="public"/>
+						<Class uuid="2fda7a94-c639-4d43-80cf-c5ee97bcf394" name="System.ComponentModel.IContainer" visibility="public"/>
+						<Class uuid="ae981246-dafa-482a-9cac-4410b992dc5c" name="TreeNode" visibility="public"/>
+						<Class uuid="351ff587-4771-4975-8bd7-fb3ed0f66c0c" name="EventArgs" visibility="public"/>
+						<Class uuid="d95b43b0-037d-4ede-8de7-6f8b7157bf66" name="String" visibility="public"/>
+						<Class uuid="bc389fc9-fc64-402c-a05a-23aa708b90d7" name="global::System.Configuration.ApplicationSettingsBase" visibility="public"/>
+						<Class uuid="573fed18-ec3a-4b28-a92b-d9f447853c86" name="Form" visibility="public"/>
+					</packagedElement>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>

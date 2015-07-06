@@ -1,0 +1,7 @@
+package annotations;
+
+public class Annotations {
+
+	Object obj = 808;
+	String str = (@NonNull String) obj;
+}

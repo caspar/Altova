@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns="http://www.altova.com/documentation" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.altova.com/documentation" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="../Documentation.xsd"/>
+	<xs:element name="UModelDocumentation">
+		<xs:annotation>
+			<xs:documentation>Root element of the XBRL documentation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Document"/>
+				<xs:element name="DocumentationSettings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Includes">
+								<xs:complexType>
+									<xs:attribute name="index" type="xs:boolean" use="required"/>
+									<xs:attribute name="namedElementsOnly" type="xs:boolean" use="required"/>
+									<xs:attribute name="includedSubprojects" type="xs:boolean" use="required"/>
+									<xs:attribute name="predefinedSubprojects" type="xs:boolean" use="required"/>
+									<xs:attribute name="unknownExternals" type="xs:boolean" use="required"/>
+									<xs:attribute name="behavioralFeature" type="xs:boolean" use="required"/>
+									<xs:attribute name="class" type="xs:boolean" use="required"/>
+									<xs:attribute name="classifier" type="xs:boolean" use="required"/>
+									<xs:attribute name="constraint" type="xs:boolean" use="required"/>
+									<xs:attribute name="dataType" type="xs:boolean" use="required"/>
+									<xs:attribute name="enumeration" type="xs:boolean" use="required"/>
+									<xs:attribute name="enumerationLiteral" type="xs:boolean" use="required"/>
+									<xs:attribute name="feature" type="xs:boolean" use="required"/>
+									<xs:attribute name="instanceSpecification" type="xs:boolean" use="required"/>
+									<xs:attribute name="namedElement" type="xs:boolean" use="required"/>
+									<xs:attribute name="namespace" type="xs:boolean" use="required"/>
+									<xs:attribute name="operation" type="xs:boolean" use="required"/>
+									<xs:attribute name="package" type="xs:boolean" use="required"/>
+									<xs:attribute name="packageableElement" type="xs:boolean" use="required"/>
+									<xs:attribute name="parameter" type="xs:boolean" use="required"/>
+									<xs:attribute name="primitiveType" type="xs:boolean" use="required"/>
+									<xs:attribute name="property" type="xs:boolean" use="required"/>
+									<xs:attribute name="redefinableElement" type="xs:boolean" use="required"/>
+									<xs:attribute name="structuralFeature" type="xs:boolean" use="required"/>
+									<xs:attribute name="type" type="xs:boolean" use="required"/>
+									<xs:attribute name="typedElement" type="xs:boolean" use="required"/>
+									<xs:attribute name="behavioredClassifier" type="xs:boolean" use="required"/>
+									<xs:attribute name="interface" type="xs:boolean" use="required"/>
+									<xs:attribute name="associationClass" type="xs:boolean" use="required"/>
+									<xs:attribute name="component" type="xs:boolean" use="required"/>
+									<xs:attribute name="structuredClassifier" type="xs:boolean" use="required"/>
+									<xs:attribute name="connectableElement" type="xs:boolean" use="required"/>
+									<xs:attribute name="encapsulatedClassifier" type="xs:boolean" use="required"/>
+									<xs:attribute name="port" type="xs:boolean" use="required"/>
+									<xs:attribute name="collaboration" type="xs:boolean" use="required"/>
+									<xs:attribute name="collaborationUse" type="xs:boolean" use="required"/>
+									<xs:attribute name="artifact" type="xs:boolean" use="required"/>
+									<xs:attribute name="node" type="xs:boolean" use="required"/>
+									<xs:attribute name="device" type="xs:boolean" use="required"/>
+									<xs:attribute name="executionEnvironment" type="xs:boolean" use="required"/>
+									<xs:attribute name="deploymentTarget" type="xs:boolean" use="required"/>
+									<xs:attribute name="deployedArtifact" type="xs:boolean" use="required"/>
+									<xs:attribute name="actor" type="xs:boolean" use="required"/>
+									<xs:attribute name="extensionPoint" type="xs:boolean" use="required"/>
+									<xs:attribute name="useCase" type="xs:boolean" use="required"/>
+									<xs:attribute name="profile" type="xs:boolean" use="required"/>
+									<xs:attribute name="stereotype" type="xs:boolean" use="required"/>
+									<xs:attribute name="model" type="xs:boolean" use="required"/>
+									<xs:attribute name="behavior" type="xs:boolean" use="required"/>
+									<xs:attribute name="event" type="xs:boolean" use="required"/>
+									<xs:attribute name="callEvent" type="xs:boolean" use="required"/>
+									<xs:attribute name="durationConstraint" type="xs:boolean" use="required"/>
+									<xs:attribute name="durationObservation" type="xs:boolean" use="required"/>
+									<xs:attribute name="intervalConstraint" type="xs:boolean" use="required"/>
+									<xs:attribute name="messageEvent" type="xs:boolean" use="required"/>
+									<xs:attribute name="anyReceiveEvent" type="xs:boolean" use="required"/>
+									<xs:attribute name="observation" type="xs:boolean" use="required"/>
+									<xs:attribute name="timeConstraint" type="xs:boolean" use="required"/>
+									<xs:attribute name="timeEvent" type="xs:boolean" use="required"/>
+									<xs:attribute name="timeObservation" type="xs:boolean" use="required"/>
+									<xs:attribute name="trigger" type="xs:boolean" use="required"/>
+									<xs:attribute name="signal" type="xs:boolean" use="required"/>
+									<xs:attribute name="signalEvent" type="xs:boolean" use="required"/>
+									<xs:attribute name="changeEvent" type="xs:boolean" use="required"/>
+									<xs:attribute name="opaqueBehavior" type="xs:boolean" use="required"/>
+									<xs:attribute name="functionBehavior" type="xs:boolean" use="required"/>
+									<xs:attribute name="combinedFragment" type="xs:boolean" use="required"/>
+									<xs:attribute name="executionSpecification" type="xs:boolean" use="required"/>
+									<xs:attribute name="behaviorExecutionSpecification" type="xs:boolean" use="required"/>
+									<xs:attribute name="actionExecutionSpecification" type="xs:boolean" use="required"/>
+									<xs:attribute name="interaction" type="xs:boolean" use="required"/>
+									<xs:attribute name="interactionConstraint" type="xs:boolean" use="required"/>
+									<xs:attribute name="interactionFragment" type="xs:boolean" use="required"/>
+									<xs:attribute name="interactionOperand" type="xs:boolean" use="required"/>
+									<xs:attribute name="interactionUse" type="xs:boolean" use="required"/>
+									<xs:attribute name="lifeline" type="xs:boolean" use="required"/>
+									<xs:attribute name="messageEnd" type="xs:boolean" use="required"/>
+									<xs:attribute name="messageOccurrenceSpecification" type="xs:boolean" use="required"/>
+									<xs:attribute name="destructionOccurrenceSpecification" type="xs:boolean" use="required"/>									
+									<xs:attribute name="occurrenceSpecification" type="xs:boolean" use="required"/>
+									<xs:attribute name="executionOccurrenceSpecification" type="xs:boolean" use="required"/>
+									<xs:attribute name="gate" type="xs:boolean" use="required"/>
+									<xs:attribute name="stateInvariant" type="xs:boolean" use="required"/>
+									<xs:attribute name="activity" type="xs:boolean" use="required"/>
+									<xs:attribute name="activityNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="activityEdge" type="xs:boolean" use="required"/>
+									<xs:attribute name="controlNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="finalNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="flowFinalNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="activityFinalNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="initialNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="forkNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="joinNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="decisionNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="mergeNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="executableNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="objectNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="centralBufferNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="dataStoreNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="activityParameterNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="pin" type="xs:boolean" use="required"/>
+									<xs:attribute name="inputPin" type="xs:boolean" use="required"/>
+									<xs:attribute name="outputPin" type="xs:boolean" use="required"/>
+									<xs:attribute name="actionInputPin" type="xs:boolean" use="required"/>
+									<xs:attribute name="valuePin" type="xs:boolean" use="required"/>
+									<xs:attribute name="action" type="xs:boolean" use="required"/>
+									<xs:attribute name="invocationAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="callAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="callBehaviorAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="callOperationAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="acceptEventAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="sendSignalAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="activityGroup" type="xs:boolean" use="required"/>
+									<xs:attribute name="activityPartition" type="xs:boolean" use="required"/>
+									<xs:attribute name="expansionNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="structuredActivityNode" type="xs:boolean" use="required"/>
+									<xs:attribute name="expansionRegion" type="xs:boolean" use="required"/>
+									<xs:attribute name="interruptibleActivityRegion" type="xs:boolean" use="required"/>
+									<xs:attribute name="opaqueAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="valueSpecificationAction" type="xs:boolean" use="required"/>
+									<xs:attribute name="connectionPointReference" type="xs:boolean" use="required"/>
+									<xs:attribute name="finalState" type="xs:boolean" use="required"/>
+									<xs:attribute name="pseudostate" type="xs:boolean" use="required"/>
+									<xs:attribute name="region" type="xs:boolean" use="required"/>
+									<xs:attribute name="state" type="xs:boolean" use="required"/>
+									<xs:attribute name="stateMachine" type="xs:boolean" use="required"/>
+									<xs:attribute name="vertex" type="xs:boolean" use="required"/>
+									<xs:attribute name="protocolStateMachine" type="xs:boolean" use="required"/>
+									<xs:attribute name="classDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="useCaseDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="objectDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="componentDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="deploymentDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sequenceDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="activityDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="stateMachineDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="compositeStructureDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="packageDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="communicationDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="timingDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="interactionOverviewDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="xmlSchemaDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="bpmnDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="profileDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLUseCaseDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLActivityDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLBlockDefinitionDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLInternalBlockDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLPackageDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLParametricDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLRequirementDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLSequenceDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="sysMLStateMachineDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="databaseDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="protocolStateMachineDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="bpmn2Diagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="bpmn2CollaborationDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="bpmn2CoreographyDiagram" type="xs:boolean" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Details">
+								<xs:complexType>
+									<xs:attribute name="diagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="hierarchyDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="hierarchyDiagramExpandElementsOnce" type="xs:boolean" use="required"/>
+									<xs:attribute name="owner" type="xs:boolean" use="required"/>
+									<xs:attribute name="templateParameters" type="xs:boolean" use="required"/>
+									<xs:attribute name="templateParameterSubstitutions" type="xs:boolean" use="required"/>
+									<xs:attribute name="properties" type="xs:boolean" use="required"/>
+									<xs:attribute name="operationParameters" type="xs:boolean" use="required"/>
+									<xs:attribute name="ownedDiagrams" type="xs:boolean" use="required"/>
+									<xs:attribute name="ownedMembers" type="xs:boolean" use="required"/>
+									<xs:attribute name="generals" type="xs:boolean" use="required"/>
+									<xs:attribute name="specifics" type="xs:boolean" use="required"/>
+									<xs:attribute name="implementedInterfaces" type="xs:boolean" use="required"/>
+									<xs:attribute name="associationsToFrom" type="xs:boolean" use="required"/>
+									<xs:attribute name="sourceTargetOfOtherRelations" type="xs:boolean" use="required"/>
+									<xs:attribute name="typedElements" type="xs:boolean" use="required"/>
+									<xs:attribute name="boundElements" type="xs:boolean" use="required"/>
+									<xs:attribute name="shownOnDiagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="hyperlinks" type="xs:boolean" use="required"/>
+									<xs:attribute name="constraints" type="xs:boolean" use="required"/>
+									<xs:attribute name="documentation" type="xs:boolean" use="required"/>
+									<xs:attribute name="documentationAsHTML" type="xs:boolean" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="UMLProject" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UMLDiagram" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:complexContent>
+										<xs:extension base="TNamedItem">
+											<xs:sequence>
+												<xs:element name="Owner" type="TText"/>
+												<xs:element ref="Diagram"/>
+												<xs:element ref="Documentation" minOccurs="0"/>
+											</xs:sequence>
+											<xs:attribute name="kind" type="xs:string" use="required"/>
+											<xs:attribute name="index" type="xs:boolean" default="false"/>
+											<xs:attribute name="newFile" type="xs:anyURI"/>
+										</xs:extension>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element ref="UMLElement" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="location" type="xs:anyURI" use="required"/>
+						<xs:attribute name="href" type="xs:anyURI" use="required"/>
+						<xs:attribute name="main" type="xs:boolean" default="false"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Documentation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Part" type="THRefText" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="asHTML" type="xs:boolean" default="false"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UMLElement">
+		<xs:complexType mixed="true">
+			<xs:complexContent>
+				<xs:extension base="TNamedItem">
+					<xs:sequence>
+						<xs:element ref="Diagram" minOccurs="0"/>
+						<xs:element name="Hierarchy" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="Diagram"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Owner" type="TText" minOccurs="0"/>
+						<xs:element name="TemplateParameters" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TemplateParameter" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Constraint" type="TText" minOccurs="0"/>
+											</xs:sequence>
+											<xs:attribute name="name" type="xs:string" use="required"/>
+											<xs:attribute name="kind" type="xs:string"/>
+											<xs:attribute name="default" type="xs:string"/>
+											<xs:attribute name="contract" type="xs:string"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Templates" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Template" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="TemplateParameterSubstitution" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Template" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:complexContent>
+												<xs:extension base="TRef">
+													<xs:sequence>
+														<xs:element name="Substitution" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Formal" type="TText" minOccurs="0"/>
+																	<xs:element name="Actual" type="TText" minOccurs="0"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="name" type="xs:string"/>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Properties" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Property" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:complexContent>
+												<xs:extension base="TNamedText">
+													<xs:attribute name="href" type="xs:anyURI"/>
+													<xs:attribute name="nameRef" type="xs:string"/>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OperationParameters" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Name" type="TText" minOccurs="0"/>
+												<xs:element name="Direction" type="TText" minOccurs="0"/>
+												<xs:element name="Type" type="TText" minOccurs="0"/>
+												<xs:element name="PostTypeModifier" type="TText" minOccurs="0"/>
+												<xs:element name="Multiplicity" type="TText" minOccurs="0"/>
+												<xs:element name="DefaultValue" type="TText" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OwnedDiagrams" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Diagram" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OwnedMembers" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Member" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Generals" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="General" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Specifics" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Specific" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ImplementedInterfaces" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Interface" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="AssociationsTo" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="AssociationTo" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="From" type="TText" minOccurs="0"/>
+												<xs:element name="To" type="TText" minOccurs="0"/>
+												<xs:element name="OwnedEnd" type="TText" minOccurs="0"/>
+												<xs:element name="Name" type="TText"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="AssociationsFrom" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="AssociationFrom" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="From" type="TText"/>
+												<xs:element name="OwnedEnd" type="TText" minOccurs="0"/>
+												<xs:element name="Name" type="TText"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="SourceOfRelations" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Relation" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Source" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+											</xs:sequence>
+											<xs:attribute name="kind" type="xs:string" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="TargetOfRelations" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Relation" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Target" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+											</xs:sequence>
+											<xs:attribute name="kind" type="xs:string" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="TypedElements" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="UsedIn" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:complexContent>
+												<xs:extension base="TNamedRef">
+													<xs:sequence>
+														<xs:element name="TypedElement" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Element" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+																</xs:sequence>
+																<xs:attribute name="kind" type="xs:string" use="required"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute name="kind" type="xs:string" use="required"/>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="BoundElements" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Element" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ShownOnDiagrams" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Diagram" type="TText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Hyperlinks" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Hyperlink" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:complexContent>
+												<xs:extension base="THRefText">
+													<xs:attribute name="userDefinedName" type="xs:string" use="required"/>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Constraints" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Constraint" type="TNamedText" minOccurs="0" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element ref="Documentation" minOccurs="0"/>
+						<xs:element ref="UMLElement" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute name="kind" type="xs:string" use="required"/>
+					<xs:attribute name="index" type="xs:boolean" default="false"/>
+					<xs:attribute name="newFile" type="xs:anyURI"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

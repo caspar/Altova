@@ -1,0 +1,21 @@
+package annotations;
+
+import java.lang.annotation.Repeatable;
+
+@Repeatable(Markers.class)
+@interface Marker {
+	String author() default "Caspar"; 
+}
+
+public @interface Markers{
+	Marker[] value();
+}
+
+public class RepeatingAnnotation{
+	
+	@Marker(author = "Caspar")
+	@Marker(author = "Altova")
+	public RepeatingAnnotation(){
+		
+	}
+}

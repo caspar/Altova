@@ -1,0 +1,18 @@
+public class Annotations {
+
+	@Deprecated
+	public void deprecatedMethod(){
+		/*this method intentionally left blank*/
+	}
+	
+	@Author(value = "Caspar")
+	@Author(value = "Altova")
+	public void repeatingAnnotation(){
+		//Triggers a parsing error in UM Eclipse plugin
+	}
+	
+	public static void main(String[] args){
+		Annotations an = new Annotations();
+		an.repeatingAnnotation();
+	}
+}

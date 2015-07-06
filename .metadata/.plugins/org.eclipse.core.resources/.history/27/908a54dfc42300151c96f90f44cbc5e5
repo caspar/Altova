@@ -1,0 +1,10 @@
+package annotations;
+
+import java.lang.annotation.Repeatable;
+
+@Repeatable(Schedule.class)
+@interface Schedules {
+  String dayOfMonth() default "first";
+  String dayOfWeek() default "Mon";
+  int hour() default 12;
+}

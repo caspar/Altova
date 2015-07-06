@@ -1,0 +1,6 @@
+package annotations;
+
+@Target(value=String)
+public @interface Email {
+
+}

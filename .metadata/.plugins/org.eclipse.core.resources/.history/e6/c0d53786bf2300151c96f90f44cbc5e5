@@ -1,0 +1,16 @@
+package annotations;
+
+public class Annotation {
+
+	Object obj = 808;
+	String str = (@NonNull String) obj;
+	
+	public void repeatingAnnotation(){
+		
+	}
+	
+	public static void main(String[] args){
+		Annotation an = new @Interened Annotation();
+	
+	}
+}

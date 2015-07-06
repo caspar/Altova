@@ -1,0 +1,10 @@
+package annotations;
+
+@Repeatable(Authors.class)
+@interface Author{
+	value();
+}
+
+public @interface Authors{
+	String[] value();
+}

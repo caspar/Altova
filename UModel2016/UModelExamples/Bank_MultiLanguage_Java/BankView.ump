@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Settings>
+		<ProjectStyles namespacemode="3" taggedvalues="0"/>
+	</Settings>
+	<OpenDiagrams activeDiagram="99c43a1a-871d-446f-ae42-bb2350bc1dc0">
+		<OpenDiagramEntry>265ea922-1b92-4ef8-9de4-9e949ef149a8</OpenDiagramEntry>
+		<OpenDiagramEntry>d89329d3-7480-4263-9986-da4aa5a13b86</OpenDiagramEntry>
+		<OpenDiagramEntry>abcc149e-2113-40a9-ac26-3b6cfe5d86fc</OpenDiagramEntry>
+		<OpenDiagramEntry>99c43a1a-871d-446f-ae42-bb2350bc1dc0</OpenDiagramEntry>
+	</OpenDiagrams>
+	<Model>
+		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<packagedElement>
+				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public">
+					<packagedElement>
+						<Component uuid="78f269b6-6cc7-4645-9424-f175bbae4f22" name="BankView" visibility="public" codeLang="Java5.0 (1.5)" codeProjectFileOrDirectory="Src">
+							<realization>
+								<ComponentRealization uuid="8e7b9d39-2ed6-475b-b788-f9b9b7aa3e7b" visibility="public" realizingClassifier="a1983840-317d-492f-b4e1-bfed64df0e76"/>
+								<ComponentRealization uuid="443353b7-3a43-4c34-b851-ff9d616cedd4" visibility="public" realizingClassifier="a4d0ca73-063b-43a6-8766-b30933fae90d"/>
+								<ComponentRealization uuid="4e9bc658-419c-4a1e-8d3d-9c0a819c7371" visibility="public" realizingClassifier="a4d8d5e9-2100-4c64-9e38-97a3109df2ca"/>
+								<ComponentRealization uuid="0c34a0ae-b5f8-4a00-9e79-bd1c22b04811" visibility="public" realizingClassifier="0e36872a-28eb-416b-8fed-8d76e93aa2f0"/>
+								<ComponentRealization uuid="1dc2c66e-8df2-4011-8ca1-98231199cb07" visibility="public" realizingClassifier="74ef2f95-c46e-44e3-8e19-efa4d975cd7f"/>
+								<ComponentRealization uuid="735736a5-4322-49e0-b0e2-a4c3eecac05f" visibility="public" realizingClassifier="58dfad9e-c590-40b3-9025-50d07459394e"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package uuid="ae59f1ad-3786-4914-9eb9-c093ac30e392" name="Design View" visibility="public">
+					<packagedElement>
+						<Package uuid="7efbec2b-dbb8-401e-a646-aa7e46abf800" name="BankView" visibility="public" shared="true">
+							<packagedElement>
+								<InstanceSpecification uuid="5c31749d-fce9-4bee-8fef-baa939443be5" visibility="public" instanceSpecification_LinkBegin="d6dbe9f9-67bf-4648-b07a-a485f65df38b" instanceSpecification_LinkEnd="c56b2a1b-1d0a-4b76-b8b4-6bc5aab69716" classifier="c31be1ef-f4c7-4cf4-a22d-11a9ff590527"/>
+								<Package uuid="55b51c04-41dc-4783-9317-5265d9e0ae1e" name="com" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication uuid="c807b5ca-e853-497b-8e6b-c47ee6c1097d" classifier="c898c1a3-547b-4a84-ad06-908fd57678c2"/>
+									</appliedStereotype>
+									<packagedElement>
+										<Package uuid="4843e69e-9afd-4c37-a85e-bd97ec4469e6" name="altova" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="d26119d7-cd54-4f19-91ea-cd2e5201b254" classifier="c898c1a3-547b-4a84-ad06-908fd57678c2"/>
+											</appliedStereotype>
+											<packagedElement>
+												<Package uuid="d6625d68-e6bf-4f58-9e14-74eb7b86f2df" name="bankview" visibility="public">
+													<appliedStereotype>
+														<StereotypeApplication uuid="c3ba961a-82db-4d08-9696-0bc75023cfaa" classifier="c898c1a3-547b-4a84-ad06-908fd57678c2"/>
+													</appliedStereotype>
+													<packagedElement>
+														<Class uuid="a4d8d5e9-2100-4c64-9e38-97a3109df2ca" name="CheckingAccount" visibility="public">
+															<codeFileName>
+																<CodeFileName name="CheckingAccount.java"/>
+															</codeFileName>
+															<generalization>
+																<Generalization uuid="0336527d-3cb7-4c09-90e5-341e03e258c8" isSubstitutable="false" general="58dfad9e-c590-40b3-9025-50d07459394e"/>
+															</generalization>
+															<ownedOperation>
+																<Operation uuid="70dc3e2b-c124-4409-9784-8c6cddf64a72" name="CheckingAccount" visibility="public">
+																	<appliedStereotype>
+																		<StereotypeApplication uuid="2c0221f7-b386-49e7-9684-8840fcc59bb3" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+																	</appliedStereotype>
+																</Operation>
+																<Operation uuid="e358c057-736b-42b9-b8e8-1194e3e51db6" name="collectAccountInfo" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="c962365f-63e8-461b-a20c-8a224e74b32b" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																		<Parameter uuid="0b2d07b9-dbad-457d-b77d-1dda46bfdd31" name="bankAPI" type="7f0d6c12-d5f8-4720-8831-10d22918e1ec"/>
+																	</ownedParameter>
+																</Operation>
+															</ownedOperation>
+														</Class>
+														<Class uuid="74ef2f95-c46e-44e3-8e19-efa4d975cd7f" name="SavingsAccount" visibility="public">
+															<codeFileName>
+																<CodeFileName name="SavingsAccount.java"/>
+															</codeFileName>
+															<generalization>
+																<Generalization uuid="3e93593d-bd3e-435c-87d7-9be1d9165005" isSubstitutable="false" general="58dfad9e-c590-40b3-9025-50d07459394e"/>
+															</generalization>
+															<ownedAttribute>
+																<Property uuid="b82d7887-1262-4348-8254-f241dbf4494f" name="interestRate" visibility="protected" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																<Property uuid="d223b078-e0da-4272-ace5-895130d4b2cb" name="minimumBalance" visibility="protected" type="d6f1dc72-e6ac-472b-81a4-78c87d437511">
+																	<defaultValue>
+																		<LiteralString uuid="f071e091-cfd8-46d5-9752-dbd8c1254148" visibility="public" value="10000"/>
+																	</defaultValue>
+																</Property>
+															</ownedAttribute>
+															<ownedOperation>
+																<Operation uuid="0931eea0-80f7-4e73-ae26-ceacb5108c15" name="SavingsAccount" visibility="public">
+																	<appliedStereotype>
+																		<StereotypeApplication uuid="e82def02-690b-4793-807f-1ba41d2ca14e" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+																	</appliedStereotype>
+																</Operation>
+																<Operation uuid="46b5a6bd-a183-4258-9d08-03343b19cfa8" name="getInterestRate" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="098e6f1a-8c28-40a3-b07f-a8351bf1cc80" name="return" direction="return" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="dfc4fc81-5fa2-479e-a4ca-21ca9c164301" name="collectAccountInfo" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="b3a1e492-4004-4896-8d35-ef530e0df80f" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																		<Parameter uuid="d9635b99-fe44-4bf7-851d-ef95776d6967" name="bankAPI" type="7f0d6c12-d5f8-4720-8831-10d22918e1ec"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="9e012d89-979d-474b-b119-a25ccea88d96" name="getMinimumBalance" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="aafc2365-eb22-4326-a9b5-d60e69eee144" name="return" direction="return" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																	</ownedParameter>
+																</Operation>
+															</ownedOperation>
+														</Class>
+														<Class uuid="0e36872a-28eb-416b-8fed-8d76e93aa2f0" name="CreditCardAccount" visibility="public">
+															<codeFileName>
+																<CodeFileName name="CreditCardAccount.java"/>
+															</codeFileName>
+															<generalization>
+																<Generalization uuid="6004c82c-1744-4f12-aecd-87a7abcaecb7" isSubstitutable="false" general="58dfad9e-c590-40b3-9025-50d07459394e"/>
+															</generalization>
+															<ownedAttribute>
+																<Property uuid="6cfe7c02-ba80-4b82-8909-e6d1f0bfe624" name="creditLimit" visibility="protected" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																<Property uuid="8a3b62f9-7c76-4125-bb24-e62581107bd7" name="interestRateOnBalance" visibility="protected" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																<Property uuid="a09c95ed-349c-42c0-ace6-961d64919bde" name="interestRateOnCashAdvance" visibility="protected" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+															</ownedAttribute>
+															<ownedOperation>
+																<Operation uuid="dbb65cc5-b480-4aa4-849a-3f49518eb73d" name="CreditCardAccount" visibility="public">
+																	<appliedStereotype>
+																		<StereotypeApplication uuid="ad1a62ac-daca-478e-b0d7-0e3781d0d536" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+																	</appliedStereotype>
+																</Operation>
+																<Operation uuid="b44704ca-fd66-4436-9e8d-c3029a8a4f25" name="getCreditLimit" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="d37e34cd-fd7d-4309-854c-89cc0eb66feb" name="return" direction="return" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="e7804d04-0a44-435a-8ade-33fe6d056130" name="getInterestRateOnBalance" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="f1364cdf-c626-41fe-afa0-79006ae339ca" name="return" direction="return" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="7c2f1278-bc15-4519-96f0-f83176e8f30c" name="getInterestRateOnCashAdvance" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="973793f4-5b99-421f-ba7a-fec55f6f7933" name="return" direction="return" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="5f254d0c-895a-446a-9358-04cac6f9d91b" name="collectAccountInfo" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="420a0c96-0c6d-4e15-981a-7a92075c6a45" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																		<Parameter uuid="4516cfdf-b7b0-4201-8b46-9dc77085606f" name="bankAPI" type="7f0d6c12-d5f8-4720-8831-10d22918e1ec"/>
+																	</ownedParameter>
+																</Operation>
+															</ownedOperation>
+														</Class>
+														<Class uuid="58dfad9e-c590-40b3-9025-50d07459394e" name="Account" visibility="public" isAbstract="true">
+															<codeFileName>
+																<CodeFileName name="Account.java"/>
+															</codeFileName>
+															<ownedAttribute>
+																<Property uuid="d5b0db51-3b76-4d2d-b9a1-e5c8e8126507" name="balance" visibility="protected" type="d6f1dc72-e6ac-472b-81a4-78c87d437511">
+																	<defaultValue>
+																		<LiteralString uuid="d77302da-c923-4570-b782-eb0f2ddca156" visibility="public" value="0"/>
+																	</defaultValue>
+																</Property>
+																<Property uuid="6e58756f-16c1-40d7-93a9-63aef1fa4aca" name="id" visibility="protected" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+															</ownedAttribute>
+															<ownedOperation>
+																<Operation uuid="4b06f060-a53e-4cb9-bd30-113ce49ef3db" name="Account" visibility="public">
+																	<appliedStereotype>
+																		<StereotypeApplication uuid="86c0fe84-d4b7-45f1-b173-dc0308f8e9d4" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+																	</appliedStereotype>
+																</Operation>
+																<Operation uuid="3de02751-45d5-4135-bfa0-0f7483f9e464" name="getBalance" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="3c45cf0d-9cd6-495b-958f-ba4ef80c481a" name="return" direction="return" type="d6f1dc72-e6ac-472b-81a4-78c87d437511"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="2341a91d-912a-4485-944b-5e3f7a3b0c53" name="getId" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="9bdd88f1-14dd-459d-912c-17b3b5f2d5cd" name="return" direction="return" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="742351cf-3438-4ba3-bc12-5b66fc787450" name="collectAccountInfo" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="234c87e6-4f00-4a36-9e1c-96148788f768" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																		<Parameter uuid="038406ec-afd3-4a61-b6bd-60059244363d" name="bankAPI" type="7f0d6c12-d5f8-4720-8831-10d22918e1ec"/>
+																	</ownedParameter>
+																</Operation>
+															</ownedOperation>
+														</Class>
+														<Class uuid="a4d0ca73-063b-43a6-8766-b30933fae90d" name="Bank" visibility="public">
+															<codeFileName>
+																<CodeFileName name="Bank.java"/>
+															</codeFileName>
+															<ownedAttribute>
+																<Property uuid="54d51560-1af6-4c80-b621-16a10c9aea1a" name="bankname" visibility="protected" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																<Property uuid="041d332b-9eff-4603-b05b-dd46a093ace7" name="IPaddress" visibility="protected" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																<Property uuid="b242d6c5-b8a7-493c-b04d-1add73b322ea" name="username" visibility="protected" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																<Property uuid="6452a51c-a70b-4f39-b617-fa6963ba8872" name="password" visibility="protected" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																<Property uuid="e19398d8-b03e-4250-bc1a-e4f28c3659c1" name="accounts" visibility="protected" aggregation="composite" type="58dfad9e-c590-40b3-9025-50d07459394e">
+																	<lowerValue>
+																		<LiteralString uuid="8a89f95d-1595-45e9-af8e-a04d88754ad0" visibility="public" value="*"/>
+																	</lowerValue>
+																	<upperValue>
+																		<LiteralString uuid="0865084a-120a-41b1-80f1-7a9338c01c29" visibility="public" value="*"/>
+																	</upperValue>
+																</Property>
+															</ownedAttribute>
+															<ownedOperation>
+																<Operation uuid="bd05de9e-3cc1-4188-a86c-29481f025749" name="Bank" visibility="public">
+																	<appliedStereotype>
+																		<StereotypeApplication uuid="c32bad9b-bb57-4dd5-bcac-e297dc279c4d" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+																	</appliedStereotype>
+																	<ownedParameter>
+																		<Parameter uuid="c7b9d6d3-eb6f-4546-8959-7c5fece1af6b" name="name" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																		<Parameter uuid="2212d8f2-ae54-4896-a4d2-74908ecad342" name="IP" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																		<Parameter uuid="16c13abe-7d96-434d-a93b-31b1b95320bd" name="user" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																		<Parameter uuid="b6964204-53ae-448f-9916-a2d8980dcfa9" name="pw" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="fa162452-53bb-403a-b9bb-21ddf686666c" name="collectAccountInfos" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="3cdb9c00-ca0d-457f-aecf-cf5c13a40742" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																		<Parameter uuid="7af57e95-7f9b-4811-a1cf-071abd2c9553" name="api" type="7f0d6c12-d5f8-4720-8831-10d22918e1ec"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="9b60d891-5175-452e-bca1-af4517e650c8" name="getBalanceOfAccounts" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="b34a83d3-106a-48e5-8501-0f5020220d58" name="return" direction="return" type="308d9740-87d8-4fa8-91c3-85e1c8a42328"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="72cdd2db-c463-49e3-adc1-60607b41e222" name="getBankName" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="534d847e-4480-49bf-9162-41cfa86d24fd" name="return" direction="return" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="4a5bc19f-dbf1-448e-9cbb-db4682c2d053" name="getIPAddress" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="b8f98380-6b8a-4910-a3ae-7bcbec249565" name="return" direction="return" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="d4ae84e2-5fa2-4c8c-8804-0e8918d7a314" name="getUsername" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="21ab1254-6420-452c-bce2-324d42295a97" name="return" direction="return" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="2e6f2725-eaf9-4b76-8ddd-0408d9cc7c2b" name="getPassword" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="8f792fc6-635d-46b2-8cb8-662aa1669696" name="return" direction="return" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																	</ownedParameter>
+																</Operation>
+															</ownedOperation>
+														</Class>
+														<Class uuid="a1983840-317d-492f-b4e1-bfed64df0e76" name="BankView" visibility="public">
+															<codeFileName>
+																<CodeFileName name="BankView.java"/>
+															</codeFileName>
+															<ownedAttribute>
+																<Property isOrdered="true" uuid="d03375c6-dbaf-4b07-a195-cdf9295608e5" name="banks" visibility="protected" aggregation="composite" type="a4d0ca73-063b-43a6-8766-b30933fae90d">
+																	<lowerValue>
+																		<LiteralString uuid="0d4080ea-72a3-405a-937e-ecf1b86188c1" visibility="public" value="*"/>
+																	</lowerValue>
+																	<upperValue>
+																		<LiteralString uuid="c17d1a60-ee24-4f45-bdd0-9338a84df54e" visibility="public" value="*"/>
+																	</upperValue>
+																</Property>
+																<Property uuid="2a0ae291-1d90-4134-afef-0c1746c3156c" name="bankAPI" visibility="protected" type="7f0d6c12-d5f8-4720-8831-10d22918e1ec"/>
+															</ownedAttribute>
+															<ownedOperation>
+																<Operation uuid="3c6cc069-6e9a-4dbf-8a8e-fee4b9d3076b" name="BankView" visibility="public">
+																	<appliedStereotype>
+																		<StereotypeApplication uuid="e37d5ede-b900-488d-a1c0-d5a8b9e1814a" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+																	</appliedStereotype>
+																	<ownedParameter>
+																		<Parameter uuid="a35c6217-3b56-427a-922a-f718004d216f" name="bankAPI" type="7f0d6c12-d5f8-4720-8831-10d22918e1ec"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="ac160d07-7874-4699-a248-e3efabc81fa1" name="collectBankAddressInfos" visibility="protected">
+																	<ownedParameter>
+																		<Parameter uuid="8ac97f2f-38dd-4213-ae01-2a301d990ddd" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="73c0dc6d-61ff-4a56-a1f2-6c2a815b7261" name="collectAccountInfos" visibility="protected">
+																	<ownedParameter>
+																		<Parameter uuid="540a92e0-a19b-423b-addd-de71f3600738" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="e2a0691d-8edd-4151-9531-5b9393d4db15" name="collectData" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="44c1d34d-15ea-4471-ad60-91d7292768e7" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="595d4f2d-1f5a-4ee4-8670-2ee15e046fab" name="getBalanceAtBank" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="0199f806-4195-4622-9f0a-05ccdbdb4a59" name="bankname" type="81530a39-1176-47d7-add3-8da2cacba49c"/>
+																		<Parameter uuid="5eeedaea-5466-4d57-8326-f115418752f3" name="return" direction="return" type="308d9740-87d8-4fa8-91c3-85e1c8a42328"/>
+																	</ownedParameter>
+																</Operation>
+																<Operation uuid="6ee5ed97-8d99-4021-bf78-d338ac1c307a" name="getBalanceSumOfAllBanks" visibility="public">
+																	<ownedParameter>
+																		<Parameter uuid="40884dff-ef49-4221-9e7a-c1752b399a73" name="return" direction="return" type="308d9740-87d8-4fa8-91c3-85e1c8a42328"/>
+																	</ownedParameter>
+																</Operation>
+															</ownedOperation>
+														</Class>
+														<InstanceSpecification uuid="d6dbe9f9-67bf-4648-b07a-a485f65df38b" name="AgencyBank" visibility="public" classifier="a4d0ca73-063b-43a6-8766-b30933fae90d">
+															<slot>
+																<Slot uuid="f7fc8b2b-72a4-4a6f-8076-fe52a9bbcac8" definingFeature="54d51560-1af6-4c80-b621-16a10c9aea1a">
+																	<value>
+																		<LiteralString uuid="7fe41a0c-5521-425d-86a1-78a409704fd9" visibility="public" value="AgencyBank"/>
+																	</value>
+																</Slot>
+																<Slot uuid="84b68e10-44a3-45fa-b9f9-dd5bf61aa392" definingFeature="b242d6c5-b8a7-493c-b04d-1add73b322ea">
+																	<value>
+																		<LiteralString uuid="b93c313c-188c-40f3-908b-11dfc3c75d46" visibility="public" value="John Doe"/>
+																	</value>
+																</Slot>
+																<Slot uuid="db5ad6a6-c31f-4ae1-b2b5-59b7ee33e31b" definingFeature="6452a51c-a70b-4f39-b617-fa6963ba8872">
+																	<value>
+																		<LiteralString uuid="922e1fab-0f86-4de5-a560-ea8f68843cbb" visibility="public" value="johnny"/>
+																	</value>
+																</Slot>
+																<Slot uuid="810c5b53-935f-4bb6-a402-bf64d1a92992" definingFeature="041d332b-9eff-4603-b05b-dd46a093ace7">
+																	<value>
+																		<LiteralString uuid="be891607-93f7-4723-a0f8-83a6714759b0" visibility="public" value="10.10.127.128"/>
+																	</value>
+																</Slot>
+																<Slot uuid="7388f8e1-ac8e-4a90-8359-1b80dec41d5b" definingFeature="e19398d8-b03e-4250-bc1a-e4f28c3659c1">
+																	<value>
+																		<LiteralString uuid="213e352e-5dd4-4af3-8870-3b6635b72b05" visibility="public" value="3"/>
+																	</value>
+																</Slot>
+															</slot>
+														</InstanceSpecification>
+														<InstanceSpecification uuid="c56b2a1b-1d0a-4b76-b8b4-6bc5aab69716" name="John&apos;s 1st" visibility="public" classifier="74ef2f95-c46e-44e3-8e19-efa4d975cd7f">
+															<slot>
+																<Slot uuid="e42e4be2-e588-4b49-b6b1-69bd3a217ed0" definingFeature="d5b0db51-3b76-4d2d-b9a1-e5c8e8126507">
+																	<value>
+																		<LiteralString uuid="80808af8-4395-43b2-b715-1b7c07ddd85f" visibility="public" value="10,000.00"/>
+																	</value>
+																</Slot>
+																<Slot uuid="3975517d-3798-41d8-9f34-cc8ccc8cc86f" definingFeature="6e58756f-16c1-40d7-93a9-63aef1fa4aca">
+																	<value>
+																		<LiteralString uuid="ab68b89a-aee8-4059-9e15-cb9166b07c00" visibility="public" value="1234567890"/>
+																	</value>
+																</Slot>
+																<Slot uuid="df15d3f5-6e92-4f6d-8164-321ba8fadbc3" definingFeature="b82d7887-1262-4348-8254-f241dbf4494f">
+																	<value>
+																		<LiteralString uuid="f77a87ed-1f57-4413-ad37-56ed2bfd3276" visibility="public" value="1,2"/>
+																	</value>
+																</Slot>
+															</slot>
+														</InstanceSpecification>
+														<InstanceSpecification uuid="f9533f78-9bfd-431f-a724-152b2a333a22" name="John&apos;s 3rd" visibility="public" classifier="0e36872a-28eb-416b-8fed-8d76e93aa2f0">
+															<slot>
+																<Slot uuid="550ed7c1-ee2b-45ee-a68e-104a5149c595" definingFeature="6e58756f-16c1-40d7-93a9-63aef1fa4aca">
+																	<value>
+																		<LiteralString uuid="95a7e383-84fc-4a61-bbba-6220ef8f9cbe" visibility="public" value="4445556667"/>
+																	</value>
+																</Slot>
+																<Slot uuid="f50c6f9d-7e98-4d5f-a79b-c76e40bb20eb" definingFeature="d5b0db51-3b76-4d2d-b9a1-e5c8e8126507">
+																	<value>
+																		<LiteralString uuid="5af5ecca-30c8-4a08-a5c2-1bf59fefff20" visibility="public" value="789.14"/>
+																	</value>
+																</Slot>
+																<Slot uuid="b28c9752-c114-4f78-8c5b-9d2b5c3d51e1" definingFeature="6cfe7c02-ba80-4b82-8909-e6d1f0bfe624">
+																	<value>
+																		<LiteralString uuid="579b31db-6076-490f-9107-aa07e7c67f9f" visibility="public" value="5,000.00"/>
+																	</value>
+																</Slot>
+															</slot>
+														</InstanceSpecification>
+														<InstanceSpecification uuid="dfa9685b-2a8e-40dd-94aa-4f0cacbb66cf" name="John&apos;s 2nd" visibility="public" classifier="a4d8d5e9-2100-4c64-9e38-97a3109df2ca">
+															<slot>
+																<Slot uuid="6a5fc8a9-c4fe-4f76-8885-adb58e0ca474" definingFeature="d5b0db51-3b76-4d2d-b9a1-e5c8e8126507">
+																	<value>
+																		<LiteralString uuid="1ad9714d-9462-4932-a599-7f7dde37985c" visibility="public" value="1,254.76"/>
+																	</value>
+																</Slot>
+																<Slot uuid="b4cd5fdb-6a50-4b44-98e2-11698ea1f575" definingFeature="6e58756f-16c1-40d7-93a9-63aef1fa4aca">
+																	<value>
+																		<LiteralString uuid="14a8bfcc-a77b-4f08-ae9e-b7729c81209f" visibility="public" value="987654321"/>
+																	</value>
+																</Slot>
+															</slot>
+														</InstanceSpecification>
+													</packagedElement>
+												</Package>
+											</packagedElement>
+										</Package>
+									</packagedElement>
+								</Package>
+								<InstanceSpecification uuid="69709b02-7722-4bc1-aba7-95d7cb209e80" visibility="public" instanceSpecification_LinkBegin="d6dbe9f9-67bf-4648-b07a-a485f65df38b" instanceSpecification_LinkEnd="f9533f78-9bfd-431f-a724-152b2a333a22" classifier="c31be1ef-f4c7-4cf4-a22d-11a9ff590527"/>
+								<InstanceSpecification uuid="eaa2241c-5272-483e-8641-0c65e088a951" visibility="public" instanceSpecification_LinkBegin="d6dbe9f9-67bf-4648-b07a-a485f65df38b" instanceSpecification_LinkEnd="dfa9685b-2a8e-40dd-94aa-4f0cacbb66cf" classifier="c31be1ef-f4c7-4cf4-a22d-11a9ff590527"/>
+								<Association uuid="6f77137d-e2d2-40b5-b335-0722d7a7c16d" visibility="public">
+									<memberEnd idref="d03375c6-dbaf-4b07-a195-cdf9295608e5"/>
+									<ownedEnd>
+										<Property uuid="d39bad48-b4aa-4fd6-8c7b-0175b8c03ac9" type="a1983840-317d-492f-b4e1-bfed64df0e76">
+											<lowerValue>
+												<LiteralString uuid="f6c0e0a8-3412-414e-852c-3c2393c9f315" visibility="public" value="1"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="81306565-77dd-4051-bcea-b81072b2548d" visibility="public" value="1"/>
+											</upperValue>
+										</Property>
+									</ownedEnd>
+								</Association>
+								<Association uuid="c31be1ef-f4c7-4cf4-a22d-11a9ff590527" visibility="public">
+									<memberEnd idref="e19398d8-b03e-4250-bc1a-e4f28c3659c1"/>
+									<ownedEnd>
+										<Property uuid="d9956318-ae16-4441-814f-29f7f9b2404a" type="a4d0ca73-063b-43a6-8766-b30933fae90d">
+											<lowerValue>
+												<LiteralString uuid="c414869d-412b-4d4a-b7d0-18c2b61f7546" visibility="public" value="1"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="76493dda-6cf7-4962-b63e-ca14563d107f" visibility="public" value="1"/>
+											</upperValue>
+										</Property>
+									</ownedEnd>
+								</Association>
+							</packagedElement>
+							<profileApplication>
+								<ProfileApplication uuid="46471e11-6320-4205-91e3-6204410152ff" appliedProfile="00000102-7510-11d9-86f2-000476a22f44"/>
+							</profileApplication>
+						</Package>
+						<Package href="Banking access.ump#c9351d13-42b4-4a8f-80e7-c5f8873ec115"/>
+					</packagedElement>
+				</Package>
+				<Profile href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44" editable="false"/>
+				<Package href="Java5.0\Java (types only).ump#94ec1fc9-9a46-443e-8616-aa362b8594bc" editable="false"/>
+			</packagedElement>
+		</Package>
+	</Model>
+	<Diagrams>
+		<RootElement uuid="00000002-7510-11d9-86f2-000476a22f44">
+			<guiRootGuiDiagram>
+				<ProfileDiagram uuid="265ea922-1b92-4ef8-9de4-9e949ef149a8" name="Apply Java Profile" guiDiagramLinkedOwner="7efbec2b-dbb8-401e-a646-aa7e46abf800">
+					<guiDiagramGuiLink>
+						<Note uuid="28fad55a-0124-4f5b-8472-22ba969d425b" noteText="Apply Java Profile in order to get the Java specific Stereotypes and Datatypes&#13;Apply &apos;namespace&apos; stereotype to define a Java - namespace">
+							<style autosize="1" wrapwords="1"/>
+							<nodeRect Right="400" Bottom="36"/>
+						</Note>
+						<NodeLink uuid="c679d17e-6af9-4eae-9ceb-8040f2316a44" guiLink_Element="7efbec2b-dbb8-401e-a646-aa7e46abf800">
+							<nodeRect Left="75" Top="105" Right="181" Bottom="155"/>
+						</NodeLink>
+						<NodeLink uuid="147f63cb-3476-4d90-a4af-9ee16731bbbc" guiLink_Element="00000102-7510-11d9-86f2-000476a22f44">
+							<nodeRect Left="345" Top="90" Right="419" Bottom="158"/>
+						</NodeLink>
+						<LineLink uuid="339c1021-89b6-4a01-90d8-27fcde53d123" guiLink_Element="46471e11-6320-4205-91e3-6204410152ff" guiLineLink_LineBegin="c679d17e-6af9-4eae-9ceb-8040f2316a44" guiLineLink_LineEnd="147f63cb-3476-4d90-a4af-9ee16731bbbc">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="4dc2de41-3bab-4e0d-aeab-ee03b902f69f">
+									<pos X="263" Y="130"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="bc87b9d3-48d5-457f-8bb3-e67af6c31c4c" textLabel="14" guiTextLabel_Element="46471e11-6320-4205-91e3-6204410152ff">
+											<pos X="-25" Y="-19"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="0f5516f6-9788-405b-b3ad-ff25e44e0fcb" alignment="4">
+									<pos X="181" Y="130"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="d848ee87-e952-46b7-92f7-9a81b3b65fc7" alignment="1">
+									<pos X="345" Y="130"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="89523c5f-ecbe-4da1-a047-12d243ceaa8e" name="Default"/>
+					</guiDiagramLayer>
+				</ProfileDiagram>
+				<ObjectDiagram uuid="d89329d3-7480-4263-9986-da4aa5a13b86" name="Sample Accounts" guiDiagramLinkedOwner="d6625d68-e6bf-4f58-9e14-74eb7b86f2df">
+					<guiDiagramGuiLink>
+						<Note uuid="5cce3833-4b1b-43e3-8b85-54a7bc842892" noteText="Show sample Accounts for testuser">
+							<style autosize="1"/>
+							<nodeRect Right="197" Bottom="21"/>
+						</Note>
+						<NodeLink uuid="ca700549-5e1b-405e-9d71-d0f769486aa3" guiLink_Element="c56b2a1b-1d0a-4b76-b8b4-6bc5aab69716">
+							<nodeRect Left="495" Top="135" Right="676" Bottom="237"/>
+						</NodeLink>
+						<NodeLink uuid="47ba6acf-229e-40a2-babc-46bb41f3c389" guiLink_Element="dfa9685b-2a8e-40dd-94aa-4f0cacbb66cf">
+							<style showatt="1"/>
+							<nodeRect Left="495" Top="255" Right="688" Bottom="321"/>
+						</NodeLink>
+						<NodeLink uuid="e6ad54e7-fd71-48fc-9f46-007f285e370f" guiLink_Element="d6dbe9f9-67bf-4648-b07a-a485f65df38b">
+							<nodeRect Left="135" Top="225" Right="277" Bottom="345"/>
+						</NodeLink>
+						<NodeLink uuid="5834e8a6-fdad-4902-a1a6-ccffab41ad07" guiLink_Element="f9533f78-9bfd-431f-a724-152b2a333a22">
+							<nodeRect Left="495" Top="360" Right="694" Bottom="480"/>
+						</NodeLink>
+						<LineLink uuid="6667f7a4-4a49-4c69-97c1-6620ee0b99da" guiLink_Element="69709b02-7722-4bc1-aba7-95d7cb209e80" guiLineLink_LineBegin="e6ad54e7-fd71-48fc-9f46-007f285e370f" guiLineLink_LineEnd="5834e8a6-fdad-4902-a1a6-ccffab41ad07">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="3a8282e4-79c7-44c2-9e60-18350e990316">
+									<pos X="311" Y="426"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="9cca64c7-2e9c-49a3-ae21-25c1dbff1bed" alignment="3">
+									<pos X="208" Y="345"/>
+								</EndWaypoint>
+								<Waypoint uuid="9c4ba085-5583-4cc7-ab0a-a68ba1c4baa8">
+									<pos X="208" Y="426"/>
+								</Waypoint>
+								<EndWaypoint uuid="f1ae3d06-d74b-4d5e-a77e-f8efc52e2c43" alignment="1">
+									<pos X="495" Y="426"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="3b578983-2e1a-4521-92be-1bdc3c6dd3ef" textLabel="6" guiTextLabel_Element="e19398d8-b03e-4250-bc1a-e4f28c3659c1">
+											<pos X="-51" Y="5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="72c1c54f-2852-47a8-acb5-88efb3a49c81" guiLink_Element="5c31749d-fce9-4bee-8fef-baa939443be5" guiLineLink_LineBegin="e6ad54e7-fd71-48fc-9f46-007f285e370f" guiLineLink_LineEnd="ca700549-5e1b-405e-9d71-d0f769486aa3">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="e99c886f-31ee-431f-bc9e-7fb70416231a">
+									<pos X="327" Y="179"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="87c228e8-1e14-4828-a028-ae9d3720a9b0" alignment="2">
+									<pos X="206" Y="225"/>
+								</EndWaypoint>
+								<Waypoint uuid="12f9ab1c-a6f6-41e6-bbfe-0c9116ceb4e4">
+									<pos X="206" Y="179"/>
+								</Waypoint>
+								<EndWaypoint uuid="17ed5376-2ede-4dd6-a940-cd6c6dcd4a54" alignment="1">
+									<pos X="495" Y="179"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="022abea2-d17e-4635-af50-a04e963e7c9f" textLabel="6" guiTextLabel_Element="e19398d8-b03e-4250-bc1a-e4f28c3659c1">
+											<pos X="-51" Y="5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="6267cba4-4696-470c-8f42-4a4f9ca754e0" guiLink_Element="eaa2241c-5272-483e-8641-0c65e088a951" guiLineLink_LineBegin="e6ad54e7-fd71-48fc-9f46-007f285e370f" guiLineLink_LineEnd="47ba6acf-229e-40a2-babc-46bb41f3c389">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="3055b6e2-f5e2-4a6e-84d1-3c7f52d10eb8">
+									<pos X="386" Y="291"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="fb59bea7-6257-4d83-843a-7e4e34b0bad1" alignment="4">
+									<pos X="277" Y="291"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="42e2c8d8-87c6-40d8-b79b-d78c560b2042" alignment="1">
+									<pos X="495" Y="291"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="6bb83d45-e2ad-4448-86ab-5271ce544e63" textLabel="6" guiTextLabel_Element="e19398d8-b03e-4250-bc1a-e4f28c3659c1">
+											<pos X="-51" Y="5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="1226c53d-9f20-46f6-9cd6-d98fbc88922b" name="Default"/>
+					</guiDiagramLayer>
+				</ObjectDiagram>
+				<ClassDiagram uuid="abcc149e-2113-40a9-ac26-3b6cfe5d86fc" name="BankView Main" guiDiagramLinkedOwner="d6625d68-e6bf-4f58-9e14-74eb7b86f2df">
+					<guiDiagramGuiLink>
+						<Note uuid="66ccd53a-7e5c-4c8b-bcaf-fc21276743ba" noteText="Show our classes and how they are connected together&#13;&#13;just a simple sample; must be adopted when generating code and deciding if and which java libraries will be used&#13;&#13;&#13;- BankView gets the BankAPI - Interface&#13;- collect (stored) bank addresses&#13;- each Bank collects its account info">
+							<style autosize="0"/>
+							<nodeRect Left="-120" Top="15" Right="210" Bottom="165"/>
+						</Note>
+						<NodeLink uuid="131be05c-8407-4972-9a73-07805e18cb1d" guiLink_Element="58dfad9e-c590-40b3-9025-50d07459394e">
+							<style showop="1"/>
+							<nodeRect Left="750" Top="315" Right="1021" Bottom="471"/>
+						</NodeLink>
+						<LineLink uuid="ef80a595-9a57-4de7-b7aa-f1ac252f8fb9" guiLink_Element="6f77137d-e2d2-40b5-b335-0722d7a7c16d" guiLineLink_LineBegin="0a2862a8-52d1-41a0-9b55-8dfe7be3de1a" guiLineLink_LineEnd="fcfa4de6-7c87-4c87-bf34-821eedfa6725">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="d834f57a-b2bb-4c5f-b336-31ca5b166dee">
+									<pos X="198" Y="366"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="37873b4d-abf8-4059-8182-8ae93efecf8b" alignment="4">
+									<pos X="141" Y="366"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="0885b032-edc5-4c23-bb22-c06ea442ae60" textLabel="3" guiTextLabel_Element="d39bad48-b4aa-4fd6-8c7b-0175b8c03ac9">
+											<pos X="5" Y="5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</EndWaypoint>
+								<EndWaypoint uuid="a40f1680-7c13-466b-8291-688e51befdf6" alignment="1">
+									<pos X="255" Y="366"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="3bdb9225-f243-4762-a256-0f396b86e8d8" guiTextLabel_Element="d03375c6-dbaf-4b07-a195-cdf9295608e5">
+											<pos X="-45" Y="-24"/>
+										</TextLabel>
+										<TextLabel uuid="448265d5-da5a-49f5-bac1-883ecedaafed" textLabel="4" guiTextLabel_Element="d03375c6-dbaf-4b07-a195-cdf9295608e5">
+											<pos X="-60" Y="-39"/>
+										</TextLabel>
+										<TextLabel uuid="cc60bd80-38f2-46a9-9763-6849af176ada" textLabel="3" guiTextLabel_Element="d03375c6-dbaf-4b07-a195-cdf9295608e5">
+											<pos X="-10" Y="5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="912f57b1-c526-4ab3-a548-40077962d038" guiLink_Element="c31be1ef-f4c7-4cf4-a22d-11a9ff590527" guiLineLink_LineBegin="fcfa4de6-7c87-4c87-bf34-821eedfa6725" guiLineLink_LineEnd="131be05c-8407-4972-9a73-07805e18cb1d">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="161a03ad-e67f-4c16-bb7c-5d446ea75035">
+									<pos X="701" Y="366"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="7c68f760-2f24-4a36-9ff8-afd4ef827a08" alignment="4">
+									<pos X="653" Y="366"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="0abad447-dceb-4cfa-b1f0-b02315b9d2c1" textLabel="3" guiTextLabel_Element="d9956318-ae16-4441-814f-29f7f9b2404a">
+											<pos X="5" Y="5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</EndWaypoint>
+								<EndWaypoint uuid="fee57d72-7475-4b00-a380-0ba7dae090aa" alignment="1">
+									<pos X="750" Y="366"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="acc09aee-d7cd-419f-b83f-ffe8c202e770" guiTextLabel_Element="e19398d8-b03e-4250-bc1a-e4f28c3659c1">
+											<pos X="-57" Y="5"/>
+										</TextLabel>
+										<TextLabel uuid="09dd53d4-89d1-4f92-9db8-d25208f18aa6" textLabel="3" guiTextLabel_Element="e19398d8-b03e-4250-bc1a-e4f28c3659c1">
+											<pos X="-10" Y="25"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<NodeLink uuid="0a2862a8-52d1-41a0-9b55-8dfe7be3de1a" guiLink_Element="a1983840-317d-492f-b4e1-bfed64df0e76">
+							<nodeRect Left="-120" Top="285" Right="141" Bottom="480"/>
+						</NodeLink>
+						<NodeLink uuid="fcfa4de6-7c87-4c87-bf34-821eedfa6725" guiLink_Element="a4d0ca73-063b-43a6-8766-b30933fae90d">
+							<nodeRect Left="255" Top="285" Right="653" Bottom="556"/>
+						</NodeLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="d7882651-6ec5-4ceb-b53b-2c50a2df5753" name="Default"/>
+					</guiDiagramLayer>
+				</ClassDiagram>
+				<ClassDiagram uuid="99c43a1a-871d-446f-ae42-bb2350bc1dc0" name="Hierarchy of Account" guiDiagramLinkedOwner="d6625d68-e6bf-4f58-9e14-74eb7b86f2df">
+					<guiDiagramGuiLink>
+						<NodeLink uuid="95eab9cd-5837-4b28-976a-2f7107cfcd8d" guiLink_Element="0e36872a-28eb-416b-8fed-8d76e93aa2f0">
+							<nodeRect Left="630" Top="330" Right="901" Bottom="525"/>
+						</NodeLink>
+						<LineLink uuid="f59dcf4b-fc2a-4981-b940-008bc62e35aa" guiLink_Element="6004c82c-1744-4f12-aecd-87a7abcaecb7" guiLineLink_LineBegin="95eab9cd-5837-4b28-976a-2f7107cfcd8d" guiLineLink_LineEnd="2faa15ef-91da-4af7-900a-8a7747aeafa5">
+							<style linestyle="1"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="5cc9e373-1fbd-4c8f-8b57-7b930d2a151f">
+									<pos X="579" Y="248"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="3ab42b7e-c468-43c7-bdca-c28eda063637" alignment="2">
+									<pos X="756" Y="330"/>
+								</EndWaypoint>
+								<Waypoint uuid="5e25572c-8ab6-4ade-af29-a53b7308180c">
+									<pos X="756" Y="248"/>
+								</Waypoint>
+								<Waypoint uuid="2e2fa264-5755-4229-a2b5-cc3ce331e336">
+									<pos X="397" Y="248"/>
+								</Waypoint>
+								<EndWaypoint uuid="1a042496-bd53-409b-b167-6dde012b953a" alignment="3">
+									<pos X="397" Y="171"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="6f1cbbbe-2eba-47e4-b9ea-1ee87e188872" guiLink_Element="3e93593d-bd3e-435c-87d7-9be1d9165005" guiLineLink_LineBegin="17c29bba-6ee9-4cf2-8441-c6434bed190b" guiLineLink_LineEnd="2faa15ef-91da-4af7-900a-8a7747aeafa5">
+							<style linestyle="1"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="37f8823e-e485-424d-9f19-68b6dd7248f6">
+									<pos X="397" Y="258"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="74947330-3f2e-4ec3-9c92-3fb03c0bfc7b" alignment="2">
+									<pos X="397" Y="345"/>
+								</EndWaypoint>
+								<Waypoint idref="2e2fa264-5755-4229-a2b5-cc3ce331e336"/>
+								<EndWaypoint idref="1a042496-bd53-409b-b167-6dde012b953a"/>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<NodeLink uuid="17c29bba-6ee9-4cf2-8441-c6434bed190b" guiLink_Element="74ef2f95-c46e-44e3-8e19-efa4d975cd7f">
+							<style showatt="1" showop="1"/>
+							<nodeRect Left="330" Top="345" Right="601" Bottom="502"/>
+						</NodeLink>
+						<NodeLink uuid="732a021e-22ec-4e84-830a-02d5b6e65273" guiLink_Element="a4d8d5e9-2100-4c64-9e38-97a3109df2ca">
+							<nodeRect Left="30" Top="345" Right="301" Bottom="426"/>
+						</NodeLink>
+						<LineLink uuid="25ddd871-49d2-4d35-b8a0-198464930c9b" guiLink_Element="0336527d-3cb7-4c09-90e5-341e03e258c8" guiLineLink_LineBegin="732a021e-22ec-4e84-830a-02d5b6e65273" guiLineLink_LineEnd="2faa15ef-91da-4af7-900a-8a7747aeafa5">
+							<style linestyle="1"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="9e3f77d7-a4f0-4e3c-aee2-b7bc492e3fef">
+									<pos X="271" Y="248"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="cde68465-e77a-4a11-9a7a-97f9bb100e1e" alignment="2">
+									<pos X="166" Y="345"/>
+								</EndWaypoint>
+								<Waypoint uuid="c20d8f0a-4099-4f93-861d-ff2d907aa8f2">
+									<pos X="166" Y="248"/>
+								</Waypoint>
+								<Waypoint idref="2e2fa264-5755-4229-a2b5-cc3ce331e336"/>
+								<EndWaypoint idref="1a042496-bd53-409b-b167-6dde012b953a"/>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<NodeLink uuid="2faa15ef-91da-4af7-900a-8a7747aeafa5" guiLink_Element="58dfad9e-c590-40b3-9025-50d07459394e">
+							<nodeRect Left="255" Top="15" Right="526" Bottom="171"/>
+						</NodeLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="5da308c8-0244-4264-8370-09c8e14af32c" name="Default"/>
+					</guiDiagramLayer>
+				</ClassDiagram>
+			</guiRootGuiDiagram>
+		</RootElement>
+	</Diagrams>
+</UModel>

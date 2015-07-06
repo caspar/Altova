@@ -24,7 +24,7 @@ public class MethodReference {
 	}
 	
 	public static void main(String[] args){
-		MethodReference constructorReference = Item::new;
-		Item item = constructorReference.constructor(); 
+//		MethodReference constructorReference = Item::new;
+//		Item item = constructorReference.constructor(); 
 	}
 }

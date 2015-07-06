@@ -1,0 +1,23 @@
+package annotations;
+
+public class Annotation {
+
+	Object obj = 808;
+	String str = (@Marker String) obj;
+	
+	@Marker(author = "Caspar")
+	@Marker(author = "Altova")
+	public void repeatingAnnotation(){
+		
+	}
+	
+	@Deprecated
+	public void deprecatedMethod(){
+		/*this method intentionally left blank*/
+	}
+	
+	public static void main(String[] args){
+		Annotation an = new @Marker Annotation();
+	
+	}
+}

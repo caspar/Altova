@@ -1,0 +1,9 @@
+package annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
+@Retention(value=CLASS)
+@Target(ElementType.LOCAL_VARIABLE)
+public @interface Email {
+}

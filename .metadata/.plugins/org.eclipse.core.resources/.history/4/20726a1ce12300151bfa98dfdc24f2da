@@ -1,0 +1,20 @@
+package annotations;
+
+public class Annotations {
+
+	@Deprecated
+	public void deprecatedMethod(){
+		//One annotation, no parsing error
+	}
+	
+	@Author(value = "Caspar")
+	//@Author(value = "Altova")
+	public void repeatingAnnotation(){
+		//Triggers a parsing error in UM Eclipse plugin
+	}
+	
+	public static void main(String[] args){
+		Annotations an = new Annotations();
+		an.repeatingAnnotation();
+	}
+}

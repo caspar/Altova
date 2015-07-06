@@ -6,6 +6,7 @@ package lambdaExpressions;
  */
 public class Calculator {
 
+	@FunctionalInterface
 	interface IntegerMath{ //functional interface
 		int operation(int a, int b); 
 	}

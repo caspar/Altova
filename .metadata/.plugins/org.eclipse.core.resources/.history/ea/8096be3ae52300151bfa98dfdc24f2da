@@ -1,0 +1,8 @@
+package annotations;
+
+import java.lang.annotation.ElementType;
+
+@Target(ElementType.CONSTRUCTOR)
+public @interface Constructor {
+
+}

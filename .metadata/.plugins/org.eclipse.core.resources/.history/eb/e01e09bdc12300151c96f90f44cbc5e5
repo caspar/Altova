@@ -1,0 +1,21 @@
+package annotations;
+
+public class Annotation {
+
+	Object obj = 808;
+	String str = (@Caspar String) obj;
+	
+	public void repeatingAnnotation(){
+		
+	}
+	
+	@Deprecated
+	public void deprecatedMethod(){
+		/*this method intentionally left blank*/
+	}
+	
+	public static void main(String[] args){
+		Annotation an = new @Interned Annotation();
+	
+	}
+}

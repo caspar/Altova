@@ -1,0 +1,6 @@
+package annotations;
+
+@Repeatable(Markers.class)
+public @interface Markers {
+		String author() default "Caspar"; 
+}
