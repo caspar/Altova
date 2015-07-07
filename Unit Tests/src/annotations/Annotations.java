@@ -1,8 +1,10 @@
 package annotations;
 
-import java.lang.annotation.*;
 public class Annotations {
 
+	//Type Annotation
+	@Email String email = "caspar.lant@altova.com";
+	
 	@Deprecated
 	public void deprecatedMethod(){
 		//One annotation, no parsing error
@@ -15,14 +17,14 @@ public class Annotations {
 	}
 	
 	public void typeAnnotation(){
-//		String str = "c.lant@altova.com";
-//		String email = (@Email String) str; //type-cast
-//		String email = (@Email String) "casparlant@gmail.com";
+		String str = "caspar@nyu.edu";
+		@SuppressWarnings("unused")
+		String email = (@Email String) str; //type-cast
 	}
 	
 	public static void main(String[] args){
 		Annotations an;
-		an = new @Constructor Annotations();
+		an = new /*@Constructor*/ Annotations();
 		an.repeatingAnnotation();
 	}
 }
