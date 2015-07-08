@@ -20,13 +20,13 @@ import java.io.PrintStream;
 import java.lang.reflect.AnnotatedElement;
 import java.lang.annotation.Annotation;
 
-import java.util.Date;
+//import java.util.Date;
 import java.lang.annotation.Documented;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import oldAnnotations.GroupTODO.Severity;
+//import oldAnnotations.GroupTODO.Severity;
 
 public class ReflectionTester {
 
