@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 beta 2 U (http://www.xmlspy.com) by Robert Gillis (Altova, Inc.) -->
+<!DOCTYPE main SYSTEM "examplesite.dtd">
+<?altova_sps examplesite.sps?>
+<main xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="site.xsd">
+	<dictionaries>
+   &inc_blocks;
+   &inc_navigation;
+</dictionaries>
+	<idref>Files</idref>
+	<pagetitle>Files Needed for the Example</pagetitle>
+	<content>
+		<pagefragment>
+			<list>
+				<listitem>
+					<header>Schemas</header>
+					<table>
+						<tr>
+							<td style="width:20;">
+								<img src="output/images/blank.gif"/>
+							</td>
+							<td>
+								<list>
+									<listitem>
+										<header>examplesite.dtd</header>
+										<br/>
+							     This DTD files contains Entities which are reused throughout the site (this file cannot be viewed in explorer; right click and &quot;Save Target As...&quot;)
+   							    <br/>
+										<link target="_blank">
+											<url>../examplesite.dtd</url>
+							       examplesite.dtd
+							    </link>
+										<br/>
+									</listitem>
+									<listitem>
+										<header>site.xsd</header>
+										<br/>
+							    The w3c schema for the Site's content.
+     							    <br/>
+										<link target="_blank">
+											<url>../site.xsd</url>
+							        site.xsd
+							    </link>
+										<br/>
+									</listitem>
+								</list>
+							</td>
+						</tr>
+					</table>
+				</listitem>
+				<listitem>
+					<header>XSL</header>
+					<table>
+						<tr>
+							<td style="width:20;">
+								<img src="output/images/blank.gif"/>
+							</td>
+							<td>
+								<list>
+									<listitem>
+										<header>site.xsl</header>
+										<br/>
+							       The xsl File which creates the sites output
+      							    <br/>
+										<link target="_blank">
+											<url>../site.xsl</url>
+							        site.xsl
+							    </link>
+										<br/>
+									</listitem>
+								</list>
+							</td>
+						</tr>
+					</table>
+				</listitem>
+				<listitem>
+					<header>CSS</header>
+					<table>
+						<tr>
+							<td style="width:20;">
+								<img src="output/images/blank.gif"/>
+							</td>
+							<td>
+								<list>
+									<listitem>
+										<header>examplesite1.css</header>
+										<br/>
+							   The CSS site used to set style to elements.
+(this file cannot be viewed in explorer; right click and &quot;Save Target As...&quot;)      							    <br/>
+										<link target="_blank">
+											<url>examplesite1.css</url>
+							        examplesite.css
+							    </link>
+										<br/>
+									</listitem>
+								</list>
+							</td>
+						</tr>
+					</table>
+				</listitem>
+				<listitem>
+					<header>internal XML Files </header>
+					<table>
+						<tr>
+							<td style="width:20;">
+								<img src="output/images/blank.gif"/>
+							</td>
+							<td>
+								<list>
+									<listitem>
+										<header>navigation.xml</header>
+										<br/>
+							    The file containing the navigation structure of the site
+							    <br/>
+										<link target="_blank">
+											<url>../navigation.xml</url>
+							        navigation.xml
+							    </link>
+										<br/>
+									</listitem>
+									<listitem>
+										<header>blocks.xml</header>
+										<br/>
+							   The file containing reusable content each with a corresponding id.
+							   <br/>
+										<link target="_blank">
+											<url>../blocks.xml</url>
+							        blocks.xml
+							    </link>
+										<br/>
+									</listitem>
+								</list>
+							</td>
+						</tr>
+					</table>
+				</listitem>
+				<listitem>
+					<header>instance XML Files </header>
+					<table>
+						<tr>
+							<td style="width:20;">
+								<img src="output/images/blank.gif"/>
+							</td>
+							<td>
+								<list>
+									<listitem>
+										<header>introduction.xml</header>
+										<br/>
+							    The first page in the site  
+   							    <br/>
+										<link target="_blank">
+											<url>../introduction.xml</url>
+							        introduction.xml
+							    </link>
+										<br/>
+									</listitem>
+									<listitem>
+										<header>files.xml</header>
+										<br/>
+							     The file which produces the page you are viewing now.
+   							    <br/>
+										<link target="_blank">
+											<url>../files.xml</url>
+							        files.xml
+							    </link>
+										<br/>
+									</listitem>
+									<listitem>
+										<header>nav_file.xml</header>
+										<br/>
+							    A description of the Navigation file
+   							    <br/>
+										<link target="_blank">
+											<url>../nav_file.xml</url>
+							        nav_file.xml
+							    </link>
+										<br/>
+									</listitem>
+									<listitem>
+										<header>nav_schema.xml</header>
+										<br/>
+							   The Schema for the navigation structure.
+     							    <br/>
+										<link target="_blank">
+											<url>../nav_schema.xml</url>
+							        nav_schema.xml
+							    </link>
+										<br/>
+									</listitem>
+									<listitem>
+										<header>block_schema.xml</header>
+										<br/>
+							   The Schema for the reusable blocks structure.
+     							    <br/>
+										<link target="_blank">
+											<url>../block_schema.xml</url>
+							        block_schema.xml
+							    </link>
+										<br/>
+									</listitem>
+									<listitem>
+										<header>block_file.xml</header>
+										<br/>
+							   The Schema for the reusable blocks structure.
+     							    <br/>
+										<link target="_blank">
+											<url>../block_file.xml</url>
+							        block_file.xml
+							    </link>
+										<br/>
+									</listitem>
+								</list>
+							</td>
+						</tr>
+					</table>
+				</listitem>
+			</list>
+		</pagefragment>
+	</content>
+</main>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 beta 2 U (http://www.xmlspy.com) by Robert Gillis (Altova, Inc.) -->
+<!DOCTYPE dictionaries SYSTEM "examplesite.dtd">
+<main xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="site.xsd">
+     &inc_dictionaries;
+      <idref>welcomepage</idref>
+	<pagetitle>welcome</pagetitle>
+	<content>
+		<pagefragment>
+			 <pagefragment idref="welcome"/>
+			 <pagefragment idref="sample"/>
+		       <pagefragment idref="mysitelogo"/>
+
+			 
+			 
+		</pagefragment>
+	</content>
+</main>

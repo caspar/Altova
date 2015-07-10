@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="Internal">
+		<Folder FolderName="Schemas">
+			<File FilePath=".\examplesite.dtd" HomeFolder="Yes"/>
+			<File FilePath=".\site.xsd" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="XSLT">
+			<File FilePath=".\site.xsl" HomeFolder="Yes"/>
+		</Folder>
+		<Folder FolderName="SPS">
+			<File FilePath=".\blocks.sps" HomeFolder="Yes"/>
+			<File FilePath=".\examplesite.sps" HomeFolder="Yes"/>
+			<File FilePath=".\navigation.sps" HomeFolder="Yes"/>
+		</Folder>
+		<File FilePath=".\blocks.xml" HomeFolder="Yes"/>
+		<File FilePath=".\navigation.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="Sitefiles" XSL_XMLUseSet="Yes" XSL_XMLUseFile=".\site.xsl" XSL_DestFolderSet="Yes" XSL_DestFolder=".\output" XSL_DestFileExtSet="Yes">
+		<File FilePath=".\block_file.xml" HomeFolder="Yes"/>
+		<File FilePath=".\block_schema.xml" HomeFolder="Yes"/>
+		<File FilePath=".\files.xml" HomeFolder="Yes"/>
+		<File FilePath=".\introduction.xml" HomeFolder="Yes"/>
+		<File FilePath=".\nav_file.xml" HomeFolder="Yes"/>
+		<File FilePath=".\nav_schema.xml" HomeFolder="Yes"/>
+	</Folder>
+	<File FilePath=".\readme.txt" HomeFolder="Yes"/>
+	<ExtMountFolder FolderName=".\output"/>
+</Project>

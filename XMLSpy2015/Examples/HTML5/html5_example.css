@@ -1,0 +1,129 @@
+body, p, li, a, input, textarea
+{
+    font: normal 14px Arial;
+    color: #474c4f;
+}
+
+a
+{
+    color: #448cba;
+}
+
+#wrapper
+{
+    width: 819px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 40px;
+}
+
+body
+{
+    font: normal 16px/20px "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    background-color: #e7f2f8; /* fallback color if gradients are not supported */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e7f2f8), to(#a8b4cb));
+    background-image: -webkit-linear-gradient(top, #e7f2f8, #a8b4cb);
+    background-image: -moz-linear-gradient(top, #e7f2f8, #a8b4cb);
+    background-image: -ms-linear-gradient(top, #e7f2f8, #a8b4cb);
+    background-image: -o-linear-gradient(top, #e7f2f8, #a8b4cb);
+    background-image: linear-gradient(top, #e7f2f8, #a8b4cb); /* standard, but currently unimplemented */
+}
+
+section, header, footer
+{
+    display: block;
+    margin-top:10px;
+}
+
+section.block
+{
+    border-top: 1px solid #bfc4c7;
+}
+
+h1
+{
+    color: #4c5f89;
+    font-size: 38px;
+    font-family: Cambria, Arial;
+}
+
+h2
+{
+    color: #4c5f89;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+h3
+{
+    color: #474c4f;
+    font-size: 14px;
+    font-family: Arial;
+}
+
+h4
+{
+    color: #474c4f;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+figure
+{
+    border: 1px solid #9a9a9a;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 0px;
+}
+
+figcaption
+{
+    border-top: 1px solid #9a9a9a;
+    color: #474c4f;
+    font-size: 12px;
+}
+
+section.block footer
+{
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+footer.main
+{
+    width: 819px;
+    margin: 20px auto;
+}
+
+input, textarea
+{
+    border-radius: 2px;
+}
+
+section.blue
+{
+    background-color: #a2ceed;
+    padding: 30px;
+    border-radius: 10px;
+    width: 530px;
+}
+
+input.submit
+{
+    margin-left: 340px;
+    width: 150px;
+    margin-top: 10px;
+}
+
+label
+{
+    display: block;
+    font-size: 12px;
+    padding-top: 10px;
+}

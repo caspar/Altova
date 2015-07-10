@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 beta 2 U (http://www.xmlspy.com) by Robert Gillis (Altova, Inc.) -->
+<!DOCTYPE main SYSTEM "examplesite.dtd">
+<?altova_sps examplesite.sps?>
+<main xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="site.xsd">
+	<dictionaries>
+   &inc_blocks;
+   &inc_navigation;
+</dictionaries>
+	<idref>welcomepage</idref>
+	<pagetitle>Introduction</pagetitle>
+	<content>
+		<pagefragment>
+			<header>An XML Example web site</header>
+			<para>
+		     This site is intended to be an example of developing a dynamic website in XML using <bold>XMLSpy</bold> or <bold>StyleVision</bold>.</para>
+			<para>
+  		      The documentation for this example is the example itself. The example provides means to set up a site's hierarchical navigation structure and reusable page fragments. This example site could be used as a base for a large dynamic site.
+		  </para>
+		</pagefragment>
+	</content>
+</main>

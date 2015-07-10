@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 beta 2 U (http://www.xmlspy.com) by Robert Gillis (Altova, Inc.) -->
+<!DOCTYPE main SYSTEM "examplesite.dtd">
+<?altova_sps examplesite.sps?>
+<main xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="site.xsd">
+	<dictionaries>
+   &inc_blocks;
+   &inc_navigation;
+</dictionaries>
+	<idref>blockfile</idref>
+	<pagetitle>Block File</pagetitle>
+	<content>
+		<pagefragment>
+			<header>Blocks File</header>
+			<para>the Block Files contains reusable page fragments. These fragments can be reference within any page of the site by Including a &lt;pagefragment&gt; tag with an idref which corresponds to the id of the Block_instance.</para>
+			<img src="output/images/block_file.gif"/>
+			<para>
+   	               The following paragraph is defined in the blocks.xml file.
+                   </para>
+			<pagefragment idref="exampleblock"/>
+		</pagefragment>
+	</content>
+</main>

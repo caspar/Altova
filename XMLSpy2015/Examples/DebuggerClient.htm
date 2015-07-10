@@ -1,0 +1,206 @@
+<html>
+   <head>
+	<title>
+		    Web Service SOAP Debugger Example Client
+	</title>
+	<style type="text/css" media="screen">
+		    body{
+		       background-color:#FFFFFF;
+		    }
+		    #clock{
+		       position:absolute;
+		       top:300;
+		       left:350;
+		       height:100;
+		       width:100;
+	              font-weight:bold;
+	              font-size:12pt;
+	              font-family:tahoma;
+	              background-color:#3366cc;
+	              border: black solid 2px;
+	              text-align:center;
+		    }
+
+                 #radiogroup{
+		       position:absolute;
+		       top:300;
+		       left:10;
+	             font-family:tahoma;
+	             width:350;  
+                 }		    
+		    
+		    #service{
+  		        behavior:url(webservice.htc) 
+		    }
+
+                 #exampleText{
+                     position:absolute;
+                     top:10;
+                     left:10;
+	              font-size:10pt;
+	              font-family:tahoma;
+	              width:600;
+                 }		    
+		    #firstExampleText{
+                     position:absolute;
+                     top:100;
+                     left:10;
+	              font-size:10pt;
+	              font-family:tahoma;
+		    }
+		    
+		    #debugMode{
+		       position:absolute;
+		       top:355;
+		       left:350;
+		       height:100;
+		       width:100;
+	              font-weight:bold;
+	              font-family:tahoma;
+	              text-align:center;
+	              display:none;
+		    }
+		    
+		    
+		    
+		    
+	</style>
+		<script type="text/javascript">
+		<!--
+		 var server='www.nanonull.com';
+		 var debugserver="localhost"
+  		 var  port='80'
+  		 var debugPort='8080';
+		 var debug=false;
+		 var started=false;
+		 var iCallReference=0;
+		 var initialize=false;
+		 var msSERVICE_URI='http://'+server+':'+port+'/TimeService/TimeService.asmx?WSDL';
+		 var msCurrentTimeZone='EST';
+		 var gs_UNKOWNSERVERERROR='The server was not avaiable';
+		 var gs_UNKOWNSERVERDEBUGERROR='The SOAP Client could not find the XML Spy SOAP Debugger.\n'+
+                                                                                  'Please make sure the Debugging Server and Debugging Port are correct.\n '+
+                                                                                  'You may also want to ensure the SOAP Debugger Session has been started. \n '+
+                                                                                  'The Debugging Mode is now being turned off automatically!';
+	       function executeService(){
+		       if(debug){
+                       msSERVICE_URI='http://'+debugserver+':'+debugPort+'/TimeService/TimeService.asmx?WSDL'
+                       service.useService(msSERVICE_URI,'MyDebugTimeService');
+                       debuginit=true;
+                       iCallReference = service.MyDebugTimeService.callService('getTimeZoneTime',msCurrentTimeZone);
+		       }else{
+          		     msSERVICE_URI='http://'+server+':'+port+'/TimeService/TimeService.asmx?WSDL';
+          		     service.useService(msSERVICE_URI,'MyTimeService');
+          		     iCallReference = service.MyTimeService.callService('getTimeZoneTime',msCurrentTimeZone);
+		       }
+             }    
+
+             function onWSresult(){
+                  if((event.result.error)&&(iCallReference==event.result.id)){
+                     // Pull the error information from the event.result.errorDetail properties
+                     var ErrCode   = event.result.errorDetail.code;
+                     var ErrString = event.result.errorDetail.string;
+                     var xSoap   = event.result.errorDetail.raw;
+                     if(debug){
+                           alert(ErrString+ '\n'+gs_UNKOWNSERVERDEBUGERROR);
+                           setDebugMode(false);
+                           window.setTimeout('executeService()',5000,'javascript');
+                       }else{
+                           alert(ErrString);
+                      }     
+                 }else if((!event.result.error) && (iCallReference == event.result.id)){
+                          updateClock(event.result.value);
+                 }else{
+                        window.setTimeout('executeService()',5000,'javascript');
+                 }
+             }
+
+             function updateClock(sTime){
+                 var scolor='#3366cc';
+                 if(sTime=='Unknown Time zone'){
+                     scolor='#cc0000';     
+                }
+               var oClockElem= document.getElementById('clock');
+               oClockElem.innerHTML=sTime;
+               oClockElem.style.backgroundColor=scolor;
+               window.setTimeout('executeService()',5000,'javascript');
+            }
+             
+            function changeZones(){
+                if (timezone[0].checked)
+                      msCurrentTimeZone='EST';
+               else if (timezone[1].checked)
+                      msCurrentTimeZone='CST';
+               else if(timezone[2].checked)
+                      msCurrentTimeZone='MST';
+               else if(timezone[3].checked)
+                      msCurrentTimeZone='PST';
+               else if(timezone[4].checked)
+                      msCurrentTimeZone='CET';
+               else if(timezone[5].checked)
+                      msCurrentTimeZone='GMD';
+            } 
+
+            function setDebugMode(bMode){
+               var oPortElem=document.getElementById("serverport");
+               var oDebugMode=document.getElementById("debugMode");
+               var oDebugServer=document.getElementById("servername");
+               debugserver=oDebugServer.value;
+               debugPort=oPortElem.value;
+               debug=bMode;
+               if(debug){
+                    oDebugMode.style.display='block';
+               }else{
+                    oDebugMode.style.display='none';
+               }
+            }
+         // -->         
+	</script>
+	</head>
+	<body onload="executeService()">
+	  <div id="service" onresult="onWSresult()"/>
+        <div id="clock" ></div>
+        <div id="debugMode">DEBUG ON</div>
+ 	 <div id="ExampleText">
+                	    <strong>  Welcome To the XML Spy SOAP Debugger Example Client.</strong><br/><br/>
+<div>  The  Example uses the<strong> getTimeZoneTime</strong> operation from the <a href="http://www.nanonull.com" target="_blank">NanoNull</a> Time Web Service which is described by the following WSDL file:<br/>
+             <a href="http://www.nanonull.com/TimeService/TimeService.asmx?WSDL" target="_blank">         http://www.nanonull.com/TimeService/TimeService.asmx?WSDL</a><br/><br/>
+</div>
+     <div>To learn more about the operations of this example Time Web Service, view the .NET description available at<br/>
+             <a href="http://www.nanonull.com/TimeService/TimeService.asmx" target="_blank">         http://www.nanonull.com/TimeService/TimeService.asmx</a><br/><br/></div>
+<div>To learn more about the XML Spy SOAP Debugger, please visit the XML Spy online help, where you can find the complete documentation on how to use this example to experiment with the SOAP Debugger.<br/><br/></div>
+<div>This example client automatically queries the Time Web Service every 5 seconds to request the time for the selected timezone:<br/></div>
+       </div>
+
+        
+     <div id="radiogroup" onclick="changeZones()">
+
+
+
+             <input type="radio" name="timezone"  checked="checked"/>Eastern Standard Time (US &amp; Canada)<br/>
+             <input type="radio" name="timezone"/>Central Standard Time (US &amp; Canada)<br/>
+             <input type="radio" name="timezone"/>Mountain Standard Time (US &amp; Canada)<br/>
+             <input type="radio" name="timezone"/>Pacific Standard Time (US &amp; Canada)<br/>
+             <input type="radio" name="timezone"/>Central European Time <br/>
+             <input type="radio" name="timezone"/>GMT (Greenwich Mean Time, UTC)<br/>
+             <br/>
+             <br/>
+             <table>
+                 <tr>
+                   <td>Debugging Server:</td>
+                   <td><input id="servername" value="localhost"/></td>
+                </tr>
+                <tr>
+                   <td>Debugging Port :</td>
+                   <td><input id="serverport" value="8080" /></td>
+                </tr>
+             </table>
+             <br/>
+               <button onclick="setDebugMode(true)"> Turn On  Debugging  Mode</button>
+               <button onclick="setDebugMode(false)"> Turn Off Debugging Mode</button>
+
+               
+        </div>
+     
+	</body>
+</html>

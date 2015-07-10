@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: http://www.w3.org/TR/xquery-use-cases/#xmp-data -->
+<!-- Chapter: 1.1.5 DTD for Q9 -->
+<!-- Q9 uses an input document named "books.xml", with this DTD -->
+<!ELEMENT chapter (title, section*)>
+<!ELEMENT section (title, section*)>
+<!ELEMENT title (#PCDATA)>

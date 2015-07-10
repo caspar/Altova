@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xsd:schema xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:i="http://niem.gov/niem/appinfo/2.0" targetNamespace="http://niem.gov/niem/niem-core/2.0" version="1">
+	<xsd:annotation>
+		<xsd:appinfo>
+			<i:ConformantIndicator>true</i:ConformantIndicator>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="structures/2.0/structures.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="appinfo/2.0/appinfo.xsd"/>
+	<xsd:complexType name="PersonTyp">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="Person" nillable="true">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="nc:PersonTyp">
+					<xsd:sequence>
+						<xsd:element name="Name" type="xsd:string" default="Jack"/>
+					</xsd:sequence>
+				</xsd:extension>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

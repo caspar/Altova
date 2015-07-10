@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Example Instance document for XBRL TESTCO Ltd -->
+<!-- Based on xbrl 2.1 -->
+<!-- Created 27/2/2009 -->
+<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:ct-CT="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CT/2009-07-03" xmlns:ct-CaseI="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-CaseI/2009-07-03" xmlns:ct-Tax="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-Tax/2009-07-03" xmlns:ct-default="http://www.govtalk.gov.uk/uk/fr/tax/uk-hmrc-ct-default/2009-07-03" xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <link:schemaRef xlink:href="taxonomies/comp/2009-07-03/ct-2009-07-03.xsd" xlink:type="simple"/>
+    <!-- Context Section -->
+    <!-- an instant element with value 2007-03-01 is used to represent midnight at the end of the day (i.e. a balance at the end of a period)-->
+    <!-- this instant also represents midnight at the start of the following day (i.e. a balance at the start of a period) --> 
+    <xbrli:context id="FY2007_Start">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.companieshouse.gov.uk/">12345678</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2007-03-31</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="FY2007_End">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.companieshouse.gov.uk/">12345678</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:instant>2008-03-31</xbrli:instant>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:context id="FY2007">
+        <xbrli:entity>
+            <xbrli:identifier scheme="http://www.companieshouse.gov.uk/">12345678</xbrli:identifier>
+        </xbrli:entity>
+        <xbrli:period>
+            <xbrli:startDate>2007-04-01</xbrli:startDate>
+            <xbrli:endDate>2008-03-31</xbrli:endDate>
+        </xbrli:period>
+    </xbrli:context>
+    <xbrli:unit id="GBP">
+        <xbrli:measure>iso4217:GBP</xbrli:measure>
+    </xbrli:unit>
+    <xbrli:unit id="Pure">
+        <xbrli:measure>xbrli:pure</xbrli:measure>
+    </xbrli:unit>
+    <ct-CT:DescriptorCompanyName contextRef="FY2007_Start">XBRL-TESTCO Limited</ct-CT:DescriptorCompanyName>
+    <ct-CT:DescriptorTaxReference contextRef="FY2007_Start">1111111111</ct-CT:DescriptorTaxReference>
+    <ct-CT:DescriptorStartOfPeriodForWhichReturnRequired contextRef="FY2007_Start">2007-04-01</ct-CT:DescriptorStartOfPeriodForWhichReturnRequired>
+    <ct-CaseI:TradingProfitsTotalProfitsAllTrades contextRef="FY2007" decimals="2" unitRef="GBP">9370034</ct-CaseI:TradingProfitsTotalProfitsAllTrades>
+    <ct-default:InvestmentIncomeAndReliefsNonTradingLoanRelationshipsProfitsAndGainsFromNTLR contextRef="FY2007" decimals="2" unitRef="GBP">172576</ct-default:InvestmentIncomeAndReliefsNonTradingLoanRelationshipsProfitsAndGainsFromNTLR>
+    <ct-Tax:CalculationOfCTLiabilityProfits contextRef="FY2007" decimals="2" unitRef="GBP">9542610</ct-Tax:CalculationOfCTLiabilityProfits>
+    <ct-Tax:CalculationOfCTLiabilityFinancialYear1Date contextRef="FY2007">2007</ct-Tax:CalculationOfCTLiabilityFinancialYear1Date>
+    <ct-Tax:CalculationOfCTLiabilityFinancialYear1AmountOfProfitChargeableAtFirstRate contextRef="FY2007" decimals="2" unitRef="GBP">9542610</ct-Tax:CalculationOfCTLiabilityFinancialYear1AmountOfProfitChargeableAtFirstRate>
+    <ct-Tax:CalculationOfCTLiabilityFinancialYear1FirstRateOfTax contextRef="FY2007" decimals="INF" unitRef="Pure">0.30</ct-Tax:CalculationOfCTLiabilityFinancialYear1FirstRateOfTax>
+    <ct-Tax:CalculationOfCTLiabilityFinancialYear1TaxAtFirstRate contextRef="FY2007" decimals="2" unitRef="GBP">2862783.00</ct-Tax:CalculationOfCTLiabilityFinancialYear1TaxAtFirstRate>
+    <ct-Tax:CalculationOfCTLiabilityCorporationTax contextRef="FY2007" decimals="2" unitRef="GBP">2862783.00</ct-Tax:CalculationOfCTLiabilityCorporationTax>
+    <ct-Tax:CalculationOfCTLiabilityCTChargeable contextRef="FY2007" decimals="2" unitRef="GBP">2862783.00</ct-Tax:CalculationOfCTLiabilityCTChargeable>
+    <ct-Tax:CalculationOfCTLiabilityDoubleTaxationReliefAmount contextRef="FY2007" decimals="2" unitRef="GBP">45000.00</ct-Tax:CalculationOfCTLiabilityDoubleTaxationReliefAmount>
+    <ct-Tax:CalculationOfCTLiabilityTotalReliefsDeductionsInTermsOfTax contextRef="FY2007" decimals="2" unitRef="GBP">45000.00</ct-Tax:CalculationOfCTLiabilityTotalReliefsDeductionsInTermsOfTax>
+    <ct-Tax:CalculationOfCTLiabilityCTLiability contextRef="FY2007" decimals="2" unitRef="GBP">2817783.00</ct-Tax:CalculationOfCTLiabilityCTLiability>
+    <ct-CaseI:TradingProfitsIndividualTradeProfitPerAccounts contextRef="FY2007" decimals="2" unitRef="GBP">6464225</ct-CaseI:TradingProfitsIndividualTradeProfitPerAccounts>
+    <ct-CaseI:TradingProfitsIndividualTradeAdjustmentsDepreciation contextRef="FY2007" decimals="2" unitRef="GBP">347375</ct-CaseI:TradingProfitsIndividualTradeAdjustmentsDepreciation>
+    <ct-CaseI:TradingProfitsIndividualTradeAdjustmentsAmortisation contextRef="FY2007" decimals="2" unitRef="GBP">2640225</ct-CaseI:TradingProfitsIndividualTradeAdjustmentsAmortisation>
+    <ct-CaseI:TradingProfitsIndividualTradeAdjustmentsCapitalExpenditure contextRef="FY2007" decimals="2" unitRef="GBP">91401</ct-CaseI:TradingProfitsIndividualTradeAdjustmentsCapitalExpenditure>
+    <ct-CaseI:TradingProfitsIndividualTradeAdjustmentsAccountancyLegalAndProfessionalFees contextRef="FY2007" decimals="2" unitRef="GBP">49000</ct-CaseI:TradingProfitsIndividualTradeAdjustmentsAccountancyLegalAndProfessionalFees>
+    <ct-CaseI:TradingProfitsIndividualTradeAdjustmentsEntertaining contextRef="FY2007" decimals="2" unitRef="GBP">229384</ct-CaseI:TradingProfitsIndividualTradeAdjustmentsEntertaining>
+    <ct-CaseI:TradingProfitsIndividualTradeCapitalAllowancesNetAllowancesCharges contextRef="FY2007" decimals="2" unitRef="GBP">-279000</ct-CaseI:TradingProfitsIndividualTradeCapitalAllowancesNetAllowancesCharges>
+    <ct-CaseI:TradingProfitsIndividualTradeNetTradingProfitsIndividualTrade contextRef="FY2007" decimals="2" unitRef="GBP">9370034</ct-CaseI:TradingProfitsIndividualTradeNetTradingProfitsIndividualTrade>
+    <ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolWDVBF contextRef="FY2007_Start" decimals="2" unitRef="GBP">430000</ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolWDVBF>
+    <ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolExpenditureQualifyingForWDA contextRef="FY2007" decimals="2" unitRef="GBP">650000</ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolExpenditureQualifyingForWDA>
+    <ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolWritingDownAllowances contextRef="FY2007" decimals="2" unitRef="GBP">270000</ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolWritingDownAllowances>
+    <ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolTotalAllowances contextRef="FY2007" decimals="2" unitRef="GBP">270000</ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolTotalAllowances>
+    <ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryNumberOfSingleAssetPools contextRef="FY2007" decimals="0" unitRef="Pure">3</ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryNumberOfSingleAssetPools>
+    <ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryExpenditureQualifyingForWDATotal contextRef="FY2007" decimals="2" unitRef="GBP">90000</ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryExpenditureQualifyingForWDATotal>
+    <ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryWritingDownAllowancesTotal contextRef="FY2007" decimals="2" unitRef="GBP">9000</ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryWritingDownAllowancesTotal>
+    <ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryTotalAllowancesTotal contextRef="FY2007" decimals="2" unitRef="GBP">9000</ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryTotalAllowancesTotal>
+    <ct-CaseI:TradingProfitsIndividualTradeCapitalAllowancesSummaryTotalAllowances contextRef="FY2007" decimals="2" unitRef="GBP">279000</ct-CaseI:TradingProfitsIndividualTradeCapitalAllowancesSummaryTotalAllowances>
+    <ct-CT:DescriptorEndOfPeriodForWhichReturnRequired contextRef="FY2007_End">2008-03-31</ct-CT:DescriptorEndOfPeriodForWhichReturnRequired>
+    <ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolWDVCF contextRef="FY2007_End" decimals="2" unitRef="GBP">810000</ct-CaseI:TradingProfitsIndividualTradePMAGeneralPoolWDVCF>
+    <ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryWDVCFTotal contextRef="FY2007_End" decimals="2" unitRef="GBP">81000</ct-CaseI:TradingProfitsIndividualTradePMAExpensiveCarsSummaryWDVCFTotal>
+    <ct-CaseI:TradingProfitsIndividualTradeAdjustmentsNTLRCreditsPerAccounts contextRef="FY2007" decimals="2" unitRef="GBP">-172576</ct-CaseI:TradingProfitsIndividualTradeAdjustmentsNTLRCreditsPerAccounts>
+</xbrli:xbrl>

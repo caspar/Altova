@@ -1,0 +1,2507 @@
+<XBRLDocumentation xmlns="http://www.altova.com/documentation" xmlns:doc="http://www.altova.com/documentation">
+	<Document title="nanonull.xsd" application="XMLSpy" homepage="http://www.altova.com/xmlspy"/>
+	<DocumentationSettings>
+		<Includes overview="true" namespacePrefixes="true" globalElements="true" definitionLinkroles="true" presentationLinkroles="true" calculationLinkroles="true" genericLinkroles="true"/>
+		<Details diagram="true" properties="true" messages="true" labels="true" references="true" linkbaseReferences="true"/>
+	</DocumentationSettings>
+	<XBRLDocument xbrlLocation="nanonull.xsd" href="nanonull.xsd" targetNamespace="http://www.altova.com/nanonull"/>
+	<Namespaces>
+		<Namespace prefix="us-gaap">http://fasb.org/us-gaap/2012-01-31</Namespace>
+		<Namespace prefix="n1">http://fasb.org/us-gaap/attributes</Namespace>
+		<Namespace prefix="us-roles">http://fasb.org/us-roles/2012-01-31</Namespace>
+		<Namespace prefix="us-types">http://fasb.org/us-types/2012-01-31</Namespace>
+		<Namespace prefix="nanonull">http://www.altova.com/nanonull</Namespace>
+		<Namespace prefix="xlink">http://www.w3.org/1999/xlink</Namespace>
+		<Namespace prefix="xs">http://www.w3.org/2001/XMLSchema</Namespace>
+		<Namespace prefix="xsi">http://www.w3.org/2001/XMLSchema-instance</Namespace>
+		<Namespace prefix="xml">http://www.w3.org/XML/1998/namespace</Namespace>
+		<Namespace prefix="xl">http://www.xbrl.org/2003/XLink</Namespace>
+		<Namespace prefix="xbrli">http://www.xbrl.org/2003/instance</Namespace>
+		<Namespace prefix="link">http://www.xbrl.org/2003/linkbase</Namespace>
+		<Namespace prefix="n3">http://www.xbrl.org/2004/ref</Namespace>
+		<Namespace prefix="ref">http://www.xbrl.org/2006/ref</Namespace>
+		<Namespace prefix="xfi">http://www.xbrl.org/2008/function/instance</Namespace>
+		<Namespace prefix="utr">http://www.xbrl.org/2009/utr</Namespace>
+		<Namespace prefix="nonnum">http://www.xbrl.org/dtr/type/non-numeric</Namespace>
+		<Namespace prefix="num">http://www.xbrl.org/dtr/type/numeric</Namespace>
+		<Namespace prefix="xbrldt">http://xbrl.org/2005/xbrldt</Namespace>
+		<Namespace prefix="va">http://xbrl.org/2008/assertion/value</Namespace>
+		<Namespace prefix="cf">http://xbrl.org/2008/filter/concept</Namespace>
+		<Namespace prefix="pf">http://xbrl.org/2008/filter/period</Namespace>
+		<Namespace prefix="formula">http://xbrl.org/2008/formula</Namespace>
+		<Namespace prefix="gen">http://xbrl.org/2008/generic</Namespace>
+		<Namespace prefix="label">http://xbrl.org/2008/label</Namespace>
+		<Namespace prefix="variable">http://xbrl.org/2008/variable</Namespace>
+		<Namespace prefix="acf">http://xbrl.org/2010/filter/aspect-cover</Namespace>
+		<Namespace prefix="msg">http://xbrl.org/2010/message</Namespace>
+		<Namespace prefix="valm">http://xbrl.org/2010/message/validation</Namespace>
+		<Namespace prefix="table">http://xbrl.org/2014/table</Namespace>
+		<Namespace prefix="dei">http://xbrl.sec.gov/dei/2012-01-31</Namespace>
+		<Namespace prefix="us-gaap-att">http://xbrl.us/us-gaap/attributes</Namespace>
+		<Namespace prefix="negated">http://xbrl.us/us-gaap/negated/2008-03-31</Namespace>
+		<Namespace prefix="n2">http://xbrl.us/us-types/2009-01-31</Namespace>
+	</Namespaces>
+	<Element id="Link1" name="nanonull:FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisLineItems">
+		<Diagram src="nanonull_diagrams/nanonull_p1.png" width="667" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on Recurring Basis [Line Items]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on Recurring Basis [Line Items]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link2" name="nanonull:FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisTable">
+		<Diagram src="nanonull_diagrams/nanonull_p2.png" width="644" height="102"/>
+		<SubstitutionGroup>xbrldt:hypercubeItem</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on Recurring Basis [Table]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on Recurring Basis [Table]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link3" name="nanonull:FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisTextBlock">
+		<Diagram src="nanonull_diagrams/nanonull_p3.png" width="611" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:textBlockItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on Recurring Basis."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on Recurring Basis"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link4" name="nanonull:FairValueMeasurementInputsDisclosureLineItems">
+		<Diagram src="nanonull_diagrams/nanonull_p4.png" width="582" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Measurement Inputs, Disclosure [Line Items]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Measurement Inputs, Disclosure [Line Items]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link5" name="nanonull:FairValueMeasurementInputsDisclosureTable">
+		<Diagram src="nanonull_diagrams/nanonull_p5.png" width="559" height="102"/>
+		<SubstitutionGroup>xbrldt:hypercubeItem</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Measurement Inputs, Disclosure [Table]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Measurement Inputs, Disclosure [Table]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link6" name="nanonull:FinancialInstrumentsMeasuredAtFairValueOnRecurringBasisMember">
+		<Diagram src="nanonull_diagrams/nanonull_p6.png" width="678" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Financial Instruments Measured at Fair Value on a Recurring Basis [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Financial Instruments Measured at Fair Value on a Recurring Basis"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link7" name="nanonull:FinancialInstrumentsNotMeasuredAtFairValueOnRecurringBasisMember">
+		<Diagram src="nanonull_diagrams/nanonull_p7.png" width="698" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Financial Instruments Not Measured at Fair Value on a Recurring Basis [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Financial Instruments Not Measured at Fair Value on a Recurring Basis"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link8" name="nanonull:FixedRateExportCreditFacilitiesMember">
+		<Diagram src="nanonull_diagrams/nanonull_p8.png" width="525" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fixed Rate Export Credit Facilities [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fixed Rate Export Credit Facilities"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link9" name="nanonull:FixedRateMember">
+		<Diagram src="nanonull_diagrams/nanonull_p9.png" width="415" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fixed Rate [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fixed Rate"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="LinkA" name="nanonull:FloatingRateMember">
+		<Diagram src="nanonull_diagrams/nanonull_p10.png" width="427" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Floating Rate [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Floating Rate"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="LinkB" name="nanonull:IberoCruiseMember">
+		<Diagram src="nanonull_diagrams/nanonull_p11.png" width="422" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Ibero Cruise [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Ibero Cruise"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="LinkC" name="nanonull:LeaseOutAndLeaseBackTypeTransactionsMember">
+		<Diagram src="nanonull_diagrams/nanonull_p12.png" width="581" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Lease Out And Lease Back Type Transactions [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Lease Out And Lease Back Type Transactions"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="LinkD" name="nanonull:MarketableSecuritiesHeldInRabbiTrustsMember">
+		<Diagram src="nanonull_diagrams/nanonull_p13.png" width="565" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Marketable Securities Held In Rabbi Trusts [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Marketable securities held in rabbi trusts"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="LinkE" name="nanonull:MaturityOfInterestRateSwaps">
+		<Diagram src="nanonull_diagrams/nanonull_p14.png" width="605" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>us-types:durationStringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Date when interest rate swaps derivatives mature or expire."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Maturity of interest rate swaps"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="LinkF" name="nanonull:MaximumMember">
+		<Diagram src="nanonull_diagrams/nanonull_p15.png" width="407" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Maximum [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Maximum"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link10" name="nanonull:MinimumMember">
+		<Diagram src="nanonull_diagrams/nanonull_p16.png" width="403" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Minimum [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Minimum"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link11" name="nanonull:NorthAmericaCruiseBrandsMember">
+		<Diagram src="nanonull_diagrams/nanonull_p17.png" width="500" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="North America Cruise Brands [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="North America Cruise Brands"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link12" name="nanonull:NotesToFinancialStatementsAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p18.png" width="509" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Notes to Financial Statements [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Notes to Financial Statements [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Presentations>
+			<Presentation>
+				<From>nanonull:NotesToFinancialStatementsAbstract</From>
+				<To>us-gaap:ScheduleOfNewAccountingPronouncementsAndChangesInAccountingPrinciplesTextBlock</To>
+			</Presentation>
+			<Presentation>
+				<From>nanonull:NotesToFinancialStatementsAbstract</From>
+				<To>us-gaap:EarningsPerSharePolicyTextBlock</To>
+			</Presentation>
+			<Presentation>
+				<From>nanonull:NotesToFinancialStatementsAbstract</From>
+				<To>us-gaap:SegmentReportingDisclosureTextBlock</To>
+			</Presentation>
+			<Presentation>
+				<From>nanonull:NotesToFinancialStatementsAbstract</From>
+				<To>us-gaap:ComprehensiveIncomeNoteTextBlock</To>
+			</Presentation>
+			<Presentation>
+				<From>nanonull:NotesToFinancialStatementsAbstract</From>
+				<To ref="Link13">nanonull:ContingenciesDisclosureTextBlock</To>
+			</Presentation>
+			<Presentation>
+				<From>nanonull:NotesToFinancialStatementsAbstract</From>
+				<To>us-gaap:DebtDisclosureTextBlock</To>
+			</Presentation>
+			<Presentation>
+				<From>nanonull:NotesToFinancialStatementsAbstract</From>
+				<To>us-gaap:OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link14" name="nanonull:OnboardAndOther">
+		<Diagram src="nanonull_diagrams/nanonull_p19.png" width="2214" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>credit</Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="This is the sale of goods and/or services primarily onboard our ships (which include bar and some beverage sales, casino gaming, shore excursions, gift shop and spa sales and photo and art sales) and pre and post-cruise land packages. These goods and services are either provided directly by us or by independent concessionaires, from which we receive a percentage of their revenues or a fee."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Onboard and other"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Definitions>
+			<Definition>
+				<From>us-gaap:SalesRevenueNetAbstract</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:OnboardAndOther</To>
+			</Definition>
+		</Definitions>
+		<Calculations>
+			<Calculation>
+				<From>us-gaap:SalesRevenueServicesGross</From>
+				<Weight>1.0</Weight>
+				<To>nanonull:OnboardAndOther</To>
+			</Calculation>
+		</Calculations>
+		<Presentations>
+			<Presentation>
+				<From>us-gaap:SalesRevenueNetAbstract</From>
+				<To>nanonull:OnboardAndOther</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link15" name="nanonull:OrdinarySharesMember">
+		<Diagram src="nanonull_diagrams/nanonull_p20.png" width="441" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Ordinary Shares [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Ordinary shares"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Definitions>
+			<Definition>
+				<From>us-gaap:ClassOfStockDomain</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:OrdinarySharesMember</To>
+			</Definition>
+			<Definition>
+				<From>us-gaap:ClassOfStockDomain</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:OrdinarySharesMember</To>
+			</Definition>
+		</Definitions>
+		<Presentations>
+			<Presentation>
+				<From>us-gaap:ClassOfStockDomain</From>
+				<To>nanonull:OrdinarySharesMember</To>
+			</Presentation>
+			<Presentation>
+				<From>us-gaap:ClassOfStockDomain</From>
+				<To>nanonull:OrdinarySharesMember</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link16" name="nanonull:OtherComprehensiveIncomeLossFromContinuingOperationsNetOfTaxPeriodIncreaseDecreaseAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p21.png" width="852" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Other Comprehensive Income Loss From Continuing Operations Net Of Tax Period Increase Decrease [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Items included in other comprehensive income (loss)"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link17" name="nanonull:OtherComprehensiveIncomeOtherNetOfTax">
+		<Diagram src="nanonull_diagrams/nanonull_p22.png" width="2030" height="119"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>credit</Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Other components of other comprehensive income that is not sufficiently large enough to require separate presentation. Accordingly, if changes related to cash flow hedges, available for sale securities on certain investments in debt and equity securities and pension liability adjustments are too small to be meaningful they can be combined into one line item."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Other Comprehensive Income, Other, Net of Tax"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Other"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link18" name="nanonull:PercentageDifferenceBetweenFairValueAndCarryingValueOfAsset">
+		<Diagram src="nanonull_diagrams/nanonull_p23.png" width="676" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>num:percentItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Percentage Difference Between Fair Value And Carrying Value of Asset"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Percentage by which Ibero&apos;s estimated fair value exceeds its carrying value"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link19" name="nanonull:PercentageOfNewbuildPassengerCapacityUnderContractExposedToCurrencyRisk">
+		<Diagram src="nanonull_diagrams/nanonull_p24.png" width="733" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>num:percentItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Percentage Of Newbuild Passenger Capacity Under Contract Exposed To Currency Risk"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Newbuild passenger capacity under contract exposed to currency risk"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link1A" name="nanonull:PercentageOfNewbuildPassengerCapacityUnderContractHedged">
+		<Diagram src="nanonull_diagrams/nanonull_p25.png" width="645" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>num:percentItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Percentage Of Newbuild Passenger Capacity Under Contract Hedged"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Newbuild passenger capacity under contract hedged"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link1B" name="nanonull:PercentageOfNewbuildPassengerCapacityUnderContractNotExposedToCurrencyRisk">
+		<Diagram src="nanonull_diagrams/nanonull_p26.png" width="753" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>num:percentItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Percentage Of Newbuild Passenger Capacity Under Contract Not Exposed To Currency Risk"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Newbuild passenger capacity under contract not exposed to currency risk"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link1C" name="nanonull:PercentageOfWeightedAverageCostOfCapitalAdjustedForRisk">
+		<Diagram src="nanonull_diagrams/nanonull_p27.png" width="640" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>num:percentItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Percentage Of Weighted Average Cost Of Capital Adjusted For Risk"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Percentage of weighted average cost of capital adjusted for risk"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link1D" name="nanonull:RangeAxis">
+		<Diagram src="nanonull_diagrams/nanonull_p28.png" width="376" height="102"/>
+		<SubstitutionGroup>xbrldt:dimensionItem</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<TypedDomainRef> </TypedDomainRef>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Range [Axis]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Range [Axis]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link1E" name="nanonull:RangeDomain">
+		<Diagram src="nanonull_diagrams/nanonull_p29.png" width="391" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Range [Domain]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Range [Domain]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link1F" name="nanonull:ScheduleOfEarningsPerShareBasicAndDilutedByCommonClassLineItems">
+		<Diagram src="nanonull_diagrams/nanonull_p30.png" width="703" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Schedule of Earnings Per Share, Basic and Diluted, by Common Class [Line Items]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Schedule of Earnings Per Share, Basic and Diluted, by Common Class [Line Items]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link20" name="nanonull:ScheduleOfEarningsPerShareBasicAndDilutedByCommonClassTable">
+		<Diagram src="nanonull_diagrams/nanonull_p31.png" width="680" height="102"/>
+		<SubstitutionGroup>xbrldt:hypercubeItem</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Schedule of Earnings Per Share, Basic and Diluted, by Common Class [Table]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Schedule of Earnings Per Share, Basic and Diluted, by Common Class [Table]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link21" name="nanonull:ShipForeignCurrencyOptionsMember">
+		<Diagram src="nanonull_diagrams/nanonull_p32.png" width="509" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Ship Foreign Currency Options [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Ship foreign currency options"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link22" name="nanonull:TourAndOtherMember">
+		<Diagram src="nanonull_diagrams/nanonull_p33.png" width="438" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Tour And Other [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Tour and Other"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link23" name="nanonull:ContinenciesDisclosureTextBlock">
+		<Diagram src="nanonull_diagrams/nanonull_p34.png" width="443" height="85"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:textBlockItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Contingencies Disclosure [Text Block]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link24" name="nanonull:USA">
+		<Diagram src="nanonull_diagrams/nanonull_p35.png" width="299" height="85"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="USA"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Definitions>
+			<Definition>
+				<From>us-gaap:SegmentOperatingActivitiesDomain</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:USA</To>
+			</Definition>
+		</Definitions>
+		<Presentations>
+			<Presentation>
+				<From>us-gaap:SegmentOperatingActivitiesDomain</From>
+				<To>nanonull:USA</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link25" name="nanonull:Europe">
+		<Diagram src="nanonull_diagrams/nanonull_p36.png" width="299" height="85"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Europe"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Definitions>
+			<Definition>
+				<From>us-gaap:SegmentOperatingActivitiesDomain</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:Europe</To>
+			</Definition>
+		</Definitions>
+		<Presentations>
+			<Presentation>
+				<From>us-gaap:SegmentOperatingActivitiesDomain</From>
+				<To>nanonull:Europe</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link26" name="nanonull:Asia">
+		<Diagram src="nanonull_diagrams/nanonull_p37.png" width="299" height="85"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Asia"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Definitions>
+			<Definition>
+				<From>us-gaap:SegmentOperatingActivitiesDomain</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:Asia</To>
+			</Definition>
+		</Definitions>
+		<Presentations>
+			<Presentation>
+				<From>us-gaap:SegmentOperatingActivitiesDomain</From>
+				<To>nanonull:Asia</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link27" name="nanonull:AccumulatedOtherComprehensiveIncomeLossNetInvestmentHedgeNetOfTax">
+		<Diagram src="nanonull_diagrams/nanonull_p38.png" width="869" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>debit</Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Accumulated Other Comprehensive Income Loss Net Investment Hedge Net of Tax"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Cumulative foreign currency transaction gains included in the cumulative translation adjustment component of AOCI"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link28" name="nanonull:BasisOfPresentationLineItems">
+		<Diagram src="nanonull_diagrams/nanonull_p39.png" width="475" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Basis of Presentation [Line Items]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Basis of Presentation [Line Items]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link29" name="nanonull:BasisOfPresentationTable">
+		<Diagram src="nanonull_diagrams/nanonull_p40.png" width="452" height="102"/>
+		<SubstitutionGroup>xbrldt:hypercubeItem</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Basis of Presentation [Table]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Basis of Presentation [Table]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link2A" name="nanonull:ChangeInAccountingPrinciple">
+		<Diagram src="nanonull_diagrams/nanonull_p41.png" width="888" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>credit</Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Change in classification of port costs that vary with guest head counts to a gross presentation from a net presentation."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Prior period adjustment amounts on gross basis in revenues and expenses"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link2B" name="nanonull:ComprehensiveIncomeTableTextBlock">
+		<Diagram src="nanonull_diagrams/nanonull_p42.png" width="487" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:textBlockItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Comprehensive Income Table"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Comprehensive Income (Loss) Table"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link13" name="nanonull:ContingenciesDisclosureTextBlock">
+		<Diagram src="nanonull_diagrams/nanonull_p43.png" width="1833" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:textBlockItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Describes any existing condition, situation, or set of circumstances involving uncertainty as of the balance sheet date (or prior to issuance of the financial statements) as to a probable or reasonably possible gain or loss incurred by an entity and typically discloses the amount of range of possible gain or loss recorded."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Contingencies"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Presentations>
+			<Presentation>
+				<From ref="Link12">nanonull:NotesToFinancialStatementsAbstract</From>
+				<To>nanonull:ContingenciesDisclosureTextBlock</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link2C" name="nanonull:ContingentObligations">
+		<Diagram src="nanonull_diagrams/nanonull_p44.png" width="1784" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>credit</Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="A liability that is not currently a liability but may become one upon the happening of some future event. It is an obligation that may result, but is not likely to result because the event causing the obligation is improbable. If the event becomes probable and reasonable estimable, then it&apos;s considered a liability."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Estimated contingent obligations"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link2D" name="nanonull:CostAndFairValueOfFinancialInstrumentsDisclosureTextBlock">
+		<Diagram src="nanonull_diagrams/nanonull_p45.png" width="576" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:textBlockItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Cost and Fair Value of Financial Instruments Disclosure"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value Measurements"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link2E" name="nanonull:CostOfOnboardAndOther">
+		<Diagram src="nanonull_diagrams/nanonull_p46.png" width="2445" height="119"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>debit</Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="This represents costs that vary directly with onboard and other revenues, and include the costs of liquor and some beverages, costs of tangible goods sold by us from our gift, photo and art auction activities, pre and post-cruise land packages and credit card fees. Concession revenues do not have any significant amount of costs associated with them, as the costs and services incurred for these activities are provided by our concessionaires."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Cost of Onboard and other"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Onboard and other"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Definitions>
+			<Definition>
+				<From>us-gaap:CostOfRevenueAbstract</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:CostOfOnboardAndOther</To>
+			</Definition>
+		</Definitions>
+		<Calculations>
+			<Calculation>
+				<From>us-gaap:CostOfRevenue</From>
+				<Weight>1.0</Weight>
+				<To>nanonull:CostOfOnboardAndOther</To>
+			</Calculation>
+		</Calculations>
+		<Presentations>
+			<Presentation>
+				<From>us-gaap:CostOfRevenueAbstract</From>
+				<To>nanonull:CostOfOnboardAndOther</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link2F" name="nanonull:CruiseCommissionsTransportationAndOther">
+		<Diagram src="nanonull_diagrams/nanonull_p47.png" width="576" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>debit</Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Cruise costs of commissions, transportation and other."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Commissions, transportation and other"/>
+			</Role>
+		</Labels>
+		<References/>
+		<Definitions>
+			<Definition>
+				<From>us-gaap:CostOfRevenueAbstract</From>
+				<ArcRole>http://xbrl.org/int/dim/arcrole/domain-member</ArcRole>
+				<To>nanonull:CruiseCommissionsTransportationAndOther</To>
+			</Definition>
+		</Definitions>
+		<Calculations>
+			<Calculation>
+				<From>us-gaap:CostOfRevenue</From>
+				<Weight>1.0</Weight>
+				<To>nanonull:CruiseCommissionsTransportationAndOther</To>
+			</Calculation>
+		</Calculations>
+		<Presentations>
+			<Presentation>
+				<From>us-gaap:CostOfRevenueAbstract</From>
+				<To>nanonull:CruiseCommissionsTransportationAndOther</To>
+			</Presentation>
+		</Presentations>
+	</Element>
+	<Element id="Link30" name="nanonull:CruiseMember">
+		<Diagram src="nanonull_diagrams/nanonull_p48.png" width="393" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Cruise [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Cruise Support"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link31" name="nanonull:DisclosureBasicAndDilutedEarningsPerShareComputationAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p49.png" width="663" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Basic and Diluted Earnings Per Share Computation [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Basic and Diluted Earnings Per Share Computation [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link32" name="nanonull:DisclosureBasisOfPresentationAdditionalInformationAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p50.png" width="641" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Basis of Presentation - Additional Information [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Basis of Presentation - Additional Information [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link33" name="nanonull:DisclosureCarryingAmountOfGoodwillAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p51.png" width="560" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Carrying Amount of Goodwill [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Carrying Amount of Goodwill [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link34" name="nanonull:DisclosureComprehensiveIncomeLossAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p52.png" width="568" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Comprehensive Income (Loss) [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Comprehensive Income (Loss) [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link35" name="nanonull:DisclosureContingenciesAdditionalInformationAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p53.png" width="607" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Contingencies - Additional Information [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Contingencies - Additional Information [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link36" name="nanonull:DisclosureDebtAdditionalInformationAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p54.png" width="563" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Debt - Additional Information [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Debt - Additional Information [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link37" name="nanonull:DisclosureEstimatedCarryingAndFairValuesOfFinancialInstrumentAssetsAndLiabilitiesNotMeasuredAtFairValueOnARecurringBasisAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p55.png" width="1046" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Estimated Carrying and Fair Values of Financial Instrument Assets and (Liabilities) Not Measured at Fair Value on a Recurring Basis [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Estimated Carrying and Fair Values of Financial Instrument Assets and (Liabilities) Not Measured at Fair Value on a Recurring Basis [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link38" name="nanonull:DisclosureEstimatedFairValueAndBasisOfValuationOfFinancialInstrumentAssetsAndLiabilitiesMeasuredAtFairValueOnARecurringBasisAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p56.png" width="1064" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Estimated Fair Value and Basis of Valuation of Financial Instrument Assets and (Liabilities) Measured at Fair Value on a Recurring Basis [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Estimated Fair Value and Basis of Valuation of Financial Instrument Assets and (Liabilities) Measured at Fair Value on a Recurring Basis [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link39" name="nanonull:DisclosureFairValueMeasurementsDerivativeInstrumentsAndHedgingActivitiesAdditionalInformationAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p57.png" width="886" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Fair Value Measurements, Derivative Instruments and Hedging Activities - Additional Information [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Fair Value Measurements, Derivative Instruments and Hedging Activities - Additional Information [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link3A" name="nanonull:DisclosureSelectedInformationForCruiseAndTourAndOtherSegmentsAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p58.png" width="722" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Selected Information for Cruise and Tour and Other Segments [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Disclosure - Selected Information for Cruise and Tour and Other Segments [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link3B" name="nanonull:DocumentDocumentandEntityInformationAbstract">
+		<Diagram src="nanonull_diagrams/nanonull_p59.png" width="583" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Document - Document and Entity Information [Abstract]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Document - Document and Entity Information [Abstract]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link3C" name="nanonull:EarningsPerShareComputationTextBlock">
+		<Diagram src="nanonull_diagrams/nanonull_p60.png" width="1484" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:textBlockItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="This item represents the computation of basic and diluted earnings per share and the reconciliation of basic weighted shares outstanding to diluted weighted shares outstanding. It also includes anti-dilutive weighted average shares outstanding."/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Earnings Per Share Calculation"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link3D" name="nanonull:EuroAndSterlingDebtAndOtherObligationsMember">
+		<Diagram src="nanonull_diagrams/nanonull_p61.png" width="581" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Euro And Sterling Debt And Other Obligations [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Euro And Sterling Debt And Other Obligations"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link3E" name="nanonull:EuroDenominatedBankLoansMember">
+		<Diagram src="nanonull_diagrams/nanonull_p62.png" width="508" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Euro Denominated Bank Loans [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Euro Denominated Bank Loans"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link3F" name="nanonull:EuropeAustraliaAndAsiaCruiseBrandsMember">
+		<Diagram src="nanonull_diagrams/nanonull_p63.png" width="556" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Europe Australia And Asia Cruise Brands [Member]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="EAA Cruise Brands"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link40" name="nanonull:FairValueAssetsAndLiabilitiesMeasuredOnARecurringBasisAxis">
+		<Diagram src="nanonull_diagrams/nanonull_p64.png" width="639" height="102"/>
+		<SubstitutionGroup>xbrldt:dimensionItem</SubstitutionGroup>
+		<Type>xbrli:stringItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<TypedDomainRef> </TypedDomainRef>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on a Recurring Basis Axis"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on a Recurring Basis Axis"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link41" name="nanonull:FairValueAssetsAndLiabilitiesMeasuredOnARecurringBasisDomain">
+		<Diagram src="nanonull_diagrams/nanonull_p65.png" width="662" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>nonnum:domainItemType</Type>
+		<Balance> </Balance>
+		<PeriodType>duration</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on a Recurring Basis [Domain]"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on a Recurring Basis [Domain]"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<Element id="Link42" name="nanonull:FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisDerivativeFinancialInstrumentsAssetsAndLiabilities">
+		<Diagram src="nanonull_diagrams/nanonull_p66.png" width="873" height="102"/>
+		<SubstitutionGroup>xbrli:item</SubstitutionGroup>
+		<Type>xbrli:monetaryItemType</Type>
+		<Balance>credit</Balance>
+		<PeriodType>instant</PeriodType>
+		<Abstract>NOT Abstract</Abstract>
+		<Nillable>Nillable</Nillable>
+		<Labels>
+			<Role name="http://www.xbrl.org/2003/role/link">
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value, Assets and Liabilities Measured on Recurring Basis, Derivative Financial Instruments, Assets and Liabilities"/>
+				<Label language="en-US" role="http://www.xbrl.org/2003/arcrole/concept-label" text="Fair Value Assets And Liabilities Measured On Recurring Basis Derivative Financial Instruments"/>
+			</Role>
+		</Labels>
+		<References/>
+	</Element>
+	<DefinitionLinkrole id="Link43" name="http://www.nanonull.com/taxonomy/role/SegmentRevenueAndOperatingIncome">
+		<Item name="us-gaap:SegmentReportingInformationLineItems">
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/all" name="us-gaap:ScheduleOfSegmentReportingInformationBySegmentTable">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" name="us-gaap:StatementOperatingActivitiesSegmentAxis">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" name="us-gaap:SegmentOperatingActivitiesDomain">
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:Asia" ref="Link26"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:Europe" ref="Link25"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:USA" ref="Link24"/>
+					</Item>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" name="us-gaap:SegmentOperatingActivitiesDomain">
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:Asia" ref="Link26"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:Europe" ref="Link25"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:USA" ref="Link24"/>
+					</Item>
+				</Item>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:SegmentReportingInformationRevenue"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:SegmentReportingInformationOperatingIncomeLoss"/>
+		</Item>
+	</DefinitionLinkrole>
+	<DefinitionLinkrole id="Link44" name="http://www.nanonull.com/taxonomy/role/StatementOfCashFlowsIndirect">
+		<Item name="us-gaap:StatementLineItems">
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetCashProvidedByUsedInOperatingActivitiesAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetIncomeLoss"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:DepreciationAndAmortization"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ShareBasedCompensation"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AdjustmentsNoncashItemsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesOther"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncreaseDecreaseInOperatingCapitalAbstract">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncreaseDecreaseInReceivables"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncreaseDecreaseInInventories"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncreaseDecreaseInAccountsPayable"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncreaseDecreaseInOtherOperatingLiabilities"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncreaseDecreaseInCustomerDeposits"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetCashProvidedByUsedInOperatingActivities"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetCashProvidedByUsedInInvestingActivitiesAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:PaymentsForProceedsFromOtherInvestingActivities"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetCashProvidedByUsedInInvestingActivities"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetCashProvidedByUsedInFinancingActivitiesAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ProceedsFromRepaymentsOfShortTermDebt"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:RepaymentsOfLongTermLinesOfCredit"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ProceedsFromLongTermLinesOfCredit"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:RepaymentsOfOtherLongTermDebt"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ProceedsFromIssuanceOfOtherLongTermDebt"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:PaymentsOfDividends"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:PaymentsForRepurchaseOfCommonStock"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ProceedsFromSaleOfTreasuryStock"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetCashProvidedByUsedInFinancingActivities"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:EffectOfExchangeRateOnCashAndCashEquivalents"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CashAndCashEquivalentsAtCarryingValue"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/all" name="us-gaap:StatementTable">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" name="dei:LegalEntityAxis">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" name="dei:EntityDomain"/>
+				</Item>
+			</Item>
+		</Item>
+	</DefinitionLinkrole>
+	<DefinitionLinkrole id="Link45" name="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassified">
+		<Item name="us-gaap:StatementLineItems">
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AssetsAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AssetsCurrentAbstract">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CashAndCashEquivalentsAtCarryingValue"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ReceivablesNetCurrent"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:InventoryNet"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OtherAssetsCurrent"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AssetsCurrent"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:PropertyPlantAndEquipmentNet"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:Goodwill"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IntangibleAssetsNetExcludingGoodwill"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OtherAssetsNoncurrent"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:Assets"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:LiabilitiesAndStockholdersEquityAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:LiabilitiesCurrentAbstract">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:ShortTermBorrowings"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:LongTermDebtCurrent"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AccountsPayableCurrent"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AccruedLiabilitiesCurrent"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CustomerDepositsCurrent"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:LiabilitiesCurrent"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:LongTermDebtNoncurrent"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OtherLiabilitiesNoncurrent"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommitmentsAndContingencies2009"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:StockholdersEquityAbstract">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AdditionalPaidInCapital"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:RetainedEarningsAccumulatedDeficit"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:TreasuryStockValue"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:StockholdersEquity"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockValue"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:LiabilitiesAndStockholdersEquity"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/all" name="us-gaap:StatementTable">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" name="dei:LegalEntityAxis">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" name="dei:EntityDomain"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" name="us-gaap:StatementClassOfStockAxis">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" name="us-gaap:ClassOfStockDomain">
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockMember"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:OrdinarySharesMember" ref="Link15"/>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+	</DefinitionLinkrole>
+	<DefinitionLinkrole id="Link46" name="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassifiedParenthetical">
+		<Item name="us-gaap:StatementLineItems">
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockParOrStatedValuePerShare"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockSharesAuthorized"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockSharesIssued"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:TreasuryStockShares"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/all" name="us-gaap:StatementTable">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" name="dei:LegalEntityAxis">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" name="dei:EntityDomain"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" name="dei:EntityDomain"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" name="us-gaap:StatementClassOfStockAxis">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" name="us-gaap:ClassOfStockDomain">
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockMember"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:OrdinarySharesMember" ref="Link15"/>
+					</Item>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" name="us-gaap:ClassOfStockDomain">
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockMember"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:OrdinarySharesMember" ref="Link15"/>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+	</DefinitionLinkrole>
+	<DefinitionLinkrole id="Link47" name="http://www.nanonull.com/taxonomy/role/StatementOfIncomeAlternative">
+		<Item name="us-gaap:StatementLineItems">
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:RevenuesAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:SalesRevenueNetAbstract">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:PassengerRevenue"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:OnboardAndOther" ref="Link14"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OtherSalesRevenueNet"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:SalesRevenueServicesGross"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CostsAndExpensesAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OperatingExpensesAbstract">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CostOfRevenueAbstract">
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:CruiseCommissionsTransportationAndOther" ref="Link2F"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="nanonull:CostOfOnboardAndOther" ref="Link2E"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CostOfServicesDirectLabor"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:FuelCosts"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:FoodAndBeverageCostOfSales"/>
+						<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OtherCostAndExpenseOperating"/>
+					</Item>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OtherCostOfOperatingRevenue"/>
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CostOfRevenue"/>
+				</Item>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:SellingGeneralAndAdministrativeExpense"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:DepreciationAndAmortization"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CostsAndExpenses"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OperatingIncomeLoss"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NonoperatingIncomeExpenseAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:InvestmentIncomeInterest"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:InterestExpense"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:OtherNonoperatingIncomeExpense"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NonoperatingIncomeExpense"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:IncomeTaxExpenseBenefit"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:NetIncomeLoss"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:EarningsPerShareAbstract">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:EarningsPerShareBasic"/>
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:EarningsPerShareDiluted"/>
+			</Item>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/domain-member" name="us-gaap:CommonStockDividendsPerShareDeclared"/>
+			<Item arcrole="http://xbrl.org/int/dim/arcrole/all" name="us-gaap:StatementTable">
+				<Item arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" name="dei:LegalEntityAxis">
+					<Item arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" name="dei:EntityDomain"/>
+				</Item>
+			</Item>
+		</Item>
+	</DefinitionLinkrole>
+	<PresentationLinkrole id="Link48" name="http://www.nanonull.com/taxonomy/role/FinancialStatements">
+		<Item name="nanonull:NotesToFinancialStatementsAbstract" ref="Link12">
+			<Item name="us-gaap:OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock"/>
+			<Item name="us-gaap:DebtDisclosureTextBlock"/>
+			<Item name="nanonull:ContingenciesDisclosureTextBlock" ref="Link13"/>
+			<Item name="us-gaap:ComprehensiveIncomeNoteTextBlock"/>
+			<Item name="us-gaap:SegmentReportingDisclosureTextBlock"/>
+			<Item name="us-gaap:EarningsPerSharePolicyTextBlock"/>
+			<Item name="us-gaap:ScheduleOfNewAccountingPronouncementsAndChangesInAccountingPrinciplesTextBlock"/>
+		</Item>
+	</PresentationLinkrole>
+	<PresentationLinkrole id="Link49" name="http://www.nanonull.com/taxonomy/role/SegmentRevenueAndOperatingIncome">
+		<Item name="us-gaap:SegmentReportingInformationLineItems">
+			<Item name="us-gaap:ScheduleOfSegmentReportingInformationBySegmentTable">
+				<Item name="us-gaap:StatementOperatingActivitiesSegmentAxis">
+					<Item name="us-gaap:SegmentOperatingActivitiesDomain">
+						<Item name="nanonull:Asia" ref="Link26"/>
+						<Item name="nanonull:Europe" ref="Link25"/>
+						<Item name="nanonull:USA" ref="Link24"/>
+					</Item>
+				</Item>
+				<Item name="us-gaap:SegmentReportingInformationRevenue"/>
+				<Item name="us-gaap:SegmentReportingInformationOperatingIncomeLossAbstract"/>
+			</Item>
+		</Item>
+	</PresentationLinkrole>
+	<PresentationLinkrole id="Link4A" name="http://www.nanonull.com/taxonomy/role/StatementOfCashFlowsIndirect">
+		<Item name="us-gaap:StatementOfCashFlowsAbstract">
+			<Item name="us-gaap:StatementTable">
+				<Item name="dei:LegalEntityAxis">
+					<Item name="dei:EntityDomain"/>
+				</Item>
+				<Item name="us-gaap:StatementLineItems">
+					<Item name="us-gaap:NetCashProvidedByUsedInOperatingActivitiesAbstract">
+						<Item name="us-gaap:NetIncomeLoss"/>
+						<Item name="us-gaap:AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract">
+							<Item name="us-gaap:DepreciationAndAmortization"/>
+							<Item name="us-gaap:ShareBasedCompensation"/>
+							<Item name="us-gaap:AdjustmentsNoncashItemsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesOther"/>
+						</Item>
+						<Item name="us-gaap:IncreaseDecreaseInOperatingCapitalAbstract">
+							<Item name="us-gaap:IncreaseDecreaseInReceivables"/>
+							<Item name="us-gaap:IncreaseDecreaseInInventories"/>
+							<Item name="us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets"/>
+							<Item name="us-gaap:IncreaseDecreaseInAccountsPayable"/>
+							<Item name="us-gaap:IncreaseDecreaseInOtherOperatingLiabilities"/>
+							<Item name="us-gaap:IncreaseDecreaseInCustomerDeposits"/>
+						</Item>
+						<Item name="us-gaap:NetCashProvidedByUsedInOperatingActivities"/>
+					</Item>
+					<Item name="us-gaap:NetCashProvidedByUsedInInvestingActivitiesAbstract">
+						<Item name="us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"/>
+						<Item name="us-gaap:PaymentsForProceedsFromOtherInvestingActivities"/>
+						<Item name="us-gaap:NetCashProvidedByUsedInInvestingActivities"/>
+					</Item>
+					<Item name="us-gaap:NetCashProvidedByUsedInFinancingActivitiesAbstract">
+						<Item name="us-gaap:ProceedsFromRepaymentsOfShortTermDebt"/>
+						<Item name="us-gaap:RepaymentsOfLongTermLinesOfCredit"/>
+						<Item name="us-gaap:ProceedsFromLongTermLinesOfCredit"/>
+						<Item name="us-gaap:RepaymentsOfOtherLongTermDebt"/>
+						<Item name="us-gaap:ProceedsFromIssuanceOfOtherLongTermDebt"/>
+						<Item name="us-gaap:PaymentsOfDividends"/>
+						<Item name="us-gaap:PaymentsForRepurchaseOfCommonStock"/>
+						<Item name="us-gaap:ProceedsFromSaleOfTreasuryStock"/>
+						<Item name="us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"/>
+						<Item name="us-gaap:NetCashProvidedByUsedInFinancingActivities"/>
+					</Item>
+					<Item name="us-gaap:EffectOfExchangeRateOnCashAndCashEquivalents"/>
+					<Item name="us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease"/>
+					<Item name="us-gaap:CashAndCashEquivalentsAtCarryingValue"/>
+					<Item name="us-gaap:CashAndCashEquivalentsAtCarryingValue"/>
+				</Item>
+			</Item>
+		</Item>
+	</PresentationLinkrole>
+	<PresentationLinkrole id="Link4B" name="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassified">
+		<Item name="us-gaap:StatementOfFinancialPositionAbstract">
+			<Item name="us-gaap:StatementTable">
+				<Item name="dei:LegalEntityAxis">
+					<Item name="dei:EntityDomain"/>
+				</Item>
+				<Item name="us-gaap:StatementClassOfStockAxis">
+					<Item name="us-gaap:ClassOfStockDomain">
+						<Item name="us-gaap:CommonStockMember"/>
+						<Item name="nanonull:OrdinarySharesMember" ref="Link15"/>
+					</Item>
+				</Item>
+				<Item name="us-gaap:StatementLineItems">
+					<Item name="us-gaap:AssetsAbstract">
+						<Item name="us-gaap:AssetsCurrentAbstract">
+							<Item name="us-gaap:CashAndCashEquivalentsAtCarryingValue"/>
+							<Item name="us-gaap:ReceivablesNetCurrent"/>
+							<Item name="us-gaap:InventoryNet"/>
+							<Item name="us-gaap:OtherAssetsCurrent"/>
+							<Item name="us-gaap:AssetsCurrent"/>
+						</Item>
+						<Item name="us-gaap:PropertyPlantAndEquipmentNet"/>
+						<Item name="us-gaap:Goodwill"/>
+						<Item name="us-gaap:IntangibleAssetsNetExcludingGoodwill"/>
+						<Item name="us-gaap:OtherAssetsNoncurrent"/>
+						<Item name="us-gaap:Assets"/>
+					</Item>
+					<Item name="us-gaap:LiabilitiesAndStockholdersEquityAbstract">
+						<Item name="us-gaap:LiabilitiesCurrentAbstract">
+							<Item name="us-gaap:ShortTermBorrowings"/>
+							<Item name="us-gaap:LongTermDebtCurrent"/>
+							<Item name="us-gaap:AccountsPayableCurrent"/>
+							<Item name="us-gaap:AccruedLiabilitiesCurrent"/>
+							<Item name="us-gaap:CustomerDepositsCurrent"/>
+							<Item name="us-gaap:LiabilitiesCurrent"/>
+						</Item>
+						<Item name="us-gaap:LongTermDebtNoncurrent"/>
+						<Item name="us-gaap:OtherLiabilitiesNoncurrent"/>
+						<Item name="us-gaap:CommitmentsAndContingencies2009"/>
+						<Item name="us-gaap:StockholdersEquityAbstract">
+							<Item name="us-gaap:AdditionalPaidInCapital"/>
+							<Item name="us-gaap:RetainedEarningsAccumulatedDeficit"/>
+							<Item name="us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax"/>
+							<Item name="us-gaap:TreasuryStockValue"/>
+							<Item name="us-gaap:StockholdersEquity"/>
+							<Item name="us-gaap:CommonStockValue"/>
+						</Item>
+						<Item name="us-gaap:LiabilitiesAndStockholdersEquity"/>
+					</Item>
+				</Item>
+			</Item>
+		</Item>
+	</PresentationLinkrole>
+	<PresentationLinkrole id="Link4C" name="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassifiedParenthetical">
+		<Item name="us-gaap:StatementOfFinancialPositionAbstract">
+			<Item name="us-gaap:StatementTable">
+				<Item name="dei:LegalEntityAxis">
+					<Item name="dei:EntityDomain"/>
+				</Item>
+				<Item name="us-gaap:StatementClassOfStockAxis">
+					<Item name="us-gaap:ClassOfStockDomain">
+						<Item name="us-gaap:CommonStockMember"/>
+						<Item name="nanonull:OrdinarySharesMember" ref="Link15"/>
+					</Item>
+				</Item>
+				<Item name="us-gaap:StatementLineItems">
+					<Item name="us-gaap:CommonStockParOrStatedValuePerShare"/>
+					<Item name="us-gaap:CommonStockSharesAuthorized"/>
+					<Item name="us-gaap:CommonStockSharesIssued"/>
+					<Item name="us-gaap:TreasuryStockShares"/>
+				</Item>
+			</Item>
+		</Item>
+	</PresentationLinkrole>
+	<PresentationLinkrole id="Link4D" name="http://www.nanonull.com/taxonomy/role/StatementOfIncomeAlternative">
+		<Item name="us-gaap:IncomeStatementAbstract">
+			<Item name="us-gaap:StatementTable">
+				<Item name="dei:LegalEntityAxis">
+					<Item name="dei:EntityDomain"/>
+				</Item>
+				<Item name="us-gaap:StatementLineItems">
+					<Item name="us-gaap:RevenuesAbstract">
+						<Item name="us-gaap:SalesRevenueNetAbstract">
+							<Item name="us-gaap:PassengerRevenue"/>
+							<Item name="nanonull:OnboardAndOther" ref="Link14"/>
+						</Item>
+						<Item name="us-gaap:OtherSalesRevenueNet"/>
+						<Item name="us-gaap:SalesRevenueServicesGross"/>
+					</Item>
+					<Item name="us-gaap:CostsAndExpensesAbstract">
+						<Item name="us-gaap:OperatingExpensesAbstract">
+							<Item name="us-gaap:CostOfRevenueAbstract">
+								<Item name="nanonull:CruiseCommissionsTransportationAndOther" ref="Link2F"/>
+								<Item name="nanonull:CostOfOnboardAndOther" ref="Link2E"/>
+								<Item name="us-gaap:CostOfServicesDirectLabor"/>
+								<Item name="us-gaap:FuelCosts"/>
+								<Item name="us-gaap:FoodAndBeverageCostOfSales"/>
+								<Item name="us-gaap:OtherCostAndExpenseOperating"/>
+							</Item>
+							<Item name="us-gaap:OtherCostOfOperatingRevenue"/>
+							<Item name="us-gaap:CostOfRevenue"/>
+						</Item>
+						<Item name="us-gaap:SellingGeneralAndAdministrativeExpense"/>
+						<Item name="us-gaap:DepreciationAndAmortization"/>
+						<Item name="us-gaap:CostsAndExpenses"/>
+					</Item>
+					<Item name="us-gaap:OperatingIncomeLoss"/>
+					<Item name="us-gaap:NonoperatingIncomeExpenseAbstract">
+						<Item name="us-gaap:InvestmentIncomeInterest"/>
+						<Item name="us-gaap:InterestExpense"/>
+						<Item name="us-gaap:OtherNonoperatingIncomeExpense"/>
+						<Item name="us-gaap:NonoperatingIncomeExpense"/>
+					</Item>
+					<Item name="us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"/>
+					<Item name="us-gaap:IncomeTaxExpenseBenefit"/>
+					<Item name="us-gaap:NetIncomeLoss"/>
+					<Item name="us-gaap:EarningsPerShareAbstract">
+						<Item name="us-gaap:EarningsPerShareBasic"/>
+						<Item name="us-gaap:EarningsPerShareDiluted"/>
+					</Item>
+					<Item name="us-gaap:CommonStockDividendsPerShareDeclared"/>
+				</Item>
+			</Item>
+		</Item>
+	</PresentationLinkrole>
+	<CalculationLinkrole id="Link4E" name="http://www.nanonull.com/taxonomy/role/StatementOfCashFlowsIndirect">
+		<Item name="us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease">
+			<Item weight="1.0" name="us-gaap:NetCashProvidedByUsedInOperatingActivities">
+				<Item weight="1.0" name="us-gaap:NetIncomeLoss"/>
+				<Item weight="1.0" name="us-gaap:DepreciationAndAmortization"/>
+				<Item weight="1.0" name="us-gaap:ShareBasedCompensation"/>
+				<Item weight="1.0" name="us-gaap:AdjustmentsNoncashItemsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesOther"/>
+				<Item weight="-1.0" name="us-gaap:IncreaseDecreaseInReceivables"/>
+				<Item weight="-1.0" name="us-gaap:IncreaseDecreaseInInventories"/>
+				<Item weight="-1.0" name="us-gaap:IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets"/>
+				<Item weight="1.0" name="us-gaap:IncreaseDecreaseInAccountsPayable"/>
+				<Item weight="1.0" name="us-gaap:IncreaseDecreaseInOtherOperatingLiabilities"/>
+				<Item weight="1.0" name="us-gaap:IncreaseDecreaseInCustomerDeposits"/>
+			</Item>
+			<Item weight="1.0" name="us-gaap:NetCashProvidedByUsedInInvestingActivities">
+				<Item weight="-1.0" name="us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"/>
+				<Item weight="-1.0" name="us-gaap:PaymentsForProceedsFromOtherInvestingActivities"/>
+			</Item>
+			<Item weight="1.0" name="us-gaap:NetCashProvidedByUsedInFinancingActivities">
+				<Item weight="1.0" name="us-gaap:ProceedsFromRepaymentsOfShortTermDebt"/>
+				<Item weight="-1.0" name="us-gaap:RepaymentsOfLongTermLinesOfCredit"/>
+				<Item weight="1.0" name="us-gaap:ProceedsFromLongTermLinesOfCredit"/>
+				<Item weight="-1.0" name="us-gaap:RepaymentsOfOtherLongTermDebt"/>
+				<Item weight="1.0" name="us-gaap:ProceedsFromIssuanceOfOtherLongTermDebt"/>
+				<Item weight="-1.0" name="us-gaap:PaymentsOfDividends"/>
+				<Item weight="-1.0" name="us-gaap:PaymentsForRepurchaseOfCommonStock"/>
+				<Item weight="1.0" name="us-gaap:ProceedsFromSaleOfTreasuryStock"/>
+				<Item weight="1.0" name="us-gaap:ProceedsFromPaymentsForOtherFinancingActivities"/>
+			</Item>
+			<Item weight="1.0" name="us-gaap:EffectOfExchangeRateOnCashAndCashEquivalents"/>
+		</Item>
+	</CalculationLinkrole>
+	<CalculationLinkrole id="Link4F" name="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassified">
+		<Item name="us-gaap:Assets">
+			<Item weight="1.0" name="us-gaap:AssetsCurrent">
+				<Item weight="1.0" name="us-gaap:CashAndCashEquivalentsAtCarryingValue"/>
+				<Item weight="1.0" name="us-gaap:ReceivablesNetCurrent"/>
+				<Item weight="1.0" name="us-gaap:InventoryNet"/>
+				<Item weight="1.0" name="us-gaap:OtherAssetsCurrent"/>
+			</Item>
+			<Item weight="1.0" name="us-gaap:PropertyPlantAndEquipmentNet"/>
+			<Item weight="1.0" name="us-gaap:Goodwill"/>
+			<Item weight="1.0" name="us-gaap:IntangibleAssetsNetExcludingGoodwill"/>
+			<Item weight="1.0" name="us-gaap:OtherAssetsNoncurrent"/>
+		</Item>
+		<Item name="us-gaap:LiabilitiesAndStockholdersEquity">
+			<Item weight="1.0" name="us-gaap:LiabilitiesCurrent">
+				<Item weight="1.0" name="us-gaap:ShortTermBorrowings"/>
+				<Item weight="1.0" name="us-gaap:LongTermDebtCurrent"/>
+				<Item weight="1.0" name="us-gaap:AccountsPayableCurrent"/>
+				<Item weight="1.0" name="us-gaap:AccruedLiabilitiesCurrent"/>
+				<Item weight="1.0" name="us-gaap:CustomerDepositsCurrent"/>
+			</Item>
+			<Item weight="1.0" name="us-gaap:LongTermDebtNoncurrent"/>
+			<Item weight="1.0" name="us-gaap:OtherLiabilitiesNoncurrent"/>
+			<Item weight="1.0" name="us-gaap:StockholdersEquity">
+				<Item weight="1.0" name="us-gaap:AdditionalPaidInCapital"/>
+				<Item weight="1.0" name="us-gaap:RetainedEarningsAccumulatedDeficit"/>
+				<Item weight="1.0" name="us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax"/>
+				<Item weight="-1.0" name="us-gaap:TreasuryStockValue"/>
+				<Item weight="1.0" name="us-gaap:CommonStockValue"/>
+			</Item>
+		</Item>
+	</CalculationLinkrole>
+	<CalculationLinkrole id="Link50" name="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassifiedParenthetical"/>
+	<CalculationLinkrole id="Link51" name="http://www.nanonull.com/taxonomy/role/StatementOfIncomeAlternative">
+		<Item name="us-gaap:NetIncomeLoss">
+			<Item weight="1.0" name="us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments">
+				<Item weight="1.0" name="us-gaap:OperatingIncomeLoss">
+					<Item weight="1.0" name="us-gaap:SalesRevenueServicesGross">
+						<Item weight="1.0" name="us-gaap:PassengerRevenue"/>
+						<Item weight="1.0" name="nanonull:OnboardAndOther" ref="Link14"/>
+						<Item weight="1.0" name="us-gaap:OtherSalesRevenueNet"/>
+					</Item>
+					<Item weight="-1.0" name="us-gaap:CostsAndExpenses">
+						<Item weight="1.0" name="us-gaap:CostOfRevenue">
+							<Item weight="1.0" name="nanonull:CruiseCommissionsTransportationAndOther" ref="Link2F"/>
+							<Item weight="1.0" name="nanonull:CostOfOnboardAndOther" ref="Link2E"/>
+							<Item weight="1.0" name="us-gaap:CostOfServicesDirectLabor"/>
+							<Item weight="1.0" name="us-gaap:FuelCosts"/>
+							<Item weight="1.0" name="us-gaap:FoodAndBeverageCostOfSales"/>
+							<Item weight="1.0" name="us-gaap:OtherCostAndExpenseOperating"/>
+							<Item weight="1.0" name="us-gaap:OtherCostOfOperatingRevenue"/>
+						</Item>
+						<Item weight="1.0" name="us-gaap:SellingGeneralAndAdministrativeExpense"/>
+						<Item weight="1.0" name="us-gaap:DepreciationAndAmortization"/>
+					</Item>
+				</Item>
+				<Item weight="1.0" name="us-gaap:NonoperatingIncomeExpense">
+					<Item weight="1.0" name="us-gaap:InvestmentIncomeInterest"/>
+					<Item weight="-1.0" name="us-gaap:InterestExpense"/>
+					<Item weight="1.0" name="us-gaap:OtherNonoperatingIncomeExpense"/>
+				</Item>
+			</Item>
+			<Item weight="-1.0" name="us-gaap:IncomeTaxExpenseBenefit"/>
+		</Item>
+	</CalculationLinkrole>
+	<GenericLinkrole id="Link52" name="http://www.xbrl.org/2008/role/link">
+		<Table id="Link53" description="Table">
+			<Diagram src="nanonull_diagrams/nanonull_p67.png" width="599" height="69"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Labels>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Label language="en-US" role="http://xbrl.org/arcrole/2008/element-label" text="106 - Statement - Nanonull &amp; Consolidated Statements of Cash Flows"/>
+				</Role>
+			</Labels>
+			<Breakdowns>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>x</Axis>
+					<To ref="Link54">Breakdown</To>
+				</Breakdown>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>y</Axis>
+					<To ref="Link55">Breakdown</To>
+				</Breakdown>
+			</Breakdowns>
+		</Table>
+		<Table id="Link56" description="Table">
+			<Diagram src="nanonull_diagrams/nanonull_p68.png" width="580" height="69"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Labels>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Label language="en-US" role="http://xbrl.org/arcrole/2008/element-label" text="103 - Statement - Nanonull &amp; Consolidated Statements of Income"/>
+				</Role>
+			</Labels>
+			<Breakdowns>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>x</Axis>
+					<To ref="Link57">Breakdown</To>
+				</Breakdown>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>y</Axis>
+					<To ref="Link58">Breakdown</To>
+				</Breakdown>
+			</Breakdowns>
+		</Table>
+		<Table id="Link59" description="Table">
+			<Diagram src="nanonull_diagrams/nanonull_p69.png" width="551" height="69"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Labels>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Label language="en-US" role="http://xbrl.org/arcrole/2008/element-label" text="091 - Disclosure - Segment Revenue and Operating Income"/>
+				</Role>
+			</Labels>
+			<Breakdowns>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>x</Axis>
+					<To ref="Link54">Breakdown</To>
+				</Breakdown>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>y</Axis>
+					<To ref="Link5A">Breakdown</To>
+				</Breakdown>
+			</Breakdowns>
+		</Table>
+		<Table id="Link5B" description="Table">
+			<Diagram src="nanonull_diagrams/nanonull_p70.png" width="547" height="69"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Labels>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Label language="en-US" role="http://xbrl.org/arcrole/2008/element-label" text="104 - Statement - Nanonull &amp; Consolidated Balance Sheets"/>
+				</Role>
+			</Labels>
+			<Breakdowns>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>x</Axis>
+					<To ref="Link5C">Breakdown</To>
+				</Breakdown>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>y</Axis>
+					<To ref="Link5D">Breakdown</To>
+				</Breakdown>
+			</Breakdowns>
+		</Table>
+		<Table id="Link5E" description="Table">
+			<Diagram src="nanonull_diagrams/nanonull_p71.png" width="621" height="69"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Labels>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Label language="en-US" role="http://xbrl.org/arcrole/2008/element-label" text="105 - Statement - Nanonull &amp; Consolidated Balance Sheets (Parenthetical)"/>
+				</Role>
+			</Labels>
+			<Breakdowns>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>x</Axis>
+					<To ref="Link5C">Breakdown</To>
+				</Breakdown>
+				<Breakdown>
+					<From>Table</From>
+					<Axis>y</Axis>
+					<To ref="Link5F">Breakdown</To>
+				</Breakdown>
+			</Breakdowns>
+		</Table>
+		<Breakdown id="Link57" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p72.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link56">Table</From>
+					<Axis>x</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link60">Rule Node</To>
+				</ChildNode>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link61">Rule Node</To>
+				</ChildNode>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link62">Rule Node</To>
+				</ChildNode>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link63">Rule Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<Breakdown id="Link55" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p73.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link53">Table</From>
+					<Axis>y</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link64">Concept Relationship Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<Breakdown id="Link58" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p74.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link56">Table</From>
+					<Axis>y</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link65">Concept Relationship Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<Breakdown id="Link54" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p75.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link53">Table</From>
+					<Axis>x</Axis>
+					<To>Breakdown</To>
+				</Table>
+				<Table>
+					<From ref="Link59">Table</From>
+					<Axis>x</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link62">Rule Node</To>
+				</ChildNode>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link63">Rule Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<Breakdown id="Link5C" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p76.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link5B">Table</From>
+					<Axis>x</Axis>
+					<To>Breakdown</To>
+				</Table>
+				<Table>
+					<From ref="Link5E">Table</From>
+					<Axis>x</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link66">Rule Node</To>
+				</ChildNode>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link67">Rule Node</To>
+				</ChildNode>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link68">Rule Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<Breakdown id="Link5D" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p77.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link5B">Table</From>
+					<Axis>y</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link69">Concept Relationship Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<Breakdown id="Link5F" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p78.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link5E">Table</From>
+					<Axis>y</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link6A">Concept Relationship Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<Breakdown id="Link5A" description="Breakdown">
+			<Diagram src="nanonull_diagrams/nanonull_p79.png" width="204" height="34"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<Tables>
+				<Table>
+					<From ref="Link59">Table</From>
+					<Axis>y</Axis>
+					<To>Breakdown</To>
+				</Table>
+			</Tables>
+			<ChildNodes>
+				<ChildNode>
+					<From>Breakdown</From>
+					<To ref="Link6B">Rule Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</Breakdown>
+		<RuleNode id="Link63" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p80.png" width="255" height="196"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<PeriodAspectRule kind="duration" start="xs:date(&apos;2008-12-01&apos;)" end="xs:date(&apos;2009-08-31&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodStart">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2008-11-30&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodEnd">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2009-08-31&apos;)"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link57">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+				<Breakdown>
+					<From ref="Link54">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</RuleNode>
+		<RuleNode id="Link60" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p81.png" width="255" height="196"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<PeriodAspectRule kind="duration" start="xs:date(&apos;2010-06-01&apos;)" end="xs:date(&apos;2010-08-31&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodStart">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2010-05-31&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodEnd">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2010-08-31&apos;)"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link57">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</RuleNode>
+		<RuleNode id="Link61" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p82.png" width="255" height="196"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<PeriodAspectRule kind="duration" start="xs:date(&apos;2009-06-01&apos;)" end="xs:date(&apos;2009-08-31&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodStart">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2009-05-31&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodEnd">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2009-08-31&apos;)"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link57">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</RuleNode>
+		<RuleNode id="Link62" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p83.png" width="255" height="196"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<PeriodAspectRule kind="duration" start="xs:date(&apos;2009-12-01&apos;)" end="xs:date(&apos;2010-08-31&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodStart">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2009-11-30&apos;)"/>
+			</RuleSet>
+			<RuleSet tag="table.periodEnd">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2010-08-31&apos;)"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link57">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+				<Breakdown>
+					<From ref="Link54">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</RuleNode>
+		<RuleNode id="Link66" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p84.png" width="255" height="88"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2010-08-31&apos;)"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link5C">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</RuleNode>
+		<RuleNode id="Link67" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p85.png" width="255" height="88"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2009-11-30&apos;)"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link5C">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</RuleNode>
+		<RuleNode id="Link68" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p86.png" width="255" height="88"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<PeriodAspectRule kind="instant" value="xs:date(&apos;2009-08-31&apos;)"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link5C">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</RuleNode>
+		<RuleNode id="Link6B" description="Rule Node">
+			<Diagram src="nanonull_diagrams/nanonull_p87.png" width="379" height="88"/>
+			<Abstract>NO</Abstract>
+			<Merge>NO</Merge>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<RuleSet tag="&lt;untagged&gt;">
+				<ConceptAspectRule kind="qname" value="us-gaap:SegmentReportingInformationRevenue"/>
+			</RuleSet>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link5A">Breakdown</From>
+					<To>Rule Node</To>
+				</Breakdown>
+			</Breakdowns>
+			<ChildNodes>
+				<ChildNode>
+					<From>Rule Node</From>
+					<To ref="Link6C">Dimension Relationship Node</To>
+				</ChildNode>
+			</ChildNodes>
+		</RuleNode>
+		<ConceptRelationshipNode id="Link64" description="Concept Relationship Node">
+			<Diagram src="nanonull_diagrams/nanonull_p88.png" width="478" height="190"/>
+			<RelArcrole kind="URI" value="http://www.xbrl.org/2003/arcrole/parent-child"/>
+			<RelLinkrole kind="URI" value="http://www.nanonull.com/taxonomy/role/StatementOfCashFlowsIndirect"/>
+			<RelSource kind="qname" value="us-gaap:StatementLineItems"/>
+			<RelAxis kind="value" value="descendant"/>
+			<RelGenerations kind="value" value="0"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link55">Breakdown</From>
+					<To>Concept Relationship Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</ConceptRelationshipNode>
+		<ConceptRelationshipNode id="Link65" description="Concept Relationship Node">
+			<Diagram src="nanonull_diagrams/nanonull_p89.png" width="478" height="190"/>
+			<RelArcrole kind="URI" value="http://www.xbrl.org/2003/arcrole/parent-child"/>
+			<RelLinkrole kind="URI" value="http://www.nanonull.com/taxonomy/role/StatementOfIncomeAlternative"/>
+			<RelSource kind="qname" value="us-gaap:StatementLineItems"/>
+			<RelAxis kind="value" value="descendant"/>
+			<RelGenerations kind="value" value="0"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link58">Breakdown</From>
+					<To>Concept Relationship Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</ConceptRelationshipNode>
+		<ConceptRelationshipNode id="Link69" description="Concept Relationship Node">
+			<Diagram src="nanonull_diagrams/nanonull_p90.png" width="513" height="190"/>
+			<RelArcrole kind="URI" value="http://www.xbrl.org/2003/arcrole/parent-child"/>
+			<RelLinkrole kind="URI" value="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassified"/>
+			<RelSource kind="qname" value="us-gaap:StatementLineItems"/>
+			<RelAxis kind="value" value="descendant"/>
+			<RelGenerations kind="value" value="0"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link5D">Breakdown</From>
+					<To>Concept Relationship Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</ConceptRelationshipNode>
+		<ConceptRelationshipNode id="Link6A" description="Concept Relationship Node">
+			<Diagram src="nanonull_diagrams/nanonull_p91.png" width="576" height="190"/>
+			<RelArcrole kind="URI" value="http://www.xbrl.org/2003/arcrole/parent-child"/>
+			<RelLinkrole kind="URI" value="http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassifiedParenthetical"/>
+			<RelSource kind="qname" value="us-gaap:StatementLineItems"/>
+			<RelAxis kind="value" value="descendant"/>
+			<RelGenerations kind="value" value="0"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<Breakdowns>
+				<Breakdown>
+					<From ref="Link5F">Breakdown</From>
+					<To>Concept Relationship Node</To>
+				</Breakdown>
+			</Breakdowns>
+		</ConceptRelationshipNode>
+		<DimensionRelationshipNode id="Link6C" description="Dimension Relationship Node">
+			<Diagram src="nanonull_diagrams/nanonull_p92.png" width="515" height="146"/>
+			<RelDimension>us-gaap:StatementOperatingActivitiesSegmentAxis</RelDimension>
+			<RelLinkrole kind="URI" value="http://www.nanonull.com/taxonomy/role/SegmentRevenueAndOperatingIncome"/>
+			<RelSource kind="qname" value="us-gaap:SegmentOperatingActivitiesDomain"/>
+			<RelAxis kind="value" value="descendant"/>
+			<RelGenerations kind="value" value="0"/>
+			<ParentChildOrder> </ParentChildOrder>
+			<TagSelector> </TagSelector>
+			<ParentNodes>
+				<ParentNode>
+					<From ref="Link6B">Rule Node</From>
+					<To>Dimension Relationship Node</To>
+				</ParentNode>
+			</ParentNodes>
+		</DimensionRelationshipNode>
+		<ValueAssertion id="Link6D" description="Value Assertion" info="($end - $start) eq $change">
+			<Diagram src="nanonull_diagrams/nanonull_p93.png" width="1394" height="107"/>
+			<AspectModel>non-dimensional</AspectModel>
+			<ImplicitFiltering>YES</ImplicitFiltering>
+			<Test>($end - $start) eq $change</Test>
+			<UnsatisfiedMessages>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Message language="en-US" role="http://xbrl.org/arcrole/2010/assertion-unsatisfied-message" text="{xfi:concept-label(resolve-QName(name($change),$change),(),(),&apos;en-US&apos;)} for period &quot;{xfi:period-start(xfi:period($change))}&quot; - &quot;{xfi:period-end(xfi:period($change))}&quot; should be {$end - $start} but it was reported as {$change}!"/>
+				</Role>
+			</UnsatisfiedMessages>
+			<Labels>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Label language="en-US" role="http://xbrl.org/arcrole/2008/element-label" text="Verification that Net increase in cash and cash equivalents was reported correctly"/>
+				</Role>
+			</Labels>
+			<Variables>
+				<Variable>
+					<From>Value Assertion</From>
+					<Name>change</Name>
+					<To ref="Link6E">Fact Variable</To>
+				</Variable>
+				<Variable>
+					<From>Value Assertion</From>
+					<Name>start</Name>
+					<To ref="Link6F">Fact Variable</To>
+				</Variable>
+				<Variable>
+					<From>Value Assertion</From>
+					<Name>end</Name>
+					<To ref="Link70">Fact Variable</To>
+				</Variable>
+			</Variables>
+		</ValueAssertion>
+		<Formula id="Link71" description="Formula" info="sum($rev)">
+			<Diagram src="nanonull_diagrams/nanonull_p94.png" width="769" height="125"/>
+			<AspectModel>dimensional</AspectModel>
+			<ImplicitFiltering>YES</ImplicitFiltering>
+			<Value>sum($rev)</Value>
+			<Source>formula:uncovered</Source>
+			<AccurracyRule kind="decimals" value="-6"/>
+			<ConceptAspectRule source=" " kind="qname" value="us-gaap:SegmentReportingInformationRevenue"/>
+			<Labels>
+				<Role name="http://www.xbrl.org/2008/role/link">
+					<Label language="en-US" role="http://xbrl.org/arcrole/2008/element-label" text="Compute the total of Segment Reporting Information, Revenue across all Operating Activities Segments"/>
+				</Role>
+			</Labels>
+			<Variables>
+				<Variable>
+					<From>Formula</From>
+					<Name>rev</Name>
+					<To ref="Link72">Fact Variable</To>
+				</Variable>
+			</Variables>
+		</Formula>
+		<FactVariable id="Link72" description="Fact Variable">
+			<Diagram src="nanonull_diagrams/nanonull_p95.png" width="151" height="34"/>
+			<BindAsSequence>YES</BindAsSequence>
+			<Nils>NO</Nils>
+			<Matches>NO</Matches>
+			<FallbackValue> </FallbackValue>
+			<Formulas>
+				<Formula>
+					<From ref="Link71">Formula</From>
+					<Name>rev</Name>
+					<To>Fact Variable</To>
+				</Formula>
+			</Formulas>
+			<Filters>
+				<Filter>
+					<From>Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To ref="Link73">Concept Name Filter</To>
+				</Filter>
+				<Filter>
+					<From>Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To ref="Link74">Aspect Cover Filter</To>
+				</Filter>
+			</Filters>
+		</FactVariable>
+		<FactVariable id="Link6E" description="Fact Variable">
+			<Diagram src="nanonull_diagrams/nanonull_p96.png" width="151" height="34"/>
+			<BindAsSequence>NO</BindAsSequence>
+			<Nils>NO</Nils>
+			<Matches>NO</Matches>
+			<FallbackValue> </FallbackValue>
+			<Assertions>
+				<Assertion>
+					<From ref="Link6D">Value Assertion</From>
+					<Name>change</Name>
+					<To>Fact Variable</To>
+				</Assertion>
+			</Assertions>
+			<Filters>
+				<Filter>
+					<From>Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To ref="Link75">Concept Name Filter</To>
+				</Filter>
+			</Filters>
+		</FactVariable>
+		<FactVariable id="Link70" description="Fact Variable">
+			<Diagram src="nanonull_diagrams/nanonull_p97.png" width="151" height="34"/>
+			<BindAsSequence>NO</BindAsSequence>
+			<Nils>NO</Nils>
+			<Matches>NO</Matches>
+			<FallbackValue> </FallbackValue>
+			<Assertions>
+				<Assertion>
+					<From ref="Link6D">Value Assertion</From>
+					<Name>end</Name>
+					<To>Fact Variable</To>
+				</Assertion>
+			</Assertions>
+			<Filters>
+				<Filter>
+					<From>Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To ref="Link76">Concept Name Filter</To>
+				</Filter>
+				<Filter>
+					<From>Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To ref="Link77">Instant Duration Filter</To>
+				</Filter>
+			</Filters>
+		</FactVariable>
+		<FactVariable id="Link6F" description="Fact Variable">
+			<Diagram src="nanonull_diagrams/nanonull_p98.png" width="151" height="34"/>
+			<BindAsSequence>NO</BindAsSequence>
+			<Nils>NO</Nils>
+			<Matches>NO</Matches>
+			<FallbackValue> </FallbackValue>
+			<Assertions>
+				<Assertion>
+					<From ref="Link6D">Value Assertion</From>
+					<Name>start</Name>
+					<To>Fact Variable</To>
+				</Assertion>
+			</Assertions>
+			<Filters>
+				<Filter>
+					<From>Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To ref="Link76">Concept Name Filter</To>
+				</Filter>
+				<Filter>
+					<From>Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To ref="Link78">Instant Duration Filter</To>
+				</Filter>
+			</Filters>
+		</FactVariable>
+		<AspectCoverFilter id="Link74" description="Aspect Cover Filter">
+			<Diagram src="nanonull_diagrams/nanonull_p99.png" width="375" height="38"/>
+			<CoverDimension kind="qname" value="us-gaap:StatementOperatingActivitiesSegmentAxis"/>
+			<Variables>
+				<Variable>
+					<From ref="Link72">Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To>Aspect Cover Filter</To>
+				</Variable>
+			</Variables>
+		</AspectCoverFilter>
+		<ConceptNameFilter id="Link73" description="Concept Name Filter">
+			<Diagram src="nanonull_diagrams/nanonull_p100.png" width="336" height="38"/>
+			<Concept kind="qname" value="us-gaap:SegmentReportingInformationRevenue"/>
+			<Variables>
+				<Variable>
+					<From ref="Link72">Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To>Concept Name Filter</To>
+				</Variable>
+			</Variables>
+		</ConceptNameFilter>
+		<ConceptNameFilter id="Link75" description="Concept Name Filter">
+			<Diagram src="nanonull_diagrams/nanonull_p101.png" width="387" height="38"/>
+			<Concept kind="qname" value="us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease"/>
+			<Variables>
+				<Variable>
+					<From ref="Link6E">Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To>Concept Name Filter</To>
+				</Variable>
+			</Variables>
+		</ConceptNameFilter>
+		<ConceptNameFilter id="Link76" description="Concept Name Filter">
+			<Diagram src="nanonull_diagrams/nanonull_p102.png" width="348" height="38"/>
+			<Concept kind="qname" value="us-gaap:CashAndCashEquivalentsAtCarryingValue"/>
+			<Variables>
+				<Variable>
+					<From ref="Link70">Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To>Concept Name Filter</To>
+				</Variable>
+				<Variable>
+					<From ref="Link6F">Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To>Concept Name Filter</To>
+				</Variable>
+			</Variables>
+		</ConceptNameFilter>
+		<InstantDurationFilter id="Link78" description="Instant Duration Filter">
+			<Diagram src="nanonull_diagrams/nanonull_p103.png" width="170" height="50"/>
+			<Variable>change</Variable>
+			<Boundary>start</Boundary>
+			<Variables>
+				<Variable>
+					<From ref="Link6F">Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To>Instant Duration Filter</To>
+				</Variable>
+			</Variables>
+		</InstantDurationFilter>
+		<InstantDurationFilter id="Link77" description="Instant Duration Filter">
+			<Diagram src="nanonull_diagrams/nanonull_p104.png" width="170" height="50"/>
+			<Variable>change</Variable>
+			<Boundary>end</Boundary>
+			<Variables>
+				<Variable>
+					<From ref="Link70">Fact Variable</From>
+					<Complement>NO</Complement>
+					<Cover>YES</Cover>
+					<To>Instant Duration Filter</To>
+				</Variable>
+			</Variables>
+		</InstantDurationFilter>
+	</GenericLinkrole>
+</XBRLDocumentation>

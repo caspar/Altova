@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 beta 2 U (http://www.xmlspy.com) by Robert Gillis (Altova, Inc.) -->
+<!DOCTYPE main SYSTEM "examplesite.dtd">
+<?altova_sps examplesite.sps?>
+<main xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="site.xsd">
+	<dictionaries>
+   &inc_blocks;
+   &inc_navigation;
+</dictionaries>
+	<idref>nav_file</idref>
+	<pagetitle>Navigation File</pagetitle>
+	<content>
+		<pagefragment>
+			<header>Navigation File</header>
+			<para>The Navigation file defines the sites hierarchy. The top level of the navigation is named top. It is comprised of the top level menus <bold>intro</bold> and <bold>navigation</bold>. The Menu <bold>intro</bold> contains the menus welcome page and files.</para>
+			<para>These menus correspond to the horizontal menu bar to the top and vertical menu bar to the left.</para>
+			<img src="output/images/nav_file.gif"/>
+		</pagefragment>
+	</content>
+</main>

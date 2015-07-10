@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ipo:purchaseOrder orderDate="1999-10-20" 
+xmlns:ipo="http://www.example.com/IPO" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.com/IPO ipo.xsd">
+	<shipTo xsi:type="ipo:USAddress">
+		<name>Alice Smith</name>
+		<street>123 Maple Street</street>
+		<city>Mill Valley</city>
+		<state>AK</state>
+		<zip>90952</zip>
+	</shipTo>
+	<billTo  xsi:type="ipo:USAddress">
+		<name>Robert Smith</name>
+		<street>8 Oak Avenue</street>
+		<city>Old Town</city>
+		<state>PA</state>
+		<zip>95819</zip>
+	</billTo>
+	<ipo:customerComment>Hurry, my lawn is going wild!</ipo:customerComment>
+	<items>
+		<item partNum="872-AA">
+			<productName>Lawnmower</productName>
+			<quantity>1</quantity>
+			<USPrice>148.95</USPrice>
+			<ipo:comment>Confirm this is electric</ipo:comment>
+		</item>
+		<item partNum="926-AA">
+			<productName>Baby Monitor</productName>
+			<quantity>1</quantity>
+			<USPrice>39.98</USPrice>
+			<shipDate>1999-05-21</shipDate>
+		</item>
+	</items>
+</ipo:purchaseOrder>

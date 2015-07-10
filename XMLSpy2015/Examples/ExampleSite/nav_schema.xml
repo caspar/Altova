@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 beta 2 U (http://www.xmlspy.com) by Robert Gillis (Altova, Inc.) -->
+<!DOCTYPE main SYSTEM "examplesite.dtd">
+<?altova_sps examplesite.sps?>
+<main xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="site.xsd">
+	<dictionaries>
+   &inc_blocks;
+   &inc_navigation;
+</dictionaries>
+	<idref>nav_schema</idref>
+	<pagetitle>Navigation Schema</pagetitle>
+	<content>
+		<pagefragment>
+			<header>Site Navigation Schema</header>
+			<para>
+		         The following diagram displays the schema used to define site navigation. This navigation.xml file adheres to this schema. 
+		       </para>
+			<img src="output/images/nav_schema.gif"/>
+			<para>
+                     Each file in the instance file in the site links in the navigation.xml, so that when it is changed the changes will propagate throughout the site.
+                    </para>
+			<para>
+                     The Navigation file can also be transformed to create a sitemap. 
+                    </para>
+		</pagefragment>
+	</content>
+</main>

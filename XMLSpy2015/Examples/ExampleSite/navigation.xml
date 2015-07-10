@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 beta 4 U (http://www.xmlspy.com) by Alexander Falk (Altova, Inc.) -->
+<?altova_sps navigation.sps?>
+<navigation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<base_url/>
+	<menu>
+		<id>top</id>
+		<title>top</title>
+		<menu>
+			<id>intro</id>
+			<title>Introduction</title>
+			<menu>
+				<id>welcomepage</id>
+				<title>Site Overview</title>
+				<url>introduction.html</url>
+			</menu>
+			<menu>
+				<id>Files</id>
+				<title>Site Files</title>
+				<url>files.html</url>
+			</menu>
+		</menu>
+		<menu>
+			<id>navigation</id>
+			<title>Navigation</title>
+			<menu>
+				<id>nav_schema</id>
+				<title>Navigation Schema</title>
+				<url>nav_schema.html</url>
+			</menu>
+			<menu>
+				<id>nav_file</id>
+				<title>Navigation File</title>
+				<url>nav_file.html</url>
+			</menu>
+		</menu>
+		<menu>
+			<id>blocks</id>
+			<title>Blocks</title>
+			<menu>
+				<id>block_schema</id>
+				<title>Block Schema</title>
+				<url>block_schema.html</url>
+			</menu>
+			<menu>
+				<id>blockfile</id>
+				<title>Block File</title>
+				<url>block_file.html</url>
+			</menu>
+		</menu>
+	</menu>
+</navigation>

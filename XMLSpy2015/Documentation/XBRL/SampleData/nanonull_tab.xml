@@ -1,0 +1,228 @@
+<?xml version="1.0" standalone="no"?>
+<link:linkbase xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://xbrl.org/2008/generic http://www.xbrl.org/2008/generic-link.xsd http://xbrl.org/2014/table http://www.xbrl.org/2014/table.xsd http://xbrl.org/2008/label http://www.xbrl.org/2008/generic-label.xsd http://xbrl.org/2008/filter/period http://www.xbrl.org/2008/period-filter.xsd http://xbrl.org/2008/filter/concept http://www.xbrl.org/2008/concept-filter.xsd http://xbrl.org/2008/variable http://www.xbrl.org/2008/variable.xsd http://xbrl.org/2008/formula http://www.xbrl.org/2008/formula.xsd" xmlns:us-gaap="http://fasb.org/us-gaap/2012-01-31" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:gen="http://xbrl.org/2008/generic" xmlns:formula="http://xbrl.org/2008/formula" xmlns:label="http://xbrl.org/2008/label" xmlns:variable="http://xbrl.org/2008/variable" xmlns:table="http://xbrl.org/2014/table">
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/variable-filter" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/variable.xsd#variable-filter"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2014/definition-node-subtree" xlink:type="simple" xlink:href="http://www.xbrl.org/2014/table.xsd#definition-node-subtree"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2014/aspect-node-filter" xlink:type="simple" xlink:href="http://www.xbrl.org/2014/table.xsd#aspect-node-filter"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/element-label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#element-label"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2014/table-breakdown" xlink:type="simple" xlink:href="http://www.xbrl.org/2014/table.xsd#table-breakdown"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:type="simple" xlink:href="http://www.xbrl.org/2014/table.xsd#breakdown-tree"/>
+
+	<link:roleRef roleURI="http://www.xbrl.org/2008/role/link" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-link.xsd#standard-link-role"/>
+	<link:roleRef roleURI="http://www.xbrl.org/2008/role/label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#standard-label"/>
+
+	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2008/role/link">
+
+		<!-- Tables -->
+		<table:table id="table_106_cashflow" xlink:type="resource" xlink:label="table"/>
+		<table:table id="table_103_income" xlink:type="resource" xlink:label="table1"/>
+		<table:table id="table_091_segment_revenue" xlink:type="resource" xlink:label="table2"/>
+		<table:table id="table_104_balance" xlink:type="resource" xlink:label="table11"/>
+		<table:table id="table_105_balance_parenthetical" xlink:type="resource" xlink:label="table12"/>
+
+		<!-- Breakdowns -->
+		<table:breakdown id="breakdown" xlink:type="resource" xlink:label="breakdown"/>
+		<table:breakdown id="breakdown1" xlink:type="resource" xlink:label="breakdown1"/>
+		<table:breakdown id="breakdown2" xlink:type="resource" xlink:label="breakdown2"/>
+		<table:breakdown id="breakdown3" xlink:type="resource" xlink:label="breakdown3"/>
+		<table:breakdown id="breakdown4" xlink:type="resource" xlink:label="breakdown4"/>
+		<table:breakdown id="breakdown5" xlink:type="resource" xlink:label="breakdown5"/>
+		<table:breakdown id="breakdown6" xlink:type="resource" xlink:label="breakdown6"/>
+		<table:breakdown id="breakdown7" xlink:type="resource" xlink:label="breakdown7"/>
+
+		<!-- Table breakdown arcs -->
+		<table:tableBreakdownArc axis="x" order="0.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table" xlink:to="breakdown3"/>
+		<table:tableBreakdownArc axis="y" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table" xlink:to="breakdown1"/>
+
+		<table:tableBreakdownArc axis="x" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table1" xlink:to="breakdown"/>
+		<table:tableBreakdownArc axis="y" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table1" xlink:to="breakdown2"/>
+
+		<table:tableBreakdownArc axis="x" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table11" xlink:to="breakdown4"/>
+		<table:tableBreakdownArc axis="y" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table11" xlink:to="breakdown5"/>
+
+		<table:tableBreakdownArc axis="x" order="1.0" use="optional" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table12" xlink:to="breakdown4"/>
+		<table:tableBreakdownArc axis="y" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table12" xlink:to="breakdown6"/>
+
+		<table:tableBreakdownArc axis="x" order="0.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table2" xlink:to="breakdown3"/>
+		<table:tableBreakdownArc axis="y" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/table-breakdown" xlink:from="table2" xlink:to="breakdown7"/>
+
+		<!-- Breakdown tree arcs -->
+		<table:breakdownTreeArc order="0.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown" xlink:to="ruleNode4"/>
+		<table:breakdownTreeArc order="0.5" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown" xlink:to="ruleNode3"/>
+		<table:breakdownTreeArc order="0.75" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown" xlink:to="ruleNode2"/>
+		<table:breakdownTreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown" xlink:to="ruleNode"/>
+
+		<table:breakdownTreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown1" xlink:to="conceptRelationshipNode"/>
+
+		<table:breakdownTreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown2" xlink:to="conceptRelationshipNode1"/>
+
+		<table:breakdownTreeArc order="0.0" use="optional" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown3" xlink:to="ruleNode2"/>
+		<table:breakdownTreeArc order="1.0" use="optional" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown3" xlink:to="ruleNode"/>
+
+		<table:breakdownTreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown4" xlink:to="ruleNode1"/>
+		<table:breakdownTreeArc order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown4" xlink:to="ruleNode6"/>
+		<table:breakdownTreeArc order="3.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown4" xlink:to="ruleNode7"/>
+
+		<table:breakdownTreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown5" xlink:to="conceptRelationshipNode2"/>
+
+		<table:breakdownTreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown6" xlink:to="conceptRelationshipNode3"/>
+
+		<table:breakdownTreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/breakdown-tree" xlink:from="breakdown7" xlink:to="ruleNode5"/>
+
+		<!-- Definition node subtree arcs -->
+		<table:definitionNodeSubtreeArc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/definition-node-subtree" xlink:from="ruleNode5" xlink:to="dimensionRelationshipNode"/>
+
+		<!-- Concept relationship nodes -->
+		<table:conceptRelationshipNode id="conceptRelationshipNode" xlink:type="resource" xlink:label="conceptRelationshipNode">
+			<table:relationshipSource>us-gaap:StatementLineItems</table:relationshipSource>
+			<table:linkrole>http://www.nanonull.com/taxonomy/role/StatementOfCashFlowsIndirect</table:linkrole>
+			<table:arcrole>http://www.xbrl.org/2003/arcrole/parent-child</table:arcrole>
+			<table:formulaAxis>descendant</table:formulaAxis>
+			<table:generations>0</table:generations>
+		</table:conceptRelationshipNode>
+
+		<table:conceptRelationshipNode id="conceptRelationshipNode1" xlink:type="resource" xlink:label="conceptRelationshipNode1">
+			<table:relationshipSource>us-gaap:StatementLineItems</table:relationshipSource>
+			<table:linkrole>http://www.nanonull.com/taxonomy/role/StatementOfIncomeAlternative</table:linkrole>
+			<table:arcrole>http://www.xbrl.org/2003/arcrole/parent-child</table:arcrole>
+			<table:formulaAxis>descendant</table:formulaAxis>
+			<table:generations>0</table:generations>
+		</table:conceptRelationshipNode>
+
+		<table:conceptRelationshipNode id="conceptRelationshipNode2" xlink:type="resource" xlink:label="conceptRelationshipNode2">
+			<table:relationshipSource>us-gaap:StatementLineItems</table:relationshipSource>
+			<table:linkrole>http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassified</table:linkrole>
+			<table:arcrole>http://www.xbrl.org/2003/arcrole/parent-child</table:arcrole>
+			<table:formulaAxis>descendant</table:formulaAxis>
+			<table:generations>0</table:generations>
+		</table:conceptRelationshipNode>
+
+		<table:conceptRelationshipNode id="conceptRelationshipNode3" xlink:type="resource" xlink:label="conceptRelationshipNode3">
+			<table:relationshipSource>us-gaap:StatementLineItems</table:relationshipSource>
+			<table:linkrole>http://www.nanonull.com/taxonomy/role/StatementOfFinancialPositionClassifiedParenthetical</table:linkrole>
+			<table:arcrole>http://www.xbrl.org/2003/arcrole/parent-child</table:arcrole>
+			<table:formulaAxis>descendant</table:formulaAxis>
+			<table:generations>0</table:generations>
+		</table:conceptRelationshipNode>
+
+		<!-- Dimension relationship nodes -->
+		<table:dimensionRelationshipNode id="dimensionRelationshipNode" xlink:type="resource" xlink:label="dimensionRelationshipNode">
+			<table:relationshipSource>us-gaap:SegmentOperatingActivitiesDomain</table:relationshipSource>
+			<table:linkrole>http://www.nanonull.com/taxonomy/role/SegmentRevenueAndOperatingIncome</table:linkrole>
+			<table:dimension>us-gaap:StatementOperatingActivitiesSegmentAxis</table:dimension>
+			<table:formulaAxis>descendant</table:formulaAxis>
+			<table:generations>0</table:generations>
+		</table:dimensionRelationshipNode>
+
+		<!-- Labels -->
+		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="table" xlink:to="label"/>
+		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="table1" xlink:to="label1"/>
+		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="table11" xlink:to="label2"/>
+		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="table12" xlink:to="label3"/>
+		<gen:arc order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="table2" xlink:to="label4"/>
+
+		<label:label id="label" xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="label" xml:lang="en-US">106 - Statement - Nanonull &amp; Consolidated Statements of Cash Flows</label:label>
+		<label:label id="label1" xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="label1" xml:lang="en-US">103 - Statement - Nanonull &amp; Consolidated Statements of Income</label:label>
+		<label:label id="label2" xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="label2" xml:lang="en-US">104 - Statement - Nanonull &amp; Consolidated Balance Sheets</label:label>
+		<label:label id="label3" xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="label3" xml:lang="en-US">105 - Statement - Nanonull &amp; Consolidated Balance Sheets (Parenthetical)</label:label>
+		<label:label id="label4" xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="label4" xml:lang="en-US">091 - Disclosure - Segment Revenue and Operating Income</label:label>
+
+		<!--
+		<table:aspectNodeFilterArc complement="false" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2014/aspect-node-filter" xlink:from="aspectNode" xlink:to="conceptPeriodType"/>
+
+		<table:aspectNode id="aspectNode" xlink:type="resource" xlink:label="aspectNode">
+			<table:periodAspect/>
+		</table:aspectNode>
+
+		<cf:conceptPeriodType id="conceptPeriodType" periodType="duration" xlink:type="resource" xlink:label="conceptPeriodType"/>
+		-->
+
+		<table:ruleNode id="ruleNode" xlink:type="resource" xlink:label="ruleNode">
+			<table:ruleSet tag="table.periodStart">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2008-11-30&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<table:ruleSet tag="table.periodEnd">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2009-08-31&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<formula:period>
+				<formula:duration start="xs:date(&apos;2008-12-01&apos;)" end="xs:date(&apos;2009-08-31&apos;)"/>
+			</formula:period>
+		</table:ruleNode>
+
+		<table:ruleNode id="ruleNode1" xlink:type="resource" xlink:label="ruleNode1">
+			<formula:period>
+				<formula:instant value="xs:date(&apos;2010-08-31&apos;)"/>
+			</formula:period>
+		</table:ruleNode>
+
+		<table:ruleNode id="ruleNode2" xlink:type="resource" xlink:label="ruleNode2">
+			<table:ruleSet tag="table.periodStart">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2009-11-30&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<table:ruleSet tag="table.periodEnd">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2010-08-31&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<formula:period>
+				<formula:duration start="xs:date(&apos;2009-12-01&apos;)" end="xs:date(&apos;2010-08-31&apos;)"/>
+			</formula:period>
+		</table:ruleNode>
+
+		<table:ruleNode id="ruleNode3" xlink:type="resource" xlink:label="ruleNode3">
+			<table:ruleSet tag="table.periodStart">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2009-05-31&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<table:ruleSet tag="table.periodEnd">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2009-08-31&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<formula:period>
+				<formula:duration start="xs:date(&apos;2009-06-01&apos;)" end="xs:date(&apos;2009-08-31&apos;)"/>
+			</formula:period>
+		</table:ruleNode>
+
+		<table:ruleNode id="ruleNode4" xlink:type="resource" xlink:label="ruleNode4">
+			<table:ruleSet tag="table.periodStart">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2010-05-31&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<table:ruleSet tag="table.periodEnd">
+				<formula:period>
+					<formula:instant value="xs:date(&apos;2010-08-31&apos;)"/>
+				</formula:period>
+			</table:ruleSet>
+			<formula:period>
+				<formula:duration start="xs:date(&apos;2010-06-01&apos;)" end="xs:date(&apos;2010-08-31&apos;)"/>
+			</formula:period>
+		</table:ruleNode>
+
+		<table:ruleNode id="ruleNode5" xlink:type="resource" xlink:label="ruleNode5">
+			<formula:concept>
+				<formula:qname>us-gaap:SegmentReportingInformationRevenue</formula:qname>
+			</formula:concept>
+		</table:ruleNode>
+
+		<table:ruleNode id="ruleNode6" xlink:type="resource" xlink:label="ruleNode6">
+			<formula:period>
+				<formula:instant value="xs:date(&apos;2009-11-30&apos;)"/>
+			</formula:period>
+		</table:ruleNode>
+
+		<table:ruleNode id="ruleNode7" xlink:type="resource" xlink:label="ruleNode7">
+			<formula:period>
+				<formula:instant value="xs:date(&apos;2009-08-31&apos;)"/>
+			</formula:period>
+		</table:ruleNode>
+
+	</gen:link>
+</link:linkbase>

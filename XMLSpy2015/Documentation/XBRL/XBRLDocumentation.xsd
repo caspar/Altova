@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2014 sp1 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns="http://www.altova.com/documentation" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.altova.com/documentation" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="../Documentation.xsd"/>
+	<xs:element name="XBRLDocumentation">
+		<xs:annotation>
+			<xs:documentation>Root element of the XBRL documentation</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Document"/>
+				<xs:element name="DocumentationSettings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Includes">
+								<xs:complexType>
+									<xs:attribute name="overview" type="xs:boolean" use="required"/>
+									<xs:attribute name="namespacePrefixes" type="xs:boolean" use="required"/>
+									<xs:attribute name="globalElements" type="xs:boolean" use="required"/>
+									<xs:attribute name="definitionLinkroles" type="xs:boolean" use="required"/>
+									<xs:attribute name="presentationLinkroles" type="xs:boolean" use="required"/>
+									<xs:attribute name="calculationLinkroles" type="xs:boolean" use="required"/>
+									<xs:attribute name="genericLinkroles" type="xs:boolean" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Details">
+								<xs:complexType>
+									<xs:attribute name="diagram" type="xs:boolean" use="required"/>
+									<xs:attribute name="properties" type="xs:boolean" use="required"/>
+									<xs:attribute name="messages" type="xs:boolean" use="required"/>
+									<xs:attribute name="labels" type="xs:boolean" use="required"/>
+									<xs:attribute name="references" type="xs:boolean" use="required"/>
+									<xs:attribute name="linkbaseReferences" type="xs:boolean" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="XBRLDocument">
+					<xs:complexType>
+						<xs:attribute name="xbrlLocation" type="xs:anyURI" use="required"/>
+						<xs:attribute name="href" type="xs:anyURI" use="required"/>
+						<xs:attribute name="targetNamespace" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Namespaces" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Namespace" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="prefix" type="xs:string" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Element" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:complexContent>
+							<xs:extension base="TNamedItem">
+								<xs:sequence>
+									<xs:element ref="Diagram" minOccurs="0"/>
+									<xs:element name="SubstitutionGroup" type="xs:string" minOccurs="0"/>
+									<xs:element name="Type" type="xs:string" minOccurs="0"/>
+									<xs:element name="Balance" type="xs:string" minOccurs="0"/>
+									<xs:element name="PeriodType" type="xs:string" minOccurs="0"/>
+									<xs:element name="Abstract" type="xs:string" minOccurs="0"/>
+									<xs:element name="Nillable" type="xs:string" minOccurs="0"/>
+									<xs:element name="TypedDomainRef" type="xs:string" minOccurs="0"/>
+									<xs:element ref="Labels" minOccurs="0"/>
+									<xs:element ref="References" minOccurs="0"/>
+									<xs:element name="Definitions" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Definition" minOccurs="0" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="From" type="TText"/>
+															<xs:element name="ArcRole" type="xs:string"/>
+															<xs:element name="To" type="TText"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Calculations" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Calculation" minOccurs="0" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="From" type="TText"/>
+															<xs:element name="Weight" type="xs:string"/>
+															<xs:element name="To" type="TText"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Presentations" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Presentation" minOccurs="0" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="From" type="TText"/>
+															<xs:element name="To" type="TText"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="EqualityDefinitions" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="EqualityDefinition" minOccurs="0" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="From" type="TText"/>
+															<xs:element name="To" type="TText"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DefinitionLinkrole" type="TLinkrole" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PresentationLinkrole" type="TLinkrole" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="CalculationLinkrole" type="TLinkrole" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="GenericLinkrole" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:complexContent>
+							<xs:extension base="TNamedItem">
+								<xs:choice minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="AssertionSet">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Assertions" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ValueAssertion">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResourceWithInfo">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="AspectModel" type="xs:string" minOccurs="0"/>
+														<xs:element name="ImplicitFiltering" type="xs:string" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="SatisfiedMessages" minOccurs="0"/>
+														<xs:element ref="UnsatisfiedMessages" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="AssertionSets" minOccurs="0"/>
+														<xs:element ref="Variables" minOccurs="0"/>
+														<xs:element ref="Filters" minOccurs="0"/>
+														<xs:element ref="Preconditions" minOccurs="0"/>
+														<xs:element ref="Parameters" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ExistenceAssertion">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResourceWithInfo">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="AspectModel" type="xs:string" minOccurs="0"/>
+														<xs:element name="ImplicitFiltering" type="xs:string" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="SatisfiedMessages" minOccurs="0"/>
+														<xs:element ref="UnsatisfiedMessages" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="AssertionSets" minOccurs="0"/>
+														<xs:element ref="Variables" minOccurs="0"/>
+														<xs:element ref="Filters" minOccurs="0"/>
+														<xs:element ref="Preconditions" minOccurs="0"/>
+														<xs:element ref="Parameters" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConsistencyAssertion">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResourceWithInfo">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Strict" type="xs:string" minOccurs="0"/>
+														<xs:element name="AbsoluteAcceptanceRadius" type="xs:string" minOccurs="0"/>
+														<xs:element name="ProportionalAcceptanceRadius" type="xs:string" minOccurs="0"/>
+														<xs:element ref="SatisfiedMessages" minOccurs="0"/>
+														<xs:element ref="UnsatisfiedMessages" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="AssertionSets" minOccurs="0"/>
+														<xs:element ref="Formulas" minOccurs="0"/>
+														<xs:element ref="Parameters" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Formula">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResourceWithInfo">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="AspectModel" type="xs:string" minOccurs="0"/>
+														<xs:element name="ImplicitFiltering" type="xs:string" minOccurs="0"/>
+														<xs:element name="Value" type="xs:string" minOccurs="0"/>
+														<xs:element name="Source" type="xs:string" minOccurs="0"/>
+														<xs:element name="AccurracyRule" type="TKindValue" minOccurs="0"/>
+														<xs:group ref="MAspectRules"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Assertions" minOccurs="0"/>
+														<xs:element ref="Variables" minOccurs="0"/>
+														<xs:element ref="Filters" minOccurs="0"/>
+														<xs:element ref="Preconditions" minOccurs="0"/>
+														<xs:element ref="Parameters" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="FactVariable">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="BindAsSequence" type="xs:string" minOccurs="0"/>
+														<xs:element name="Nils" type="xs:string" minOccurs="0"/>
+														<xs:element name="Matches" type="xs:string" minOccurs="0"/>
+														<xs:element name="FallbackValue" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Assertions" minOccurs="0"/>
+														<xs:element ref="Formulas" minOccurs="0"/>
+														<xs:element ref="Filters" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="GeneralVariable">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="BindAsSequence" type="xs:string" minOccurs="0"/>
+														<xs:element name="Select" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Assertions" minOccurs="0"/>
+														<xs:element ref="Formulas" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="AspectCoverFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:choice minOccurs="0" maxOccurs="unbounded">
+															<xs:element name="CoverAspect" type="xs:string"/>
+															<xs:element name="CoverDimension" type="TKindValue"/>
+															<xs:element name="CoverExcludeDimension" type="TKindValue"/>
+														</xs:choice>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="BooleanAndFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="BooleanOrFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptNameFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Concept" type="TKindValue" minOccurs="0" maxOccurs="unbounded"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptDataTypeFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Type" type="TKindValue" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptSubstitutionGroupFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="SubstitutionGroup" type="TKindValue" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptBalanceFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Balance" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptPeriodTypeFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="PeriodType" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptCustomAttributeFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Attribute" type="TKindValue" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptRelationFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Src" type="TKindValue" minOccurs="0"/>
+														<xs:element name="Linkrole" type="TKindValue" minOccurs="0"/>
+														<xs:element name="Linkname" type="TKindValue" minOccurs="0"/>
+														<xs:element name="Arcrole" type="TKindValue" minOccurs="0"/>
+														<xs:element name="Arcname" type="TKindValue" minOccurs="0"/>
+														<xs:element name="Axis" type="xs:string" minOccurs="0"/>
+														<xs:element name="Generations" type="xs:string" minOccurs="0"/>
+														<xs:element name="RelTest" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ExplicitDimensionFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Dim" type="TKindValue" minOccurs="0"/>
+														<xs:element name="Member" minOccurs="0">
+															<xs:complexType>
+																<xs:complexContent>
+																	<xs:extension base="TKindValue">
+																		<xs:attribute name="linkrole" type="xs:string"/>
+																		<xs:attribute name="arcrole" type="xs:string"/>
+																		<xs:attribute name="axis" type="xs:string"/>
+																	</xs:extension>
+																</xs:complexContent>
+															</xs:complexType>
+														</xs:element>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="TypedDimensionFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Dim" type="TKindValue" minOccurs="0"/>
+														<xs:element name="DimTest" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="EntityIdentifierFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="SpecificEntitySchemeFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Scheme" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="RegularExpressionEntitySchemeFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Pattern" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="SpecificEntityIdentifierFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Scheme" type="xs:string" minOccurs="0"/>
+														<xs:element name="Value" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="RegularExpressionEntityIdentifierFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Pattern" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="GeneralFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LocationMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="UnitMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="EntityIdentifierMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="PeriodMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="CompleteSegmentMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="CompleteScenarioMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="NonXDTSegmentMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="NonXDTScenarioMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="DimensionMatchingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element name="Dimension" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="PeriodFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="PeriodStartFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Date" type="xs:string" minOccurs="0"/>
+														<xs:element name="Time" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="PeriodEndFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Date" type="xs:string" minOccurs="0"/>
+														<xs:element name="Time" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="PeriodInstantFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Date" type="xs:string" minOccurs="0"/>
+														<xs:element name="Time" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ForeverFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="InstantDurationFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element name="Boundary" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="RelativeFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="SegmentFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ScenarioFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ParentFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Parent" type="TKindValue" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="AncestorFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Ancestor" type="TKindValue" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="SiblingFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LocationFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Variable" type="xs:string" minOccurs="0"/>
+														<xs:element name="Location" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="SingleMeasureUnitFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Measure" type="TKindValue" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="GeneralUnitFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="NilFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="PrecisionFilter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Minimum" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:group ref="MFilterRelations"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Precondition">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Assertions" minOccurs="0"/>
+														<xs:element ref="Formulas" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Parameter">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TNamedFormulaResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Required" type="xs:string" minOccurs="0"/>
+														<xs:element name="Select" type="xs:string" minOccurs="0"/>
+														<xs:element name="As" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Assertions" minOccurs="0"/>
+														<xs:element ref="Formulas" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="FunctionSignature">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TNamedFormulaResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Input" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:attribute name="type" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Output" minOccurs="0">
+															<xs:complexType>
+																<xs:attribute name="type" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element name="Implementations" minOccurs="0">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Implementation" type="TRelation" maxOccurs="unbounded"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="FunctionImplementation">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Input" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:attribute name="name" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Step" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:attribute name="name" type="xs:string"/>
+																<xs:attribute name="expression" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Output" minOccurs="0">
+															<xs:complexType>
+																<xs:attribute name="expression" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element name="Signatures" minOccurs="0">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Signature" type="TRelation" maxOccurs="unbounded"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="EqualityDefinition">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Test" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element name="Dimensions" minOccurs="0">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="Dimension" type="TRelation" maxOccurs="unbounded"/>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Table">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="ParentChildOrder" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Filters" minOccurs="0"/>
+														<xs:element ref="Parameters" minOccurs="0"/>
+														<xs:element ref="Breakdowns" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Breakdown">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="ParentChildOrder" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Tables" minOccurs="0"/>
+														<xs:element ref="ChildNodes" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="RuleNode">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Abstract" type="xs:string" minOccurs="0"/>
+														<xs:element name="Merge" type="xs:string" minOccurs="0"/>
+														<xs:element name="ParentChildOrder" type="xs:string" minOccurs="0"/>
+														<xs:element name="TagSelector" type="xs:string" minOccurs="0"/>
+														<xs:element name="RuleSet" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:group ref="MAspectRules"/>
+																<xs:attribute name="tag" type="xs:string" use="required"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Breakdowns" minOccurs="0"/>
+														<xs:element ref="ParentNodes" minOccurs="0"/>
+														<xs:element ref="ChildNodes" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="ConceptRelationshipNode">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="RelArcrole" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelArcname" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelLinkrole" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelLinkname" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelSource" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelAxis" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelGenerations" type="TKindValue" minOccurs="0"/>
+														<xs:element name="ParentChildOrder" type="xs:string" minOccurs="0"/>
+														<xs:element name="TagSelector" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Breakdowns" minOccurs="0"/>
+														<xs:element ref="ParentNodes" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="DimensionRelationshipNode">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="RelDimension" type="xs:string" minOccurs="0"/>
+														<xs:element name="RelLinkrole" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelSource" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelAxis" type="TKindValue" minOccurs="0"/>
+														<xs:element name="RelGenerations" type="TKindValue" minOccurs="0"/>
+														<xs:element name="ParentChildOrder" type="xs:string" minOccurs="0"/>
+														<xs:element name="TagSelector" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Breakdowns" minOccurs="0"/>
+														<xs:element ref="ParentNodes" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="AspectNode">
+										<xs:complexType mixed="true">
+											<xs:complexContent>
+												<xs:extension base="TGenericResource">
+													<xs:sequence>
+														<xs:element ref="Diagram" minOccurs="0"/>
+														<xs:element name="Aspect" minOccurs="0">
+															<xs:complexType>
+																<xs:complexContent>
+																	<xs:extension base="TKindValue">
+																		<xs:attribute name="includeUnreported" type="xs:string"/>
+																	</xs:extension>
+																</xs:complexContent>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="TagSelector" type="xs:string" minOccurs="0"/>
+														<xs:element ref="Labels" minOccurs="0"/>
+														<xs:element ref="References" minOccurs="0"/>
+														<xs:element ref="Filters" minOccurs="0"/>
+														<xs:element ref="Breakdowns" minOccurs="0"/>
+														<xs:element ref="ParentNodes" minOccurs="0"/>
+														<xs:element ref="ChildNodes" minOccurs="0"/>
+													</xs:sequence>
+												</xs:extension>
+											</xs:complexContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:choice>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Item">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="TNamedRef">
+					<xs:sequence>
+						<xs:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute name="arcrole" type="xs:string"/>
+					<xs:attribute name="weight" type="xs:string"/>
+					<xs:attribute name="recursionInfo" type="xs:string"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TLinkrole" mixed="true">
+		<xs:complexContent>
+			<xs:extension base="TNamedItem">
+				<xs:sequence>
+					<xs:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="Labels">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Role" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:complexContent>
+							<xs:extension base="TNamedItem">
+								<xs:sequence>
+									<xs:element name="Label" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:attribute name="language" type="xs:string" use="required"/>
+											<xs:attribute name="role" type="xs:string" use="required"/>
+											<xs:attribute name="text" type="xs:string" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="References">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Role" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType mixed="true">
+						<xs:complexContent>
+							<xs:extension base="TNamedItem">
+								<xs:sequence>
+									<xs:element name="Reference" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Part" minOccurs="0" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:attribute name="name" type="xs:string" use="required"/>
+														<xs:attribute name="value" type="xs:string" use="required"/>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+											<xs:attribute name="role" type="xs:string" use="required"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SatisfiedMessages" type="TMessages"/>
+	<xs:element name="UnsatisfiedMessages" type="TMessages"/>
+	<xs:complexType name="TMessages">
+		<xs:sequence>
+			<xs:element name="Role" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType mixed="true">
+					<xs:complexContent>
+						<xs:extension base="TNamedItem">
+							<xs:sequence>
+								<xs:element name="Message" minOccurs="0" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:attribute name="language" type="xs:string" use="required"/>
+										<xs:attribute name="role" type="xs:string" use="required"/>
+										<xs:attribute name="text" type="xs:string" use="required"/>
+										<xs:attribute name="separator" type="xs:string"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TGenericResource">
+		<xs:complexContent>
+			<xs:extension base="TItem">
+				<xs:attribute name="description" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TNamedFormulaResource">
+		<xs:complexContent>
+			<xs:extension base="TNamedItem">
+				<xs:attribute name="description" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TGenericResourceWithInfo">
+		<xs:complexContent>
+			<xs:extension base="TGenericResource">
+				<xs:attribute name="info" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TKindValue">
+		<xs:attribute name="kind" type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="TKindValueSource">
+		<xs:complexContent>
+			<xs:extension base="TKindValue">
+				<xs:attribute name="source" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:group name="MAspectRules">
+		<xs:sequence>
+			<xs:element name="ConceptAspectRule" type="TKindValueSource" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="EntityIdentifierAspectRule" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="scheme" type="xs:string"/>
+					<xs:attribute name="value" type="xs:string"/>
+					<xs:attribute name="source" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PeriodAspectRule" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="TKindValueSource">
+							<xs:attribute name="start" type="xs:string"/>
+							<xs:attribute name="end" type="xs:string"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExplicitDimensionAspectRule" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="TKindValueSource">
+							<xs:attribute name="dimension" type="xs:string"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TypedDimensionAspectRule" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="TKindValueSource">
+							<xs:attribute name="dimension" type="xs:string"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SegmentOCCAspectRules" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OCCRule" type="TKindValueSource" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ScenarioOCCAspectRules" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OCCRule" type="TKindValueSource" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="UnitAspectRule" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="SubRule" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:attribute name="kind" type="xs:string"/>
+								<xs:attribute name="measure" type="xs:string"/>
+								<xs:attribute name="source" type="xs:string"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="augment" type="xs:string"/>
+					<xs:attribute name="source" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:element name="Formulas">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Formula" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AssertionSets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AssertionSet" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Assertions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Assertion" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Variables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Variable" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Filters">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Filter" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Preconditions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Precondition" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Parameters">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Parameter" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Tables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Table" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Breakdowns">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Breakdown" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ParentNodes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ParentNode" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ChildNodes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ChildNode" type="TRelation" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="MFilterRelations">
+		<xs:sequence>
+			<xs:element ref="Assertions" minOccurs="0"/>
+			<xs:element ref="Formulas" minOccurs="0"/>
+			<xs:element ref="Variables" minOccurs="0"/>
+			<xs:element ref="Filters" minOccurs="0"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="TRelation">
+		<xs:sequence>
+			<xs:element name="From" type="TText"/>
+			<xs:choice minOccurs="0">
+				<xs:element name="Name" type="xs:string"/>
+				<xs:sequence>
+					<xs:element name="Complement" type="xs:string"/>
+					<xs:element name="Cover" type="xs:string" minOccurs="0"/>
+				</xs:sequence>
+				<xs:element name="Axis" type="xs:string"/>
+			</xs:choice>
+			<xs:element name="To" type="TText"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

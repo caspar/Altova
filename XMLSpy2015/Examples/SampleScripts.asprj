@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project version="2" app="XMLSpy TypeLib" UseHigherDotNetFramework="1">
+	<GlobalDeclarations>
+		<Source>function GetAllPathsFromProject()
+{
+	var	astrPaths = new Array();
+	
+	if(Application.CurrentProject)
+	{
+		RecurseProjectFolder(Application.CurrentProject.RootItems, astrPaths);
+	}
+	
+	return astrPaths;
+}
+
+
+function RecurseProjectFolder(ipProjectItems, astrPaths)
+{
+	if(ipProjectItems)
+	{
+		for(var iter = new Enumerator(ipProjectItems); !iter.atEnd(); iter.moveNext())
+		{
+			var	ipItem = iter.item();
+
+			if(ipItem)
+			{
+				var		strName = ipItem.Name;
+				var		eItemType = ipItem.ItemType;
+
+				if(eItemType == 2 /*spyFolderItem*/)
+				{
+					RecurseProjectFolder(ipItem.ChildItems, astrPaths);
+				}
+				else if(eItemType == 0 /*spyUnknownItem*/)
+				{
+				}
+				else if(eItemType == 1 /*spyFileItem*/)
+				{
+					InsertStringInArrayUnique(astrPaths, ipItem.Path, false);
+				}
+			}
+		}
+	}
+}
+
+
+function InsertStringInArrayUnique(astrStrings, strNew, bCaseSensitive)
+{
+	var bInsert = true;
+	var strToCompare = strNew;
+	
+	if(!bCaseSensitive)
+		strToCompare = strToCompare.toLowerCase();
+		
+	for(var nIdx = 0; nIdx &lt; astrStrings.length; nIdx++)
+	{
+		var	str2ndToCompare = astrStrings[nIdx];
+		
+		if(!bCaseSensitive)
+			str2ndToCompare = str2ndToCompare.toLowerCase();
+	
+		if(strToCompare == str2ndToCompare)
+		{
+			bInsert = false;
+			break;
+		}
+	}
+	
+	if(bInsert)
+		astrStrings.push(strNew);	
+}
+</Source>
+	</GlobalDeclarations>
+	<Forms>
+		<Form name="SearchPathDlg">
+			<Source>var	nTimerCalls;
+var nLastTextChanged;
+
+
+function OnDlgLoad()
+{
+	nTimerCalls = 0;
+	nLastTextChanged = 0;
+}
+
+
+function RefillPathsListBox()
+{
+	lastform.PathsListBox.Items.Clear();
+	lastform.OpenBtn.Enabled = false;
+	
+	var objArray = CLR.Create(&quot;System.Collections.ArrayList&quot;);
+	
+	if(lastform.PathTextBox.TextLength == 0)
+	{	
+		for(var nIdx = 0; nIdx &lt; astrPaths.length; nIdx++)
+			objArray.Add(astrPaths[nIdx]);
+	}
+	else
+	{	
+		var strLookFor = lastform.PathTextBox.Text;
+		strLookFor = strLookFor.toLowerCase();	
+		
+		for(var nIdx = 0; nIdx &lt; astrPaths.length; nIdx++)
+		{	
+			if(astrPaths[nIdx].toLowerCase().indexOf(strLookFor) &gt;= 0)
+				objArray.Add(astrPaths[nIdx]);
+		}
+	}
+	
+	lastform.PathsListBox.Items.AddRange(objArray.ToArray());
+}
+
+
+function OnTextChanged()
+{	
+	nLastTextChanged = nTimerCalls;
+	//RefillPathsListBox();
+}
+
+
+function OnSearchTimer(obj, args)
+{
+	nTimerCalls++;
+	
+	if((nLastTextChanged &gt; 0) &amp;&amp; ((nTimerCalls - nLastTextChanged) &gt; 1))
+	{
+		nLastTextChanged = 0;
+		RefillPathsListBox();
+	}
+}
+
+
+function OnPathsSelectionChanged()
+{
+	lastform.OpenBtn.Enabled = false;
+	
+	if(lastform.PathsListBox.SelectedIndex &gt;= 0)
+		lastform.OpenBtn.Enabled = true;
+}
+
+
+function OpenSelected()
+{
+	if(lastform.PathsListBox.SelectedIndex &gt;= 0)
+	{
+		Application.Documents.OpenFile(lastform.PathsListBox.SelectedItem, false);
+	}
+}
+
+
+function OnOpenClicked()
+{
+	OpenSelected();
+}
+
+
+function OnPathsDoubleClick()
+{
+	OpenSelected();
+}
+</Source>
+			<FormData>&lt;Object type=&quot;System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;SearchPathDlg&quot; children=&quot;Controls&quot;&gt;&lt;Object type=&quot;System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;Label1&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;TabIndex&quot;&gt;4&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;548, 16&lt;/Property&gt;&lt;Property name=&quot;Text&quot;&gt;This dialog allows you to search for files in the current Project and in the list of open files.&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;12, 8&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;Label1&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;CancelBtn&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;TabIndex&quot;&gt;3&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;CancelBtn&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;84, 24&lt;/Property&gt;&lt;Property name=&quot;UseVisualStyleBackColor&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;Text&quot;&gt;Cancel&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;387, 362&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;DialogResult&quot;&gt;Cancel&lt;/Property&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;OpenBtn&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;TabIndex&quot;&gt;2&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;OpenBtn&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;84, 24&lt;/Property&gt;&lt;Property name=&quot;UseVisualStyleBackColor&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;Text&quot;&gt;Open&lt;/Property&gt;&lt;Property name=&quot;UseCompatibleTextRendering&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;477, 362&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;DialogResult&quot;&gt;OK&lt;/Property&gt;&lt;Event name=&quot;MouseClick&quot;&gt;OnOpenClicked&lt;/Event&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.ListBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;PathsListBox&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;FormattingEnabled&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;Size&quot;&gt;549, 303&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;HorizontalScrollbar&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;PathsListBox&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;12, 25&lt;/Property&gt;&lt;Property name=&quot;Sorted&quot;&gt;True&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;1&lt;/Property&gt;&lt;Event name=&quot;SelectedIndexChanged&quot;&gt;OnPathsSelectionChanged&lt;/Event&gt;&lt;Event name=&quot;DoubleClick&quot;&gt;OnPathsDoubleClick&lt;/Event&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;PathTextBox&quot; children=&quot;Controls&quot;&gt;&lt;Property name=&quot;Size&quot;&gt;549, 20&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;PathTextBox&lt;/Property&gt;&lt;Property name=&quot;Location&quot;&gt;12, 336&lt;/Property&gt;&lt;Property name=&quot;TabIndex&quot;&gt;0&lt;/Property&gt;&lt;Event name=&quot;TextChanged&quot;&gt;OnTextChanged&lt;/Event&gt;&lt;/Object&gt;&lt;Property name=&quot;Text&quot;&gt;Search for path in XMLSpy&lt;/Property&gt;&lt;Property name=&quot;ShowInTaskbar&quot;&gt;False&lt;/Property&gt;&lt;Property name=&quot;MaximizeBox&quot;&gt;False&lt;/Property&gt;&lt;Property name=&quot;Name&quot;&gt;SearchPathDlg&lt;/Property&gt;&lt;Property name=&quot;StartPosition&quot;&gt;CenterParent&lt;/Property&gt;&lt;Property name=&quot;DataBindings&quot;&gt;&lt;Property name=&quot;DefaultDataSourceUpdateMode&quot;&gt;OnValidation&lt;/Property&gt;&lt;/Property&gt;&lt;Property name=&quot;MinimizeBox&quot;&gt;False&lt;/Property&gt;&lt;Property name=&quot;ClientSize&quot;&gt;573, 398&lt;/Property&gt;&lt;Property name=&quot;FormBorderStyle&quot;&gt;FixedDialog&lt;/Property&gt;&lt;Property name=&quot;Opacity&quot;&gt;0.98&lt;/Property&gt;&lt;Event name=&quot;Load&quot;&gt;OnDlgLoad&lt;/Event&gt;&lt;/Object&gt;&lt;Object type=&quot;System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot; name=&quot;SearchTimer&quot;&gt;&lt;Property name=&quot;Interval&quot;&gt;500&lt;/Property&gt;&lt;Event name=&quot;Tick&quot;&gt;OnSearchTimer&lt;/Event&gt;&lt;/Object&gt;</FormData>
+		</Form>
+	</Forms>
+	<Macros>
+		<Macro name="AddMacroMenu">
+			<Source>Application.AddMacroMenuItem(&quot;CloseAllButActiveDoc&quot;, &quot;Close all but active document&quot;);
+</Source>
+		</Macro>
+		<Macro name="CloseAllButActiveDoc">
+			<Source>if(Application.ActiveDocument != null)
+{
+	var objActiveDoc = Application.ActiveDocument;
+	
+	for (var iter = new Enumerator(Application.Documents); !iter.atEnd(); iter.moveNext())
+	{
+		// MsgBox (&quot;Closing file &quot; + iter.item().Name);
+		if(iter.item() != objActiveDoc)
+			iter.item().Close (false);
+	}
+}
+</Source>
+		</Macro>
+		<Macro name="SearchPath">
+			<Source>var astrPaths;
+astrPaths = GetAllPathsFromProject();
+
+for (var iter = new Enumerator(Application.Documents); !iter.atEnd(); iter.moveNext())
+	InsertStringInArrayUnique(astrPaths, iter.item().FullName, false);
+	
+var	objDlg = CreateForm(&quot;SearchPathDlg&quot;);
+
+var	objTimer = objDlg.GetTrayComponent(&quot;SearchTimer&quot;);
+objTimer.Enabled = true;
+
+var objArray = CLR.Create(&quot;System.Collections.ArrayList&quot;);
+
+for(var nIdx = 0; nIdx &lt; astrPaths.length; nIdx++)
+	objArray.Add(astrPaths[nIdx]);
+
+objDlg.PathsListBox.Items.AddRange(objArray.ToArray());
+
+objDlg.OpenBtn.Enabled = false;
+objDlg.ShowDialog();</Source>
+		</Macro>
+	</Macros>
+</Project>

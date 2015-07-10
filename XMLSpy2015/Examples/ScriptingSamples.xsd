@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ScriptingSamples">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Address" minOccurs="0">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="US">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Street" type="xs:string"/>
+										<xs:element name="City" type="xs:string"/>
+										<xs:element name="State">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="\p{L}{2}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="ZIPCode">
+											<xs:simpleType>
+												<xs:restriction base="xs:positiveInteger">
+													<xs:pattern value="\d{5}"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="EU">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Street" type="xs:string"/>
+										<xs:element name="City" type="xs:string"/>
+										<xs:element name="Country" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="USorEU" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="US"/>
+									<xs:enumeration value="EU"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

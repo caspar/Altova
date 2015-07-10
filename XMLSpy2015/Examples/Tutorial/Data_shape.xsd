@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.0 NT beta 1 build Jun 13 2001 (http://www.xmlspy.com) by Alex Pilz (Altova) -->
+<xs:schema targetNamespace="http://my-company.com/namespace" xmlns="http://my-company.com/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Company">
+		<xs:annotation>
+			<xs:documentation>Root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Address" type="AddressType"/>
+				<xs:element name="Division" type="DivisionType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AddressType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Street" type="xs:string"/>
+			<xs:element name="City" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="US-Address">
+		<xs:complexContent>
+			<xs:extension base="AddressType">
+				<xs:sequence>
+					<xs:element name="State" type="US-State"/>
+					<xs:element name="Zip" type="xs:positiveInteger"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="UK-Address">
+		<xs:complexContent>
+			<xs:extension base="AddressType">
+				<xs:sequence>
+					<xs:element name="Postcode" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="US-State">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:element name="Person">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="First" type="xs:string"/>
+				<xs:element name="Last" type="xs:string"/>
+				<xs:element name="Title" type="xs:string" minOccurs="0"/>
+				<xs:element name="PhoneExt">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:maxInclusive value="999"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EMail" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="Manager" type="xs:boolean" use="required"/>
+			<xs:attribute name="Programmer" type="xs:boolean" use="optional"/>
+			<xs:attribute name="Degree">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="BA"/>
+						<xs:enumeration value="MA"/>
+						<xs:enumeration value="Ph.D"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="DivisionType">
+		<xs:sequence>
+			<xs:element name="Division-Name" type="xs:string"/>
+			<xs:element name="Location" type="xs:string"/>
+			<xs:element ref="Person" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

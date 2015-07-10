@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!ELEMENT partlist (part*)>
+    <!ELEMENT part EMPTY>
+    <!ATTLIST part
+          partid  CDATA  #REQUIRED
+          partof  CDATA  #IMPLIED
+          name    CDATA  #REQUIRED>

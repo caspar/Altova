@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 Examples</title>
+        <link rel="stylesheet" type="text/css" href="html5_example.css" />
+    </head>
+    <body>
+        <section id="wrapper">	
+
+            <h1>HTML5 Examples</h1>
+
+            <p>Here are a few simple examples showing some of the new elements and attributes available in HTML5. 
+            Use Text View in XMLSpy (starting with Version 2012) to edit the HTML5 source and take advantage of the new entry-helpers
+            that are now available.</p>
+
+            <p><b>Note</b>: You will need to have Internet Explorer 9 installed on your computer to correctly render HTML5 elements in the Browser view of XMLSpy.</p>
+
+            <section class="block" >
+
+                <h3>Example 1: New element &lt;section&gt;</h3>
+                <p>This entire document has been grouped into various sections to clearly separate the different examples. The sections are separated clearly in the Browser view.</p>
+                <h4>Ceremony</h4>
+                <p>Opening Procession</p>
+                <p>Speech by Validictorian</p>
+                <p>Closing Speech by Headmaster</p>
+                <h4>Visitors</h4>
+
+                <ul>
+                    <li>Niki Devgood</li>
+                    <li>Peter Sellers</li>
+                    <li>Jean Penn</li>
+                    <li>Lisa Minelli</li>
+                </ul>
+
+                <footer>
+                   Footer information for section.
+	           </footer>
+
+            </section>		
+
+            <section class="block" >
+
+                <h3>Example 2: New element &lt;article&gt;</h3>
+
+                <p>The new &lt;article&gt; element allows for a better structure and presentation of 
+                articles, such as different blog entries and their corresponding comments, and provides
+                uniform rendering in the browser.</p>
+
+                <article>
+
+                    <header>
+                        <h4>Tech Topics: What is XBRL?</h4>
+                        <p>Published: <time pubdate="pubdate">2011-10-09</time></p>
+                    </header>
+
+                    <p>Extensible Business Reporting Language (XBRL) is an XML-based vocabulary for electronic transmission of business and financial data. Currently in version 2.1, <b>XBRL is an open standard</b> that is maintained by XBRL International, a global non-profit consortium of over 550 major companies, organizations, and government agencies.</p>
+                    <p>XBRL was developed to facilitate business intelligence (BI) automation by enabling machine-to-machine communication and data processing for financial information with an eye towards cost reduction through the elimination of time consuming and error-prone human interaction.</p>
+                    <p>Drawing upon the power and flexibility of the XML family of standards, XBRL utilizes familiar W3C specifications such as XML Namespaces, XML Schema, XPath, and XLink to offer a growing set of taxonomies for defining semantics, syntax, and relationships for single source financial reporting, helping to overcome data redundancy and quality issues in addition to offering instantaneous delivery to a variety of different output formats. </p>
+
+                    <footer>
+                        <p><small>Source: http://www.altova.com/whitepapers/XBRL_Whitepaper.pdf</small></p>
+                    </footer>
+
+                </article>
+
+            </section>
+
+            <section class="block">
+
+		        <h3>Example 3: SVG Elements</h3>
+		        <p>You can now include SVG elements directly within your HTML5 code, such as this orange circle and pink rounded rectangle with a gray border.</p>
+
+		        <svg id="svgelem" height="200" xmlns="http://www.w3.org/2000/svg">
+			        <circle id="redcircle" cx="50" cy="50" r="50" fill="orange" />
+			        <rect id="redrect" x="150" y="20" width="150" height="50" rx="20" ry="20" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+		        </svg>
+
+            </section>
+
+            <section class="block" >
+
+                <h3>Example 4: New elements &lt;figure&gt;,&lt;video&gt; and &lt;figcaption&gt;</h3>
+
+                <figure>
+
+	                 <video width="320" height="240" controls="controls" poster="http://www.altova.com/images/linktoaltova/altova.gif" >
+                           <source src="http://www.w3schools.com/html5/movie.mp4" type="video/mp4" /> 
+                           <source src="http://www.w3schools.com/html5/movie.ogg" type="video/ogg" />
+                           Your browser does not support the video tag.
+	                 </video>
+
+	                <figcaption>Video Example - using child element &lt;source&gt; and 'poster' attribute</figcaption>
+
+                </figure>
+
+            </section>
+
+        </section>
+
+        <footer class="main">
+            Copyright &copy;2011 Altova GmbH
+        </footer>
+
+    </body>
+</html>

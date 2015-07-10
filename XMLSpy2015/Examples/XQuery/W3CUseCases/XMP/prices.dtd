@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: http://www.w3.org/TR/xquery-use-cases/#xmp-data -->
+<!-- Chapter: 1.1.7 DTD for Q10 -->
+<!-- Q10 uses an input document named "prices.xml", with this DTD -->
+<!ELEMENT prices (book*)>
+<!ELEMENT book (title, source, price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT price (#PCDATA)>

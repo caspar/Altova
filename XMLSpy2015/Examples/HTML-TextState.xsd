@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns="http://www.xmlspy.com/schemas/textstate" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.altova.com/schemas/orgchart" targetNamespace="http://www.xmlspy.com/schemas/textstate" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.altova.com/schemas/orgchart" schemaLocation="HTML-OrgChart.xsd"/>
+	<xs:redefine schemaLocation="TextState.xsd">
+		<xs:complexType name="TextType" mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:extension base="TextType">
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element ref="ns1:table"/>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element ref="bold"/>
+							<xs:element ref="italic"/>
+							<xs:element ref="underline"/>
+						</xs:choice>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+</xs:schema>

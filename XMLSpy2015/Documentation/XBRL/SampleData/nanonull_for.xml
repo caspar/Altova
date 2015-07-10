@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="no"?>
+<link:linkbase xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://xbrl.org/2008/generic http://www.xbrl.org/2008/generic-link.xsd http://xbrl.org/2008/assertion/value http://www.xbrl.org/2008/value-assertion.xsd http://xbrl.org/2008/variable http://www.xbrl.org/2008/variable.xsd http://xbrl.org/2008/label http://www.xbrl.org/2008/generic-label.xsd http://xbrl.org/2008/filter/concept http://www.xbrl.org/2008/concept-filter.xsd http://xbrl.org/2008/filter/match http://www.xbrl.org/2008/match-filter.xsd http://xbrl.org/2008/filter/period http://www.xbrl.org/2008/period-filter.xsd http://xbrl.org/2010/message http://www.xbrl.org/2010/generic-message.xsd http://xbrl.org/2010/filter/aspect-cover http://www.xbrl.org/2010/aspect-cover-filter.xsd http://xbrl.org/2008/formula http://www.xbrl.org/2008/formula.xsd" xmlns:us-gaap="http://fasb.org/us-gaap/2012-01-31" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:va="http://xbrl.org/2008/assertion/value" xmlns:cf="http://xbrl.org/2008/filter/concept" xmlns:pf="http://xbrl.org/2008/filter/period" xmlns:formula="http://xbrl.org/2008/formula" xmlns:gen="http://xbrl.org/2008/generic" xmlns:label="http://xbrl.org/2008/label" xmlns:variable="http://xbrl.org/2008/variable" xmlns:acf="http://xbrl.org/2010/filter/aspect-cover" xmlns:msg="http://xbrl.org/2010/message">
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/element-label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#element-label"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2010/assertion-unsatisfied-message" xlink:type="simple" xlink:href="http://www.xbrl.org/2010/validation-message.xsd#assertion-unsatisfied-message"/>
+	<link:roleRef roleURI="http://www.xbrl.org/2010/role/message" xlink:type="simple" xlink:href="http://www.xbrl.org/2010/generic-message.xsd#standard-message"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/variable-filter" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/variable.xsd#variable-filter"/>
+	<link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/variable-set" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/variable.xsd#variable-set"/>
+	<link:roleRef roleURI="http://www.xbrl.org/2008/role/link" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-link.xsd#standard-link-role"/>
+	<link:roleRef roleURI="http://www.xbrl.org/2008/role/label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#standard-label"/>
+	<gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2008/role/link">
+		<variable:variableFilterArc complement="false" cover="true" order="1.0" use="optional" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable3" xlink:to="conceptName2"/>
+		<gen:arc order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="formula" xlink:to="label6"/>
+		<label:label id="label6" xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="label6" xml:lang="en-US">Compute the total of Segment Reporting Information, Revenue across all Operating Activities Segments</label:label>
+		<gen:arc order="4.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="valueAssertion" xlink:to="label5"/>
+		<label:label id="label5" xlink:type="resource" xlink:role="http://www.xbrl.org/2008/role/label" xlink:label="label5" xml:lang="en-US">Verification that Net increase in cash and cash equivalents was reported correctly</label:label>
+		<variable:variableFilterArc complement="false" cover="true" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable" xlink:to="aspectCover"/>
+		<acf:aspectCover id="aspectCover" xlink:type="resource" xlink:label="aspectCover">
+			<acf:dimension>
+				<acf:qname>us-gaap:StatementOperatingActivitiesSegmentAxis</acf:qname>
+			</acf:dimension>
+		</acf:aspectCover>
+		<variable:variableFilterArc complement="false" cover="true" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable" xlink:to="conceptName"/>
+		<cf:conceptName id="conceptName" xlink:type="resource" xlink:label="conceptName">
+			<cf:concept>
+				<cf:qname>us-gaap:SegmentReportingInformationRevenue</cf:qname>
+			</cf:concept>
+		</cf:conceptName>
+		<variable:variableArc name="rev" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="formula" xlink:to="factVariable"/>
+		<variable:factVariable id="factVariable" bindAsSequence="true" xlink:type="resource" xlink:label="factVariable"/>
+		<formula:formula id="formula_total_revenue" aspectModel="dimensional" implicitFiltering="true" value="sum($rev)" source="formula:uncovered" xlink:type="resource" xlink:label="formula">
+			<formula:decimals>-6</formula:decimals>
+			<formula:aspects>
+				<formula:concept>
+					<formula:qname>us-gaap:SegmentReportingInformationRevenue</formula:qname>
+				</formula:concept>
+			</formula:aspects>
+		</formula:formula>
+		<gen:arc order="4.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2010/assertion-unsatisfied-message" xlink:from="valueAssertion" xlink:to="message"/>
+		<msg:message id="message" xlink:type="resource" xlink:role="http://www.xbrl.org/2010/role/message" xlink:label="message" xml:lang="en-US">{xfi:concept-label(resolve-QName(name($change),$change),(),(),&apos;en-US&apos;)} for period &quot;{xfi:period-start(xfi:period($change))}&quot; - &quot;{xfi:period-end(xfi:period($change))}&quot; should be {$end - $start} but it was reported as {$change}!</msg:message>
+		<variable:variableFilterArc complement="false" cover="true" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable2" xlink:to="instantDuration1"/>
+		<pf:instantDuration id="instantDuration1" boundary="end" variable="change" xlink:type="resource" xlink:label="instantDuration1"/>
+		<variable:variableFilterArc complement="false" cover="true" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable1" xlink:to="instantDuration"/>
+		<pf:instantDuration id="instantDuration" boundary="start" variable="change" xlink:type="resource" xlink:label="instantDuration"/>
+		<variable:variableFilterArc complement="false" cover="true" order="1.0" use="optional" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable1" xlink:to="conceptName1"/>
+		<variable:variableFilterArc complement="false" cover="true" order="1.0" use="optional" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-filter" xlink:from="factVariable2" xlink:to="conceptName1"/>
+		<cf:conceptName id="conceptName1" xlink:type="resource" xlink:label="conceptName1">
+			<cf:concept>
+				<cf:qname>us-gaap:CashAndCashEquivalentsAtCarryingValue</cf:qname>
+			</cf:concept>
+		</cf:conceptName>
+		<variable:variableArc name="end" order="3.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="valueAssertion" xlink:to="factVariable2"/>
+		<variable:factVariable id="factVariable2" bindAsSequence="false" xlink:type="resource" xlink:label="factVariable2"/>
+		<variable:variableArc name="start" order="2.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="valueAssertion" xlink:to="factVariable1"/>
+		<variable:factVariable id="factVariable1" bindAsSequence="false" xlink:type="resource" xlink:label="factVariable1"/>
+		<cf:conceptName id="conceptName2" xlink:type="resource" xlink:label="conceptName2">
+			<cf:concept>
+				<cf:qname>us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease</cf:qname>
+			</cf:concept>
+		</cf:conceptName>
+		<variable:variableArc name="change" order="1.0" xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/variable-set" xlink:from="valueAssertion" xlink:to="factVariable3"/>
+		<variable:factVariable id="factVariable3" bindAsSequence="false" xlink:type="resource" xlink:label="factVariable3"/>
+		<va:valueAssertion id="assertion_cash_period" test="($end - $start) eq $change" aspectModel="non-dimensional" implicitFiltering="true" xlink:type="resource" xlink:label="valueAssertion"/>
+	</gen:link>
+</link:linkbase>

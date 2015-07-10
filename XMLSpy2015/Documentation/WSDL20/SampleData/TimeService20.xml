@@ -1,0 +1,508 @@
+<WSDL20Documentation xmlns="http://www.altova.com/documentation" xmlns:doc="http://www.altova.com/documentation">
+	<Document title="TimeService20.wsdl" application="XMLSpy" homepage="http://www.altova.com/xmlspy"/>
+	<DocumentationSettings>
+		<Includes overview="true" referencedFiles="true" types="true" service="true" binding="true" interface="true"/>
+		<Details typesDiagram="true" serviceDiagram="true" bindingDiagram="true" interfaceDiagram="true" endpoints="true" sourceCode="true" extensibilities="true" usedBy="true" operations="true" faults="true"/>
+	</DocumentationSettings>
+	<WSDLDocument wsdlLocation="TimeService20.wsdl" href="TimeService20.wsdl" targetNamespace="http://www.Nanonull.com/TimeService/"/>
+	<Service id="Link11" name="TimeService">
+		<Documentations>
+			<Documentation>A sample Time service</Documentation>
+		</Documentations>
+		<Diagram src="TimeService20_diagrams/TimeService20_p1.png" width="357" height="91"/>
+		<Endpoints>
+			<Endpoint id="Link12" name="TimeServiceSoap">
+				<Binding ref="Link13">s0:TimeServiceSoap</Binding>
+				<Address>http://www.Nanonull.com/TimeService/TimeService.asmx</Address>
+			</Endpoint>
+		</Endpoints>
+		<Source>
+			<service name="TimeService" interface="s0:TimeServiceface">
+				<documentation>A sample Time service</documentation>
+				<endpoint name="TimeServiceSoap" binding="s0:TimeServiceSoap" address="http://www.Nanonull.com/TimeService/TimeService.asmx"/>
+			</service>
+		</Source>
+	</Service>
+	<Binding id="Link13" name="TimeServiceSoap">
+		<Diagram src="TimeService20_diagrams/TimeService20_p2.png" width="415" height="353"/>
+		<Type>http://www.w3.org/ns/wsdl/soap</Type>
+		<Interface ref="Link14">s0:TimeServiceface</Interface>
+		<Extensibility>
+			<Attributes>
+				<Attribute name="wsoap:protocol">http://www.w3.org/2003/05/soap/bindings/HTTP/</Attribute>
+				<Attribute name="wsoap:mepDefault">http://www.w3.org/2003/05/soap/mep/request-response/</Attribute>
+			</Attributes>
+		</Extensibility>
+		<Operations>
+			<Operation name="s0:getUTCTime" ref="Link15">
+				<Attributes>
+					<Attribute name="wsoap:action">http://www.Nanonull.com/TimeService/getUTCTime</Attribute>
+				</Attributes>
+			</Operation>
+			<Operation name="s0:getOffsetUTCTime" ref="Link16">
+				<Attributes>
+					<Attribute name="wsoap:action">http://www.Nanonull.com/TimeService/getOffsetUTCTime</Attribute>
+				</Attributes>
+			</Operation>
+			<Operation name="s0:getServerTime" ref="Link17">
+				<Attributes>
+					<Attribute name="wsoap:action">http://www.Nanonull.com/TimeService/getServerTime</Attribute>
+				</Attributes>
+			</Operation>
+			<Operation name="s0:getServerTimeZone" ref="Link18">
+				<Attributes>
+					<Attribute name="wsoap:action">http://www.Nanonull.com/TimeService/getServerTimeZone</Attribute>
+				</Attributes>
+			</Operation>
+			<Operation name="s0:getServerCity" ref="Link19">
+				<Attributes>
+					<Attribute name="wsoap:action">http://www.Nanonull.com/TimeService/getServerCity</Attribute>
+				</Attributes>
+			</Operation>
+			<Operation name="s0:getTimeZoneTime" ref="Link1A">
+				<Attributes>
+					<Attribute name="wsoap:action">http://www.Nanonull.com/TimeService/getTimeZoneTime</Attribute>
+				</Attributes>
+			</Operation>
+			<Operation name="s0:getCityTime" ref="Link1B">
+				<Attributes>
+					<Attribute name="wsoap:action">http://www.Nanonull.com/TimeService/getCityTime</Attribute>
+				</Attributes>
+			</Operation>
+		</Operations>
+		<Faults>
+			<Fault name="s0:FaultTimeZoneNotFound" ref="Link1C"/>
+			<Fault name="s0:FaultCityNotFound" ref="Link1D"/>
+		</Faults>
+		<UsedBy>
+			<By>
+				<Endpoint ref="Link12">TimeServiceSoap</Endpoint>
+				<Service ref="Link11">TimeService</Service>
+			</By>
+		</UsedBy>
+		<Source xmlns:wsoap="http://www.w3.org/ns/wsdl/soap">
+			<binding name="TimeServiceSoap" interface="s0:TimeServiceface" type="http://www.w3.org/ns/wsdl/soap" wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/" wsoap:mepDefault="http://www.w3.org/2003/05/soap/mep/request-response/">
+				<operation ref="s0:getUTCTime" wsoap:action="http://www.Nanonull.com/TimeService/getUTCTime"/>
+				<operation ref="s0:getOffsetUTCTime" wsoap:action="http://www.Nanonull.com/TimeService/getOffsetUTCTime"/>
+				<operation ref="s0:getServerTime" wsoap:action="http://www.Nanonull.com/TimeService/getServerTime"/>
+				<operation ref="s0:getServerTimeZone" wsoap:action="http://www.Nanonull.com/TimeService/getServerTimeZone"/>
+				<operation ref="s0:getServerCity" wsoap:action="http://www.Nanonull.com/TimeService/getServerCity"/>
+				<operation ref="s0:getTimeZoneTime" wsoap:action="http://www.Nanonull.com/TimeService/getTimeZoneTime"/>
+				<operation ref="s0:getCityTime" wsoap:action="http://www.Nanonull.com/TimeService/getCityTime"/>
+				<fault ref="s0:FaultTimeZoneNotFound"/>
+				<fault ref="s0:FaultCityNotFound"/>
+			</binding>
+		</Source>
+	</Binding>
+	<Interface id="Link14" name="TimeServiceface">
+		<Diagram src="TimeService20_diagrams/TimeService20_p3.png" width="254" height="1082"/>
+		<Operations>
+			<Operation id="Link15" name="getUTCTime">
+				<Pattern/>
+				<References>
+					<Input name="In">
+						<Element ref="LinkE">s0:getUTCTime</Element>
+					</Input>
+					<Output name="Out">
+						<Element ref="LinkF">s0:getUTCTimeResponse</Element>
+					</Output>
+				</References>
+			</Operation>
+			<Operation id="Link16" name="getOffsetUTCTime">
+				<Pattern/>
+				<References>
+					<Input name="In">
+						<Element ref="Link4">s0:getOffsetUTCTime</Element>
+					</Input>
+					<Output name="Out">
+						<Element ref="Link5">s0:getOffsetUTCTimeResponse</Element>
+					</Output>
+				</References>
+			</Operation>
+			<Operation id="Link17" name="getServerTime">
+				<Pattern/>
+				<References>
+					<Input name="In">
+						<Element ref="Link8">s0:getServerTime</Element>
+					</Input>
+					<Output name="Out">
+						<Element ref="Link9">s0:getServerTimeResponse</Element>
+					</Output>
+				</References>
+			</Operation>
+			<Operation id="Link18" name="getServerTimeZone">
+				<Pattern/>
+				<References>
+					<Input name="In">
+						<Element ref="LinkA">s0:getServerTimeZone</Element>
+					</Input>
+					<Output name="Out">
+						<Element ref="LinkB">s0:getServerTimeZoneResponse</Element>
+					</Output>
+				</References>
+			</Operation>
+			<Operation id="Link19" name="getServerCity">
+				<Pattern/>
+				<References>
+					<Input name="In">
+						<Element ref="Link6">s0:getServerCity</Element>
+					</Input>
+					<Output name="Out">
+						<Element ref="Link7">s0:getServerCityResponse</Element>
+					</Output>
+				</References>
+			</Operation>
+			<Operation id="Link1A" name="getTimeZoneTime">
+				<Pattern/>
+				<References>
+					<Input name="In">
+						<Element ref="LinkC">s0:getTimeZoneTime</Element>
+					</Input>
+					<Output name="Out">
+						<Element ref="LinkD">s0:getTimeZoneTimeResponse</Element>
+					</Output>
+					<Outfault name="Out">
+						<Element ref="Link1C">s0:FaultTimeZoneNotFound</Element>
+					</Outfault>
+				</References>
+			</Operation>
+			<Operation id="Link1B" name="getCityTime">
+				<Pattern/>
+				<References>
+					<Input name="In">
+						<Element ref="Link2">s0:getCityTime</Element>
+					</Input>
+					<Output name="Out">
+						<Element ref="Link3">s0:getCityTimeResponse</Element>
+					</Output>
+					<Outfault name="Out">
+						<Element ref="Link1D">s0:FaultCityNotFound</Element>
+					</Outfault>
+				</References>
+			</Operation>
+		</Operations>
+		<Faults>
+			<Fault id="Link1C" name="FaultTimeZoneNotFound">
+				<Element ref="Link1">s0:errorResponse</Element>
+			</Fault>
+			<Fault id="Link1D" name="FaultCityNotFound">
+				<Element ref="Link1">s0:errorResponse</Element>
+			</Fault>
+		</Faults>
+		<UsedBy>
+			<Binding ref="Link13">TimeServiceSoap</Binding>
+			<Service ref="Link11">TimeService</Service>
+		</UsedBy>
+		<Source>
+			<interface name="TimeServiceface">
+				<operation name="getUTCTime">
+					<input messageLabel="In" element="s0:getUTCTime"/>
+					<output messageLabel="Out" element="s0:getUTCTimeResponse"/>
+				</operation>
+				<operation name="getOffsetUTCTime">
+					<input messageLabel="In" element="s0:getOffsetUTCTime"/>
+					<output messageLabel="Out" element="s0:getOffsetUTCTimeResponse"/>
+				</operation>
+				<operation name="getServerTime">
+					<input messageLabel="In" element="s0:getServerTime"/>
+					<output messageLabel="Out" element="s0:getServerTimeResponse"/>
+				</operation>
+				<operation name="getServerTimeZone">
+					<input messageLabel="In" element="s0:getServerTimeZone"/>
+					<output messageLabel="Out" element="s0:getServerTimeZoneResponse"/>
+				</operation>
+				<operation name="getServerCity">
+					<input messageLabel="In" element="s0:getServerCity"/>
+					<output messageLabel="Out" element="s0:getServerCityResponse"/>
+				</operation>
+				<operation name="getTimeZoneTime">
+					<input messageLabel="In" element="s0:getTimeZoneTime"/>
+					<output messageLabel="Out" element="s0:getTimeZoneTimeResponse"/>
+					<outfault ref="s0:FaultTimeZoneNotFound" message="FaultTimeZoneNotFound"/>
+				</operation>
+				<operation name="getCityTime">
+					<input messageLabel="In" element="s0:getCityTime"/>
+					<output messageLabel="Out" element="s0:getCityTimeResponse"/>
+					<outfault ref="s0:FaultCityNotFound" message="FaultCityNotFound"/>
+				</operation>
+				<fault name="FaultTimeZoneNotFound" element="s0:errorResponse"/>
+				<fault name="FaultCityNotFound" element="s0:errorResponse"/>
+			</interface>
+		</Source>
+	</Interface>
+	<SchemaDocument schemaLocation="TimeService20.wsdl" href="TimeService20.wsdl" attributeFormDefault="" elementFormDefault="qualified" targetNamespace="http://www.Nanonull.com/TimeService/">
+		<Element name="errorResponse" wsdlType="true" id="Link1">
+			<Diagram src="TimeService20_diagrams/TimeService20_p4.png" width="300" height="68"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:errorText</Child>
+				<Child>s0:errorItem</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="errorResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="errorText" type="s:string" minOccurs="0" maxOccurs="1"/>
+							<s:element name="errorItem" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getCityTime" wsdlType="true" id="Link2">
+			<Diagram src="TimeService20_diagrams/TimeService20_p5.png" width="234" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:city</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getCityTime">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="city" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getCityTimeResponse" wsdlType="true" id="Link3">
+			<Diagram src="TimeService20_diagrams/TimeService20_p6.png" width="372" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:getCityTimeResult</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getCityTimeResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="getCityTimeResult" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getOffsetUTCTime" wsdlType="true" id="Link4">
+			<Diagram src="TimeService20_diagrams/TimeService20_p7.png" width="316" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:hoursOffset</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getOffsetUTCTime">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="hoursOffset" type="s:double" minOccurs="1" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getOffsetUTCTimeResponse" wsdlType="true" id="Link5">
+			<Diagram src="TimeService20_diagrams/TimeService20_p8.png" width="442" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:getOffsetUTCTimeResult</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getOffsetUTCTimeResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="getOffsetUTCTimeResult" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getServerCity" wsdlType="true" id="Link6">
+			<Diagram src="TimeService20_diagrams/TimeService20_p9.png" width="116" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getServerCity">
+					<s:complexType/>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getServerCityResponse" wsdlType="true" id="Link7">
+			<Diagram src="TimeService20_diagrams/TimeService20_p10.png" width="390" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:getServerCityResult</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getServerCityResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="getServerCityResult" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getServerTime" wsdlType="true" id="Link8">
+			<Diagram src="TimeService20_diagrams/TimeService20_p11.png" width="123" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getServerTime">
+					<s:complexType/>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getServerTimeResponse" wsdlType="true" id="Link9">
+			<Diagram src="TimeService20_diagrams/TimeService20_p12.png" width="404" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:getServerTimeResult</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getServerTimeResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="getServerTimeResult" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getServerTimeZone" wsdlType="true" id="LinkA">
+			<Diagram src="TimeService20_diagrams/TimeService20_p13.png" width="151" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getServerTimeZone">
+					<s:complexType/>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getServerTimeZoneResponse" wsdlType="true" id="LinkB">
+			<Diagram src="TimeService20_diagrams/TimeService20_p14.png" width="460" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:getServerTimeZoneResult</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getServerTimeZoneResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="getServerTimeZoneResult" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getTimeZoneTime" wsdlType="true" id="LinkC">
+			<Diagram src="TimeService20_diagrams/TimeService20_p15.png" width="301" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:timezone</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getTimeZoneTime">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="timezone" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getTimeZoneTimeResponse" wsdlType="true" id="LinkD">
+			<Diagram src="TimeService20_diagrams/TimeService20_p16.png" width="442" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:getTimeZoneTimeResult</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getTimeZoneTimeResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="getTimeZoneTimeResult" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getUTCTime" wsdlType="true" id="LinkE">
+			<Diagram src="TimeService20_diagrams/TimeService20_p17.png" width="108" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getUTCTime">
+					<s:complexType/>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="getUTCTimeResponse" wsdlType="true" id="LinkF">
+			<Diagram src="TimeService20_diagrams/TimeService20_p18.png" width="374" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Properties>
+				<Property name="content">complex</Property>
+			</Properties>
+			<Children>
+				<Child>s0:getUTCTimeResult</Child>
+			</Children>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="getUTCTimeResponse">
+					<s:complexType>
+						<s:sequence>
+							<s:element name="getUTCTimeResult" type="s:string" minOccurs="0" maxOccurs="1"/>
+						</s:sequence>
+					</s:complexType>
+				</s:element>
+			</Source>
+		</Element>
+		<Element name="string" wsdlType="true" id="Link10">
+			<Diagram src="TimeService20_diagrams/TimeService20_p19.png" width="76" height="35"/>
+			<Namespace>http://www.Nanonull.com/TimeService/</Namespace>
+			<Type>
+				<Reference>s:string</Reference>
+			</Type>
+			<Properties>
+				<Property name="content">simple</Property>
+				<Property name="nillable">true</Property>
+			</Properties>
+			<Source xmlns:s="http://www.w3.org/2001/XMLSchema">
+				<s:element name="string" type="s:string" nillable="true"/>
+			</Source>
+		</Element>
+	</SchemaDocument>
+</WSDL20Documentation>
