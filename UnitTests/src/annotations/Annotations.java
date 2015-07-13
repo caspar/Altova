@@ -1,5 +1,9 @@
 package annotations;
 
+import annotations.Authors;
+import annotations.Constructor;
+import annotations.Email;
+
 public class Annotations {
 
 	//Type Annotation
@@ -11,20 +15,14 @@ public class Annotations {
 	}
 	
 	@Author(value = "Caspar")
-	//@Author(value = "Altova")
+  //@Author(value = "Altova")
 	public void repeatingAnnotation(){
-		//Triggers a parsing error in UM Eclipse plugin
+		//Triggers a parsing error in UM Eclipse plug-in
 	}
 	
 	public void typeAnnotation(){
 		String str = "caspar@nyu.edu";
 		@SuppressWarnings("unused")
 		String email = (@Email String) str; //type-cast
-	}
-	
-	public static void main(String[] args){
-		Annotations an;
-		an = new /*@Constructor*/ Annotations();
-		an.repeatingAnnotation();
 	}
 }
