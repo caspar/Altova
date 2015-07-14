@@ -1,0 +1,2668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Settings ReadJavaDocs="true" WriteJavaDocs="true" ReadCSharpDocComments="true" WriteCSharpDocComments="true" ReadVBasicDocComments="true" WriteVBasicDocComments="true">
+		<ProjectStyles showdotnetproperties="0" showregionnames="1"/>
+	</Settings>
+	<OpenDiagrams activeDiagram="916c5785-3203-4630-8264-93ac6b1969a4">
+		<OpenDiagramEntry>a22236de-7ef3-4a4a-920b-3c194d761aa0</OpenDiagramEntry>
+		<OpenDiagramEntry>916c5785-3203-4630-8264-93ac6b1969a4</OpenDiagramEntry>
+	</OpenDiagrams>
+	<Model>
+		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<packagedElement>
+				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public">
+					<packagedElement>
+						<Component uuid="bf1af48d-6572-4b4c-9ba6-1a926baacb1c" name="project" visibility="public" usedForCodeSyncronization="true" codeLang="Java6.0 (1.6)" isCodeProjectFile="true" codeProjectFileOrDirectory="nbproject\project.xml">
+							<realization>
+								<ComponentRealization uuid="0a3a8c86-9367-4ea0-b6f0-86bf0f9ebdcd" visibility="public" realizingClassifier="97491551-1a94-4975-8e70-cbc523f03744"/>
+								<ComponentRealization uuid="4d61333b-1115-4eda-acf5-a2d749712193" visibility="public" realizingClassifier="b0106272-edac-4427-bf60-91a0793abe4d"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package uuid="00000004-7510-11d9-86f2-000476a22f44" name="Unknown Externals" visibility="public" editable="false">
+					<packagedElement>
+						<Class uuid="d95b43b0-037d-4ede-8de7-6f8b7157bf66" name="String" visibility="public"/>
+						<Class uuid="26f7cd25-08ba-454d-97b1-edb68f7afd98" name="DefaultMutableTreeNode" visibility="public"/>
+						<Class uuid="7c7f8ad2-1fa6-4eeb-9fee-06250954bb72" name="javax.swing.JScrollPane" visibility="public"/>
+						<Class uuid="5ded7556-8579-401f-b2ab-5a90f2705a05" name="javax.swing.JSplitPane" visibility="public"/>
+						<Class uuid="3d0fb81a-6332-4761-889a-70ada5835e5a" name="javax.swing.JTree" visibility="public"/>
+						<Class uuid="d9c606c0-0915-470e-9518-9130270cb4de" name="javax.swing.JTextArea" visibility="public"/>
+						<Class uuid="cf2994d1-9b39-4a3a-88de-0c53be3a0273" name="javax.swing.JToolBar" visibility="public"/>
+						<Class uuid="f8075031-543b-46d9-bc6e-58fbdb161e68" name="javax.swing.JFrame" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package uuid="3c5bca2d-14c3-4b56-90f7-94c980681c56" name="project" visibility="public">
+					<packagedElement>
+						<Class uuid="97491551-1a94-4975-8e70-cbc523f03744" name="STMTester" visibility="public" usedForCodeSyncronization="true">
+							<codeFileName>
+								<CodeFileName name="..\src\STMTester.java"/>
+							</codeFileName>
+							<appliedStereotype>
+								<StereotypeApplication uuid="703623b1-0a6b-4ffd-a828-7679681fd97e" classifier="00061102-7512-11d9-86f2-000476a22f44">
+									<slot>
+										<Slot uuid="c4dc3d24-4982-423e-808f-14024737a3b5" definingFeature="00071102-7512-11d9-86f2-000476a22f44">
+											<value>
+												<LiteralString uuid="7ac9f261-4daf-4e0e-955d-a82f12922b33" visibility="public" value="SuppressWarnings(&quot;serial&quot;)"/>
+											</value>
+										</Slot>
+									</slot>
+								</StereotypeApplication>
+							</appliedStereotype>
+							<generalization>
+								<Generalization uuid="f2e49488-fbf2-49ed-872c-ad1a692fc19f" general="f8075031-543b-46d9-bc6e-58fbdb161e68"/>
+							</generalization>
+							<ownedAttribute>
+								<Property uuid="895622e6-7a60-4575-a915-eae7a0013a04" name="m_STM" visibility="private" type="0cf7e20d-8557-4958-af35-cd83bc63ba5b">
+									<defaultValue>
+										<LiteralString uuid="7c3966ba-7c04-420f-812c-cc77a5cbdb62" visibility="public" value="new MySTM()"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="60b58295-478f-4ad8-9a5a-fe1204f8b8f0" name="m_nEventCounter" visibility="private" type="308d9740-87d8-4fa8-91c3-85e1c8a42328">
+									<defaultValue>
+										<LiteralString uuid="c5cb7129-e31d-4a60-88d9-c542fc67035d" visibility="public" value="0"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="69b7af20-1099-451e-91c8-1b426bc0294f" name="jScrollPane1" visibility="private" type="7c7f8ad2-1fa6-4eeb-9fee-06250954bb72"/>
+								<Property uuid="940349b6-af64-4de3-a4d8-b36c308c2cb5" name="jScrollPane2" visibility="private" type="7c7f8ad2-1fa6-4eeb-9fee-06250954bb72"/>
+								<Property uuid="888c610c-1522-4a82-8993-d0111ac51336" name="jSplitPane1" visibility="private" type="5ded7556-8579-401f-b2ab-5a90f2705a05"/>
+								<Property uuid="cabd7ce0-cf70-4ce3-b73c-06ffb1e13d89" name="m_CurrentStateTree" visibility="private" type="3d0fb81a-6332-4761-889a-70ada5835e5a"/>
+								<Property uuid="f2e42bb7-4ba4-4cb2-acd1-2d006114ec0f" name="m_DebugOutputTextBox" visibility="private" type="d9c606c0-0915-470e-9518-9130270cb4de"/>
+								<Property uuid="bb9c866a-18f5-47e3-a53a-db8309ab1805" name="m_ToolBar" visibility="private" type="cf2994d1-9b39-4a3a-88de-0c53be3a0273"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class uuid="0cf7e20d-8557-4958-af35-cd83bc63ba5b" name="MySTM" visibility="protected" usedForCodeSyncronization="true" DocComment="c114d971-4622-44e3-a07f-b896f7c7668e">
+									<ownedComment>
+										<Comment uuid="c114d971-4622-44e3-a07f-b896f7c7668e" body="&#13; derive from generated controller class to customize behavior, implement guard conditions,&#13; entry/exit/do actions, forward transition effects, handle debug messages...&#13;">
+											<annotatedElement idref="0cf7e20d-8557-4958-af35-cd83bc63ba5b"/>
+										</Comment>
+									</ownedComment>
+									<generalization>
+										<Generalization uuid="a40f6e65-0a78-4eff-b3b1-667510e535bb" general="b0106272-edac-4427-bf60-91a0793abe4d"/>
+									</generalization>
+									<ownedAttribute>
+										<Property uuid="210ff5cd-b9bd-47e1-94c6-25044c9abe2d" name="m_sDebugMessage" visibility="public" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<defaultValue>
+												<LiteralString uuid="04cd18ad-0493-4282-a0b4-5b28dbb3df82" visibility="public" value="&quot;&quot;"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation uuid="8de8ffa5-37ac-4502-bdf8-465720232d71" name="OnDebugMessage" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="c3294b36-50c1-40f7-b0c6-3a716a7bd4a4" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="23e3bb7d-f2b4-41c1-af94-8d02e6a4ba34" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="2eca2cce-2e03-4b98-a768-63e32f5faf45" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="cdd9e391-0b84-4318-a3cf-78da4a634126" name="str" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+												<Parameter uuid="93737780-9e59-457a-81ca-c05f0fd804c8" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="8a9d0dc4-1c89-4a3f-9821-33a842e06efc" name="CanGoS5" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="439c1997-796c-4e7e-92d7-e461695c9638" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="2f41848b-8041-40b3-b387-095ee2eb0c65" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="c1747bd2-e603-484d-9961-509c8e48f685" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="60931677-cd73-4684-939c-fd05dbe9d1a5" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="a3634ece-137b-4ab5-86bc-0c58a5c32129" name="CanGoS2" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="202db24b-94cf-4087-a747-f1db4b9aa8c0" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="deecd2ea-9033-480a-91fe-79de341c56b4" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="e48a1c2a-a628-4565-bca3-c9081736cf11" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="79c23c39-4a1b-409b-b52d-b1e438c2457f" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation uuid="f82d5b4b-05d8-434e-b643-be5ed9185474" name="STMTester" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication uuid="577f3bda-a57e-4cbe-b86e-0513a7827f14" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+									</appliedStereotype>
+								</Operation>
+								<Operation uuid="bad3bbed-d1f8-4f31-beae-632e23eaa096" name="UpdateDisplay" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="6c0b4b32-5b3d-44ed-b61e-ff28cc597fbe" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="4faa89a2-7ac2-4f07-8f03-e3647b330af6" name="UpdateCurrentStateTree" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="7cae90f9-2f09-4c96-ad99-138df84725a6" name="state" type="ea4842f7-139f-4c73-adc3-5e9115bf7869"/>
+										<Parameter uuid="bde4ba04-879e-4e76-ab10-80bde9f0bd9e" name="node" type="26f7cd25-08ba-454d-97b1-edb68f7afd98"/>
+										<Parameter uuid="dbffe8ab-ee60-4936-8573-f26de98ba3a0" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="02cc986a-430a-4ef1-90c6-ee0f24b7df9c" name="initComponents" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="8040d8a2-dda5-4120-a8fb-1927cf90ff87" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="08a7eabf-a06d-49f4-b96e-618d52553c5c" name="main" visibility="public" isStatic="true">
+									<ownedParameter>
+										<Parameter uuid="316d068c-12c8-41ec-b090-a09e6fd8ab76" name="args" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<lowerValue>
+												<LiteralString uuid="5d6d6089-3c20-4010-9151-8742ee1532b3" visibility="public" value="*"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="33a35aed-7571-4889-adb0-a24b873232e6" visibility="public" value="*"/>
+											</upperValue>
+										</Parameter>
+										<Parameter uuid="d1bcc883-2dbf-472f-a6f5-f35d6359d58a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Package uuid="9d1897ca-b2d3-401a-aab2-826214c27206" name="Complex" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="1d5e4b2d-d723-4555-af85-789f7ad7369a" classifier="c898c1a3-547b-4a84-ad06-908fd57678c2"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Class uuid="b0106272-edac-4427-bf60-91a0793abe4d" name="ComplexController" visibility="public" isAbstract="true" usedForCodeSyncronization="true">
+									<codeFileName>
+										<CodeFileName name="..\src\Complex\ComplexController.java"/>
+									</codeFileName>
+									<ownedBehavior>
+										<StateMachine uuid="3110cf10-af53-4eba-85f8-1e47f633175f" name="Complex" visibility="public" autoUpdateCode="true">
+											<codeGenerationOptions imports="&#13;&#10;@SuppressWarnings({&quot;serial&quot;, &quot;unused&quot;})"/>
+											<region>
+												<Region uuid="098fe9ca-c938-4566-a7d2-b25715ae8ab7" name="MainRegion">
+													<subvertex>
+														<Pseudostate uuid="565e8736-12e6-4a8a-ad7c-d17aa3f94829"/>
+														<State uuid="7fe41dd9-b79e-49c4-b0ee-b78bda54e2ae" name="S5">
+															<region>
+																<Region uuid="bec3e8e8-3d96-4903-815c-03c1c89f4a29" name="RegionA">
+																	<subvertex>
+																		<State uuid="54220014-67bf-4c66-9fb1-997ac5e1930b" name="S5A1">
+																			<entry>
+																				<Activity uuid="48a5ae78-bd78-4d2e-a735-d2a81d1bdb6e" name="Activity" visibility="public" specification="de63787b-e349-490d-ba23-f1a566e33f44"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="59e5353a-38c9-48c0-b11b-90fbf2fddeab" name="Activity" visibility="public" specification="426a3980-e7e5-40ef-b820-8500b19d4369"/>
+																			</exit>
+																			<doActivity>
+																				<Activity uuid="e4bc2917-625c-4695-999b-4bc9f0743a80" name="Activity" visibility="public" specification="74865ea3-2529-4b8d-a9ed-b11d28a787d4"/>
+																			</doActivity>
+																		</State>
+																		<Pseudostate uuid="7f27dbcc-1518-41e6-8467-9d8fa04be7ad"/>
+																		<State uuid="d694d11f-96ef-483f-a633-b881a7ffa4d3" name="S5A2">
+																			<entry>
+																				<Activity uuid="d1e3849e-a27c-4aa0-9add-9b39fe7ce65d" name="Activity" visibility="public" specification="3675bbea-03d4-41f2-acc3-265f1ee760c3"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="6099227d-cb1f-40e3-8463-87de9a50db35" name="Activity" visibility="public" specification="0b614a3e-4ec3-4152-9a3f-52c2b0774fb0"/>
+																			</exit>
+																			<doActivity>
+																				<Activity uuid="82670fb1-d06e-4ee4-af9e-d6a7201bc064" name="Activity" visibility="public" specification="733eb0de-be2a-4b76-99a5-3a7da5f70c10"/>
+																			</doActivity>
+																		</State>
+																		<State uuid="172c091c-cea8-41eb-a3f5-862a32c6566b" name="S5A3">
+																			<entry>
+																				<Activity uuid="39162297-2b78-4500-ac17-79d3a12d8ba9" name="Activity" visibility="public" specification="20d0b024-06ac-45c6-80da-55f8bb4508b1"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="9df27cd8-1e29-4a33-83ee-9601ad99fbd4" name="Activity" visibility="public" specification="1fa3f50a-99c5-47a3-b344-0a9a44e21413"/>
+																			</exit>
+																			<doActivity>
+																				<Activity uuid="2e6f916e-af93-4cf1-bd87-a267b6ad7a48" name="Activity" visibility="public" specification="89874724-7237-41e8-a767-c49884f85107"/>
+																			</doActivity>
+																		</State>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="dfcb2e3b-3d23-4404-8837-ff458803465e" source="7f27dbcc-1518-41e6-8467-9d8fa04be7ad" target="54220014-67bf-4c66-9fb1-997ac5e1930b"/>
+																		<Transition uuid="ab534b3c-7374-4323-8cdc-05b3eddc37de" source="54220014-67bf-4c66-9fb1-997ac5e1930b" target="d694d11f-96ef-483f-a633-b881a7ffa4d3">
+																			<trigger>
+																				<Trigger uuid="bd1040b8-7402-4b4d-9a11-14d225e1cfc6" name="Event1" event="3402be4d-125e-4ab4-b7ed-0159124c1cad"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="7b8f0b04-62d1-4f3a-bc83-3c8d539f3042" source="d694d11f-96ef-483f-a633-b881a7ffa4d3" target="172c091c-cea8-41eb-a3f5-862a32c6566b">
+																			<trigger>
+																				<Trigger uuid="b4460550-e9f3-453d-9958-8a30caddedb1" event="320d6953-4bb4-4100-bceb-37a25cacc9d7"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="243411a1-24f7-4532-ae6d-38549ad7ff74" source="172c091c-cea8-41eb-a3f5-862a32c6566b" target="d344462e-a5cf-4ee4-a785-f511ddeeacbe">
+																			<effect>
+																				<Activity uuid="ca733a38-da83-4b16-af45-9ebbe293492b" name="effect" visibility="public" specification="9d4619c5-fc45-4e43-a19b-37bca3fd8c0b"/>
+																			</effect>
+																		</Transition>
+																	</transition>
+																</Region>
+																<Region uuid="d38473d2-4ec9-4214-9433-4c5c584dbf22" name="RegionB">
+																	<subvertex>
+																		<State uuid="f6526f8e-6e89-4478-8a22-ed7eb4edeace" name="S5B1">
+																			<region>
+																				<Region uuid="9bd2dd03-508b-4ddd-87a4-927c4678be74" name="RegionB1">
+																					<subvertex>
+																						<Pseudostate uuid="d8af304f-096d-4e7a-baee-486e633a3dbc"/>
+																						<State uuid="58d774cd-0a6f-4d00-bcc3-ceb58b83a00f" name="S5B11">
+																							<entry>
+																								<Activity uuid="266b75b4-df62-409d-a74a-2909daaf6a9f" name="Activity" visibility="public" specification="3be417cd-8631-42d0-ab40-9fc5e16c5b3f"/>
+																							</entry>
+																							<exit>
+																								<Activity uuid="8e994c48-ddee-49e1-9ca3-6e71b4c2c145" name="Activity" visibility="public" specification="de41df62-fe3f-43c7-99c4-cf4781e8d4d0"/>
+																							</exit>
+																						</State>
+																						<State uuid="8b9c8d52-b5ec-4f17-984b-354c4691bc7a" name="S5B12">
+																							<entry>
+																								<Activity uuid="831cc270-d6b6-4a2d-ac88-349e70c62610" name="Activity" visibility="public" specification="21e9ca2c-b823-4667-995e-3600912a6cf9"/>
+																							</entry>
+																							<exit>
+																								<Activity uuid="6f1cf7b2-1d70-4a9f-8936-a10e36d2b75f" name="Activity" visibility="public" specification="9bc4e3d6-1c81-42d9-ac4b-daaaf842e5c1"/>
+																							</exit>
+																						</State>
+																					</subvertex>
+																					<transition>
+																						<Transition uuid="cf2f1477-688e-459d-9015-a21f3af72436" source="d8af304f-096d-4e7a-baee-486e633a3dbc" target="58d774cd-0a6f-4d00-bcc3-ceb58b83a00f"/>
+																						<Transition uuid="cc9f985b-96ff-4863-a8a0-c94f72bba3f5" source="58d774cd-0a6f-4d00-bcc3-ceb58b83a00f" target="8b9c8d52-b5ec-4f17-984b-354c4691bc7a">
+																							<trigger>
+																								<Trigger uuid="68bd1801-d984-400e-8e95-9b8cb83aa42e" event="4701bebe-0b14-4406-891a-d1493b26cce6"/>
+																							</trigger>
+																						</Transition>
+																						<Transition uuid="b257239a-c846-49e3-9543-bf1b37fc9337" source="8b9c8d52-b5ec-4f17-984b-354c4691bc7a" target="8b8cad3b-7494-4a6e-ae33-a8116a630214">
+																							<trigger>
+																								<Trigger uuid="24d860eb-9e29-4f07-8a87-d7632f03c63e" event="98a409cd-721f-44e5-87be-b7da1a8bb55c"/>
+																							</trigger>
+																						</Transition>
+																					</transition>
+																				</Region>
+																			</region>
+																			<entry>
+																				<Activity uuid="b962fef3-2011-4786-afab-49788ff6b9b3" name="Activity" visibility="public" specification="24e2519a-c82a-4d7c-9426-c251eeace529"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="7cae35b8-e411-484a-b31a-c0ec88abc40f" name="Activity" visibility="public" specification="a994e7cf-fa3d-4acc-b372-d281f8669d74"/>
+																			</exit>
+																		</State>
+																		<State uuid="8b8cad3b-7494-4a6e-ae33-a8116a630214" name="S5B2">
+																			<entry>
+																				<Activity uuid="3628fc6b-bed6-444e-a634-57d7b9530a8f" name="Activity" visibility="public" specification="5119d20d-73f5-4bb2-b193-d23d8bd2bef8"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="522bffdd-0ad6-4060-8dea-6fc10a63cbdb" name="Activity" visibility="public" specification="3e556b26-52ff-4150-b9c0-2df36b790dc4"/>
+																			</exit>
+																		</State>
+																		<Pseudostate kind="shallowHistory" uuid="8a77a3fd-7cb9-4485-9911-75229c672ee9"/>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="ea9b7861-853d-4aef-b02c-7a7409c5fb31" source="8b8cad3b-7494-4a6e-ae33-a8116a630214" target="d344462e-a5cf-4ee4-a785-f511ddeeacbe">
+																			<effect>
+																				<Activity uuid="07264a30-648a-4bc4-818a-8d1505c66888" name="effect" visibility="public" specification="9b5c24be-22e7-4dc6-b817-40561ca133a7"/>
+																			</effect>
+																		</Transition>
+																		<Transition uuid="c39734b0-628a-47f1-93ed-bd11f63e30fc" source="8a77a3fd-7cb9-4485-9911-75229c672ee9" target="f6526f8e-6e89-4478-8a22-ed7eb4edeace"/>
+																	</transition>
+																</Region>
+																<Region uuid="4b2199cf-118e-4d09-8f10-9c236db68315" name="RegionC">
+																	<subvertex>
+																		<State uuid="f259f123-5f99-45cd-8e4c-36cd34d27de4" name="S5C1">
+																			<region>
+																				<Region uuid="7c3b34ac-90aa-42c3-b06f-c73398e06902" name="RegionC1">
+																					<subvertex>
+																						<Pseudostate uuid="72956482-f938-49c4-8f2d-91a5597bbbe7"/>
+																						<State uuid="f2abe292-6f8a-4af7-86fa-9b24898a76ee" name="S5C11">
+																							<entry>
+																								<Activity uuid="7accb3c0-3400-4653-bf2a-823e32cae168" name="Activity" visibility="public" specification="51d59249-823e-4f47-9a0f-ed9c5934eb98"/>
+																							</entry>
+																							<exit>
+																								<Activity uuid="8f32f145-06dc-4da8-85b4-7022eac2643e" name="Activity" visibility="public" specification="30e64a47-9532-4384-bb49-4fbf73038cf0"/>
+																							</exit>
+																						</State>
+																						<State uuid="04dedd29-ae7d-434c-9066-df2122ce5f7c" name="S5C12">
+																							<region>
+																								<Region uuid="a5230f69-75dd-4dec-9b31-aaa2ea7deb78" name="RegionC12">
+																									<subvertex>
+																										<State uuid="7595bc3a-be3a-4abf-a094-870df2eb374f" name="S5C121">
+																											<region>
+																												<Region uuid="bbb2601d-25a3-405d-816d-5b41663d8f62" name="RegionC121">
+																													<subvertex>
+																														<State uuid="69565033-dfc7-4e3c-9d3c-fe4c45b67bcc" name="S5C1211">
+																															<region>
+																																<Region uuid="3c080111-8a15-43e5-be39-e0b4f01263ac" name="RegionC1211">
+																																	<subvertex>
+																																		<State uuid="baf62b26-b4b4-4384-9c4c-01b8fbd438e7" name="S5C12111">
+																																			<entry>
+																																				<Activity uuid="5f80bf4c-a47c-46e3-87f9-1d28245e55c2" name="Activity" visibility="public" specification="1e660483-f0c9-4233-8211-5b074cf09325"/>
+																																			</entry>
+																																			<exit>
+																																				<Activity uuid="f266e608-bc2d-4fe5-8019-9c8385818e7c" name="Activity" visibility="public" specification="aeee40e0-d2de-4597-a875-88b27c41e027"/>
+																																			</exit>
+																																		</State>
+																																		<Pseudostate uuid="dda3feef-badd-4e8e-989b-be584e350b86"/>
+																																		<State uuid="1b1b874b-72d9-4626-ac24-f5755ce4013c" name="S5C12112">
+																																			<entry>
+																																				<Activity uuid="c3379e5b-a7a4-4619-82e1-38b2a72cdf92" name="Activity" visibility="public" specification="e62763f9-d204-4b3c-a749-a74cd02bea1b"/>
+																																			</entry>
+																																			<exit>
+																																				<Activity uuid="66b8650d-a9aa-4e83-a902-c09d5e168db2" name="Activity" visibility="public" specification="db3ef240-d1c3-44c2-9f55-6041ccb71149"/>
+																																			</exit>
+																																		</State>
+																																	</subvertex>
+																																	<transition>
+																																		<Transition uuid="fe252949-1974-40a0-a506-5d7d51ecbc05" source="dda3feef-badd-4e8e-989b-be584e350b86" target="baf62b26-b4b4-4384-9c4c-01b8fbd438e7"/>
+																																		<Transition uuid="287f9213-9487-4553-a30d-ba6d18c76010" source="baf62b26-b4b4-4384-9c4c-01b8fbd438e7" target="1b1b874b-72d9-4626-ac24-f5755ce4013c">
+																																			<trigger>
+																																				<Trigger uuid="5ffdc887-9f9a-46a0-804c-68cf4d3e64c2" name="E" event="4f6ee17e-9a8d-40ae-bc45-d67b40f12f44"/>
+																																			</trigger>
+																																		</Transition>
+																																	</transition>
+																																</Region>
+																															</region>
+																															<entry>
+																																<Activity uuid="88f7015c-e919-456b-8b76-bb84aa4b7840" name="Activity" visibility="public" specification="853da7f9-4249-4c9e-a81d-9533d75a0fb4"/>
+																															</entry>
+																															<exit>
+																																<Activity uuid="893a7188-f73a-4101-a82e-75e95f4c4dcb" name="Activity" visibility="public" specification="01537e25-9dfa-478e-8040-5730be0f9527"/>
+																															</exit>
+																														</State>
+																														<Pseudostate uuid="f23708c1-581b-4130-8a94-a5eed9b32be8"/>
+																													</subvertex>
+																													<transition>
+																														<Transition uuid="ad2c152f-66ad-4905-9fd2-cd73956734fc" source="f23708c1-581b-4130-8a94-a5eed9b32be8" target="69565033-dfc7-4e3c-9d3c-fe4c45b67bcc"/>
+																													</transition>
+																												</Region>
+																											</region>
+																											<entry>
+																												<Activity uuid="f2a3d07b-815d-4df6-9e68-6e8835c644d3" name="Activity" visibility="public" specification="4f25347f-ec63-4274-9f8a-b9f63578feaf"/>
+																											</entry>
+																											<exit>
+																												<Activity uuid="dc8a48b5-d7d8-4c2c-9198-1fe94b9568d0" name="Activity" visibility="public" specification="0203cdc9-db88-4604-b760-ccba60f56249"/>
+																											</exit>
+																										</State>
+																										<Pseudostate uuid="a2521946-0272-4b45-9f91-31bd1dc8c462"/>
+																									</subvertex>
+																									<transition>
+																										<Transition uuid="64335839-45b0-45ab-8b3e-4f31f5c6e094" source="a2521946-0272-4b45-9f91-31bd1dc8c462" target="7595bc3a-be3a-4abf-a094-870df2eb374f"/>
+																									</transition>
+																								</Region>
+																							</region>
+																							<entry>
+																								<Activity uuid="6b0a70f3-4210-4e54-9c16-adca08071bab" name="Activity" visibility="public" specification="3682710e-609c-412d-8cf1-f318cfb7d6ff"/>
+																							</entry>
+																							<exit>
+																								<Activity uuid="96110331-7c88-4c05-95a5-02a1850243ee" name="Activity" visibility="public" specification="48eb7b42-91b3-4138-b14f-e45153e1d48d"/>
+																							</exit>
+																						</State>
+																					</subvertex>
+																					<transition>
+																						<Transition uuid="606272ac-33be-407c-9e20-d69e5f57cbe1" source="72956482-f938-49c4-8f2d-91a5597bbbe7" target="f2abe292-6f8a-4af7-86fa-9b24898a76ee"/>
+																						<Transition uuid="75cfa135-dc74-4c45-acb6-cb35bd7f79d7" source="f2abe292-6f8a-4af7-86fa-9b24898a76ee" target="04dedd29-ae7d-434c-9066-df2122ce5f7c">
+																							<trigger>
+																								<Trigger uuid="3a09a6a9-c5dd-4d54-8ff8-42dea98314e7" event="2fdbb1c7-bfc6-4113-958e-72c1ff19c70c"/>
+																							</trigger>
+																						</Transition>
+																						<Transition uuid="ec3be2d0-06c9-4572-a56f-31176dc76c95" source="04dedd29-ae7d-434c-9066-df2122ce5f7c" target="2c5cc135-8225-4e01-8b6c-c9a6e31573fb">
+																							<trigger>
+																								<Trigger uuid="4d2c0df0-d2ac-45d2-a704-b51d4e22dfc9" event="a9f31f92-0833-4b5d-9df0-29d86cc12234"/>
+																							</trigger>
+																						</Transition>
+																					</transition>
+																				</Region>
+																			</region>
+																			<entry>
+																				<Activity uuid="7b4f44a3-697c-42d7-9a54-38b58ed4bbad" name="Activity" visibility="public" specification="b6bf890f-9246-4609-bb19-435f0e2351be"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="78f124bb-ef99-43ee-ab05-fee0207db7fb" name="Activity" visibility="public" specification="714f5e7d-9c9b-42eb-bb2b-90324c2b9737"/>
+																			</exit>
+																		</State>
+																		<State uuid="2c5cc135-8225-4e01-8b6c-c9a6e31573fb" name="S5C2">
+																			<entry>
+																				<Activity uuid="5b71898d-168d-4413-8733-c0ba636c2efb" name="Activity" visibility="public" specification="8e3a945b-755d-4fb6-8ab4-bce576d52b3b"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="ee5989a1-9ce4-4057-a9d5-83fcbca1ecc9" name="Activity" visibility="public" specification="f5d1390a-9f91-4cc4-ba4f-bf1d0de7ea5d"/>
+																			</exit>
+																		</State>
+																		<Pseudostate kind="deepHistory" uuid="57ceb48e-81de-4895-bf84-ad44f7d4ed57"/>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="927f2461-5a17-43ae-ba80-dc5db582abd5" source="2c5cc135-8225-4e01-8b6c-c9a6e31573fb" target="d344462e-a5cf-4ee4-a785-f511ddeeacbe">
+																			<effect>
+																				<Activity uuid="606d9dec-0ee1-4a7b-8113-f01b68bbf954" name="effect" visibility="public" specification="1434e02e-c204-453c-ae1b-0190c89ec051"/>
+																			</effect>
+																		</Transition>
+																		<Transition uuid="85229951-94b9-4fbc-ab12-103ffc1971a3" source="57ceb48e-81de-4895-bf84-ad44f7d4ed57" target="f259f123-5f99-45cd-8e4c-36cd34d27de4"/>
+																	</transition>
+																</Region>
+															</region>
+															<entry>
+																<Activity uuid="a1ecfe58-ad17-45a7-a4cf-90dc0b738a5a" name="Activity" visibility="public" specification="6588bfe5-321c-4098-8ab9-94190fa8ce3a"/>
+															</entry>
+															<exit>
+																<Activity uuid="20084a3f-f961-4cef-a8e1-a1bbf643f8d2" name="Activity" visibility="public" specification="4d5f733c-6149-45ea-90c2-5c024490927a"/>
+															</exit>
+														</State>
+														<Pseudostate kind="choice" uuid="50b62800-8a3f-4042-aafd-7debd4f0eddc"/>
+														<Pseudostate kind="junction" uuid="ecfab4e9-1a7e-4ba4-8b0a-571455c9bc2e"/>
+														<Pseudostate kind="join" uuid="d344462e-a5cf-4ee4-a785-f511ddeeacbe"/>
+														<Pseudostate kind="fork" uuid="3cdf5654-bbeb-4e77-979e-777ab472747a"/>
+														<State uuid="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3" name="S1">
+															<entry>
+																<Activity uuid="30c16c5b-27a5-4998-bb63-7be4fb85264a" name="Activity" visibility="public" specification="538f7110-f548-40f2-9188-506e265408e9"/>
+															</entry>
+															<exit>
+																<Activity uuid="e84ff455-4799-481e-b10c-8cf1e50c1ea3" name="Activity" visibility="public" specification="12be8073-eaa6-4d31-8768-381f3558e097"/>
+															</exit>
+														</State>
+														<State uuid="d9f57e98-ec17-4d9c-8cc5-b97696b811c2" name="S2">
+															<entry>
+																<Activity uuid="0df492ad-0b08-43bc-a9e1-476ddac01dc1" name="Activity" visibility="public" specification="a7a6b93b-2d4b-419b-81cd-2c29e22091a1"/>
+															</entry>
+															<exit>
+																<Activity uuid="b231f42f-33ca-4ff5-b144-1caf2db55ae4" name="Activity" visibility="public" specification="cdb09bb5-9cff-4e5f-b7ea-3a5c797c7c22"/>
+															</exit>
+														</State>
+														<State uuid="269882a0-000a-4b4c-96f8-b2ce2a8069e8" name="S3">
+															<entry>
+																<Activity uuid="160be637-7925-429f-8e2f-ebe2e0994ce1" name="Activity" visibility="public" specification="9c372fbf-c2b3-4927-ab8f-f85d1ce65401"/>
+															</entry>
+															<exit>
+																<Activity uuid="5f760ae1-156b-4e37-a80c-b4ff444a817b" name="Activity" visibility="public" specification="c81175fe-b3a8-48ef-ab1c-200f191074d1"/>
+															</exit>
+														</State>
+														<State uuid="d3da1652-6320-4ec6-888d-cb5c8e553e4b" name="S4">
+															<region>
+																<Region uuid="bfe4a1e8-c931-4bed-9add-578024d0d21b" name="Region4">
+																	<subvertex>
+																		<Pseudostate uuid="dc513668-aca7-4722-a605-0b349a04ce74"/>
+																		<State uuid="51efda1b-92cc-45fe-946e-1e83cf22a4f4" name="S41">
+																			<entry>
+																				<Activity uuid="86bfb897-bd24-4531-8681-e8e14a6aaa8b" name="Activity" visibility="public" specification="a888b6cd-f221-40d2-825c-67bfac044a54"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="fa94a0d7-2a80-4297-a9ce-92c9236208f1" name="Activity" visibility="public" specification="2e779623-3b41-4905-9dee-aa55c5a0d1db"/>
+																			</exit>
+																		</State>
+																		<State uuid="1d5e12a4-950d-4820-9a18-c76d3846d5a6" name="S42">
+																			<entry>
+																				<Activity uuid="66917e84-7128-4093-8ad6-b612de759da9" name="Activity" visibility="public" specification="b9f92ea3-f894-420b-a02d-91a5f8b54dab"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="b77d9f65-b44c-4285-af85-2c45ab7e553e" name="Activity" visibility="public" specification="b5b3f02a-f931-4d29-b513-ca0d3d53c342"/>
+																			</exit>
+																		</State>
+																		<FinalState uuid="ab7e3c13-2ecc-4c4e-9916-0884c92b8b80" name="FinalS4"/>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="fd596e5b-156d-4cf7-91fc-330ad184c4b9" source="dc513668-aca7-4722-a605-0b349a04ce74" target="51efda1b-92cc-45fe-946e-1e83cf22a4f4"/>
+																		<Transition uuid="488ea348-e026-4484-803e-61cbd7c418b8" source="51efda1b-92cc-45fe-946e-1e83cf22a4f4" target="1d5e12a4-950d-4820-9a18-c76d3846d5a6">
+																			<trigger>
+																				<Trigger uuid="41f4859d-40de-4cae-98fe-d905f685f62c" event="03264ca9-1d4b-4c6c-8c46-aee1f4a914f4"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="08d77df3-1b38-49a1-a7b3-763d71f8d3fd" source="1d5e12a4-950d-4820-9a18-c76d3846d5a6" target="1b1b874b-72d9-4626-ac24-f5755ce4013c">
+																			<trigger>
+																				<Trigger uuid="df579c87-225a-4091-aeeb-a6198bfc6344" event="14dbc046-f1fd-4d2f-b937-27a6707a67fe"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="b41e6445-d25b-4cf7-a0b5-a789ef252f41" source="1d5e12a4-950d-4820-9a18-c76d3846d5a6" target="51efda1b-92cc-45fe-946e-1e83cf22a4f4">
+																			<trigger>
+																				<Trigger uuid="59b9b0fe-4e99-445d-b74d-4a6bc3d1fd85" event="59a2d87e-b2ce-4a72-8087-6abf843502a7"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="afea1b6f-b186-4225-806c-6757da8e7a9f" source="d3da1652-6320-4ec6-888d-cb5c8e553e4b" target="d9f57e98-ec17-4d9c-8cc5-b97696b811c2"/>
+																		<Transition uuid="198abcbe-f6be-4203-93aa-069ef1b98e65" source="51efda1b-92cc-45fe-946e-1e83cf22a4f4" target="ab7e3c13-2ecc-4c4e-9916-0884c92b8b80">
+																			<trigger>
+																				<Trigger uuid="8b8385f7-3b2b-4027-bfde-11a4cd064f8c" event="c22330f1-d9fe-4eb0-9fb0-fb8a340ef070"/>
+																			</trigger>
+																		</Transition>
+																	</transition>
+																</Region>
+															</region>
+															<entry>
+																<Activity uuid="1c653719-5dc0-4d98-82f2-a424c4ee672e" name="Activity" visibility="public" specification="5b4d630a-42a2-462f-94b1-6b9d83c3a06d"/>
+															</entry>
+															<exit>
+																<Activity uuid="81f8eb7d-c842-452b-9390-c022ce0176f4" name="Activity" visibility="public" specification="09ab5544-75a1-4b66-bade-c01c86b2f1d0"/>
+															</exit>
+														</State>
+													</subvertex>
+													<transition>
+														<Transition kind="internal" uuid="06e31507-9f65-44fe-b9a7-3782d561bcf1" source="d9f57e98-ec17-4d9c-8cc5-b97696b811c2" target="d9f57e98-ec17-4d9c-8cc5-b97696b811c2">
+															<trigger>
+																<Trigger uuid="d2c5318d-f633-47bb-bfba-098f233c50bc" name="a" event="533a9641-c1f4-4c05-b4bf-ea1e6bace97f"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="d1f5f5d4-82d9-4a06-8072-ebc3476f8c1f" source="565e8736-12e6-4a8a-ad7c-d17aa3f94829" target="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3"/>
+														<Transition uuid="39cc6eff-2261-4701-87f8-93eca36194aa" source="3cdf5654-bbeb-4e77-979e-777ab472747a" target="04dedd29-ae7d-434c-9066-df2122ce5f7c"/>
+														<Transition uuid="7818cf8c-9d6f-4742-872e-0a3289386256" source="3cdf5654-bbeb-4e77-979e-777ab472747a" target="58d774cd-0a6f-4d00-bcc3-ceb58b83a00f"/>
+														<Transition uuid="beb5acf1-e068-4472-bff4-dce43c5a3d5f" source="3cdf5654-bbeb-4e77-979e-777ab472747a" target="54220014-67bf-4c66-9fb1-997ac5e1930b"/>
+														<Transition uuid="afcf17fe-e9e3-4a6a-b36d-e853d6574bd5" source="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3" target="3cdf5654-bbeb-4e77-979e-777ab472747a">
+															<trigger>
+																<Trigger uuid="01cf72d9-eba6-4038-b283-7d6b3a4685ea" event="e951ba03-ab2d-4d3d-baa0-be6a07fbcab7"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="397670aa-8477-4056-9497-5f897c57cf87" source="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3" target="50b62800-8a3f-4042-aafd-7debd4f0eddc">
+															<trigger>
+																<Trigger uuid="71800636-59ae-4ac6-a6c4-ec6b81420798" event="7c77216e-ec76-4c80-8d25-deb63e445661"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="214d4f60-fa6f-4099-b7ed-10046e70c7a5" source="50b62800-8a3f-4042-aafd-7debd4f0eddc" target="57ceb48e-81de-4895-bf84-ad44f7d4ed57">
+															<guard>
+																<Constraint uuid="87f37574-0744-45c1-a08b-223c0be92616" visibility="public">
+																	<specification>
+																		<LiteralString uuid="8cf9a76f-7d67-4a63-93eb-57de1b32a1b7" visibility="public" value="CanGoS5()"/>
+																	</specification>
+																</Constraint>
+															</guard>
+														</Transition>
+														<Transition uuid="29439444-f8ee-44a8-a0d3-0362e513f625" source="50b62800-8a3f-4042-aafd-7debd4f0eddc" target="d9f57e98-ec17-4d9c-8cc5-b97696b811c2">
+															<guard>
+																<Constraint uuid="80fda195-fd66-4269-b391-35518b7bdd2c" visibility="public">
+																	<specification>
+																		<LiteralString uuid="c76b7942-f9e7-4930-b7a4-128a0ce72ef4" visibility="public" value="else"/>
+																	</specification>
+																</Constraint>
+															</guard>
+														</Transition>
+														<Transition uuid="15aa0342-3765-4341-83cd-5f9842eeab24" source="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3" target="d9f57e98-ec17-4d9c-8cc5-b97696b811c2">
+															<trigger>
+																<Trigger uuid="4f3a19a0-553e-4624-abd0-863cbe6ca0c7" event="2b0773eb-ac39-4cb7-90fc-78431c548286"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="e50d1e99-483f-43a2-ac3b-7b77ec11c05b" source="d9f57e98-ec17-4d9c-8cc5-b97696b811c2" target="d9f57e98-ec17-4d9c-8cc5-b97696b811c2">
+															<trigger>
+																<Trigger uuid="7c54fd4d-9182-409b-b186-cd9fab64cabd" event="79094765-30b9-4d79-bac5-b75c511b264a"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="508318bf-f8f9-4961-ae47-cfc6709799ad" source="ecfab4e9-1a7e-4ba4-8b0a-571455c9bc2e" target="269882a0-000a-4b4c-96f8-b2ce2a8069e8"/>
+														<Transition uuid="eb7fb4a3-fe9c-4af2-a8ff-dd1877b1b1bb" source="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3" target="ecfab4e9-1a7e-4ba4-8b0a-571455c9bc2e">
+															<trigger>
+																<Trigger uuid="1aa934cb-05dc-4b3a-bd5a-e37b019282f2" event="86bba6c0-60a0-4151-aba0-5afb16628a9f"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="8bb0d650-f995-4beb-8a1e-b5a51e5d17f0" source="d9f57e98-ec17-4d9c-8cc5-b97696b811c2" target="ecfab4e9-1a7e-4ba4-8b0a-571455c9bc2e">
+															<trigger>
+																<Trigger uuid="d05f1456-20e9-4687-ac72-247a17adb8cf" event="3b0fa562-d2fe-42a2-82bd-c245c17cfaa8"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="1b76dfab-4b52-46b2-ba89-8ad5810e05a6" source="269882a0-000a-4b4c-96f8-b2ce2a8069e8" target="7fe41dd9-b79e-49c4-b0ee-b78bda54e2ae">
+															<guard>
+																<Constraint uuid="fc75742a-80ed-46b6-82d7-e9713416a69e" visibility="public">
+																	<specification>
+																		<LiteralString uuid="60435c24-51dc-4039-819a-b972a54e67c6" visibility="public" value="CanGoS5()"/>
+																	</specification>
+																</Constraint>
+															</guard>
+															<trigger>
+																<Trigger uuid="d4e3e8a3-3fcb-47ed-a2f4-9c3e1f64a6b1" event="c3b97f3c-8d49-4afe-825a-1520c7f32430"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="406cbf4f-b521-4403-afe1-715b991b8fab" source="7fe41dd9-b79e-49c4-b0ee-b78bda54e2ae" target="d3da1652-6320-4ec6-888d-cb5c8e553e4b">
+															<effect>
+																<Activity uuid="fc13de79-3006-4280-8041-d7b2bf292cc1" name="effect" visibility="public" specification="8dd245d6-7ad8-45c8-98ef-aa6db9409db4"/>
+															</effect>
+															<trigger>
+																<Trigger uuid="e5eb1973-4a5e-47c2-914b-5f3bae2491c1" event="213bc1fb-30a0-43d7-8b23-0e362100704d"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="7abbf867-1e63-4be8-b8a8-e8218dfc1a5c" source="d3da1652-6320-4ec6-888d-cb5c8e553e4b" target="7fe41dd9-b79e-49c4-b0ee-b78bda54e2ae">
+															<effect>
+																<Activity uuid="c00c9cf4-463e-406f-9bf1-0cec6762af43" name="effect" visibility="public" specification="b42ad5cb-880e-4f04-802f-f6e7e823c0a6"/>
+															</effect>
+															<trigger>
+																<Trigger uuid="de2c6132-6e1d-46d7-8a40-7d8ab4331e8d" event="16f22ebc-b12e-4303-af53-ced83a51a2be"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="0c4c30cc-9bf9-4081-a068-5937e14158f4" source="d344462e-a5cf-4ee4-a785-f511ddeeacbe" target="1d5e12a4-950d-4820-9a18-c76d3846d5a6">
+															<effect>
+																<Activity uuid="dd9c11e1-9492-4e8f-9f40-93589739d4c5" name="effect" visibility="public" specification="3f94e13c-83d2-4988-af45-c400f2a6462f"/>
+															</effect>
+														</Transition>
+														<Transition kind="local" uuid="806fe8b9-ddae-4b94-9744-2ee4227d8f5a" source="d3da1652-6320-4ec6-888d-cb5c8e553e4b" target="51efda1b-92cc-45fe-946e-1e83cf22a4f4">
+															<trigger>
+																<Trigger uuid="809d873b-7d36-47c5-acc4-97ba513799e8" name="E" event="6c7ee0e1-251e-4e56-b053-0d45d9dd8209"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="82d3c936-fc2c-4741-ac2d-ebf025111776" source="269882a0-000a-4b4c-96f8-b2ce2a8069e8" target="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3">
+															<trigger>
+																<Trigger uuid="ef91b58e-7831-4fb4-8b81-400247074971" event="e87ec3fa-88f9-425b-8092-ff98dbc6af45"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="92ed9fd9-3a16-4a88-b2a6-bdffffecaf97" source="269882a0-000a-4b4c-96f8-b2ce2a8069e8" target="d9f57e98-ec17-4d9c-8cc5-b97696b811c2">
+															<guard>
+																<Constraint uuid="cf46aab3-3388-49ee-bbd2-4b3f1409b189" visibility="public">
+																	<specification>
+																		<LiteralString uuid="4ca6825b-7b70-4cb1-8654-5938d021a623" visibility="public" value="CanGoS2()"/>
+																	</specification>
+																</Constraint>
+															</guard>
+															<trigger>
+																<Trigger uuid="acd54404-ee74-4005-a5e9-bcf3452bf543" event="94552148-f98f-413d-9165-8b21b1cecc93"/>
+															</trigger>
+														</Transition>
+													</transition>
+													<ownedComment>
+														<Comment uuid="f230a31b-def9-4376-9292-0c24cd3c1e3a" body="Shown in this diagram:&#13;&#13;Join, Fork, State, OrthogonalState, CompositeState (with any hierarchy level), Choice, Junction, DeepHistory, ShallowHistory, InitialState, FinalState, Transitions, Effects, Guards&#13;&#13;State entries:&#13;default entry, explicit entry, shallow history entry (default entry), deep history entry  &#13;&#13;conditional branch with else clause, &#13;State Entry/Exit/Do behavior &#13;conflicting transitions (with implicit priority)&#13;high level transitions, compound transitions, local transitions, internal transitions, self transitions, completion transition&#13;...">
+															<textHyperlink>
+																<CommentTextHyperlink uuid="dc5dd06a-2a61-407f-be52-4658fa73695a" startPos="390" length="23">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="6bb0b0ce-b00b-48fa-81a5-5df4ed00c287" hyperlinkedGuiElement="a5a68b7f-cfb7-4918-9243-0864820d51ec"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="a915f9d3-8441-4211-add4-d11841a50c55" startPos="527" length="16">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="2bf32a72-e956-4b25-90b5-72e107c88149" hyperlinkedGuiElement="645e9528-03b3-47c9-bff6-0c8c8ba7c144"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="0b23b474-cce2-4bcd-8fbe-e2d4bf39a967" startPos="505" length="20">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="d36994a2-1e16-4c84-afac-70741123eea4" hyperlinkedGuiElement="120c1071-9171-4856-948b-3f9f9e2a4a93"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="1ac08222-c194-42ac-bf94-c1c4116db1c2" startPos="545" length="21">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="58f5b4da-d63e-48f0-8d11-8433f0e1680d" hyperlinkedGuiElement="91467088-89c9-4fe5-9e37-b1dfdfebf1d9"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="79ba70b5-aafd-4976-b125-6a098b8b4751" startPos="486" length="17">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="ce2c19b2-a519-4a2e-9ebc-375c9e7221ed" hyperlinkedGuiElement="17b1e93d-1520-4aef-9639-794a07b94e51"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="9e891a42-47c1-4b9a-b721-0d26136c177a" startPos="440" length="22">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="86b29c13-5ec9-4ea8-a38a-765ce092ba81" hyperlinkedGuiElement="69d90d6f-acfa-4f8d-8993-4d30bd6cb8a4"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="0ebcf9d4-dab1-4b7b-bcc0-7f6abf71b1ce" startPos="464" length="20">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="499888e3-6c47-4c87-ae78-7d7090b3c7a5" hyperlinkedGuiElement="ea5f5e34-9d00-40d1-8f68-0087617a647b"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="3b62ff4d-394e-43d5-bfe8-529eca810d8f" startPos="78" length="24">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="8cc2c5f0-8b01-4238-8c40-f997d77bfd56" hyperlinkedGuiElement="87c2bc4b-6117-4adc-831e-54c48988e3f8"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="2389deec-5e85-46e9-a8a5-57a2de40b9d8" startPos="105" length="6">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="8d3790ae-7903-4e78-ba68-7cc5a9f92daf" hyperlinkedGuiElement="cf662185-cbc4-43fc-8272-c3f05de9892e"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="169a5067-edbf-4634-9a6b-69f8ca20b6e6" startPos="113" length="8">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="7ff2cd3e-732f-425b-ac8e-299f57313540" hyperlinkedGuiElement="807489c4-0b04-49c2-8ff1-63965625c765"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="cc8d3f35-4063-4804-83a3-13b2cf17211d" startPos="123" length="11">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="2a3b53bc-c006-4d74-911c-86909ed1cced" hyperlinkedGuiElement="5cc6e167-643a-4105-a0e5-a379ab8a6e43"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="bb2c84c7-3dd7-4a5c-aec6-958bea606631" startPos="136" length="14">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="ff88be02-6ec7-4273-bb9e-2913867191e7" hyperlinkedGuiElement="585c5e75-08cb-4309-8d6a-0472458df57a"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="b2af2c0b-c5d5-42ec-81fd-745447939a90" startPos="62" length="14">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="b616814b-81d6-403a-b2c6-240a2f4424a7" hyperlinkedGuiElement="1ffb6a49-3a0d-4d3f-af70-1e4a923d9249"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="53634c32-21ed-4a40-8b6b-1d6c439be225" startPos="45" length="15">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="33ba7c72-899f-418c-967f-c3741866c96f" hyperlinkedGuiElement="987110d2-07c9-4200-85d7-e74491188748"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="0d53b517-8245-4d00-8d8f-efef2606b42d" startPos="26" length="4">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="89352f53-e6e1-4ef3-9673-30609733446e" hyperlinkedGuiElement="19a86649-4723-4a44-a788-93cbfae6699a"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="944d9557-3339-4cc7-9abe-100c3d8d4314" startPos="32" length="4">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="3c7b3927-5ca3-4555-860a-09ebde7b8f4e" hyperlinkedGuiElement="d4fdf07f-046d-40f9-a222-1c0e6f45bc28"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="2277a854-fb30-41a6-b472-864efca3e9c2" startPos="38" length="5">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="731d4e7e-79b5-4ab4-8844-20187ba7935e" hyperlinkedGuiElement="11417314-ec0b-4dd7-9741-9bc9a748c4b6"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="77796265-25fd-4521-9be2-db1e80c888c3" startPos="152" length="12">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="20cb3f22-9865-4e69-b225-105ebe75916f" hyperlinkedGuiElement="344669f6-745b-4c08-9963-1aee555c354d"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="cb82c1e5-64a1-4958-a2bd-e11f5944ea87" startPos="166" length="10">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="db37f324-e9d3-40c1-b73b-f0413e5d506b" hyperlinkedGuiElement="1bd95ac5-9f18-4542-b8df-c55556d7cdd9"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="99802936-1755-4d47-8a5a-79c1890a578a" startPos="178" length="11">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="c56f08f4-317b-4aa7-8e99-4b05731457d7" hyperlinkedGuiElement="645e9528-03b3-47c9-bff6-0c8c8ba7c144"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="cd6814cc-0dd3-47b2-848e-b9c80177c456" startPos="191" length="7">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="92d9ad89-8f84-4a91-91a2-323f4780946c" hyperlinkedGuiElement="f5cf6533-8adb-46b5-a423-70821552f81a"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="f7abbd7a-8034-4d50-9e74-8b497c17f495" startPos="200" length="6">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="84f9a025-f908-4e99-b2c4-e9d27b1db725" hyperlinkedGuiElement="9abfa916-901f-4d2a-93e2-ec0650edb0ef"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="22b6d147-c9ca-48be-b0a4-839e0ab034a0" startPos="359" length="28">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="0ba15adc-cecf-48eb-8003-cc643c8fab9d" hyperlinkedGuiElement="5eea7de8-a670-49bc-9b77-6f47f04b7275"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="dd1842e8-4a51-4e0d-bed4-4cc23db2bdba" startPos="320" length="35">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="e4aa51cb-ff94-46bb-8b8f-4f318c944865" hyperlinkedGuiElement="e29afb45-5268-4c49-bc53-4f54d4601c4f"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="80d57331-38cc-451f-8bd2-9b862e110ade" startPos="226" length="13">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="4b6b4136-f1f4-4072-b94c-278c3a76be81" hyperlinkedGuiElement="69d90d6f-acfa-4f8d-8993-4d30bd6cb8a4"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="ba7b7d07-9160-454c-a879-696a1d64dd2f" startPos="241" length="14">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="c273f7e4-3ea8-465c-b85e-2a1bcaed26b3" hyperlinkedGuiElement="e6635d94-bd51-41e5-9b9c-30404f65e84b"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="faef9422-daff-4731-9c0c-b1f9e6d5f152" startPos="257" length="21">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="89012f71-62c5-46f8-98a9-f6f5bba3dcc5" hyperlinkedGuiElement="585c5e75-08cb-4309-8d6a-0472458df57a"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+																<CommentTextHyperlink uuid="7a9cf90d-8bbf-4738-9fde-6ff52c8194fd" startPos="296" length="18">
+																	<ownedHyperlink>
+																		<Hyperlink2GuiElement uuid="547b0fef-ec20-466a-b1dd-b5e5d13c206d" hyperlinkedGuiElement="5cc6e167-643a-4105-a0e5-a379ab8a6e43"/>
+																	</ownedHyperlink>
+																</CommentTextHyperlink>
+															</textHyperlink>
+														</Comment>
+													</ownedComment>
+												</Region>
+											</region>
+										</StateMachine>
+									</ownedBehavior>
+									<nestedClassifier>
+										<Enumeration uuid="ee0d0cec-bb14-4455-8d22-b3ec0a2b97a0" name="TStateId" visibility="public" usedForCodeSyncronization="true">
+											<ownedLiteral>
+												<EnumerationLiteral uuid="3c4904ad-beb5-4e69-bd40-ddb575c83bc4" name="Complex_Root" visibility="public"/>
+												<EnumerationLiteral uuid="287d5194-0b7a-4849-a501-324ea8e1c7a5" name="Complex_MainRegion_S5" visibility="public"/>
+												<EnumerationLiteral uuid="ae488f39-7a6b-4494-8f2c-e2b59cdb6df5" name="Complex_MainRegion_S5_RegionA_S5A1" visibility="public"/>
+												<EnumerationLiteral uuid="ae32a9ef-13d3-45bb-b37f-288ace86f192" name="Complex_MainRegion_S5_RegionA_S5A2" visibility="public"/>
+												<EnumerationLiteral uuid="854a0108-c74e-4c34-aad8-4bb6075cb39d" name="Complex_MainRegion_S5_RegionA_S5A3" visibility="public"/>
+												<EnumerationLiteral uuid="5686cd44-fff4-4bce-9fb6-58fa6cf45896" name="Complex_MainRegion_S5_RegionB_S5B1" visibility="public"/>
+												<EnumerationLiteral uuid="67557275-b1b6-4852-81a6-75b4cf6b014d" name="Complex_MainRegion_S5_RegionB_S5B1_RegionB1_S5B11" visibility="public"/>
+												<EnumerationLiteral uuid="fcc27d47-9ad7-4385-b3c9-826d18554b84" name="Complex_MainRegion_S5_RegionB_S5B1_RegionB1_S5B12" visibility="public"/>
+												<EnumerationLiteral uuid="fbcb426f-5803-4a7a-84fe-c5aff89fc930" name="Complex_MainRegion_S5_RegionB_S5B2" visibility="public"/>
+												<EnumerationLiteral uuid="f3b26422-b4f6-4a5a-9c5a-4d5b7b25a61e" name="Complex_MainRegion_S5_RegionC_S5C1" visibility="public"/>
+												<EnumerationLiteral uuid="24cf6d99-4fc2-44f2-8a89-ad130ea8b39e" name="Complex_MainRegion_S5_RegionC_S5C1_RegionC1_S5C11" visibility="public"/>
+												<EnumerationLiteral uuid="ff8760d1-d7d2-43e6-9ecb-aed4dd1a4661" name="Complex_MainRegion_S5_RegionC_S5C1_RegionC1_S5C12" visibility="public"/>
+												<EnumerationLiteral uuid="75755b43-2c56-4cdd-bd8a-fe9d4845d90f" name="Complex_MainRegion_S5_RegionC_S5C1_RegionC1_S5C12_RegionC12_S5C121" visibility="public"/>
+												<EnumerationLiteral uuid="4895a36a-2ad1-47c5-8f31-286fc8580ef7" name="Complex_MainRegion_S5_RegionC_S5C1_RegionC1_S5C12_RegionC12_S5C121_RegionC121_S5C1211" visibility="public"/>
+												<EnumerationLiteral uuid="ad973e8d-5f72-45b1-a00a-1dd3dc4babad" name="Complex_MainRegion_S5_RegionC_S5C1_RegionC1_S5C12_RegionC12_S5C121_RegionC121_S5C1211_RegionC1211_S5C12111" visibility="public"/>
+												<EnumerationLiteral uuid="58a01a14-c4df-4b12-a16a-a3cadbfdef68" name="Complex_MainRegion_S5_RegionC_S5C1_RegionC1_S5C12_RegionC12_S5C121_RegionC121_S5C1211_RegionC1211_S5C12112" visibility="public"/>
+												<EnumerationLiteral uuid="1ace369a-79f6-47b2-add0-e1b81d6dc2cd" name="Complex_MainRegion_S5_RegionC_S5C2" visibility="public"/>
+												<EnumerationLiteral uuid="eb86a6aa-41f3-4ce9-904a-bbf20c5a9504" name="Complex_MainRegion_S1" visibility="public"/>
+												<EnumerationLiteral uuid="d22f20c4-fff0-4b2f-a00c-fb8428d98900" name="Complex_MainRegion_S2" visibility="public"/>
+												<EnumerationLiteral uuid="d7ac2881-f51b-4406-a5ca-924a4bb81b70" name="Complex_MainRegion_S3" visibility="public"/>
+												<EnumerationLiteral uuid="bab98aa4-7850-4631-a9fe-a7025a38a63b" name="Complex_MainRegion_S4" visibility="public"/>
+												<EnumerationLiteral uuid="db3cffc8-67bc-4eff-bbbb-7507c6995235" name="Complex_MainRegion_S4_Region4_S41" visibility="public"/>
+												<EnumerationLiteral uuid="04b51ee1-ccec-4dc0-b805-669fbba2f275" name="Complex_MainRegion_S4_Region4_S42" visibility="public"/>
+												<EnumerationLiteral uuid="2bc68206-217a-41c1-bb8e-1183e1df71b3" name="Complex_MainRegion_S4_Region4_FinalS4" visibility="public"/>
+											</ownedLiteral>
+										</Enumeration>
+										<Interface uuid="ea4842f7-139f-4c73-adc3-5e9115bf7869" name="IState" visibility="public" usedForCodeSyncronization="true">
+											<ownedOperation>
+												<Operation uuid="3844dacc-a1b8-4588-b1ae-03caee541300" name="getName" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="1433b4f1-8bcf-4eb1-aa46-8f6bc60675dc" name="return" direction="return" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="37bcce83-3f6d-441b-bc02-f2ce59891f02" name="getId" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="5619f1be-1067-40e8-8856-7763c2075fe1" name="return" direction="return" type="ee0d0cec-bb14-4455-8d22-b3ec0a2b97a0"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="ffc4a7f9-2e53-491b-a963-1b947376e28c" name="getRegions" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="1917e1ef-c0c1-4984-a2ff-a9a2f06332a0" name="return" direction="return" type="6977ba65-53e9-4d36-a73e-3ce264e92ca3">
+															<lowerValue>
+																<LiteralString uuid="1a9a4ff2-36fe-4b76-932e-aa4a97d6fd11" visibility="public" value="*"/>
+															</lowerValue>
+															<upperValue>
+																<LiteralString uuid="d3b74540-bf2f-4b76-86ad-27b0689e428d" visibility="public" value="*"/>
+															</upperValue>
+														</Parameter>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Interface>
+										<Interface uuid="6977ba65-53e9-4d36-a73e-3ce264e92ca3" name="IRegion" visibility="public" usedForCodeSyncronization="true">
+											<ownedOperation>
+												<Operation uuid="8a78ac28-3ee4-4b26-bda2-08cd7688ef3c" name="getName" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="0a2a253b-e62d-4cb3-86bf-6f442b5009d9" name="return" direction="return" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="9342a948-df57-4a81-b8bc-63ace989881c" name="getStates" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="8c5256f9-e608-4f76-ac55-74ffa611d101" name="return" direction="return" type="ea4842f7-139f-4c73-adc3-5e9115bf7869">
+															<lowerValue>
+																<LiteralString uuid="c4ecfd87-7bd4-4323-826b-3f0374ccef26" visibility="public" value="*"/>
+															</lowerValue>
+															<upperValue>
+																<LiteralString uuid="cab25b92-12ff-48d3-b38e-cf795ecba050" visibility="public" value="*"/>
+															</upperValue>
+														</Parameter>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="ec384489-7b00-4d67-a666-80e1a398f8a4" name="getCurrentState" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="21ef2cc9-433a-43e3-91e5-ba0824dc254a" name="return" direction="return" type="ea4842f7-139f-4c73-adc3-5e9115bf7869"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Interface>
+									</nestedClassifier>
+									<ownedOperation>
+										<Operation uuid="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a" name="Event1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="c858a99a-3968-49e9-92da-537f8c3e9561" name="Parameter1" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="da0b5b66-8bab-43c3-97f2-e80bb884f6d9" name="Event2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="79cb840f-aa8e-4899-a73e-de8722fc9631" name="Parameter1" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="0498e600-33bd-4006-bb70-d1536af056ad" name="Event3" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="85940d54-d2c5-43c9-bfcc-c48ea8b4468f" name="Parameter1" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="29684283-1fe8-48b3-8834-2323c6b4e05d" name="Event4" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="9426a30c-00df-4311-bb1a-c9ff95050cf1" name="Parameter1" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="86e15dc7-dbfa-4943-9543-92f1b7f4f5a1" name="CanGoS5" visibility="public" isAbstract="true">
+											<ownedParameter>
+												<Parameter uuid="c426a095-9585-4d39-86b9-e8eaa8cb17e3" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="cdcecd90-4bf7-4f2d-9233-b680930485b6" name="CanGoS2" visibility="public" isAbstract="true">
+											<ownedParameter>
+												<Parameter uuid="301de711-ba60-4217-8aca-261572dd7b6d" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="b6bf890f-9246-4609-bb19-435f0e2351be" name="OnEntryS5C1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="b02137b6-ac45-4d02-b463-848207ed9b43" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="714f5e7d-9c9b-42eb-bb2b-90324c2b9737" name="OnExitS5C1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="d22cb2e0-c7a2-4ca4-b074-c135efb23f45" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="426a3980-e7e5-40ef-b820-8500b19d4369" name="OnExitS5A1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="a5234fa0-ef23-4514-98be-0a52dfc8290a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="de63787b-e349-490d-ba23-f1a566e33f44" name="OnEntryS5A1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="b9b4cebb-77f6-4ca1-9a5b-50a8994b6ae7" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="74865ea3-2529-4b8d-a9ed-b11d28a787d4" name="OnDoS5A1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="01ae710c-116c-4546-b7e3-77a1522eb81a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="3675bbea-03d4-41f2-acc3-265f1ee760c3" name="OnEntryS5A2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="3ad5c2df-03a7-45ad-9e3e-38942be7196a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="733eb0de-be2a-4b76-99a5-3a7da5f70c10" name="OnDoS5A2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f75c4582-5e7a-4a23-b0ae-92eb5b415b99" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="0b614a3e-4ec3-4152-9a3f-52c2b0774fb0" name="OnExitS5A2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="82475981-e9b1-40d7-952c-0b668400d325" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="20d0b024-06ac-45c6-80da-55f8bb4508b1" name="OnEntryS5A3" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="070bbd8c-df2a-49b1-80bd-84d66fe4fc92" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="1fa3f50a-99c5-47a3-b344-0a9a44e21413" name="OnExitS5A3" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="34ffff13-358e-4392-894a-67751be09a9a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="89874724-7237-41e8-a767-c49884f85107" name="OnDoS5A3" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f6e6fd0c-db95-4e5f-b9dd-419d20e2f87c" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="51d59249-823e-4f47-9a0f-ed9c5934eb98" name="OnEntryS5C11" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="526dfa75-6f6c-4e8f-9097-e2e2b666dd57" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="6728244a-7aa4-42f6-957b-0f22b4d760ce" name="OnExitntryS5C11" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="8e764417-c84c-4b2d-9303-b309264f7511" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="30e64a47-9532-4384-bb49-4fbf73038cf0" name="OnExitS5C11" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="d25f2e24-4492-4ba7-8cb5-bc2e93ab4c6f" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="5119d20d-73f5-4bb2-b193-d23d8bd2bef8" name="OnEntryS5B2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="d59da647-c1d2-42af-910b-8439778e5781" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="3e556b26-52ff-4150-b9c0-2df36b790dc4" name="OnExitS5B2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="3a88bbe7-9043-4d53-bab1-2fc52c3898c2" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="24e2519a-c82a-4d7c-9426-c251eeace529" name="OnEntryS5B1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="891fcfe3-8b34-4106-9f72-d188712dfbf5" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="a994e7cf-fa3d-4acc-b372-d281f8669d74" name="OnExitS5B1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="0606da92-c8e1-4369-8662-aa16e2e5310b" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="3be417cd-8631-42d0-ab40-9fc5e16c5b3f" name="OnEntryS5B11" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="38b2489f-4f5d-41b6-88ea-7df0960a656a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="de41df62-fe3f-43c7-99c4-cf4781e8d4d0" name="OnExitS5B11" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="6b6ca008-ce6e-49ac-85c9-d672cb829625" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="21e9ca2c-b823-4667-995e-3600912a6cf9" name="OnEntryS5B12" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="8b61b086-d02a-4c0c-a28c-546ffeeda878" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="9bc4e3d6-1c81-42d9-ac4b-daaaf842e5c1" name="OnExitS5B12" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="451f1a85-c1b8-4852-b860-c3625660d37c" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="853da7f9-4249-4c9e-a81d-9533d75a0fb4" name="OnEntryS5C1211" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="cc667c62-b476-48c4-8710-9bf35c006b96" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="01537e25-9dfa-478e-8040-5730be0f9527" name="OnExitS5C1211" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="30887aa3-fbc6-4625-97a1-ec909d9faf81" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="1e660483-f0c9-4233-8211-5b074cf09325" name="OnEntryS5C12111" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="0f4d860d-67c6-4ce6-8488-a0efba8d2b98" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="aeee40e0-d2de-4597-a875-88b27c41e027" name="OnExitS5C12111" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f06d719a-e1b1-44cd-ac20-2bf83f909e32" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="e62763f9-d204-4b3c-a749-a74cd02bea1b" name="OnEntryS5C12112" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="c7c7e4ca-5e6a-4927-99eb-d7ef337e3190" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="db3ef240-d1c3-44c2-9f55-6041ccb71149" name="OnExitS5C12112" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="964bb800-7769-48af-aca0-2992a41ab137" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="4f25347f-ec63-4274-9f8a-b9f63578feaf" name="OnEntryS5C121" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="abbc9934-4d8a-4cf2-a93b-08a812df1aae" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="0203cdc9-db88-4604-b760-ccba60f56249" name="OnExitS5C121" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="89854b84-d926-46be-9dff-1559c8d2c139" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="3682710e-609c-412d-8cf1-f318cfb7d6ff" name="OnEntryS5C12" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="4536a0ca-a896-4fd8-a024-2bd520f3670b" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="48eb7b42-91b3-4138-b14f-e45153e1d48d" name="OnExitS5C12" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="b64db79f-e8e5-48ef-bef7-75e2d3feed04" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="8e3a945b-755d-4fb6-8ab4-bce576d52b3b" name="OnEntryS5C2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="5742ddfe-6e45-4678-8295-edc72027826b" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="f5d1390a-9f91-4cc4-ba4f-bf1d0de7ea5d" name="OnExitS5C2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="642ae253-7907-42da-a9d1-8a1c7161c4dd" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="a888b6cd-f221-40d2-825c-67bfac044a54" name="OnEntryS41" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="4ad9b970-10e8-42c2-b3e5-ed7af2c57f21" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="2e779623-3b41-4905-9dee-aa55c5a0d1db" name="OnExitS41" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="44e45c92-88c6-4161-b3b0-77ff029e1334" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="b9f92ea3-f894-420b-a02d-91a5f8b54dab" name="OnEntryS42" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f00c9592-fa57-4990-b2da-51ca14f087f3" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="b5b3f02a-f931-4d29-b513-ca0d3d53c342" name="OnExitS42" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="280dc261-9271-4040-ba8b-84a7d4b0f0ae" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="5b4d630a-42a2-462f-94b1-6b9d83c3a06d" name="OnEntryS4" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="0f37908b-3ded-4e98-be23-833f7155b857" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="09ab5544-75a1-4b66-bade-c01c86b2f1d0" name="OnExitS4" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="e127b233-8e81-4c0f-9ea1-0294ffa13172" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="a7a6b93b-2d4b-419b-81cd-2c29e22091a1" name="OnEntryS2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="3aafcb74-44ae-4078-991d-4f593ab5e8c4" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="cdb09bb5-9cff-4e5f-b7ea-3a5c797c7c22" name="OnExitS2" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="8d826c9a-aa64-43b9-a4ff-766124da5071" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="9c372fbf-c2b3-4927-ab8f-f85d1ce65401" name="OnEntryS3" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="ba28c9c2-6b63-44e8-8326-7fb61d3d1b2a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="c81175fe-b3a8-48ef-ab1c-200f191074d1" name="OnExitS3" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="a43f6fec-249a-4fbd-bbd9-556b714c31ad" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="538f7110-f548-40f2-9188-506e265408e9" name="OnEntryS1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="628a5696-641f-4221-af94-d8fb2e674dd3" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="12be8073-eaa6-4d31-8768-381f3558e097" name="OnExitS1" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f77bd6c2-336c-484d-b088-0df20c69b02b" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="6588bfe5-321c-4098-8ab9-94190fa8ce3a" name="OnEntryS5" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="4e9613cb-5cc9-452e-a02a-da5516a43cfa" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="4d5f733c-6149-45ea-90c2-5c024490927a" name="OnExitS5" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="dddfd823-c62d-4247-ba97-9fc860984ad1" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="8dd245d6-7ad8-45c8-98ef-aa6db9409db4" name="OnEffectS5_S4" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="c0a41162-3ea5-4dbb-9465-f6ab8f5f3a28" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="b42ad5cb-880e-4f04-802f-f6e7e823c0a6" name="OnEffectS4_S5" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="ba99f67e-b1d0-4a63-9d4d-b64e5f680297" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="9d4619c5-fc45-4e43-a19b-37bca3fd8c0b" name="OnEffectLeaveRegionA" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="a831c3cc-843b-404f-9b2e-48046f911787" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="9b5c24be-22e7-4dc6-b817-40561ca133a7" name="OnEffectLeaveRegionB" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="c0874609-d7b9-4ecb-bf4d-8c6be3001a24" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="1434e02e-c204-453c-ae1b-0190c89ec051" name="OnEffectLeaveRegionC" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="0eabbe08-2d3f-49f6-b3bc-a88fbfdd2234" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="3f94e13c-83d2-4988-af45-c400f2a6462f" name="OnEffectLeaveJoin" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f958dd7b-0ed2-4c6c-8b95-8ead636cf185" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="75e30d12-93b5-4d62-ac13-decfb0bbf221" name="OnDebugMessage" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="6aabd888-94ab-471c-a067-247f27d1b6c1" name="str" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+												<Parameter uuid="10cc0893-0f81-4010-bd53-394e1368c4d9" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<CallEvent uuid="3402be4d-125e-4ab4-b7ed-0159124c1cad" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="320d6953-4bb4-4100-bceb-37a25cacc9d7" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="2fdbb1c7-bfc6-4113-958e-72c1ff19c70c" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="98a409cd-721f-44e5-87be-b7da1a8bb55c" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="e951ba03-ab2d-4d3d-baa0-be6a07fbcab7" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="a9f31f92-0833-4b5d-9df0-29d86cc12234" visibility="public" operation="0498e600-33bd-4006-bb70-d1536af056ad"/>
+								<CallEvent uuid="7c77216e-ec76-4c80-8d25-deb63e445661" visibility="public" operation="da0b5b66-8bab-43c3-97f2-e80bb884f6d9"/>
+								<CallEvent uuid="2b0773eb-ac39-4cb7-90fc-78431c548286" visibility="public" operation="0498e600-33bd-4006-bb70-d1536af056ad"/>
+								<CallEvent uuid="79094765-30b9-4d79-bac5-b75c511b264a" visibility="public" operation="da0b5b66-8bab-43c3-97f2-e80bb884f6d9"/>
+								<CallEvent uuid="533a9641-c1f4-4c05-b4bf-ea1e6bace97f" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="86bba6c0-60a0-4151-aba0-5afb16628a9f" visibility="public" operation="29684283-1fe8-48b3-8834-2323c6b4e05d"/>
+								<CallEvent uuid="3b0fa562-d2fe-42a2-82bd-c245c17cfaa8" visibility="public" operation="29684283-1fe8-48b3-8834-2323c6b4e05d"/>
+								<CallEvent uuid="c3b97f3c-8d49-4afe-825a-1520c7f32430" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="213bc1fb-30a0-43d7-8b23-0e362100704d" visibility="public" operation="29684283-1fe8-48b3-8834-2323c6b4e05d"/>
+								<CallEvent uuid="16f22ebc-b12e-4303-af53-ced83a51a2be" visibility="public" operation="29684283-1fe8-48b3-8834-2323c6b4e05d"/>
+								<CallEvent uuid="03264ca9-1d4b-4c6c-8c46-aee1f4a914f4" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="14dbc046-f1fd-4d2f-b937-27a6707a67fe" visibility="public" operation="da0b5b66-8bab-43c3-97f2-e80bb884f6d9"/>
+								<CallEvent uuid="59a2d87e-b2ce-4a72-8087-6abf843502a7" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="6c7ee0e1-251e-4e56-b053-0d45d9dd8209" visibility="public" operation="0498e600-33bd-4006-bb70-d1536af056ad"/>
+								<CallEvent uuid="e87ec3fa-88f9-425b-8092-ff98dbc6af45" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="4701bebe-0b14-4406-891a-d1493b26cce6" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="94552148-f98f-413d-9165-8b21b1cecc93" visibility="public" operation="4762e4b9-29e0-4df6-8dbb-90d5bf208a7a"/>
+								<CallEvent uuid="c22330f1-d9fe-4eb0-9fb0-fb8a340ef070" visibility="public" operation="0498e600-33bd-4006-bb70-d1536af056ad"/>
+								<CallEvent uuid="4f6ee17e-9a8d-40ae-bc45-d67b40f12f44" visibility="public" operation="0498e600-33bd-4006-bb70-d1536af056ad"/>
+							</packagedElement>
+						</Package>
+						<Association uuid="66008097-c496-407c-83de-a00e730d41e4" visibility="public">
+							<memberEnd idref="895622e6-7a60-4575-a915-eae7a0013a04"/>
+							<ownedEnd>
+								<Property uuid="97bbbc61-abd5-41e8-aa96-d5fb22014471" type="97491551-1a94-4975-8e70-cbc523f03744"/>
+							</ownedEnd>
+						</Association>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication uuid="9855a587-138f-44a0-875f-6541561adcb9" appliedProfile="00000102-7510-11d9-86f2-000476a22f44"/>
+					</profileApplication>
+				</Package>
+				<Profile href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44" editable="false"/>
+			</packagedElement>
+		</Package>
+	</Model>
+	<Diagrams>
+		<RootElement uuid="00000002-7510-11d9-86f2-000476a22f44">
+			<guiRootGuiDiagram>
+				<StateMachineDiagram uuid="916c5785-3203-4630-8264-93ac6b1969a4" name="ComplexSTMDiagram" guiDiagramLinkedOwner="3110cf10-af53-4eba-85f8-1e47f633175f">
+					<style snaptogrid="0"/>
+					<guiDiagramGuiLink>
+						<ConstrainedNode uuid="344669f6-745b-4c08-9963-1aee555c354d" constrainingAreaIndex="-1" guiLink_Element="565e8736-12e6-4a8a-ad7c-d17aa3f94829">
+							<nodeRect Left="304" Top="161" Right="324" Bottom="181"/>
+						</ConstrainedNode>
+						<SeparatedNodeLink uuid="987110d2-07c9-4200-85d7-e74491188748" guiLink_Element="7fe41dd9-b79e-49c4-b0ee-b78bda54e2ae">
+							<style autosize="0"/>
+							<nodeRect Left="464" Top="16" Right="1155" Bottom="980"/>
+							<Separators>
+								<separator position="165"/>
+								<separator position="373"/>
+							</Separators>
+							<guiNodeLinkGuiNodeLink>
+								<SeparatedNodeLink uuid="5eea7de8-a670-49bc-9b77-6f47f04b7275" guiLink_Element="54220014-67bf-4c66-9fb1-997ac5e1930b">
+									<nodeRect Left="521" Top="88" Right="655" Bottom="175"/>
+								</SeparatedNodeLink>
+								<ConstrainedNode uuid="11b64d5a-0ee4-4500-8c5f-14bf7e97673f" constrainingAreaIndex="-1" guiLink_Element="7f27dbcc-1518-41e6-8467-9d8fa04be7ad">
+									<nodeRect Left="478" Top="96" Right="498" Bottom="116"/>
+								</ConstrainedNode>
+								<SeparatedNodeLink uuid="99ecb944-0930-4fe9-82f0-81fa2655e4f6" guiLink_Element="d694d11f-96ef-483f-a633-b881a7ffa4d3">
+									<nodeRect Left="747" Top="88" Right="881" Bottom="175"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="4b12fc45-a505-45ad-93b6-d7ab2609d32d" guiLink_Element="f6526f8e-6e89-4478-8a22-ed7eb4edeace">
+									<style autosize="0"/>
+									<nodeRect Left="521" Top="201" Right="914" Bottom="378"/>
+									<guiNodeLinkGuiNodeLink>
+										<ConstrainedNode uuid="341bf1c9-2b1e-4817-9900-4a0018f376e1" constrainingAreaIndex="-1" guiLink_Element="d8af304f-096d-4e7a-baee-486e633a3dbc">
+											<nodeRect Left="531" Top="277" Right="551" Bottom="297"/>
+										</ConstrainedNode>
+										<SeparatedNodeLink uuid="f095d2a6-85bd-4a1d-85f7-56eef6d04636" guiLink_Element="58d774cd-0a6f-4d00-bcc3-ceb58b83a00f">
+											<nodeRect Left="561" Top="291" Right="699" Bottom="360"/>
+										</SeparatedNodeLink>
+										<SeparatedNodeLink uuid="f6af0e52-a10e-4600-b1d7-430108acd692" guiLink_Element="8b9c8d52-b5ec-4f17-984b-354c4691bc7a">
+											<nodeRect Left="755" Top="289" Right="894" Bottom="358"/>
+										</SeparatedNodeLink>
+									</guiNodeLinkGuiNodeLink>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="e673126b-a502-4238-ad6e-2096c856acc3" guiLink_Element="172c091c-cea8-41eb-a3f5-862a32c6566b">
+									<nodeRect Left="962" Top="88" Right="1096" Bottom="175"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="0e54e920-c475-4ead-b3ae-0aadb443c05c" guiLink_Element="8b8cad3b-7494-4a6e-ae33-a8116a630214">
+									<nodeRect Left="963" Top="210" Right="1096" Bottom="279"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="1ffb6a49-3a0d-4d3f-af70-1e4a923d9249" guiLink_Element="f259f123-5f99-45cd-8e4c-36cd34d27de4">
+									<style autosize="0"/>
+									<nodeRect Left="521" Top="413" Right="1004" Bottom="970"/>
+									<guiNodeLinkGuiNodeLink>
+										<ConstrainedNode uuid="22789b05-26eb-4c3c-a1b3-e312d4cf2eae" constrainingAreaIndex="-1" guiLink_Element="72956482-f938-49c4-8f2d-91a5597bbbe7">
+											<nodeRect Left="541" Top="489" Right="561" Bottom="509"/>
+										</ConstrainedNode>
+										<SeparatedNodeLink uuid="be4ac828-53f0-4cb8-8891-84a2d660f509" guiLink_Element="f2abe292-6f8a-4af7-86fa-9b24898a76ee">
+											<nodeRect Left="605" Top="481" Right="743" Bottom="550"/>
+										</SeparatedNodeLink>
+										<SeparatedNodeLink uuid="54f5b342-85ce-4b11-bc0f-2bce569d22c2" guiLink_Element="04dedd29-ae7d-434c-9066-df2122ce5f7c">
+											<style autosize="0"/>
+											<nodeRect Left="537" Top="570" Right="994" Bottom="960"/>
+											<guiNodeLinkGuiNodeLink>
+												<SeparatedNodeLink uuid="3455ad59-a8ba-49c6-ad24-b733f9d2b88e" guiLink_Element="7595bc3a-be3a-4abf-a094-870df2eb374f">
+													<style autosize="0"/>
+													<nodeRect Left="579" Top="654" Right="971" Bottom="948"/>
+													<guiNodeLinkGuiNodeLink>
+														<SeparatedNodeLink uuid="a2de9fe3-2598-4ac9-b89a-bc7ea10554ed" guiLink_Element="69565033-dfc7-4e3c-9d3c-fe4c45b67bcc">
+															<style autosize="0"/>
+															<nodeRect Left="623" Top="744" Right="961" Bottom="938"/>
+															<guiNodeLinkGuiNodeLink>
+																<SeparatedNodeLink uuid="87c2bc4b-6117-4adc-831e-54c48988e3f8" guiLink_Element="baf62b26-b4b4-4384-9c4c-01b8fbd438e7">
+																	<nodeRect Left="638" Top="859" Right="793" Bottom="928"/>
+																</SeparatedNodeLink>
+																<ConstrainedNode uuid="e43da0c0-9c78-4038-96f4-f52fbc4bf6db" constrainingAreaIndex="-1" guiLink_Element="dda3feef-badd-4e8e-989b-be584e350b86">
+																	<nodeRect Left="633" Top="819" Right="653" Bottom="839"/>
+																</ConstrainedNode>
+																<SeparatedNodeLink uuid="00fc41d4-aedc-46ee-a2bd-27d4f7e8cb9e" guiLink_Element="1b1b874b-72d9-4626-ac24-f5755ce4013c">
+																	<nodeRect Left="795" Top="808" Right="951" Bottom="877"/>
+																</SeparatedNodeLink>
+															</guiNodeLinkGuiNodeLink>
+														</SeparatedNodeLink>
+														<ConstrainedNode uuid="25fe5273-4d45-4b95-ac24-aefd17dfd73d" constrainingAreaIndex="-1" guiLink_Element="f23708c1-581b-4130-8a94-a5eed9b32be8">
+															<nodeRect Left="590" Top="731" Right="610" Bottom="751"/>
+														</ConstrainedNode>
+													</guiNodeLinkGuiNodeLink>
+												</SeparatedNodeLink>
+												<ConstrainedNode uuid="8616c9e0-9ceb-4343-a883-527f035cb42a" constrainingAreaIndex="-1" guiLink_Element="a2521946-0272-4b45-9f91-31bd1dc8c462">
+													<nodeRect Left="549" Top="644" Right="569" Bottom="664"/>
+												</ConstrainedNode>
+											</guiNodeLinkGuiNodeLink>
+										</SeparatedNodeLink>
+									</guiNodeLinkGuiNodeLink>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="70ecf8eb-ccf9-4a06-9dbc-8120cae84e78" guiLink_Element="2c5cc135-8225-4e01-8b6c-c9a6e31573fb">
+									<nodeRect Left="1011" Top="484" Right="1144" Bottom="553"/>
+								</SeparatedNodeLink>
+								<ConstrainedNode uuid="5cc6e167-643a-4105-a0e5-a379ab8a6e43" constrainingAreaIndex="-1" guiLink_Element="57ceb48e-81de-4895-bf84-ad44f7d4ed57">
+									<nodeRect Left="478" Top="676" Right="499" Bottom="697"/>
+								</ConstrainedNode>
+								<ConstrainedNode uuid="585c5e75-08cb-4309-8d6a-0472458df57a" constrainingAreaIndex="-1" guiLink_Element="8a77a3fd-7cb9-4485-9911-75229c672ee9">
+									<nodeRect Left="478" Top="210" Right="498" Bottom="230"/>
+								</ConstrainedNode>
+							</guiNodeLinkGuiNodeLink>
+						</SeparatedNodeLink>
+						<ConstrainedNode uuid="cf662185-cbc4-43fc-8272-c3f05de9892e" constrainingAreaIndex="-1" guiLink_Element="50b62800-8a3f-4042-aafd-7debd4f0eddc">
+							<nodeRect Left="295" Top="359" Right="327" Bottom="391"/>
+						</ConstrainedNode>
+						<ConstrainedNode uuid="807489c4-0b04-49c2-8ff1-63965625c765" constrainingAreaIndex="-1" guiLink_Element="ecfab4e9-1a7e-4ba4-8b0a-571455c9bc2e">
+							<nodeRect Left="128" Top="246" Right="148" Bottom="266"/>
+						</ConstrainedNode>
+						<ConstrainedNode uuid="19a86649-4723-4a44-a788-93cbfae6699a" constrainingAreaIndex="-1" guiLink_Element="d344462e-a5cf-4ee4-a785-f511ddeeacbe">
+							<style autosize="0"/>
+							<nodeRect Left="1295" Top="105" Right="1305" Bottom="648"/>
+						</ConstrainedNode>
+						<ConstrainedNode uuid="d4fdf07f-046d-40f9-a222-1c0e6f45bc28" constrainingAreaIndex="-1" guiLink_Element="3cdf5654-bbeb-4e77-979e-777ab472747a">
+							<style autosize="0"/>
+							<nodeRect Left="421" Top="105" Right="431" Bottom="648"/>
+						</ConstrainedNode>
+						<SeparatedNodeLink uuid="11417314-ec0b-4dd7-9741-9bc9a748c4b6" guiLink_Element="3f9e4fc8-8c40-41d4-aeb6-c0d9fb2234b3">
+							<nodeRect Left="242" Top="225" Right="362" Bottom="294"/>
+						</SeparatedNodeLink>
+						<LineLink uuid="a3b224cc-16af-4865-9243-bfba2b888e8c" guiLink_Element="d1f5f5d4-82d9-4a06-8072-ebc3476f8c1f" guiLineLink_LineBegin="344669f6-745b-4c08-9963-1aee555c354d" guiLineLink_LineEnd="11417314-ec0b-4dd7-9741-9bc9a748c4b6">
+							<style linestyle="1"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="55376c37-084d-4118-8963-9fa1acf6db4f">
+									<pos X="314" Y="203"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="5efc5a92-e6cb-4cbd-a80c-8d1a08a22d26" alignment="3">
+									<pos X="314" Y="181"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="1bef573e-82f4-4226-9d34-e44608797541" alignment="2">
+									<pos X="314" Y="225"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="862afbc1-6a14-41c2-9429-a53d9bd06ea8" guiLink_Element="dfcb2e3b-3d23-4404-8837-ff458803465e" guiLineLink_LineBegin="11b64d5a-0ee4-4500-8c5f-14bf7e97673f" guiLineLink_LineEnd="5eea7de8-a670-49bc-9b77-6f47f04b7275">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="6da6a566-6776-4706-8feb-074f75a9b9cb">
+									<pos X="508" Y="111"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="ee3f9e46-b19d-48e4-87bd-3a340fc8dac3" alignment="4">
+									<pos X="497" Y="108"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="528b078c-a148-49dc-a043-f19c9a979687" alignment="1">
+									<pos X="521" Y="116"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="158be183-0382-4007-adb5-106c13fc2d2d" guiLink_Element="ab534b3c-7374-4323-8cdc-05b3eddc37de" guiLineLink_LineBegin="5eea7de8-a670-49bc-9b77-6f47f04b7275" guiLineLink_LineEnd="99ecb944-0930-4fe9-82f0-81fa2655e4f6">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="28d573a2-c620-48e4-a852-7ac4aed71507">
+									<pos X="701" Y="137"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="7836b83f-7ec6-4c86-aedf-49831bfa5f85" textLabel="23" guiTextLabel_Element="ab534b3c-7374-4323-8cdc-05b3eddc37de">
+											<pos X="-25" Y="-21"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c094ba67-4bb8-421f-a37c-d4312ee6010d" alignment="4">
+									<pos X="655" Y="137"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="e28a07e9-07ce-42d2-9e86-5e65ad1a67ad" alignment="1">
+									<pos X="747" Y="137"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="7d70fced-731e-4676-a64f-fd969ff917a7" guiLink_Element="7b8f0b04-62d1-4f3a-bc83-3c8d539f3042" guiLineLink_LineBegin="99ecb944-0930-4fe9-82f0-81fa2655e4f6" guiLineLink_LineEnd="e673126b-a502-4238-ad6e-2096c856acc3">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="a046f822-454d-42d5-8751-13162dde7b87">
+									<pos X="921" Y="139"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="2052dd7b-c618-48b9-8f1e-90a854d3ac4b" textLabel="23" guiTextLabel_Element="7b8f0b04-62d1-4f3a-bc83-3c8d539f3042">
+											<pos X="-20" Y="-22"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="50bf34c7-0706-42ac-9dd7-7532f862e6b9" alignment="4">
+									<pos X="881" Y="139"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="df4e723d-a4d3-4f5b-8e66-12632ab2b85a" alignment="1">
+									<pos X="962" Y="139"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="54f96d85-ba13-40b9-8523-83f4e3175906" guiLink_Element="cf2f1477-688e-459d-9015-a21f3af72436" guiLineLink_LineBegin="341bf1c9-2b1e-4817-9900-4a0018f376e1" guiLineLink_LineEnd="f095d2a6-85bd-4a1d-85f7-56eef6d04636">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="abe00d5c-64c2-4311-9b12-8071ee2e572d">
+									<pos X="556" Y="296"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="78bfa16d-9612-4597-9e49-4d805d8cd03d" alignment="3">
+									<pos X="549" Y="292"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="a838003d-aef8-426a-9d74-abdfc1265a42" alignment="2">
+									<pos X="563" Y="300"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="3f73d654-0aa5-41d9-b0a2-0ab1a9dadad0" guiLink_Element="cc9f985b-96ff-4863-a8a0-c94f72bba3f5" guiLineLink_LineBegin="f095d2a6-85bd-4a1d-85f7-56eef6d04636" guiLineLink_LineEnd="f6af0e52-a10e-4600-b1d7-430108acd692">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="9abf1bec-c344-4048-97fc-513877c92d1a">
+									<pos X="727" Y="326"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="15c22353-fed2-4b9d-a128-d4bfeed710b0" textLabel="23" guiTextLabel_Element="cc9f985b-96ff-4863-a8a0-c94f72bba3f5">
+											<pos X="-21" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="a210fbd8-e3ef-4d60-b95f-52f5b5dece40" alignment="4">
+									<pos X="699" Y="326"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="1ee2b9fe-8b65-4bb9-b96a-b92ebd310031" alignment="1">
+									<pos X="755" Y="326"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="1d73153c-73c5-4ea0-886b-314fc085f32f" guiLink_Element="b257239a-c846-49e3-9543-bf1b37fc9337" guiLineLink_LineBegin="f6af0e52-a10e-4600-b1d7-430108acd692" guiLineLink_LineEnd="0e54e920-c475-4ead-b3ae-0aadb443c05c">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="3e745d1d-d3c2-4a86-a91c-fd6a3159613f">
+									<pos X="982" Y="322"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="21cf1524-b20c-416b-87ab-5f8ef4f56a04" textLabel="23" guiTextLabel_Element="b257239a-c846-49e3-9543-bf1b37fc9337">
+											<pos X="-15" Y="-18"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="1ba35a5b-1f09-4de4-9426-c060729e8451" alignment="4">
+									<pos X="894" Y="322"/>
+								</EndWaypoint>
+								<Waypoint uuid="f3f2e29b-e6f7-473d-acf4-3a2f1d5bcd15">
+									<pos X="1027" Y="322"/>
+								</Waypoint>
+								<EndWaypoint uuid="fea704b9-34c8-4881-a87c-7d40309581d1" alignment="1">
+									<pos X="1027" Y="279"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="e0d9660b-ab88-4137-bd91-3804d98c471e" guiLink_Element="606272ac-33be-407c-9e20-d69e5f57cbe1" guiLineLink_LineBegin="22789b05-26eb-4c3c-a1b3-e312d4cf2eae" guiLineLink_LineEnd="be4ac828-53f0-4cb8-8891-84a2d660f509">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="26940246-b10e-4b0f-ae41-32802f48fa15">
+									<pos X="582" Y="503"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="57cfb230-aa00-4f94-91ec-e969efa79d60" alignment="3">
+									<pos X="560" Y="500"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="5464df48-036b-4184-9c3e-6be5dd6ddb97" alignment="2">
+									<pos X="605" Y="508"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="1da1cbc5-00b9-473d-89cd-531313b8512d" guiLink_Element="75cfa135-dc74-4c45-acb6-cb35bd7f79d7" guiLineLink_LineBegin="be4ac828-53f0-4cb8-8891-84a2d660f509" guiLineLink_LineEnd="54f5b342-85ce-4b11-bc0f-2bce569d22c2">
+							<style linestyle="1"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="5c762a2a-5733-4802-b949-3f0de3c79aee">
+									<pos X="817" Y="514"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="9ac7fc11-3bdf-4442-8c66-fe4276130f45" textLabel="23" guiTextLabel_Element="75cfa135-dc74-4c45-acb6-cb35bd7f79d7">
+											<pos X="-27" Y="-21"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="a90ff7e8-30d8-442a-92ec-cd9677f2dc9f" alignment="3">
+									<pos X="743" Y="514"/>
+								</EndWaypoint>
+								<Waypoint uuid="a614febe-6405-44ec-b1fc-01757f722a6d">
+									<pos X="836" Y="514"/>
+								</Waypoint>
+								<EndWaypoint uuid="7cac3f8a-ac4b-47ca-905d-c2766698a537" alignment="2">
+									<pos X="836" Y="570"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="12b90d22-aa6c-4623-b398-033ebc33f86b" guiLink_Element="39cc6eff-2261-4701-87f8-93eca36194aa" guiLineLink_LineBegin="d4fdf07f-046d-40f9-a222-1c0e6f45bc28" guiLineLink_LineEnd="54f5b342-85ce-4b11-bc0f-2bce569d22c2">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="a82ff4a9-97f0-4caf-8457-247dac6289e2">
+									<pos X="484" Y="604"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="f9425154-6b6a-4622-ba79-dc18ccbe3dde" alignment="4">
+									<pos X="431" Y="604"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="0a4539a9-bf67-4383-801e-d86548c8c850" alignment="1">
+									<pos X="537" Y="604"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="5035cfdd-497e-4b89-9dbb-0f4196c5b5c7" guiLink_Element="7818cf8c-9d6f-4742-872e-0a3289386256" guiLineLink_LineBegin="d4fdf07f-046d-40f9-a222-1c0e6f45bc28" guiLineLink_LineEnd="f095d2a6-85bd-4a1d-85f7-56eef6d04636">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="8d181bcc-587b-475a-a2d0-20a0553e4799">
+									<pos X="496" Y="326"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="7bc8f0a8-ee01-46c6-841c-15ac40e5bbb8" alignment="4">
+									<pos X="431" Y="326"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="ddb4b570-0d97-475e-985a-8e9d162dd540" alignment="1">
+									<pos X="561" Y="326"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="18819dd6-c873-43cb-82a9-7cf8977f2dd5" guiLink_Element="beb5acf1-e068-4472-bff4-dce43c5a3d5f" guiLineLink_LineBegin="d4fdf07f-046d-40f9-a222-1c0e6f45bc28" guiLineLink_LineEnd="5eea7de8-a670-49bc-9b77-6f47f04b7275">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="0a5bfe19-48f6-484e-91b4-b3ca94480f29">
+									<pos X="476" Y="135"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="d7742897-20dd-44c0-a13c-177add9d03cc" alignment="4">
+									<pos X="431" Y="135"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="26997055-595c-4aea-9864-02b757f766b8" alignment="1">
+									<pos X="521" Y="135"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="ea5f5e34-9d00-40d1-8f68-0087617a647b" guiLink_Element="afcf17fe-e9e3-4a6a-b36d-e853d6574bd5" guiLineLink_LineBegin="11417314-ec0b-4dd7-9741-9bc9a748c4b6" guiLineLink_LineEnd="d4fdf07f-046d-40f9-a222-1c0e6f45bc28">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="4f5d5b74-d752-48c1-9724-cb6640e6261c">
+									<pos X="391" Y="257"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="512d5a3d-7862-4dbc-b9c9-3daafd537cb0" textLabel="23" guiTextLabel_Element="afcf17fe-e9e3-4a6a-b36d-e853d6574bd5">
+											<pos X="-22" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="4056cb57-2c64-413f-8407-b3cba943890b" alignment="4">
+									<pos X="362" Y="257"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="8b9298c1-8a45-4576-90ec-3d9c0a18304a" alignment="1">
+									<pos X="421" Y="257"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="6a0c2c9e-3d62-4ac4-8037-1e611f0a4328" guiLink_Element="ec3be2d0-06c9-4572-a56f-31176dc76c95" guiLineLink_LineBegin="54f5b342-85ce-4b11-bc0f-2bce569d22c2" guiLineLink_LineEnd="70ecf8eb-ccf9-4a06-9dbc-8120cae84e78">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="b4d86883-d08a-4e7a-989d-947e46c25737">
+									<pos X="1059" Y="601"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="0dad941a-186c-4ce7-aa72-173b008031f7" textLabel="23" guiTextLabel_Element="ec3be2d0-06c9-4572-a56f-31176dc76c95">
+											<pos X="-31" Y="-18"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="d9cb02cb-feba-4a09-8129-501b89362040" alignment="4">
+									<pos X="994" Y="601"/>
+								</EndWaypoint>
+								<Waypoint uuid="8798c4f9-68bc-45c6-8a53-fdc522076294">
+									<pos X="1076" Y="601"/>
+								</Waypoint>
+								<EndWaypoint uuid="42ec3e1d-6880-4b89-b357-c469964390b1" alignment="1">
+									<pos X="1076" Y="553"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="9d61e44d-6345-43c7-8eac-9fef9a148b9d" guiLink_Element="243411a1-24f7-4532-ae6d-38549ad7ff74" guiLineLink_LineBegin="e673126b-a502-4238-ad6e-2096c856acc3" guiLineLink_LineEnd="19a86649-4723-4a44-a788-93cbfae6699a">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="acaab491-cdbe-4ba9-ab1e-d5ea8ace5589">
+									<pos X="1195" Y="140"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="ad0857ed-082e-4be1-86cd-f67b2dc68cc3" textLabel="23" guiTextLabel_Element="243411a1-24f7-4532-ae6d-38549ad7ff74">
+											<pos X="-35" Y="-19"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="209ebf81-1640-491f-bf8c-2eb7e9d2b02a" alignment="3">
+									<pos X="1096" Y="140"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="813ec17b-913f-45b2-8f5b-7dda47fbeac8" alignment="2">
+									<pos X="1295" Y="140"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="b2a23ace-ec7b-4857-a5b4-9496aeee7f73" guiLink_Element="ea9b7861-853d-4aef-b02c-7a7409c5fb31" guiLineLink_LineBegin="0e54e920-c475-4ead-b3ae-0aadb443c05c" guiLineLink_LineEnd="19a86649-4723-4a44-a788-93cbfae6699a">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="4e86d6d5-9a22-41a9-ab5e-1f40a2af3354">
+									<pos X="1195" Y="246"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="28de6de1-de37-446b-ab37-48f95a04a30a" textLabel="23" guiTextLabel_Element="ea9b7861-853d-4aef-b02c-7a7409c5fb31">
+											<pos X="-35" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="dd73ecb9-266d-476b-bc4b-9eda54053446" alignment="4">
+									<pos X="1096" Y="246"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="77967e99-7368-4d6f-878b-8ecdc8470827" alignment="1">
+									<pos X="1295" Y="246"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="f5cf6533-8adb-46b5-a423-70821552f81a" guiLink_Element="927f2461-5a17-43ae-ba80-dc5db582abd5" guiLineLink_LineBegin="70ecf8eb-ccf9-4a06-9dbc-8120cae84e78" guiLineLink_LineEnd="19a86649-4723-4a44-a788-93cbfae6699a">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="1536212e-e89e-4c27-99fc-767fb6941dfd">
+									<pos X="1219" Y="513"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="8a634139-c73e-4bce-a388-a681a0f1fb4b" textLabel="23" guiTextLabel_Element="927f2461-5a17-43ae-ba80-dc5db582abd5">
+											<pos X="-59" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="3569f7c6-4df8-4e0b-a083-70a5e5cce9e5" alignment="4">
+									<pos X="1144" Y="513"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="92a39052-9e8b-45a6-a41f-03eccb53628d" alignment="1">
+									<pos X="1295" Y="513"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="d9551e22-fe06-4d9e-ab49-fada4208a87b" guiLink_Element="397670aa-8477-4056-9497-5f897c57cf87" guiLineLink_LineBegin="11417314-ec0b-4dd7-9741-9bc9a748c4b6" guiLineLink_LineEnd="cf662185-cbc4-43fc-8272-c3f05de9892e">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="d7ef48b6-5b86-4982-95dd-a27bf480a695">
+									<pos X="311" Y="326"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="4e5758da-3fe3-4935-9a04-996ed6585eab" textLabel="23" guiTextLabel_Element="397670aa-8477-4056-9497-5f897c57cf87">
+											<pos X="6" Y="-8"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c89a3894-162c-40e7-8e24-c7cdd0943e5c" alignment="3">
+									<pos X="311" Y="294"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="843a0229-ee94-46b1-931b-f3e7da41fd2e" alignment="2">
+									<pos X="311" Y="359"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="644dde51-132a-46ed-aee3-6e1515a9eb1a" guiLink_Element="214d4f60-fa6f-4099-b7ed-10046e70c7a5" guiLineLink_LineBegin="cf662185-cbc4-43fc-8272-c3f05de9892e" guiLineLink_LineEnd="5cc6e167-643a-4105-a0e5-a379ab8a6e43">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="7b32eb9c-7763-417b-9796-6bb5fe413429">
+									<pos X="312" Y="621"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="692cdd45-7537-4816-93e8-d94679e322bf" textLabel="23" guiTextLabel_Element="214d4f60-fa6f-4099-b7ed-10046e70c7a5">
+											<pos X="5" Y="-228"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="ab4348f1-a19e-4b3b-aa00-04419d3a8e49" alignment="4">
+									<pos X="312" Y="390"/>
+								</EndWaypoint>
+								<Waypoint uuid="0f4d6ecc-cea3-4807-b8b1-d40359d840e6">
+									<pos X="312" Y="687"/>
+								</Waypoint>
+								<EndWaypoint uuid="50e8f582-23ec-4696-a68f-b327d7ab2f11" alignment="1">
+									<pos X="478" Y="687"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<SeparatedNodeLink uuid="120c1071-9171-4856-948b-3f9f9e2a4a93" guiLink_Element="d9f57e98-ec17-4d9c-8cc5-b97696b811c2">
+							<nodeRect Left="105" Top="360" Right="225" Bottom="447"/>
+						</SeparatedNodeLink>
+						<LineLink uuid="e29afb45-5268-4c49-bc53-4f54d4601c4f" guiLink_Element="29439444-f8ee-44a8-a0d3-0362e513f625" guiLineLink_LineBegin="cf662185-cbc4-43fc-8272-c3f05de9892e" guiLineLink_LineEnd="120c1071-9171-4856-948b-3f9f9e2a4a93">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="a366eeba-524c-47a0-83bb-b4f73b5713a3">
+									<pos X="260" Y="375"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="703fae6b-9258-4ecc-b55e-ba1d7a8814ba" textLabel="23" guiTextLabel_Element="29439444-f8ee-44a8-a0d3-0362e513f625">
+											<pos X="-5" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="a031f64f-cf16-408f-9e47-c2bdfe1ab93e" alignment="1">
+									<pos X="295" Y="375"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="5759a3c2-9264-430a-b52f-0035db917ebe" alignment="4">
+									<pos X="225" Y="375"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="28233983-5411-4b03-9105-5c5dc2ca1765" guiLink_Element="15aa0342-3765-4341-83cd-5f9842eeab24" guiLineLink_LineBegin="11417314-ec0b-4dd7-9741-9bc9a748c4b6" guiLineLink_LineEnd="120c1071-9171-4856-948b-3f9f9e2a4a93">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="d783d8be-3556-44d5-8399-e0eb541dd82a">
+									<pos X="239" Y="327"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="216011ce-8cf1-4556-a4a2-06916aa48684" textLabel="23" guiTextLabel_Element="15aa0342-3765-4341-83cd-5f9842eeab24">
+											<pos X="-33" Y="-25"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="a851a6a0-8baa-4030-aa73-cbae6d645714" alignment="1">
+									<pos X="271" Y="294"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="d51c276b-d37a-4b95-8b34-e570dfbcdf6b" alignment="4">
+									<pos X="206" Y="360"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="645e9528-03b3-47c9-bff6-0c8c8ba7c144" guiLink_Element="e50d1e99-483f-43a2-ac3b-7b77ec11c05b" guiLineLink_LineBegin="120c1071-9171-4856-948b-3f9f9e2a4a93" guiLineLink_LineEnd="120c1071-9171-4856-948b-3f9f9e2a4a93">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="7c3e77c3-ffb4-43a6-99a4-d268d847f221">
+									<pos X="247" Y="465"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="604cdb26-3706-423a-afa4-c7d24b8b69c0" textLabel="23" guiTextLabel_Element="e50d1e99-483f-43a2-ac3b-7b77ec11c05b">
+											<pos X="-38" Y="5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="32259465-ef4d-4044-9f5d-69baa44b2cf8">
+									<pos X="225" Y="415"/>
+								</EndWaypoint>
+								<Waypoint uuid="0ec5a4dc-ef5f-45af-ab7d-aaff9e7c4c10">
+									<pos X="247" Y="415"/>
+								</Waypoint>
+								<Waypoint uuid="7b0fe1b4-2437-44f5-a807-985a49017b58">
+									<pos X="247" Y="465"/>
+								</Waypoint>
+								<Waypoint uuid="6a115216-4f98-4abf-bc9a-87f670e6b91f">
+									<pos X="193" Y="465"/>
+								</Waypoint>
+								<EndWaypoint uuid="2b97967d-b193-4875-815d-158b29eda610">
+									<pos X="193" Y="447"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<SeparatedNodeLink uuid="6f0636c8-11de-4354-b576-771943869d0b" guiLink_Element="269882a0-000a-4b4c-96f8-b2ce2a8069e8">
+							<nodeRect Left="105" Top="38" Right="225" Bottom="107"/>
+						</SeparatedNodeLink>
+						<LineLink uuid="16a279fa-9deb-465c-b06c-53b8dac0ba1f" guiLink_Element="508318bf-f8f9-4961-ae47-cfc6709799ad" guiLineLink_LineBegin="807489c4-0b04-49c2-8ff1-63965625c765" guiLineLink_LineEnd="6f0636c8-11de-4354-b576-771943869d0b">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="d3780063-8bde-4095-b51e-9f66f5ebadff">
+									<pos X="138" Y="177"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="2c3f2c03-84d1-43e4-a9d7-270bcd544578" alignment="2">
+									<pos X="138" Y="246"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="5977b1c3-49ae-49fc-9ed4-4bf84d2fde20" alignment="3">
+									<pos X="138" Y="107"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="7c88410f-23d5-45dd-a958-a9ab40bb266f" guiLink_Element="eb7fb4a3-fe9c-4af2-a8ff-dd1877b1b1bb" guiLineLink_LineBegin="11417314-ec0b-4dd7-9741-9bc9a748c4b6" guiLineLink_LineEnd="807489c4-0b04-49c2-8ff1-63965625c765">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="5280d988-8d96-4909-9dd0-f017e662e851">
+									<pos X="195" Y="254"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="ed1534d5-591c-4372-88f2-1de72d2210ca" textLabel="23" guiTextLabel_Element="eb7fb4a3-fe9c-4af2-a8ff-dd1877b1b1bb">
+											<pos X="-5" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="063cb889-532c-4dd1-8a9c-a5f3ac319d77" alignment="1">
+									<pos X="242" Y="254"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="f2c65f91-6577-4cb0-b761-a157f6e2f370" alignment="4">
+									<pos X="147" Y="254"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="bbc8b0b7-cdbe-4699-9654-a3c4647880a8" guiLink_Element="8bb0d650-f995-4beb-8a1e-b5a51e5d17f0" guiLineLink_LineBegin="120c1071-9171-4856-948b-3f9f9e2a4a93" guiLineLink_LineEnd="807489c4-0b04-49c2-8ff1-63965625c765">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="3b49e35a-90c1-4b75-808d-a9d531f3ac93">
+									<pos X="139" Y="313"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="faa2ee98-d9cc-4032-8dd0-ab43b15a1771" textLabel="23" guiTextLabel_Element="8bb0d650-f995-4beb-8a1e-b5a51e5d17f0">
+											<pos X="-49" Y="-5"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="09f73d44-d5d7-4c07-ad78-e0b6da88fb57" alignment="2">
+									<pos X="139" Y="360"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="8227dadb-9395-482b-bdcf-b5a547787258" alignment="3">
+									<pos X="139" Y="265"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="94faeee0-a987-419c-b08d-efb511001755" guiLink_Element="c39734b0-628a-47f1-93ed-bd11f63e30fc" guiLineLink_LineBegin="585c5e75-08cb-4309-8d6a-0472458df57a" guiLineLink_LineEnd="4b12fc45-a505-45ad-93b6-d7ab2609d32d">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="4691f170-d7a3-46e1-84c3-8b7a17628334">
+									<pos X="508" Y="227"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c76093bd-7e00-4612-9f8d-a436d4958461" alignment="4">
+									<pos X="497" Y="223"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="2d5ed11d-dea2-4fbd-b246-fcba4097cb52" alignment="1">
+									<pos X="521" Y="232"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="9abfa916-901f-4d2a-93e2-ec0650edb0ef" guiLink_Element="1b76dfab-4b52-46b2-ba89-8ad5810e05a6" guiLineLink_LineBegin="6f0636c8-11de-4354-b576-771943869d0b" guiLineLink_LineEnd="987110d2-07c9-4200-85d7-e74491188748">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="a857440d-c557-4d40-aac3-88b11a9167cd">
+									<pos X="344" Y="60"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="96dfe089-cf5a-455f-aa51-9ea67f1d2d23" textLabel="23" guiTextLabel_Element="1b76dfab-4b52-46b2-ba89-8ad5810e05a6">
+											<pos X="-112" Y="-18"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="8caafea9-b571-4267-bcfb-62ac5e1ac53b" alignment="4">
+									<pos X="225" Y="60"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="32157d0c-19d1-4df8-a60a-b799639985ea" alignment="1">
+									<pos X="464" Y="60"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<SeparatedNodeLink uuid="8ebcea05-f3c5-412f-ab5c-b0ef44e6d579" guiLink_Element="d3da1652-6320-4ec6-888d-cb5c8e553e4b">
+							<style autosize="0"/>
+							<nodeRect Left="499" Top="1014" Right="1011" Bottom="1224"/>
+							<guiNodeLinkGuiNodeLink>
+								<ConstrainedNode uuid="9a92dbb1-0579-4daf-abbc-d60fa009a42a" constrainingAreaIndex="-1" guiLink_Element="dc513668-aca7-4722-a605-0b349a04ce74">
+									<nodeRect Left="578" Top="1083" Right="598" Bottom="1103"/>
+								</ConstrainedNode>
+								<SeparatedNodeLink uuid="b134a3cb-5c1a-4450-919e-4505f2c05b70" guiLink_Element="51efda1b-92cc-45fe-946e-1e83cf22a4f4">
+									<nodeRect Left="618" Top="1101" Right="744" Bottom="1170"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="27953ad9-db14-4afa-9be3-7362b36f5b98" guiLink_Element="1d5e12a4-950d-4820-9a18-c76d3846d5a6">
+									<nodeRect Left="813" Top="1101" Right="939" Bottom="1170"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="1bd95ac5-9f18-4542-b8df-c55556d7cdd9" guiLink_Element="ab7e3c13-2ecc-4c4e-9916-0884c92b8b80">
+									<nodeRect Left="509" Top="1132" Right="529" Bottom="1152"/>
+									<attached>
+										<AttachedNode uuid="e5aa9f8c-4b55-4974-a2cd-e1384eec0e50" attachedNodeKind="13">
+											<nodeRect Left="507" Top="1114" Right="543" Bottom="1129"/>
+										</AttachedNode>
+									</attached>
+								</SeparatedNodeLink>
+							</guiNodeLinkGuiNodeLink>
+						</SeparatedNodeLink>
+						<LineLink uuid="db232b9b-cfb5-499e-9b7c-e1c13ae6cfd7" guiLink_Element="406cbf4f-b521-4403-afe1-715b991b8fab" guiLineLink_LineBegin="987110d2-07c9-4200-85d7-e74491188748" guiLineLink_LineEnd="8ebcea05-f3c5-412f-ab5c-b0ef44e6d579">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="ca4ffb55-4107-4d31-9d9c-6ed66dcf9082">
+									<pos X="592" Y="997"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="bfcd1360-1c8a-45e8-b6ce-fad194d98705" textLabel="23" guiTextLabel_Element="406cbf4f-b521-4403-afe1-715b991b8fab">
+											<pos X="-152" Y="-7"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="dac96f28-f363-49a7-b6c8-23fa24722e71" alignment="3">
+									<pos X="592" Y="980"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="bddd547d-91ea-40c7-884e-c769528c54b2" alignment="2">
+									<pos X="592" Y="1014"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="69d90d6f-acfa-4f8d-8993-4d30bd6cb8a4" guiLink_Element="7abbf867-1e63-4be8-b8a8-e8218dfc1a5c" guiLineLink_LineBegin="8ebcea05-f3c5-412f-ab5c-b0ef44e6d579" guiLineLink_LineEnd="987110d2-07c9-4200-85d7-e74491188748">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="a9452be6-7696-47c4-abc8-a174c0939a68">
+									<pos X="636" Y="997"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="9e6c853a-77d2-4a63-a1d1-82759b6a5917" textLabel="23" guiTextLabel_Element="7abbf867-1e63-4be8-b8a8-e8218dfc1a5c">
+											<pos X="11" Y="-9"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="da540f3c-9cbc-4bd4-a62e-4c7444d991ca" alignment="2">
+									<pos X="636" Y="1014"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="f9d49930-03e8-46cd-9c7f-add7a6afb3e4" alignment="3">
+									<pos X="636" Y="980"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="ffc7af0c-2a3b-4345-b6e5-48d9a0259fdd" guiLink_Element="fd596e5b-156d-4cf7-91fc-330ad184c4b9" guiLineLink_LineBegin="9a92dbb1-0579-4daf-abbc-d60fa009a42a" guiLineLink_LineEnd="b134a3cb-5c1a-4450-919e-4505f2c05b70">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="64b378af-a933-47c9-8367-b477312a2c05">
+									<pos X="607" Y="1103"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="a5a7b399-b7af-435e-be64-6b66b765ed5f" alignment="4">
+									<pos X="596" Y="1097"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="0c65df94-3ca7-4722-99ed-725869e23e60" alignment="1">
+									<pos X="620" Y="1110"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="fe3e2ec1-b4f3-414a-b05d-721c7b5982f5" guiLink_Element="488ea348-e026-4484-803e-61cbd7c418b8" guiLineLink_LineBegin="b134a3cb-5c1a-4450-919e-4505f2c05b70" guiLineLink_LineEnd="27953ad9-db14-4afa-9be3-7362b36f5b98">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="531f75d1-b2fa-4a22-be00-fa5129fe252a">
+									<pos X="787" Y="1187"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="5516709c-7696-4a53-b6f6-58bbb74bde29" textLabel="23" guiTextLabel_Element="488ea348-e026-4484-803e-61cbd7c418b8">
+											<pos X="-19" Y="-18"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="1c20af5f-1f19-4881-ac1a-a9ba9cd536d9" alignment="4">
+									<pos X="699" Y="1170"/>
+								</EndWaypoint>
+								<Waypoint uuid="0b204cfd-2591-4402-af19-4a98a274c3c5">
+									<pos X="699" Y="1187"/>
+								</Waypoint>
+								<Waypoint uuid="7a3b2f66-6caf-4b40-be18-4780b8955deb">
+									<pos X="876" Y="1187"/>
+								</Waypoint>
+								<EndWaypoint uuid="4c35464f-3c95-4e67-ab9f-435bccf0c808" alignment="1">
+									<pos X="876" Y="1170"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="e6635d94-bd51-41e5-9b9c-30404f65e84b" guiLink_Element="08d77df3-1b38-49a1-a7b3-763d71f8d3fd" guiLineLink_LineBegin="27953ad9-db14-4afa-9be3-7362b36f5b98" guiLineLink_LineEnd="00fc41d4-aedc-46ee-a2bd-27d4f7e8cb9e">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="90bcae1a-d739-45f5-b735-a3900e3cf5a4">
+									<pos X="875" Y="989"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="6c259021-a264-4112-8c1c-c9fdef733092" textLabel="23" guiTextLabel_Element="08d77df3-1b38-49a1-a7b3-763d71f8d3fd">
+											<pos X="8" Y="-3"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="75ab91a4-376e-4d2a-98d7-065470ef5560" alignment="2">
+									<pos X="875" Y="1101"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="3f76815d-9edd-4285-ac9b-4b6dd2ecf327" alignment="3">
+									<pos X="875" Y="877"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="39ab23eb-12b2-4b33-84b4-119aa2625786" guiLink_Element="0c4c30cc-9bf9-4081-a068-5937e14158f4" guiLineLink_LineBegin="19a86649-4723-4a44-a788-93cbfae6699a" guiLineLink_LineEnd="27953ad9-db14-4afa-9be3-7362b36f5b98">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="fc371d8e-7d9a-40e6-9575-9a6d5fea0415">
+									<pos X="1351" Y="913"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="fa27e00f-2683-4bac-b32f-51b9841058a5" textLabel="23" guiTextLabel_Element="0c4c30cc-9bf9-4081-a068-5937e14158f4">
+											<pos X="-111" Y="-124"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="90c7b753-b2e4-4d71-8540-a056dc06f3bb" alignment="3">
+									<pos X="1305" Y="323"/>
+								</EndWaypoint>
+								<Waypoint uuid="1c087b0f-6761-4d15-b2a3-8a88e2366ab3">
+									<pos X="1351" Y="323"/>
+								</Waypoint>
+								<Waypoint uuid="8f5f021b-a4aa-4af2-8e6a-94faf77fa4c0">
+									<pos X="1351" Y="1138"/>
+								</Waypoint>
+								<EndWaypoint uuid="b9475410-972f-4260-a524-a2a0b9ad73e6" alignment="2">
+									<pos X="939" Y="1138"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="73c78de0-36ff-4770-8358-d28f891e90f7" guiLink_Element="b41e6445-d25b-4cf7-a0b5-a789ef252f41" guiLineLink_LineBegin="27953ad9-db14-4afa-9be3-7362b36f5b98" guiLineLink_LineEnd="b134a3cb-5c1a-4450-919e-4505f2c05b70">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="d79fcb0c-ebcf-45c6-abb3-01a899ca0732">
+									<pos X="779" Y="1141"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="b3de1c1e-6d0a-4746-b6b5-fb93682fe512" textLabel="23" guiTextLabel_Element="b41e6445-d25b-4cf7-a0b5-a789ef252f41">
+											<pos X="-24" Y="-21"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="36bc20d5-c432-4f6a-943e-b55ce22718d0" alignment="1">
+									<pos X="813" Y="1141"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="8dcaeb59-7cf7-4665-87cc-0bee27437ca4" alignment="4">
+									<pos X="744" Y="1141"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="91467088-89c9-4fe5-9e37-b1dfdfebf1d9" guiLink_Element="afea1b6f-b186-4225-806c-6757da8e7a9f" guiLineLink_LineBegin="8ebcea05-f3c5-412f-ab5c-b0ef44e6d579" guiLineLink_LineEnd="120c1071-9171-4856-948b-3f9f9e2a4a93">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="9f5dc44e-474f-415a-8dc9-7d2b843aa36b">
+									<pos X="40" Y="977"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="d92abf4c-d256-4905-85da-a3787169546c" alignment="1">
+									<pos X="499" Y="1142"/>
+								</EndWaypoint>
+								<Waypoint uuid="75e6e3e4-fb71-4b50-9936-d3604eed1dc4">
+									<pos X="40" Y="1142"/>
+								</Waypoint>
+								<Waypoint uuid="565a023d-f231-4cb3-8d55-790b866cfeab">
+									<pos X="40" Y="417"/>
+								</Waypoint>
+								<EndWaypoint uuid="b591b1c6-1387-4647-837d-8cee6fae5660" alignment="4">
+									<pos X="105" Y="417"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="17b1e93d-1520-4aef-9639-794a07b94e51" guiLink_Element="806fe8b9-ddae-4b94-9744-2ee4227d8f5a" guiLineLink_LineBegin="8ebcea05-f3c5-412f-ab5c-b0ef44e6d579" guiLineLink_LineEnd="b134a3cb-5c1a-4450-919e-4505f2c05b70">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="091d5d8a-d9b9-4652-aad2-58adb67db39e">
+									<pos X="585" Y="1187"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="504cc371-d70c-41f6-98b6-a69176428567" textLabel="23" guiTextLabel_Element="806fe8b9-ddae-4b94-9744-2ee4227d8f5a">
+											<pos X="-28" Y="-19"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c405f84b-2f8c-4390-9623-bc152fa6b7a1" alignment="1">
+									<pos X="499" Y="1187"/>
+								</EndWaypoint>
+								<Waypoint uuid="959f24ed-6518-422d-a2f7-31f877d959f2">
+									<pos X="655" Y="1187"/>
+								</Waypoint>
+								<EndWaypoint uuid="88105d69-16e3-4133-89f6-9319a1d69a43" alignment="4">
+									<pos X="655" Y="1170"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="ee98579f-2794-4372-b03a-f5d70c5c192f" guiLink_Element="82d3c936-fc2c-4741-ac2d-ebf025111776" guiLineLink_LineBegin="6f0636c8-11de-4354-b576-771943869d0b" guiLineLink_LineEnd="11417314-ec0b-4dd7-9741-9bc9a748c4b6">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="68e4aa6e-740a-48ae-97de-9aae166c9233">
+									<pos X="235" Y="166"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="53a3d602-1534-46b2-b54d-40c489e14a9a" textLabel="23" guiTextLabel_Element="82d3c936-fc2c-4741-ac2d-ebf025111776">
+											<pos X="-5" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="e3522e1b-01ec-485b-b411-ba8dc6d4ce63" alignment="4">
+									<pos X="193" Y="107"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="d5faaf75-ee14-4004-b2a6-f2d247886e23" alignment="1">
+									<pos X="277" Y="225"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="fa826733-767e-4f2f-a33d-f8b4cd589b89" guiLink_Element="92ed9fd9-3a16-4a88-b2a6-bdffffecaf97" guiLineLink_LineBegin="6f0636c8-11de-4354-b576-771943869d0b" guiLineLink_LineEnd="120c1071-9171-4856-948b-3f9f9e2a4a93">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="477dd309-65b2-4682-9b50-0c20f78c3d8e">
+									<pos X="40" Y="223"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="0554e223-9af0-4db2-8aaf-d1a925ddfb9b" textLabel="23" guiTextLabel_Element="92ed9fd9-3a16-4a88-b2a6-bdffffecaf97">
+											<pos X="-59" Y="-182"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="dba2cd1c-53fe-4ce5-ab09-d28623e51079" alignment="3">
+									<pos X="105" Y="61"/>
+								</EndWaypoint>
+								<Waypoint uuid="90cd61c8-7eca-4fa8-99fe-8b24c349719a">
+									<pos X="40" Y="61"/>
+								</Waypoint>
+								<Waypoint uuid="9ebee22e-4232-4c0a-9a58-fff7716de30f">
+									<pos X="40" Y="385"/>
+								</Waypoint>
+								<EndWaypoint uuid="483dfe88-83bc-4001-9292-e4f5380ba47c" alignment="2">
+									<pos X="105" Y="385"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="a2dbbeb6-9644-4984-b216-58bee88af881" guiLink_Element="64335839-45b0-45ab-8b3e-4f31f5c6e094" guiLineLink_LineBegin="8616c9e0-9ceb-4343-a883-527f035cb42a" guiLineLink_LineEnd="3455ad59-a8ba-49c6-ad24-b733f9d2b88e">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="816e3750-5d4d-4ab7-85be-6fd16680e1b3">
+									<pos X="572" Y="665"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="4da95016-a645-48f9-a4b5-0c9aaadc0e3d" alignment="3">
+									<pos X="566" Y="660"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="87574f6e-ca76-426e-aba9-35e34744c1f7" alignment="2">
+									<pos X="579" Y="671"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="f13f81a3-efea-43ff-a4e6-aab2c6315265" guiLink_Element="ad2c152f-66ad-4905-9fd2-cd73956734fc" guiLineLink_LineBegin="25fe5273-4d45-4b95-ac24-aefd17dfd73d" guiLineLink_LineEnd="a2de9fe3-2598-4ac9-b89a-bc7ea10554ed">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="ebd1c67c-99a4-4ef5-ae5d-c22c20bde3e1">
+									<pos X="616" Y="750"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="462b2641-008c-4385-91aa-67d2b85b00f5" alignment="4">
+									<pos X="608" Y="746"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="2efb75fe-1765-4f8e-884c-4556103a76f2" alignment="1">
+									<pos X="624" Y="755"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="eaf47be4-51c6-4ca7-b009-d77c832edda1" guiLink_Element="fe252949-1974-40a0-a506-5d7d51ecbc05" guiLineLink_LineBegin="e43da0c0-9c78-4038-96f4-f52fbc4bf6db" guiLineLink_LineEnd="87c2bc4b-6117-4adc-831e-54c48988e3f8">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="15959dbc-9791-4320-8f1c-3bd670a904f8">
+									<pos X="663" Y="847"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="294277b1-1912-43fa-8588-ed6f6e88dbd2" alignment="4">
+									<pos X="650" Y="835"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="38fbc4f0-ea56-4b05-bba4-4e18d2ca7319" alignment="1">
+									<pos X="677" Y="859"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="dd77d94b-78ce-4976-b2f9-94c8735ae5e5" guiLink_Element="198abcbe-f6be-4203-93aa-069ef1b98e65" guiLineLink_LineBegin="b134a3cb-5c1a-4450-919e-4505f2c05b70" guiLineLink_LineEnd="1bd95ac5-9f18-4542-b8df-c55556d7cdd9">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="2fe3b68f-1125-49f1-b5b6-dd282391a398">
+									<pos X="573" Y="1143"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="9a861245-5cd6-441d-8eb0-273c4524921d" textLabel="23" guiTextLabel_Element="198abcbe-f6be-4203-93aa-069ef1b98e65">
+											<pos X="-14" Y="-19"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="e3ff00bd-e4a7-4f8d-8ca1-5f7efbaf63f9" alignment="2">
+									<pos X="618" Y="1143"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="d6bc1742-7842-4403-9581-8823948c21ec" alignment="3">
+									<pos X="528" Y="1143"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="a5a68b7f-cfb7-4918-9243-0864820d51ec" guiLink_Element="287f9213-9487-4553-a30d-ba6d18c76010" guiLineLink_LineBegin="87c2bc4b-6117-4adc-831e-54c48988e3f8" guiLineLink_LineEnd="00fc41d4-aedc-46ee-a2bd-27d4f7e8cb9e">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="4b466e9f-0c5b-4e58-aff2-e7d081d4927b">
+									<pos X="833" Y="904"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="ba0b8aff-a1be-4cfb-aaae-03ce37609d53" textLabel="23" guiTextLabel_Element="287f9213-9487-4553-a30d-ba6d18c76010">
+											<pos X="-33" Y="-16"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="fca11eb6-76d3-452c-bf9e-d6b96a68b5a3" alignment="4">
+									<pos X="793" Y="904"/>
+								</EndWaypoint>
+								<Waypoint uuid="522d155d-dee3-4d1c-8ce4-7afd69aa7dfb">
+									<pos X="846" Y="904"/>
+								</Waypoint>
+								<EndWaypoint uuid="0476b0b8-eca2-471c-88c2-066f513b2779" alignment="1">
+									<pos X="846" Y="877"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<NodeLink uuid="da96a535-ad3f-4d05-be59-4f85e2b04c31" guiLink_Element="f230a31b-def9-4376-9292-0c24cd3c1e3a">
+							<style autosize="0"/>
+							<nodeRect Left="60" Top="703" Right="412" Bottom="954"/>
+						</NodeLink>
+						<LineLink uuid="71c1061c-f16a-49d4-b60e-d88cdf227ab6" guiLink_Element="85229951-94b9-4fbc-ab12-103ffc1971a3" guiLineLink_LineBegin="5cc6e167-643a-4105-a0e5-a379ab8a6e43" guiLineLink_LineEnd="1ffb6a49-3a0d-4d3f-af70-1e4a923d9249">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="3e684382-06ad-4fb1-bd54-496ac73b293c">
+									<pos X="509" Y="686"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="4f3da6e6-7594-4817-bb8e-0af6b8fcee95" alignment="4">
+									<pos X="498" Y="686"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="7fa5ef21-c4c5-4c8b-bbcb-efe1e14eebe1" alignment="1">
+									<pos X="521" Y="686"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="0150c079-132a-4f50-993c-35e6e6e38799" name="Default"/>
+					</guiDiagramLayer>
+				</StateMachineDiagram>
+				<ClassDiagram uuid="a22236de-7ef3-4a4a-920b-3c194d761aa0" name="TestSTMComplex" guiDiagramLinkedOwner="3c5bca2d-14c3-4b56-90f7-94c980681c56">
+					<guiDiagramGuiLink>
+						<NodeLink uuid="4ac0008b-5a70-45df-9817-560501d9f6ce" guiLink_Element="b0106272-edac-4427-bf60-91a0793abe4d">
+							<nodeRect Left="360" Top="30" Right="572" Bottom="1251"/>
+						</NodeLink>
+						<NodeLink uuid="9901ec73-b43c-436b-831d-167b67ddd3dc" guiLink_Element="0cf7e20d-8557-4958-af35-cd83bc63ba5b">
+							<style taggedvalues="0"/>
+							<nodeRect Left="30" Top="285" Right="313" Bottom="416"/>
+							<attached>
+								<AttachedNode uuid="bd783850-3444-4e64-84db-be963acaaa00">
+									<nodeRect Left="-75" Top="300" Right="133" Bottom="409"/>
+								</AttachedNode>
+							</attached>
+						</NodeLink>
+						<LineLink uuid="c1688a28-acfb-4a06-ac30-aaaf08a74a8b" guiLink_Element="a40f6e65-0a78-4eff-b3b1-667510e535bb" guiLineLink_LineBegin="9901ec73-b43c-436b-831d-167b67ddd3dc" guiLineLink_LineEnd="4ac0008b-5a70-45df-9817-560501d9f6ce">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="da0f4b16-0e61-493e-8b1b-9b9c4ab2139e">
+									<pos X="336" Y="343"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="bbeb64a5-b8d7-472a-9780-007ea8639c02" alignment="3">
+									<pos X="313" Y="343"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="b1fdb491-1143-4b40-97ce-edb2563d79e6" alignment="2">
+									<pos X="360" Y="343"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<NodeLink uuid="bc8f1df9-ccbf-4b46-8c6a-608ec828d862" guiLink_Element="97491551-1a94-4975-8e70-cbc523f03744">
+							<style showatt="0" shownested="0" showop="0" taggedvalues="0"/>
+							<nodeRect Left="120" Top="165" Right="202" Bottom="202"/>
+							<attached>
+								<AttachedNode uuid="1c38c87c-544b-4d1a-a0d1-2be91fd9725a">
+									<nodeRect Left="15" Top="180" Right="229" Bottom="217"/>
+								</AttachedNode>
+							</attached>
+						</NodeLink>
+						<ContainmentLink uuid="da458f8b-a8f2-4008-99ae-a1016201fb30" guiLineLink_LineBegin="9901ec73-b43c-436b-831d-167b67ddd3dc" guiLineLink_LineEnd="bc8f1df9-ccbf-4b46-8c6a-608ec828d862">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="25713d99-ec51-46af-abd6-8be702dd69c4">
+									<pos X="161" Y="244"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c5ac4b75-ca72-45d3-86b7-d7756a3ac00a" alignment="2">
+									<pos X="161" Y="285"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="17ac6b29-f756-4933-ad25-bcbb487c8648" alignment="3">
+									<pos X="161" Y="202"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<NodeLink uuid="2acb94c3-e43c-4c2d-85e0-99cc1977bac0" guiLink_Element="ee0d0cec-bb14-4455-8d22-b3ec0a2b97a0">
+							<nodeRect Left="645" Top="30" Right="1284" Bottom="526"/>
+						</NodeLink>
+						<NodeLink uuid="17e35714-d885-48cd-b799-8760f5310734" guiLink_Element="ea4842f7-139f-4c73-adc3-5e9115bf7869">
+							<nodeRect Left="645" Top="555" Right="823" Bottom="686"/>
+						</NodeLink>
+						<NodeLink uuid="cf274279-4c60-4089-bd76-d7f2a33b4e3a" guiLink_Element="6977ba65-53e9-4d36-a73e-3ce264e92ca3">
+							<nodeRect Left="645" Top="720" Right="823" Bottom="851"/>
+						</NodeLink>
+						<ContainmentLink uuid="984c030f-6239-4e6a-b025-981739946149" guiLineLink_LineBegin="2acb94c3-e43c-4c2d-85e0-99cc1977bac0" guiLineLink_LineEnd="4ac0008b-5a70-45df-9817-560501d9f6ce">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="06221b37-7371-4141-a424-3dcfcdadff61">
+									<pos X="609" Y="278"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="eee2fb2b-47ea-4f66-ba22-9c1c5b80fa04" alignment="1">
+									<pos X="645" Y="278"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="347b6f80-2789-4146-ab6d-ca98d2c3bda3" alignment="4">
+									<pos X="572" Y="278"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="5c8177ff-9adb-4c43-8786-01361af1c208" guiLineLink_LineBegin="17e35714-d885-48cd-b799-8760f5310734" guiLineLink_LineEnd="4ac0008b-5a70-45df-9817-560501d9f6ce">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="18fd47e7-b24c-4b82-8519-207dfe9c55b8">
+									<pos X="609" Y="622"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="ced11835-ded7-4f85-8d00-955824a973b6" alignment="1">
+									<pos X="645" Y="622"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="6426cd3e-112b-4e0a-b705-1d786ddbd7e4" alignment="4">
+									<pos X="572" Y="622"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="94a773e5-78ce-4a55-b950-57532419fc12" guiLineLink_LineBegin="cf274279-4c60-4089-bd76-d7f2a33b4e3a" guiLineLink_LineEnd="4ac0008b-5a70-45df-9817-560501d9f6ce">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="09998a31-9ffe-4fe5-82d6-2b4be53517e2">
+									<pos X="609" Y="787"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="145735a0-004d-4a4d-82f8-d4bd39db59e5" alignment="1">
+									<pos X="645" Y="787"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="428b6502-4103-4de1-bb3c-db046d3ec8e1" alignment="4">
+									<pos X="572" Y="787"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<NodeLink uuid="d93be456-d5e4-4790-97d5-8681997f3fb0" guiLink_Element="c114d971-4622-44e3-a07f-b896f7c7668e">
+							<style autosize="0"/>
+							<nodeRect Left="30" Top="465" Right="315" Bottom="555"/>
+						</NodeLink>
+						<NoteLink uuid="a8611500-36c4-4626-89ab-ba3ef8f2a200" guiLineLink_LineBegin="d93be456-d5e4-4790-97d5-8681997f3fb0" guiLineLink_LineEnd="9901ec73-b43c-436b-831d-167b67ddd3dc">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="ced6fc6b-4bc3-4230-9ace-8d993a36e83c">
+									<pos X="168" Y="441"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="27a775c5-016f-4764-b2ae-7372d0359b5c" alignment="2">
+									<pos X="168" Y="465"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="2f700ca6-7ee4-4b68-8a07-3eb43c9bd656" alignment="3">
+									<pos X="168" Y="416"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</NoteLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="ae29bf38-97d0-4282-ba39-2e7ed9cb0ce8" name="Default"/>
+					</guiDiagramLayer>
+				</ClassDiagram>
+			</guiRootGuiDiagram>
+		</RootElement>
+	</Diagrams>
+	<ModelHistory>
+		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<packagedElement>
+				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public">
+					<packagedElement>
+						<Component uuid="bf1af48d-6572-4b4c-9ba6-1a926baacb1c" name="project" visibility="public" usedForCodeSyncronization="true" codeLang="Java6.0 (1.6)" isCodeProjectFile="true" codeProjectFileOrDirectory="nbproject\project.xml">
+							<realization>
+								<ComponentRealization uuid="4d61333b-1115-4eda-acf5-a2d749712193" visibility="public" realizingClassifier="b0106272-edac-4427-bf60-91a0793abe4d"/>
+								<ComponentRealization uuid="0a3a8c86-9367-4ea0-b6f0-86bf0f9ebdcd" visibility="public" realizingClassifier="97491551-1a94-4975-8e70-cbc523f03744"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package uuid="3c5bca2d-14c3-4b56-90f7-94c980681c56" name="project" visibility="public">
+					<packagedElement>
+						<Package uuid="9d1897ca-b2d3-401a-aab2-826214c27206" name="Complex" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="9c6d5704-2f13-4622-beac-c980c49b4598" classifier="c898c1a3-547b-4a84-ad06-908fd57678c2"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Class uuid="b0106272-edac-4427-bf60-91a0793abe4d" name="ComplexController" visibility="public">
+									<nestedClassifier>
+										<Interface uuid="ea4842f7-139f-4c73-adc3-5e9115bf7869" name="IState" visibility="public"/>
+									</nestedClassifier>
+								</Class>
+							</packagedElement>
+						</Package>
+						<Class uuid="97491551-1a94-4975-8e70-cbc523f03744" name="STMTester" visibility="public" usedForCodeSyncronization="true">
+							<codeFileName>
+								<CodeFileName name="..\src\STMTester.java"/>
+							</codeFileName>
+							<appliedStereotype>
+								<StereotypeApplication uuid="703623b1-0a6b-4ffd-a828-7679681fd97e" classifier="00061102-7512-11d9-86f2-000476a22f44">
+									<slot>
+										<Slot uuid="c4dc3d24-4982-423e-808f-14024737a3b5" definingFeature="00071102-7512-11d9-86f2-000476a22f44">
+											<value>
+												<LiteralString uuid="7ac9f261-4daf-4e0e-955d-a82f12922b33" visibility="public" value="SuppressWarnings(&quot;serial&quot;)"/>
+											</value>
+										</Slot>
+									</slot>
+								</StereotypeApplication>
+							</appliedStereotype>
+							<generalization>
+								<Generalization uuid="f2e49488-fbf2-49ed-872c-ad1a692fc19f" general="f8075031-543b-46d9-bc6e-58fbdb161e68"/>
+							</generalization>
+							<ownedAttribute>
+								<Property uuid="895622e6-7a60-4575-a915-eae7a0013a04" name="m_STM" visibility="private" type="0cf7e20d-8557-4958-af35-cd83bc63ba5b">
+									<defaultValue>
+										<LiteralString uuid="7c3966ba-7c04-420f-812c-cc77a5cbdb62" visibility="public" value="new MySTM()"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="60b58295-478f-4ad8-9a5a-fe1204f8b8f0" name="m_nEventCounter" visibility="private" type="308d9740-87d8-4fa8-91c3-85e1c8a42328">
+									<defaultValue>
+										<LiteralString uuid="c5cb7129-e31d-4a60-88d9-c542fc67035d" visibility="public" value="0"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="69b7af20-1099-451e-91c8-1b426bc0294f" name="jScrollPane1" visibility="private" type="7c7f8ad2-1fa6-4eeb-9fee-06250954bb72"/>
+								<Property uuid="940349b6-af64-4de3-a4d8-b36c308c2cb5" name="jScrollPane2" visibility="private" type="7c7f8ad2-1fa6-4eeb-9fee-06250954bb72"/>
+								<Property uuid="888c610c-1522-4a82-8993-d0111ac51336" name="jSplitPane1" visibility="private" type="5ded7556-8579-401f-b2ab-5a90f2705a05"/>
+								<Property uuid="cabd7ce0-cf70-4ce3-b73c-06ffb1e13d89" name="m_CurrentStateTree" visibility="private" type="3d0fb81a-6332-4761-889a-70ada5835e5a"/>
+								<Property uuid="f2e42bb7-4ba4-4cb2-acd1-2d006114ec0f" name="m_DebugOutputTextBox" visibility="private" type="d9c606c0-0915-470e-9518-9130270cb4de"/>
+								<Property uuid="bb9c866a-18f5-47e3-a53a-db8309ab1805" name="m_ToolBar" visibility="private" type="cf2994d1-9b39-4a3a-88de-0c53be3a0273"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class uuid="0cf7e20d-8557-4958-af35-cd83bc63ba5b" name="MySTM" visibility="protected" usedForCodeSyncronization="true" DocComment="c114d971-4622-44e3-a07f-b896f7c7668e">
+									<ownedComment>
+										<Comment uuid="c114d971-4622-44e3-a07f-b896f7c7668e" body="&#13; derive from generated controller class to customize behavior, implement guard conditions,&#13; entry/exit/do actions, forward transition effects, handle debug messages...&#13;">
+											<annotatedElement idref="0cf7e20d-8557-4958-af35-cd83bc63ba5b"/>
+										</Comment>
+									</ownedComment>
+									<generalization>
+										<Generalization uuid="a40f6e65-0a78-4eff-b3b1-667510e535bb" general="b0106272-edac-4427-bf60-91a0793abe4d"/>
+									</generalization>
+									<ownedAttribute>
+										<Property uuid="210ff5cd-b9bd-47e1-94c6-25044c9abe2d" name="m_sDebugMessage" visibility="public" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<defaultValue>
+												<LiteralString uuid="04cd18ad-0493-4282-a0b4-5b28dbb3df82" visibility="public" value="&quot;&quot;"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation uuid="8de8ffa5-37ac-4502-bdf8-465720232d71" name="OnDebugMessage" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="c3294b36-50c1-40f7-b0c6-3a716a7bd4a4" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="23e3bb7d-f2b4-41c1-af94-8d02e6a4ba34" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="2eca2cce-2e03-4b98-a768-63e32f5faf45" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="cdd9e391-0b84-4318-a3cf-78da4a634126" name="str" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+												<Parameter uuid="93737780-9e59-457a-81ca-c05f0fd804c8" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="8a9d0dc4-1c89-4a3f-9821-33a842e06efc" name="CanGoS5" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="439c1997-796c-4e7e-92d7-e461695c9638" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="2f41848b-8041-40b3-b387-095ee2eb0c65" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="c1747bd2-e603-484d-9961-509c8e48f685" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="60931677-cd73-4684-939c-fd05dbe9d1a5" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="a3634ece-137b-4ab5-86bc-0c58a5c32129" name="CanGoS2" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="202db24b-94cf-4087-a747-f1db4b9aa8c0" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="deecd2ea-9033-480a-91fe-79de341c56b4" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="e48a1c2a-a628-4565-bca3-c9081736cf11" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="79c23c39-4a1b-409b-b52d-b1e438c2457f" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation uuid="f82d5b4b-05d8-434e-b643-be5ed9185474" name="STMTester" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication uuid="577f3bda-a57e-4cbe-b86e-0513a7827f14" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+									</appliedStereotype>
+								</Operation>
+								<Operation uuid="bad3bbed-d1f8-4f31-beae-632e23eaa096" name="UpdateDisplay" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="6c0b4b32-5b3d-44ed-b61e-ff28cc597fbe" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="4faa89a2-7ac2-4f07-8f03-e3647b330af6" name="UpdateCurrentStateTree" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="7cae90f9-2f09-4c96-ad99-138df84725a6" name="state" type="ea4842f7-139f-4c73-adc3-5e9115bf7869"/>
+										<Parameter uuid="bde4ba04-879e-4e76-ab10-80bde9f0bd9e" name="node" type="26f7cd25-08ba-454d-97b1-edb68f7afd98"/>
+										<Parameter uuid="dbffe8ab-ee60-4936-8573-f26de98ba3a0" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="02cc986a-430a-4ef1-90c6-ee0f24b7df9c" name="initComponents" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="8040d8a2-dda5-4120-a8fb-1927cf90ff87" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="08a7eabf-a06d-49f4-b96e-618d52553c5c" name="main" visibility="public" isStatic="true">
+									<ownedParameter>
+										<Parameter uuid="316d068c-12c8-41ec-b090-a09e6fd8ab76" name="args" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<lowerValue>
+												<LiteralString uuid="5d6d6089-3c20-4010-9151-8742ee1532b3" visibility="public" value="*"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="33a35aed-7571-4889-adb0-a24b873232e6" visibility="public" value="*"/>
+											</upperValue>
+										</Parameter>
+										<Parameter uuid="d1bcc883-2dbf-472f-a6f5-f35d6359d58a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication uuid="9855a587-138f-44a0-875f-6541561adcb9" appliedProfile="00000102-7510-11d9-86f2-000476a22f44"/>
+					</profileApplication>
+				</Package>
+				<Profile uuid="00000102-7510-11d9-86f2-000476a22f44" name="Java Profile" visibility="public" editable="false">
+					<packagedElement>
+						<Enumeration uuid="00013102-7510-11d9-86f2-000476a22f44" name="AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral uuid="00114102-7510-11d9-86f2-000476a22f44" name="Deprecated" visibility="public"/>
+								<EnumerationLiteral uuid="00214102-7510-11d9-86f2-000476a22f44" name="Documented" visibility="public"/>
+								<EnumerationLiteral uuid="00314102-7510-11d9-86f2-000476a22f44" name="Inherited" visibility="public"/>
+								<EnumerationLiteral uuid="00414102-7510-11d9-86f2-000476a22f44" name="Override" visibility="public"/>
+								<EnumerationLiteral uuid="00514102-7510-11d9-86f2-000476a22f44" name="Retention" visibility="public"/>
+								<EnumerationLiteral uuid="00614102-7510-11d9-86f2-000476a22f44" name="SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral uuid="00714102-7510-11d9-86f2-000476a22f44" name="Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<Stereotype uuid="ed09a6a8-e0f4-4def-af8b-bbcdb59b0618" name="final" visibility="public" baseClass="Parameter" guiSortPriority="380"/>
+						<Stereotype uuid="f62d0f48-ea20-432d-8d80-cc6287ea9319" name="synchronized" visibility="public" baseClass="Operation" guiSortPriority="360"/>
+						<Stereotype uuid="b5a42000-424b-4275-b71d-1f491ca8a0ee" name="transient" visibility="public" baseClass="Property" guiSortPriority="350"/>
+						<Stereotype uuid="3f8b6371-98a3-4643-8864-1232db225757" name="volatile" visibility="public" baseClass="Property" guiSortPriority="340"/>
+						<Stereotype uuid="fc24c4b2-7e63-43bf-aa66-edbed0fc7dfc" name="native" visibility="public" baseClass="Operation" guiSortPriority="370"/>
+						<Stereotype uuid="9a715cf5-bf0a-4044-9a0e-058bc044465d" name="strictfp" visibility="public" baseClass="Operation" guiSortPriority="330"/>
+						<Stereotype uuid="8fa7f5ad-fed0-4d8e-8750-73827b236e29" name="strictfp" visibility="public" baseClass="Class" guiSortPriority="330"/>
+						<Stereotype uuid="004724ce-ec3e-4328-a4f9-32bf7db7dd93" name="strictfp" visibility="public" baseClass="Interface" guiSortPriority="330"/>
+						<Stereotype uuid="c898c1a3-547b-4a84-ad06-908fd57678c2" name="namespace" visibility="public" baseClass="Package" guiSortPriority="690"/>
+						<Stereotype uuid="11194c22-fedc-4e94-8547-ec925c28a37e" name="constructor" visibility="public" baseClass="Operation" guiSortPriority="690"/>
+						<Stereotype uuid="00011102-7512-11d9-86f2-000476a22f44" name="static" visibility="public" baseClass="Class" guiSortPriority="390"/>
+						<Stereotype uuid="00021102-7512-11d9-86f2-000476a22f44" name="static" visibility="public" baseClass="Enumeration" guiSortPriority="390"/>
+						<Stereotype uuid="00031102-7512-11d9-86f2-000476a22f44" name="static" visibility="public" baseClass="Interface" guiSortPriority="390"/>
+						<Stereotype uuid="00041102-7512-11d9-86f2-000476a22f44" name="annotationType" visibility="public" baseClass="Interface" guiSortPriority="690"/>
+						<Stereotype uuid="00051102-7512-11d9-86f2-000476a22f44" name="annotationTypeElement" visibility="public" baseClass="Property" guiSortPriority="690"/>
+						<Stereotype uuid="00061102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Class" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00071102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00081102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Enumeration" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00091102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="000a1102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Interface" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="000b1102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="000c1102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="EnumerationLiteral" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="000d1102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="000e1102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Parameter" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="000f1102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00101102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Property" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00111102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00121102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Operation" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00131102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<PrimitiveType uuid="80bf4906-7a11-45fc-b6ec-40ebe7fdbd38" name="byte" visibility="public"/>
+						<PrimitiveType uuid="14fce034-87ef-45fc-a003-d0300413e44b" name="char" visibility="public"/>
+						<PrimitiveType uuid="1256a74d-961a-4a8c-a25e-234c4bd3c55c" name="short" visibility="public"/>
+						<PrimitiveType uuid="308d9740-87d8-4fa8-91c3-85e1c8a42328" name="int" visibility="public"/>
+						<PrimitiveType uuid="6941bad4-9c46-4098-8d04-8afe8cf67c00" name="long" visibility="public"/>
+						<PrimitiveType uuid="d6f1dc72-e6ac-472b-81a4-78c87d437511" name="float" visibility="public"/>
+						<PrimitiveType uuid="bca1bdf5-bc77-4e79-b595-1f17af1e4de5" name="double" visibility="public"/>
+						<PrimitiveType uuid="5281ff9f-1b8c-4bf7-9b56-9003e2791461" name="boolean" visibility="public"/>
+						<PrimitiveType uuid="71dff5dd-543f-46fe-8c5c-1f7884d610e9" name="void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package uuid="00000004-7510-11d9-86f2-000476a22f44" name="Unknown Externals" visibility="public" editable="false">
+					<packagedElement>
+						<Class uuid="cf2994d1-9b39-4a3a-88de-0c53be3a0273" name="javax.swing.JToolBar" visibility="public"/>
+						<Class uuid="d9c606c0-0915-470e-9518-9130270cb4de" name="javax.swing.JTextArea" visibility="public"/>
+						<Class uuid="3d0fb81a-6332-4761-889a-70ada5835e5a" name="javax.swing.JTree" visibility="public"/>
+						<Class uuid="5ded7556-8579-401f-b2ab-5a90f2705a05" name="javax.swing.JSplitPane" visibility="public"/>
+						<Class uuid="7c7f8ad2-1fa6-4eeb-9fee-06250954bb72" name="javax.swing.JScrollPane" visibility="public"/>
+						<Class uuid="26f7cd25-08ba-454d-97b1-edb68f7afd98" name="DefaultMutableTreeNode" visibility="public"/>
+						<Class uuid="d95b43b0-037d-4ede-8de7-6f8b7157bf66" name="String" visibility="public"/>
+						<Class uuid="f8075031-543b-46d9-bc6e-58fbdb161e68" name="javax.swing.JFrame" visibility="public"/>
+					</packagedElement>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>

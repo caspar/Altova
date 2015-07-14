@@ -1,7 +1,6 @@
 package annotations;
 
 import annotations.Authors;
-import annotations.Constructor;
 import annotations.Email;
 
 public class Annotations {
