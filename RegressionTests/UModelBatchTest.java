@@ -32,7 +32,7 @@ commands (executed in given order):
 /lip        ... list all included packages
 
 options for import commands:
-/iclg=lang  ... code language (Java1.4 | Java5.0 | C#2.0)
+/iclg=lang  ... code language (Java1.4 | Java5.0 | Java8.0 | C#2.0)
 /ipsd[=0|1] ... process sub directories (recursive)
 /ijdc[=0|1] ... JavaDocs as Java comments
 /icdc[=0|1] ... DocComments as C# comments

@@ -45,7 +45,7 @@ public class UModelRegressionTest {
 
 	// private TestXMI regXMITest;
 	// private TestRTE regRTETest;
-	private File rteRootDirectory = null;
+	private File rteRootDirectory = null; 	
 
 	private File xmiRootDirectory = null;
 	private File mergeTargetDirectory = null;
@@ -302,10 +302,11 @@ public class UModelRegressionTest {
 			
 			if (getFlagsOr(CG_JAVA_8, CG_ALL, CG_JAVA_ALL)){
 				
-				TestCodeGen java8 = new TestCodeGen(CG_JAVA_8, JV_8_0, /*check this*/ JAVA_CG_LOG, n);
+				TestCodeGen java8 = new TestCodeGen(CG_JAVA_8, /*check this*/ JV_8_0, JAVA_CG_LOG, n);
 				timeTest(java8);
 				
 			}
+
 			if (getFlagsOr(CG_JAVA_5, CG_ALL, CG_JAVA_ALL)) {
 
 				TestCodeGen java5 = new TestCodeGen(CG_JAVA_5, JV_5_0, JAVA_CG_LOG, n);
@@ -512,6 +513,21 @@ public class UModelRegressionTest {
 			if (getFlagsOr(BINARY_JAVA_5_RUNTIME, BINARY_ALL, BINARY_JAVA_ALL)) {
 			}
 
+			if (getFlagsOr(BINARY_JAVA_8, BINARY_ALL, BINARY_JAVA_ALL)) {
+
+				TestBinaryImport j5 = new TestBinaryImport(BINARY_JAVA_8, JV_8_0, JAVA_BINARY_LOG, n);
+				timeTest(j5);
+			}
+			if (getFlagsOr(BINARY_JAVA_8_JAR, BINARY_ALL, BINARY_JAVA_ALL)) {
+
+				TestBinaryImport jar = new TestBinaryImport(BINARY_JAVA_8_JAR, JV_8_0, JAVA_BINARY_LOG, n);
+				timeTest(jar);
+			}
+			if (getFlagsOr(BINARY_JAVA_8_CLASSPATH, BINARY_ALL, BINARY_JAVA_ALL)) {
+			}
+			if (getFlagsOr(BINARY_JAVA_8_RUNTIME, BINARY_ALL, BINARY_JAVA_ALL)) {
+			}
+
 			outputDocumentToFile(LOGS_BIN_JAVA_FILE);
 			transform(LOGS_BIN_JAVA_FILE, TestBinaryImport.class);
 			return 1;
@@ -570,7 +586,7 @@ public class UModelRegressionTest {
 	}
 
 	/***************************************************************************
-	 * setup Java Binary Import
+	 * setup Visual Basic Binary Import
 	 * 
 	 * @throws IOException
 	 */
@@ -702,7 +718,7 @@ public class UModelRegressionTest {
 			return false ;
 		} else {
 			File AltovaXMLJar= new File ( Settings.getAltovaXMLLocation(), "AltovaXML.jar" ) ;
-			System.out.println("<<<<<<<<<<AltovaXMLJar: "+ AltovaXMLJar.getAbsolutePath() );
+			System.out.println("AltovaXMLJar: "+ AltovaXMLJar.getAbsolutePath() );
 			map.put("AltovaXML.jar", AltovaXMLJar.getAbsolutePath());
 		}
 		

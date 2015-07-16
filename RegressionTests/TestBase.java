@@ -81,6 +81,10 @@ public class TestBase {
 		else if(testKey.equals(BINARY_JAVA_5_JAR)) srcDirectory = new File(BIN_JAR_DIR , SRC ) ;
 		else if(testKey.equals(BINARY_JAVA_5_CLASSPATH)) srcDirectory = new File( BIN_JAVA_CLASSPATH , SRC ) ;
 		else if(testKey.equals(BINARY_JAVA_5_RUNTIME)) srcDirectory = new File( BIN_JAVA_RUNTIME , SRC ) ;
+		else if(testKey.equals(BINARY_JAVA_8)) srcDirectory = new File(BIN_JAVA8_DIR, SRC ) ; 
+		else if(testKey.equals(BINARY_JAVA_8_JAR)) srcDirectory = new File(BIN_JAR_DIR , SRC ) ;
+		else if(testKey.equals(BINARY_JAVA_8_CLASSPATH)) srcDirectory = new File( BIN_JAVA_CLASSPATH , SRC ) ;
+		else if(testKey.equals(BINARY_JAVA_8_RUNTIME)) srcDirectory = new File( BIN_JAVA_RUNTIME , SRC ) ;
 		else if(testKey.equals(BINARY_VB_8_KEYWORDS)) srcDirectory =  new File (BIN_VB_LANG_KYWRDS_DIR , SRC) ;
 		else if(testKey.equals(BINARY_VB_8_LANG_SPEC)) srcDirectory =  new File (BIN_VB_LANG_SPEC_DIR , SRC) ;
 		else if(testKey.equals(BINARY_VB_9)) srcDirectory =  new File (BIN_VB9_DIR , SRC) ;
@@ -94,6 +98,7 @@ public class TestBase {
 		else if(testKey.equals(CG_CS_SLN)) srcDirectory =  new File(CG_CS_SLN_DIR , SRC ) ;
 
 		else if(testKey.equals(CG_JAVA_5)) srcDirectory =  new File(CG_JAVA5_DIR , SRC ) ;
+		else if(testKey.equals(CG_JAVA_8)) srcDirectory =  new File(CG_JAVA8_DIR , SRC ) ;
 		else if(testKey.equals(CG_JAVA_1_4)) srcDirectory =  new File(CG_JAVA14_DIR , SRC ) ;
 		else if(testKey.equals(CG_JAVA_ECLIPSE)) srcDirectory =  new File(CG_ECLIPSE_DIR , SRC ) ;
 		else if(testKey.equals(CG_JAVA_NETBEANS)) srcDirectory =  new File(CG_NETBEANS_DIR , SRC ) ;
@@ -125,6 +130,10 @@ public class TestBase {
 		else if(testKey.equals(BINARY_JAVA_5_JAR)) refDirectory = new File(BIN_JAR_DIR , REF ) ;
 		else if(testKey.equals(BINARY_JAVA_5_CLASSPATH)) refDirectory = new File( BIN_JAVA_CLASSPATH , REF ) ;
 		else if(testKey.equals(BINARY_JAVA_5_RUNTIME)) refDirectory = new File( BIN_JAVA_RUNTIME , REF ) ;
+		else if(testKey.equals(BINARY_JAVA_8)) refDirectory = new File(BIN_JAVA8_DIR, REF ) ; 
+		else if(testKey.equals(BINARY_JAVA_8_JAR)) refDirectory = new File(BIN_JAR_DIR , REF ) ;
+		else if(testKey.equals(BINARY_JAVA_8_CLASSPATH)) refDirectory = new File( BIN_JAVA_CLASSPATH , REF ) ;
+		else if(testKey.equals(BINARY_JAVA_8_RUNTIME)) refDirectory = new File( BIN_JAVA_RUNTIME , REF ) ;
 		else if(testKey.equals(BINARY_VB_8_KEYWORDS)) refDirectory =  new File(BIN_VB_LANG_KYWRDS_DIR, REF) ;
 		else if(testKey.equals(BINARY_VB_8_LANG_SPEC)) refDirectory =  new File(BIN_VB_LANG_SPEC_DIR, REF) ;
 		else if(testKey.equals(BINARY_VB_9)) refDirectory =  new File(BIN_VB9_DIR, REF) ;
@@ -137,6 +146,7 @@ public class TestBase {
 		else if(testKey.equals(CG_CS_D_PROJ)) refDirectory =  new File(CG_CS_D_PROJ_DIR, REF ) ;
 		else if(testKey.equals(CG_CS_SLN)) refDirectory =  new File(CG_CS_SLN_DIR , REF ) ;
 
+		else if(testKey.equals(CG_JAVA_8)) refDirectory =  new File(CG_JAVA8_DIR , REF ) ;
 		else if(testKey.equals(CG_JAVA_5)) refDirectory =  new File(CG_JAVA5_DIR , REF ) ;
 		else if(testKey.equals(CG_JAVA_1_4)) refDirectory =  new File(CG_JAVA14_DIR , REF ) ;
 		else if(testKey.equals(CG_JAVA_ECLIPSE)) refDirectory =  new File(CG_ECLIPSE_DIR , REF ) ;
@@ -179,6 +189,10 @@ public class TestBase {
 				(testKey.equals(BINARY_JAVA_5_JAR)) ||
 				(testKey.equals(BINARY_JAVA_5_CLASSPATH)) ||
 				(testKey.equals(BINARY_JAVA_5_RUNTIME)) || 
+				(testKey.equals(BINARY_JAVA_8)) ||
+				(testKey.equals(BINARY_JAVA_8_JAR)) ||
+				(testKey.equals(BINARY_JAVA_8_CLASSPATH)) ||
+				(testKey.equals(BINARY_JAVA_8_RUNTIME)) || 
 				(testKey.equals(BINARY_VB_9)) ||
 				(testKey.equals(BINARY_VB_8_KEYWORDS)) ||
 				(testKey.equals(BINARY_VB_8_LANG_SPEC))) {
@@ -192,6 +206,7 @@ public class TestBase {
 				(testKey.equals(CG_CS_BDS_PROJ)) || 
 				(testKey.equals(CG_CS_D_PROJ)) || 
 				(testKey.equals(CG_CS_SLN)) ||
+				(testKey.equals(CG_JAVA_8)) ||
 				(testKey.equals(CG_JAVA_5)) ||
 				(testKey.equals(CG_JAVA_1_4)) ||
 				(testKey.equals(CG_JAVA_ECLIPSE)) ||
@@ -247,6 +262,7 @@ public class TestBase {
 		String name = location.getAbsolutePath() + "\\" + location.getName() ;
 		
 		if( testKey.equals(CG_JAVA_1_4) 
+				|| testKey.equals(CG_JAVA_8) 
 				|| testKey.equals(CG_JAVA_5) 
 				|| testKey.equals(CG_CS_2_0) 
 				|| testKey.equals(CG_CS_3_0) 
