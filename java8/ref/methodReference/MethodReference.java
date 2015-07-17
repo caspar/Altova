@@ -1,30 +1,34 @@
 package methodReference;
 
-/*
- * @author Caspar Lant
- */
+//@author Caspar Lant
 
-interface Item{
-	public void constructor();
+interface IsReferable{
+	public void methodReference();
 }
 
 public class MethodReference {
 	
-	public static String staticMethodReference(){
-		//static reference
-		return "hello";
-	}
-	
-	public MethodReference(){
-		//constructor reference
-	}
-	
-	public void instanceMethodReference(){
+	public static void commonMethod(){
 		
 	}
 	
-	public static void main(String[] args){
-//		MethodReference constructorReference = Item::new;
-//		Item item = constructorReference.constructor(); 
+	public void implement(){
+		
+		IsReferable demo = new IsReferable(){
+			@Override 
+			public void methodReference(){
+				MethodReference.commonMethod();
+			}
+		};
+		
+		demo.methodReference();
+		
+		//Lambda implementation
+		IsReferable lambda = () -> MethodReference.commonMethod();
+		lambda.methodReference();
+
+		//Method reference
+		IsReferable reference = MethodReference::commonMethod;
+		reference.methodReference();
 	}
 }
