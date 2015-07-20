@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+				  table { background:#00FFFF; border:double black }
+  				  th	{  padding: 1px 10px; }
+				  td	{  padding: 1px 20px; background: #00CCCC; border: black }
+				  td.pass {background: #00CCCC;border:single black }
+				  td.fail {background: #FFCC66; border: single black }
+				</style>
+		<title>UModel code generation automation testing</title>
+	</head>
+	<body>
+		<h1>code generation regression test</h1>
+		<h2 xmlns="">Java 5 code generation</h2>
+		<table xmlns="">
+			<colgroup span="1">
+				<thead>
+					<tr>
+						<th scope="col">test file</th>
+						<th scope="col">import</th>
+						<th scope="col">generate</th>
+						<th scope="col">import-generated</th>
+						<th scope="col">compare-ump</th>
+						<th scope="col">compare-code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>AbstractClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\AbstractClass\AbstractClass-generated-code-import.ump_v_AbstractClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\AbstractClass\AbstractClass-generated-code-import.ump_v_AbstractClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>AbstractInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\AbstractInterface\AbstractInterface-generated-code-import.ump_v_AbstractInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\AbstractInterface\AbstractInterface-generated-code-import.ump_v_AbstractInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>AbstractInterfaceWithModifiers</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\AbstractInterfaceWithModifiers\AbstractInterfaceWithModifiers-generated-code-import.ump_v_AbstractInterfaceWithModifiers-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\AbstractInterfaceWithModifiers\AbstractInterfaceWithModifiers-generated-code-import.ump_v_AbstractInterfaceWithModifiers-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Annotations</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Annotations\Annotations-generated-code-import.ump_v_Annotations-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Annotations\Annotations-generated-code-import.ump_v_Annotations-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>array</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\array\array-generated-code-import.ump_v_array-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\array\array-generated-code-import.ump_v_array-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ArrayAbstractType</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ArrayAbstractType\ArrayAbstractType-generated-code-import.ump_v_ArrayAbstractType-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ArrayAbstractType\ArrayAbstractType-generated-code-import.ump_v_ArrayAbstractType-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ArrayPrimitiveType</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ArrayPrimitiveType\ArrayPrimitiveType-generated-code-import.ump_v_ArrayPrimitiveType-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ArrayPrimitiveType\ArrayPrimitiveType-generated-code-import.ump_v_ArrayPrimitiveType-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>boolean</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\boolean\boolean-generated-code-import.ump_v_boolean-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\boolean\boolean-generated-code-import.ump_v_boolean-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>byte</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\byte\byte-generated-code-import.ump_v_byte-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\byte\byte-generated-code-import.ump_v_byte-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>char</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\char\char-generated-code-import.ump_v_char-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\char\char-generated-code-import.ump_v_char-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>class</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\class\class-generated-code-import.ump_v_class-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\class\class-generated-code-import.ump_v_class-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>classExtendsAbstractClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\classExtendsAbstractClass\classExtendsAbstractClass-generated-code-import.ump_v_classExtendsAbstractClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\classExtendsAbstractClass\classExtendsAbstractClass-generated-code-import.ump_v_classExtendsAbstractClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>classExtendsClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\classExtendsClass\classExtendsClass-generated-code-import.ump_v_classExtendsClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\classExtendsClass\classExtendsClass-generated-code-import.ump_v_classExtendsClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>classImplementsInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\classImplementsInterface\classImplementsInterface-generated-code-import.ump_v_classImplementsInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\classImplementsInterface\classImplementsInterface-generated-code-import.ump_v_classImplementsInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ClassModifier</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ClassModifier\ClassModifier-generated-code-import.ump_v_ClassModifier-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ClassModifier\ClassModifier-generated-code-import.ump_v_ClassModifier-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Comment</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Comment\Comment-generated-code-import.ump_v_Comment-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Comment\Comment-generated-code-import.ump_v_Comment-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ConstructorThrows</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ConstructorThrows\ConstructorThrows-generated-code-import.ump_v_ConstructorThrows-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ConstructorThrows\ConstructorThrows-generated-code-import.ump_v_ConstructorThrows-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>DefaultValues</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\DefaultValues\DefaultValues-generated-code-import.ump_v_DefaultValues-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\DefaultValues\DefaultValues-generated-code-import.ump_v_DefaultValues-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>double</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\double\double-generated-code-import.ump_v_double-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\double\double-generated-code-import.ump_v_double-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ExceptionHandlerParameter</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ExceptionHandlerParameter\ExceptionHandlerParameter-generated-code-import.ump_v_ExceptionHandlerParameter-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ExceptionHandlerParameter\ExceptionHandlerParameter-generated-code-import.ump_v_ExceptionHandlerParameter-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Expression</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Expression\Expression-generated-code-import.ump_v_Expression-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Expression\Expression-generated-code-import.ump_v_Expression-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>FinalAttribute</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalAttribute\FinalAttribute-generated-code-import.ump_v_FinalAttribute-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalAttribute\FinalAttribute-generated-code-import.ump_v_FinalAttribute-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>FinalClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalClass\FinalClass-generated-code-import.ump_v_FinalClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalClass\FinalClass-generated-code-import.ump_v_FinalClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Finalize</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Finalize\Finalize-generated-code-import.ump_v_Finalize-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Finalize\Finalize-generated-code-import.ump_v_Finalize-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>FinalizeMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalizeMethod\FinalizeMethod-generated-code-import.ump_v_FinalizeMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalizeMethod\FinalizeMethod-generated-code-import.ump_v_FinalizeMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>FinalMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalMethod\FinalMethod-generated-code-import.ump_v_FinalMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalMethod\FinalMethod-generated-code-import.ump_v_FinalMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>FinalParameter</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalParameter\FinalParameter-generated-code-import.ump_v_FinalParameter-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\FinalParameter\FinalParameter-generated-code-import.ump_v_FinalParameter-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>float</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\float\float-generated-code-import.ump_v_float-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\float\float-generated-code-import.ump_v_float-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Hiding</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Hiding\Hiding-generated-code-import.ump_v_Hiding-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Hiding\Hiding-generated-code-import.ump_v_Hiding-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Identifiers</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Identifiers\Identifiers-generated-code-import.ump_v_Identifiers-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Identifiers\Identifiers-generated-code-import.ump_v_Identifiers-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>immulable</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\immulable\immulable-generated-code-import.ump_v_immulable-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\immulable\immulable-generated-code-import.ump_v_immulable-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ImplementInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ImplementInterface\ImplementInterface-generated-code-import.ump_v_ImplementInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ImplementInterface\ImplementInterface-generated-code-import.ump_v_ImplementInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ImportClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ImportClass\ImportClass-generated-code-import.ump_v_ImportClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ImportClass\ImportClass-generated-code-import.ump_v_ImportClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ImportInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ImportInterface\ImportInterface-generated-code-import.ump_v_ImportInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ImportInterface\ImportInterface-generated-code-import.ump_v_ImportInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>importPackage</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\importPackage\importPackage-generated-code-import.ump_v_importPackage-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\importPackage\importPackage-generated-code-import.ump_v_importPackage-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>inner static class implements Runnable interface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\inner static class implements Runnable interface\inner static class implements Runnable interface-generated-code-import.ump_v_inner static class implements Runnable interface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\inner static class implements Runnable interface\inner static class implements Runnable interface-generated-code-import.ump_v_inner static class implements Runnable interface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>innerClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\innerClass\innerClass-generated-code-import.ump_v_innerClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\innerClass\innerClass-generated-code-import.ump_v_innerClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>innerMethodClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\innerMethodClass\innerMethodClass-generated-code-import.ump_v_innerMethodClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\innerMethodClass\innerMethodClass-generated-code-import.ump_v_innerMethodClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>InputOutputParams</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\InputOutputParams\InputOutputParams-generated-code-import.ump_v_InputOutputParams-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\InputOutputParams\InputOutputParams-generated-code-import.ump_v_InputOutputParams-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>int</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\int\int-generated-code-import.ump_v_int-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\int\int-generated-code-import.ump_v_int-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>intEnumPattern</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\intEnumPattern\intEnumPattern-generated-code-import.ump_v_intEnumPattern-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\intEnumPattern\intEnumPattern-generated-code-import.ump_v_intEnumPattern-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>interface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\interface\interface-generated-code-import.ump_v_interface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\interface\interface-generated-code-import.ump_v_interface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>InterfaceExtendsInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\InterfaceExtendsInterface\InterfaceExtendsInterface-generated-code-import.ump_v_InterfaceExtendsInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\InterfaceExtendsInterface\InterfaceExtendsInterface-generated-code-import.ump_v_InterfaceExtendsInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-annotation</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-annotation\java5-annotation-generated-code-import.ump_v_java5-annotation-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-annotation\java5-annotation-generated-code-import.ump_v_java5-annotation-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-assertion</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-assertion\java5-assertion-generated-code-import.ump_v_java5-assertion-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-assertion\java5-assertion-generated-code-import.ump_v_java5-assertion-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-autoboxing</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-autoboxing\java5-autoboxing-generated-code-import.ump_v_java5-autoboxing-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-autoboxing\java5-autoboxing-generated-code-import.ump_v_java5-autoboxing-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-enum-advance</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-advance\java5-enum-advance-generated-code-import.ump_v_java5-enum-advance-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-advance\java5-enum-advance-generated-code-import.ump_v_java5-enum-advance-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-enum-array</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-array\java5-enum-array-generated-code-import.ump_v_java5-enum-array-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-array\java5-enum-array-generated-code-import.ump_v_java5-enum-array-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-enum-card</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-card\java5-enum-card-generated-code-import.ump_v_java5-enum-card-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-card\java5-enum-card-generated-code-import.ump_v_java5-enum-card-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-enum-test</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-test\java5-enum-test-generated-code-import.ump_v_java5-enum-test-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-test\java5-enum-test-generated-code-import.ump_v_java5-enum-test-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-enum-type-safe</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-type-safe\java5-enum-type-safe-generated-code-import.ump_v_java5-enum-type-safe-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-type-safe\java5-enum-type-safe-generated-code-import.ump_v_java5-enum-type-safe-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-enum-varargs</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-varargs\java5-enum-varargs-generated-code-import.ump_v_java5-enum-varargs-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-enum-varargs\java5-enum-varargs-generated-code-import.ump_v_java5-enum-varargs-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-automatic creation of anonymous binding classes</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-automatic creation of anonymous binding classes\java5-generic-automatic creation of anonymous binding classes-generated-code-import.ump_v_java5-generic-automatic creation of anonymous binding classes-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-automatic creation of anonymous binding classes\java5-generic-automatic creation of anonymous binding classes-generated-code-import.ump_v_java5-generic-automatic creation of anonymous binding classes-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-bind multiple templates simultaneously</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-bind multiple templates simultaneously\java5-generic-bind multiple templates simultaneously-generated-code-import.ump_v_java5-generic-bind multiple templates simultaneously-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-bind multiple templates simultaneously\java5-generic-bind multiple templates simultaneously-generated-code-import.ump_v_java5-generic-bind multiple templates simultaneously-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-BoundedKV</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-BoundedKV\java5-generic-BoundedKV-generated-code-import.ump_v_java5-generic-BoundedKV-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-BoundedKV\java5-generic-BoundedKV-generated-code-import.ump_v_java5-generic-BoundedKV-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-boundedWildcard</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-boundedWildcard\java5-generic-boundedWildcard-generated-code-import.ump_v_java5-generic-boundedWildcard-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-boundedWildcard\java5-generic-boundedWildcard-generated-code-import.ump_v_java5-generic-boundedWildcard-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-Enum</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-Enum\java5-generic-Enum-generated-code-import.ump_v_java5-generic-Enum-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-Enum\java5-generic-Enum-generated-code-import.ump_v_java5-generic-Enum-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-extendsIntArray</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-extendsIntArray\java5-generic-extendsIntArray-generated-code-import.ump_v_java5-generic-extendsIntArray-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-extendsIntArray\java5-generic-extendsIntArray-generated-code-import.ump_v_java5-generic-extendsIntArray-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-illegal-instantiation</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-illegal-instantiation\java5-generic-illegal-instantiation-generated-code-import.ump_v_java5-generic-illegal-instantiation-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-illegal-instantiation\java5-generic-illegal-instantiation-generated-code-import.ump_v_java5-generic-illegal-instantiation-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-illegal-multiple-instantiation</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-illegal-multiple-instantiation\java5-generic-illegal-multiple-instantiation-generated-code-import.ump_v_java5-generic-illegal-multiple-instantiation-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-illegal-multiple-instantiation\java5-generic-illegal-multiple-instantiation-generated-code-import.ump_v_java5-generic-illegal-multiple-instantiation-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-illegal-template-use</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-illegal-template-use\java5-generic-illegal-template-use-generated-code-import.ump_v_java5-generic-illegal-template-use-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-illegal-template-use\java5-generic-illegal-template-use-generated-code-import.ump_v_java5-generic-illegal-template-use-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-implements-interface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-implements-interface\java5-generic-implements-interface-generated-code-import.ump_v_java5-generic-implements-interface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-implements-interface\java5-generic-implements-interface-generated-code-import.ump_v_java5-generic-implements-interface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-invalid-instantiation</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-invalid-instantiation\java5-generic-invalid-instantiation-generated-code-import.ump_v_java5-generic-invalid-instantiation-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-invalid-instantiation\java5-generic-invalid-instantiation-generated-code-import.ump_v_java5-generic-invalid-instantiation-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-key-type-value</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-key-type-value\java5-generic-key-type-value-generated-code-import.ump_v_java5-generic-key-type-value-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-key-type-value\java5-generic-key-type-value-generated-code-import.ump_v_java5-generic-key-type-value-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-mixed constraints 4</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-mixed constraints 4\java5-generic-mixed constraints 4-generated-code-import.ump_v_java5-generic-mixed constraints 4-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-mixed constraints 4\java5-generic-mixed constraints 4-generated-code-import.ump_v_java5-generic-mixed constraints 4-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-mixed constraints 6</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-mixed constraints 6\java5-generic-mixed constraints 6-generated-code-import.ump_v_java5-generic-mixed constraints 6-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-mixed constraints 6\java5-generic-mixed constraints 6-generated-code-import.ump_v_java5-generic-mixed constraints 6-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multiple parameters</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple parameters\java5-generic-multiple parameters-generated-code-import.ump_v_java5-generic-multiple parameters-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple parameters\java5-generic-multiple parameters-generated-code-import.ump_v_java5-generic-multiple parameters-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multiple parameters and constraint</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple parameters and constraint\java5-generic-multiple parameters and constraint-generated-code-import.ump_v_java5-generic-multiple parameters and constraint-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple parameters and constraint\java5-generic-multiple parameters and constraint-generated-code-import.ump_v_java5-generic-multiple parameters and constraint-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multiple parameters and default value</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple parameters and default value\java5-generic-multiple parameters and default value-generated-code-import.ump_v_java5-generic-multiple parameters and default value-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple parameters and default value\java5-generic-multiple parameters and default value-generated-code-import.ump_v_java5-generic-multiple parameters and default value-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multiple params and upper bound</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params and upper bound\java5-generic-multiple params and upper bound-generated-code-import.ump_v_java5-generic-multiple params and upper bound-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params and upper bound\java5-generic-multiple params and upper bound-generated-code-import.ump_v_java5-generic-multiple params and upper bound-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multiple params with contract</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params with contract\java5-generic-multiple params with contract-generated-code-import.ump_v_java5-generic-multiple params with contract-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params with contract\java5-generic-multiple params with contract-generated-code-import.ump_v_java5-generic-multiple params with contract-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multiple params with enum constraint</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params with enum constraint\java5-generic-multiple params with enum constraint-generated-code-import.ump_v_java5-generic-multiple params with enum constraint-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params with enum constraint\java5-generic-multiple params with enum constraint-generated-code-import.ump_v_java5-generic-multiple params with enum constraint-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multiple params with interface constraint</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params with interface constraint\java5-generic-multiple params with interface constraint-generated-code-import.ump_v_java5-generic-multiple params with interface constraint-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multiple params with interface constraint\java5-generic-multiple params with interface constraint-generated-code-import.ump_v_java5-generic-multiple params with interface constraint-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-multipleTypeParameters</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multipleTypeParameters\java5-generic-multipleTypeParameters-generated-code-import.ump_v_java5-generic-multipleTypeParameters-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-multipleTypeParameters\java5-generic-multipleTypeParameters-generated-code-import.ump_v_java5-generic-multipleTypeParameters-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-named template binding</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-named template binding\java5-generic-named template binding-generated-code-import.ump_v_java5-generic-named template binding-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-named template binding\java5-generic-named template binding-generated-code-import.ump_v_java5-generic-named template binding-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-simple-test</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-simple-test\java5-generic-simple-test-generated-code-import.ump_v_java5-generic-simple-test-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-simple-test\java5-generic-simple-test-generated-code-import.ump_v_java5-generic-simple-test-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-single parameter</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter\java5-generic-single parameter-generated-code-import.ump_v_java5-generic-single parameter-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter\java5-generic-single parameter-generated-code-import.ump_v_java5-generic-single parameter-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-single parameter and constraint</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter and constraint\java5-generic-single parameter and constraint-generated-code-import.ump_v_java5-generic-single parameter and constraint-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter and constraint\java5-generic-single parameter and constraint-generated-code-import.ump_v_java5-generic-single parameter and constraint-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-single parameter and default value</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter and default value\java5-generic-single parameter and default value-generated-code-import.ump_v_java5-generic-single parameter and default value-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter and default value\java5-generic-single parameter and default value-generated-code-import.ump_v_java5-generic-single parameter and default value-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-single parameter and upper bound</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter and upper bound\java5-generic-single parameter and upper bound-generated-code-import.ump_v_java5-generic-single parameter and upper bound-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter and upper bound\java5-generic-single parameter and upper bound-generated-code-import.ump_v_java5-generic-single parameter and upper bound-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-single parameter with contract</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter with contract\java5-generic-single parameter with contract-generated-code-import.ump_v_java5-generic-single parameter with contract-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter with contract\java5-generic-single parameter with contract-generated-code-import.ump_v_java5-generic-single parameter with contract-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-single parameter with enumeration constraint</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter with enumeration constraint\java5-generic-single parameter with enumeration constraint-generated-code-import.ump_v_java5-generic-single parameter with enumeration constraint-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter with enumeration constraint\java5-generic-single parameter with enumeration constraint-generated-code-import.ump_v_java5-generic-single parameter with enumeration constraint-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-single parameter with interface constraint</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter with interface constraint\java5-generic-single parameter with interface constraint-generated-code-import.ump_v_java5-generic-single parameter with interface constraint-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-single parameter with interface constraint\java5-generic-single parameter with interface constraint-generated-code-import.ump_v_java5-generic-single parameter with interface constraint-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-stack-test</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-stack-test\java5-generic-stack-test-generated-code-import.ump_v_java5-generic-stack-test-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-stack-test\java5-generic-stack-test-generated-code-import.ump_v_java5-generic-stack-test-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-static-method</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-static-method\java5-generic-static-method-generated-code-import.ump_v_java5-generic-static-method-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-static-method\java5-generic-static-method-generated-code-import.ump_v_java5-generic-static-method-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-typeInType</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-typeInType\java5-generic-typeInType-generated-code-import.ump_v_java5-generic-typeInType-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-typeInType\java5-generic-typeInType-generated-code-import.ump_v_java5-generic-typeInType-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-typeParameterBound</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-typeParameterBound\java5-generic-typeParameterBound-generated-code-import.ump_v_java5-generic-typeParameterBound-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-typeParameterBound\java5-generic-typeParameterBound-generated-code-import.ump_v_java5-generic-typeParameterBound-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-typeParameters</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-typeParameters\java5-generic-typeParameters-generated-code-import.ump_v_java5-generic-typeParameters-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-typeParameters\java5-generic-typeParameters-generated-code-import.ump_v_java5-generic-typeParameters-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-vector maps</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-vector maps\java5-generic-vector maps-generated-code-import.ump_v_java5-generic-vector maps-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-vector maps\java5-generic-vector maps-generated-code-import.ump_v_java5-generic-vector maps-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-generic-wildcard-constraint</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-wildcard-constraint\java5-generic-wildcard-constraint-generated-code-import.ump_v_java5-generic-wildcard-constraint-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-wildcard-constraint\java5-generic-wildcard-constraint-generated-code-import.ump_v_java5-generic-wildcard-constraint-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-static imports</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-static imports\java5-static imports-generated-code-import.ump_v_java5-static imports-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-static imports\java5-static imports-generated-code-import.ump_v_java5-static imports-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-StaticImport2</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-StaticImport2\java5-StaticImport2-generated-code-import.ump_v_java5-StaticImport2-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-StaticImport2\java5-StaticImport2-generated-code-import.ump_v_java5-StaticImport2-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>java5-templates</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-templates\java5-templates-generated-code-import.ump_v_java5-templates-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-templates\java5-templates-generated-code-import.ump_v_java5-templates-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>JavaDocTag</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\JavaDocTag\JavaDocTag-generated-code-import.ump_v_JavaDocTag-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\JavaDocTag\JavaDocTag-generated-code-import.ump_v_JavaDocTag-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>LocalVariables</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\LocalVariables\LocalVariables-generated-code-import.ump_v_LocalVariables-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\LocalVariables\LocalVariables-generated-code-import.ump_v_LocalVariables-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>long</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\long\long-generated-code-import.ump_v_long-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\long\long-generated-code-import.ump_v_long-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>MethodThrows</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\MethodThrows\MethodThrows-generated-code-import.ump_v_MethodThrows-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\MethodThrows\MethodThrows-generated-code-import.ump_v_MethodThrows-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>MixedInheritance</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\MixedInheritance\MixedInheritance-generated-code-import.ump_v_MixedInheritance-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\MixedInheritance\MixedInheritance-generated-code-import.ump_v_MixedInheritance-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>NativeMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\NativeMethod\NativeMethod-generated-code-import.ump_v_NativeMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\NativeMethod\NativeMethod-generated-code-import.ump_v_NativeMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>NestedInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\NestedInterface\NestedInterface-generated-code-import.ump_v_NestedInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\NestedInterface\NestedInterface-generated-code-import.ump_v_NestedInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>nonStaticProperty</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\nonStaticProperty\nonStaticProperty-generated-code-import.ump_v_nonStaticProperty-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\nonStaticProperty\nonStaticProperty-generated-code-import.ump_v_nonStaticProperty-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>OverloadConstructor</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverloadConstructor\OverloadConstructor-generated-code-import.ump_v_OverloadConstructor-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverloadConstructor\OverloadConstructor-generated-code-import.ump_v_OverloadConstructor-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>OverloadInterfaceMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverloadInterfaceMethod\OverloadInterfaceMethod-generated-code-import.ump_v_OverloadInterfaceMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverloadInterfaceMethod\OverloadInterfaceMethod-generated-code-import.ump_v_OverloadInterfaceMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>OverrideInterfaceMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverrideInterfaceMethod\OverrideInterfaceMethod-generated-code-import.ump_v_OverrideInterfaceMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverrideInterfaceMethod\OverrideInterfaceMethod-generated-code-import.ump_v_OverrideInterfaceMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>OverrideParentClassMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverrideParentClassMethod\OverrideParentClassMethod-generated-code-import.ump_v_OverrideParentClassMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\OverrideParentClassMethod\OverrideParentClassMethod-generated-code-import.ump_v_OverrideParentClassMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>private</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\private\private-generated-code-import.ump_v_private-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\private\private-generated-code-import.ump_v_private-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>PrivateAttribute</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PrivateAttribute\PrivateAttribute-generated-code-import.ump_v_PrivateAttribute-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PrivateAttribute\PrivateAttribute-generated-code-import.ump_v_PrivateAttribute-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>PrivateInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PrivateInterface\PrivateInterface-generated-code-import.ump_v_PrivateInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PrivateInterface\PrivateInterface-generated-code-import.ump_v_PrivateInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>privateMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\privateMethod\privateMethod-generated-code-import.ump_v_privateMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\privateMethod\privateMethod-generated-code-import.ump_v_privateMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>protected</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\protected\protected-generated-code-import.ump_v_protected-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\protected\protected-generated-code-import.ump_v_protected-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ProtectedAttribute</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ProtectedAttribute\ProtectedAttribute-generated-code-import.ump_v_ProtectedAttribute-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ProtectedAttribute\ProtectedAttribute-generated-code-import.ump_v_ProtectedAttribute-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ProtectedInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ProtectedInterface\ProtectedInterface-generated-code-import.ump_v_ProtectedInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ProtectedInterface\ProtectedInterface-generated-code-import.ump_v_ProtectedInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>protectedMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\protectedMethod\protectedMethod-generated-code-import.ump_v_protectedMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\protectedMethod\protectedMethod-generated-code-import.ump_v_protectedMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>public</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\public\public-generated-code-import.ump_v_public-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\public\public-generated-code-import.ump_v_public-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>PublicAttribute</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PublicAttribute\PublicAttribute-generated-code-import.ump_v_PublicAttribute-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PublicAttribute\PublicAttribute-generated-code-import.ump_v_PublicAttribute-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>PublicInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PublicInterface\PublicInterface-generated-code-import.ump_v_PublicInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\PublicInterface\PublicInterface-generated-code-import.ump_v_PublicInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>publicMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\publicMethod\publicMethod-generated-code-import.ump_v_publicMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\publicMethod\publicMethod-generated-code-import.ump_v_publicMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>short</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\short\short-generated-code-import.ump_v_short-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\short\short-generated-code-import.ump_v_short-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Simple2</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Simple2\Simple2-generated-code-import.ump_v_Simple2-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Simple2\Simple2-generated-code-import.ump_v_Simple2-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>StaticAttribute</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticAttribute\StaticAttribute-generated-code-import.ump_v_StaticAttribute-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticAttribute\StaticAttribute-generated-code-import.ump_v_StaticAttribute-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>StaticClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticClass\StaticClass-generated-code-import.ump_v_StaticClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticClass\StaticClass-generated-code-import.ump_v_StaticClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>StaticInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticInterface\StaticInterface-generated-code-import.ump_v_StaticInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticInterface\StaticInterface-generated-code-import.ump_v_StaticInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>staticMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\staticMethod\staticMethod-generated-code-import.ump_v_staticMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\staticMethod\staticMethod-generated-code-import.ump_v_staticMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>StaticMethodOverride</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticMethodOverride\StaticMethodOverride-generated-code-import.ump_v_StaticMethodOverride-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StaticMethodOverride\StaticMethodOverride-generated-code-import.ump_v_StaticMethodOverride-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>staticProperty</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\staticProperty\staticProperty-generated-code-import.ump_v_staticProperty-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\staticProperty\staticProperty-generated-code-import.ump_v_staticProperty-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>StrictfpClass</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StrictfpClass\StrictfpClass-generated-code-import.ump_v_StrictfpClass-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StrictfpClass\StrictfpClass-generated-code-import.ump_v_StrictfpClass-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>StrictFpInterface</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StrictFpInterface\StrictFpInterface-generated-code-import.ump_v_StrictFpInterface-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StrictFpInterface\StrictFpInterface-generated-code-import.ump_v_StrictFpInterface-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>StrictFpMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StrictFpMethod\StrictFpMethod-generated-code-import.ump_v_StrictFpMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\StrictFpMethod\StrictFpMethod-generated-code-import.ump_v_StrictFpMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Super</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Super\Super-generated-code-import.ump_v_Super-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Super\Super-generated-code-import.ump_v_Super-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>Synchronized</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Synchronized\Synchronized-generated-code-import.ump_v_Synchronized-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\Synchronized\Synchronized-generated-code-import.ump_v_Synchronized-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>synchronized methods</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\synchronized methods\synchronized methods-generated-code-import.ump_v_synchronized methods-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\synchronized methods\synchronized methods-generated-code-import.ump_v_synchronized methods-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>this</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\this\this-generated-code-import.ump_v_this-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\this\this-generated-code-import.ump_v_this-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>ThrowsMethod</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ThrowsMethod\ThrowsMethod-generated-code-import.ump_v_ThrowsMethod-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\ThrowsMethod\ThrowsMethod-generated-code-import.ump_v_ThrowsMethod-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>TransientAttribute</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\TransientAttribute\TransientAttribute-generated-code-import.ump_v_TransientAttribute-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\TransientAttribute\TransientAttribute-generated-code-import.ump_v_TransientAttribute-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>TryCatchFinally</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\TryCatchFinally\TryCatchFinally-generated-code-import.ump_v_TryCatchFinally-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\TryCatchFinally\TryCatchFinally-generated-code-import.ump_v_TryCatchFinally-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>VolatileAttribute</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\VolatileAttribute\VolatileAttribute-generated-code-import.ump_v_VolatileAttribute-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\VolatileAttribute\VolatileAttribute-generated-code-import.ump_v_VolatileAttribute-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+				</tbody>
+			</colgroup>
+		</table>
+	</body>
+</html>
