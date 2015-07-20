@@ -1,0 +1,16 @@
+1) Some more cases with lambda expressions where lambda’s body is more complex.
+2) Add cases for interface’s default methods and multiple defaults (two interfaces have a default method with the same name, one class implements both interfaces)
+3) Add cases for interface’s static methods.
+4) Add cases (if missing) for method references:
+	a) Constructor reference           		  Class::new
+	b) Constructor generic reference        	  Class<T>::new
+	c) Static method reference      		  Class::static_method	
+	d) Instance method reference            	  Class::method
+	e) Instance method of instance class reference    instance::method
+5) Repeating annotations: add a new case where you return the used repeating annotations via the new java 8 method getAnnotationsByType()
+6) Add cases for type inference (at least one).
+7) Type annotations: add cases (if missing) for
+a) Local variable
+b) Generic types
+c) Super-classes and Implementing-interfaces
+d) Methods exception declaration
