@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Model>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44"/>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="String" uuid="Root.Unknown Externals.String" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java8.0 (1.8)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\16_07_15\code_gen\CG_JAVA_8\RepeatingAnnotation" name="RepeatingAnnotation" usedForCodeSyncronization="true" uuid="Root.Component View.RepeatingAnnotation" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.RepeatingAnnotation.RepeatingAnnotation" uuid="Root.Component View.RepeatingAnnotation" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.RepeatingAnnotation.annotations.Author" uuid="Root.Component View.RepeatingAnnotation" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.RepeatingAnnotation.annotations.Authors" uuid="Root.Component View.RepeatingAnnotation" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="RepeatingAnnotation" uuid="Root.RepeatingAnnotation" visibility="public">
+					<hyperlink>
+						<Hyperlink2GuiElement uuid="Root.RepeatingAnnotation"/>
+					</hyperlink>
+					<packagedElement>
+						<Class name="RepeatingAnnotation" usedForCodeSyncronization="true" uuid="Root.RepeatingAnnotation.RepeatingAnnotation" visibility="public">
+							<codeFileName>
+								<CodeFileName name="RepeatingAnnotation.java"/>
+							</codeFileName>
+							<ownedOperation>
+								<Operation name="method" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.annotations" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method">
+											<slot>
+												<Slot definingFeature="Root.Java Profile.annotations.modifiers" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method">
+													<value>
+														<LiteralString uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method" value="Author(value = &quot;Altova&quot;)" visibility="public"/>
+														<LiteralString uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method" value="Author(value = &quot;Caspar&quot;)" visibility="public"/>
+													</value>
+												</Slot>
+											</slot>
+										</StereotypeApplication>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method.return"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Package name="annotations" uuid="Root.RepeatingAnnotation.annotations" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication classifier="Root.Java Profile.namespace" uuid="Root.RepeatingAnnotation.annotations"/>
+							</appliedStereotype>
+							<hyperlink>
+								<Hyperlink2GuiElement uuid="Root.RepeatingAnnotation.annotations"/>
+							</hyperlink>
+							<packagedElement>
+								<Interface name="Author" usedForCodeSyncronization="true" uuid="Root.RepeatingAnnotation.annotations.Author" visibility="package">
+									<codeFileName>
+										<CodeFileName name="Authors.java"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.annotationType" uuid="Root.RepeatingAnnotation.annotations.Author"/>
+										<StereotypeApplication classifier="Root.Java Profile.annotations" uuid="Root.RepeatingAnnotation.annotations.Author">
+											<slot>
+												<Slot definingFeature="Root.Java Profile.annotations.modifiers" uuid="Root.RepeatingAnnotation.annotations.Author">
+													<value>
+														<LiteralString uuid="Root.RepeatingAnnotation.annotations.Author" value="Repeatable(Authors.class)" visibility="public"/>
+													</value>
+												</Slot>
+											</slot>
+										</StereotypeApplication>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="value" type="Root.Unknown Externals.String" uuid="Root.RepeatingAnnotation.annotations.Author.value" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.annotationTypeElement" uuid="Root.RepeatingAnnotation.annotations.Author.value"/>
+											</appliedStereotype>
+										</Property>
+									</ownedAttribute>
+								</Interface>
+								<Interface name="Authors" usedForCodeSyncronization="true" uuid="Root.RepeatingAnnotation.annotations.Authors" visibility="public">
+									<codeFileName>
+										<CodeFileName name="Authors.java"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.annotationType" uuid="Root.RepeatingAnnotation.annotations.Authors"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="value" type="Root.RepeatingAnnotation.annotations.Author" uuid="Root.RepeatingAnnotation.annotations.Authors.value" visibility="public">
+											<lowerValue>
+												<LiteralString uuid="Root.RepeatingAnnotation.annotations.Authors.value" value="*" visibility="public"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="Root.RepeatingAnnotation.annotations.Authors.value" value="*" visibility="public"/>
+											</upperValue>
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.annotationTypeElement" uuid="Root.RepeatingAnnotation.annotations.Authors.value"/>
+											</appliedStereotype>
+										</Property>
+									</ownedAttribute>
+								</Interface>
+								<Association uuid="Root.RepeatingAnnotation.annotations" visibility="public">
+									<ownedEnd>
+										<Property type="Root.RepeatingAnnotation.annotations.Authors" uuid="Root.RepeatingAnnotation.annotations"/>
+									</ownedEnd>
+									<memberEnd idref="Root.RepeatingAnnotation.annotations.Authors.value"/>
+								</Association>
+							</packagedElement>
+						</Package>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.RepeatingAnnotation"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</Model>
+	<ModelHistory>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" name="Java Profile" uuid="Root.Java Profile" visibility="public">
+					<packagedElement>
+						<Stereotype baseClass="Class" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Enumeration" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Enumeration" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="EnumerationLiteral" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="690" name="annotationType" uuid="Root.Java Profile.annotationType" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="360" name="synchronized" uuid="Root.Java Profile.synchronized" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="370" name="native" uuid="Root.Java Profile.native" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="380" name="default" uuid="Root.Java Profile.default" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Operation" guiSortPriority="690" name="constructor" uuid="Root.Java Profile.constructor" visibility="public"/>
+						<Stereotype baseClass="Package" guiSortPriority="690" name="namespace" uuid="Root.Java Profile.namespace" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="380" name="final" uuid="Root.Java Profile.final" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="340" name="volatile" uuid="Root.Java Profile.volatile" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="350" name="transient" uuid="Root.Java Profile.transient" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="690" name="annotationTypeElement" uuid="Root.Java Profile.annotationTypeElement" visibility="public"/>
+						<Enumeration name="AnnotationPresets" uuid="Root.Java Profile.AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral name="Deprecated" uuid="Root.Java Profile.AnnotationPresets.Deprecated" visibility="public"/>
+								<EnumerationLiteral name="Documented" uuid="Root.Java Profile.AnnotationPresets.Documented" visibility="public"/>
+								<EnumerationLiteral name="FunctionalInterface" uuid="Root.Java Profile.AnnotationPresets.FunctionalInterface" visibility="public"/>
+								<EnumerationLiteral name="Inherited" uuid="Root.Java Profile.AnnotationPresets.Inherited" visibility="public"/>
+								<EnumerationLiteral name="Override" uuid="Root.Java Profile.AnnotationPresets.Override" visibility="public"/>
+								<EnumerationLiteral name="Repeatable" uuid="Root.Java Profile.AnnotationPresets.Repeatable" visibility="public"/>
+								<EnumerationLiteral name="Retention" uuid="Root.Java Profile.AnnotationPresets.Retention" visibility="public"/>
+								<EnumerationLiteral name="SafeVarargs" uuid="Root.Java Profile.AnnotationPresets.SafeVarargs" visibility="public"/>
+								<EnumerationLiteral name="SuppressWarnings" uuid="Root.Java Profile.AnnotationPresets.SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral name="Target" uuid="Root.Java Profile.AnnotationPresets.Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<PrimitiveType name="boolean" uuid="Root.Java Profile.boolean" visibility="public"/>
+						<PrimitiveType name="byte" uuid="Root.Java Profile.byte" visibility="public"/>
+						<PrimitiveType name="char" uuid="Root.Java Profile.char" visibility="public"/>
+						<PrimitiveType name="double" uuid="Root.Java Profile.double" visibility="public"/>
+						<PrimitiveType name="float" uuid="Root.Java Profile.float" visibility="public"/>
+						<PrimitiveType name="int" uuid="Root.Java Profile.int" visibility="public"/>
+						<PrimitiveType name="long" uuid="Root.Java Profile.long" visibility="public"/>
+						<PrimitiveType name="short" uuid="Root.Java Profile.short" visibility="public"/>
+						<PrimitiveType name="void" uuid="Root.Java Profile.void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="String" uuid="Root.Unknown Externals.String" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java8.0 (1.8)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\16_07_15\code_gen\CG_JAVA_8\RepeatingAnnotation" name="RepeatingAnnotation" usedForCodeSyncronization="true" uuid="Root.Component View.RepeatingAnnotation" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.RepeatingAnnotation.RepeatingAnnotation" uuid="Root.Component View.RepeatingAnnotation" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.RepeatingAnnotation.annotations.Author" uuid="Root.Component View.RepeatingAnnotation" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.RepeatingAnnotation.annotations.Authors" uuid="Root.Component View.RepeatingAnnotation" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="RepeatingAnnotation" uuid="Root.RepeatingAnnotation" visibility="public">
+					<packagedElement>
+						<Class name="RepeatingAnnotation" usedForCodeSyncronization="true" uuid="Root.RepeatingAnnotation.RepeatingAnnotation" visibility="public">
+							<codeFileName>
+								<CodeFileName name="RepeatingAnnotation.java"/>
+							</codeFileName>
+							<ownedOperation>
+								<Operation name="method" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.annotations" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method">
+											<slot>
+												<Slot definingFeature="Root.Java Profile.annotations.modifiers" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method">
+													<value>
+														<LiteralString uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method" value="Author(value = &quot;Altova&quot;)" visibility="public"/>
+														<LiteralString uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method" value="Author(value = &quot;Caspar&quot;)" visibility="public"/>
+													</value>
+												</Slot>
+											</slot>
+										</StereotypeApplication>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.RepeatingAnnotation.RepeatingAnnotation.method.return"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Package name="annotations" uuid="Root.RepeatingAnnotation.annotations" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication classifier="Root.Java Profile.namespace" uuid="Root.RepeatingAnnotation.annotations"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Interface name="Author" usedForCodeSyncronization="true" uuid="Root.RepeatingAnnotation.annotations.Author" visibility="package">
+									<codeFileName>
+										<CodeFileName name="Authors.java"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.annotationType" uuid="Root.RepeatingAnnotation.annotations.Author"/>
+										<StereotypeApplication classifier="Root.Java Profile.annotations" uuid="Root.RepeatingAnnotation.annotations.Author">
+											<slot>
+												<Slot definingFeature="Root.Java Profile.annotations.modifiers" uuid="Root.RepeatingAnnotation.annotations.Author">
+													<value>
+														<LiteralString uuid="Root.RepeatingAnnotation.annotations.Author" value="Repeatable(Authors.class)" visibility="public"/>
+													</value>
+												</Slot>
+											</slot>
+										</StereotypeApplication>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="value" type="Root.Unknown Externals.String" uuid="Root.RepeatingAnnotation.annotations.Author.value" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.annotationTypeElement" uuid="Root.RepeatingAnnotation.annotations.Author.value"/>
+											</appliedStereotype>
+										</Property>
+									</ownedAttribute>
+								</Interface>
+								<Interface name="Authors" usedForCodeSyncronization="true" uuid="Root.RepeatingAnnotation.annotations.Authors" visibility="public">
+									<codeFileName>
+										<CodeFileName name="Authors.java"/>
+									</codeFileName>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.annotationType" uuid="Root.RepeatingAnnotation.annotations.Authors"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="value" type="Root.RepeatingAnnotation.annotations.Author" uuid="Root.RepeatingAnnotation.annotations.Authors.value" visibility="public">
+											<lowerValue>
+												<LiteralString uuid="Root.RepeatingAnnotation.annotations.Authors.value" value="*" visibility="public"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="Root.RepeatingAnnotation.annotations.Authors.value" value="*" visibility="public"/>
+											</upperValue>
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.annotationTypeElement" uuid="Root.RepeatingAnnotation.annotations.Authors.value"/>
+											</appliedStereotype>
+										</Property>
+									</ownedAttribute>
+								</Interface>
+							</packagedElement>
+						</Package>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.RepeatingAnnotation"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>

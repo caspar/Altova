@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Model>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44"/>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java5.0 (1.5)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-BoundedKV" name="java5-generic-BoundedKV" usedForCodeSyncronization="true" uuid="Root.Component View.java5-generic-BoundedKV" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.java5-generic-BoundedKV.Comparable" uuid="Root.Component View.java5-generic-BoundedKV" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.java5-generic-BoundedKV.TreeMap" uuid="Root.Component View.java5-generic-BoundedKV" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV" visibility="public">
+					<hyperlink>
+						<Hyperlink2GuiElement uuid="Root.java5-generic-BoundedKV"/>
+					</hyperlink>
+					<packagedElement>
+						<Interface name="Comparable" usedForCodeSyncronization="true" uuid="Root.java5-generic-BoundedKV.Comparable" visibility="public">
+							<codeFileName>
+								<CodeFileName name="Comparable.java"/>
+							</codeFileName>
+							<ownedTemplateSignature>
+								<TemplateSignature uuid="Root.java5-generic-BoundedKV.Comparable">
+									<ownedParameter>
+										<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.Comparable">
+											<ownedParameteredElement>
+												<Class name="T" uuid="Root.java5-generic-BoundedKV.Comparable.T" visibility="public"/>
+											</ownedParameteredElement>
+										</ClassifierTemplateParameter>
+									</ownedParameter>
+								</TemplateSignature>
+							</ownedTemplateSignature>
+							<ownedOperation>
+								<Operation name="compareTo" uuid="Root.java5-generic-BoundedKV.Comparable.compareTo" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.int" uuid="Root.java5-generic-BoundedKV.Comparable.compareTo.return"/>
+										<Parameter name="arg" type="Root.java5-generic-BoundedKV.Comparable.T" uuid="Root.java5-generic-BoundedKV.Comparable.compareTo.arg"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Interface>
+						<Class name="TreeMap" usedForCodeSyncronization="true" uuid="Root.java5-generic-BoundedKV.TreeMap" visibility="public">
+							<codeFileName>
+								<CodeFileName name="TreeMap.java"/>
+							</codeFileName>
+							<ownedTemplateSignature>
+								<TemplateSignature uuid="Root.java5-generic-BoundedKV.TreeMap">
+									<ownedParameter>
+										<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap">
+											<ownedParameteredElement>
+												<Interface name="Key" uuid="Root.java5-generic-BoundedKV.TreeMap.Key" visibility="public"/>
+											</ownedParameteredElement>
+											<constrainingClassifier idref="Root.java5-generic-BoundedKV"/>
+										</ClassifierTemplateParameter>
+										<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap">
+											<ownedParameteredElement>
+												<Class name="Data" uuid="Root.java5-generic-BoundedKV.TreeMap.Data" visibility="public"/>
+											</ownedParameteredElement>
+										</ClassifierTemplateParameter>
+									</ownedParameter>
+								</TemplateSignature>
+							</ownedTemplateSignature>
+							<ownedAttribute>
+								<Property name="root" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.root" visibility="private">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.transient" uuid="Root.java5-generic-BoundedKV.TreeMap.root"/>
+									</appliedStereotype>
+									<defaultValue>
+										<LiteralString uuid="Root.java5-generic-BoundedKV.TreeMap.root" value="null" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class name="Entry" usedForCodeSyncronization="true" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry" visibility="private">
+									<ownedTemplateSignature>
+										<TemplateSignature uuid="Root.java5-generic-BoundedKV.TreeMap.Entry">
+											<ownedParameter>
+												<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry">
+													<ownedParameteredElement>
+														<Class name="K" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.K" visibility="public"/>
+													</ownedParameteredElement>
+												</ClassifierTemplateParameter>
+												<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry">
+													<ownedParameteredElement>
+														<Class name="V" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.V" visibility="public"/>
+													</ownedParameteredElement>
+												</ClassifierTemplateParameter>
+											</ownedParameter>
+										</TemplateSignature>
+									</ownedTemplateSignature>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="key" type="Root.java5-generic-BoundedKV.TreeMap.Entry.K" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.key" visibility="package"/>
+										<Property name="left" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.left" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.left" value="null" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property name="parent" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.parent" visibility="package"/>
+										<Property name="right" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.right" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.right" value="null" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property name="value" type="Root.java5-generic-BoundedKV.TreeMap.Entry.V" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.value" visibility="package"/>
+									</ownedAttribute>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="containsKey" uuid="Root.java5-generic-BoundedKV.TreeMap.containsKey" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.boolean" uuid="Root.java5-generic-BoundedKV.TreeMap.containsKey.return"/>
+										<Parameter name="key" type="Root.java5-generic-BoundedKV.TreeMap.Key" uuid="Root.java5-generic-BoundedKV.TreeMap.containsKey.key"/>
+									</ownedParameter>
+								</Operation>
+								<Operation name="getEntry" uuid="Root.java5-generic-BoundedKV.TreeMap.getEntry" visibility="private">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.getEntry.return"/>
+										<Parameter name="key" type="Root.java5-generic-BoundedKV.TreeMap.Key" uuid="Root.java5-generic-BoundedKV.TreeMap.getEntry.key"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Interface uuid="Root.java5-generic-BoundedKV" visibility="public">
+							<templateBinding>
+								<TemplateBinding signature="Root.java5-generic-BoundedKV.Comparable" uuid="Root.java5-generic-BoundedKV">
+									<parameterSubstitution>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Key" formal="Root.java5-generic-BoundedKV.Comparable" uuid="Root.java5-generic-BoundedKV"/>
+									</parameterSubstitution>
+								</TemplateBinding>
+							</templateBinding>
+						</Interface>
+						<Class uuid="Root.java5-generic-BoundedKV" visibility="public">
+							<templateBinding>
+								<TemplateBinding signature="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV">
+									<parameterSubstitution>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Entry.K" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Entry.V" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+									</parameterSubstitution>
+								</TemplateBinding>
+							</templateBinding>
+						</Class>
+						<Class uuid="Root.java5-generic-BoundedKV" visibility="public">
+							<templateBinding>
+								<TemplateBinding signature="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV">
+									<parameterSubstitution>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Data" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Key" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+									</parameterSubstitution>
+								</TemplateBinding>
+							</templateBinding>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.java5-generic-BoundedKV"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</Model>
+	<ModelHistory>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" name="Java Profile" uuid="Root.Java Profile" visibility="public">
+					<packagedElement>
+						<Stereotype baseClass="Class" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Enumeration" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Enumeration" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="EnumerationLiteral" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="690" name="annotationType" uuid="Root.Java Profile.annotationType" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="360" name="synchronized" uuid="Root.Java Profile.synchronized" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="370" name="native" uuid="Root.Java Profile.native" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="380" name="default" uuid="Root.Java Profile.default" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Operation" guiSortPriority="690" name="constructor" uuid="Root.Java Profile.constructor" visibility="public"/>
+						<Stereotype baseClass="Package" guiSortPriority="690" name="namespace" uuid="Root.Java Profile.namespace" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="380" name="final" uuid="Root.Java Profile.final" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="340" name="volatile" uuid="Root.Java Profile.volatile" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="350" name="transient" uuid="Root.Java Profile.transient" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="690" name="annotationTypeElement" uuid="Root.Java Profile.annotationTypeElement" visibility="public"/>
+						<Enumeration name="AnnotationPresets" uuid="Root.Java Profile.AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral name="Deprecated" uuid="Root.Java Profile.AnnotationPresets.Deprecated" visibility="public"/>
+								<EnumerationLiteral name="Documented" uuid="Root.Java Profile.AnnotationPresets.Documented" visibility="public"/>
+								<EnumerationLiteral name="FunctionalInterface" uuid="Root.Java Profile.AnnotationPresets.FunctionalInterface" visibility="public"/>
+								<EnumerationLiteral name="Inherited" uuid="Root.Java Profile.AnnotationPresets.Inherited" visibility="public"/>
+								<EnumerationLiteral name="Override" uuid="Root.Java Profile.AnnotationPresets.Override" visibility="public"/>
+								<EnumerationLiteral name="Repeatable" uuid="Root.Java Profile.AnnotationPresets.Repeatable" visibility="public"/>
+								<EnumerationLiteral name="Retention" uuid="Root.Java Profile.AnnotationPresets.Retention" visibility="public"/>
+								<EnumerationLiteral name="SafeVarargs" uuid="Root.Java Profile.AnnotationPresets.SafeVarargs" visibility="public"/>
+								<EnumerationLiteral name="SuppressWarnings" uuid="Root.Java Profile.AnnotationPresets.SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral name="Target" uuid="Root.Java Profile.AnnotationPresets.Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<PrimitiveType name="boolean" uuid="Root.Java Profile.boolean" visibility="public"/>
+						<PrimitiveType name="byte" uuid="Root.Java Profile.byte" visibility="public"/>
+						<PrimitiveType name="char" uuid="Root.Java Profile.char" visibility="public"/>
+						<PrimitiveType name="double" uuid="Root.Java Profile.double" visibility="public"/>
+						<PrimitiveType name="float" uuid="Root.Java Profile.float" visibility="public"/>
+						<PrimitiveType name="int" uuid="Root.Java Profile.int" visibility="public"/>
+						<PrimitiveType name="long" uuid="Root.Java Profile.long" visibility="public"/>
+						<PrimitiveType name="short" uuid="Root.Java Profile.short" visibility="public"/>
+						<PrimitiveType name="void" uuid="Root.Java Profile.void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java5.0 (1.5)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\15_07_15\code_gen\CG_JAVA_5\java5-generic-BoundedKV" name="java5-generic-BoundedKV" usedForCodeSyncronization="true" uuid="Root.Component View.java5-generic-BoundedKV" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.java5-generic-BoundedKV.Comparable" uuid="Root.Component View.java5-generic-BoundedKV" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.java5-generic-BoundedKV.TreeMap" uuid="Root.Component View.java5-generic-BoundedKV" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV" visibility="public">
+					<packagedElement>
+						<Interface name="Comparable" usedForCodeSyncronization="true" uuid="Root.java5-generic-BoundedKV.Comparable" visibility="public">
+							<codeFileName>
+								<CodeFileName name="Comparable.java"/>
+							</codeFileName>
+							<ownedTemplateSignature>
+								<TemplateSignature uuid="Root.java5-generic-BoundedKV.Comparable">
+									<ownedParameter>
+										<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.Comparable">
+											<ownedParameteredElement>
+												<Class name="T" uuid="Root.java5-generic-BoundedKV.Comparable.T" visibility="public"/>
+											</ownedParameteredElement>
+										</ClassifierTemplateParameter>
+									</ownedParameter>
+								</TemplateSignature>
+							</ownedTemplateSignature>
+							<ownedOperation>
+								<Operation name="compareTo" uuid="Root.java5-generic-BoundedKV.Comparable.compareTo" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.int" uuid="Root.java5-generic-BoundedKV.Comparable.compareTo.return"/>
+										<Parameter name="arg" type="Root.java5-generic-BoundedKV.Comparable.T" uuid="Root.java5-generic-BoundedKV.Comparable.compareTo.arg"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Interface>
+						<Class name="TreeMap" usedForCodeSyncronization="true" uuid="Root.java5-generic-BoundedKV.TreeMap" visibility="public">
+							<codeFileName>
+								<CodeFileName name="TreeMap.java"/>
+							</codeFileName>
+							<ownedTemplateSignature>
+								<TemplateSignature uuid="Root.java5-generic-BoundedKV.TreeMap">
+									<ownedParameter>
+										<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap">
+											<ownedParameteredElement>
+												<Interface name="Key" uuid="Root.java5-generic-BoundedKV.TreeMap.Key" visibility="public"/>
+											</ownedParameteredElement>
+											<constrainingClassifier idref="Root.java5-generic-BoundedKV"/>
+										</ClassifierTemplateParameter>
+										<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap">
+											<ownedParameteredElement>
+												<Class name="Data" uuid="Root.java5-generic-BoundedKV.TreeMap.Data" visibility="public"/>
+											</ownedParameteredElement>
+										</ClassifierTemplateParameter>
+									</ownedParameter>
+								</TemplateSignature>
+							</ownedTemplateSignature>
+							<ownedAttribute>
+								<Property name="root" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.root" visibility="private">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.transient" uuid="Root.java5-generic-BoundedKV.TreeMap.root"/>
+									</appliedStereotype>
+									<defaultValue>
+										<LiteralString uuid="Root.java5-generic-BoundedKV.TreeMap.root" value="null" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class name="Entry" usedForCodeSyncronization="true" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry" visibility="private">
+									<ownedTemplateSignature>
+										<TemplateSignature uuid="Root.java5-generic-BoundedKV.TreeMap.Entry">
+											<ownedParameter>
+												<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry">
+													<ownedParameteredElement>
+														<Class name="K" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.K" visibility="public"/>
+													</ownedParameteredElement>
+												</ClassifierTemplateParameter>
+												<ClassifierTemplateParameter allowSubstitutable="false" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry">
+													<ownedParameteredElement>
+														<Class name="V" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.V" visibility="public"/>
+													</ownedParameteredElement>
+												</ClassifierTemplateParameter>
+											</ownedParameter>
+										</TemplateSignature>
+									</ownedTemplateSignature>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="key" type="Root.java5-generic-BoundedKV.TreeMap.Entry.K" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.key" visibility="package"/>
+										<Property name="left" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.left" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.left" value="null" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property name="parent" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.parent" visibility="package"/>
+										<Property name="right" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.right" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.right" value="null" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property name="value" type="Root.java5-generic-BoundedKV.TreeMap.Entry.V" uuid="Root.java5-generic-BoundedKV.TreeMap.Entry.value" visibility="package"/>
+									</ownedAttribute>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="containsKey" uuid="Root.java5-generic-BoundedKV.TreeMap.containsKey" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.boolean" uuid="Root.java5-generic-BoundedKV.TreeMap.containsKey.return"/>
+										<Parameter name="key" type="Root.java5-generic-BoundedKV.TreeMap.Key" uuid="Root.java5-generic-BoundedKV.TreeMap.containsKey.key"/>
+									</ownedParameter>
+								</Operation>
+								<Operation name="getEntry" uuid="Root.java5-generic-BoundedKV.TreeMap.getEntry" visibility="private">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.java5-generic-BoundedKV" uuid="Root.java5-generic-BoundedKV.TreeMap.getEntry.return"/>
+										<Parameter name="key" type="Root.java5-generic-BoundedKV.TreeMap.Key" uuid="Root.java5-generic-BoundedKV.TreeMap.getEntry.key"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Class uuid="Root.java5-generic-BoundedKV" visibility="public">
+							<templateBinding>
+								<TemplateBinding signature="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV">
+									<parameterSubstitution>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Data" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Key" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+									</parameterSubstitution>
+								</TemplateBinding>
+							</templateBinding>
+						</Class>
+						<Class uuid="Root.java5-generic-BoundedKV" visibility="public">
+							<templateBinding>
+								<TemplateBinding signature="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV">
+									<parameterSubstitution>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Entry.K" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Entry.V" formal="Root.java5-generic-BoundedKV.TreeMap.Entry" uuid="Root.java5-generic-BoundedKV"/>
+									</parameterSubstitution>
+								</TemplateBinding>
+							</templateBinding>
+						</Class>
+						<Interface uuid="Root.java5-generic-BoundedKV" visibility="public">
+							<templateBinding>
+								<TemplateBinding signature="Root.java5-generic-BoundedKV.Comparable" uuid="Root.java5-generic-BoundedKV">
+									<parameterSubstitution>
+										<TemplateParameterSubstitution actual="Root.java5-generic-BoundedKV.TreeMap.Key" formal="Root.java5-generic-BoundedKV.Comparable" uuid="Root.java5-generic-BoundedKV"/>
+									</parameterSubstitution>
+								</TemplateBinding>
+							</templateBinding>
+						</Interface>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.java5-generic-BoundedKV"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>
