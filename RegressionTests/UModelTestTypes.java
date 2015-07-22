@@ -30,6 +30,7 @@ public class UModelTestTypes {
 	
 	public static final String CG_JAVA_1_4 = 		"CG_JAVA_1_4" ;
 	public static final String CG_JAVA_5 = 			"CG_JAVA_5" ;
+	public static final String CG_JAVA_7 =			"CG_JAVA_7" ;
 	public static final String CG_JAVA_8 =			"CG_JAVA_8" ;
 	public static final String CG_JAVA_ECLIPSE = 	"CG_JAVA_ECLIPSE" ;
 	public static final String CG_JAVA_NETBEANS = 	"CG_JAVA_NETBEANS" ;
@@ -62,15 +63,20 @@ public class UModelTestTypes {
 	public static final String BIN_CS_ANY = 		"BIN_CS_ANY" ;
 	public static final String BIN_VB_ANY = 		"BIN_VB_ANY" ;
 	
-	public static final String BINARY_JAVA_5 = 		"BINARY_JAVA_5" ; 			//binJava5DirTest
-	public static final String BINARY_JAVA_5_JAR = 	"BINARY_JAVA_5_JAR" ; 		//binJava5JarTest
-	public static final String BINARY_JAVA_5_CLASSPATH = "BINARY_JAVA_5_CLASSPATH" ; //binJava5ClasspathArchivesTest
-	public static final String BINARY_JAVA_5_RUNTIME = "BINARY_JAVA_5_RUNTIME" ; //binJava5RuntimeArchivesTest
+	public static final String BINARY_JAVA_5 = 		"BINARY_JAVA_5" ; 					//binJava5DirTest
+	public static final String BINARY_JAVA_5_JAR = 	"BINARY_JAVA_5_JAR" ; 				//binJava5JarTest
+	public static final String BINARY_JAVA_5_CLASSPATH = "BINARY_JAVA_5_CLASSPATH" ; 	//binJava5ClasspathArchivesTest
+	public static final String BINARY_JAVA_5_RUNTIME = "BINARY_JAVA_5_RUNTIME" ;		 //binJava5RuntimeArchivesTest
 	
-	public static final String BINARY_JAVA_8 = 		"BINARY_JAVA_8" ; 			//binJava8DirTest
-	public static final String BINARY_JAVA_8_JAR = 	"BINARY_JAVA_8_JAR" ; 		//binJava8JarTest
-	public static final String BINARY_JAVA_8_CLASSPATH = "BINARY_JAVA_8_CLASSPATH" ; //binJava8ClasspathArchivesTest
-	public static final String BINARY_JAVA_8_RUNTIME = "BINARY_JAVA_8_RUNTIME" ; //binJava8RuntimeArchivesTest
+	public static final String BINARY_JAVA_8 = 		"BINARY_JAVA_8" ; 					//binJava8DirTest
+	public static final String BINARY_JAVA_8_JAR = 	"BINARY_JAVA_8_JAR" ; 				//binJava8JarTest
+	public static final String BINARY_JAVA_8_CLASSPATH = "BINARY_JAVA_8_CLASSPATH" ; 	//binJava8ClasspathArchivesTest
+	public static final String BINARY_JAVA_8_RUNTIME = "BINARY_JAVA_8_RUNTIME" ; 		//binJava8RuntimeArchivesTest
+
+	public static final String BINARY_JAVA_7 = 		"BINARY_JAVA_7" ; 					//binJava7DirTest
+	public static final String BINARY_JAVA_7_JAR = 	"BINARY_JAVA_7_JAR" ; 				//binJava7JarTest
+	public static final String BINARY_JAVA_7_CLASSPATH = "BINARY_JAVA_7_CLASSPATH" ; 	//binJava7ClasspathArchivesTest
+	public static final String BINARY_JAVA_7_RUNTIME = "BINARY_JAVA_7_RUNTIME" ; 		//binJava7RuntimeArchivesTest
 
 	public static final String BINARY_CS_2_0 = 		"BINARY_CS_2_0" ; 			//binCsharpDirTest
 	public static final String BINARY_CS_3_0 = 		"BINARY_CS_3_0" ; 			//binCsharpDirTest
@@ -129,27 +135,33 @@ public class UModelTestTypes {
 			if(key.equals(CG_ANY)) 		 return getFlagsOr(CG_ALL, 			  CG_VB_8, 			 	CG_VB_9,		CG_JAVA_8,		
 														   CG_JAVA_1_4, 	  CG_JAVA_5, 		 	CG_CS_2_0,  	CG_CS_3_0,			
 														   CG_CS_D_PROJ,	  CG_CS_PROJ, 		 	CG_CS_SLN, 		CG_CS_BDS_PROJ,	
-														   CG_JAVA_ECLIPSE,   CG_JAVA_NETBEANS,  	CG_JAVA_JBUILDER);
+														   CG_JAVA_ECLIPSE,   CG_JAVA_NETBEANS,  	CG_JAVA_7,		CG_JAVA_JBUILDER);
+			
 			if(key.equals(CG_JAVA_ANY))  return getFlagsOr(CG_ALL, 			  CG_JAVA_1_4,		 	CG_JAVA_5, 		CG_JAVA_8, 		
-														   CG_JAVA_ECLIPSE,   CG_JAVA_NETBEANS,	 	CG_JAVA_JBUILDER);
+														   CG_JAVA_ECLIPSE,   CG_JAVA_NETBEANS,	 	CG_JAVA_7,		CG_JAVA_JBUILDER);
+			
 			if(key.equals(CG_CS_ANY)) 	 return getFlagsOr(CG_ALL, 			  CG_CS_2_0,		 	CG_CS_3_0, 		CG_CS_4_0,		
 														   CG_CS_PROJ, 		  CG_CS_BDS_PROJ, 	 	CG_CS_D_PROJ, 	CG_CS_SLN) ;
+			
 			if(key.equals(CG_VB_ANY)) 	 return getFlagsOr(CG_ALL, 			  CG_VB_71, 		 	CG_VB_8, 		CG_VB_9,		
 														   CG_VB_8_KEYWORDS,  CG_VB_8_LANG_SPEC, 	CG_VB_VBPROJ);
 			
 			
-			if(key.equals(BINARY_ANY))   return getFlagsOr(BINARY_ALL,				BINARY_JAVA_5_JAR, 			BINARY_JAVA_5, 				
-														   BINARY_JAVA_8,			BINARY_JAVA_8_JAR, 			BINARY_JAVA_5_CLASSPATH,  
-														   BINARY_JAVA_8_CLASSPATH,	BINARY_JAVA_5_RUNTIME, 		BINARY_JAVA_8_RUNTIME, 			   
-														   BINARY_CS_2_0, 			BINARY_CS_3_0, 		  	    BINARY_CS_GAC, 
-														   BINARY_CS_MSVS, 			BINARY_VB_8,				BINARY_VB_9, 	   
-														   BINARY_VB_GAC,			BINARY_VB_MSVS);
-			if(key.equals(BIN_JAVA_ANY)) return getFlagsOr(BINARY_ALL, 				BINARY_JAVA_5, 				BINARY_JAVA_8,	
-														   BINARY_JAVA_5_JAR, 		BINARY_JAVA_8_JAR, 			BINARY_JAVA_5_CLASSPATH, 
-														   BINARY_JAVA_8_CLASSPATH, 
-														   BINARY_JAVA_5_RUNTIME, 	BINARY_JAVA_8_RUNTIME); 
+			if(key.equals(BINARY_ANY))   return getFlagsOr(BINARY_ALL,				
+														   BINARY_JAVA_5, 		BINARY_JAVA_5_JAR,		BINARY_JAVA_5_CLASSPATH, 	BINARY_JAVA_5_RUNTIME,
+														   BINARY_JAVA_7,		BINARY_JAVA_7_JAR,		BINARY_JAVA_7_CLASSPATH,	BINARY_JAVA_7_RUNTIME,	
+														   BINARY_JAVA_8,		BINARY_JAVA_8_JAR,		BINARY_JAVA_8_CLASSPATH,	BINARY_JAVA_8_RUNTIME,
+														   BINARY_CS_2_0, 		BINARY_CS_3_0, 		  	BINARY_CS_GAC, 				BINARY_CS_MSVS, 	
+														   BINARY_VB_8,			BINARY_VB_9, 	  		BINARY_VB_GAC,				BINARY_VB_MSVS);
+			
+			if(key.equals(BIN_JAVA_ANY)) return getFlagsOr(BINARY_ALL, 				
+														   BINARY_JAVA_5, 		BINARY_JAVA_5_JAR,		BINARY_JAVA_5_CLASSPATH, 	BINARY_JAVA_5_RUNTIME,
+														   BINARY_JAVA_7,		BINARY_JAVA_7_JAR,		BINARY_JAVA_7_CLASSPATH,	BINARY_JAVA_7_RUNTIME,	
+														   BINARY_JAVA_8,		BINARY_JAVA_8_JAR,		BINARY_JAVA_8_CLASSPATH,	BINARY_JAVA_8_RUNTIME);		
+												
 			if(key.equals(BIN_CS_ANY))	 return getFlagsOr(BINARY_ALL, 				BINARY_CS_2_0,				BINARY_CS_3_0, 	
 														   BINARY_CS_4_0, 	   		BINARY_CS_GAC, 				BINARY_CS_MSVS);
+			
 			if(key.equals(BIN_VB_ANY))	 return getFlagsOr(BINARY_ALL,				BINARY_VB_8, 				BINARY_VB_8_KEYWORDS, 
 														   BINARY_VB_9, 			BINARY_VB_GAC, 				BINARY_VB_MSVS, 
 														   BINARY_VB_8_LANG_SPEC);

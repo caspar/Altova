@@ -130,6 +130,40 @@ public class TestBinaryImport extends TestBase{
 			cmd += "*" + testDir.getAbsolutePath() + "\" /iclg=\"" + codeLanguage + "\" /ibrt=" + jre + " /ipsd=1 /dgen=1 /chk";
 		}
 		
+		//java7
+		if (testKey.equals(BINARY_JAVA_7))	{ 
+			
+			cmd += " \"/ibt=" ; 
+
+			try {
+				// eg: annotations need tools.jar for class type resolution
+				cmd += getBinariesForImport();	//instructions.txt
+
+				
+			} catch (FileNotFoundException e) {
+				/*Do nothing here, it does not have to be present if no jar files are needed*/
+			}			
+
+			cmd += "*" + testDir.getAbsolutePath() + "\" /iclg=\"" + codeLanguage + "\" /ibrt=" + jre + " /ipsd=1 /dgen=1 /chk";
+		}
+		
+		//java8
+		if (testKey.equals(BINARY_JAVA_8))	{ 
+			
+			cmd += " \"/ibt=" ; 
+
+			try {
+				// eg: annotations need tools.jar for class type resolution
+				cmd += getBinariesForImport();	//instructions.txt
+
+				
+			} catch (FileNotFoundException e) {
+				/*Do nothing here, it does not have to be present if no jar files are needed*/
+			}			
+
+			cmd += "*" + testDir.getAbsolutePath() + "\" /iclg=\"" + codeLanguage + "\" /ibrt=" + jre + " /ipsd=1 /dgen=1 /chk";
+		}
+		
 		else if (testKey.equals(BINARY_CS_2_0)) {
 			//find correct method of import: dll, exe,
 			String s = "";
@@ -152,6 +186,24 @@ public class TestBinaryImport extends TestBase{
 		}
 
 		else if (testKey.equals(BINARY_JAVA_5_JAR)) {
+			String s = "";
+			try {
+				s = getBinariesAndOptionsForImport();	//instructions.txt
+				cmd += " /iclg=\"" + codeLanguage + "\" /ibt=" + s + " /ibrt=" + jre + " /ipsd=1 /dgen=1 /chk";
+			}catch (FileNotFoundException e) { throw new DoNotContinueException(e.getMessage()); }
+		}
+		
+		//java7
+		else if (testKey.equals(BINARY_JAVA_7_JAR)) {
+			String s = "";
+			try {
+				s = getBinariesAndOptionsForImport();	//instructions.txt
+				cmd += " /iclg=\"" + codeLanguage + "\" /ibt=" + s + " /ibrt=" + jre + " /ipsd=1 /dgen=1 /chk";
+			}catch (FileNotFoundException e) { throw new DoNotContinueException(e.getMessage()); }
+		}
+		
+		//java8
+		else if (testKey.equals(BINARY_JAVA_8_JAR)) {
 			String s = "";
 			try {
 				s = getBinariesAndOptionsForImport();	//instructions.txt

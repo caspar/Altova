@@ -30,7 +30,7 @@ public class TestCodeGen extends TestBase{
 
 	private static File referenceDirectory = null;
 	
-	// iclg[=clg] ... code language (Java1.4 | Java5.0 | C#2.0)
+	// iclg[=clg] ... code language (Java1.4 | Java5.0 | Java8.0 | Java7.0 | C#2.0)
 	private String codeLanguage;
 	private File generatedCodeUMP;
 	boolean sed = false;

@@ -77,14 +77,22 @@ public class TestBase {
 		else if(testKey.equals(BINARY_CS_4_0)) srcDirectory = new File(BIN_CS40_DIR , SRC ) ;
 		else if(testKey.equals(BINARY_CS_GAC)) srcDirectory =  new File(BIN_CS_GAC_DIR , SRC ) ;
 		else if(testKey.equals(BINARY_CS_MSVS)) srcDirectory = new File(BIN_CS_MSVS_DIR , SRC ) ;
+		//java5
 		else if(testKey.equals(BINARY_JAVA_5)) srcDirectory = new File(BIN_JAVA5_DIR, SRC ) ; 
 		else if(testKey.equals(BINARY_JAVA_5_JAR)) srcDirectory = new File(BIN_JAR_DIR , SRC ) ;
 		else if(testKey.equals(BINARY_JAVA_5_CLASSPATH)) srcDirectory = new File( BIN_JAVA_CLASSPATH , SRC ) ;
 		else if(testKey.equals(BINARY_JAVA_5_RUNTIME)) srcDirectory = new File( BIN_JAVA_RUNTIME , SRC ) ;
+		//java7
+		else if(testKey.equals(BINARY_JAVA_7)) srcDirectory = new File(BIN_JAVA7_DIR, SRC ) ; 
+		else if(testKey.equals(BINARY_JAVA_7_JAR)) srcDirectory = new File(BIN_JAR_DIR , SRC ) ;
+		else if(testKey.equals(BINARY_JAVA_7_CLASSPATH)) srcDirectory = new File( BIN_JAVA_CLASSPATH , SRC ) ;
+		else if(testKey.equals(BINARY_JAVA_7_RUNTIME)) srcDirectory = new File( BIN_JAVA_RUNTIME , SRC ) ;
+		//java8
 		else if(testKey.equals(BINARY_JAVA_8)) srcDirectory = new File(BIN_JAVA8_DIR, SRC ) ; 
 		else if(testKey.equals(BINARY_JAVA_8_JAR)) srcDirectory = new File(BIN_JAR_DIR , SRC ) ;
 		else if(testKey.equals(BINARY_JAVA_8_CLASSPATH)) srcDirectory = new File( BIN_JAVA_CLASSPATH , SRC ) ;
 		else if(testKey.equals(BINARY_JAVA_8_RUNTIME)) srcDirectory = new File( BIN_JAVA_RUNTIME , SRC ) ;
+		
 		else if(testKey.equals(BINARY_VB_8_KEYWORDS)) srcDirectory =  new File (BIN_VB_LANG_KYWRDS_DIR , SRC) ;
 		else if(testKey.equals(BINARY_VB_8_LANG_SPEC)) srcDirectory =  new File (BIN_VB_LANG_SPEC_DIR , SRC) ;
 		else if(testKey.equals(BINARY_VB_9)) srcDirectory =  new File (BIN_VB9_DIR , SRC) ;
@@ -98,6 +106,7 @@ public class TestBase {
 		else if(testKey.equals(CG_CS_SLN)) srcDirectory =  new File(CG_CS_SLN_DIR , SRC ) ;
 
 		else if(testKey.equals(CG_JAVA_5)) srcDirectory =  new File(CG_JAVA5_DIR , SRC ) ;
+		else if(testKey.equals(CG_JAVA_7)) srcDirectory =  new File(CG_JAVA7_DIR , SRC ) ;
 		else if(testKey.equals(CG_JAVA_8)) srcDirectory =  new File(CG_JAVA8_DIR , SRC ) ;
 		else if(testKey.equals(CG_JAVA_1_4)) srcDirectory =  new File(CG_JAVA14_DIR , SRC ) ;
 		else if(testKey.equals(CG_JAVA_ECLIPSE)) srcDirectory =  new File(CG_ECLIPSE_DIR , SRC ) ;
@@ -126,10 +135,17 @@ public class TestBase {
 		else if(testKey.equals(BINARY_CS_4_0)) refDirectory = new File(BIN_CS40_DIR , REF ) ;
 		else if(testKey.equals(BINARY_CS_GAC)) refDirectory =  new File(BIN_CS_GAC_DIR , REF ) ;
 		else if(testKey.equals(BINARY_CS_MSVS)) refDirectory = new File(BIN_CS_MSVS_DIR , REF ) ;
+		//java5
 		else if(testKey.equals(BINARY_JAVA_5)) refDirectory = new File(BIN_JAVA5_DIR, REF ) ; 
 		else if(testKey.equals(BINARY_JAVA_5_JAR)) refDirectory = new File(BIN_JAR_DIR , REF ) ;
 		else if(testKey.equals(BINARY_JAVA_5_CLASSPATH)) refDirectory = new File( BIN_JAVA_CLASSPATH , REF ) ;
 		else if(testKey.equals(BINARY_JAVA_5_RUNTIME)) refDirectory = new File( BIN_JAVA_RUNTIME , REF ) ;
+		//java7
+		else if(testKey.equals(BINARY_JAVA_7)) refDirectory = new File(BIN_JAVA7_DIR, REF ) ; 
+		else if(testKey.equals(BINARY_JAVA_7_JAR)) refDirectory = new File(BIN_JAR_DIR , REF ) ;
+		else if(testKey.equals(BINARY_JAVA_7_CLASSPATH)) refDirectory = new File( BIN_JAVA_CLASSPATH , REF ) ;
+		else if(testKey.equals(BINARY_JAVA_7_RUNTIME)) refDirectory = new File( BIN_JAVA_RUNTIME , REF ) ;
+		//java8
 		else if(testKey.equals(BINARY_JAVA_8)) refDirectory = new File(BIN_JAVA8_DIR, REF ) ; 
 		else if(testKey.equals(BINARY_JAVA_8_JAR)) refDirectory = new File(BIN_JAR_DIR , REF ) ;
 		else if(testKey.equals(BINARY_JAVA_8_CLASSPATH)) refDirectory = new File( BIN_JAVA_CLASSPATH , REF ) ;
@@ -147,6 +163,7 @@ public class TestBase {
 		else if(testKey.equals(CG_CS_SLN)) refDirectory =  new File(CG_CS_SLN_DIR , REF ) ;
 
 		else if(testKey.equals(CG_JAVA_8)) refDirectory =  new File(CG_JAVA8_DIR , REF ) ;
+		else if(testKey.equals(CG_JAVA_7)) refDirectory =  new File(CG_JAVA7_DIR , REF ) ;
 		else if(testKey.equals(CG_JAVA_5)) refDirectory =  new File(CG_JAVA5_DIR , REF ) ;
 		else if(testKey.equals(CG_JAVA_1_4)) refDirectory =  new File(CG_JAVA14_DIR , REF ) ;
 		else if(testKey.equals(CG_JAVA_ECLIPSE)) refDirectory =  new File(CG_ECLIPSE_DIR , REF ) ;
@@ -185,14 +202,22 @@ public class TestBase {
 				(testKey.equals(BINARY_CS_4_0)) ||
 				(testKey.equals(BINARY_CS_GAC)) ||
 				(testKey.equals(BINARY_CS_MSVS)) ||
+				//java5
 				(testKey.equals(BINARY_JAVA_5)) ||
 				(testKey.equals(BINARY_JAVA_5_JAR)) ||
 				(testKey.equals(BINARY_JAVA_5_CLASSPATH)) ||
 				(testKey.equals(BINARY_JAVA_5_RUNTIME)) || 
+				//java7
+				(testKey.equals(BINARY_JAVA_7)) ||
+				(testKey.equals(BINARY_JAVA_7_JAR)) ||
+				(testKey.equals(BINARY_JAVA_7_CLASSPATH)) ||
+				(testKey.equals(BINARY_JAVA_7_RUNTIME)) || 
+				//java8
 				(testKey.equals(BINARY_JAVA_8)) ||
 				(testKey.equals(BINARY_JAVA_8_JAR)) ||
 				(testKey.equals(BINARY_JAVA_8_CLASSPATH)) ||
 				(testKey.equals(BINARY_JAVA_8_RUNTIME)) || 
+				
 				(testKey.equals(BINARY_VB_9)) ||
 				(testKey.equals(BINARY_VB_8_KEYWORDS)) ||
 				(testKey.equals(BINARY_VB_8_LANG_SPEC))) {
@@ -207,6 +232,7 @@ public class TestBase {
 				(testKey.equals(CG_CS_D_PROJ)) || 
 				(testKey.equals(CG_CS_SLN)) ||
 				(testKey.equals(CG_JAVA_8)) ||
+				(testKey.equals(CG_JAVA_7)) ||
 				(testKey.equals(CG_JAVA_5)) ||
 				(testKey.equals(CG_JAVA_1_4)) ||
 				(testKey.equals(CG_JAVA_ECLIPSE)) ||
@@ -263,6 +289,7 @@ public class TestBase {
 		
 		if( testKey.equals(CG_JAVA_1_4) 
 				|| testKey.equals(CG_JAVA_8) 
+				|| testKey.equals(CG_JAVA_7) 
 				|| testKey.equals(CG_JAVA_5) 
 				|| testKey.equals(CG_CS_2_0) 
 				|| testKey.equals(CG_CS_3_0) 

@@ -300,9 +300,16 @@ public class UModelRegressionTest {
 			
 			//TODO CG_JAVA_8 tests
 			
+			if (getFlagsOr(CG_JAVA_7, CG_ALL, CG_JAVA_ALL)){
+				
+				TestCodeGen java7 = new TestCodeGen(CG_JAVA_7, JV_7_0, JAVA_CG_LOG, n);
+				timeTest(java7);
+				
+			}
+			
 			if (getFlagsOr(CG_JAVA_8, CG_ALL, CG_JAVA_ALL)){
 				
-				TestCodeGen java8 = new TestCodeGen(CG_JAVA_8, /*check this*/ JV_8_0, JAVA_CG_LOG, n);
+				TestCodeGen java8 = new TestCodeGen(CG_JAVA_8, JV_8_0, JAVA_CG_LOG, n);
 				timeTest(java8);
 				
 			}
@@ -512,11 +519,11 @@ public class UModelRegressionTest {
 			}
 			if (getFlagsOr(BINARY_JAVA_5_RUNTIME, BINARY_ALL, BINARY_JAVA_ALL)) {
 			}
-
+			//java 8
 			if (getFlagsOr(BINARY_JAVA_8, BINARY_ALL, BINARY_JAVA_ALL)) {
 
-				TestBinaryImport j5 = new TestBinaryImport(BINARY_JAVA_8, JV_8_0, JAVA_BINARY_LOG, n);
-				timeTest(j5);
+				TestBinaryImport j8 = new TestBinaryImport(BINARY_JAVA_8, JV_8_0, JAVA_BINARY_LOG, n);
+				timeTest(j8);
 			}
 			if (getFlagsOr(BINARY_JAVA_8_JAR, BINARY_ALL, BINARY_JAVA_ALL)) {
 
@@ -526,6 +533,21 @@ public class UModelRegressionTest {
 			if (getFlagsOr(BINARY_JAVA_8_CLASSPATH, BINARY_ALL, BINARY_JAVA_ALL)) {
 			}
 			if (getFlagsOr(BINARY_JAVA_8_RUNTIME, BINARY_ALL, BINARY_JAVA_ALL)) {
+			}
+			//java 7
+			if (getFlagsOr(BINARY_JAVA_7, BINARY_ALL, BINARY_JAVA_ALL)) {
+
+				TestBinaryImport j7 = new TestBinaryImport(BINARY_JAVA_7, JV_7_0, JAVA_BINARY_LOG, n);
+				timeTest(j7);
+			}
+			if (getFlagsOr(BINARY_JAVA_7_JAR, BINARY_ALL, BINARY_JAVA_ALL)) {
+
+				TestBinaryImport jar = new TestBinaryImport(BINARY_JAVA_7_JAR, JV_7_0, JAVA_BINARY_LOG, n);
+				timeTest(jar);
+			}
+			if (getFlagsOr(BINARY_JAVA_7_CLASSPATH, BINARY_ALL, BINARY_JAVA_ALL)) {
+			}
+			if (getFlagsOr(BINARY_JAVA_7_RUNTIME, BINARY_ALL, BINARY_JAVA_ALL)) {
 			}
 
 			outputDocumentToFile(LOGS_BIN_JAVA_FILE);

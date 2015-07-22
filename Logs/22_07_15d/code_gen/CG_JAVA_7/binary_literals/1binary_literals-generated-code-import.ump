@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Model>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44"/>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java7.0 (1.7)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals" name="binary_literals" usedForCodeSyncronization="true" uuid="Root.Component View.binary_literals" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.binary_literals.binary_literals" uuid="Root.Component View.binary_literals" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="binary_literals" uuid="Root.binary_literals" visibility="public">
+					<hyperlink>
+						<Hyperlink2GuiElement uuid="Root.binary_literals"/>
+					</hyperlink>
+					<packagedElement>
+						<Class name="binary_literals" usedForCodeSyncronization="true" uuid="Root.binary_literals.binary_literals" visibility="public">
+							<codeFileName>
+								<CodeFileName name="binary_literals.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property isLeaf="true" isStatic="true" name="HAPPY_FACE" type="Root.Java Profile.short" uuid="Root.binary_literals.binary_literals.HAPPY_FACE" visibility="public">
+									<lowerValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.HAPPY_FACE" value="*" visibility="public"/>
+									</lowerValue>
+									<upperValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.HAPPY_FACE" value="*" visibility="public"/>
+									</upperValue>
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.HAPPY_FACE" value="{ (short)0b0000011111100000, (short)0b0000100000010000, (short)0b0001000000001000, (short)0b0010000000000100, (short)0b0100000000000010, (short)0b1000011001100001, (short)0b1000011001100001, (short)0b1000000000000001, (short)0b1000000000000001, (short)0b1001000000001001, (short)0b1000100000010001, (short)0b0100011111100010, (short)0b0010000000000100, (short)0b0001000000001000, (short)0b0000100000010000, (short)0b0000011111100000 }" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property isLeaf="true" isStatic="true" name="phases" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.phases" visibility="public">
+									<lowerValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases" value="*" visibility="public"/>
+									</lowerValue>
+									<upperValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases" value="*" visibility="public"/>
+									</upperValue>
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases" value="{ 0b00110001, 0b01100010, 0b11000100, 0b10001001, 0b00010011, 0b00100110, 0b01001100, 0b10011000 }" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property isLeaf="true" isStatic="true" name="phases2" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.phases2" visibility="public">
+									<lowerValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases2" value="*" visibility="public"/>
+									</lowerValue>
+									<upperValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases2" value="*" visibility="public"/>
+									</upperValue>
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases2" value="{ 0x31, 0x62, 0xC4, 0x89, 0x13, 0x26, 0x4C, 0x98 }" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="aByte" type="Root.Java Profile.byte" uuid="Root.binary_literals.binary_literals.aByte" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.aByte" value="(byte)0b00100001" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="aShort" type="Root.Java Profile.short" uuid="Root.binary_literals.binary_literals.aShort" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.aShort" value="(short)0b1010000101000101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="anInt1" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.anInt1" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.anInt1" value="0b10100001010001011010000101000101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="anInt2" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.anInt2" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.anInt2" value="0b101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="anInt3" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.anInt3" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.anInt3" value="0B101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="test" type="Root.Java Profile.byte" uuid="Root.binary_literals.binary_literals.test" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.test" value="123" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="test1" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.test1" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.test1" value="1" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.binary_literals"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</Model>
+	<ModelHistory>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" name="Java Profile" uuid="Root.Java Profile" visibility="public">
+					<packagedElement>
+						<Stereotype baseClass="Class" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Enumeration" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Enumeration" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="EnumerationLiteral" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="690" name="annotationType" uuid="Root.Java Profile.annotationType" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="360" name="synchronized" uuid="Root.Java Profile.synchronized" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="370" name="native" uuid="Root.Java Profile.native" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="380" name="default" uuid="Root.Java Profile.default" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Operation" guiSortPriority="690" name="constructor" uuid="Root.Java Profile.constructor" visibility="public"/>
+						<Stereotype baseClass="Package" guiSortPriority="690" name="namespace" uuid="Root.Java Profile.namespace" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="380" name="final" uuid="Root.Java Profile.final" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="340" name="volatile" uuid="Root.Java Profile.volatile" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="350" name="transient" uuid="Root.Java Profile.transient" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="690" name="annotationTypeElement" uuid="Root.Java Profile.annotationTypeElement" visibility="public"/>
+						<Enumeration name="AnnotationPresets" uuid="Root.Java Profile.AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral name="Deprecated" uuid="Root.Java Profile.AnnotationPresets.Deprecated" visibility="public"/>
+								<EnumerationLiteral name="Documented" uuid="Root.Java Profile.AnnotationPresets.Documented" visibility="public"/>
+								<EnumerationLiteral name="FunctionalInterface" uuid="Root.Java Profile.AnnotationPresets.FunctionalInterface" visibility="public"/>
+								<EnumerationLiteral name="Inherited" uuid="Root.Java Profile.AnnotationPresets.Inherited" visibility="public"/>
+								<EnumerationLiteral name="Override" uuid="Root.Java Profile.AnnotationPresets.Override" visibility="public"/>
+								<EnumerationLiteral name="Repeatable" uuid="Root.Java Profile.AnnotationPresets.Repeatable" visibility="public"/>
+								<EnumerationLiteral name="Retention" uuid="Root.Java Profile.AnnotationPresets.Retention" visibility="public"/>
+								<EnumerationLiteral name="SafeVarargs" uuid="Root.Java Profile.AnnotationPresets.SafeVarargs" visibility="public"/>
+								<EnumerationLiteral name="SuppressWarnings" uuid="Root.Java Profile.AnnotationPresets.SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral name="Target" uuid="Root.Java Profile.AnnotationPresets.Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<PrimitiveType name="boolean" uuid="Root.Java Profile.boolean" visibility="public"/>
+						<PrimitiveType name="byte" uuid="Root.Java Profile.byte" visibility="public"/>
+						<PrimitiveType name="char" uuid="Root.Java Profile.char" visibility="public"/>
+						<PrimitiveType name="double" uuid="Root.Java Profile.double" visibility="public"/>
+						<PrimitiveType name="float" uuid="Root.Java Profile.float" visibility="public"/>
+						<PrimitiveType name="int" uuid="Root.Java Profile.int" visibility="public"/>
+						<PrimitiveType name="long" uuid="Root.Java Profile.long" visibility="public"/>
+						<PrimitiveType name="short" uuid="Root.Java Profile.short" visibility="public"/>
+						<PrimitiveType name="void" uuid="Root.Java Profile.void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java7.0 (1.7)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals" name="binary_literals" usedForCodeSyncronization="true" uuid="Root.Component View.binary_literals" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.binary_literals.binary_literals" uuid="Root.Component View.binary_literals" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="binary_literals" uuid="Root.binary_literals" visibility="public">
+					<packagedElement>
+						<Class name="binary_literals" usedForCodeSyncronization="true" uuid="Root.binary_literals.binary_literals" visibility="public">
+							<codeFileName>
+								<CodeFileName name="binary_literals.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property isLeaf="true" isStatic="true" name="HAPPY_FACE" type="Root.Java Profile.short" uuid="Root.binary_literals.binary_literals.HAPPY_FACE" visibility="public">
+									<lowerValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.HAPPY_FACE" value="*" visibility="public"/>
+									</lowerValue>
+									<upperValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.HAPPY_FACE" value="*" visibility="public"/>
+									</upperValue>
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.HAPPY_FACE" value="{ (short)0b0000011111100000, (short)0b0000100000010000, (short)0b0001000000001000, (short)0b0010000000000100, (short)0b0100000000000010, (short)0b1000011001100001, (short)0b1000011001100001, (short)0b1000000000000001, (short)0b1000000000000001, (short)0b1001000000001001, (short)0b1000100000010001, (short)0b0100011111100010, (short)0b0010000000000100, (short)0b0001000000001000, (short)0b0000100000010000, (short)0b0000011111100000 }" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property isLeaf="true" isStatic="true" name="phases" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.phases" visibility="public">
+									<lowerValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases" value="*" visibility="public"/>
+									</lowerValue>
+									<upperValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases" value="*" visibility="public"/>
+									</upperValue>
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases" value="{ 0b00110001, 0b01100010, 0b11000100, 0b10001001, 0b00010011, 0b00100110, 0b01001100, 0b10011000 }" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property isLeaf="true" isStatic="true" name="phases2" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.phases2" visibility="public">
+									<lowerValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases2" value="*" visibility="public"/>
+									</lowerValue>
+									<upperValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases2" value="*" visibility="public"/>
+									</upperValue>
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.phases2" value="{ 0x31, 0x62, 0xC4, 0x89, 0x13, 0x26, 0x4C, 0x98 }" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="aByte" type="Root.Java Profile.byte" uuid="Root.binary_literals.binary_literals.aByte" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.aByte" value="(byte)0b00100001" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="aShort" type="Root.Java Profile.short" uuid="Root.binary_literals.binary_literals.aShort" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.aShort" value="(short)0b1010000101000101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="anInt1" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.anInt1" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.anInt1" value="0b10100001010001011010000101000101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="anInt2" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.anInt2" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.anInt2" value="0b101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="anInt3" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.anInt3" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.anInt3" value="0B101" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="test" type="Root.Java Profile.byte" uuid="Root.binary_literals.binary_literals.test" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.test" value="123" visibility="public"/>
+									</defaultValue>
+								</Property>
+								<Property name="test1" type="Root.Java Profile.int" uuid="Root.binary_literals.binary_literals.test1" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.binary_literals.binary_literals.test1" value="1" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.binary_literals"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>
