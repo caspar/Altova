@@ -7,6 +7,23 @@
 	</diff_info>
 	<xml_diff>
 		<left_location>
+			<parent xpath="/UModel/Model/Package/packagedElement/Package[3]"/>
+			<position>4</position>
+		</left_location>
+		<right_location>
+			<parent xpath="/UModel/Model/Package/packagedElement/Package[3]"/>
+			<position>4</position>
+		</right_location>
+		<left_content>
+			<element>
+				<hyperlink>
+					<Hyperlink2GuiElement uuid="Root.TypeAnnotation"/>
+				</hyperlink>
+			</element>
+		</left_content>
+	</xml_diff>
+	<xml_diff>
+		<left_location>
 			<parent xpath="/UModel/Model/Package/packagedElement/Package[3]/packagedElement/Class"/>
 			<position>7</position>
 		</left_location>
@@ -31,6 +48,23 @@
 						</ownedParameter>
 					</Operation>
 				</ownedOperation>
+			</element>
+		</left_content>
+	</xml_diff>
+	<xml_diff>
+		<left_location>
+			<parent xpath="/UModel/Model/Package/packagedElement/Package[3]/packagedElement/Package"/>
+			<position>5</position>
+		</left_location>
+		<right_location>
+			<parent xpath="/UModel/Model/Package/packagedElement/Package[3]/packagedElement/Package"/>
+			<position>5</position>
+		</right_location>
+		<left_content>
+			<element>
+				<hyperlink>
+					<Hyperlink2GuiElement uuid="Root.TypeAnnotation.annotations"/>
+				</hyperlink>
 			</element>
 		</left_content>
 	</xml_diff>

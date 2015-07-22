@@ -11,7 +11,7 @@
 				</Package>
 				<Package name="Component View" uuid="Root.Component View" visibility="public">
 					<packagedElement>
-						<Component codeLang="Java8.0 (1.8)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\17_07_15\code_gen\CG_JAVA_8\TypeAnnotation" name="TypeAnnotation" usedForCodeSyncronization="true" uuid="Root.Component View.TypeAnnotation" visibility="public">
+						<Component codeLang="Java8.0 (1.8)" codeProjectFileOrDirectory="." name="TypeAnnotation" usedForCodeSyncronization="true" uuid="Root.Component View.TypeAnnotation" visibility="public">
 							<realization>
 								<ComponentRealization realizingClassifier="Root.TypeAnnotation.TypeAnnotation" uuid="Root.Component View.TypeAnnotation" visibility="public"/>
 								<ComponentRealization realizingClassifier="Root.TypeAnnotation.annotations.Email" uuid="Root.Component View.TypeAnnotation" visibility="public"/>
@@ -20,9 +20,6 @@
 					</packagedElement>
 				</Package>
 				<Package name="TypeAnnotation" uuid="Root.TypeAnnotation" visibility="public">
-					<hyperlink>
-						<Hyperlink2GuiElement uuid="Root.TypeAnnotation"/>
-					</hyperlink>
 					<packagedElement>
 						<Class name="TypeAnnotation" usedForCodeSyncronization="true" uuid="Root.TypeAnnotation.TypeAnnotation" visibility="public">
 							<codeFileName>
@@ -61,9 +58,6 @@
 							<appliedStereotype>
 								<StereotypeApplication classifier="Root.Java Profile.namespace" uuid="Root.TypeAnnotation.annotations"/>
 							</appliedStereotype>
-							<hyperlink>
-								<Hyperlink2GuiElement uuid="Root.TypeAnnotation.annotations"/>
-							</hyperlink>
 							<packagedElement>
 								<Interface name="Email" usedForCodeSyncronization="true" uuid="Root.TypeAnnotation.annotations.Email" visibility="public">
 									<codeFileName>
@@ -181,7 +175,7 @@
 				</Package>
 				<Package name="Component View" uuid="Root.Component View" visibility="public">
 					<packagedElement>
-						<Component codeLang="Java8.0 (1.8)" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\17_07_15\code_gen\CG_JAVA_8\TypeAnnotation" name="TypeAnnotation" usedForCodeSyncronization="true" uuid="Root.Component View.TypeAnnotation" visibility="public">
+						<Component codeLang="Java8.0 (1.8)" codeProjectFileOrDirectory="." name="TypeAnnotation" usedForCodeSyncronization="true" uuid="Root.Component View.TypeAnnotation" visibility="public">
 							<realization>
 								<ComponentRealization realizingClassifier="Root.TypeAnnotation.TypeAnnotation" uuid="Root.Component View.TypeAnnotation" visibility="public"/>
 								<ComponentRealization realizingClassifier="Root.TypeAnnotation.annotations.Email" uuid="Root.Component View.TypeAnnotation" visibility="public"/>
