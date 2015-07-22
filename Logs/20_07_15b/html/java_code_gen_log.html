@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+				  table { background:#00FFFF; border:double black }
+  				  th	{  padding: 1px 10px; }
+				  td	{  padding: 1px 20px; background: #00CCCC; border: black }
+				  td.pass {background: #00CCCC;border:single black }
+				  td.fail {background: #FFCC66; border: single black }
+				</style>
+		<title>UModel code generation automation testing</title>
+	</head>
+	<body>
+		<h1>code generation regression test</h1>
+		<table xmlns="">
+			<colgroup span="1">
+				<thead>
+					<tr>
+						<th scope="col">test file</th>
+						<th scope="col">import</th>
+						<th scope="col">generate</th>
+						<th scope="col">import-generated</th>
+						<th scope="col">compare-ump</th>
+						<th scope="col">compare-code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>LambdaExpression</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+					</tr>
+					<tr>
+						<td>MethodReference</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+					</tr>
+					<tr>
+						<td>RepeatingAnnotation</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+					</tr>
+					<tr>
+						<td>TypeAnnotation</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+					</tr>
+				</tbody>
+			</colgroup>
+		</table>
+	</body>
+</html>
