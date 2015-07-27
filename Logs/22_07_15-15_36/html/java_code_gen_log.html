@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+				  table { background:#00FFFF; border:double black }
+  				  th	{  padding: 1px 10px; }
+				  td	{  padding: 1px 20px; background: #00CCCC; border: black }
+				  td.pass {background: #00CCCC;border:single black }
+				  td.fail {background: #FFCC66; border: single black }
+				</style>
+		<title>UModel code generation automation testing</title>
+	</head>
+	<body>
+		<h1>code generation regression test</h1>
+		<table xmlns="">
+			<colgroup span="1">
+				<thead>
+					<tr>
+						<th scope="col">test file</th>
+						<th scope="col">import</th>
+						<th scope="col">generate</th>
+						<th scope="col">import-generated</th>
+						<th scope="col">compare-ump</th>
+						<th scope="col">compare-code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>binary_literals</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+					</tr>
+					<tr>
+						<td>catching_multiple_exception_types</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\catching_multiple_exception_types\catching_multiple_exception_types-generated-code-import.ump_v_catching_multiple_exception_types-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\catching_multiple_exception_types\catching_multiple_exception_types-generated-code-import.ump_v_catching_multiple_exception_types-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>multipleExample</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\multipleExample\multipleExample-generated-code-import.ump_v_multipleExample-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\multipleExample\multipleExample-generated-code-import.ump_v_multipleExample-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message</td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="Failed to load script project.Error opening local file 'C:\Users\c.lant\Documents\Altova\UModel2016\UModelExamples\Scripting\ScriptSampleFind.asprj': The system cannot find the path specified.  Starting update model from code ...Collecting source files in 'C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message'Parsing file: 'C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message.java'Parsing error - C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message.java:3:17: unexpected token: -Ignoring failed file: 'C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message.java'Resolving type references... finished update model from code - 1 error(s), 0 warning(s)Starting Syntax Check ...... finished Syntax Check - 0 error(s), 0 warning(s)Starting Project Check ...... finished Project Check - 0 error(s), 0 warning(s)">
+								<a href="Failed to load script project.Error opening local file 'C:\Users\c.lant\Documents\Altova\UModel2016\UModelExamples\Scripting\ScriptSampleFind.asprj': The system cannot find the path specified.  Starting update model from code ...Collecting source files in 'C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message'Parsing file: 'C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message.java'Parsing error - C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message.java:3:17: unexpected token: -Ignoring failed file: 'C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message.java'Resolving type references... finished update model from code - 1 error(s), 0 warning(s)Starting Syntax Check ...... finished Syntax Check - 0 error(s), 0 warning(s)Starting Project Check ...... finished Project Check - 0 error(s), 0 warning(s)"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>rethrowing_exceptions</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\rethrowing_exceptions\rethrowing_exceptions-generated-code-import.ump_v_rethrowing_exceptions-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\rethrowing_exceptions\rethrowing_exceptions-generated-code-import.ump_v_rethrowing_exceptions-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>string_in_switch_statement</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\string_in_switch_statement\string_in_switch_statement-generated-code-import.ump_v_string_in_switch_statement-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\string_in_switch_statement\string_in_switch_statement-generated-code-import.ump_v_string_in_switch_statement-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>try_with_resources_statement</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\try_with_resources_statement\try_with_resources_statement-generated-code-import.ump_v_try_with_resources_statement-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\try_with_resources_statement\try_with_resources_statement-generated-code-import.ump_v_try_with_resources_statement-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>type_inference_for_generic_instance_creation</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\type_inference_for_generic_instance_creation-generated-code-import.ump_v_type_inference_for_generic_instance_creation-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\type_inference_for_generic_instance_creation-generated-code-import.ump_v_type_inference_for_generic_instance_creation-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+					<tr>
+						<td>underscore_in_numeric_literals</td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="pass"> pass </td>
+						<td class="fail">
+							<img src="../../../source/fail.gif" alt="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\underscore_in_numeric_literals\underscore_in_numeric_literals-generated-code-import.ump_v_underscore_in_numeric_literals-ref.ump.xml">
+								<a href="C:\work\umodel\regression-tests\logs\22_07_15-15_36\code_gen\CG_JAVA_7\underscore_in_numeric_literals\underscore_in_numeric_literals-generated-code-import.ump_v_underscore_in_numeric_literals-ref.ump.xml"/>
+							</img>
+						</td>
+					</tr>
+				</tbody>
+			</colgroup>
+		</table>
+	</body>
+</html>

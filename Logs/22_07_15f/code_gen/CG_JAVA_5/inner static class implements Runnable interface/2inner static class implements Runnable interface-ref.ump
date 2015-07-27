@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Model>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44"/>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="Lock" uuid="Root.Unknown Externals.Lock" visibility="public"/>
+						<Interface name="Runnable" uuid="Root.Unknown Externals.Runnable" visibility="public"/>
+						<Class name="String" uuid="Root.Unknown Externals.String" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java5.0 (1.5)" codeProjectFileOrDirectory="C:\workspace\umodel\regression-tests\logs\01_06_15\code_gen\CG_JAVA_5\inner static class implements Runnable interface" name="inner static class implements Runnable interface" usedForCodeSyncronization="true" uuid="Root.Component View.inner static class implements Runnable interface" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.inner static class implements Runnable interface.Safelock" uuid="Root.Component View.inner static class implements Runnable interface" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="inner static class implements Runnable interface" uuid="Root.inner static class implements Runnable interface" visibility="public">
+					<hyperlink>
+						<Hyperlink2GuiElement uuid="Root.inner static class implements Runnable interface"/>
+					</hyperlink>
+					<packagedElement>
+						<Class name="Safelock" usedForCodeSyncronization="true" uuid="Root.inner static class implements Runnable interface.Safelock" visibility="public">
+							<codeFileName>
+								<CodeFileName name="inner-static-class-implements-Runnable.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="BowLoop" usedForCodeSyncronization="true" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop" visibility="package">
+									<interfaceRealization>
+										<InterfaceRealization contract="Root.Unknown Externals.Runnable" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop" visibility="public"/>
+									</interfaceRealization>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="bowee" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.bowee" visibility="private"/>
+										<Property name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.bower" visibility="private"/>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="BowLoop" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="bowee" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop.bowee"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop.bower"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="run" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.run" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.run.return"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<Class name="Friend" usedForCodeSyncronization="true" uuid="Root.inner static class implements Runnable interface.Safelock.Friend" visibility="package">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.inner static class implements Runnable interface.Safelock.Friend"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property isLeaf="true" name="lock" type="Root.Unknown Externals.Lock" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.lock" visibility="private">
+											<defaultValue>
+												<LiteralString uuid="Root.inner static class implements Runnable interface.Safelock.Friend.lock" value="new ReentrantLock()" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property isLeaf="true" name="name" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.name" visibility="private"/>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.Friend" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.Friend"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="name" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.Friend.name"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="bow" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bow" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bow.return"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bow.bower"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="bowBack" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bowBack" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bowBack.return"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bowBack.bower"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="getName" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.getName" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.getName.return"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="impendingBow" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.impendingBow" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.boolean" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.impendingBow.return"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.impendingBow.bower"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation isStatic="true" name="main" uuid="Root.inner static class implements Runnable interface.Safelock.main" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.main.return"/>
+										<Parameter name="args" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.main.args">
+											<lowerValue>
+												<LiteralString uuid="Root.inner static class implements Runnable interface.Safelock.main.args" value="*" visibility="public"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="Root.inner static class implements Runnable interface.Safelock.main.args" value="*" visibility="public"/>
+											</upperValue>
+										</Parameter>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.inner static class implements Runnable interface"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</Model>
+	<ModelHistory>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" name="Java Profile" uuid="Root.Java Profile" visibility="public">
+					<packagedElement>
+						<Stereotype baseClass="Class" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Enumeration" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Enumeration" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="EnumerationLiteral" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="690" name="annotationType" uuid="Root.Java Profile.annotationType" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="360" name="synchronized" uuid="Root.Java Profile.synchronized" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="370" name="native" uuid="Root.Java Profile.native" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Operation" guiSortPriority="690" name="constructor" uuid="Root.Java Profile.constructor" visibility="public"/>
+						<Stereotype baseClass="Package" guiSortPriority="690" name="namespace" uuid="Root.Java Profile.namespace" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="380" name="final" uuid="Root.Java Profile.final" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="340" name="volatile" uuid="Root.Java Profile.volatile" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="350" name="transient" uuid="Root.Java Profile.transient" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="690" name="annotationTypeElement" uuid="Root.Java Profile.annotationTypeElement" visibility="public"/>
+						<Enumeration name="AnnotationPresets" uuid="Root.Java Profile.AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral name="Deprecated" uuid="Root.Java Profile.AnnotationPresets.Deprecated" visibility="public"/>
+								<EnumerationLiteral name="Documented" uuid="Root.Java Profile.AnnotationPresets.Documented" visibility="public"/>
+								<EnumerationLiteral name="Inherited" uuid="Root.Java Profile.AnnotationPresets.Inherited" visibility="public"/>
+								<EnumerationLiteral name="Override" uuid="Root.Java Profile.AnnotationPresets.Override" visibility="public"/>
+								<EnumerationLiteral name="Retention" uuid="Root.Java Profile.AnnotationPresets.Retention" visibility="public"/>
+								<EnumerationLiteral name="SafeVarargs" uuid="Root.Java Profile.AnnotationPresets.SafeVarargs" visibility="public"/>
+								<EnumerationLiteral name="SuppressWarnings" uuid="Root.Java Profile.AnnotationPresets.SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral name="Target" uuid="Root.Java Profile.AnnotationPresets.Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<PrimitiveType name="boolean" uuid="Root.Java Profile.boolean" visibility="public"/>
+						<PrimitiveType name="byte" uuid="Root.Java Profile.byte" visibility="public"/>
+						<PrimitiveType name="char" uuid="Root.Java Profile.char" visibility="public"/>
+						<PrimitiveType name="double" uuid="Root.Java Profile.double" visibility="public"/>
+						<PrimitiveType name="float" uuid="Root.Java Profile.float" visibility="public"/>
+						<PrimitiveType name="int" uuid="Root.Java Profile.int" visibility="public"/>
+						<PrimitiveType name="long" uuid="Root.Java Profile.long" visibility="public"/>
+						<PrimitiveType name="short" uuid="Root.Java Profile.short" visibility="public"/>
+						<PrimitiveType name="void" uuid="Root.Java Profile.void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="Lock" uuid="Root.Unknown Externals.Lock" visibility="public"/>
+						<Interface name="Runnable" uuid="Root.Unknown Externals.Runnable" visibility="public"/>
+						<Class name="String" uuid="Root.Unknown Externals.String" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java5.0 (1.5)" codeProjectFileOrDirectory="C:\workspace\umodel\regression-tests\logs\01_06_15\code_gen\CG_JAVA_5\inner static class implements Runnable interface" name="inner static class implements Runnable interface" usedForCodeSyncronization="true" uuid="Root.Component View.inner static class implements Runnable interface" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.inner static class implements Runnable interface.Safelock" uuid="Root.Component View.inner static class implements Runnable interface" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="inner static class implements Runnable interface" uuid="Root.inner static class implements Runnable interface" visibility="public">
+					<packagedElement>
+						<Class name="Safelock" usedForCodeSyncronization="true" uuid="Root.inner static class implements Runnable interface.Safelock" visibility="public">
+							<codeFileName>
+								<CodeFileName name="inner-static-class-implements-Runnable.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="BowLoop" usedForCodeSyncronization="true" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop" visibility="package">
+									<interfaceRealization>
+										<InterfaceRealization contract="Root.Unknown Externals.Runnable" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop" visibility="public"/>
+									</interfaceRealization>
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property name="bowee" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.bowee" visibility="private"/>
+										<Property name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.bower" visibility="private"/>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="BowLoop" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="bowee" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop.bowee"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.BowLoop.bower"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="run" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.run" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.BowLoop.run.return"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<Class name="Friend" usedForCodeSyncronization="true" uuid="Root.inner static class implements Runnable interface.Safelock.Friend" visibility="package">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.inner static class implements Runnable interface.Safelock.Friend"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property isLeaf="true" name="lock" type="Root.Unknown Externals.Lock" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.lock" visibility="private">
+											<defaultValue>
+												<LiteralString uuid="Root.inner static class implements Runnable interface.Safelock.Friend.lock" value="new ReentrantLock()" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property isLeaf="true" name="name" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.name" visibility="private"/>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.Friend" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.Friend"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="name" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.Friend.name"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="bow" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bow" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bow.return"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bow.bower"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="bowBack" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bowBack" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bowBack.return"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.bowBack.bower"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="getName" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.getName" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.getName.return"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="impendingBow" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.impendingBow" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.boolean" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.impendingBow.return"/>
+												<Parameter name="bower" type="Root.inner static class implements Runnable interface.Safelock.Friend" uuid="Root.inner static class implements Runnable interface.Safelock.Friend.impendingBow.bower"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation isStatic="true" name="main" uuid="Root.inner static class implements Runnable interface.Safelock.main" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.inner static class implements Runnable interface.Safelock.main.return"/>
+										<Parameter name="args" type="Root.Unknown Externals.String" uuid="Root.inner static class implements Runnable interface.Safelock.main.args">
+											<lowerValue>
+												<LiteralString uuid="Root.inner static class implements Runnable interface.Safelock.main.args" value="*" visibility="public"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="Root.inner static class implements Runnable interface.Safelock.main.args" value="*" visibility="public"/>
+											</upperValue>
+										</Parameter>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.inner static class implements Runnable interface"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>

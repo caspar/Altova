@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Model>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44"/>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="Object" uuid="Root.Unknown Externals.Object" visibility="public"/>
+						<Interface name="java.util.Enumeration" uuid="Root.Unknown Externals.java.util.Enumeration" visibility="public"/>
+						<Class name="java.util.Vector" uuid="Root.Unknown Externals.java.util.Vector" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java1.4" codeProjectFileOrDirectory="C:\workspace\umodel\regression-tests\logs\01_06_15\code_gen\CG_JAVA_1_4\innerClass" name="innerClass" usedForCodeSyncronization="true" uuid="Root.Component View.innerClass" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.innerClass.A" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.C" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.Global" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.HasStatic" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.Outer" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.Stack" uuid="Root.Component View.innerClass" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="innerClass" uuid="Root.innerClass" visibility="public">
+					<hyperlink>
+						<Hyperlink2GuiElement uuid="Root.innerClass"/>
+					</hyperlink>
+					<packagedElement>
+						<Class name="A" usedForCodeSyncronization="true" uuid="Root.innerClass.A" visibility="package">
+							<codeFileName>
+								<CodeFileName name="AnonymousClass.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property name="first" type="Root.Java Profile.int" uuid="Root.innerClass.A.first" visibility="package"/>
+								<Property name="second" type="Root.Java Profile.int" uuid="Root.innerClass.A.second" visibility="package"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class name="B" usedForCodeSyncronization="true" uuid="Root.innerClass.A.B" visibility="package">
+									<generalization>
+										<Generalization general="Root.innerClass.A" uuid="Root.innerClass.A.B"/>
+									</generalization>
+									<ownedOperation>
+										<Operation name="B" uuid="Root.innerClass.A.B.B" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.A.B.B"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="x1" type="Root.Java Profile.int" uuid="Root.innerClass.A.B.B.x1"/>
+												<Parameter name="y1" type="Root.Java Profile.int" uuid="Root.innerClass.A.B.B.y1"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="A" uuid="Root.innerClass.A.A" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.A.A"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="x" type="Root.Java Profile.int" uuid="Root.innerClass.A.A.x"/>
+										<Parameter name="y" type="Root.Java Profile.int" uuid="Root.innerClass.A.A.y"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Class name="C" usedForCodeSyncronization="true" uuid="Root.innerClass.C" visibility="package">
+							<codeFileName>
+								<CodeFileName name="AnonymousClass.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="D" usedForCodeSyncronization="true" uuid="Root.innerClass.C.D" visibility="package">
+									<ownedAttribute>
+										<Property name="c1" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.c1" visibility="package"/>
+										<Property name="c2" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.c2" visibility="package"/>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="D" uuid="Root.innerClass.C.D.D" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.C.D.D"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="a" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.D.a"/>
+												<Parameter name="b" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.D.b"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<Class name="E" usedForCodeSyncronization="true" uuid="Root.innerClass.C.E" visibility="package">
+									<generalization>
+										<Generalization general="Root.innerClass.C.D" uuid="Root.innerClass.C.E"/>
+									</generalization>
+									<ownedOperation>
+										<Operation name="E" uuid="Root.innerClass.C.E.E" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.C.E.E"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="a1" type="Root.Java Profile.char" uuid="Root.innerClass.C.E.E.a1"/>
+												<Parameter name="b1" type="Root.Java Profile.char" uuid="Root.innerClass.C.E.E.b1"/>
+												<Parameter name="c" type="Root.innerClass.C" uuid="Root.innerClass.C.E.E.c"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+						</Class>
+						<Class name="Global" usedForCodeSyncronization="true" uuid="Root.innerClass.Global" visibility="package">
+							<codeFileName>
+								<CodeFileName name="Local.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="Cyclic" usedForCodeSyncronization="true" uuid="Root.innerClass.Global.Cyclic" visibility="package"/>
+								<Class name="NotLocal" usedForCodeSyncronization="true" uuid="Root.innerClass.Global.NotLocal" visibility="package"/>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="foo" uuid="Root.innerClass.Global.foo" visibility="package">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.innerClass.Global.foo.return"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Class name="HasStatic" usedForCodeSyncronization="true" uuid="Root.innerClass.HasStatic" visibility="package">
+							<codeFileName>
+								<CodeFileName name="InnerClass.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property isStatic="true" name="j" type="Root.Java Profile.int" uuid="Root.innerClass.HasStatic.j" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.innerClass.HasStatic.j" value="100" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+						</Class>
+						<Class name="Outer" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer" visibility="package">
+							<codeFileName>
+								<CodeFileName name="InnerClass.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="Inner" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer.Inner" visibility="package">
+									<generalization>
+										<Generalization general="Root.innerClass.HasStatic" uuid="Root.innerClass.Outer.Inner"/>
+									</generalization>
+									<ownedAttribute>
+										<Property name="x" type="Root.Java Profile.int" uuid="Root.innerClass.Outer.Inner.x" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Outer.Inner.x" value="3" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property name="y" type="Root.Java Profile.int" uuid="Root.innerClass.Outer.Inner.y" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Outer.Inner.y" value="4" visibility="public"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+								</Class>
+								<Class name="NestedButNotInner" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer.NestedButNotInner" visibility="package">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.innerClass.Outer.NestedButNotInner"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property isStatic="true" name="z" type="Root.Java Profile.int" uuid="Root.innerClass.Outer.NestedButNotInner.z" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Outer.NestedButNotInner.z" value="5" visibility="public"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+								</Class>
+								<Interface name="NeverInner" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer.NeverInner" visibility="package"/>
+							</nestedClassifier>
+						</Class>
+						<Class name="Stack" usedForCodeSyncronization="true" uuid="Root.innerClass.Stack" visibility="public">
+							<codeFileName>
+								<CodeFileName name="Stack.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property name="items" type="Root.Unknown Externals.java.util.Vector" uuid="Root.innerClass.Stack.items" visibility="private"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class name="StackEnum" usedForCodeSyncronization="true" uuid="Root.innerClass.Stack.StackEnum" visibility="package">
+									<interfaceRealization>
+										<InterfaceRealization contract="Root.Unknown Externals.java.util.Enumeration" uuid="Root.innerClass.Stack.StackEnum" visibility="public"/>
+									</interfaceRealization>
+									<ownedAttribute>
+										<Property name="currentItem" type="Root.Java Profile.int" uuid="Root.innerClass.Stack.StackEnum.currentItem" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Stack.StackEnum.currentItem" value="items.size() - 1" visibility="public"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="hasMoreElements" uuid="Root.innerClass.Stack.StackEnum.hasMoreElements" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.boolean" uuid="Root.innerClass.Stack.StackEnum.hasMoreElements.return"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="nextElement" uuid="Root.innerClass.Stack.StackEnum.nextElement" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Unknown Externals.Object" uuid="Root.innerClass.Stack.StackEnum.nextElement.return"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="enumerator" uuid="Root.innerClass.Stack.enumerator" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Unknown Externals.java.util.Enumeration" uuid="Root.innerClass.Stack.enumerator.return"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.innerClass"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</Model>
+	<ModelHistory>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" name="Java Profile" uuid="Root.Java Profile" visibility="public">
+					<packagedElement>
+						<Stereotype baseClass="Class" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Enumeration" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Enumeration" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="EnumerationLiteral" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="690" name="annotationType" uuid="Root.Java Profile.annotationType" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="360" name="synchronized" uuid="Root.Java Profile.synchronized" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="370" name="native" uuid="Root.Java Profile.native" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Operation" guiSortPriority="690" name="constructor" uuid="Root.Java Profile.constructor" visibility="public"/>
+						<Stereotype baseClass="Package" guiSortPriority="690" name="namespace" uuid="Root.Java Profile.namespace" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="380" name="final" uuid="Root.Java Profile.final" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="340" name="volatile" uuid="Root.Java Profile.volatile" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="350" name="transient" uuid="Root.Java Profile.transient" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="690" name="annotationTypeElement" uuid="Root.Java Profile.annotationTypeElement" visibility="public"/>
+						<Enumeration name="AnnotationPresets" uuid="Root.Java Profile.AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral name="Deprecated" uuid="Root.Java Profile.AnnotationPresets.Deprecated" visibility="public"/>
+								<EnumerationLiteral name="Documented" uuid="Root.Java Profile.AnnotationPresets.Documented" visibility="public"/>
+								<EnumerationLiteral name="Inherited" uuid="Root.Java Profile.AnnotationPresets.Inherited" visibility="public"/>
+								<EnumerationLiteral name="Override" uuid="Root.Java Profile.AnnotationPresets.Override" visibility="public"/>
+								<EnumerationLiteral name="Retention" uuid="Root.Java Profile.AnnotationPresets.Retention" visibility="public"/>
+								<EnumerationLiteral name="SafeVarargs" uuid="Root.Java Profile.AnnotationPresets.SafeVarargs" visibility="public"/>
+								<EnumerationLiteral name="SuppressWarnings" uuid="Root.Java Profile.AnnotationPresets.SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral name="Target" uuid="Root.Java Profile.AnnotationPresets.Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<PrimitiveType name="boolean" uuid="Root.Java Profile.boolean" visibility="public"/>
+						<PrimitiveType name="byte" uuid="Root.Java Profile.byte" visibility="public"/>
+						<PrimitiveType name="char" uuid="Root.Java Profile.char" visibility="public"/>
+						<PrimitiveType name="double" uuid="Root.Java Profile.double" visibility="public"/>
+						<PrimitiveType name="float" uuid="Root.Java Profile.float" visibility="public"/>
+						<PrimitiveType name="int" uuid="Root.Java Profile.int" visibility="public"/>
+						<PrimitiveType name="long" uuid="Root.Java Profile.long" visibility="public"/>
+						<PrimitiveType name="short" uuid="Root.Java Profile.short" visibility="public"/>
+						<PrimitiveType name="void" uuid="Root.Java Profile.void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="Object" uuid="Root.Unknown Externals.Object" visibility="public"/>
+						<Interface name="java.util.Enumeration" uuid="Root.Unknown Externals.java.util.Enumeration" visibility="public"/>
+						<Class name="java.util.Vector" uuid="Root.Unknown Externals.java.util.Vector" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java1.4" codeProjectFileOrDirectory="C:\workspace\umodel\regression-tests\logs\01_06_15\code_gen\CG_JAVA_1_4\innerClass" name="innerClass" usedForCodeSyncronization="true" uuid="Root.Component View.innerClass" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.innerClass.A" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.C" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.Global" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.HasStatic" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.Outer" uuid="Root.Component View.innerClass" visibility="public"/>
+								<ComponentRealization realizingClassifier="Root.innerClass.Stack" uuid="Root.Component View.innerClass" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="innerClass" uuid="Root.innerClass" visibility="public">
+					<packagedElement>
+						<Class name="A" usedForCodeSyncronization="true" uuid="Root.innerClass.A" visibility="package">
+							<codeFileName>
+								<CodeFileName name="AnonymousClass.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property name="first" type="Root.Java Profile.int" uuid="Root.innerClass.A.first" visibility="package"/>
+								<Property name="second" type="Root.Java Profile.int" uuid="Root.innerClass.A.second" visibility="package"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class name="B" usedForCodeSyncronization="true" uuid="Root.innerClass.A.B" visibility="package">
+									<generalization>
+										<Generalization general="Root.innerClass.A" uuid="Root.innerClass.A.B"/>
+									</generalization>
+									<ownedOperation>
+										<Operation name="B" uuid="Root.innerClass.A.B.B" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.A.B.B"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="x1" type="Root.Java Profile.int" uuid="Root.innerClass.A.B.B.x1"/>
+												<Parameter name="y1" type="Root.Java Profile.int" uuid="Root.innerClass.A.B.B.y1"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="A" uuid="Root.innerClass.A.A" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.A.A"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="x" type="Root.Java Profile.int" uuid="Root.innerClass.A.A.x"/>
+										<Parameter name="y" type="Root.Java Profile.int" uuid="Root.innerClass.A.A.y"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Class name="C" usedForCodeSyncronization="true" uuid="Root.innerClass.C" visibility="package">
+							<codeFileName>
+								<CodeFileName name="AnonymousClass.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="D" usedForCodeSyncronization="true" uuid="Root.innerClass.C.D" visibility="package">
+									<ownedAttribute>
+										<Property name="c1" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.c1" visibility="package"/>
+										<Property name="c2" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.c2" visibility="package"/>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="D" uuid="Root.innerClass.C.D.D" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.C.D.D"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="a" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.D.a"/>
+												<Parameter name="b" type="Root.Java Profile.char" uuid="Root.innerClass.C.D.D.b"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<Class name="E" usedForCodeSyncronization="true" uuid="Root.innerClass.C.E" visibility="package">
+									<generalization>
+										<Generalization general="Root.innerClass.C.D" uuid="Root.innerClass.C.E"/>
+									</generalization>
+									<ownedOperation>
+										<Operation name="E" uuid="Root.innerClass.C.E.E" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.innerClass.C.E.E"/>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter name="a1" type="Root.Java Profile.char" uuid="Root.innerClass.C.E.E.a1"/>
+												<Parameter name="b1" type="Root.Java Profile.char" uuid="Root.innerClass.C.E.E.b1"/>
+												<Parameter name="c" type="Root.innerClass.C" uuid="Root.innerClass.C.E.E.c"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+						</Class>
+						<Class name="Global" usedForCodeSyncronization="true" uuid="Root.innerClass.Global" visibility="package">
+							<codeFileName>
+								<CodeFileName name="Local.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="Cyclic" usedForCodeSyncronization="true" uuid="Root.innerClass.Global.Cyclic" visibility="package"/>
+								<Class name="NotLocal" usedForCodeSyncronization="true" uuid="Root.innerClass.Global.NotLocal" visibility="package"/>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="foo" uuid="Root.innerClass.Global.foo" visibility="package">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Java Profile.void" uuid="Root.innerClass.Global.foo.return"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Class name="HasStatic" usedForCodeSyncronization="true" uuid="Root.innerClass.HasStatic" visibility="package">
+							<codeFileName>
+								<CodeFileName name="InnerClass.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property isStatic="true" name="j" type="Root.Java Profile.int" uuid="Root.innerClass.HasStatic.j" visibility="package">
+									<defaultValue>
+										<LiteralString uuid="Root.innerClass.HasStatic.j" value="100" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+						</Class>
+						<Class name="Outer" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer" visibility="package">
+							<codeFileName>
+								<CodeFileName name="InnerClass.java"/>
+							</codeFileName>
+							<nestedClassifier>
+								<Class name="Inner" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer.Inner" visibility="package">
+									<generalization>
+										<Generalization general="Root.innerClass.HasStatic" uuid="Root.innerClass.Outer.Inner"/>
+									</generalization>
+									<ownedAttribute>
+										<Property name="x" type="Root.Java Profile.int" uuid="Root.innerClass.Outer.Inner.x" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Outer.Inner.x" value="3" visibility="public"/>
+											</defaultValue>
+										</Property>
+										<Property name="y" type="Root.Java Profile.int" uuid="Root.innerClass.Outer.Inner.y" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Outer.Inner.y" value="4" visibility="public"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+								</Class>
+								<Class name="NestedButNotInner" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer.NestedButNotInner" visibility="package">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.static" uuid="Root.innerClass.Outer.NestedButNotInner"/>
+									</appliedStereotype>
+									<ownedAttribute>
+										<Property isStatic="true" name="z" type="Root.Java Profile.int" uuid="Root.innerClass.Outer.NestedButNotInner.z" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Outer.NestedButNotInner.z" value="5" visibility="public"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+								</Class>
+								<Interface name="NeverInner" usedForCodeSyncronization="true" uuid="Root.innerClass.Outer.NeverInner" visibility="package"/>
+							</nestedClassifier>
+						</Class>
+						<Class name="Stack" usedForCodeSyncronization="true" uuid="Root.innerClass.Stack" visibility="public">
+							<codeFileName>
+								<CodeFileName name="Stack.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property name="items" type="Root.Unknown Externals.java.util.Vector" uuid="Root.innerClass.Stack.items" visibility="private"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class name="StackEnum" usedForCodeSyncronization="true" uuid="Root.innerClass.Stack.StackEnum" visibility="package">
+									<interfaceRealization>
+										<InterfaceRealization contract="Root.Unknown Externals.java.util.Enumeration" uuid="Root.innerClass.Stack.StackEnum" visibility="public"/>
+									</interfaceRealization>
+									<ownedAttribute>
+										<Property name="currentItem" type="Root.Java Profile.int" uuid="Root.innerClass.Stack.StackEnum.currentItem" visibility="package">
+											<defaultValue>
+												<LiteralString uuid="Root.innerClass.Stack.StackEnum.currentItem" value="items.size() - 1" visibility="public"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation name="hasMoreElements" uuid="Root.innerClass.Stack.StackEnum.hasMoreElements" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Java Profile.boolean" uuid="Root.innerClass.Stack.StackEnum.hasMoreElements.return"/>
+											</ownedParameter>
+										</Operation>
+										<Operation name="nextElement" uuid="Root.innerClass.Stack.StackEnum.nextElement" visibility="public">
+											<ownedParameter>
+												<Parameter direction="return" name="return" type="Root.Unknown Externals.Object" uuid="Root.innerClass.Stack.StackEnum.nextElement.return"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation name="enumerator" uuid="Root.innerClass.Stack.enumerator" visibility="public">
+									<ownedParameter>
+										<Parameter direction="return" name="return" type="Root.Unknown Externals.java.util.Enumeration" uuid="Root.innerClass.Stack.enumerator.return"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.innerClass"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>

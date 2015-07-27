@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Model>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44"/>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="Integer" uuid="Root.Unknown Externals.Integer" visibility="public"/>
+						<Class name="String" uuid="Root.Unknown Externals.String" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java1.4" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_1_4\OverloadConstructor" name="OverloadConstructor" usedForCodeSyncronization="true" uuid="Root.Component View.OverloadConstructor" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.OverloadConstructor.OverloadConstructor" uuid="Root.Component View.OverloadConstructor" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="OverloadConstructor" uuid="Root.OverloadConstructor" visibility="public">
+					<hyperlink>
+						<Hyperlink2GuiElement uuid="Root.OverloadConstructor"/>
+					</hyperlink>
+					<packagedElement>
+						<Class name="OverloadConstructor" usedForCodeSyncronization="true" uuid="Root.OverloadConstructor.OverloadConstructor" visibility="package">
+							<codeFileName>
+								<CodeFileName name="OverloadConstructor.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property isLeaf="true" name="finalAttribute" type="Root.Java Profile.int" uuid="Root.OverloadConstructor.OverloadConstructor.finalAttribute" visibility="public">
+									<defaultValue>
+										<LiteralString uuid="Root.OverloadConstructor.OverloadConstructor.finalAttribute" value="5" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+							<ownedOperation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="private">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="stringParam" type="Root.Unknown Externals.String" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.stringParam"/>
+									</ownedParameter>
+								</Operation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="protected">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="integerArray" type="Root.Unknown Externals.Integer" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.integerArray">
+											<lowerValue>
+												<LiteralString uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.integerArray" value="*" visibility="public"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.integerArray" value="*" visibility="public"/>
+											</upperValue>
+										</Parameter>
+									</ownedParameter>
+								</Operation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="intParam" type="Root.Java Profile.int" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.intParam"/>
+									</ownedParameter>
+								</Operation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.OverloadConstructor"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</Model>
+	<ModelHistory>
+		<Package name="Root" uuid="Root" visibility="public">
+			<packagedElement>
+				<Profile editable="false" name="Java Profile" uuid="Root.Java Profile" visibility="public">
+					<packagedElement>
+						<Stereotype baseClass="Class" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Class" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Enumeration" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Enumeration" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="EnumerationLiteral" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="390" name="static" uuid="Root.Java Profile.static" visibility="public"/>
+						<Stereotype baseClass="Interface" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Interface" guiSortPriority="690" name="annotationType" uuid="Root.Java Profile.annotationType" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="330" name="strictfp" uuid="Root.Java Profile.strictfp" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="360" name="synchronized" uuid="Root.Java Profile.synchronized" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="370" name="native" uuid="Root.Java Profile.native" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="380" name="default" uuid="Root.Java Profile.default" visibility="public"/>
+						<Stereotype baseClass="Operation" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Operation" guiSortPriority="690" name="constructor" uuid="Root.Java Profile.constructor" visibility="public"/>
+						<Stereotype baseClass="Package" guiSortPriority="690" name="namespace" uuid="Root.Java Profile.namespace" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="380" name="final" uuid="Root.Java Profile.final" visibility="public"/>
+						<Stereotype baseClass="Parameter" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="340" name="volatile" uuid="Root.Java Profile.volatile" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="350" name="transient" uuid="Root.Java Profile.transient" visibility="public"/>
+						<Stereotype baseClass="Property" guiSortPriority="590" name="annotations" uuid="Root.Java Profile.annotations" visibility="public">
+							<ownedAttribute>
+								<Property name="modifiers" type="Root.Java Profile.AnnotationPresets" uuid="Root.Java Profile.annotations.modifiers" visibility="public"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype baseClass="Property" guiSortPriority="690" name="annotationTypeElement" uuid="Root.Java Profile.annotationTypeElement" visibility="public"/>
+						<Enumeration name="AnnotationPresets" uuid="Root.Java Profile.AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral name="Deprecated" uuid="Root.Java Profile.AnnotationPresets.Deprecated" visibility="public"/>
+								<EnumerationLiteral name="Documented" uuid="Root.Java Profile.AnnotationPresets.Documented" visibility="public"/>
+								<EnumerationLiteral name="FunctionalInterface" uuid="Root.Java Profile.AnnotationPresets.FunctionalInterface" visibility="public"/>
+								<EnumerationLiteral name="Inherited" uuid="Root.Java Profile.AnnotationPresets.Inherited" visibility="public"/>
+								<EnumerationLiteral name="Override" uuid="Root.Java Profile.AnnotationPresets.Override" visibility="public"/>
+								<EnumerationLiteral name="Repeatable" uuid="Root.Java Profile.AnnotationPresets.Repeatable" visibility="public"/>
+								<EnumerationLiteral name="Retention" uuid="Root.Java Profile.AnnotationPresets.Retention" visibility="public"/>
+								<EnumerationLiteral name="SafeVarargs" uuid="Root.Java Profile.AnnotationPresets.SafeVarargs" visibility="public"/>
+								<EnumerationLiteral name="SuppressWarnings" uuid="Root.Java Profile.AnnotationPresets.SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral name="Target" uuid="Root.Java Profile.AnnotationPresets.Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<PrimitiveType name="boolean" uuid="Root.Java Profile.boolean" visibility="public"/>
+						<PrimitiveType name="byte" uuid="Root.Java Profile.byte" visibility="public"/>
+						<PrimitiveType name="char" uuid="Root.Java Profile.char" visibility="public"/>
+						<PrimitiveType name="double" uuid="Root.Java Profile.double" visibility="public"/>
+						<PrimitiveType name="float" uuid="Root.Java Profile.float" visibility="public"/>
+						<PrimitiveType name="int" uuid="Root.Java Profile.int" visibility="public"/>
+						<PrimitiveType name="long" uuid="Root.Java Profile.long" visibility="public"/>
+						<PrimitiveType name="short" uuid="Root.Java Profile.short" visibility="public"/>
+						<PrimitiveType name="void" uuid="Root.Java Profile.void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package editable="false" name="Unknown Externals" uuid="Root.Unknown Externals" visibility="public">
+					<packagedElement>
+						<Class name="Integer" uuid="Root.Unknown Externals.Integer" visibility="public"/>
+						<Class name="String" uuid="Root.Unknown Externals.String" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Package name="Component View" uuid="Root.Component View" visibility="public">
+					<packagedElement>
+						<Component codeLang="Java1.4" codeProjectFileOrDirectory="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_1_4\OverloadConstructor" name="OverloadConstructor" usedForCodeSyncronization="true" uuid="Root.Component View.OverloadConstructor" visibility="public">
+							<realization>
+								<ComponentRealization realizingClassifier="Root.OverloadConstructor.OverloadConstructor" uuid="Root.Component View.OverloadConstructor" visibility="public"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package name="OverloadConstructor" uuid="Root.OverloadConstructor" visibility="public">
+					<packagedElement>
+						<Class name="OverloadConstructor" usedForCodeSyncronization="true" uuid="Root.OverloadConstructor.OverloadConstructor" visibility="package">
+							<codeFileName>
+								<CodeFileName name="OverloadConstructor.java"/>
+							</codeFileName>
+							<ownedAttribute>
+								<Property isLeaf="true" name="finalAttribute" type="Root.Java Profile.int" uuid="Root.OverloadConstructor.OverloadConstructor.finalAttribute" visibility="public">
+									<defaultValue>
+										<LiteralString uuid="Root.OverloadConstructor.OverloadConstructor.finalAttribute" value="5" visibility="public"/>
+									</defaultValue>
+								</Property>
+							</ownedAttribute>
+							<ownedOperation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="private">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="stringParam" type="Root.Unknown Externals.String" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.stringParam"/>
+									</ownedParameter>
+								</Operation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="protected">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="integerArray" type="Root.Unknown Externals.Integer" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.integerArray">
+											<lowerValue>
+												<LiteralString uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.integerArray" value="*" visibility="public"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.integerArray" value="*" visibility="public"/>
+											</upperValue>
+										</Parameter>
+									</ownedParameter>
+								</Operation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+									<ownedParameter>
+										<Parameter name="intParam" type="Root.Java Profile.int" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor.intParam"/>
+									</ownedParameter>
+								</Operation>
+								<Operation name="OverloadConstructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication classifier="Root.Java Profile.constructor" uuid="Root.OverloadConstructor.OverloadConstructor.OverloadConstructor"/>
+									</appliedStereotype>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication appliedProfile="Root.Java Profile" uuid="Root.OverloadConstructor"/>
+					</profileApplication>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>
