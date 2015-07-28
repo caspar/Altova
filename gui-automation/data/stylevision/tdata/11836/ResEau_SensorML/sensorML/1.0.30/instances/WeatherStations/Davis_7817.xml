@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<Sensor xmlns="http://www.opengis.net/sensorML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink"
+        xsi:schemaLocation="http://www.opengis.net/sensorML ../../base/sensorML.xsd" id="Davis_7817">
+	<identification>
+		<IdentifierList>
+			<identifier name="longName">
+				<Term>Davis 7817 External Temperature Sensor</Term>
+			</identifier>
+			<identifier name="shortName">
+				<Term>Davis 7817 Thermometer</Term>
+			</identifier>
+			<identifier name="modelNumber">
+				<Term qualifier="urn:ogc:identifier:modelNumber">7817</Term>
+			</identifier>
+			<identifier name="manufacturer">
+				<Term qualifier="urn:ogc:identifier:manufacturer">Davis Instruments</Term>
+			</identifier>
+		</IdentifierList>
+	</identification>
+	<classification>
+		<ClassifierList>
+			<classifier name="intendedApplication">
+				<Term qualifier="urn:sensor:classifier:application">weather</Term>
+			</classifier>
+			<classifier name="sensorType">
+				<Term qualifier="urn:sensor:classifier:sensorType">thermometer</Term>
+			</classifier>
+			<classifier name="phenomenon">
+				<Term qualifier="urn:ogc:phenomenon">temperature</Term>
+			</classifier>
+		</ClassifierList>
+	</classification>
+	<description/>
+	<capabilities>
+		<PropertyList>
+			<description>The External Temperature Sensor is used to measure temperatures in general 
+				conditions. It is well-suited for air, water, or soil temperature measurements, 
+				and it may be used anywhere a reliable, low-cost temperature sensor is required.
+				The sensor is epoxy-encapsulated in a vinyl cap. The External Temperature Sensor 
+				uses a precision platinum wire thermistor as a sensor. The thermistor produces a 
+				resistance change proportional to temperature. To ensure accurate readings when 
+				measuring outdoor air temperature, the External Temperature Sensor should be 
+				shielded from direct sunlight and other sources of reflected or radiated heat. 
+				We recommend the use of a Davis Radiation Shield (#7714) or its equivalent for 
+				this purpose.</description>
+			<!-- add EnvironmentalLimit group -->
+			<property name="resolution">
+				<swe:Quantity definition="urn:ogc:phenomenon:temperature" uom="urn:ogc:unit:degree:celsius">0.1</swe:Quantity>
+			</property>
+			<property name="range">
+				<swe:QuantityRange definition="urn:ogc:phenomenon:temperature" uom="urn:ogc:unit:degree:celsius">-45 60</swe:QuantityRange>
+			</property>
+			<property name="accuracy">
+				<swe:QuantityRange definition="urn:ogc:data:quantity:accuracy" uom="urn:ogc:unit:percent">-0.5 0.5</swe:QuantityRange>
+			</property>
+		</PropertyList>
+	</capabilities>
+	<characteristics>
+		<PropertyList>
+			<property name="physicalProperties">
+				<swe:DataGroup>
+					<swe:component name="weight">
+						<swe:Quantity definition="urn:ogc:phenomenon:weight" uom="urn:ogc:unit:gram">128</swe:Quantity>
+					</swe:component>
+					<swe:component name="diameter">
+						<swe:Quantity definition="urn:ogc:phenomenon:diameter" uom="urn:ogc:unit:mm">6.5</swe:Quantity>
+					</swe:component>
+					<swe:component name="length">
+						<swe:Quantity definition="urn:ogc:phenomenon:length" uom="urn:ogc:unit:mm">32</swe:Quantity>
+					</swe:component>
+				</swe:DataGroup>
+			</property>
+			<property name="interface">
+				<swe:DataGroup>
+					<swe:component name="cableLength">
+						<swe:Quantity definition="urn:ogc:phenomenon:length" uom="urn:ogc:unit:mm">7.6</swe:Quantity>
+					</swe:component>
+					<swe:component name="connectorType">
+						<swe:Category definition="urn:ogc:data:category:connector:electrical">RJ-11</swe:Category>
+					</swe:component>
+					<swe:component name="cableType">
+						<swe:Category definition="urn:ogc:data:category:cable:electrical">26-AWG:4-conductor</swe:Category>
+					</swe:component>
+				</swe:DataGroup>
+			</property>
+		</PropertyList>
+	</characteristics>
+	<contact xlink:href="./DavisInstruments" role="urn:ogc:role:manufacturer"/>
+	<documentation xlink:href="http://www.davisnet.com/product_documents/weather/spec_sheets/ext_temp_sensor_std.pdf" role="urn:ogc:role:specificationSheet"/>
+	<documentation xlink:href="http://www.davisnet.com/productpics/big/7817.jpg" role="urn:ogc:role:image"/>
+	<!--~~~~~~~~~~~~~~~~~~~~~~~-->
+	<!--Sensor Coordinate Frame-->
+	<!--~~~~~~~~~~~~~~~~~~~~~~~-->
+	<referenceFrame>
+		<LocalSpatialCRS id="SENSOR_FRAME">
+			<srsName>Sensor Frame</srsName>
+			<usesCS xlink:href="urn:ogc:cs:xyzFrame"/>
+			<usesDatum>
+				<LocalSpatialDatum>
+					<datumName>Sensor Datum</datumName>
+					<anchorPoint>origin is at the tip of the thermometer</anchorPoint>
+					<orientation>x and Y are orthogonal to z but undetermined
+						z is along the long axis of symmetry of the thermometer</orientation>
+				</LocalSpatialDatum>
+			</usesDatum>
+		</LocalSpatialCRS>
+	</referenceFrame>
+	<!--~~~~~~~~~~~~~-->
+	<!--Sensor Inputs-->
+	<!--~~~~~~~~~~~~~-->
+	<inputs>
+		<InputList>
+			<input name="temperature">
+				<swe:Quantity definition="urn:ogc:phenomenon:temperature"/>
+			</input>
+		</InputList>
+	</inputs>
+	<!--~~~~~~~~~~~~~~-->
+	<!--Sensor Outputs-->
+	<!--~~~~~~~~~~~~~~-->
+	<outputs>
+		<OutputList>
+			<output name="measuredTemperature">
+				<swe:Quantity definition="urn:ogc:phenomenon:resistance"/>
+			</output>
+		</OutputList>
+	</outputs>	
+	<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<!--  Temperature Measurement  -->
+	<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<processes>
+		<ProcessList>
+			<!--Calibration Curve-->
+			<process name="steadyStateResponse">				
+				<LookUpTable>
+					<inputs>
+						<InputList>
+							<input name="temperature" xlink:href="#TEMP1"/>
+						</InputList>
+					</inputs>
+					<outputs>
+						<OutputList>
+							<output name="resistance" xlink:href="#RES"/>
+						</OutputList>
+					</outputs>
+					<parameters>
+						<ParameterList>
+							<function>
+								<swe:Curve arraySize="21">
+									<swe:definition>
+										<swe:Coordinates>
+											<swe:axis name="temperature">
+												<swe:Quantity id="TEMP1" definition="urn:ogc:data:quantity:temperature" uom="urn:ogc:unit:celsius"/>
+											</swe:axis>
+											<swe:axis name="resistance">
+												<swe:Quantity id="RES" definition="urn:ogc:data:quantity:resistance" uom="urn:ogc:unit:ohm" scale="1e3"/>
+											</swe:axis>
+										</swe:Coordinates>
+									</swe:definition>
+									<swe:tupleValues>-40,328.4 -35,237.7 -30,173.9 -25,128.5 -20,95.89 -15,72.23 -10,54.89 -5,42.07 0,32.51 5,25.31 10,19.86 15,15.69 20,12.49 25,10 30,8.06 35,6.536 40,5.331 45,4.373 50,3.606 55,2.989 60,2.49</swe:tupleValues>
+								</swe:Curve>
+							</function>
+						</ParameterList>
+					</parameters>
+					<method xlink:href="urn:ogc:process:LUT"/>
+				</LookUpTable>
+			</process>
+			<!--Error Curve-->
+			<process name="errorCurve">
+				<LookUpTable>
+					<inputs>
+						<InputList>
+							<input name="temperature" xlink:href="#TEMP2"/>
+						</InputList>
+					</inputs>
+					<outputs>
+						<OutputList>
+							<output name="absoluteError" xlink:href="#ERR"/>
+						</OutputList>
+					</outputs>
+					<parameters>
+						<ParameterList>
+							<function>
+								<swe:Curve arraySize="6">
+									<swe:definition>
+										<swe:Coordinates>
+											<swe:axis name="temperature">
+												<swe:Quantity id="TEMP2" definition="urn:ogc:data:quantity:temperature" uom="urn:ogc:unit:celsius"/>
+											</swe:axis>
+											<swe:axis name="absoluteError">
+												<swe:Quantity id="ERR" definition="urn:ogc:data:quantity:accuracy:absolute" uom="urn:ogc:unit:celsius"/>
+											</swe:axis>
+										</swe:Coordinates>
+									</swe:definition>
+									<swe:tupleValues>-40,0.0 -20,0.1 -10,0.2 0,0.3 10,0.4 20,0.5</swe:tupleValues>
+								</swe:Curve>
+							</function>
+						</ParameterList>
+					</parameters>
+					<method xlink:href="urn:ogc:process:LUT"/>
+				</LookUpTable>
+			</process>
+		</ProcessList>
+	</processes>
+	<connections>
+		<ConnectionList>
+			<connection name="inputToCalibration">
+				<Link>
+					<source ref="this/inputs/temperature"/>
+					<destination ref="steadyStateResponse/inputs/temperature"/>
+				</Link>
+			</connection>
+			<connection name="inputToError">
+				<Link>
+					<source ref="this/inputs/temperature"/>
+					<destination ref="errorCurve/inputs/temperature"/>
+				</Link>
+			</connection>
+			<connection name="calibrationToOutput">
+				<Link>
+					<source ref="steadyStateResponse/outputs/resistance"/>
+					<destination ref="this/output/resistance"/>
+				</Link>
+			</connection>
+		</ConnectionList>
+	</connections>
+</Sensor>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Altova xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Altova_Hierarchical.xsd">
+	<PrimaryKey>1</PrimaryKey>
+	<Name>Organization Chart</Name>
+	<Office>
+		<PrimaryKey>1</PrimaryKey>
+		<ForeignKey>1</ForeignKey>
+		<Desc>The company was established in Vereno,  in 1995 and is privately held. Nanonull has been actively involved in developing nanoelectronic software technologies since 1996 and released the first version of its products in February 1999. Due to the fact that </Desc>
+		<EMail>office@nanonull.com</EMail>
+		<Established>1992-04-01</Established>
+		<Fax>+1 (321) 555 5155 - 9</Fax>
+		<Name>Nanonull, Inc.</Name>
+		<Phone>+1 (321) 555 5155</Phone>
+		<Address>
+			<PrimaryKey>1</PrimaryKey>
+			<ForeignKey>1</ForeignKey>
+			<city>Vereno</city>
+			<state>CA</state>
+			<street>119 Oakstreet, Suite 4876</street>
+			<zip>29213</zip>
+		</Address>
+		<Department>
+			<PrimaryKey>1</PrimaryKey>
+			<ForeignKey>1</ForeignKey>
+			<Name>Administration</Name>
+			<Person>
+				<PrimaryKey>1</PrimaryKey>
+				<ForeignKey>1</ForeignKey>
+				<EMail>v.callaby@nanonull.com</EMail>
+				<First>Vernon</First>
+				<Last>Callaby</Last>
+				<PhoneExt>582</PhoneExt>
+				<Title>Office Manager</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>2</PrimaryKey>
+				<ForeignKey>1</ForeignKey>
+				<EMail>f.further@nanonull.com</EMail>
+				<First>Frank</First>
+				<Last>Further</Last>
+				<PhoneExt>471</PhoneExt>
+				<Title>Accounts Receivable</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>3</PrimaryKey>
+				<ForeignKey>1</ForeignKey>
+				<EMail>l.matise@nanonull.com</EMail>
+				<First>Loby</First>
+				<Last>Matise</Last>
+				<PhoneExt>963</PhoneExt>
+				<Title>Accounting Manager</Title>
+			</Person>
+		</Department>
+		<Department>
+			<PrimaryKey>2</PrimaryKey>
+			<ForeignKey>1</ForeignKey>
+			<Name>Marketing</Name>
+			<Person>
+				<PrimaryKey>4</PrimaryKey>
+				<ForeignKey>2</ForeignKey>
+				<EMail>j.firstbread@nanonull.com</EMail>
+				<First>Joe</First>
+				<Last>Firstbread</Last>
+				<PhoneExt>621</PhoneExt>
+				<Title>Marketing Manager Europe</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>5</PrimaryKey>
+				<ForeignKey>2</ForeignKey>
+				<EMail>s.sanna@nanonull.com</EMail>
+				<First>Susi</First>
+				<Last>Sanna</Last>
+				<PhoneExt>753</PhoneExt>
+				<Title>Art Director</Title>
+			</Person>
+		</Department>
+		<Department>
+			<PrimaryKey>3</PrimaryKey>
+			<ForeignKey>1</ForeignKey>
+			<Name>Engineering</Name>
+			<Person>
+				<PrimaryKey>6</PrimaryKey>
+				<ForeignKey>3</ForeignKey>
+				<EMail>f.landis@nanonull.com</EMail>
+				<First>Fred</First>
+				<Last>Landis</Last>
+				<PhoneExt>951</PhoneExt>
+				<Title>Program Manager</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>7</PrimaryKey>
+				<ForeignKey>3</ForeignKey>
+				<EMail>m.landis@nanonull.com</EMail>
+				<First>Michelle</First>
+				<Last>Butler</Last>
+				<PhoneExt>654</PhoneExt>
+				<Title>Software Engineer</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>8</PrimaryKey>
+				<ForeignKey>3</ForeignKey>
+				<EMail>t.little@nanonull.com</EMail>
+				<First>Ted</First>
+				<Last>Little</Last>
+				<PhoneExt>852</PhoneExt>
+				<Title>Software Engineer</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>9</PrimaryKey>
+				<ForeignKey>3</ForeignKey>
+				<EMail>a.way@nanonull.com</EMail>
+				<First>Ann</First>
+				<Last>Way</Last>
+				<PhoneExt>951</PhoneExt>
+				<Title>Technical Writer</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>10</PrimaryKey>
+				<ForeignKey>3</ForeignKey>
+				<EMail>l.gardner@nanonull.com</EMail>
+				<First>Liz</First>
+				<Last>Gardner</Last>
+				<PhoneExt>753</PhoneExt>
+				<Title>Software Engineer</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>11</PrimaryKey>
+				<ForeignKey>3</ForeignKey>
+				<EMail>p.smith@nanonull.com</EMail>
+				<First>Paul</First>
+				<Last>Smith</Last>
+				<PhoneExt>334</PhoneExt>
+				<Title>Software Engineer</Title>
+			</Person>
+		</Department>
+		<Department>
+			<PrimaryKey>4</PrimaryKey>
+			<ForeignKey>1</ForeignKey>
+			<Name>IT &amp; Technical Support</Name>
+			<Person>
+				<PrimaryKey>12</PrimaryKey>
+				<ForeignKey>4</ForeignKey>
+				<EMail>a.martin@nanonull.com</EMail>
+				<First>Alex</First>
+				<Last>Martin</Last>
+				<PhoneExt>778</PhoneExt>
+				<Title>IT Manager</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>13</PrimaryKey>
+				<ForeignKey>4</ForeignKey>
+				<EMail>g.hammer@nanonull.com</EMail>
+				<First>George</First>
+				<Last>Hammer</Last>
+				<PhoneExt>223</PhoneExt>
+				<Title>Web Developer</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>14</PrimaryKey>
+				<ForeignKey>4</ForeignKey>
+				<EMail>j.band@nanonull.com</EMail>
+				<First>Jessica</First>
+				<Last>Bander</Last>
+				<PhoneExt>241</PhoneExt>
+				<Title>Support Engineer</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>15</PrimaryKey>
+				<ForeignKey>4</ForeignKey>
+				<EMail>l.king@nanonull.com</EMail>
+				<First>Lui</First>
+				<Last>King</Last>
+				<PhoneExt>345</PhoneExt>
+				<Title>Support Engineer</Title>
+			</Person>
+		</Department>
+	</Office>
+</Altova>

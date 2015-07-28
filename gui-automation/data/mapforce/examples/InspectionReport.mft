@@ -1,0 +1,186 @@
+<FlexText>
+	<Commands>
+		<Project FileName="InspectionReport.txt">
+			<Version/>
+			<RootName Value="Report"/>
+			<Connections>
+				<Connection>
+					<SplitSingle Mode="DynL" Behavior="LineBased">
+						<Version/>
+						<Separator Value="General"/>
+						<Name Value="Sections"/>
+						<Connections>
+							<Connection>
+								<SplitMultiple Mode="Fix" Offset="1">
+									<Version/>
+									<Name Value="Header"/>
+									<Connections>
+										<Connection>
+											<Switch Mode="AllPossible">
+												<Version/>
+												<Name Value="Switch"/>
+												<Conditions>
+													<Condition>
+														<Version/>
+														<Value Value="Company"/>
+														<Connections>
+															<Connection>
+																<SplitSingle Orientation="Vertical">
+																	<Version/>
+																	<Upper Offset="1"/>
+																	<Lower Offset="17"/>
+																	<Name Value="CompanyInfo"/>
+																	<Connections>
+																		<Connection>
+																			<Ignore>
+																				<Connections>
+																					<Connection/>
+																				</Connections>
+																				<XData>
+																					<Dimension FullWidth="282" FullHeight="196" TextHeight="169"/>
+																					<OpenState Property="1" Preview="1" Connector="1"/>
+																				</XData>
+																			</Ignore>
+																		</Connection>
+																		<Connection>
+																			<Store Type="string" TrimSide="Right" TrimCharSet="%0D%0A">
+																				<Version/>
+																				<Name Value="Company"/>
+																			</Store>
+																		</Connection>
+																	</Connections>
+																	<XData>
+																		<Dimension FullWidth="282" FullHeight="236" TextHeight="169"/>
+																		<OpenState Property="1" Preview="1" Connector="1"/>
+																	</XData>
+																</SplitSingle>
+															</Connection>
+														</Connections>
+														<XData>
+															<Dimension/>
+															<OpenState Property="1" Preview="1" Connector="1"/>
+														</XData>
+													</Condition>
+													<Condition>
+														<Version/>
+														<Value Value="Production%20"/>
+														<Connections>
+															<Connection>
+																<Store Type="string" TrimCharSet="%20">
+																	<Version/>
+																	<Name Value="Production"/>
+																</Store>
+															</Connection>
+														</Connections>
+														<XData>
+															<Dimension/>
+															<OpenState Property="1" Preview="1" Connector="1"/>
+														</XData>
+													</Condition>
+													<Condition Mode="Default">
+														<Version/>
+														<Value/>
+														<Connections>
+															<Connection>
+																<Ignore>
+																	<Connections>
+																		<Connection/>
+																	</Connections>
+																	<XData>
+																		<Dimension FullWidth="360" FullHeight="227" TextHeight="200"/>
+																		<OpenState Property="1" Connector="1"/>
+																	</XData>
+																</Ignore>
+															</Connection>
+														</Connections>
+														<XData>
+															<Dimension/>
+															<OpenState Property="1" Preview="1" Connector="1"/>
+														</XData>
+													</Condition>
+												</Conditions>
+												<Connections>
+													<Connection/>
+												</Connections>
+												<XData>
+													<Dimension FullWidth="282" FullHeight="227" TextHeight="169"/>
+													<OpenState Property="1" Preview="1" Connector="1"/>
+												</XData>
+											</Switch>
+										</Connection>
+									</Connections>
+									<XData>
+										<Dimension FullWidth="311" FullHeight="227" TextHeight="199"/>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+									</XData>
+								</SplitMultiple>
+							</Connection>
+							<Connection>
+								<SplitSingle>
+									<Version/>
+									<Upper Offset="1"/>
+									<Lower/>
+									<Name Value="Details"/>
+									<Connections>
+										<Connection>
+											<Store Type="string" TrimCharSet="%20">
+												<Version/>
+												<Name Value="Header"/>
+											</Store>
+										</Connection>
+										<Connection>
+											<CSV QuoteCharacter='"' EscapeCharacter="\">
+												<Version/>
+												<RecordSeparator Value="%0D%0A"/>
+												<FieldSeparator Value=","/>
+												<RecordName Value="Items"/>
+												<Fields>
+													<Field Type="string">
+														<Name Value="OrderNo"/>
+													</Field>
+													<Field Type="string">
+														<Name Value="Volume"/>
+													</Field>
+													<Field Type="string">
+														<Name Value="ppm"/>
+													</Field>
+													<Field Type="string">
+														<Name Value="ID"/>
+													</Field>
+													<Field Type="string">
+														<Name Value="Abbreviation"/>
+													</Field>
+												</Fields>
+												<Connections>
+													<Connection/>
+												</Connections>
+												<XData>
+													<Dimension FullWidth="315" FullHeight="227" TextHeight="171"/>
+													<OpenState Property="1" Preview="1" Connector="1"/>
+													<FieldWidths Item="50" Item1="56" Item2="56" Item3="56" Item4="50" Item5="50"/>
+												</XData>
+											</CSV>
+										</Connection>
+									</Connections>
+									<XData>
+										<Dimension FullWidth="309" FullHeight="227" TextHeight="200"/>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+									</XData>
+								</SplitSingle>
+							</Connection>
+						</Connections>
+						<XData>
+							<Dimension FullWidth="293" FullHeight="400" TextHeight="200"/>
+							<OpenState Property="1" Preview="1" Connector="1"/>
+						</XData>
+					</SplitSingle>
+				</Connection>
+			</Connections>
+			<XData>
+				<Dimension/>
+				<OpenState Property="1" Preview="1" Connector="1"/>
+			</XData>
+		</Project>
+	</Commands>
+	<Functions/>
+</FlexText>

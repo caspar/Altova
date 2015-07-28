@@ -1,0 +1,2170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Mindy Mulligan (Anite Public Sector) -->
+<xs:schema xmlns:core="http://www.govtalk.gov.uk/core" xmlns:pdt="http://www.govtalk.gov.uk/people/PersonDescriptives" xmlns:apd="http://www.govtalk.gov.uk/people/AddressAndPersonalDetails" xmlns:bs="http://www.govtalk.gov.uk/people/bs7666" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.aniteps.com/schemas/swift/sxapi" targetNamespace="http://www.aniteps.com/schemas/swift/sxapi" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.18" id="SXAPI-C">
+	<xs:annotation>
+		<xs:documentation>as</xs:documentation>
+		<xs:appinfo xmlns:gms="http://www.govtalk.gov.uk/CM/gms">
+			<Metadata xmlns="http://www.govtalk.gov.uk/CM/gms-xs">
+				<Contributor>Anite Public Sector Ltd</Contributor>
+				<Creator>balvis.gulbis@anite.com</Creator>
+				<Date>
+					<Created>2002-12-16</Created>
+				</Date>
+				<Date>
+					<Modified>2003-08-15</Modified>
+				</Date>
+				<Date>
+					<Modified>2003-10-27</Modified>
+				</Date>
+				<Date>
+					<Modified>2003-12-08</Modified>
+				</Date>
+				<Date>
+					<Modified>2004-01-29</Modified>
+				</Date>
+				<Date>
+					<Modified>2004-02-11</Modified>
+				</Date>
+				<Date>
+					<Modified>2004-02-23</Modified>
+				</Date>
+				<Date>
+					<Modified>2004-03-09</Modified>
+				</Date>
+				<Date>
+					<Modified>2004-04-07</Modified>
+				</Date>
+				<Date>
+					<Modified>2004-10-26</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-09-19</Modified>
+				</Date>
+				<Date>
+					<Modified>2005-10-12</Modified>
+				</Date>
+				<Description>This architectural schema provides the structure for the AnitePS Swift XML API common data type definitions</Description>
+				<Format>
+					<MediaType>text/xml</MediaType>
+					<Syntax>http://www.w3.org/2001/XMLSchema</Syntax>
+					<Description>XML schema, W3C Recommendation 2001</Description>
+				</Format>
+				<Identifier>{http://www.aniteps.com/schemas/swift/sxapi}1.0</Identifier>
+				<Language>[ISO 639-2/B] ENG</Language>
+				<Publisher>Anite Public Sector Ltd, 2 Pitfield, Kiln Farm, Milton Keynes MK11 3LW</Publisher>
+				<Relation>
+					<Requires>PersonDescriptiveTypes</Requires>
+				</Relation>
+				<Relation>
+					<Requires>CitizenIdentificationTypes</Requires>
+				</Relation>
+				<Relation>
+					<Requires>CommonSimpleTypes</Requires>
+				</Relation>
+				<Relation>
+					<Requires>BS7666</Requires>
+				</Relation>
+				<Rights>Unclassified
+					<Copyright>Copyright &#169;2002-2003 Anite Public Sector Ltd</Copyright>
+				</Rights>
+				<Subject>
+					<Category>People, communities and living</Category>
+				</Subject>
+				<Subject>
+					<Project>AnitePS Swift XML API</Project>
+				</Subject>
+				<Title>AnitePS Swift XML API common data type definitions</Title>
+				<Type>XML Schema</Type>
+			</Metadata>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://www.govtalk.gov.uk/core" schemaLocation="CommonSimpleTypes.xsd">
+		<xs:annotation>
+			<xs:documentation>
+				GovTalk schema for general data type definitions
+			</xs:documentation>
+		</xs:annotation>
+	</xs:import>
+	<xs:import namespace="http://www.govtalk.gov.uk/people/PersonDescriptives" schemaLocation="PersonDescriptiveTypes.xsd">
+		<xs:annotation>
+			<xs:documentation>
+				Person descriptive types architectural schema.
+				Includes GovTalk schema for general data type definitions 
+				(CommonSimpleTypes-v1-3.xsd).
+			</xs:documentation>
+		</xs:annotation>
+	</xs:import>
+	<xs:import namespace="http://www.govtalk.gov.uk/people/AddressAndPersonalDetails" schemaLocation="CitizenIdentificationTypes.xsd">
+		<xs:annotation>
+			<xs:documentation>
+				Citizen Identifaction Types architectural schema.
+				Includes GovTalk schema for general data type definitions 
+				(CommonSimpleTypes-v1-3.xsd).
+			</xs:documentation>
+		</xs:annotation>
+	</xs:import>
+	<xs:import namespace="http://www.govtalk.gov.uk/people/bs7666" schemaLocation="BS7666.xsd">
+		<xs:annotation>
+			<xs:documentation>
+				Schema for British Standard BS7666 address types
+			</xs:documentation>
+		</xs:annotation>
+	</xs:import>
+	<!-- xs:import namespace="http://www.govtalk.gov.uk/people/AddressAndPersonalDetails" schemaLocation="AddressTypes.xsd" -->
+	<!-- xs:import namespace="http://www.govtalk.gov.uk/people/AddressAndPersonalDetails" schemaLocation="ContactTypes.xsd" -->
+	<!-- xs:import namespace="http://www.govtalk.gov.uk/financial/GDSCFinancialTypes" schemaLocation="FinancialTypes.xsd" -->
+	<!-- xs:import namespace="http://www.govtalk.gov.uk/financial/FinancialIdentifiers" schemaLocation="FinancialIdentifierTypes.xsd" -->
+	<!-- xs:import namespace="http://example.com/iso4217CurrencyCodeSample" schemaLocation="codelist-ISO4217.xsd" -->
+	<!-- xs:import namespace="http://www.govtalk.gov.uk/financial/OrganisationIdentifiers" schemaLocation="OrganisationIdentifierTypes.xsd" -->
+	<xs:simpleType name="SxapiIdentifier.type">
+		<xs:restriction base="xs:nonNegativeInteger">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiYesNo.type">
+		<xs:annotation>
+			<xs:documentation>Y->yes, N->no</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:minLength value="1" fixed="false"/>
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiYesNoUnknown.type">
+		<xs:annotation>
+			<xs:documentation>Y->yes, N->no, U->unknown</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="7"/>
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTextOrList.type">
+		<xs:annotation>
+			<xs:documentation>Assessment question answer type: T=text, L=list </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="L"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTermCode.type">
+		<xs:annotation>
+			<xs:documentation>S->short term, L->long term or U->undetermined</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:minLength value="9"/>
+			<xs:enumeration value="short term"/>
+			<xs:enumeration value="long term"/>
+			<xs:enumeration value="undetermined"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPlacementTerm.type">
+		<xs:annotation>
+			<xs:documentation>S->short term, L->long term, A->agreement, n->n/a</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="short term"/>
+			<xs:enumeration value="long term"/>
+			<xs:enumeration value="agreement"/>
+			<xs:enumeration value="n/a"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPaymentType.type">
+		<xs:annotation>
+			<xs:documentation>G->gross, N->net</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="gross"/>
+			<xs:enumeration value="net"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiActionStatus.type">
+		<xs:annotation>
+			<xs:documentation>O->open, C->closed</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="open"/>
+			<xs:enumeration value="closed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiContactReferral.type">
+		<xs:annotation>
+			<xs:documentation>C=contact, R=referral</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="C">
+				<xs:annotation>
+					<xs:documentation>contact</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="R">
+				<xs:annotation>
+					<xs:documentation>referral</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiRoleInvolvement.type">
+		<xs:annotation>
+			<xs:documentation>EndInv or EndRole or None - amended AR 02/05/2005</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="7"/>
+			<xs:minLength value="6"/>
+			<xs:enumeration value="EndInv"/>
+			<xs:enumeration value="EndRole"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDate.type">
+		<xs:restriction base="core:DateType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTime.type">
+		<xs:restriction base="xs:time"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDateTime.type">
+		<xs:annotation>
+			<xs:documentation>ISO 8601 CCYY-MM-DDThh:mm:ss</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:dateTime"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCode.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiMeaning.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="240"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNotes.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSearchPattern.type">
+		<xs:annotation>
+			<xs:documentation>Free text for pattern matching</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="240"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiUser.type">
+		<xs:annotation>
+			<xs:documentation>Oracle identifier</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTable.type">
+		<xs:annotation>
+			<xs:documentation>Oracle identifier</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiVersion.type">
+		<xs:annotation>
+			<xs:documentation>
+				New-style version type to replace checksums.
+				Allows for up to 8-character prefix and 128-character hash.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="136"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTrueFalse.type">
+		<xs:restriction base="xs:boolean">
+			<xs:pattern value="true"/>
+			<xs:pattern value="false"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCheckSum.type">
+		<xs:restriction base="xs:unsignedLong">
+			<xs:maxInclusive value="18446744073709551615"/>
+			<xs:minInclusive value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNameSurname.type">
+		<xs:annotation>
+			<xs:documentation>if length(persons.family_name)>35 then truncate</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="pdt:PersonFamilyNameType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNameTitle.type">
+		<xs:annotation>
+			<xs:documentation>if length(coded_titles.meaning)>35 then truncate</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="pdt:PersonNameTitleType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNameForename.type">
+		<xs:annotation>
+			<xs:documentation>if length(persons.first_names)>35 then truncate</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="pdt:PersonGivenNameType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNameList.type">
+		<xs:annotation>
+			<xs:documentation>For example, "Catlin Ivor(Catlin Rakesh, Ivor   Raman Test Mr) (35)"</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPersonName.type">
+		<xs:annotation>
+			<xs:documentation>NameTitle(40)+1+Forename(40)+1+Surname(40)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="122"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiInitials.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSex.type">
+		<xs:annotation>
+			<xs:documentation>GENF->2, GENM->1, GENI->9, GENU->0</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="pdt:GenderCurrentType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAge.type">
+		<xs:annotation>
+			<xs:documentation>years - Modified AR 12/05/2006 for heat 270935</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedInt"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiMonths.type">
+		<xs:annotation>
+			<xs:documentation>months + days</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPersonOrFamily.type">
+		<xs:annotation>
+			<xs:documentation>P->person, F->family</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:minLength value="6"/>
+			<xs:enumeration value="person"/>
+			<xs:enumeration value="family"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiContactDetails.type">
+		<xs:annotation>
+			<xs:documentation>e.g., related persons contact by phone, e-mail, fax, letter or in person</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiScore.type">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNumberOfUnits.type">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiHealthId.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNationalInsuranceNumber.type">
+		<xs:annotation>
+			<xs:documentation>length 30->9</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="apd:NationalInsuranceNumberType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiReferenceIdentifier.type">
+		<xs:annotation>
+			<xs:documentation>Reference identifier the person is known by</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiReferenceDescription.type">
+		<xs:annotation>
+			<xs:documentation>Free text description of the system the reference relates to</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiReferenceTypeCode.type">
+		<xs:annotation>
+			<xs:documentation>Internal code grouping external reference types EXTERNAL_REFERENCE_TYPES.CODE</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiReferenceTypeName.type">
+		<xs:annotation>
+			<xs:documentation>Name of the type of external reference  EXTERNAL_REFERENCE_TYPES.TYPE_NAME</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiReferenceTypeDescription.type">
+		<xs:annotation>
+			<xs:documentation>Description of the type of external reference  EXTERNAL_REFERENCE_TYPES.TYPE_DESCRIPTION</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiServiceDescription.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="765"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCareItemDescription.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="726"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiReviewerName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="62"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiProviderName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="322"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCreditorName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiHomeOfficeNumber.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOrganisationName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOrganisationShortName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOrganisationStandardName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="273"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOrganisationRegistrationNumber.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOrganisationAtAddress.type">
+		<xs:annotation>
+			<xs:documentation>Name of organisation at address (e.g. Police)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDepartmentAtAddress.type">
+		<xs:annotation>
+			<xs:documentation>Department within organisation based at this address</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiFileId.type">
+		<xs:annotation>
+			<xs:documentation>The file identifier for the [paper] file</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSubject.type">
+		<xs:annotation>
+			<xs:documentation>The subject of the paper file</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiLocationText.type">
+		<xs:annotation>
+			<xs:documentation>Free text notes relating to the location of the file</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTelephoneNumber.type">
+		<xs:annotation>
+			<xs:documentation>length 35->20</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:TelephoneNumberType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTelephoneExtension.type">
+		<xs:annotation>
+			<xs:documentation>length 5->6</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:TelephoneExtensionType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiEmailAddress.type">
+		<xs:annotation>
+			<xs:documentation>length 100->127</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:EmailAddressType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiWebAddress.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCountry.type">
+		<xs:annotation>
+			<xs:documentation>e.g., CountryOfBirth</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPlace.type">
+		<xs:annotation>
+			<xs:documentation>e.g., PlaceOfBirth</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiLocality.type">
+		<xs:annotation>
+			<xs:documentation>length 50->35 as in BS7666</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="bs:LocalityType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTown.type">
+		<xs:annotation>
+			<xs:documentation>length 50->30 as in BS7666</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="bs:TownType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAdminArea.type">
+		<xs:annotation>
+			<xs:documentation>As in BS7666</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="bs:AdministrativeAreaType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPremiseName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="120"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPremiseNumber.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSecondaryName.type">
+		<xs:annotation>
+			<xs:documentation>The name of the property (e.g. Arndale House, Percival Mansions)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiStreetDescription.type">
+		<xs:restriction base="bs:StreetDescriptorType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPostCodeOut.type">
+		<xs:annotation>
+			<xs:documentation>Part of BS7666 PostCodeType</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPostCodeIn.type">
+		<xs:annotation>
+			<xs:documentation>Part of BS7666 PostCodeType</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDpsCode.type">
+		<xs:annotation>
+			<xs:documentation>Post Office delivery point suffix</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiWardCode.type">
+		<xs:annotation>
+			<xs:documentation>Ward code where the address is located</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiUserField.type">
+		<xs:annotation>
+			<xs:documentation>User defined column (e.g. gazetteer_addresses.user_5)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNlpgId.type">
+		<xs:annotation>
+			<xs:documentation>National Land and Property Gazetteer identifier</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="18"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAddressPointId.type">
+		<xs:annotation>
+			<xs:documentation>Id of the source address point record that created the address</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="18"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiGridRef.type">
+		<xs:annotation>
+			<xs:documentation>length 8->7. Coordinate Point based on UK National Grid. Part of BS7666 CoordinateStructure</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:unsignedLong">
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="9999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAddressDescription.type">
+		<xs:annotation>
+			<xs:documentation>Description of address purpose</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAddress.type">
+		<xs:annotation>
+			<xs:documentation>Comma-delimited address truncated to 200 characters</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SxapiBSaddress.structure">
+		<xs:annotation>
+			<xs:documentation>BS7666 compliant address element</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="bs:BSaddressStructure"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SxapiSummaryPerson.type">
+		<xs:annotation>
+			<xs:documentation>added JC 15/1/2004  - amended BA 02/02/2005 - amended DK 10/03/2005</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TitleCode" type="SxapiCode.type" minOccurs="0"/>
+			<xs:element name="CitizenNameTitle" type="SxapiNameTitle.type" minOccurs="0"/>
+			<xs:element name="CitizenNameForename" type="SxapiNameForename.type" minOccurs="0"/>
+			<xs:element name="CitizenNameSurname" type="SxapiNameSurname.type"/>
+			<xs:element name="DisplayName" type="SxapiDisplayName.type" minOccurs="0"/>
+			<xs:element name="AddressSummary" type="SxapiNotes.type" minOccurs="0"/>
+			<xs:element name="TelephoneNumber" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+			<xs:element name="BirthDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="InterpreterRequired" type="SxapiYesNo.type" minOccurs="0"/>
+			<xs:element name="EthnicOriginCode" type="SxapiCode.type" minOccurs="0"/>
+			<xs:element name="EthnicOrigin" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="MainLanguageCode" type="SxapiCode.type" minOccurs="0"/>
+			<xs:element name="MainLanguage" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="EmailAddress" type="SxapiEmailAddress.type" minOccurs="0"/>
+			<xs:element name="Age" type="SxapiVarcharAge.type" minOccurs="0"/>
+			<xs:element name="WorkerIndicator" type="SxapiYesNo.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SxapiSummaryOrganisation.type">
+		<xs:annotation>
+			<xs:documentation>added JC 15/1/2004</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OrganisationName" type="SxapiOrganisationName.type"/>
+			<xs:element name="OrganisationTypeCode" type="SxapiCode.type"/>
+			<xs:element name="OrganisationType" type="SxapiMeaning.type"/>
+			<xs:element name="AddressSummary" type="SxapiNotes.type" minOccurs="0"/>
+			<xs:element name="TelephoneNumber" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+			<xs:element name="StartDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="EndDate" type="SxapiDate.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiCountOrAll.type">
+		<xs:union>
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:minInclusive value="-1"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="all"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:attributeGroup name="SxapiPagingRequest.attlist">
+		<xs:annotation>
+			<xs:documentation>Defines the row n from which a search will begin and restricts the number of rows returned.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="StartWithRow" use="optional" default="1">
+			<xs:simpleType>
+				<xs:restriction base="xs:nonNegativeInteger">
+					<xs:minInclusive value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="RowsPerPage" type="SxapiCountOrAll.type" use="optional">
+			<xs:annotation>
+				<xs:documentation/>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="CountRows" type="SxapiTrueFalse.type" use="optional" default="false">
+			<xs:annotation>
+				<xs:documentation>
+					True or false value which defines whether a count of all rows matching select criteria
+					should be returned on the response.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="QueryHandle" type="core:PopulatedStringType" use="optional">
+			<xs:annotation>
+				<xs:documentation>
+					A handle identifying a previous request of which this request is a duplicate, possibly
+					with different pagination.  Must be the value returned in the previous request's response.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="SxapiPagingResponse.attlist">
+		<xs:attribute name="StartWithRow" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:nonNegativeInteger">
+					<xs:minInclusive value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="RowsPerPage" type="SxapiCountOrAll.type" use="required">
+			<xs:annotation>
+				<xs:documentation/>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="RowCount" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:nonNegativeInteger"/>
+			</xs:simpleType>
+		</xs:attribute>
+		<!-- MoreRows ought to be required, but cannot be while old-style APIs are still in use. -->
+		<xs:attribute name="MoreRows" type="SxapiTrueFalse.type" use="optional" default="false">
+			<xs:annotation>
+				<xs:documentation>
+					True or false value which indicates whether there are additional results for this
+					query, which would be returned if the pagination settings allowed.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="QueryHandle" type="core:PopulatedStringType" use="optional">
+			<xs:annotation>
+				<xs:documentation>
+					A unique handle which can be used to identify this query on future requests.
+					If a future request is a duplicate of this one, but with different pagination, then
+					the service may be able to use this handle to retrieved cached information which can
+					be used to speed up the query processing.  It is up to the client to ensure that the
+					query genuinely has not changed -- if it has changed, then results will be unpredictable,
+					depending on whether the service has cached information for the previous query.
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="SxapiComparison.attlist">
+		<xs:annotation>
+			<xs:documentation>Comparison operands</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="Operator" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="core:PopulatedStringType">
+					<xs:enumeration value="equal"/>
+					<xs:enumeration value="greater"/>
+					<xs:enumeration value="less"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:simpleType name="SxapiShortNote.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiLong.type">
+		<xs:restriction base="core:PopulatedStringType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiIndicatorType.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="20"/>
+			<xs:minLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiRegisterDesignation.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="SxapiNillable.attlist">
+		<xs:annotation>
+			<xs:documentation>Workaround for Oracle 8 XDK no namespace support that prevents XML being built using the xsi:nil attribute.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="nil" use="optional" default="false">
+			<xs:simpleType>
+				<xs:restriction base="xs:boolean">
+					<xs:pattern value="true"/>
+					<xs:pattern value="false"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:simpleType name="SxapiAmount.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="SxapiUpdate.attlist">
+		<xs:attribute name="Update" type="SxapiYesNo.type" use="optional" default="yes">
+			<xs:annotation>
+				<xs:documentation>If element is empty, but Update="yes", then database field is updated with NULL.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:simpleType name="SxapiDownloadMode.type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="readonly"/>
+			<xs:enumeration value="update"/>
+			<xs:enumeration value="redownload"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiUploadMode.type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="partial"/>
+			<xs:enumeration value="full"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiContributionBasis.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAgencyAddress.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAgencyName.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDebtorReference.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPercentOnCode.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAmountOnCode.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDivisionServiceCode.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDivisionServiceDescription.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostCentreCode.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostCentreDescription.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSubjectiveCode.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSubjectiveDescription.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiWeeklyAmount.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDuration.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiContractName.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiUnitsProvided.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCost.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAlternativeCost.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostUnit.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostPerUnit.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTotalCost.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiVariations.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTotalFrequency.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiScheduleType.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC - S->Schedule, V->Variation, A->Actual, M->Model</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="Schedule"/>
+			<xs:enumeration value="Variation"/>
+			<xs:enumeration value="Actual"/>
+			<xs:enumeration value="Model"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTotalHours.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="9"/>
+			<xs:fractionDigits value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTotalUnits.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostDifference.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAccountingCodes.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTypeOfAccountingCode.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC - I->Income, E->Expenditure, B->Both</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="Income"/>
+			<xs:enumeration value="Expenditure"/>
+			<xs:enumeration value="Both"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiScheduleRateTimeUnit.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiScheduleNumberOfWorkers.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiScheduleNumberOfUnits.type">
+		<xs:annotation>
+			<xs:documentation>added BA 13/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNumberDaysAfterDeath.type">
+		<xs:annotation>
+			<xs:documentation>added BA 18/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="38"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiMaxAdjustmentTime.type">
+		<xs:annotation>
+			<xs:documentation>added BA 18/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="4"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiWeeksLoaned.type">
+		<xs:annotation>
+			<xs:documentation>added BA 20/10/2004 for CPC</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSingleRoom.type">
+		<xs:annotation>
+			<xs:documentation>added BA 20/10/2004 for CPC - O->Offered, A->Allocated,  U->Unkown, N->N/A</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="Offered"/>
+			<xs:enumeration value="Allocated"/>
+			<xs:enumeration value="Unknown"/>
+			<xs:enumeration value="N/A"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiShortNameType.type">
+		<xs:annotation>
+			<xs:documentation>added JC 19/01/2005 for ICS</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiClob.type">
+		<xs:annotation>
+			<xs:documentation>added JC 19/01/2005 for ICS</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="2000000000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiLongNote.type">
+		<xs:annotation>
+			<xs:documentation>added JC 19/01/2005 for ICS</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attributeGroup name="SxapiVersion.attlist">
+		<xs:attribute name="table" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="core:RestrictedStringType">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="30"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="column" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="core:RestrictedStringType">
+					<xs:minLength value="1"/>
+					<xs:maxLength value="30"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="value" type="core:PopulatedStringType" use="optional"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="SxapiVarcharAge.type">
+		<xs:annotation>
+			<xs:documentation>added BA 02/02/2005 for PersonSummary</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDisplayName.type">
+		<xs:annotation>
+			<xs:documentation>added BA 02/02/2005 for PersonSummary - amended AR 26/04/2005</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOtherReferenceCode.type">
+		<xs:annotation>
+			<xs:documentation>added BA 28/02/2005 for SearchPersons</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="6"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOtherReferenceIdentifier.type">
+		<xs:annotation>
+			<xs:documentation>added BA 28/02/2005 for SearchPersons</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiHistoricClientIndicator.type">
+		<xs:annotation>
+			<xs:documentation>added BA 11/03/2005 for SearchPerson</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="1"/>
+			<xs:enumeration value="Y"/>
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="H"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Fault">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FaultCode" type="xs:string"/>
+				<xs:element name="FaultString" type="xs:string"/>
+				<xs:element name="Detail">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Message" type="xs:string"/>
+							<xs:element name="ErrorCode" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SxapiSummaryHealthFeatures.type">
+		<xs:annotation>
+			<xs:documentation>Common to normal health and confidential health (KR 24/08/2004)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="StartDate" type="SxapiDate.type"/>
+			<xs:element name="EndDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="FeatureCode" type="SxapiCode.type"/>
+			<xs:element name="Feature" type="SxapiMeaning.type"/>
+			<xs:element name="SeverityCode" type="SxapiCode.type" minOccurs="0"/>
+			<xs:element name="Severity" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="Perceived" type="SxapiYesNo.type"/>
+			<xs:element name="Notes" type="SxapiNotes.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SxapiSummaryTreatment.type">
+		<xs:annotation>
+			<xs:documentation>Common to normal health and confidential health (KR 24/08/2004)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="StartDate" type="SxapiDate.type"/>
+			<xs:element name="EndDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="DischargeReason" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="Reason" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="ReferredDate" type="SxapiDate.type"/>
+			<xs:element name="MedicalNumber" type="SxapiMedicalNumber.type" minOccurs="0"/>
+			<xs:element name="LocationSummary" type="SxapiSummaryOrganisation.type"/>
+			<xs:element name="AddressSummary" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="ConsultantSummary" type="SxapiSummaryPerson.type" minOccurs="0"/>
+			<xs:element name="Specialism" type="SxapiMeaning.type"/>
+			<xs:element name="Ward" type="SxapiPlace.type" minOccurs="0"/>
+			<xs:element name="TeamSummary" type="SxapiSummaryOrganisation.type" minOccurs="0"/>
+			<xs:element name="WorkerSummary" type="SxapiSummaryPerson.type" minOccurs="0"/>
+			<xs:element name="Status" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="Permanent" type="SxapiYesNo.type"/>
+			<xs:element name="Sector" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="SpecialistInput" type="SxapiLongNote.type" minOccurs="0"/>
+			<xs:element name="ActionsTaken" type="SxapiLongNote.type" minOccurs="0"/>
+			<xs:element name="Targets" type="SxapiLongNote.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiMedicalNumber.type">
+		<xs:annotation>
+			<xs:documentation>KR 24/08/2004</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiString.type">
+		<xs:annotation>
+			<xs:documentation>IO 12/05/05 Multipurpose type for Strings (use restrictions to customize)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNumber.type">
+		<xs:annotation>
+			<xs:documentation>IO 12/05/05 Multipurpose type for Numbers (use restrictions to customize)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiParentOrChild.type">
+		<xs:annotation>
+			<xs:documentation>Assessment question category type: P=Parental Capacity, C=Child's Developmental Needs - amended AR 27/05/2005</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="parent"/>
+			<xs:enumeration value="child"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDurationDays.type">
+		<xs:annotation>
+			<xs:documentation>added BA 20/05/2005 added for Non-Standard code tables</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiContribution.type">
+		<xs:annotation>
+			<xs:documentation>added AR 09/06/2005 added for Contribution for Involvements</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SxapiSummaryWorkflowTeam.type">
+		<xs:sequence>
+			<xs:element name="WorkflowTeamIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="WorkflowTeamName" type="SxapiOrganisationName.type"/>
+			<xs:element name="WorkflowTeamNotes" type="SxapiNotes.type" minOccurs="0"/>
+			<xs:element name="WorkflowTeamManagerIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="WorkflowTeamManagerSummary" type="SxapiSummaryWorkflowUser.type" minOccurs="0"/>
+			<xs:element name="LinkedOrganisationIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="LinkedOrganisationSummary" type="SxapiSummaryOrganisation.type" minOccurs="0"/>
+			<xs:element name="EnableEmailNotification" type="SxapiYesNo.type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SxapiSummaryWorkflowUser.type">
+		<xs:sequence>
+			<xs:element name="WorkflowUserName" type="SxapiUser.type"/>
+			<xs:element name="SwiftUserIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="SwiftUser" type="SxapiUser.type" minOccurs="0"/>
+			<xs:element name="PersonIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="PersonSummary" type="SxapiSummaryPerson.type" minOccurs="0"/>
+			<xs:element name="WorkflowTeamIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="WorkflowTeamSummary" type="SxapiSummaryOrganisation.type" minOccurs="0"/>
+			<xs:element name="EnableEmailNotification" type="SxapiYesNo.type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiJobTypeName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTimePeriod.type">
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiColumn.type">
+		<xs:annotation>
+			<xs:documentation>added BA 29/06/05 added for SelectCodedValues</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiColumnValue.type">
+		<xs:annotation>
+			<xs:documentation>added BA 29/06/05 added for SelectCodedValues</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="4000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTransactionType.type">
+		<xs:annotation>
+			<xs:documentation>Transaction Type for ExportLegalStatuseChanges: 0 = insert, 1 = update, 2 = delete</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="insert"/>
+			<xs:enumeration value="update"/>
+			<xs:enumeration value="delete"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiImpactOnChild.type">
+		<xs:annotation>
+			<xs:documentation>added VB 13/07/05 for Prson Profile</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="4000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCourtNumber.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiLongName.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSalary.type">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPermanent.type">
+		<xs:annotation>
+			<xs:documentation>added IV 27/07/2005  P->Permanent, T->Temporary, V->Voluntary, U->Unknown </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="Permanent"/>
+			<xs:enumeration value="Temporary"/>
+			<xs:enumeration value="Voluntary"/>
+			<xs:enumeration value="Unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SxapiSummaryWorkflowJobType.type">
+		<xs:sequence>
+			<xs:element name="WorkflowJobTypeIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="WorkflowJobTypeName" type="SxapiJobTypeName.type"/>
+			<xs:element name="WorkflowJobTypeFuturePeriod" type="SxapiTimePeriod.type" minOccurs="0"/>
+			<xs:element name="WorkflowJobTypeCurrentBefore" type="SxapiTimePeriod.type" minOccurs="0"/>
+			<xs:element name="WorkflowJobTypeCurrentAfter" type="SxapiTimePeriod.type" minOccurs="0"/>
+			<xs:element name="WorkflowJobTypeOverduePeriod" type="SxapiTimePeriod.type" minOccurs="0"/>
+			<xs:element name="WorkflowJobTypeEmailEnabled" type="SxapiYesNo.type"/>
+			<xs:element name="WorkflowJobTypeWorkingDays" type="SxapiYesNo.type"/>
+			<xs:element name="WorkflowJobTypeRestrictDeletion" type="SxapiYesNo.type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiYesNoAll.type">
+		<xs:annotation>
+			<xs:documentation>added DK 05/08/2005 Y->yes, N->no, A->all</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="3"/>
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiTeamOrUser.type">
+		<xs:annotation>
+			<xs:documentation>added DK 05/08/2005 T->team, U->user</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="4"/>
+			<xs:enumeration value="team"/>
+			<xs:enumeration value="user"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSwiftOrWorkflow.type">
+		<xs:annotation>
+			<xs:documentation>added DK 05/08/2005 S->swift, W->workflow</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="8"/>
+			<xs:enumeration value="swift"/>
+			<xs:enumeration value="workflow"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPaymentVehicle.type">
+		<xs:annotation>
+			<xs:documentation>added JPC 23/08/2005 P--> Via ISP/FCP, I-->On Invoice, N-->Not Applicable</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNormalConfidential.type">
+		<xs:annotation>
+			<xs:documentation>added URM 05/09/2005 N--> Normal, C-->Confidential, A-->All</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="normal"/>
+			<xs:enumeration value="confidential"/>
+			<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAMPMSession.type">
+		<xs:annotation>
+			<xs:documentation>Added by SD 19/09/2005 as part of ICS phase 2; am-> Morning Session; pm-> Afternoon Session; both-> Both sessions
+			Modified by SD on 10/10/2005; enumeration values changed</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="am"/>
+			<xs:enumeration value="pm"/>
+			<xs:enumeration value="both"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNonAttendanceType.type">
+		<xs:annotation>
+			<xs:documentation>Added by Supriya Deore as part of ICS phase 2; Type of non-attendance: excl-> Exclusion; abs-> Absence</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="Exclusion"/>
+			<xs:enumeration value="Absence"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiHomeHospital.type">
+		<xs:annotation>
+			<xs:documentation>Added by URM 30/09/2005 HOME->Home; HOSP->Hospital</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="home"/>
+			<xs:enumeration value="hospital"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiProvisionIdentifierDisplay.type">
+		<xs:annotation>
+			<xs:documentation>Added JC 27/09/2005</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiVisitsNotesAll.type">
+		<xs:annotation>
+			<xs:documentation>Added by AR 06/10/2005 for Person Profile. Enumeration values: visits, notes, all</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="visits"/>
+			<xs:enumeration value="notes"/>
+			<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiEducationEvent.type">
+		<xs:annotation>
+			<xs:documentation>Added by GBC 20/03/2006 for Educational Events Heat 257634. Enumeration values: issue,event</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="issue"/>
+			<xs:enumeration value="event"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiFullPartEducation.type">
+		<xs:annotation>
+			<xs:documentation>Added by SD 12/10/2005 as part of ICS phase 2; F-> Full Time; P-> Part Time; U-> Unknown </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="full"/>
+			<xs:enumeration value="part"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAddressSummaryFormat100.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Accomodation API</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiLandlordText.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Accomodation API</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPropertyAccess.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Accomodation API</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPropertyCondition.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Accomodation API</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="200"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiClientLiability.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostOfCare.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAssessedCharge.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCalculatedCharge.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiNoOfDependants.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDreAllowance.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="12"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDoNotChargeReason.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiFinAssStatus.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for Financial Assessments A= Apportioned, C= Complete, P= Provisional R=Rejected</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="11"/>
+			<xs:enumeration value="apportioned"/>
+			<xs:enumeration value="complete"/>
+			<xs:enumeration value="provisional"/>
+			<xs:enumeration value="rejected"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiUDFType.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD for User Definable Fields  D = date, I = Indicator, F = freetext</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+			<xs:enumeration value="D"/>
+			<xs:enumeration value="I"/>
+			<xs:enumeration value="F"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SxapiSummaryRegister.type">
+		<xs:sequence>
+			<xs:element name="RegisteredPersonIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="RegisteredPersonSummary" type="SxapiSummaryPerson.type"/>
+			<xs:element name="RegisterDesignation" type="SxapiRegisterDesignation.type"/>
+			<xs:element name="RegisterTypeCode" type="SxapiCode.type"/>
+			<xs:element name="RegisterType" type="SxapiMeaning.type"/>
+			<xs:element name="RegistrationStatusCode" type="SxapiCode.type"/>
+			<xs:element name="RegistrationStatus" type="SxapiMeaning.type"/>
+			<xs:element name="ResponsiblePersonIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="ResponsiblePersonSummary" type="SxapiSummaryPerson.type" minOccurs="0"/>
+			<xs:element name="ResponsibleUnitIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="ResponsibleUnitSummary" type="SxapiSummaryOrganisation.type" minOccurs="0"/>
+			<xs:element name="RegistrationDate" type="SxapiDate.type"/>
+			<xs:element name="ReasonRegisteredCode" type="SxapiCode.type" minOccurs="0"/>
+			<xs:element name="ReasonRegistered" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="ReasonRegisteredText" type="SxapiNotes.type" minOccurs="0"/>
+			<xs:element name="EndDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="EndReasonCode" type="SxapiCode.type" minOccurs="0"/>
+			<xs:element name="EndReason" type="SxapiMeaning.type" minOccurs="0"/>
+			<xs:element name="EndReasonText" type="SxapiNotes.type" minOccurs="0"/>
+			<xs:element name="Notes" type="SxapiNotes.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiStringSize30.type">
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPropertyStatus.type">
+		<xs:annotation>
+			<xs:documentation>added MIKEE 30/12/2005 - modified AR 20/01/2006 for FA - C->Charge, P->Pending Charge, N->No charge, A->caution, B->Pending Caution</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+			<xs:enumeration value="charge"/>
+			<xs:enumeration value="pending charge"/>
+			<xs:enumeration value="no charge"/>
+			<xs:enumeration value="caution"/>
+			<xs:enumeration value="pending caution"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiFinanceRelatedTo.type">
+		<xs:annotation>
+			<xs:documentation>added MIKEE 30/12/2005 - modified AR 20/01/2006 for FA - C->Client, S->Spouse</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="6"/>
+			<xs:enumeration value="client"/>
+			<xs:enumeration value="spouse"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiFinanceCategory.type">
+		<xs:annotation>
+			<xs:documentation>added MIKEE 30/12/2005 - modified AR 20/01/2006 for FA - C->Capital, P->Properties, B->Benefits, A->Allowances, I->Income</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+			<xs:enumeration value="capital"/>
+			<xs:enumeration value="properties"/>
+			<xs:enumeration value="benefits"/>
+			<xs:enumeration value="allowances"/>
+			<xs:enumeration value="income"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiDomainPersonRoutes.type">
+		<xs:annotation>
+			<xs:documentation>Added by MM 09/12/2005 as part of ICS phase 2; Share Consent</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiFullPartEmployment.type">
+		<xs:annotation>
+			<xs:documentation>Added by MM 09/12/2005 as part of ICS phase 2; Employment F-> Full Time P -> Part Time U -> Unknown</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:enumeration value="full"/>
+			<xs:enumeration value="part"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiLegalEvent.type">
+		<xs:annotation>
+			<xs:documentation>Added by AR for Legal Events. STA - Legal Status, ORD - Court Order</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="3"/>
+			<xs:enumeration value="STA"/>
+			<xs:enumeration value="ORD"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostType.type">
+		<xs:annotation>
+			<xs:documentation>G=gross, N=net, A=agency</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="6"/>
+			<xs:enumeration value="gross"/>
+			<xs:enumeration value="net"/>
+			<xs:enumeration value="agency"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCostFilter.type">
+		<xs:annotation>
+			<xs:documentation>U=unauthorised, A=authorised, T=total, D=domiciliary, M=modelled</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="12"/>
+			<xs:enumeration value="unauthorised"/>
+			<xs:enumeration value="authorised"/>
+			<xs:enumeration value="total"/>
+			<xs:enumeration value="domiciliary"/>
+			<xs:enumeration value="modelled"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiStandardRate.type">
+		<xs:annotation>
+			<xs:documentation>added JPC 13/01/2006 for CPC call offs</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="8"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCallOffUnits.type">
+		<xs:annotation>
+			<xs:documentation>added JPC 13/01/2006 for CPC call offs</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:totalDigits value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiAmountAuthorised.type">
+		<xs:annotation>
+			<xs:documentation>added JPC 13/01/2006 for CPC call offs</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="15"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCurrentStatus.type">
+		<xs:annotation>
+			<xs:documentation>added JPC 25/01/2006 for CPC Call Offs</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SxapiSummaryCallOffOffering.type">
+		<xs:annotation>
+			<xs:documentation>added JPC 30/01/2006 for CPC call offs</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CareItemIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="CareItemDescription" type="SxapiCareItemDescription.type"/>
+			<xs:element name="StartDate" type="SxapiDate.type"/>
+			<xs:element name="EndDate" type="SxapiDate.type"/>
+			<xs:element name="StandardRate" type="SxapiStandardRate.type"/>
+			<xs:element name="Units" type="SxapiCallOffUnits.type"/>
+			<xs:element name="TransactionUnitCode" type="SxapiCode.type"/>
+			<xs:element name="TransactionUnit" type="SxapiMeaning.type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiURL.type">
+		<xs:annotation>
+			<xs:documentation>added GBC 03/02/2006 for ESCR - File path - max 2048 in Internet Explorer</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="core:PopulatedStringType">
+			<xs:maxLength value="2048"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiPersonOrOrg.type">
+		<xs:annotation>
+			<xs:documentation>added GBC 03/02/2006 for ESCR - P = Person, O = organisation</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="O"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiRegistrationType.type">
+		<xs:annotation>
+			<xs:documentation>added GBC 06/04/2006 - modified AR 07/04/2006</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="9"/>
+			<xs:enumeration value="temporary"/>
+			<xs:enumeration value="permanent"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCommunityResidential.type">
+		<xs:annotation>
+			<xs:documentation>Added by AR 11/02/2006 for FA. C - community, R - residential</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="11"/>
+			<xs:enumeration value="community"/>
+			<xs:enumeration value="residential"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCallOffAuthorisationType.type">
+		<xs:annotation>
+			<xs:documentation>Added by AR 23/02/2006 for Call Offs. M=manual, A=automatic</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="9"/>
+			<xs:enumeration value="manual"/>
+			<xs:enumeration value="automatic"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCPConferenceType.type">
+		<xs:annotation>
+			<xs:documentation>Added by GBC 22/03/2006 for Conf Subject page. core, initial, review</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+			<xs:enumeration value="core"/>
+			<xs:enumeration value="initial"/>
+			<xs:enumeration value="review"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCPEventType.type">
+		<xs:annotation>
+			<xs:documentation>Added by GBC 28/03/2006 for Browse CP Events page. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+			<xs:enumeration value="Check"/>
+			<xs:enumeration value="Strategy Discussion"/>
+			<xs:enumeration value="Investigation"/>
+			<xs:enumeration value="Conference"/>
+			<xs:enumeration value="Core Group Meeting"/>
+			<xs:enumeration value="Local Authority Transfer"/>
+			<xs:enumeration value="Registration Change"/>
+			<xs:enumeration value="New Category"/>
+			<xs:enumeration value="Action"/>
+			<xs:enumeration value="Visit"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiCPEventCodeType.type">
+		<xs:annotation>
+			<xs:documentation>Added by GBC 28/03/2006 for Browse CP Events page. </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="4"/>
+			<xs:enumeration value="CHCK"/>
+			<xs:enumeration value="STDS"/>
+			<xs:enumeration value="INVS"/>
+			<xs:enumeration value="CONF"/>
+			<xs:enumeration value="CGMT"/>
+			<xs:enumeration value="LATR"/>
+			<xs:enumeration value="REGC"/>
+			<xs:enumeration value="NEWC"/>
+			<xs:enumeration value="ACTN"/>
+			<xs:enumeration value="VISC"/>
+			<xs:enumeration value="VISI"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiConferenceResultingFrom.type">
+		<xs:annotation>
+			<xs:documentation>Added Jpc 05/03/2006 - modified AR 23/03/2006 - for Cp case Conferences</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiOffenderStatusType.type">
+		<xs:annotation>
+			<xs:documentation>Added by AR 07/04/2006 for Risk To Children List</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="7"/>
+			<xs:enumeration value="proven"/>
+			<xs:enumeration value="alleged"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiMainOrSubsidiary.type">
+		<xs:annotation>
+			<xs:documentation>Added by LHD 19/04/2006 for Provision Costs. M=Main , S=Subsidiary</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SxapiRemoteSecurityProfile.type">
+		<xs:sequence>
+			<xs:element name="UserID" type="SxapiUser.type"/>
+			<xs:element name="Forename" type="SxapiNameForename.type" minOccurs="0"/>
+			<xs:element name="Surname" type="SxapiNameSurname.type" minOccurs="0"/>
+			<xs:element name="Email" type="SxapiEmailAddress.type" minOccurs="0"/>
+			<xs:element name="GUID" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LoginName" type="SxapiUser.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiYesNoNotApplicable.type">
+		<xs:annotation>
+			<xs:documentation>Added by BCA 21/04/2006 for CP Involvements</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="SxapiString.type">
+			<xs:maxLength value="14"/>
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="not applicable"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiIndependentSectorPaymentsReportStatus.type">
+		<xs:annotation>
+			<xs:documentation>Added JPC 11/05/2006 for Provision Breaks</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="N"/>
+			<xs:enumeration value="T"/>
+			<xs:enumeration value="P"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiSchemeName.type">
+		<xs:annotation>
+			<xs:documentation>Added JPC 11/05/2006 for provision breaks - Modified by AR 06/07/2006</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiBreakStatus.type">
+		<xs:annotation>
+			<xs:documentation>Added JPC 11/05/2006 for provision breaks</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:length value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiContactType.type">
+		<xs:annotation>
+			<xs:documentation>Added by AR 12/05/2006 for Contacts (Heat 271173)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="SxapiString.type">
+			<xs:maxLength value="20"/>
+			<xs:enumeration value="non child protection"/>
+			<xs:enumeration value="child protection"/>
+			<xs:enumeration value="all"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="SxapiCareEpisode.type">
+		<xs:annotation>
+			<xs:documentation>Added for Looked After status checking (UM 31/05/2006)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CareEpisodeIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="PersonIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="DateChildBLA" type="SxapiDate.type"/>
+			<xs:element name="DateCLACreated" type="SxapiDate.type"/>
+			<xs:element name="LookedAfterReason" type="SxapiMeaning.type"/>
+			<xs:element name="CareEpisodeReason" type="SxapiMeaning.type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SxapiLegalStatus.type">
+		<xs:annotation>
+			<xs:documentation>Added for Looked After status checking (UM 31/05/2006)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="LegalEventIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="SubjectPersonIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="LegalStatus" type="SxapiMeaning.type"/>
+			<xs:element name="LookedAfter" type="SxapiYesNo.type"/>
+			<xs:element name="Main" type="SxapiYesNo.type"/>
+			<xs:element name="StartDate" type="SxapiDate.type"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SxapiService.type">
+		<xs:annotation>
+			<xs:documentation>Added for Looked After status checking (UM 31/05/2006)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ServiceIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="ClientIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="CareItemDescription" type="SxapiCareItemDescription.type"/>
+			<xs:element name="MainPlacement" type="SxapiYesNo.type"/>
+			<xs:element name="LookedAfter" type="SxapiYesNo.type"/>
+			<xs:element name="PlannedStartDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="ActualStartDate" type="SxapiDate.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SxapiProvision.type">
+		<xs:annotation>
+			<xs:documentation>Added for Looked After status checking (UM 31/05/2006)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ProvisionIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="ClientIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="MannerOfAccommodation" type="SxapiMeaning.type"/>
+			<xs:element name="PreferredMannerOfAccommodation" type="SxapiMeaning.type"/>
+			<xs:element name="PlannedStartDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="ActualStartDate" type="SxapiDate.type" minOccurs="0"/>
+			<xs:element name="ProviderPersonIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="ProviderPersonSummary" type="SxapiSummaryPerson.type" minOccurs="0"/>
+			<xs:element name="ProviderOrganisationIdentifier" type="SxapiIdentifier.type" minOccurs="0"/>
+			<xs:element name="ProviderOrganisationSummary" type="SxapiSummaryOrganisation.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SxapiLookedAfterObjective.type">
+		<xs:annotation>
+			<xs:documentation>Added for Looked After status checking (UM 31/05/2006)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ObjectiveIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="PersonIdentifier" type="SxapiIdentifier.type"/>
+			<xs:element name="ObjectiveType" type="SxapiMeaning.type"/>
+			<xs:element name="DateObjectiveSet" type="SxapiDate.type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SxapiNumericAnswer.type">
+		<xs:annotation>
+			<xs:documentation>Added BCA 26/06/2006 for Pathway Assessment/Assessment Questionnaires</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="10"/>
+			<xs:fractionDigits value="2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiFormName.type">
+		<xs:annotation>
+			<xs:documentation>Added BCA 06/07/2006 for Output Audit</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="60"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SxapiContextDescription.type">
+		<xs:annotation>
+			<xs:documentation>Added BCA 06/07/2006 for Output Audit</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Mike Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--========================-->
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="../../../sweCommon/1.0.30/positionData.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://schemas.opengis.net/gml/3.1.0/xlink/xlinks.xsd"/>
+	<xs:include schemaLocation="./process.xsd"/>
+	<!--===================-->
+	<xs:element name="Transducer" type="sml:TransducerType" substitutionGroup="sml:_Process"/>
+	<!--===================-->
+	<xs:complexType name="TransducerType">
+		<xs:complexContent>
+			<xs:restriction base="sml:_AbstractProcessType">
+				<xs:sequence>
+					<xs:group ref="sml:processMetadataGroup" minOccurs="0"/>
+					<xs:element ref="sml:referenceFrame" minOccurs="0" maxOccurs="2"/>
+					<xs:element name="inputs">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:inputsType">
+									<xs:sequence minOccurs="0">
+										<xs:element name="InputList">
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:restriction base="sml:_AbstractListType">
+														<xs:sequence>
+															<xs:element name="input">
+																<xs:complexType>
+																	<xs:group ref="swe:AnyScalar"/>
+																	<xs:attribute name="name" type="swe:qnameSimpleType"/>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="index" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Count"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:restriction>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="outputs">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:outputsType">
+									<xs:sequence minOccurs="0">
+										<xs:element name="OutputList">
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:restriction base="sml:_AbstractListType">
+														<xs:sequence>
+															<xs:element name="output">
+																<xs:complexType>
+																	<xs:group ref="swe:AnyScalar"/>
+																	<xs:attribute name="name" type="swe:qnameSimpleType"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:restriction>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="parameters">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:parametersType">
+									<xs:sequence minOccurs="0">
+										<xs:element name="ParameterList">
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:restriction base="sml:_AbstractListType">
+														<xs:sequence>
+															<xs:element name="steadyStateResponse" maxOccurs="2">
+																<xs:annotation>
+																	<xs:documentation>Calibration function. This curve describes how to map a given transducer input to the corresponding output within the working range of the transducer and in steady state. One may provide two calibration curves, one with increasing input values (forward direction) and one for decreaaing (reverse direction) input values</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence minOccurs="0">
+																		<xs:element ref="sml:NormalizedCurve"/>
+																	</xs:sequence>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																	<xs:attribute name="direction" use="optional" default="both">
+																		<xs:simpleType>
+																			<xs:restriction base="xs:token">
+																				<xs:enumeration value="forward"/>
+																				<xs:enumeration value="reverse"/>
+																				<xs:enumeration value="both"/>
+																			</xs:restriction>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="latencyTime" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation>Constant or Curve giving delay between sample collection and availability of the data on the output.</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:choice minOccurs="0">
+																		<xs:element ref="sml:NormalizedCurve"/>
+																		<xs:element ref="swe:Quantity"/>
+																	</xs:choice>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="integrationTime" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation>Constant or Curve giving sampling integration time </xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:choice minOccurs="0">
+																		<xs:element ref="sml:NormalizedCurve"/>
+																		<xs:element ref="swe:Quantity"/>
+																	</xs:choice>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="accuracy" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation>Constant or Curve giving accuracy of measurement</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:choice minOccurs="0">
+																		<xs:element ref="sml:NormalizedCurve"/>
+																		<xs:element ref="swe:Quantity"/>
+																	</xs:choice>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="impulseResponse" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation> Gives the amplitude of the transducer output vs. time when a impulse (Delta function) signal is applied to its input. This is the equivalent of the frequency response in the time domain. </xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence minOccurs="0">
+																		<xs:element ref="sml:NormalizedCurve"/>
+																	</xs:sequence>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="frequencyResponse" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation>  Specifies the power density of the output of the transducer when its input is exposed to the full spectrum. This is the equivalent of the impulse response in the frequency domain. </xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence minOccurs="0">
+																		<xs:element ref="sml:NormalizedCurve"/>
+																	</xs:sequence>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																	<xs:attribute name="type" use="optional" default="carrier">
+																		<xs:simpleType>
+																			<xs:restriction base="xs:token">
+																				<xs:enumeration value="carrier"/>
+																				<xs:enumeration value="modulation"/>
+																			</xs:restriction>
+																		</xs:simpleType>
+																	</xs:attribute>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="ambiguityShape" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation> Gives power pattern curves used to define the ambiguity shape (or instantaneous field of influence) of the transducer. </xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence minOccurs="0">
+																		<xs:element name="PowerPatternCurves">
+																			<xs:complexType>
+																				<xs:complexContent>
+																					<xs:extension base="swe:_GroupBaseType">
+																						<xs:sequence>
+																							<xs:element name="curve" maxOccurs="7">
+																								<xs:annotation>
+																									<xs:documentation> Each curve specifies the power pattern relative to one spatial or temporal coordinate expressed relative to sample frame. </xs:documentation>
+																								</xs:annotation>
+																								<xs:complexType>
+																									<xs:sequence minOccurs="0">
+																										<xs:element ref="sml:NormalizedCurve"/>
+																									</xs:sequence>
+																									<xs:attribute name="name" type="swe:qnameSimpleType" use="required"/>
+																									<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																								</xs:complexType>
+																							</xs:element>
+																						</xs:sequence>
+																					</xs:extension>
+																				</xs:complexContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="samplePosition" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation> List of curves each giving one spatial or temporal coordinate vs. an index. This defines the sample frame position for each index (internal geometry). </xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence minOccurs="0">
+																		<xs:element name="PositionCurves">
+																			<xs:complexType>
+																				<xs:complexContent>
+																					<xs:extension base="swe:_PositionType">
+																						<xs:sequence>
+																							<xs:element name="curve" maxOccurs="7">
+																								<xs:annotation>
+																									<xs:documentation> Each curves specifies one coordinate (spatial or temporal) of the full position. </xs:documentation>
+																								</xs:annotation>
+																								<xs:complexType>
+																									<xs:sequence minOccurs="0">
+																										<xs:element ref="sml:NormalizedCurve"/>
+																									</xs:sequence>
+																									<xs:attribute name="name" type="swe:qnameSimpleType" use="required"/>
+																									<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																								</xs:complexType>
+																							</xs:element>
+																						</xs:sequence>
+																					</xs:extension>
+																				</xs:complexContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:restriction>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="method">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:methodType">
+									<xs:attribute ref="xlink:href" use="required" fixed="urn:ogc:process:transducer"/>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--========================-->
+	<xs:element name="NormalizedCurve" type="sml:NormalizedCurveType">
+		<xs:annotation>
+			<xs:documentation>Defines a curve which can be translated and scaled using input/output bias and gain.  It also provides interpolation method and order to allow a more compact and precise representation of functions.   Default values: inputBias = 0, outputBias=0, inputGain=1, outputGain=1   interpolationMethod = polynomial, interpolationOrder=1          </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!--========================-->
+	<xs:complexType name="NormalizedCurveType">
+		<xs:complexContent>
+			<xs:extension base="swe:_GroupBaseType">
+				<xs:sequence>
+					<xs:element name="inputBias" minOccurs="0">
+						<xs:complexType>
+							<xs:choice minOccurs="0">
+								<xs:element ref="swe:Quantity"/>
+								<xs:element ref="sml:IndexedCurve"/>
+							</xs:choice>
+							<xs:attributeGroup ref="swe:AssociationAttributes"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="inputGain" minOccurs="0">
+						<xs:complexType>
+							<xs:choice minOccurs="0">
+								<xs:element ref="swe:Quantity"/>
+								<xs:element ref="sml:IndexedCurve"/>
+							</xs:choice>
+							<xs:attributeGroup ref="swe:AssociationAttributes"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="outputBias" minOccurs="0">
+						<xs:complexType>
+							<xs:choice minOccurs="0">
+								<xs:element ref="swe:Quantity"/>
+								<xs:element ref="sml:IndexedCurve"/>
+							</xs:choice>
+							<xs:attributeGroup ref="swe:AssociationAttributes"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="outputGain" minOccurs="0">
+						<xs:complexType>
+							<xs:choice minOccurs="0">
+								<xs:element ref="swe:Quantity"/>
+								<xs:element ref="sml:IndexedCurve"/>
+							</xs:choice>
+							<xs:attributeGroup ref="swe:AssociationAttributes"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="interpolationMethod" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="swe:Category"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="interpolationOrder" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="swe:Count"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="function">
+						<xs:complexType>
+							<xs:choice minOccurs="0">
+								<xs:element ref="swe:Curve"/>
+								<xs:element ref="sml:IndexedCurve"/>
+							</xs:choice>
+							<xs:attributeGroup ref="swe:AssociationAttributes"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--========================-->
+	<xs:element name="IndexedCurve" type="sml:IndexedCurveType"/>
+	<!--========================-->
+	<xs:complexType name="IndexedCurveType">
+		<xs:complexContent>
+			<xs:extension base="swe:_ArrayBaseType">
+				<xs:sequence>
+					<xs:element name="definition">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Coordinates">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="index" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element ref="swe:Count"/>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="value" maxOccurs="unbounded">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:group ref="swe:AnyScalar"/>
+													</xs:sequence>
+													<xs:attribute name="name" type="swe:qnameSimpleType"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element ref="swe:tupleValues"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

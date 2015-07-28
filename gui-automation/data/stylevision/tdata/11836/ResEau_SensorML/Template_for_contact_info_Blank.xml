@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:ResponsibleParty xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sensorML
+C:\ResEau_SensorML\sensorML\1.0.30\base\base.xsd">
+  <sml:organizationName></sml:organizationName>
+  <sml:contactInfo>
+    <sml:phone>
+      <sml:voice></sml:voice>
+      <sml:facsimile></sml:facsimile>
+    </sml:phone>
+    <sml:address>
+      <sml:deliveryPoint></sml:deliveryPoint>
+      <sml:city></sml:city>
+      <sml:administrativeArea></sml:administrativeArea>
+      <sml:postalCode></sml:postalCode>
+      <sml:country></sml:country>
+      <sml:electronicMailAddress></sml:electronicMailAddress>
+    </sml:address>
+    <sml:onlineResource xlink:href=""/>
+    <sml:hoursOfService></sml:hoursOfService>
+    <sml:contactInstructions></sml:contactInstructions>
+  </sml:contactInfo>
+</sml:ResponsibleParty>

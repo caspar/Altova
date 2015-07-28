@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/deprecatedDateLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd#deprecatedDateLabel"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/deprecatedLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd#deprecatedLabel"/>
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_CarryingAmountOfFinancialAssetsWhoseTermsHaveBeenRenegotiated" xlink:label="loc"/>
+    <link:label xlink:type="resource" xlink:label="res" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_CarryingAmountOfFinancialAssetsWhoseTermsHaveBeenRenegotiated_deprecatedDateLabel">2010-06-30</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc" xlink:to="res"/>
+    <link:label xlink:type="resource" xlink:label="res_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_CarryingAmountOfFinancialAssetsWhoseTermsHaveBeenRenegotiated_deprecatedLabel">Deprecated due to Improvements to IFRSs 2010</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionAndFairValueOfCollateralHeldByEntityAsSecurityAndOtherCreditEnhancements" xlink:label="loc_2"/>
+    <link:label xlink:type="resource" xlink:label="res_3" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionAndFairValueOfCollateralHeldByEntityAsSecurityAndOtherCreditEnhancements_deprecatedDateLabel">2010-06-30</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_2" xlink:to="res_3"/>
+    <link:label xlink:type="resource" xlink:label="res_4" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionAndFairValueOfCollateralHeldByEntityAsSecurityAndOtherCreditEnhancements_deprecatedLabel">Deprecated due to Improvements to IFRSs 2010</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_2" xlink:to="res_4"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_EstimateOfFairValueOfCollateralHeldByEntityAsSecurityAndOtherCreditEnhancements" xlink:label="loc_3"/>
+    <link:label xlink:type="resource" xlink:label="res_5" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_EstimateOfFairValueOfCollateralHeldByEntityAsSecurityAndOtherCreditEnhancements_deprecatedDateLabel">2010-06-30</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_3" xlink:to="res_5"/>
+    <link:label xlink:type="resource" xlink:label="res_6" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_EstimateOfFairValueOfCollateralHeldByEntityAsSecurityAndOtherCreditEnhancements_deprecatedLabel">Deprecated due to Improvements to IFRSs 2010</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_3" xlink:to="res_6"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ExplanationOfChangesInContingentLiabilitiesOrContingentAssets" xlink:label="loc_4"/>
+    <link:label xlink:type="resource" xlink:label="res_7" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ExplanationOfChangesInContingentLiabilitiesOrContingentAssets_deprecatedDateLabel">2010-06-30</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_4" xlink:to="res_7"/>
+    <link:label xlink:type="resource" xlink:label="res_8" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ExplanationOfChangesInContingentLiabilitiesOrContingentAssets_deprecatedLabel">Deprecated due to Improvements to IFRSs 2010</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_4" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_AdditionalInformationAboutEntitysReportableSegments" xlink:label="loc_5"/>
+    <link:label xlink:type="resource" xlink:label="res_9" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_AdditionalInformationAboutEntitysReportableSegments_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_5" xlink:to="res_9"/>
+    <link:label xlink:type="resource" xlink:label="res_10" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_AdditionalInformationAboutEntitysReportableSegments_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_5" xlink:to="res_10"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_SalesOfFinancialInstrumentsMeasuredInLevel3OfFairValueHierarchy" xlink:label="loc_6"/>
+    <link:label xlink:type="resource" xlink:label="res_11" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_SalesOfFinancialInstrumentsMeasuredInLevel3OfFairValueHierarchy_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_6" xlink:to="res_11"/>
+    <link:label xlink:type="resource" xlink:label="res_12" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_SalesOfFinancialInstrumentsMeasuredInLevel3OfFairValueHierarchy_deprecatedLabel">Incorrect type attribute. Replaced with SalesOfFinancialInstrumentsMeasuredInLevel3OfFairValueHierarchy2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_6" xlink:to="res_12"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_TransferOfFinancialInstrumentsIntoLevel3OfFairValueHierarchy" xlink:label="loc_7"/>
+    <link:label xlink:type="resource" xlink:label="res_13" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_TransferOfFinancialInstrumentsIntoLevel3OfFairValueHierarchy_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_7" xlink:to="res_13"/>
+    <link:label xlink:type="resource" xlink:label="res_14" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_TransferOfFinancialInstrumentsIntoLevel3OfFairValueHierarchy_deprecatedLabel">Incorrect type attribute. Replaced with TransferOfFinancialInstrumentsIntoLevel3OfFairValueHierarchy2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_7" xlink:to="res_14"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ResearchAndDevelopmentExpendituresRecognisedAsExpenseDuringPeriod" xlink:label="loc_8"/>
+    <link:label xlink:type="resource" xlink:label="res_15" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ResearchAndDevelopmentExpendituresRecognisedAsExpenseDuringPeriod_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_8" xlink:to="res_15"/>
+    <link:label xlink:type="resource" xlink:label="res_16" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ResearchAndDevelopmentExpendituresRecognisedAsExpenseDuringPeriod_deprecatedLabel">Incorrect balance attribute. Replaced with ResearchAndDevelopmentExpense</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_8" xlink:to="res_16"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ProfitLossRecognisedOnExchangingConstructionServicesForFinancialAsset" xlink:label="loc_9"/>
+    <link:label xlink:type="resource" xlink:label="res_17" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ProfitLossRecognisedOnExchangingConstructionServicesForFinancialAsset_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_9" xlink:to="res_17"/>
+    <link:label xlink:type="resource" xlink:label="res_18" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ProfitLossRecognisedOnExchangingConstructionServicesForFinancialAsset_deprecatedLabel">Incorrect type attribute. Replaced with ProfitLossRecognisedOnExchangingConstructionServicesForFinancialAsset2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_9" xlink:to="res_18"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ProfitLossRecognisedOnExchangingConstructionServicesForIntangibleAsset" xlink:label="loc_10"/>
+    <link:label xlink:type="resource" xlink:label="res_19" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ProfitLossRecognisedOnExchangingConstructionServicesForIntangibleAsset_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_10" xlink:to="res_19"/>
+    <link:label xlink:type="resource" xlink:label="res_20" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ProfitLossRecognisedOnExchangingConstructionServicesForIntangibleAsset_deprecatedLabel">Incorrect type attribute. Replaced with ProfitLossRecognisedOnExchangingConstructionServicesForIntangibleAsset2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_10" xlink:to="res_20"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_GainLossThatIsOfSuchSizeNatureOrIncidenceThatDisclosureIsRelevantToUnderstandingCombinedEntitysFinancialStatements" xlink:label="loc_11"/>
+    <link:label xlink:type="resource" xlink:label="res_21" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_GainLossThatIsOfSuchSizeNatureOrIncidenceThatDisclosureIsRelevantToUnderstandingCombinedEntitysFinancialStatements_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_11" xlink:to="res_21"/>
+    <link:label xlink:type="resource" xlink:label="res_22" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_GainLossThatIsOfSuchSizeNatureOrIncidenceThatDisclosureIsRelevantToUnderstandingCombinedEntitysFinancialStatements_deprecatedLabel">Concept duplicate with GainLossThatRelatesToIdentifiableAssetsAcquiredOrLiabilitiesAssumedInBusinessCombination</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_11" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ExplanationOfGainOrLossThatIsOfSuchSizeNatureOrIncidenceThatDisclosureIsRelevantToUnderstandingCombinedEntitysFinancialStatements" xlink:label="loc_12"/>
+    <link:label xlink:type="resource" xlink:label="res_23" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ExplanationOfGainOrLossThatIsOfSuchSizeNatureOrIncidenceThatDisclosureIsRelevantToUnderstandingCombinedEntitysFinancialStatements_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_12" xlink:to="res_23"/>
+    <link:label xlink:type="resource" xlink:label="res_24" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ExplanationOfGainOrLossThatIsOfSuchSizeNatureOrIncidenceThatDisclosureIsRelevantToUnderstandingCombinedEntitysFinancialStatements_deprecatedLabel">Concept duplicate with ExplanationOfGainOrLossThatRelatesToIdentifiableAssetsAcquiredOrLiabilitiesAssumedInBusinessCombination</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_12" xlink:to="res_24"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfAmountsRecognisedAsOfAcquisitionDateForEachMajorClassOfAssetsAcquiredAndLiabilitiesAssumed" xlink:label="loc_13"/>
+    <link:label xlink:type="resource" xlink:label="res_25" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfAmountsRecognisedAsOfAcquisitionDateForEachMajorClassOfAssetsAcquiredAndLiabilitiesAssumed_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_13" xlink:to="res_25"/>
+    <link:label xlink:type="resource" xlink:label="res_26" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfAmountsRecognisedAsOfAcquisitionDateForEachMajorClassOfAssetsAcquiredAndLiabilitiesAssumed_deprecatedLabel">More detailed concepts implemented under AmountsRecognisedAsOfAcquisitionDateForEachMajorClassOfAssetsAcquiredAndLiabilitiesAssumedAbstract</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_13" xlink:to="res_26"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IdentificationOfSupplementaryInformationWhereCurrencyIsNotFunctionalCurrencyOrPresentationCurrency" xlink:label="loc_14"/>
+    <link:label xlink:type="resource" xlink:label="res_27" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IdentificationOfSupplementaryInformationWhereCurrencyIsNotFunctionalCurrencyOrPresentationCurrency_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_14" xlink:to="res_27"/>
+    <link:label xlink:type="resource" xlink:label="res_28" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IdentificationOfSupplementaryInformationWhereCurrencyIsNotFunctionalCurrencyOrPresentationCurrency_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_14" xlink:to="res_28"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncomeTaxExpense" xlink:label="loc_15"/>
+    <link:label xlink:type="resource" xlink:label="res_29" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncomeTaxExpense_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_15" xlink:to="res_29"/>
+    <link:label xlink:type="resource" xlink:label="res_30" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncomeTaxExpense_deprecatedLabel">Concept duplicate with IncomeTaxExpenseContinuingOperations</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_15" xlink:to="res_30"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncomeTaxExpenseRelatedToRevenueExpensesAndPretaxProfitOrLossOfDiscontinuedOperations" xlink:label="loc_16"/>
+    <link:label xlink:type="resource" xlink:label="res_31" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncomeTaxExpenseRelatedToRevenueExpensesAndPretaxProfitOrLossOfDiscontinuedOperations_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_16" xlink:to="res_31"/>
+    <link:label xlink:type="resource" xlink:label="res_32" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncomeTaxExpenseRelatedToRevenueExpensesAndPretaxProfitOrLossOfDiscontinuedOperations_deprecatedLabel">Concept duplicate with TaxExpenseRelatingToProfitLossFromOrdinaryActivitiesOfDiscontinuedOperations</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_16" xlink:to="res_32"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncomeTaxExpenseRelatedToGainLossRecognisedOnMeasurementToFairValueLessCostsToSellOrOnDisposalOfAssetsOrDisposalGroupsConstitutingDiscontinuedOperation" xlink:label="loc_17"/>
+    <link:label xlink:type="resource" xlink:label="res_33" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncomeTaxExpenseRelatedToGainLossRecognisedOnMeasurementToFairValueLessCostsToSellOrOnDisposalOfAssetsOrDisposalGroupsConstitutingDiscontinuedOperation_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_17" xlink:to="res_33"/>
+    <link:label xlink:type="resource" xlink:label="res_34" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncomeTaxExpenseRelatedToGainLossRecognisedOnMeasurementToFairValueLessCostsToSellOrOnDisposalOfAssetsOrDisposalGroupsConstitutingDiscontinuedOperation_deprecatedLabel">Concept duplicate with TaxExpenseRelatingToGainLossOnDiscontinuance</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_17" xlink:to="res_34"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_TaxExpenseIncome" xlink:label="loc_18"/>
+    <link:label xlink:type="resource" xlink:label="res_35" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_TaxExpenseIncome_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_18" xlink:to="res_35"/>
+    <link:label xlink:type="resource" xlink:label="res_36" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_TaxExpenseIncome_deprecatedLabel">Concept duplicate with IncomeTaxExpenseContinuingOperations</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_18" xlink:to="res_36"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_SubsequentRecognitionOfDeferredTaxGoodwill" xlink:label="loc_19"/>
+    <link:label xlink:type="resource" xlink:label="res_37" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_SubsequentRecognitionOfDeferredTaxGoodwill_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_19" xlink:to="res_37"/>
+    <link:label xlink:type="resource" xlink:label="res_38" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_SubsequentRecognitionOfDeferredTaxGoodwill_deprecatedLabel">Incorrect balance attribute. Replaced with SubsequentRecognitionOfDeferredTaxAssetsGoodwill</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_19" xlink:to="res_38"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_TaxEffectOfRevenuesExemptFromTaxation" xlink:label="loc_22"/>
+    <link:label xlink:type="resource" xlink:label="res_43" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_TaxEffectOfRevenuesExemptFromTaxation_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_22" xlink:to="res_43"/>
+    <link:label xlink:type="resource" xlink:label="res_44" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_TaxEffectOfRevenuesExemptFromTaxation_deprecatedLabel">Incorrect balance attribute. Replaced with TaxEffectOfRevenuesExemptFromTaxation2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_22" xlink:to="res_44"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_LiabilitiesFromSharebasedPaymentTransactions" xlink:label="loc_23"/>
+    <link:label xlink:type="resource" xlink:label="res_45" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_LiabilitiesFromSharebasedPaymentTransactions_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_23" xlink:to="res_45"/>
+    <link:label xlink:type="resource" xlink:label="res_46" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_LiabilitiesFromSharebasedPaymentTransactions_deprecatedLabel">Incorrect balance attribute. Replaced with LiabilitiesFromSharebasedPaymentTransactions2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_23" xlink:to="res_46"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IntrinsicValueOfLiabilitiesFromSharebasedPaymentTransactionsForWhichCounterpartysRightToCashOrOtherAssetsVested" xlink:label="loc_24"/>
+    <link:label xlink:type="resource" xlink:label="res_47" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IntrinsicValueOfLiabilitiesFromSharebasedPaymentTransactionsForWhichCounterpartysRightToCashOrOtherAssetsVested_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_24" xlink:to="res_47"/>
+    <link:label xlink:type="resource" xlink:label="res_48" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IntrinsicValueOfLiabilitiesFromSharebasedPaymentTransactionsForWhichCounterpartysRightToCashOrOtherAssetsVested_deprecatedLabel">Incorrect balance attribute and period attribute. Replaced with IntrinsicValueOfLiabilitiesFromSharebasedPaymentTransactionsForWhichCounterpartysRightToCashOrOtherAssetsVested2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_24" xlink:to="res_48"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_InventoryWritedown" xlink:label="loc_25"/>
+    <link:label xlink:type="resource" xlink:label="res_49" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_InventoryWritedown_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_25" xlink:to="res_49"/>
+    <link:label xlink:type="resource" xlink:label="res_50" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_InventoryWritedown_deprecatedLabel">Incorrect balance attribute. Replaced with InventoryWritedown2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_25" xlink:to="res_50"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ShareOfCapitalCommitmentsIncurredJointlyWithOtherVenturers" xlink:label="loc_26"/>
+    <link:label xlink:type="resource" xlink:label="res_51" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ShareOfCapitalCommitmentsIncurredJointlyWithOtherVenturers_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_26" xlink:to="res_51"/>
+    <link:label xlink:type="resource" xlink:label="res_52" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ShareOfCapitalCommitmentsIncurredJointlyWithOtherVenturers_deprecatedLabel">Incorrect balance attribute. Replaced withShareOfCapitalCommitmentsIncurredJointlyWithOtherVenturers2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_26" xlink:to="res_52"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_CommitmentsRelatingToInterestsInJointVentures" xlink:label="loc_27"/>
+    <link:label xlink:type="resource" xlink:label="res_53" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_CommitmentsRelatingToInterestsInJointVentures_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_27" xlink:to="res_53"/>
+    <link:label xlink:type="resource" xlink:label="res_54" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_CommitmentsRelatingToInterestsInJointVentures_deprecatedLabel">Incorrect balance attribute and incorrect reflection of disclosure requirement. Replaced with AggregateCommitmentRelatingToJointVentures</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_27" xlink:to="res_54"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ReservesMember" xlink:label="loc_28"/>
+    <link:label xlink:type="resource" xlink:label="res_55" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ReservesMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_28" xlink:to="res_55"/>
+    <link:label xlink:type="resource" xlink:label="res_56" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ReservesMember_deprecatedLabel">Concept duplicate with OtherReservesMember</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_28" xlink:to="res_56"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncomeTaxRelatingToOtherComponentsOfOtherComprehensiveIncome" xlink:label="loc_29"/>
+    <link:label xlink:type="resource" xlink:label="res_57" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncomeTaxRelatingToOtherComponentsOfOtherComprehensiveIncome_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_29" xlink:to="res_57"/>
+    <link:label xlink:type="resource" xlink:label="res_58" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncomeTaxRelatingToOtherComponentsOfOtherComprehensiveIncome_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_29" xlink:to="res_58"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_CashAndCashEquivalentsMember" xlink:label="loc_30"/>
+    <link:label xlink:type="resource" xlink:label="res_59" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_CashAndCashEquivalentsMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_30" xlink:to="res_59"/>
+    <link:label xlink:type="resource" xlink:label="res_60" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_CashAndCashEquivalentsMember_deprecatedLabel">Changed to more specific concepts from IFRS 7.B2</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_30" xlink:to="res_60"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_TradeAndOtherReceivablesMember" xlink:label="loc_31"/>
+    <link:label xlink:type="resource" xlink:label="res_61" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_TradeAndOtherReceivablesMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_31" xlink:to="res_61"/>
+    <link:label xlink:type="resource" xlink:label="res_62" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_TradeAndOtherReceivablesMember_deprecatedLabel">Changed to more specific concepts from IFRS 7.B2</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_31" xlink:to="res_62"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_OtherFinancialAssetsMember" xlink:label="loc_32"/>
+    <link:label xlink:type="resource" xlink:label="res_63" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_OtherFinancialAssetsMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_32" xlink:to="res_63"/>
+    <link:label xlink:type="resource" xlink:label="res_64" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_OtherFinancialAssetsMember_deprecatedLabel">Changed to more specific concepts from IFRS 7.B2</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_32" xlink:to="res_64"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_InvestmentsMember" xlink:label="loc_33"/>
+    <link:label xlink:type="resource" xlink:label="res_65" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_InvestmentsMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_33" xlink:to="res_65"/>
+    <link:label xlink:type="resource" xlink:label="res_66" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_InvestmentsMember_deprecatedLabel">Changed to more specific concepts from IFRS 7.B2</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_33" xlink:to="res_66"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_TradeAndOtherPayablesMember" xlink:label="loc_34"/>
+    <link:label xlink:type="resource" xlink:label="res_67" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_TradeAndOtherPayablesMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_34" xlink:to="res_67"/>
+    <link:label xlink:type="resource" xlink:label="res_68" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_TradeAndOtherPayablesMember_deprecatedLabel">Changed to more specific concepts from IFRS 7.B2</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_34" xlink:to="res_68"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_OtherFinancialLiabilitiesMember" xlink:label="loc_35"/>
+    <link:label xlink:type="resource" xlink:label="res_69" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_OtherFinancialLiabilitiesMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_35" xlink:to="res_69"/>
+    <link:label xlink:type="resource" xlink:label="res_70" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_OtherFinancialLiabilitiesMember_deprecatedLabel">Changed to more specific concepts from IFRS 7.B2</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_35" xlink:to="res_70"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ValuationAllowance" xlink:label="loc_36"/>
+    <link:label xlink:type="resource" xlink:label="res_71" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ValuationAllowance_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_36" xlink:to="res_71"/>
+    <link:label xlink:type="resource" xlink:label="res_72" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ValuationAllowance_deprecatedLabel">Incorrect balance attribute. Replaced with ValuationAllowance2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_36" xlink:to="res_72"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_GroupOfAssetsAndLiabilitiesWhereEntityHasBindingSaleAgreement" xlink:label="loc_38"/>
+    <link:label xlink:type="resource" xlink:label="res_75" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_GroupOfAssetsAndLiabilitiesWhereEntityHasBindingSaleAgreement_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_38" xlink:to="res_75"/>
+    <link:label xlink:type="resource" xlink:label="res_76" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_GroupOfAssetsAndLiabilitiesWhereEntityHasBindingSaleAgreement_deprecatedLabel">Concept split into AssetsForWhichEntityHasBindingSaleAgreement  LiabilitiesForWhichEntityHasBindingSaleAgreement</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_38" xlink:to="res_76"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DifferenceBetweenCarryingAmountOfNoncashAssetsDistributedAndCarryingAmountOfDividendsPayable" xlink:label="loc_39"/>
+    <link:label xlink:type="resource" xlink:label="res_77" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DifferenceBetweenCarryingAmountOfNoncashAssetsDistributedAndCarryingAmountOfDividendsPayable_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_39" xlink:to="res_77"/>
+    <link:label xlink:type="resource" xlink:label="res_78" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DifferenceBetweenCarryingAmountOfNoncashAssetsDistributedAndCarryingAmountOfDividendsPayable_deprecatedLabel">Attribute changed to reflect IFRIC 17 BC</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_39" xlink:to="res_78"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfInformationOfDifferenceBetweenFairValueAtInitialRecognitionAndAmountUsingValuationTechnique" xlink:label="loc_40"/>
+    <link:label xlink:type="resource" xlink:label="res_79" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfInformationOfDifferenceBetweenFairValueAtInitialRecognitionAndAmountUsingValuationTechnique_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_40" xlink:to="res_79"/>
+    <link:label xlink:type="resource" xlink:label="res_80" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfInformationOfDifferenceBetweenFairValueAtInitialRecognitionAndAmountUsingValuationTechnique_deprecatedLabel">Detailed reconciliation implemented: ReconciliationOfAggregateDifferenceBetweenFairValueAtInitialRecognitionAndAmountDeterminedUsingValuationTechniqueYetToBeRecognisedAbstract and following concepts</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_40" xlink:to="res_80"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_MethodsUsedToAccountForInvestments" xlink:label="loc_41"/>
+    <link:label xlink:type="resource" xlink:label="res_81" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_MethodsUsedToAccountForInvestments_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_41" xlink:to="res_81"/>
+    <link:label xlink:type="resource" xlink:label="res_82" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_MethodsUsedToAccountForInvestments_deprecatedLabel">Detailed concepts implemented: MethodUsedToAccountForInvestmentsInSubsidiaries, MethodUsedToAccountForInvestmentsInJointlyControlledEntities, MethodUsedToAccountForInvestmentsInAssociates</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_41" xlink:to="res_82"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfSummarisedFinancialInformationOfAssociatesNotAccountedForUsingEquityMethod" xlink:label="loc_42"/>
+    <link:label xlink:type="resource" xlink:label="res_83" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfSummarisedFinancialInformationOfAssociatesNotAccountedForUsingEquityMethod_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_42" xlink:to="res_83"/>
+    <link:label xlink:type="resource" xlink:label="res_84" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfSummarisedFinancialInformationOfAssociatesNotAccountedForUsingEquityMethod_deprecatedLabel">Dimensional structure implemented DescriptionOfInformationOfAssociatesTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_42" xlink:to="res_84"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_AssetsOfAssociates" xlink:label="loc_43"/>
+    <link:label xlink:type="resource" xlink:label="res_85" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_AssetsOfAssociates_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_43" xlink:to="res_85"/>
+    <link:label xlink:type="resource" xlink:label="res_86" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_AssetsOfAssociates_deprecatedLabel">Dimensional structure implemented DescriptionOfInformationOfAssociatesTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_43" xlink:to="res_86"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_LiabilitiesOfAssociates" xlink:label="loc_44"/>
+    <link:label xlink:type="resource" xlink:label="res_87" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_LiabilitiesOfAssociates_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_44" xlink:to="res_87"/>
+    <link:label xlink:type="resource" xlink:label="res_88" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_LiabilitiesOfAssociates_deprecatedLabel">Dimensional structure implemented DescriptionOfInformationOfAssociatesTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_44" xlink:to="res_88"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ProfitLossOfAssociates" xlink:label="loc_45"/>
+    <link:label xlink:type="resource" xlink:label="res_89" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ProfitLossOfAssociates_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_45" xlink:to="res_89"/>
+    <link:label xlink:type="resource" xlink:label="res_90" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ProfitLossOfAssociates_deprecatedLabel">Dimensional structure implemented DescriptionOfInformationOfAssociatesTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_45" xlink:to="res_90"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_RevenuesOfAssociates" xlink:label="loc_46"/>
+    <link:label xlink:type="resource" xlink:label="res_91" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_RevenuesOfAssociates_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_46" xlink:to="res_91"/>
+    <link:label xlink:type="resource" xlink:label="res_92" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_RevenuesOfAssociates_deprecatedLabel">Dimensional structure implemented DescriptionOfInformationOfAssociatesTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_46" xlink:to="res_92"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_InformationRequiredInParagraph85OfIAS37ForEachContingentLiabilityRecognised" xlink:label="loc_47"/>
+    <link:label xlink:type="resource" xlink:label="res_93" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_InformationRequiredInParagraph85OfIAS37ForEachContingentLiabilityRecognised_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_47" xlink:to="res_93"/>
+    <link:label xlink:type="resource" xlink:label="res_94" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_InformationRequiredInParagraph85OfIAS37ForEachContingentLiabilityRecognised_deprecatedLabel">Separate table implemented DisclosureOfContingentLiabilitiesInBusinessCombinationTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_47" xlink:to="res_94"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_InformationRequiredByParagraph86OfIAS37IfContingentLiabilityIsNotRecognisedBecauseFairValueCannotBeMeasuredReliably" xlink:label="loc_48"/>
+    <link:label xlink:type="resource" xlink:label="res_95" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_InformationRequiredByParagraph86OfIAS37IfContingentLiabilityIsNotRecognisedBecauseFairValueCannotBeMeasuredReliably_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_48" xlink:to="res_95"/>
+    <link:label xlink:type="resource" xlink:label="res_96" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_InformationRequiredByParagraph86OfIAS37IfContingentLiabilityIsNotRecognisedBecauseFairValueCannotBeMeasuredReliably_deprecatedLabel">Separate table implemented DisclosureOfContingentLiabilitiesInBusinessCombinationTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_48" xlink:to="res_96"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DisclosureOfInformationRequiredByParagraphs84And85OfIAS37ForEachClassOfProvision" xlink:label="loc_49"/>
+    <link:label xlink:type="resource" xlink:label="res_97" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DisclosureOfInformationRequiredByParagraphs84And85OfIAS37ForEachClassOfProvision_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_49" xlink:to="res_97"/>
+    <link:label xlink:type="resource" xlink:label="res_98" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DisclosureOfInformationRequiredByParagraphs84And85OfIAS37ForEachClassOfProvision_deprecatedLabel">Separate table implemented DisclosureOfContingentLiabilitiesInBusinessCombinationTable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_49" xlink:to="res_98"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_AssetsRelatedToInterestsInJointVentures" xlink:label="loc_50"/>
+    <link:label xlink:type="resource" xlink:label="res_99" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_AssetsRelatedToInterestsInJointVentures_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_50" xlink:to="res_99"/>
+    <link:label xlink:type="resource" xlink:label="res_100" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_AssetsRelatedToInterestsInJointVentures_deprecatedLabel">Concept duplicate with CurrentAssets</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_50" xlink:to="res_100"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_NoncurrentAssetsRelatedToInterestsInJointVentures" xlink:label="loc_51"/>
+    <link:label xlink:type="resource" xlink:label="res_101" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_NoncurrentAssetsRelatedToInterestsInJointVentures_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_51" xlink:to="res_101"/>
+    <link:label xlink:type="resource" xlink:label="res_102" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_NoncurrentAssetsRelatedToInterestsInJointVentures_deprecatedLabel">Concept duplicate with NoncurrentAssets</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_51" xlink:to="res_102"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_RelatedPartyTransaction" xlink:label="loc_52"/>
+    <link:label xlink:type="resource" xlink:label="res_103" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_RelatedPartyTransaction_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_52" xlink:to="res_103"/>
+    <link:label xlink:type="resource" xlink:label="res_104" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_RelatedPartyTransaction_deprecatedLabel">More detailed concepts implemented under RelatedPartyTransactionsAbstract </link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_52" xlink:to="res_104"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_OutstandingBalancesForRelatedPartyTransaction" xlink:label="loc_53"/>
+    <link:label xlink:type="resource" xlink:label="res_105" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_OutstandingBalancesForRelatedPartyTransaction_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_53" xlink:to="res_105"/>
+    <link:label xlink:type="resource" xlink:label="res_106" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_OutstandingBalancesForRelatedPartyTransaction_deprecatedLabel">More detailed concepts implemented under OutstandingBalancesForRelatedPartyTransactionsAbstract</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_53" xlink:to="res_106"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_CurrentLiabilitiesRelatedToInterestsInJointVentures" xlink:label="loc_54"/>
+    <link:label xlink:type="resource" xlink:label="res_107" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_CurrentLiabilitiesRelatedToInterestsInJointVentures_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_54" xlink:to="res_107"/>
+    <link:label xlink:type="resource" xlink:label="res_108" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_CurrentLiabilitiesRelatedToInterestsInJointVentures_deprecatedLabel">Concept duplicate with CurrentLiabilities</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_54" xlink:to="res_108"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_NoncurrentLiabilitiesRelatedToInterestsInJointVentures" xlink:label="loc_55"/>
+    <link:label xlink:type="resource" xlink:label="res_109" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_NoncurrentLiabilitiesRelatedToInterestsInJointVentures_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_55" xlink:to="res_109"/>
+    <link:label xlink:type="resource" xlink:label="res_110" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_NoncurrentLiabilitiesRelatedToInterestsInJointVentures_deprecatedLabel">Concept duplicate with NoncurrentLiabilities</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_55" xlink:to="res_110"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncomeRelatedToInterestsInJointVentures" xlink:label="loc_56"/>
+    <link:label xlink:type="resource" xlink:label="res_111" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncomeRelatedToInterestsInJointVentures_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_56" xlink:to="res_111"/>
+    <link:label xlink:type="resource" xlink:label="res_112" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncomeRelatedToInterestsInJointVentures_deprecatedLabel">Concept duplicate with Revenue</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_56" xlink:to="res_112"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ReclassificationAdjustmentsOnIncomeTaxRelatingToComponentsOfOtherComprehensiveIncome" xlink:label="loc_57"/>
+    <link:label xlink:type="resource" xlink:label="res_113" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ReclassificationAdjustmentsOnIncomeTaxRelatingToComponentsOfOtherComprehensiveIncome_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_57" xlink:to="res_113"/>
+    <link:label xlink:type="resource" xlink:label="res_114" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ReclassificationAdjustmentsOnIncomeTaxRelatingToComponentsOfOtherComprehensiveIncome_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_57" xlink:to="res_114"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfWeightedAverageRemainingContractualLifeOfShareOptionsOutstanding" xlink:label="loc_58"/>
+    <link:label xlink:type="resource" xlink:label="res_115" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfWeightedAverageRemainingContractualLifeOfShareOptionsOutstanding_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_58" xlink:to="res_115"/>
+    <link:label xlink:type="resource" xlink:label="res_116" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfWeightedAverageRemainingContractualLifeOfShareOptionsOutstanding_deprecatedLabel">Dimensional structure introduced DisclosureOfNumberAndWeightedAverageRemainingContractualLifeOfOutstandingShareOptionsExplanatory</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_58" xlink:to="res_116"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfRangeOfExercisePricesOfShareOptionOutstandingSharebasedPaymentArrangement" xlink:label="loc_59"/>
+    <link:label xlink:type="resource" xlink:label="res_117" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfRangeOfExercisePricesOfShareOptionOutstandingSharebasedPaymentArrangement_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_59" xlink:to="res_117"/>
+    <link:label xlink:type="resource" xlink:label="res_118" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfRangeOfExercisePricesOfShareOptionOutstandingSharebasedPaymentArrangement_deprecatedLabel">Dimensional structure introduced DisclosureOfNumberAndWeightedAverageRemainingContractualLifeOfOutstandingShareOptionsExplanatory</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_59" xlink:to="res_118"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_AssetsLiabilities" xlink:label="loc_60"/>
+    <link:label xlink:type="resource" xlink:label="res_119" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_AssetsLiabilities_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_60" xlink:to="res_119"/>
+    <link:label xlink:type="resource" xlink:label="res_120" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_AssetsLiabilities_deprecatedLabel">Incorrect balance attribute. Replaced with AssetsOfBenefitPlan</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_60" xlink:to="res_120"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_WhollyUnfundedDefinedBenefitPlansMember" xlink:label="loc_61"/>
+    <link:label xlink:type="resource" xlink:label="res_121" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_WhollyUnfundedDefinedBenefitPlansMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_61" xlink:to="res_121"/>
+    <link:label xlink:type="resource" xlink:label="res_122" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_WhollyUnfundedDefinedBenefitPlansMember_deprecatedLabel">Concept not required as member</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_61" xlink:to="res_122"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_WhollyOrPartlyFundedDefinedBenefitPlansMember" xlink:label="loc_62"/>
+    <link:label xlink:type="resource" xlink:label="res_123" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_WhollyOrPartlyFundedDefinedBenefitPlansMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_62" xlink:to="res_123"/>
+    <link:label xlink:type="resource" xlink:label="res_124" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_WhollyOrPartlyFundedDefinedBenefitPlansMember_deprecatedLabel">Concept not required as member</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_62" xlink:to="res_124"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ReserveOfActurialGainsOrLossesOnDefinedBenefitPlans" xlink:label="loc_63"/>
+    <link:label xlink:type="resource" xlink:label="res_125" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ReserveOfActurialGainsOrLossesOnDefinedBenefitPlans_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_63" xlink:to="res_125"/>
+    <link:label xlink:type="resource" xlink:label="res_126" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ReserveOfActurialGainsOrLossesOnDefinedBenefitPlans_deprecatedLabel">Concept duplicate with Retained earnings</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_63" xlink:to="res_126"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ReserveOfActuarialGainsOrLossesOnDefinedBenefitPlansMember" xlink:label="loc_64"/>
+    <link:label xlink:type="resource" xlink:label="res_127" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ReserveOfActuarialGainsOrLossesOnDefinedBenefitPlansMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_64" xlink:to="res_127"/>
+    <link:label xlink:type="resource" xlink:label="res_128" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ReserveOfActuarialGainsOrLossesOnDefinedBenefitPlansMember_deprecatedLabel">Concept duplicate with RetainedEarnings</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_64" xlink:to="res_128"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_UnrecognisedActuarialGainsLosses" xlink:label="loc_65"/>
+    <link:label xlink:type="resource" xlink:label="res_129" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_UnrecognisedActuarialGainsLosses_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_65" xlink:to="res_129"/>
+    <link:label xlink:type="resource" xlink:label="res_130" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_UnrecognisedActuarialGainsLosses_deprecatedLabel">Incorrect balance attribute. Replaced with UnrecognisedActuarialGainsLosses2011</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_65" xlink:to="res_130"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_UnrecognisedPastServiceCost" xlink:label="loc_66"/>
+    <link:label xlink:type="resource" xlink:label="res_131" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_UnrecognisedPastServiceCost_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_66" xlink:to="res_131"/>
+    <link:label xlink:type="resource" xlink:label="res_132" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_UnrecognisedPastServiceCost_deprecatedLabel">Incorrect balance attribute. Replaced with UnrecognisedPastServiceCostNegativePastServiceCost</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_66" xlink:to="res_132"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_AccumulatedAllowanceForCollectibleMinimumLeasePaymentsReceivable" xlink:label="loc_67"/>
+    <link:label xlink:type="resource" xlink:label="res_133" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_AccumulatedAllowanceForCollectibleMinimumLeasePaymentsReceivable_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_67" xlink:to="res_133"/>
+    <link:label xlink:type="resource" xlink:label="res_134" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_AccumulatedAllowanceForCollectibleMinimumLeasePaymentsReceivable_deprecatedLabel">Misleading concept name. Replaced with AccumulatedAllowanceForUncollectibleMinimumLeasePaymentsReceivable</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_67" xlink:to="res_134"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughChangesInAccountingPolicies" xlink:label="loc_68"/>
+    <link:label xlink:type="resource" xlink:label="res_135" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncreaseDecreaseThroughChangesInAccountingPolicies_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_68" xlink:to="res_135"/>
+    <link:label xlink:type="resource" xlink:label="res_136" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncreaseDecreaseThroughChangesInAccountingPolicies_deprecatedLabel">Dimensional structure RetrospectiveApplicationAndRetrospectiveRestatementAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_68" xlink:to="res_136"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughCorrectionsOfErrors" xlink:label="loc_69"/>
+    <link:label xlink:type="resource" xlink:label="res_137" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncreaseDecreaseThroughCorrectionsOfErrors_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_69" xlink:to="res_137"/>
+    <link:label xlink:type="resource" xlink:label="res_138" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncreaseDecreaseThroughCorrectionsOfErrors_deprecatedLabel">Dimensional structure RetrospectiveApplicationAndRetrospectiveRestatementAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_69" xlink:to="res_138"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_PropertyPlantAndEquipmentGross" xlink:label="loc_70"/>
+    <link:label xlink:type="resource" xlink:label="res_139" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_PropertyPlantAndEquipmentGross_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_70" xlink:to="res_139"/>
+    <link:label xlink:type="resource" xlink:label="res_140" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_PropertyPlantAndEquipmentGross_deprecatedLabel">Dimensional structure implemented CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_70" xlink:to="res_140"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_PropertyPlantAndEquipmentAccumulatedDepreciationAndImpairment" xlink:label="loc_71"/>
+    <link:label xlink:type="resource" xlink:label="res_141" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_PropertyPlantAndEquipmentAccumulatedDepreciationAndImpairment_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_71" xlink:to="res_141"/>
+    <link:label xlink:type="resource" xlink:label="res_142" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_PropertyPlantAndEquipmentAccumulatedDepreciationAndImpairment_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_71" xlink:to="res_142"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IntangibleAssetsOtherThanGoodwillGross" xlink:label="loc_72"/>
+    <link:label xlink:type="resource" xlink:label="res_143" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IntangibleAssetsOtherThanGoodwillGross_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_72" xlink:to="res_143"/>
+    <link:label xlink:type="resource" xlink:label="res_144" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IntangibleAssetsOtherThanGoodwillGross_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_72" xlink:to="res_144"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IntangibleAssetsOtherThanGoodwillAccumulatedAmortisationAndImpairment" xlink:label="loc_73"/>
+    <link:label xlink:type="resource" xlink:label="res_145" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IntangibleAssetsOtherThanGoodwillAccumulatedAmortisationAndImpairment_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_73" xlink:to="res_145"/>
+    <link:label xlink:type="resource" xlink:label="res_146" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IntangibleAssetsOtherThanGoodwillAccumulatedAmortisationAndImpairment_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_73" xlink:to="res_146"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_BiologicalAssetsGross" xlink:label="loc_74"/>
+    <link:label xlink:type="resource" xlink:label="res_147" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_BiologicalAssetsGross_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_74" xlink:to="res_147"/>
+    <link:label xlink:type="resource" xlink:label="res_148" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_BiologicalAssetsGross_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_74" xlink:to="res_148"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_BiologicalAssetsAccumulatedAmortisationAndImpairment" xlink:label="loc_75"/>
+    <link:label xlink:type="resource" xlink:label="res_149" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_BiologicalAssetsAccumulatedAmortisationAndImpairment_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_75" xlink:to="res_149"/>
+    <link:label xlink:type="resource" xlink:label="res_150" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_BiologicalAssetsAccumulatedAmortisationAndImpairment_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_75" xlink:to="res_150"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_InvestmentPropertyGross" xlink:label="loc_76"/>
+    <link:label xlink:type="resource" xlink:label="res_151" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_InvestmentPropertyGross_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_76" xlink:to="res_151"/>
+    <link:label xlink:type="resource" xlink:label="res_152" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_InvestmentPropertyGross_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_76" xlink:to="res_152"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_InvestmentPropertyAccumulatedDepreciationAndImpairment" xlink:label="loc_77"/>
+    <link:label xlink:type="resource" xlink:label="res_153" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_InvestmentPropertyAccumulatedDepreciationAndImpairment_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_77" xlink:to="res_153"/>
+    <link:label xlink:type="resource" xlink:label="res_154" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_InvestmentPropertyAccumulatedDepreciationAndImpairment_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_77" xlink:to="res_154"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_GrossAmountOfGoodwill" xlink:label="loc_78"/>
+    <link:label xlink:type="resource" xlink:label="res_155" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_GrossAmountOfGoodwill_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_78" xlink:to="res_155"/>
+    <link:label xlink:type="resource" xlink:label="res_156" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_GrossAmountOfGoodwill_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_78" xlink:to="res_156"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_AccumulatedImpairmentLossesOfGoodwill" xlink:label="loc_79"/>
+    <link:label xlink:type="resource" xlink:label="res_157" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_AccumulatedImpairmentLossesOfGoodwill_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_79" xlink:to="res_157"/>
+    <link:label xlink:type="resource" xlink:label="res_158" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_AccumulatedImpairmentLossesOfGoodwill_deprecatedLabel">Dimensional structure CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis implemented</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_79" xlink:to="res_158"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_RevenuesFromExternalCustomers" xlink:label="loc_80"/>
+    <link:label xlink:type="resource" xlink:label="res_159" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_RevenuesFromExternalCustomers_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_80" xlink:to="res_159"/>
+    <link:label xlink:type="resource" xlink:label="res_160" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_RevenuesFromExternalCustomers_deprecatedLabel">Concept duplicate with Revenue</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_80" xlink:to="res_160"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_RedesignatedFinancialAsset" xlink:label="loc_81"/>
+    <link:label xlink:type="resource" xlink:label="res_161" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_RedesignatedFinancialAsset_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_81" xlink:to="res_161"/>
+    <link:label xlink:type="resource" xlink:label="res_162" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_RedesignatedFinancialAsset_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_81" xlink:to="res_162"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncomeExpenseRecognisedInOtherComprehensiveIncomeRelatingToNoncurrentAssetsOrDisposalGroupClassifiedAsHeldForSale" xlink:label="loc_82"/>
+    <link:label xlink:type="resource" xlink:label="res_163" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncomeExpenseRecognisedInOtherComprehensiveIncomeRelatingToNoncurrentAssetsOrDisposalGroupClassifiedAsHeldForSale_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_82" xlink:to="res_163"/>
+    <link:label xlink:type="resource" xlink:label="res_164" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncomeExpenseRecognisedInOtherComprehensiveIncomeRelatingToNoncurrentAssetsOrDisposalGroupClassifiedAsHeldForSale_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_82" xlink:to="res_164"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedAxis" xlink:label="loc_85"/>
+    <link:label xlink:type="resource" xlink:label="res_169" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedAxis_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_85" xlink:to="res_169"/>
+    <link:label xlink:type="resource" xlink:label="res_170" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedAxis_deprecatedLabel">Concept duplicate with ClassesOfFinancialAssetsAxis</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_85" xlink:to="res_170"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedMember" xlink:label="loc_86"/>
+    <link:label xlink:type="resource" xlink:label="res_171" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_86" xlink:to="res_171"/>
+    <link:label xlink:type="resource" xlink:label="res_172" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedMember_deprecatedLabel">Concept duplicate with FinancialAssetsMember</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_86" xlink:to="res_172"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfSignificantTransferOfFinancialInstrumentsIntoOrOutOfLevel3OfFairValueHierarchy" xlink:label="loc_87"/>
+    <link:label xlink:type="resource" xlink:label="res_173" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfSignificantTransferOfFinancialInstrumentsIntoOrOutOfLevel3OfFairValueHierarchy_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_87" xlink:to="res_173"/>
+    <link:label xlink:type="resource" xlink:label="res_174" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfSignificantTransferOfFinancialInstrumentsIntoOrOutOfLevel3OfFairValueHierarchy_deprecatedLabel">Concept split into DescriptionOfSignificantTransferOfFinancialInstrumentsIntoLevel3OfFairValueHierarchy and DescriptionOfSignificantTransferOfFinancialInstrumentsOutOfLevel3OfFairValueHierarchy according to IFRS 7 requirement</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_87" xlink:to="res_174"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfAmountRemovedFromEquityAndIncludedInInitialCostOfHedgedHighlyProbableForecastTransaction" xlink:label="loc_88"/>
+    <link:label xlink:type="resource" xlink:label="res_175" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfAmountRemovedFromEquityAndIncludedInInitialCostOfHedgedHighlyProbableForecastTransaction_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_88" xlink:to="res_175"/>
+    <link:label xlink:type="resource" xlink:label="res_176" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfAmountRemovedFromEquityAndIncludedInInitialCostOfHedgedHighlyProbableForecastTransaction_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_88" xlink:to="res_176"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_PortionOfConsiderationConsistingOfCashAndCashEquivalents" xlink:label="loc_89"/>
+    <link:label xlink:type="resource" xlink:label="res_177" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_PortionOfConsiderationConsistingOfCashAndCashEquivalents_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_89" xlink:to="res_177"/>
+    <link:label xlink:type="resource" xlink:label="res_178" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_PortionOfConsiderationConsistingOfCashAndCashEquivalents_deprecatedLabel">Incorrect balance attribute. Replaced with PortionOfConsiderationPaidReceivedConsistingOfCashAndCashEquivalents</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_89" xlink:to="res_178"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfAssetsAndLiabilitiesInSubsidiaryOrBusinessesAcquiredOrDisposed" xlink:label="loc_90"/>
+    <link:label xlink:type="resource" xlink:label="res_179" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfAssetsAndLiabilitiesInSubsidiaryOrBusinessesAcquiredOrDisposed_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_90" xlink:to="res_179"/>
+    <link:label xlink:type="resource" xlink:label="res_180" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfAssetsAndLiabilitiesInSubsidiaryOrBusinessesAcquiredOrDisposed_deprecatedLabel">Concept not required by IFRSs</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_90" xlink:to="res_180"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ExplanationOfApplicationOfIFRS8Before1January2009" xlink:label="loc_91"/>
+    <link:label xlink:type="resource" xlink:label="res_181" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ExplanationOfApplicationOfIFRS8Before1January2009_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_91" xlink:to="res_181"/>
+    <link:label xlink:type="resource" xlink:label="res_182" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ExplanationOfApplicationOfIFRS8Before1January2009_deprecatedLabel">Concept not applicable after 1 January 2009</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_91" xlink:to="res_182"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfEffectiveInterestRateAndEstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfFinancialAssetsAtFairValueThroughProfitOrLoss" xlink:label="loc_92"/>
+    <link:label xlink:type="resource" xlink:label="res_183" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfEffectiveInterestRateAndEstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfFinancialAssetsAtFairValueThroughProfitOrLoss_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_92" xlink:to="res_183"/>
+    <link:label xlink:type="resource" xlink:label="res_184" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfEffectiveInterestRateAndEstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfFinancialAssetsAtFairValueThroughProfitOrLoss_deprecatedLabel">Concept split into EffectiveInterestRateOfFinancialAssetsReclassifiedOutOfFinancialAssetsAtFairValueThroughProfitOrLoss and EstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfFinancialAssetsAtFairValueThroughProfitOrLoss</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_92" xlink:to="res_184"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfEffectiveInterestRateAndEstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfAvailableforsaleFinancialAssets" xlink:label="loc_93"/>
+    <link:label xlink:type="resource" xlink:label="res_185" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfEffectiveInterestRateAndEstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfAvailableforsaleFinancialAssets_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_93" xlink:to="res_185"/>
+    <link:label xlink:type="resource" xlink:label="res_186" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfEffectiveInterestRateAndEstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfAvailableforsaleFinancialAssets_deprecatedLabel">Concept split into EffectiveInterestRateOfFinancialAssetsReclassifiedOutOfAvailableforsaleFinancialAssets and EstimatedCashFlowsOfFinancialAssetsReclassifiedOutOfAvailableforsaleFinancialAssets</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_93" xlink:to="res_186"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfNatureOfAssetsAndLiabilitiesWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear" xlink:label="loc_94"/>
+    <link:label xlink:type="resource" xlink:label="res_187" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfNatureOfAssetsAndLiabilitiesWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_94" xlink:to="res_187"/>
+    <link:label xlink:type="resource" xlink:label="res_188" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfNatureOfAssetsAndLiabilitiesWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear_deprecatedLabel">Concept split into DescriptionOfNatureOfAssetsWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear and DescriptionOfNatureOfLiabilitiesWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_94" xlink:to="res_188"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfCarryingAmountOfAssetsAndLiabilitiesWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear" xlink:label="loc_95"/>
+    <link:label xlink:type="resource" xlink:label="res_189" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfCarryingAmountOfAssetsAndLiabilitiesWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_95" xlink:to="res_189"/>
+    <link:label xlink:type="resource" xlink:label="res_190" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfCarryingAmountOfAssetsAndLiabilitiesWithSignificantRiskOfMaterialAdjustmentsWithinNextFinancialYear_deprecatedLabel">Concept split into Assets with significant risk of material adjustments within next financial year and Liabilities with significant risk of material adjustments within next financial year</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_95" xlink:to="res_190"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DescriptionOfAmountsReclassifiedIntoAndOutOfFinancialAssetsCategories" xlink:label="loc_96"/>
+    <link:label xlink:type="resource" xlink:label="res_191" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DescriptionOfAmountsReclassifiedIntoAndOutOfFinancialAssetsCategories_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_96" xlink:to="res_191"/>
+    <link:label xlink:type="resource" xlink:label="res_192" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DescriptionOfAmountsReclassifiedIntoAndOutOfFinancialAssetsCategories_deprecatedLabel">Concept split into FinancialAssetsReclassifiedFromMeasuredAtAmortisedCostToMeasuredAtFairValue and FinancialAssetsReclassifiedFromMeasuredAtFairValueToMeasuredAtAmortisedCost</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_96" xlink:to="res_192"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_SignificantTransferBetweenLevel1AndLevel2OfFairValueHierarchy" xlink:label="loc_97"/>
+    <link:label xlink:type="resource" xlink:label="res_193" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_SignificantTransferBetweenLevel1AndLevel2OfFairValueHierarchy_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_97" xlink:to="res_193"/>
+    <link:label xlink:type="resource" xlink:label="res_194" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_SignificantTransferBetweenLevel1AndLevel2OfFairValueHierarchy_deprecatedLabel">Concept split into SignificantTransfersOfFinancialInstrumentsOutOfLevel1IntoLevel2OfFairValueHierarchy and SignificantTransfersOfFinancialInstrumentsOutOfLevel2IntoLevel1OfFairValueHierarchy</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_97" xlink:to="res_194"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_DividendsNotRecognisedAsLiability" xlink:label="loc_98"/>
+    <link:label xlink:type="resource" xlink:label="res_195" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_DividendsNotRecognisedAsLiability_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_98" xlink:to="res_195"/>
+    <link:label xlink:type="resource" xlink:label="res_196" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_DividendsNotRecognisedAsLiability_deprecatedLabel">Concept duplicate with DividendsProposedOrDeclaredBeforeFinancialStatementsAuthorisedForIssueButNotRecognisedAsDistributionToOwners</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_98" xlink:to="res_196"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_FutureFinanceChargeOnFinanceLeaseAtPresentValue" xlink:label="loc_99"/>
+    <link:label xlink:type="resource" xlink:label="res_197" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_FutureFinanceChargeOnFinanceLeaseAtPresentValue_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_99" xlink:to="res_197"/>
+    <link:label xlink:type="resource" xlink:label="res_198" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_FutureFinanceChargeOnFinanceLeaseAtPresentValue_deprecatedLabel">Concept duplicate with FutureFinanceChargeOnFinanceLease</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_99" xlink:to="res_198"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_ReconciliationByEndOfReportingPeriodAxis" xlink:label="loc_100"/>
+    <link:label xlink:type="resource" xlink:label="res_199" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_ReconciliationByEndOfReportingPeriodAxis_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_100" xlink:to="res_199"/>
+    <link:label xlink:type="resource" xlink:label="res_200" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_ReconciliationByEndOfReportingPeriodAxis_deprecatedLabel">Concept duplicate with MaturityAxis</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_100" xlink:to="res_200"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_AggregatedPeriodsMember" xlink:label="loc_101"/>
+    <link:label xlink:type="resource" xlink:label="res_201" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_AggregatedPeriodsMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_101" xlink:to="res_201"/>
+    <link:label xlink:type="resource" xlink:label="res_202" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_AggregatedPeriodsMember_deprecatedLabel">Concept duplicate with AggregatedTimeBandsMember</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_101" xlink:to="res_202"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_EndOfPeriodNotLaterThanOneYearMember" xlink:label="loc_102"/>
+    <link:label xlink:type="resource" xlink:label="res_203" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_EndOfPeriodNotLaterThanOneYearMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_102" xlink:to="res_203"/>
+    <link:label xlink:type="resource" xlink:label="res_204" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_EndOfPeriodNotLaterThanOneYearMember_deprecatedLabel">Concept duplicate with NotLaterThanOneYearMember</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_102" xlink:to="res_204"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_EndOfPeriodLaterThanOneYearAndNotLaterThanFiveYearsMember" xlink:label="loc_103"/>
+    <link:label xlink:type="resource" xlink:label="res_205" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_EndOfPeriodLaterThanOneYearAndNotLaterThanFiveYearsMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_103" xlink:to="res_205"/>
+    <link:label xlink:type="resource" xlink:label="res_206" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_EndOfPeriodLaterThanOneYearAndNotLaterThanFiveYearsMember_deprecatedLabel">Concept duplicate with LaterThanOneYearAndNotLaterThanFiveYearsMember</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_103" xlink:to="res_206"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_EndOfPeriodLaterThanFiveYearsMember" xlink:label="loc_104"/>
+    <link:label xlink:type="resource" xlink:label="res_207" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_EndOfPeriodLaterThanFiveYearsMember_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_104" xlink:to="res_207"/>
+    <link:label xlink:type="resource" xlink:label="res_208" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_EndOfPeriodLaterThanFiveYearsMember_deprecatedLabel">Concept duplicate with LaterThanFiveYearsMember</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_104" xlink:to="res_208"/>
+    <link:loc xlink:type="locator" xlink:href="ifrs-depr_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughTransfersAndOtherChangesInvestmentProperty" xlink:label="loc_105"/>
+    <link:label xlink:type="resource" xlink:label="res_209" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="ifrs_IncreaseDecreaseThroughTransfersAndOtherChangesInvestmentProperty_deprecatedDateLabel">2011-01-01</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_105" xlink:to="res_209"/>
+    <link:label xlink:type="resource" xlink:label="res_210" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="ifrs_IncreaseDecreaseThroughTransfersAndOtherChangesInvestmentProperty_deprecatedLabel">Concept duplicate with TransferFromToInventoriesAndOwnerOccupiedPropertyInvestmentProperty</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="loc_105" xlink:to="res_210"/>
+  </link:labelLink>
+</link:linkbase>

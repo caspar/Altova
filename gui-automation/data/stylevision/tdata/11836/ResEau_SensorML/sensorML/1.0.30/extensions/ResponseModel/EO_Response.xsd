@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe" xmlns:sml="http://www.opengis.net/sensorML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--========================-->
+	<!--  Includes and imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://schemas.opengis.net/gml/3.1.0/xlink/xlinks.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="../../../../sweCommon/1.0.30/parameters.xsd"/>
+	<xs:include schemaLocation="./CommonResponse.xsd"/>
+	<!--=================-->
+	<!--  EO Parameters  -->
+	<!--=================-->
+	<xs:element name="EO_Response">
+		<xs:annotation>
+			<xs:documentation>Response Characteristics for most Electro-Optical Sensors; typically one group for each band</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_GroupBaseType">
+					<xs:sequence>
+						<xs:element ref="sml:response"/>
+						<xs:element name="spectralResponse">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="sml:FrequencyCharacteristics"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="polarization" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="sml:PolarizationCharacteristics"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element ref="sml:integrationTime" minOccurs="0"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!--=============-->
+	<!--  Processes  -->
+	<!--=============-->
+	<xs:element name="EO_ResponseModel" substitutionGroup="sml:_Process">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="sml:_AbstractProcessType">
+					<xs:sequence>
+						<xs:element name="inputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:inputsType">
+										<xs:sequence>
+											<xs:element name="InputList" minOccurs="0">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:IOListType">
+															<xs:sequence>
+																<xs:element name="radiationIntensity">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:Quantity"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="radiationFrequency">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:Quantity"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="outputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:outputsType">
+										<xs:sequence>
+											<xs:element name="OutputList" minOccurs="0">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:IOListType">
+															<xs:sequence>
+																<xs:element name="measuredValue">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:Quantity"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="parameters">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:parametersType">
+										<xs:sequence>
+											<xs:element name="ParameterList" minOccurs="0">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:IOListType">
+															<xs:sequence>
+																<xs:element ref="sml:resolution" minOccurs="0"/>
+																<xs:element ref="sml:response"/>
+																<xs:element name="frequencyResponse">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="sml:FrequencyCharacteristics"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element ref="sml:relativeResponse" minOccurs="0"/>
+																<xs:element ref="sml:timeResponse" minOccurs="0"/>
+																<xs:element name="polarization" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="sml:PolarizationCharacteristics"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element ref="sml:integrationTime" minOccurs="0"/>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="method" minOccurs="0">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:methodType">
+										<xs:attribute ref="xlink:href" use="required" fixed="urn:ogc:process:EOResponse"/>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

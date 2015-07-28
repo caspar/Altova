@@ -1,0 +1,604 @@
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by Markus Kreska (Altova GmbH) -->
+<Links diagram="Class" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="uml_link_matrix.xsd">
+	<StartElement name="Package">
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ProfileApplication">
+			<EndElement name="Profile"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Class">
+		<Link name="Association">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Aggregation">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Composition">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="AssociationClass">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="InterfaceRealization">
+			<EndElement name="Interface"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+		</Link>
+	</StartElement>
+		<StartElement name="Class Template">
+		<Link name="Association">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Aggregation">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Composition">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="AssociationClass">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="InterfaceRealization">
+			<EndElement name="Interface"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Interface">
+		<Link name="Association">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Aggregation">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Composition">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="AssociationClass">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Class"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Enumeration">
+		<Link name="Association">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Aggregation">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Composition">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="AssociationClass">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+		</Link>
+	</StartElement>
+	<StartElement name="DataType">
+		<Link name="Association">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Aggregation">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Composition">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="AssociationClass">
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Datatype"/>
+		</Link>
+	</StartElement>
+	<StartElement name="PrimitiveType">
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Datatype"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Profile">
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+	</StartElement>
+	<StartElement name="InstanceSpecification">
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="ID_ADD_ABSTRACTION">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+		<Link name="Realization">
+			<EndElement name="Package"/>
+			<EndElement name="Class"/>
+			<EndElement name="Class Template"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Enumeration"/>
+			<EndElement name="Datatype"/>
+			<EndElement name="PrimitiveType"/>
+			<EndElement name="Profile"/>
+			<EndElement name="InstanceSpecification"/>
+		</Link>
+	</StartElement>
+	<!-- Special case. Need to make special test. -->
+	<!-- 
+	<StartElement name="Stereotype">
+		<Link name="Generalization">
+			<EndElement name="Stereotype"/>
+		</Link>
+	</StartElement>
+-->
+</Links>

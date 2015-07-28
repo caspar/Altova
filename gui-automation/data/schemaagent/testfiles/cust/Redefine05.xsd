@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+xmlns="www.altova.com/test" 
+targetNamespace="www.altova.com/test" 
+elementFormDefault="qualified" 
+attributeFormDefault="unqualified">
+	<!--===============================-
+	<xs:complexType name="complexBaseA">
+	
+			<xs:sequence>
+			<xs:element name="e1" type="xs:integer"/>
+			<xs:element name="e2" type="xs:string"/>
+			<xs:element name="e3" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+Default namespace in schema must be aligned with the targetnamespace of the schema.
+The base of the restriction element refers to the name in the complexType element which is in the targetnamespace
+ 
+<xs:complexType name="complexBaseA">
+     <xs:complexContent>
+ 	    <xs:restriction base="complexBaseA"> 
+
+-===============================-->
+	<xs:redefine schemaLocation="RedefineBase1.xsd">
+		<xs:complexType name="complexBaseA">
+			<xs:annotation>
+				<xs:documentation>3.3 SII has no targetNamespace [attribute] (but SII’ does).</xs:documentation>
+			</xs:annotation>
+			<xs:complexContent>
+				<xs:restriction base="complexBaseA">
+					<xs:sequence>
+						<xs:element name="e1"/>
+						<xs:element name="e2"/>
+
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:redefine>
+</xs:schema>

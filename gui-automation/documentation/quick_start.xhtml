@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Quick start</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="toc.xhtml">Next: Contents</a>
+		</div>
+		<div class="previous">
+			<a href="none" />
+		</div>
+		<h1>
+			<a name="1" />Quick start - one page, ten minutes</h1>
+		<div class="p">This outlines how to setup the automated test minutes in about 10 minutes. At the end of this, you should be able to run a quick demo program, and the already existing tests. For more details about the various applications involved, please refer to the rest of these pages. If any of the setup steps below fail, please look at <a href="install.xhtml"> the more detailed section</a>.</div>
+		<h2>
+			<a name="2" />HAL 9000 - Automated installation</h2>
+		<div class="p">There is an small script on the <i>S:</i> which installs and setups up 99% of what you need to work with and run the automated GUI and regression tests. It will create the following directories on your <i>C:</i> drive.</div>
+		<ul>
+			<li>
+				<div class="file">C:\java\jdk1.6.0 </div> - The SUN Java JDK installation (latest version)</li>
+			<li>
+				<div class="file">C:\java\apache-ant-1.7.0 </div> - The Apache Ant script tool (1.7 or higher)</li>
+			<li>
+				<div class="file">C:\java\junit4.3\junit-4.3.jar </div> - The JUnit unit testing API (only 4.3)</li>
+			<li>
+				<div class="file">C:\java\WinCVS 1.2 </div> - Copy of the WinCVS tool</li>
+			<li>
+				<div class="file">C:\work\gui-automation </div> - Source code and data for GUI automation</li>
+			<li>
+				<div class="file">C:\work\umodel </div> - Source code and data for UModel functional automation</li>
+			<li>
+				<div class="file">C:\temp </div> - Default temporary location</li>
+		</ul>
+		<div class="p">The launch script is written as a Windows Batch to install Java and Ant, after that, and Ant script takes over and does the rest. It is written on the <a href="http://joeorman.shutterace.com/2001/2001HAL.html">HAL 9000 principle</a> - that is, it cannot fail. However, if it does, running it once more might work. To launch the installation script, do the following in a command line window.
+		<pre class="cmd">
+	s:
+	cd s:\QA\Internal\Test-Cases\Automated_GUI_Tests\install
+	install
+		</pre>
+		
+		After a while (maybe some 3-4 minutes), you will see this message. Please read carefully, and type in your <b>QA CVS username</b> and <b>QA CVS username</b>. Due to a number of random reasons, this username and password might or might not be the same as your Windows username and password. If you have questions about this, I believe Ben @ IT put of these systems.
+		
+		<pre class="cmd">
+get-cvs-user:
+    [input] Username 'hab' will be used for CVS login. 
+		If this is not correct, please enter QA CVS username here: [hab]
+	hab
+    [input] Default CVS password 'hab' will be used for CVS login. 
+		If this is not correct, please enter QA CVS password here: [hab]
+		</pre>
+		</div>
+		<h2>
+			<a name="3" />Setting environment variables</h2>
+		<div class="p">Once the install script has finished, you will have the following environment variables set. <b>However, due to unknown reasons, they are not applied at once. There are two ways to fix this: <i>Restart windows</i>.</b> Or, press the <i>Windows Key</i> and <i>Pause/Break</i>, then in the Advanced tab, click the Environment Variables button at the bottom. You will see the new variables at the top. Finally, simply close this window again, by clicking the <b>OK</b> button. (Don't ask).
+		</div>
+		<ul>
+			<li>
+				<code>PATH = C:\java\apache-ant-1.7.0\bin;C:\java\jdk1.6.0\bin;C:\java\WinCvs 1.2;</code>
+			</li>
+			<li>
+				<code>ROBOTS_DEBUG_DIR = c:\temp\debug</code>
+			</li>
+			<li>
+				<code>ROBOTS_OUT_DIR = c:\temp\out</code>
+			</li>
+			<li>
+				<code>ROBOTS_EXPECTED_DIR = c:\temp\expected</code>
+			</li>
+			<li>
+				<code>ROBOTS_LOGGING_FILE = testSuiteLog.properties</code>
+			</li>
+		</ul>
+		<p>
+			<img src="keyboard_sys_prop.jpg" alt="System properties shortcut" class="diagram" />
+			<img src="sys_env_var.png" alt="System properties" class="screen" />
+		</p>
+		<h2>
+			<a name="4" />Testing what has been installed so far</h2>
+		<div class="p">You're almost done. Let's see that the main programs run. Please open a command line prompt (Start -&gt; Run and type "cmd"). Type in the following commands, and you should get the version output as shown in the picture below. If this give an error <i>"... not recognized as an internal or external command operable program or batch file."</i>, or an unexpected version, please revisit the two previous steps. </div>
+		<p>
+			<img alt="Application versions" src="app_versions.png" />
+		</p>
+		<h2>
+			<a name="5" />The last steps and running some tests</h2>
+		<div class="p">In the command line window you've already got open, type in the following commands to update files from the CVS server, compile the code and wrap it all into a JAR file.
+		</div>
+		<pre class="cmd">
+	cd c:\work\gui-automation
+	ant
+		</pre>
+		<div class="p">That's right, if everything was set up, you should now have the latest code, compile and ready to run. There are some simple tests you can run. The first starts a simple debugging/checking tool for the GUI automation framework:
+		</div>
+		<pre class="cmd">
+	ant run -Dclassname=RobotsCenter
+		</pre>
+		<div class="p">Then there is the "test" to set up the proper scrollbar icons for your machine. These are later used to scroll, if a GUI test requires that. <b>You will need to have Excel installed, but not running in order for this to work.</b> For further details on this, please see the <a href="lookout_scrollbar.xhtml">section about the scrollbar case</a>.
+		</div>
+		<pre class="cmd">
+	ant scrollbar
+		</pre>
+		<div class="p">
+		The final will start the UModel test for the File menu. You'll have to have the latest UModel installed for this to work. Please note that this test will generate a <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html">report in a common location</a>, however, as you have not set up the details yet, it might show some errors. Please refer to <a href="junit_running.xhtml">the section about running the tests</a> for details.
+		</div>
+		<pre class="cmd">
+	ant test -Dclassname=umodel/regression/testcases/FileMenuTest
+		</pre>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+
+    <element name="Root">
+        <complexType>
+            <sequence>
+                <element name="Test">
+                    <simpleType>
+                        <restriction base="string">
+                            <pattern value="(x+x+)+y" />
+                        </restriction>
+                    </simpleType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+    
+</schema>
+

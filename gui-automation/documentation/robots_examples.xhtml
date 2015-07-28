@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Usage examples of robot classes and methods</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="robots_plugin_classes.xhtml">Next: Plugin robots class hierarchy</a>
+		</div>
+		<div class="previous">
+			<a href="robots_methods.xhtml">Previous: Important methods in the robots framework</a>
+		</div>
+		<h1>Usage examples of robot classes and methods</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">The <a href="robots_methods.xhtml">previous page</a> showed a few of the important methods of the automation framework at a high level. This section will go one level down and look at the details of the source code. At this point, please note the <a href="robots_overview.xhtml#2">distinction between Robot framework and JUnit test classes</a>. Code which carry out general tasks should be placed in the <i>Robots</i> classes, and not the Test classes. The more general or abstract it can be made, the higher up in the <a href="robots_classes.xhtml#2">robots class hierarchy</a> it should go. On the other side, specific steps for the test cases should go in the one of the <i>Test</i> classes. If you find yourself repeating code (or even copy/pasting(!)), there is something wrong with the design of the methods your working with, and it's time for some refactoring.</div>
+		<div class="p">This page will first look at some examples from within the Robots classes, for <a href="junit_examples.xhtml">examples from the Test classes, look on this page</a>.</div>
+		<div class="p">Please also note that some of the examples shown are rather complex. It has been developed over weeks and months, so do not expect it to be all clear at once, if you have not worked with the code before.</div>
+
+		<h2>
+			<a name="openURL" />SpyRobot - openURL(String url) and reloadFile()</h2>
+	<div class="p">The first example is a simple menu item on the XMLSpy File menu; the <i>Open URL</i> feature. It works almost as a normal Open File dialog, however, there are some extra message boxes which might come up.</div>
+	<pre class="javacode">
+public <b>SpyRobot</b>() {
+	...
+	public void <b>openURL</b>(String url) {
+		<b>leftClickMenuItem</b>("File", "Open URL");
+		<b>assertWindow</b>("Open URL");
+		<b>typeFileName</b>(url); delay(6000);
+	</pre>
+	<div class="p">The method starts with a <b>left click on the menu item</b>, and since we expect a dialog called "Open URL" here, we <b>assert</b> that we get a window containing that title. Finally, we type in the url; the <b>typeFileName</b> call include a press on ENTER, and also some general failure dialog checks.</div>
+	<pre class="javacode">
+		//escape dialogs
+		<b>addEscapeDialogAction</b>("A Runtime Error has occurred", <b>VK_N</b>);
+		addEscapeDialogAction("Internet Explorer Script Error", VK_N);
+		<b>waitAndEsacpe</b>("");
+	}
+	</pre>
+	<div class="p">For some web pages, special error or warning dialogs might pop up. Since we don't wont this to get in the way of our further tests, we make sure we have some way to escape them here. The <b>addEscapeDialogAction</b> adds to a list of possible dialogs to look out for, and actions to take if one is encountered. The text supplied here can be the title of the dialog, part of the title, or part of any other text in the dialog. The integer argument is a key-constant from <i>KeyEvent</i>, which tells which key to press if this dialog shows up. If the dialog never shows up, this is just ignored. The call to <b>waitAndEsacpe</b> does the actually waiting, checking and "escaping" of these dialogs.</div>
+	<div class="p">This is the idiom to use for multiple dialogs. If you know there is only one dialog to look out for, e.g. "are you sure", you can use the simple form <b>escapeDialog</b> like below.</div>
+		<pre class="javacode">
+	public void <b>reloadFile</b>() {
+		leftClickMenuItem("File", "Reload");
+		<b>escapeDialog</b>("reload this file", VK_Y);
+	}
+	...
+}
+		</pre>
+	<div class="p">This will look for a dialog which contains the given string, and press the specified key, if it is found.</div>
+
+		<h2>
+			<a name="findDialog" />UModelRobot - findDialog(String string)</h2>
+		<div class="p">For the UModel tests, a common problem is to find a specific element, either in the "Model Tree" or on the diagram. To accomplish this in the GUI tests, the <i>Find dialog</i> is used. The method <i>findDialog(String string, boolean cleanField)</i> in the <i>UModelRobot</i> handles this. The following will go through the code line by line.
+<pre class="javacode">
+public <b>UModelRobot</b>() {
+	...
+	public void <b>findDialog</b>(String string, boolean cleanField) {
+		//open find
+		ComponentInfo info = NativeGUI.<b>getForegroundWindowInfo</b>();
+</pre>
+		</div>
+		<div class="p">The first bit above is the method signature, with a quite common method-call to <b>NativeGUI.getForegroundWindowInfo()</b>, which returns information about which window is in the foreground, or rather, has the focus. Currently, we want to make sure that the <i>Find dialog</i> is the foreground window.</div>
+		<pre class="javacode">
+		for (int i = 0; i &lt; 5 &amp;&amp; !info.getWindowText().equalsIgnoreCase("find") ; i++) {
+			<b>keyTypeCtrl(VK_F);</b>
+			delay(1000);
+			info = <b>NativeGUI.getForegroundWindowInfo()</b>;
+			
+			//The find dialog is only active from the Model Tree
+			//switch to Model Tree pane if we need to
+			if( !info.getWindowText().equalsIgnoreCase("find") ) {
+				<b>activatePane(MODEL_TREE)</b>;
+				delay(1000);
+			}
+		}
+		</pre>
+		<div class="p">The for-loop above is another commonly used idiom inside the Robots code: things might go wrong the first time, so better try twice. In fact, let's try a few times, just in case. In this case, we try to press <b>CTRL+F</b> to get the dialog, and then we do a check again, by calling <b>NativeGUI.getForegroundWindowInfo()</b>. However, if the Model Tree (or diagram) does not have the focus, this will not work. Well, in that case, we'll just have to make and assumption, and guess that the intention was to search the Model Tree. The call to <b>activatePane(MODEL_TREE)</b> makes sure the Model Tree window is active. Then the for-loop will run again, and press CTRL+F.</div>
+		<pre class="javacode">
+		assertWindow("find");
+		</pre>
+		<div class="p">Then comes another staple method when dealing with dialog boxes and option windows: <b>assertWindow("find")</b>. Even if the for-loop above has made it's best attempt to open the Find dialog, we should not assume it is there; we should check it. This call looks at the title of the top window, and throws a <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ScriptMistakeException.html"><b>ScriptMistakeException</b>
+			</a>, and stop that particular test, if the argument string is not found in the active window. (But watch out, it will be tricked if your UModel project file is called <i>FindTest.ump</i>.)</div>
+		<pre class="javacode">
+		//set the Find options
+		Options options = new Options();
+		options.add(new <b>TextFieldOption</b>("<b>Find what</b>", <b>string</b>));
+		options.add(new <b>CheckboxOption</b>("<b>Match whole word only</b>", <b>true</b>)); 
+		options.add(new <b>CheckboxOption</b>("<b>Match case</b>", <b>true</b>));
+		<b>options.applyOption(this);</b>
+		</pre>
+		<div class="p">Finally, we know that we have the Find dialog open, and we can then set the options we need in the dialog, this includes the string to search for, and the enable case sensitivity and "full word search". This is achieved in a few lines of code, using the <a href="robots_methods.xhtml#5">options classes</a> seen on the previous page.</div>
+		<pre class="javacode">
+		//carry out the search
+		<b>keyType(VK_ENTER)</b>;
+		<b>delay</b>(1000);
+		</pre>
+		<div class="p">We are then set to execute the search, by simply pressing <b>ENTER</b>, which will automatically close the Find dialog (this is the default behaviour of UModel, and is of course inconsistent with most of our other products). Also, the delay after the ENTER click is important, there will always be some machine which uses a bit of extra time on this, and we want to wait it to finish its CPU-work.</div>
+		<pre class="javacode">
+		//remove string from the tab when we're done
+		if(<b>cleanField</b>) {
+			<b>removeFindString</b>();
+		}
+	}
+	...
+}
+		</pre>
+		<div class="p">The remaining if-sentence is a implementational detail, plus a common work-around for GUI automation issues. After we've successfully found the element we wanted, we need to clean the Find field on the toolbar. If we don't, the text might cause later image recognition calls to accidentally find this string. However, we only want to do this when we're all done with the searching, thus the conditional call, using the <b>cleanField</b> boolean.</div>
+		<h2>
+			<a name="findModelTreeElement" />UModelRobot - findModelTreeElement(String qname)</h2>
+		<div class="p">In the following example, the <i>findDialog</i>-method above is used to find one specific element in the Model Tree. (If UModel's functionality had included search for "fully qualified names", as requested in TTP #16580, most of this would be redundant. However, it is a good example of quite a few Robots solutions.) The method takes a "qname" (e.g. "com::altova::robots::AltovaApplicationRobot::activatePane") and splits up the elements, then search for each element in order, and when the last element is found, reports the coordinates where that element is currently located in the Model Tree. The algorithm is as follows:
+		<ol>
+				<li>Split the input <i>qname</i> into parts, using "::" as the deliminator.</li>
+				<li>Make sure the <i>Root</i> (top) element is selected in the Model Tree.</li>
+				<li>For each part:
+				<ol>
+						<li>Use the <i>Find dialog</i> to search for the element string (and select it in the Model Tree).</li>
+						<li>While the element string is not confirmed:
+						<ol>
+								<li>Confirm string in <i>name</i> field of the <i>Properties window</i>.</li>
+								<li>If not correct, press <i>find next</i> (usually F3).</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li>Removed the last search string from the Find field on the toolbar.</li>
+				<li>Activate the Properties pane, to make sure the Model Tree is <i>deselected</i> (to make sure the selected colour is consistent).</li>
+				<li>Search for the last part of the qualified name in the Model Tree, using normal fonts.</li>
+				<li>If the string was not found, search for the string in <i>italic</i> in the Model Tree (in case the element is abstract).</li>
+				<li>Return the location of the element in the Model Tree, or throw an <i>ImageNotFoundException</i> if it was not found.</li>
+			</ol>
+		</div>
+		<div class="p"></div>
+		<pre class="javacode">
+	public Rectangle findModelTreeElement(String qname) {
+		String <b>names</b>[] = <b>qname.split("::")</b>;
+		
+		<b>selectModelTreeRoot</b>();
+		</pre>
+		<div class="p">The code above, takes care of the first two steps: Split the input qname into parts, using "::" as the deliminator, and make sure the Root (top) element is selected in the Model Tree. The array <b>names</b> will now contain the qname in parts, e.g. ["com", "altova", "robots", "AltovaApplicationRobot", "activatePane"].</div>
+		<pre class="javacode">
+		for (String <b>name</b> : names) {
+			logger.finest("Searching for " + name);
+			boolean found = false;
+			<b>findDialog</b>(name, false);
+		</pre>
+		<div class="p">Then we enter the for-loop which looks at the parts one at a time. The variable <b>name</b> will now hold the part that we are working on, e.g. in the first round "com". Also note the logging commands liberally spread throughout the code; it helps debugging later. Finally, note the call to <b>findDialog</b>, which was <a href="#findDialog">explained above</a>.</div>
+		<pre class="javacode">
+			for (int i = 0; i &lt; 20 &amp;&amp; !found; i++) {
+				// check if we found the right element by looking
+				// at the name in the properties field
+				Rectangle hint = <b>getPaneKeyValue</b>(PROPERTIES, "name");
+				logger.finest("hint: " + hint);
+		</pre>
+		<div class="p">After the search from the find dialog was done, we want to make sure we've actually found the right element. E.g. the first element we find might be a "ComponentRealization" of the package "com", which we are not interested in. The way to determine this, is to look at the name field of the Properties window. The call to <b>getPaneKeyValue</b> returns the location of this value.</div>
+		<pre class="javacode">
+				try {
+					Rectangle res = findString(<b>name + "  "</b>, <b>DEFAULT_CONTENT_FONT</b>, 
+									<b>Color.WHITE</b>, Color.BLACK, hint, false);
+					found = true;
+					logger.finest("found key name: " + name + ", res: " + res);
+				} catch (<b>ImageNotFoundException</b> e) {
+				} // ignore (and continue search)
+		</pre>
+		<div class="p">Here's the actual search for the "com" text in the Properties window. Here's several things to notice:
+		<ul>
+			<li>The text to search for is appended with a blank (<b>name + " "</b>). Is is done so we don't find tings like "communication" when searching for "com".</li>
+			<li><b>DEFAULT_CONTENT_FONT</b> is used, since we're searching for text in the Properties window. The Model Tree and other types of properties (e.g. Attributes, Entry helpers, etc) also use this font.</li>
+			<li>The background colour is explicitly set to <b>white</b>, so that the blank space above is not ignored.</li>
+			<li>Finally, the whole thing is wrapped in a try-catch for an <b>ImageNotFoundException</b>. This is because the <b>findString</b>-method will throw this exception if the image was not found, however, in this case, that is not a failure. We'll just have to try to search for the element again.</li>
+		</ul>
+		</div>
+		<pre class="javacode">
+				if (!found) {
+					activatePane(MODEL_TREE);
+					<b>findNext</b>();
+				}
+			}
+		}
+		</pre>
+		<div class="p">At this point, we might have found the element we're looking for. However, if not, we'll try <b>findNext</b> (usually F3).</div>
+		<pre class="javacode">
+		<b>removeFindString</b>();
+		<b>activatePane(PROPERTIES)</b>;
+		</pre>
+		<div class="p">After we've finished using the Find dialog, we should always remove the string from the Find field on the toolbar. Then we want to <i>deactivate</i> the Model Tree, so that the select element has a high contrast, consistent background colour. The best way to do this, is just to <b>activate the Properties</b> window, while we're searching in the Model Tree.</div>
+		<pre class="javacode">
+		// try to find it in the Model Tree window
+		Rectangle ans = null;
+		String mtName = <b>names[names.length - 1] + " "</b>;
+		Color <b>selectedElementBg = new Color(220, 220, 220); // very light gray</b>
+		</pre>
+		<div class="p">Here we prepare to search the Model Tree. we want to look for the <b>last element of the qname</b> ("activatePane" from the example above), and again we append a space to make sure no other strings are found. Then we prepare the <b>background colour of the selected element</b>. It happens to be a <b>very light gray colour</b>.</div>
+		<pre class="javacode">
+		// search in normal font
+		try {
+			ans = findString(mtName, <b>DEFAULT_CONTENT_FONT</b>, <b>selectedElementBg</b>, Color.BLACK, null, false);
+		} catch (ImageNotFoundException e) {
+			logger.fine("Element " + mtName + " not found in Model Tree. Will search in italic font as well");
+		}
+		</pre>
+		<div class="p">Here is the actual search for the last qname part in the Model Tree. Notice the <b>DEFAULT_CONTENT_FONT</b> and the <b>grey colour defined above</b>.</div>
+		<pre class="javacode">
+		// search in italic fonts (for abstract classes)
+		if (ans == null) {
+			Font italic = <b>DEFAULT_CONTENT_FONT</b>.deriveFont(Font.<b>ITALIC</b>);
+			ans = <b>findString</b>(mtName, italic, selectedElementBg, Color.BLACK, null, false);
+		}
+		</pre>
+		<div class="p">The the element was not found in the Model Tree, it could be that it was because it was shown in italic. <i>Abstract</i> elements are shown in <b>italic</b>, so we'll repeat the search with the same font in italic. However, if this also fails, an <b>ImageNotFoundException</b> will be thrown.</div>
+		<pre class="javacode">
+		logger.finest("findModelTreeElement - return: " + ans);
+		return ans;
+	}
+		</pre>
+		<div class="p">If everything went ok though, we'll simply return the location of the element. Of course this location is rather short lived, and must be used at once. If any other element is selected in the diagram, or any other menu item is clicked, etc, the element might not be there anymore.</div>
+	</body>
+</html>

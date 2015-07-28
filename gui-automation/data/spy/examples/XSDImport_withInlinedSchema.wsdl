@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by B (Altova GmbH) -->
+<wsdl:description targetNamespace="http://example.org/XSDImport" xmlns:name="http://example.org/name" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<wsdl:documentation>
+		
+	</wsdl:documentation>
+	<wsdl:types>
+		<xs:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+			<xs:import namespace="http://example.org/name" schemaLocation="name.xsd"/>
+			<xs:element name="ElementInside"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:interface name="Name">
+		<wsdl:operation name="getNameFromSIN" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<wsdl:input element="name:SIN"/>
+			<wsdl:output element="name:Name"/>
+		</wsdl:operation>
+	</wsdl:interface>
+</wsdl:description>

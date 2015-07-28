@@ -1,0 +1,15 @@
+<?xml version="1.1"?>
+<!-- dateTimeStamp_datatype_test.xml
+ - Copyright (c) 2013 by Dr. Herong Yang, herongyang.com
+-->
+<DateTimeStamp_Datatype_Test xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dateTimeStamp_datatype_test.xsd">
+	<!-- 4 valid "DateTimeStamp" elements -->
+	<DateTimeStamp>1971-05-16T00:00:01Z</DateTimeStamp>
+	<DateTimeStamp>1971-05-16T00:00:01.123456780000Z</DateTimeStamp>
+	<DateTimeStamp>345671971-05-16T00:00:01Z</DateTimeStamp>
+	<DateTimeStamp>1971-05-16T00:00:01+00:00</DateTimeStamp>
+	<!-- 3 invalid "DateTimeStamp" elements -->
+	<DateTimeStamp>1971-05-16T00:00:01</DateTimeStamp>
+	<DateTimeStamp>1971-05-16-05:00</DateTimeStamp>
+	<DateTimeStamp>00:00:01+00:00</DateTimeStamp>
+</DateTimeStamp_Datatype_Test>

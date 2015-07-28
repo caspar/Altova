@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Robots class hierarchy</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="robots_methods.xhtml">Next: Important methods in the robots framework</a>
+		</div>
+		<div class="previous">
+			<a href="robots_overview.xhtml">Previous: Overview of the Automation Framework</a>
+		</div>
+		<h1>Robots class hierarchy</h1>
+		<h2>
+			<a name="1" />Background</h2>
+		<div class="p">
+		All the functionality in the GUI automation framework is based on the pure Sun Java API (latest release). Apart from JUnit to run the tests, there are no other library dependencies. This has both some advantages and disadvantages: The Java API provides a rich set of general purpose classes, and there is usually no need to go outside this API to search for basic functionality. However, in some special cases, it is necessary to extend some of the functionality, as one would in any normal software project.
+		</div>
+		<div class="p">When making such extensions, it makes sense to layer the type of functionality which is added, so that further development can be abstracted away from the mundane tasks, and small pices can be put together in bigger tasks. This has been the aim of the hierarchy of the robots classes used in the automation framework. More complex functionality is layered in subclass and structured so that the bits and pices which belongs together are at the same level. This will of course create a bigger hierarchy and more classes, however it should make it easier to focus on the solution.</div>
+		<h2>
+			<a name="2" />The basic framework</h2>
+		<div class="p">
+			The robots classes are built around the Java API class <a href="http://java.sun.com/javase/6/docs/api/java/awt/Robot.html">java.awt.Robot</a>, thus the name.
+			<map id="robots_classes">
+				<area alt="SpyRobot" coords="446,275,508,294" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\spy\SpyRobot.html" />
+				<area alt="DiffDogRobot" coords="371,350,452,369" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\diffdog\DiffDogRobot.html" />
+				<area alt="UModelRobot" coords="686,275,769,294" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\gui\UModelRobot.html" />
+				<area alt="GenericRobot" coords="371,35,456,54" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\GenericRobot.html" />
+				<area alt="AuthenticRobot" coords="41,350,136,369" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\authentic\AuthenticRobot.html" />
+				<area alt="MapForceRobot" coords="491,350,587,369" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\mapforce\MapForceRobot.html" />
+				<area alt="ApplicationRobot" coords="362,125,465,144" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\ApplicationRobot.html" />
+				<area alt="StyleVisionRobot" coords="536,275,640,294" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\stylevision\StyleVisionRobot.html" />
+				<area alt="DatabaseSpyRobot" coords="191,350,303,369" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\databasespy\DatabaseSpyRobot.html" />
+				<area alt="SchemaAgentRobot" coords="101,275,220,294" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\schemaagent\SchemaAgentRobot.html" />
+				<area alt="SemanticWorksRobot" coords="266,275,395,294" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\semanticworks\SemanticWorksRobot.html" />
+				<area alt="ImageRecognitionRobot" coords="343,80,484,99" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\ImageRecognitionRobot.html" />
+				<area alt="AltovaApplicationRobot" coords="341,170,485,188" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\AltovaApplicationRobot.html" />
+			</map>
+			<img alt="robot hierarchy" src="robots_classes.png" class="diagram" usemap="#robots_classes"/>
+			<i>Click on the classes to go directly to the Java Doc.</i>
+		</div>
+		<h2>
+			<a name="GenericRobot" />GenericRobot</h2>
+		<div class="p">The GenericRobot is a convenience class which warps the AWT Robot framework with any kind of mouse robot behaviour in mind. It's adding left and right click methods for specified positions, drag and drop gestures and simulating typing of strings on the keyboard. </div>
+		<div class="p">The class does not extend the <i>java.awt.Robot</i> class, but wraps its methods instead, to avoid these to be public. The wrapper methods are intentionally protected, so that their basic functionality is not use in test scripts. Especially, it is not desirable to use the methods which take specific coordinates directly. Instead new <i>find</i>-methods should be implemented around the problem to be solved.
+		</div>
+		<h2>
+			<a name="ImageRecognitionRobot" />ImageRecognitionRobot</h2>
+		<div class="p">As its name suggests, ImageRecognitionRobot deals with image recognition on the screen. It is probably the most central class in the whole framework, since every single mouse move will somehow have to be based on finding an icon or a string of text on screen, and then possible click there. The class includes several find-methods in various forms, which all will return a <i>Rectangle</i>, indicating the position on screen where the image or text was found. If the search fails, these methods will throw an <i>com.altova.robots.ImageNotFoundException</i>, which most of the time can be passed on up through the call stack, without any try-catch. (It is a RuntimeException, so no throws declaration is required).
+		</div>
+		<div class="p">The two most important methods are the ImageRecognitionRobot is probably <i>comparePixels(int, int)</i> and <i>createImage(String, Font, Color, Color)</i>. <i>comparePixels</i> is at the heart of the image recognition, and does the actual comparing between one pixel from the screen and one pixel from the image to be located. It includes three ways to compare the pixels: black &amp; white, full colour, and colour interval. For more details on this, see <a href="lookout.xhtml#1">Picture recognition</a>. </div>
+		<div class="p">The <i>createImage(String, Font, Color, Color)</i> is important for locating text on the screen. It takes the text to search for, the font this text is shown in, and the background and text colour, and returns and image rendering of this text, which hopefully will match what's seen on screen. It's a rather small method, but includes two tricks: First, it tries to position the text as high up towards the top of the new images as possible. This avoids searching for a lot of blank pixels initially, which would have to be ignored over and over again. Second, it cuts the bottom of the text to be search for, this avoid the problem with the menu item keyboard shortcuts, which are underline. E.g. on the File menu, F is underlined, but you cannot know which key is the shortcut (and it may also change!), so therefore, this bit is ignored when searching for text.</div>
+		<h2>
+			<a name="ApplicationRobot" />ApplicationRobot</h2>
+		<div class="p">This is a relatively small class which implements some common tasks one can perform in all Windows applications, like clicking a menu item, moving the scrollbar, maximizing the window, etc. Furthermore, it contains general methods to determine whether the specific application is running, is the active application, etc. Finally, it includes some find-methods for locating Windows specific GUI objects on screen, as determined by their name and MFC class. These methods should be used with care, especially when searching for specific class-names, as these might change. This was one of the major problems with Test Complete.
+		</div>
+		<h2>
+			<a name="AltovaApplicationRobot" />AltovaApplicationRobot</h2>
+		<div class="p">AltovaApplicationRobot is further specialised towards the Altova applications, and include some of the common menu items on the Edit and Help menus. Also, it can manage the various Panes or internal windows, e.g. the Message window and Properties window, and set values there. It also includes the front methods for accessing resource specific icons by their C++ names (or tooltip names). For how to keep this update, please see the section <a href="toolbar_rc.xhtml">Maintinging toolbar resource files</a>
+		</div>
+		<h2>
+			<a name="8" />SpyRobot, UModelRobot, etc</h2>
+		<div class="p">Finally, the application specific robots include all or most of the actions, settings and features in the Altova applications. Generally, there is at least one method for each menu item, and possibly a variety of auxiliary methods to handle more complex actions. These methods should preferably be quite small; no more than 5-10 lines of code each is probably a good rule of thumb. If they tend to get bigger, it might suggest that something has to be split up a bit, and reorganised into small methods.
+		</div>
+	</body>
+</html>

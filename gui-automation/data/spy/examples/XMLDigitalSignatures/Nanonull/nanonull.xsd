@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.altova.com/nanonull" xmlns:nanonull="http://www.altova.com/nanonull" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:us-gaap-all="http://xbrl.us/us-gaap-all/2008-03-31" xmlns:us-gaap-std="http://xbrl.us/us-gaap-std/2008-03-31" xmlns:us-gaap="http://xbrl.us/us-gaap/2008-03-31" xmlns:us-roles="http://xbrl.us/us-roles/2008-03-31" xmlns:us-types="http://xbrl.us/us-types/2008-03-31">
+	<xs:annotation>
+		<xs:appinfo>
+			<link:roleType id="FinancialStatements" roleURI="http://www.nanonull.com/taxonomy/role/FinancialStatements">
+				<link:definition>Notes to Financial Statements</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType id="SegmentRevenueAndOperatingIncome" roleURI="http://www.nanonull.com/taxonomy/role/SegmentRevenueAndOperatingIncome">
+				<link:definition>006091 - Disclosure - Segment Revenue and Operating Income</link:definition>
+				<link:usedOn>link:calculationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:presentationLink</link:usedOn>
+			</link:roleType>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="nanonull_cal.xml" xlink:title="Calculation Links, all"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="nanonull_lab.xml" xlink:title="Label Links, all"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="nanonull_pre.xml" xlink:title="Presentation Links, all"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="nanonull_def.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="http://xbrl.us/us-gaap/1.0/stm/us-gaap-stm-ci-scf-indir-cal-2008-03-31.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="http://xbrl.us/us-gaap/1.0/stm/us-gaap-stm-ci-scf-indir-pre-2008-03-31.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="http://xbrl.us/us-gaap/1.0/stm/us-gaap-stm-ci-sfp-cls-cal-2008-03-31.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="http://xbrl.us/us-gaap/1.0/stm/us-gaap-stm-ci-sfp-cls-pre-2008-03-31.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="http://xbrl.us/us-gaap/1.0/stm/us-gaap-stm-ci-soi-cal-2008-03-31.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="http://xbrl.us/us-gaap/1.0/stm/us-gaap-stm-ci-soi-pre-2008-03-31.xml"/>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+	<xs:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"/>
+	<xs:import namespace="http://xbrl.us/us-gaap-all/2008-03-31" schemaLocation="http://xbrl.us/us-gaap/1.0/elts/us-gaap-all-2008-03-31.xsd"/>
+	<xs:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+	<xs:import namespace="http://xbrl.us/us-types/2008-03-31" schemaLocation="http://xbrl.us/us-gaap/1.0/elts/us-types-2008-03-31.xsd"/>
+	<xs:element name="ContingenciesDisclosureTextBlock" id="nanonull_ContingenciesDisclosureTextBlock" type="us-types:textBlockItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="CostOfOnboardAndOther" id="nanonull_CostOfOnboardAndOther" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:balance="debit" xbrli:periodType="duration"/>
+	<xs:element name="CruiseCommissionsTransportationAndOther" id="nanonull_CruiseCommissionsTransportationAndOther" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:balance="debit" xbrli:periodType="duration"/>
+	<xs:element name="NotesToFinancialStatementsAbstract" id="nanonull_NotesToFinancialStatementsAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:periodType="duration"/>
+	<xs:element name="OnboardAndOther" id="nanonull_OnboardAndOther" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" nillable="true" abstract="false" xbrli:balance="credit" xbrli:periodType="duration"/>
+	<xs:element name="Asia" id="nanonull_Asia" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" abstract="true" xbrli:periodType="duration"/>
+	<xs:element name="Europe" id="nanonull_Europe" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" abstract="true" xbrli:periodType="duration"/>
+	<xs:element name="USA" id="nanonull_USA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" nillable="true" abstract="true" xbrli:periodType="duration"/>
+</xs:schema>

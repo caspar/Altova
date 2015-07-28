@@ -1,0 +1,595 @@
+<!-- The following set of declarations is referenced using its PUBLIC identifier
+  
+	PUBLIC "-//USA-DOD//DTD IN XML FOR NAVY ETMs 050512 MODIFIED BY WRYCAN//EN"
+
+This is an XML DTD for Navy Electronic Technical Manuals developed for NAVSEA 
+by the Naval Surface Warfare Center Carderock Division.
+
+It is an XML translation of a subset of the NAVSEA ETM CLASS 2  DTD that is the NAVSEA 04TD 
+approved SGML DTD for MIL-M-38784-like ETMS.
+
+The following changes have been implemented in the present DTD file dated 050512.
+
+1. A "danger" element type has been defined in the same way as the three 
+special paragraphs, "warning", "caution", and "note".
+
+2. The "danger" element type has been added to the options of "%paracon;".
+
+3. The "danger" element type has been added to the options of "entry" content.
+
+4. The content model of the "chapter" element type has been redefined to allow 
+an optional "para0" element after a "section" element in "chapter" content.
+
+5. The "table" element type was introduced into the content model of the "foldout" element 
+type as part of a required and repeatable choice of "figure" or "table" elements for "foldout" content.
+
+6. The "table" element type was introduced into the content model of the "glossary" element 
+type as part of a required and repeatable choice of "deflist" or "table" elements after the "title" element in "glossary" content.
+
+7. The "security" attribute has defined for the "title" element type.
+-->
+<!--
+The following changes were implemented in the DTD file dated 020521.
+
+1. The "yesorno" parameter entity has been removed.
+
+2. All "%yesorno;" parameter entity references in attribute definitions have been 
+replaced with "(0 | 1)".
+
+3. The content model of the "row" element type was changed from "(entry | entrytbl)+"
+to "(entry | entrytbl)*".
+
+4. In the ATTLIST lists of attribute definitions, the #REQUIRED attributes have been
+placed first.
+
+5. The '<?xml version="1.0"?>' XML Declaration was removed from this XML DTD file 
+because the XML Declaration occurs before the DOCTYPE declaration invoking an XML 
+DTD file, not inside the XML DTD file itself.
+
+6. The ten "Externals" element types ("external", "xlink", "xelemloc", "audio", 
+"video", "process", "ipcmsg", "media", "subtask", and "parameter") have been removed.
+
+7. The "externals" parameter entity has been removed.
+
+8. The note
+
+	NOTE: In order to parse the following Document Type Declaration Subset, 
+	      insert "<!DOCTYPE docnavsea-etm [" at the beginning of the file and 
+	      "]>" at the end of the file.
+
+was removed because this parsing procedure is not appropriate for XML DTDs.
+-->
+<!-- Data Content Notation Declarations -->
+<!-- Each of the following notations provides a capability for accessing data
+     of a certain type by a declared entity. -->
+<!NOTATION cgmbin PUBLIC "ISO 8632/3//NOTATION CGM Binary text encoding//EN">
+<!NOTATION iges PUBLIC "-//USA-DOD//NOTATION (ASME/ANSI Y14.26M-1987) Initial 
+                                        Graphics Exchange Specification//EN">
+<!NOTATION fax PUBLIC "-//USA-DOD//NOTATION CCITT Group 4 Facsimile Type1 
+                                                     Untiled Raster//EN">
+<!NOTATION faxtile PUBLIC "-//USA-DOD//NOTATION CCITT Group 4 Facsimile 
+                                              Type 2 Tiled Raster//EN">
+<!NOTATION tif PUBLIC "Public Identifier for TIF">
+<!-- ISO Character Set Declarations -->
+<!-- The ENTITY declarations contained in the following XML versions of the ISO 
+     character sets provide linkage to the non-keyboard characters for the
+     application software. They also allow XML delimiters to be used as
+     character data. -->
+<!-- NOTE: The system identifiers in the following ENTITY declarations
+     must reflect your installation of the XML ISO character sets. -->
+<!ENTITY % ISOlat1 PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN" 
+"isochars-fo/isolat1-fo.pen">
+<!ENTITY % ISOpub PUBLIC "ISO 8879:1986//ENTITIES Publishing//EN"
+"isochars-fo/isopub-fo.pen">
+<!ENTITY % ISOgrk1 PUBLIC "ISO 8879:1986//ENTITIES Greek Letters//EN"
+"isochars-fo/isogrk1-fo.pen">
+<!ENTITY % ISOgrk3 PUBLIC "ISO 8879:1986//ENTITIES Greek Symbols//EN"
+"isochars-fo/isogrk3-fo.pen">
+<!ENTITY % ISOnum PUBLIC "ISO 8879:1986//ENTITIES Numeric and Special 
+Graphic//EN" "isochars-fo/isonum-fo.pen">
+<!ENTITY % ISOtech PUBLIC "ISO 8879:1986//ENTITIES General Technical//EN"
+"isochars-fo/isotech-fo.pen">
+%ISOlat1;%ISOpub;%ISOgrk1;%ISOgrk3;%ISOnum;%ISOtech;
+<!-- TABBING CAPABILITY -->
+<!ENTITY tab "     ">
+<!-- Parameter Entity Declarations -->
+<!-- These parameter entities allow a simplification of element content models
+     and attribute definitions. -->
+<!ENTITY % text "(#PCDATA | ftnref | xref | change | emphasis | 
+                  graphic | subscrpt | supscrpt | symbol | partno | nsn | 
+                  modelno | docno | refdes | extref | dialink | inline)*">
+<!ENTITY % list "(seqlist | randlist | deflist)">
+<!ENTITY % paracon "para | warning | caution | note | danger | soc">
+<!ENTITY % lvl "chglvl         CDATA        #IMPLIED
+                delchlvl       CDATA        #IMPLIED
+                inschlvl       CDATA        #IMPLIED">
+<!ENTITY % bodyatt "id            ID                     #IMPLIED
+                    label         CDATA                  #IMPLIED 
+                    %lvl; 
+                    security      (u | c | s | ts)       #IMPLIED">
+<!-- Many attributes have a Boolean (or binary) value. They take the values 
+"0" or "1". "0" is interpreted as false, and "1" as true. -->
+<!-- Element Definitions -->
+<!-- The elements are defined in their hierarchical structure, from top to 
+     bottom, and front to back of the document. -->
+<!ELEMENT docnavy-etm (foreword?, ((front, body, rear?) | (volume+)), glossary?)>
+<!ATTLIST docnavy-etm
+    id ID #IMPLIED
+    security (u | c | s | ts) #IMPLIED
+    bundle NMTOKEN #IMPLIED
+    chglvl CDATA #IMPLIED
+    pagesize (A | B) #IMPLIED
+    orient (port | land) #IMPLIED
+>
+<!ELEMENT volume (title?, front?, body?, rear?)>
+<!ATTLIST volume
+    num NMTOKEN #REQUIRED
+    tocentry (0 | 1) "1"
+    id ID #IMPLIED
+    label CDATA #IMPLIED
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT foreword ((%paracon;)*, para0*)>
+<!ATTLIST foreword
+    tocentry (0 | 1) "1"
+    %bodyatt; 
+>
+<!ELEMENT preface ((%paracon;)*, para0*)>
+<!ATTLIST preface
+    tocentry (0 | 1) "1"
+    %bodyatt; 
+>
+<!ELEMENT intro ((%paracon;)*, para0*)>
+<!ATTLIST intro
+    tocentry (0 | 1) "1"
+    %bodyatt; 
+>
+<!ELEMENT front (((title?, docno) | (idinfo | lep | chgrec | foreword | preface | intro | contents | illuslist | tablelist | safesum)+), (fsection | graphic)+)>
+<!ELEMENT idinfo (pubno | nsn | chgnum | revnum | titleblk | mfr | contractno | seal | notice | pubdate | chgdate)+>
+<!ELEMENT pubno (docno+)>
+<!ELEMENT docno %text;>
+<!ELEMENT nsn %text;>
+<!ELEMENT chgnum %text;>
+<!ELEMENT revnum %text;>
+<!ELEMENT titleblk (volnum?, revnum?, doctype, maintlvl*, prtitle, stitle?)>
+<!ELEMENT volnum %text;>
+<!ELEMENT doctype %text;>
+<!ELEMENT maintlvl %text;>
+<!ELEMENT prtitle (nomen, eqpttype?, (partno | modelno | nsn)*)>
+<!ELEMENT nomen %text;>
+<!ELEMENT eqpttype %text;>
+<!ELEMENT partno %text;>
+<!ELEMENT modelno %text;>
+<!ELEMENT stitle %text;>
+<!ELEMENT mfr %text;>
+<!ELEMENT contractno %text;>
+<!ELEMENT seal (graphic)>
+<!ELEMENT notice (para | table)+>
+<!ELEMENT pubdate %text;>
+<!ELEMENT chgdate %text;>
+<!ELEMENT lep (leprevisions, lepchanges)>
+<!ELEMENT lepchanges (lepchange)+>
+<!ELEMENT lepchange (leppagenumber, lepchangenumber)>
+<!ELEMENT leppagenumber %text;>
+<!ELEMENT lepchangenumber %text;>
+<!ELEMENT leprevisions (leprevision)+>
+<!ELEMENT leprevision (leptitle, lepdate, lepcomment?)>
+<!ELEMENT leptitle %text;>
+<!ELEMENT lepdate %text;>
+<!ELEMENT lepcomment %text;>
+<!ELEMENT chgrec (table | graphic)>
+<!ATTLIST chgrec
+    %bodyatt; 
+>
+<!ELEMENT contents EMPTY>
+<!ELEMENT illuslist EMPTY>
+<!ATTLIST illuslist
+    tocentry (0 | 1) "1"
+>
+<!ELEMENT tablelist EMPTY>
+<!ATTLIST tablelist
+    tocentry (0 | 1) "1"
+>
+<!ELEMENT safesum (para | warning | caution)+>
+<!ATTLIST safesum
+    tocentry (0 | 1) "0"
+    %bodyatt; 
+>
+<!ELEMENT refdes %text;>
+<!ELEMENT fsection (title?, (%paracon;)*, (section* | para0*))>
+<!ATTLIST fsection
+    %bodyatt; 
+>
+<!-- The Body Matter Elements  -->
+<!ELEMENT body (chapter+ | section+)>
+<!ELEMENT chapter (title?, (%paracon;)*, intro?, ((section, para0?)+ | para0+))>
+<!ATTLIST chapter
+    tocentry (0 | 1) "1"
+    %bodyatt; 
+>
+<!ELEMENT section (title?, (%paracon;)*, (subsection+ | para0+))>
+<!ATTLIST section
+    tocentry (0 | 1) "1"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subsection (title?, (%paracon;)*, para0*)>
+<!ATTLIST subsection
+    tocentry (0 | 1) "1"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!-- The Rear Matter Elements -->
+<!ELEMENT rear (appendix | glossary | rsection | foldout)*>
+<!ELEMENT rsection (title?, (%paracon;)*, (section* | para0*))>
+<!ATTLIST rsection
+    %bodyatt; 
+>
+<!ELEMENT appendix (title?, (%paracon;)*, (chapter* | section* | para0*))>
+<!ATTLIST appendix
+    tocentry (0 | 1) "1"
+    %bodyatt; 
+>
+<!ELEMENT glossary (para?, (title, (deflist | table)+)+)>
+<!ATTLIST glossary
+    tocentry (0 | 1) "1"
+>
+<!-- The Enumerated Paragraphs -->
+<!ELEMENT para0 (title?, (%paracon;)*, step1*, subpara1*)>
+<!ATTLIST para0
+    tocentry (0 | 1) "1"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subpara1 (title?, (%paracon;)*, step1*, subpara2*)>
+<!ATTLIST subpara1
+    tocentry (0 | 1) "0"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subpara2 (title?, (%paracon;)*, step1*, subpara3*)>
+<!ATTLIST subpara2
+    tocentry (0 | 1) "0"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subpara3 (title?, (%paracon;)*, step1*, subpara4*)>
+<!ATTLIST subpara3
+    tocentry (0 | 1) "0"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subpara4 (title?, (%paracon;)*, step1*, subpara5*)>
+<!ATTLIST subpara4
+    tocentry (0 | 1) "0"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subpara5 (title?, (%paracon;)*, step1*, subpara6*)>
+<!ATTLIST subpara5
+    tocentry (0 | 1) "0"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subpara6 (title?, (%paracon;)*, step1*, subpara7*)>
+<!ATTLIST subpara6
+    tocentry (0 | 1) "0"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subpara7 (title?, (%paracon;)*, step1*)>
+<!ATTLIST subpara7
+    tocentry (0 | 1) "0"
+    type (singlecolumn | doublecolumn) #IMPLIED
+    %bodyatt; 
+>
+<!-- The Step Elements -->
+<!ELEMENT step1 ((%paracon;)+, step2*)>
+<!ATTLIST step1
+    %bodyatt; 
+>
+<!ELEMENT step2 ((%paracon;)+, step3*)>
+<!ATTLIST step2
+    %bodyatt; 
+>
+<!ELEMENT step3 ((%paracon;)+, step4*)>
+<!ATTLIST step3
+    %bodyatt; 
+>
+<!ELEMENT step4 ((%paracon;)+, step5*)>
+<!ATTLIST step4
+    %bodyatt; 
+>
+<!ELEMENT step5 ((%paracon;)+, step6*)>
+<!ATTLIST step5
+    %bodyatt; 
+>
+<!ELEMENT step6 ((%paracon;)+, step7*)>
+<!ATTLIST step6
+    %bodyatt; 
+>
+<!ELEMENT step7 ((%paracon;)+)>
+<!ATTLIST step7
+    %bodyatt; 
+>
+<!-- The "%text;" Elements -->
+<!ELEMENT emphasis %text;>
+<!ATTLIST emphasis
+    emph (b | i | u | q | s | bo | bu | o) "b"
+>
+<!ELEMENT supscrpt (#PCDATA)>
+<!ELEMENT subscrpt (#PCDATA)>
+<!ELEMENT brk EMPTY>
+<!ATTLIST brk
+    type (line | page) "line"
+>
+<!ELEMENT xref %text;>
+<!ATTLIST xref
+    xrefid CDATA #REQUIRED
+    xidtype (figure | table | text | note) #IMPLIED
+    empty (0 | 1) #IMPLIED
+>
+<!ELEMENT extref %text;>
+<!ATTLIST extref
+    docno CDATA #REQUIRED
+    xidtype (figure | table | text | note) #REQUIRED
+    xrefid CDATA #REQUIRED
+    empty (0 | 1) #IMPLIED
+>
+<!ELEMENT dialink (#PCDATA)>
+<!ATTLIST dialink
+    boardno ENTITY #REQUIRED
+    hypdestn CDATA #REQUIRED
+    ident CDATA #IMPLIED
+>
+<!ELEMENT ftnref EMPTY>
+<!ATTLIST ftnref
+    xrefid IDREF #REQUIRED
+    label CDATA #IMPLIED
+>
+<!ELEMENT ftnote (para+)>
+<!ATTLIST ftnote
+    id ID #REQUIRED
+    label CDATA #IMPLIED
+    mark (ctr | sym) "ctr"
+>
+<!ELEMENT change %text;>
+<!ATTLIST change
+    change (add | delete) #IMPLIED
+    level CDATA #IMPLIED
+    mark (0 | 1) #IMPLIED
+    id ID #IMPLIED
+>
+<!ELEMENT symbol EMPTY>
+<!ATTLIST symbol
+    boardno ENTITY #REQUIRED
+>
+<!-- The "%list;" Elements -->
+<!ELEMENT randlist (title?, item+)>
+<!ATTLIST randlist
+    %bodyatt; 
+    prefix CDATA #IMPLIED
+>
+<!ELEMENT seqlist (title?, item+)>
+<!ATTLIST seqlist
+    numstyle (arabic | romanuc | romanlc | alphauc | alphalc) #IMPLIED
+    prefix CDATA #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT item (#PCDATA | ftnref | xref | change | emphasis | graphic | subscrpt | supscrpt | symbol | partno | nsn | modelno | docno | extref | dialink | para | warning | caution | note | soc | inline)*>
+<!ATTLIST item
+    %bodyatt; 
+>
+<!ELEMENT deflist (title?, (term, def)+)>
+<!ATTLIST deflist
+    id ID #IMPLIED
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT term %text;>
+<!ATTLIST term
+    id ID #IMPLIED
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT def (para)+>
+<!ATTLIST def
+    id ID #IMPLIED
+    security (u | c | s | ts) #IMPLIED
+>
+<!-- The Figure Element(s) -->
+<!ELEMENT figure (title?, (graphic | (subfig | subfoldout)+))>
+<!ATTLIST figure
+    tocentry (0 | 1) "1"
+    orient (port | land) #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT subfig (graphic)>
+<!ATTLIST subfig
+    id ID #IMPLIED
+    %lvl;
+>
+<!ELEMENT foldout (figure | table)+>
+<!ATTLIST foldout
+    pgstyle NMTOKEN #IMPLIED
+    page-count (even | odd | auto) "auto"
+>
+<!ELEMENT subfoldout (subfig+)>
+<!ATTLIST subfoldout
+    pgstyle NMTOKEN #IMPLIED
+>
+<!-- The Table Elements -->
+<!ELEMENT table (title?, (tgroup | graphic)+)>
+<!ATTLIST table
+    tocentry (0 | 1) "1"
+    frame (top | bottom | topbot | all | sides | none) #IMPLIED
+    colsep (0 | 1) #IMPLIED
+    rowsep (0 | 1) #IMPLIED
+    pgwide (0 | 1) #IMPLIED
+    orient (port | land) #IMPLIED
+    display (inline | outline) "inline"
+    fmttype NMTOKEN #IMPLIED
+    tabstyle NMTOKEN #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT chart (title?, (tgroup | graphic)+)>
+<!ATTLIST chart
+    tocentry (0 | 1) "1"
+    frame (top | bottom | topbot | all | sides | none) #IMPLIED
+    colsep (0 | 1) #IMPLIED
+    rowsep (0 | 1) #IMPLIED
+    pgwide (0 | 1) #IMPLIED
+    orient (port | land) #IMPLIED
+    display (inline | outline) "inline"
+    fmttype NMTOKEN #IMPLIED
+    tabstyle NMTOKEN #IMPLIED
+    %bodyatt; 
+>
+<!ELEMENT tgroup (colspec*, spanspec*, thead?, tbody, tfoot?)>
+<!ATTLIST tgroup
+    cols NMTOKEN #IMPLIED
+    tgroupstyle NMTOKEN #IMPLIED
+    colsep (0 | 1) #IMPLIED
+    rowsep (0 | 1) #IMPLIED
+    align (left | right | center | justify | char) "left"
+    charoff NMTOKEN "50"
+    char CDATA ""
+>
+<!ELEMENT colspec EMPTY>
+<!ATTLIST colspec
+    colnum NMTOKEN #IMPLIED
+    colname NMTOKEN #IMPLIED
+    colwidth CDATA #IMPLIED
+    colsep (0 | 1) #IMPLIED
+    rowsep (0 | 1) #IMPLIED
+    align (left | right | center | justify | char) "left"
+    charoff NMTOKEN "50"
+    char CDATA ""
+>
+<!-- Span Specification -->
+<!ELEMENT spanspec EMPTY>
+<!ATTLIST spanspec
+    namest NMTOKEN #REQUIRED
+    nameend NMTOKEN #REQUIRED
+    spanname NMTOKEN #REQUIRED
+    align (left | right | center | justify | char) "center"
+    charoff NMTOKEN #IMPLIED
+    char CDATA #IMPLIED
+    colsep (0 | 1) #IMPLIED
+    rowsep (0 | 1) #IMPLIED
+>
+<!ELEMENT tbody (row+)>
+<!ATTLIST tbody
+        valign          (top|middle|bottom)                     #IMPLIED
+>
+<!ELEMENT thead (colspec*, row+)>
+<!ATTLIST thead
+        valign          (top|middle|bottom)                     #IMPLIED
+>
+
+<!ELEMENT tfoot (colspec*, row+)>
+<!ATTLIST tfoot
+        valign          (top|middle|bottom)                     #IMPLIED
+>
+<!ELEMENT row (entry | entrytbl)*>
+<!ATTLIST row
+    rowsep (0 | 1) #IMPLIED
+    valign          (top|middle|bottom)                     #IMPLIED
+>
+<!ELEMENT entry (#PCDATA | ftnref | xref | change | emphasis | graphic | subscrpt | supscrpt | symbol | partno | nsn | modelno | docno | refdes | extref | dialink | para | warning | caution | note | danger | seqlist | randlist | deflist | soc | inline)*>
+<!ATTLIST entry
+    colname NMTOKEN #IMPLIED
+    namest NMTOKEN #IMPLIED
+    nameend NMTOKEN #IMPLIED
+    spanname NMTOKEN #IMPLIED
+    morerows NMTOKEN "0"
+    colsep (0 | 1) #IMPLIED
+    rowsep (0 | 1) #IMPLIED
+    align (left | right | center | justify | char) #IMPLIED
+    valign          (top|middle|bottom)                     #IMPLIED
+    charoff NMTOKEN #IMPLIED
+    char CDATA #IMPLIED
+    id ID #IMPLIED
+    %lvl; 
+    security (u | c | s | ts) #IMPLIED
+    background-color NMTOKEN #IMPLIED
+>
+<!ELEMENT entrytbl (colspec*, thead?, tbody)+>
+<!ATTLIST entrytbl
+    cols NMTOKEN #REQUIRED
+    tgroupstyle NMTOKEN #IMPLIED
+    colname NMTOKEN #IMPLIED
+    namest NMTOKEN #IMPLIED
+    nameend NMTOKEN #IMPLIED
+    spanname NMTOKEN #IMPLIED
+    colsep (0 | 1) #IMPLIED
+    rowsep (0 | 1) #IMPLIED
+    align (left | right | center | justify | char) #IMPLIED
+    charoff NMTOKEN #IMPLIED
+    char CDATA #IMPLIED
+    id ID #IMPLIED
+    %lvl; 
+    security (u | c | s | ts) #IMPLIED
+    background-color NMTOKEN #IMPLIED
+    frame (top | bottom | topbot | all | sides | none) #IMPLIED
+>
+<!-- The Special Paragraphs Elements -->
+<!ELEMENT warning (para | graphic | %list;)+>
+<!ATTLIST warning
+    id ID #IMPLIED
+    type CDATA #IMPLIED
+    %lvl; 
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT caution (para | graphic | %list;)+>
+<!ATTLIST caution
+    id ID #IMPLIED
+    type CDATA #IMPLIED
+    %lvl; 
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT note (para | graphic | %list;)+>
+<!ATTLIST note
+    id ID #IMPLIED
+    type CDATA #IMPLIED
+    %lvl; 
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT danger (para | graphic | %list;)+>
+<!ATTLIST danger
+    id ID #IMPLIED
+    type CDATA #IMPLIED
+    %lvl; 
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT soc (para | graphic | %list;)+>
+<!ATTLIST soc
+    id ID #IMPLIED
+    type CDATA #IMPLIED
+    %lvl; 
+    security (u | c | s | ts) #IMPLIED
+>
+<!-- The "Utility" Elements -->
+<!ELEMENT title %text;>
+<!ATTLIST title
+    security (u | c | s | ts) #IMPLIED
+>
+<!ELEMENT signature EMPTY>
+<!ELEMENT initials EMPTY>
+<!ELEMENT para (#PCDATA | title | ftnref | xref | change | emphasis | graphic | subscrpt | supscrpt | symbol | partno | nsn | modelno | docno | extref | dialink | seqlist | randlist | deflist | ftnote | brk | figure | foldout | table | chart | signature | initials | inline)*>
+<!ATTLIST para
+    %bodyatt; 
+>
+<!ELEMENT graphic EMPTY>
+<!ATTLIST graphic
+    boardno ENTITY #REQUIRED
+    graphsty (inline | outline | both) "outline"
+    reprowid NMTOKEN #IMPLIED
+    reprodep NMTOKEN #IMPLIED
+    scalefit (0 | 1) #IMPLIED
+>
+<!-- This was added because some of the symbols are in different fonts, so they are actually XSL-FO in the entity declarations in the DTD with inline elements, an xmlns attribute, and a font-family attribute.  Added these so that the content would still validate when these symbols have been inserted.  -->
+<!ELEMENT inline (#PCDATA)>
+<!ATTLIST inline
+    xmlns CDATA "http://www.w3.org/1999/XSL/Format"
+    font-family CDATA "Arial Unicode"
+>
+<!-- *************************************************************** -->

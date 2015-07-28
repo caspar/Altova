@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes-dim_role-990000" xlink:type="simple" xlink:href="rol_ifrs_for_smes-dim_2011-03-25.xsd#ifrs_for_smes-dim_role-990000"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes-dim_role-990000">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CreationDateAxis" xlink:label="loc_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DefaultFinancialStatementsDateMember" xlink:label="loc_32"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_22" xlink:to="loc_32" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ConsolidatedAndSeparateFinancialStatementsAxis" xlink:label="loc_14"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ConsolidatedMember" xlink:label="loc_35"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_14" xlink:to="loc_35" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_NonadjustingEventsAfterReportingPeriodAxis" xlink:label="loc_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_NonadjustingEventsMember" xlink:label="loc_5"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_2" xlink:to="loc_5" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsAxis" xlink:label="loc_38"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsMember" xlink:label="loc_40"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_38" xlink:to="loc_40" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfPropertyPlantAndEquipmentAxis" xlink:label="loc_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_PropertyPlantAndEquipmentMember" xlink:label="loc_28"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_8" xlink:to="loc_28" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis" xlink:label="loc_46"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CarryingAmountMember" xlink:label="loc_47"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_46" xlink:to="loc_47" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfAssetsAxis" xlink:label="loc_24"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfAssetsMember" xlink:label="loc_34"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_24" xlink:to="loc_34" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_MaturityAxis" xlink:label="loc_57"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AggregatedTimeBandsMember" xlink:label="loc_58"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_57" xlink:to="loc_58" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DefinedBenefitPlansAxis" xlink:label="loc_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DefinedBenefitPlansMember" xlink:label="loc_37"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_27" xlink:to="loc_37" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ComponentsOfEquityAxis" xlink:label="loc"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_EquityMember" xlink:label="loc_3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc" xlink:to="loc_3" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RetrospectiveApplicationAndRetrospectiveRestatementAxis" xlink:label="loc_18"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RestatedMember" xlink:label="loc_45"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_18" xlink:to="loc_45" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ReclassifiedItemsAxis" xlink:label="loc_49"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ReclassifiedItemsMember" xlink:label="loc_50"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_49" xlink:to="loc_50" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AssetsAndLiabilitiesAxis" xlink:label="loc_55"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AssetsAndLiabilitiesMember" xlink:label="loc_56"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_55" xlink:to="loc_56" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfShareCapitalAxis" xlink:label="loc_42"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfShareCapitalMember" xlink:label="loc_44"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_42" xlink:to="loc_44" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ReservesWithinEquityAxis" xlink:label="loc_51"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OtherReservesMember" xlink:label="loc_52"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_51" xlink:to="loc_52" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CategoriesOfRelatedPartiesAxis" xlink:label="loc_6"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RelatedPartiesMember" xlink:label="loc_12"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_6" xlink:to="loc_12" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfProvisionsAxis" xlink:label="loc_19"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OtherProvisionsMember" xlink:label="loc_30"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_19" xlink:to="loc_30" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfContingentLiabilitiesAxis" xlink:label="loc_21"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ContingentLiabilitiesMember" xlink:label="loc_33"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_21" xlink:to="loc_33" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfIntangibleAssetsOtherThanGoodwillAxis" xlink:label="loc_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IntangibleAssetsOtherThanGoodwillMember" xlink:label="loc_31"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_15" xlink:to="loc_31" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_MeasurementAxis" xlink:label="loc_17"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AggregatedMeasurementMember" xlink:label="loc_23"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_17" xlink:to="loc_23" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_FinancialEffectOfTransitionFromPreviousGAAPToIFRSsAxis" xlink:label="loc_4"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IFRSsMember" xlink:label="loc_10"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_4" xlink:to="loc_10" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GroupsOfShareOptionsAxis" xlink:label="loc_25"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsMember" xlink:label="loc_39"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_25" xlink:to="loc_39" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TypesOfSharebasedPaymentArrangementsAxis" xlink:label="loc_26"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_SharebasedPaymentArrangementsMember" xlink:label="loc_29"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_26" xlink:to="loc_29" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_BusinessCombinationsAxis" xlink:label="loc_53"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_EntitysTotalForBusinessCombinationsMember" xlink:label="loc_54"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_53" xlink:to="loc_54" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfFinancialAssetsAxis" xlink:label="loc_13"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_FinancialAssetsMember" xlink:label="loc_16"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_13" xlink:to="loc_16" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_FinancialAssetsWhichDoNotQualifyForDerecognitionAxis" xlink:label="loc_7"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_FinancialAssetsWhichDoNotQualifyForDerecognitionMember" xlink:label="loc_11"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_7" xlink:to="loc_11" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TypesOfRisksAxis" xlink:label="loc_9"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TypesOfRisksMember" xlink:label="loc_20"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_9" xlink:to="loc_20" priority="1" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CategoriesOfOtherLongtermBenefitsAxis" xlink:label="loc_43"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OtherLongtermBenefitsMember" xlink:label="loc_59"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_43" xlink:to="loc_59" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CategoriesOfTerminationBenefitsAxis" xlink:label="loc_36"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TerminationBenefitsMember" xlink:label="loc_41"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_36" xlink:to="loc_41" priority="1" order="10.0"/>
+  </link:definitionLink>
+</link:linkbase>

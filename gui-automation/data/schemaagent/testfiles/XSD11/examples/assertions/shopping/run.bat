@@ -1,0 +1,1 @@
+validate grocery-shopping.xml grocery-shopping.xsd

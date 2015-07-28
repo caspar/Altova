@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>JUnit classes</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href=""></a>
+		</div>
+		<div class="previous">
+			<a href="junit_running.xhtml">Previous: Details about running the test cases</a>
+		</div>
+		<h1>JUnit classes</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">
+		The GUI tests using the Robots framework, have all been based on the JUnit unit test principle. As seen in <i>
+				<a href="junit.xhtml">Using JUnit to create simple unit tests</a>
+			</i>, this style of tests lends itself to very simple methods for each test. However, automated GUI testing can be rather complex, which is why some of this complexity is hidden in the Robots classes, and in our own utility classes for JUnit. This section gives an overview of the test classes, and some of the Altova JUnit utility classes.
+		</div>
+		<h2>
+			<a name="2" />Test classes</h2>
+		<div class="p">
+		For most of the test cases the basic JUnit package is enough to assert the various points in the tests. However, for convenience, some extra assert-methods have been added to the class <i>RegressionAssert</i>, like asserting an area of the screen against a previously saved image. In usual fashion, the Test classes then extends from this hierarchy (see diagram below), but in between some general classes have been added. <i>AbstractJUnitTest</i> takes care of some very high level tasks, like starting up the application under test, and shutting down when the concrete test class is finished. (This means that in a suite of tests, e.g. XMLSpy, will be started and closed several times). 
+			</div>
+		<div class="p">
+		Below this level, are the application specific test class, but still at a general level; <i>AbstractUmodelTest</i>, <i>AbstractXmlSpyTest</i> take care of some tasks specific to each application, but common for each of the test for that application. That might include opening a standard file, like OrgChart, or starting with an empty project. Any future tests for the other applications should be modeled on this principle. <b>Due to a design decision, it is imperative that these classes start with <i>Abstract...</i> in their name.</b>
+		</div>
+		<div class="p">
+		Finally, we have the concrete test classes, which contain methods for the single tests. These are typically labeled after the area they test, e.g. <i>FileMenuTest</i>, and <i>TutorialTest</i>. <b>Please note that the <i>HelpMenuTest</i> are somewhat special, since the Help menu is almost the same in all the applications.</b> There is a general <i>AbstractHelpMenuTest</i>, which should be extended for each for the applications under test. XMLSpy and UModel already have examples of this. When looking at the UModel class, it might be empty, but one test method is still required, so an empty <i>testDummyMethod</i> is included.
+			<map id="test_classes">
+				<area alt="Assert" coords="374,35,422,54" href="http://www.junit.org/junit/javadoc/4.3/org/junit/Assert.html" />
+				<area alt="TutorialTest" coords="840,431,917,450" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\testcases\TutorialTest.html" />
+				<area alt="FileMenuTest" coords="634,431,719,450" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\testcases\FileMenuTest.html" />
+				<area alt="EditMenuTest" coords="737,431,823,450" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\testcases\EditMenuTest.html" />
+				<area alt="HelpMenuTest" coords="527,431,617,450" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\testcases\HelpMenuTest.html" />
+				<area alt="RegressionAssert" coords="342,110,454,129" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\util\RegressionAssert.html" />
+				<area alt="AbstractUmodelTest" coords="503,320,623,338" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\testcases\AbstractUmodelTest.html" />
+				<area alt="AbstractXmlSpyTest" coords="173,320,296,339" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\spy\AbstractXmlSpyTest.html" />
+				<area alt="AbstractHelpMenuTest" coords="333,320,467,338" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\common\testcases\AbstractHelpMenuTest.html" />
+				<area alt="HelpMenuTest" coords="278,432,368,451" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\spy\HelpMenuTest.html" />
+				<area alt="EditMenuTest" coords="170,432,256,451" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\spy\EditMenuTest.html" />
+				<area alt="FileMenuTest" coords="60,432,145,451" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\spy\FileMenuTest.html" />
+				<area alt="AbstractJUnitTest" coords="344,218,451,236" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\common\testcases\AbstractJUnitTest.html" />
+			</map>
+			<img alt="JUnit test classes" src="junit_test_classes.png" class="diagram" usemap="#test_classes" />
+			<i>Click on the classes to go directly to the Java Doc.</i>
+		</div>
+		<h2>
+			<a name="3" />Altova class for extra functionality</h2>
+		<div class="p">
+		Our test cases have required a few extra features of the JUnit classes, which we have implemented around the class <i>AltovaJUnitRunner</i>. This replaces the standard JUnit runner class, and extends it with some useful functionality. In order to implement one of them (the <i>IgnoreRobots</i> annotation), we also had to extends some other JUnit base classes, as seen in the diagram below. The <i>AltovaJUnitRunner</i> class is used in the <i>AbstractJUnitTest</i>, like this:
+		<div class="javacode">
+		@RunWith(AltovaJUnitRunner.class)
+		</div>
+		
+		This means that any other class which extends this, will not need any other annotations. <b>However, take care when setting up test suites, like the <i>FullMenuRegressionTest</i>. It will also have to include the <i>RunWith</i> annotation.</b>. The <i>AltovaJUnitRunner</i> provides the following functionality:
+<ol>
+  <li>Get the description of test case (class) and test (method) without having to specify it explicitly in each test.</li>
+  <li>Set the <i>TestRobot</i> annotation, to select which robot to use; stand-alone application, Eclipse plugin, or VS .Net plugin</li>
+  <li>Set the <i>IgnoreRobots</i> annotation, to ignore specific test methods for given robots (plugins or stand-alone).</li>
+  <li>Incorporate the functionality of <i>Suite</i> to make the above functions work in "JUnit Suite mode" as well. (This means that where you would usually use <i>RunWith(Suite)</i>, you should use <i>RunWith(AltovaJUnitRunner)</i> ).</li>
+  </ol>
+  For examples of how to use this, please refer to the already existing test classes, but also section <i><a href=""></a></i>
+  			<map id="junit_classes">
+				<area alt="AltovaJUnitRunner" coords="41,299,152,318" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\util\AltovaJUnitRunner.html" />
+				<area alt="TestMethodRunner" coords="813,41,930,60" href="#" />
+				<area alt="TestClassMethodsRunner" coords="467,44,622,63" href="#" />
+				<area alt="org.junit.internal.runners.TestClassRunner" coords="57,44,305,63" href="#" />
+				<area alt="AltovaTestMethodRunner" coords="838,265,989,284" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\util\AltovaTestMethodRunner.html" />
+				<area alt="AltovaTestClassMethodsRunner" coords="401,272,590,291" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\util\AltovaTestClassMethodsRunner.html" />
+			</map>
+			<img alt="Altova JUnit classes" src="junit_classes.png" class="diagram" usemap="#junit_classes" />
+			<i>Click on the classes to go directly to the Java Doc.</i>
+		</div>
+	</body>
+</html>

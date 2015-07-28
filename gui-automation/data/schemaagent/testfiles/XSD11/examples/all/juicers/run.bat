@@ -1,0 +1,1 @@
+validate juicers.xml juicers.xsd

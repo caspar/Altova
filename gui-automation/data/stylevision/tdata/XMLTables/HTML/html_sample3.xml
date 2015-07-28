@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- author: Brian A. Cole (bcole@nsf.gov) -->
+<!-- filename: embed.xml (XML data conforming to embed.xsd Schema) -->
+<!-- Must specify a prefix for any element in the default namespace 
+    because any un-prefixed tags are in the XHTML namespace. -->
+<def:root xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xmlns:def="http://testing.es" xmlns="http://testing.es" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance" n1:schemaLocation="http://testing.es html.xsd">
+	<def:child1>foo</def:child1>
+	<def:child2>This element has <em>mixed content</em>
+          containining <em>un-prefixed <ul>XHTML</ul>
+          sub-elements</em>.
+          <def:TABLE summary="The price of golden turnips is over 100 times the price of lettuce." border="1">
+			<def:THEAD>
+				<def:TR>
+					<def:TH>Vegetable</def:TH>
+					<def:TH>Cost per kilo </def:TH>
+				</def:TR>
+			</def:THEAD>
+			<def:TBODY>
+				<def:TR>
+					<def:TD>Lettuce</def:TD>
+					<def:TD>$1</def:TD>
+				</def:TR>
+				<def:TR>
+					<def:TD>Silver carrots</def:TD>
+					<def:TD>$10.50</def:TD>
+				</def:TR>
+				<TR>
+					<TD>salad</TD>
+					<TD>$20</TD>
+				</TR>
+			</def:TBODY>
+		</def:TABLE>
+	</def:child2>
+	<def:child3>bar</def:child3>
+</def:root>

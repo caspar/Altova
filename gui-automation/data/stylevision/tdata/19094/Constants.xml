@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_sps ..\ConstantsTable.sps?>
+<?xml-stylesheet type="text/xsl" href="..\Constant2SPS.xsl"?>
+<constantsTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../BusinessRule.xsd">
+	<constantDefinition>
+		<constantName>SPECIAL_POWER_SUBARU</constantName>
+		<constantValue>160</constantValue>
+	</constantDefinition>
+	<constantDefinition>
+		<constantName>MAXIMUM_AGE_FOR_POLICY_HOLDER</constantName>
+		<constantValue>79</constantValue>
+	</constantDefinition>
+	<constantDefinition>
+		<constantName>PUISSANCE_MINIMUM_VOITURE</constantName>
+		<constantValue>19</constantValue>
+	</constantDefinition>
+	<constantDefinition>
+		<constantName>HIGH_MAXIMUM_CATALOG_VALUE</constantName>
+		<constantValue>150000</constantValue>
+	</constantDefinition>
+	<constantDefinition>
+		<constantName>ACCEPTABLE_AGE_FOR_A_MOPED</constantName>
+		<constantValue>25</constantValue>
+	</constantDefinition>
+	<constantDefinition>
+		<constantName>MINIMUM_AGE_FOR_MAIN_DRIVER_WITH_CAR_OR_OLDTIMER</constantName>
+		<constantValue>23</constantValue>
+	</constantDefinition>
+	<constantDefinition>
+		<constantName>MINIMUM_AGE_FOR_MAIN_DRIVER_WITH_CAR_OR_OLDTIMER</constantName>
+		<constantValue>23</constantValue>
+	</constantDefinition>
+</constantsTable>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE para PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+               "http://www.altova.com/schemas/docbook/docbookx.dtd">
+<?altova_sps http://www.altova.com/sps/template/publishing/docbook.sps?>
+<?xml-stylesheet type="text/xsl" href="http://www.altova.com/stylesheets/docbook/xhtml/docbook.xsl"?>
+<para>
+	<emphasis>This example demonstrates HTML and CALS table editing in Authentic and output to HTML/RTF/PDF/Word formats depending on your StyleVision edition. This particular example uses popular DocBook schema, but you can use any schema as long as it fits HTML/CALS table requirements. Availability of some features used in this example, like background color or superscript/subscript depend on your particular schema.</emphasis>
+	<table border="1" width="100%">
+		<caption>HTML Table</caption>
+		<tbody>
+			<tr>
+				<td colspan="2">You are free to use colspans</td>
+				<td/>
+			</tr>
+			<tr>
+				<td/>
+				<td rowspan="2">...and rowspans</td>
+				<td/>
+			</tr>
+			<tr>
+				<td/>
+				<td>in your HTML tables</td>
+			</tr>
+			<tr>
+				<td>Styles like</td>
+				<td bgcolor="lightblue">bgcolor</td>
+				<td>can be used anywhere</td>
+			</tr>
+			<tr>
+				<td align="center" colspan="3">
+					<superscript>Feel free</superscript> to try <subscript>different things!</subscript>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<title>CALS Table</title>
+		<tgroup cols="3">
+			<colspec colname="spycolgen1" colwidth="1*"/>
+			<colspec colname="spycolgen2" colwidth="1*"/>
+			<colspec colname="spycolgen3" colwidth="1*"/>
+			<tbody>
+				<row>
+					<entry namest="spycolgen1" nameend="spycolgen2">You are free to use colspans</entry>
+					<entry/>
+				</row>
+				<row>
+					<entry/>
+					<entry morerows="1" colname="spycolgen2">...and rowspans</entry>
+					<entry/>
+				</row>
+				<row>
+					<entry/>
+					<entry>in your CALS tables</entry>
+				</row>
+				<row>
+					<entry align="center" namest="spycolgen1" nameend="spycolgen3">
+						<superscript>Feel free</superscript> to try <subscript>different things!</subscript>
+					</entry>
+				</row>
+			</tbody>
+		</tgroup>
+	</table>
+</para>

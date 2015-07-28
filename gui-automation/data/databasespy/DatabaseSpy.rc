@@ -1,0 +1,2567 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "bcgprores.h"
+
+#include "../../libs/ICApplication/resource.h"
+#include "../../libs/ICRelDisp/resource.h"
+#include "../../libs/ICGUI/resource.h"
+#include "../../libs/ICDBDiffGUI/resource.h"
+#include "../../libs/ICDBWnds/resource.h"
+#include "../../libs/ICDBWnds/ICDBWnds_Commands_Resource.h"
+#include "../../libs/ICDBTransformationGui/resource.h"
+#include "../../libs/ICDBDesignView/ICDBDesignView_resource.h"
+#include "../../libs/ICDBSQLEditor/resource.h"
+#include "../../libs/ICDBApplicationCore/resource.h"
+#include "../../libs/ICGlobalResources/resource.h"
+#include "../../libs/ICGlobalResourcesUI/resource.h"
+#include "../../libs/ICGlobalResourcesUI/ICGlobalResourcesUI_Commands_Resource.h"
+#include "../../libs/ICComapplication/resource.h"
+#include "../../libs/ICSQL/resource.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\DatabaseSpy.ico"
+IDR_DATABASESPYTYPE     ICON    DISCARDABLE     "res\\DatabaseSpyDoc.ico"
+A_PROGRAM_ICON          ICON    DISCARDABLE     "res\\App.ico"
+IDR_DATABASESPYTYPETEXT ICON    DISCARDABLE     "res\\icon_sqlfiles.ico"
+IDR_DATABASESPYTYPE_DATADIFF ICON    DISCARDABLE     "res\\icon_dbdif_files.ico"
+IDI_DBSPY_PROPERTIES    ICON    DISCARDABLE     "res\\icon_property.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR_MAIN        BITMAP  "res\\Toolbar.bmp"
+IDR_TOOLBAR_DOCUMENT_ICONS BITMAP  "res\\document_icons.bmp"
+IDR_SQLTOOLS            BITMAP   "res\\sqltools.bmp"
+IDR_SQLEDITOR           BITMAP      "res\\sqledito.bmp"
+IDT_WINDOW              BITMAP    "res\\toolbarWindow.bmp"
+IDR_DATABASESPY_SQL_PREVIEW BITMAP     "res\\sql_preview.bmp"
+IDT_HELP                BITMAP     "res\\tlb_help.bmp"
+IDR_IMAGECOLLECTION     BITMAP  "res\\imagecollection.bmp"
+IDR_DATABASESPY_PYTHON_TOOLBAR BITMAP     "res\\python_toolbar.bmp"
+IDR_DATABASESPYTYPE_DATADIFF BITMAP       "res\\datadiff_toolbar.bmp"
+IDR_ICDBWND_PROJECT_TOOLBAR   BITMAP       "res\\IDR_ICDBWND_PROJECT_TOOLBAR.bmp"
+IDB_DIFFRESULT_SHOWEQUAL BITMAP       "res\\diffresult_showequal.bmp"
+IDB_DIFFRESULT_SHOWDIFFERENT BITMAP       "res\\diffresult_showdifferent.bmp"
+IDB_DIFFRESULT_SHOWLEFTONLY BITMAP       "res\\diffresult_showleftonly.bmp"
+IDB_DIFFRESULT_SHOWRIGHTONLY BITMAP       "res\\diffresult_showrightonly.bmp"
+IDB_DIFFRESULT_GOTONEXT BITMAP       "res\\diffresult_gotonext.bmp"
+IDB_DIFFRESULT_GOTOPREV BITMAP       "res\\diffresult_gotoprev.bmp"
+IDB_DIFFRESULT_GOTOLAST BITMAP       "res\\diffresult_gotolast.bmp"
+IDB_DIFFRESULT_GOTOFIRST BITMAP       "res\\diffresult_gotofirst.bmp"
+IDB_DIFFRESULT_LINKMAPPING BITMAP       "res\\diffresult_linkmapping.bmp"
+IDB_RESULTBAR_INSPECTOR_LARGE BITMAP       "res\\resultbar_inspector_large.bmp"
+IDB_RESULTBAR_MAXIMIZE_LARGE BITMAP       "res\\resultbar_maximize_large.bmp"
+IDB_RESULTBAR_FIND_LARGE BITMAP       "res\\resultbar_find_large.bmp"
+IDB_RESULTBAR_MAXIMIZEVIEW_LARGE BITMAP       "res\\resultba.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR_MAIN TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_TOOLS_DATASOURCESTEST
+    SEPARATOR
+    BUTTON      ID_DATABASESPY_SQLEDITOR
+    SEPARATOR
+    BUTTON      ID_FILE_OPEN
+    BUTTON      IDC_FILE_RELOAD
+    SEPARATOR
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVEALL
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    BUTTON      ID_CHANGED_FILE_PRINT
+END
+
+IDR_TOOLBAR_DOCUMENT_ICONS TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_DATABASESPY_SQLEDITOR
+    BUTTON      ID_DATABASESPY_DESIGNEDITOR
+    BUTTON      ID_DATABASESPY_DATADIFF
+END
+
+IDR_SQLTOOLS TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_TOOLS_GENERATE_CHANGE_SCRIPT
+    BUTTON      ID_MANAGE_XML_SCHEMAS
+    SEPARATOR
+    BUTTON      ID_EXPORT
+    BUTTON      ID_IMPORT
+END
+
+IDR_SQLEDITOR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_DATABASESPY_EXECUTE
+END
+
+IDT_WINDOW TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_VIEW_BROWSER
+    BUTTON      ID_VIEW_PROJECT
+    BUTTON      ID_VIEW_PROPERTIES
+    BUTTON      ID_VIEW_OUTPUT
+    BUTTON      ID_VIEW_SQL_PREVIEW
+    BUTTON      ID_VIEW_DATA_INSPECTOR
+    BUTTON      ID_VIEW_DIAGRAM_OVERVIEW
+    BUTTON      ID_WINDOW_CASCADE
+    BUTTON      ID_WINDOW_TILE_HORZ
+    BUTTON      ID_WINDOW_TILE_VERT
+END
+
+IDR_DATABASESPY_SQL_PREVIEW TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_DATABASESPY_PREVIEW_EXECUTE
+    BUTTON      ID_DATABASESPY_PREVIEW_EXECUTE_STOP
+    SEPARATOR
+    BUTTON      ID_DATABASESPY_PREVIEW_UPDATE
+    SEPARATOR
+    BUTTON      ID_DATABASESPY_PREVIEW_EDIT
+    BUTTON      ID_DATABASESPY_PREVIEW_SAVE
+    SEPARATOR
+    BUTTON      ID_DATABASESPY_PREVIEW_DISCARD
+END
+
+
+IDT_HELP TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_HELP_FINDER
+    BUTTON      ID_HELP_INDEX
+    BUTTON      ID_HELP_SEARCH
+    BUTTON      ID_HELP_ACTIVATION
+    BUTTON      ID_HELP_ORDERFORM
+    BUTTON      ID_HELP_REGISTRATION
+    BUTTON      IDC_CHECK_FOR_UPDATES
+    BUTTON      ID_HELP_SUPPORTCENTER
+    BUTTON      ID_HELP_FAQ
+    BUTTON      IDC_OPEN_COMPONENTS_PAGE
+    BUTTON      ID_HELP_INTERNET
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_IMAGECOLLECTION TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_SQLREFACTORING_FORMATTINGOPTIONS
+    BUTTON      ID_DATABASESPY_SETTINGS
+    BUTTON      ID_DATABASESPY_OPEN_GLOBAL_RESOURCE
+END
+
+IDR_DATABASESPY_PYTHON_TOOLBAR TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_DATABASESPY_PYTHON_EXECUTE
+    BUTTON      ID_DATABASESPY_PYTHON_NEWDOC
+    BUTTON      ID_DATABASESPY_PYTHON_OPEN
+    BUTTON      ID_DATABASESPY_PYTHON_SAVE
+END
+
+IDR_DATABASESPYTYPE_DATADIFF TOOLBAR 16, 16
+BEGIN
+    BUTTON      ID_COMPARISON_START
+    BUTTON      ID_COMPARISON_STOP
+    SEPARATOR
+    BUTTON      ID_COMPARISON_MERGELR
+    BUTTON      ID_COMPARISON_MERGERL
+    SEPARATOR
+    BUTTON      ID_COMPARISON_SHOWRESULT
+    BUTTON      ID_COMPARISON_TOGGLEMSGWND
+    SEPARATOR
+    BUTTON      ID_COMPARISON_AUTOMAPTABLES
+    BUTTON      ID_COMPARISON_AUTOLAYOUT
+    SEPARATOR
+    BUTTON      ID_COMPARISON_SHOWOPTIONS
+END
+
+IDR_ICDBWND_PROJECT_TOOLBAR TOOLBAR 16,16
+BEGIN
+    BUTTON ID_PROJECT_NEWPROJECT
+    SEPARATOR
+    BUTTON ID_FILE_LOAD_PROJECT
+    BUTTON ID_SAVEPROJECT
+    SEPARATOR
+    BUTTON ID_ADDFILESTOPROJECT
+    BUTTON ID_ADDACTIVEFILETOPROJECT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Create a Database Connection...\tCtrl+Q", 
+                                                ID_TOOLS_DATASOURCESTEST
+        MENUITEM SEPARATOR
+        POPUP "New"
+        BEGIN
+            MENUITEM "&Project",                    ID_PROJECT_NEWPROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&SQL Editor",                 ID_DATABASESPY_SQLEDITOR
+            MENUITEM "&Design Editor",              ID_DATABASESPY_DESIGNEDITOR
+
+            MENUITEM "Data &Comparison",            ID_DATABASESPY_DATADIFF
+        END
+        POPUP "Open"
+        BEGIN
+            MENUITEM "&Open Project",               ID_FILE_LOAD_PROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&Open File...\tCtrl+O",       ID_FILE_OPEN
+            MENUITEM "Open &Global Resource...",    ID_DATABASESPY_OPEN_GLOBAL_RESOURCE
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save Project As...",          ID_FILE_SAVEPROJECTAS
+        MENUITEM SEPARATOR
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "Recent Files",                ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent Pro&jects"
+        BEGIN
+            MENUITEM "Recent Projects",             ID_FILE_MRU_PROJECT1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Online &Browser",             ID_VIEW_BROWSER
+        MENUITEM "&Project Window",             ID_VIEW_PROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperty Window",            ID_VIEW_PROPERTIES
+        MENUITEM "&Overview Window",            ID_VIEW_DIAGRAM_OVERVIEW
+        MENUITEM "&Data Inspector Window",      ID_VIEW_DATA_INSPECTOR
+        MENUITEM SEPARATOR
+        MENUITEM "O&utput Window",              ID_VIEW_OUTPUT
+        MENUITEM "Database Structure &Change Script", ID_VIEW_SQL_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Status",                     ID_VIEW_APP_STATUS_BAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Export database data...",    ID_EXPORT
+        MENUITEM "&Import data to the database...", ID_IMPORT
+        MENUITEM SEPARATOR
+        MENUITEM "Generate Change Script",      ID_TOOLS_GENERATE_CHANGE_SCRIPT
+
+        MENUITEM "&XML Schema Management for Databases ...", 
+                                                ID_MANAGE_XML_SCHEMAS
+        MENUITEM SEPARATOR
+        POPUP "&User-defined tools"
+        BEGIN
+            MENUITEM "&<User-defined tools",        ID_TOOLS_ENTRY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Global Resources...",        IDC_GLOBALRESOURCES
+        POPUP "Active configurations"
+        BEGIN
+            MENUITEM "",                            IDC_GLOBALRESOURCES_SUBMENUENTRY1
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize ...",              ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options ...",                ID_DATABASESPY_SETTINGS
+        MENUITEM SEPARATOR
+    END
+    //POPUP "&Debug"
+    //BEGIN
+    //    MENUITEM "&Test Dialog",                ID_SHOW_TEST_DIALOG
+    //END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Table of Contents",          ID_HELP_FINDER
+        MENUITEM "&Index...",                   ID_HELP_INDEX
+        MENUITEM "&Search...",                  ID_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "Software A&ctivation...",     ID_HELP_ACTIVATION
+        MENUITEM "&Order form...",              ID_HELP_ORDERFORM
+        MENUITEM "&Registration...",            ID_HELP_REGISTRATION
+        MENUITEM "C&heck for Updates...",       IDC_CHECK_FOR_UPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "S&upport Center...",          ID_HELP_SUPPORTCENTER
+        MENUITEM "&FAQ on the Web...",          ID_HELP_FAQ
+        MENUITEM "Down&load Components and Free Tools...", 
+                                                IDC_OPEN_COMPONENTS_PAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&DatabaseSpy on the Internet...", ID_HELP_INTERNET
+        MENUITEM SEPARATOR
+        MENUITEM "&About DatabaseSpy...",       ID_APP_ABOUT
+    END
+END
+
+IDR_DATABASESPYTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Create a Database Connection...\tCtrl+Q", 
+                                                ID_TOOLS_DATASOURCESTEST
+        MENUITEM SEPARATOR
+        POPUP "New"
+        BEGIN
+            MENUITEM "&Project",                    ID_PROJECT_NEWPROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&SQL Editor",                 ID_DATABASESPY_SQLEDITOR
+            MENUITEM "&Design Editor",              ID_DATABASESPY_DESIGNEDITOR
+
+            MENUITEM "Data &Comparison",            ID_DATABASESPY_DATADIFF
+        END
+        POPUP "Open"
+        BEGIN
+            MENUITEM "&Open Project",               ID_FILE_LOAD_PROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&Open File...\tCtrl+O",       ID_FILE_OPEN
+            MENUITEM "Open &Global Resource...",    ID_DATABASESPY_OPEN_GLOBAL_RESOURCE
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Re&load",                     IDC_FILE_RELOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close All",                   ID_FILE_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save Project As...",          ID_FILE_SAVEPROJECTAS
+        MENUITEM SEPARATOR
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_CHANGED_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_CHANGED_FILE_PRINT_PREVIEW
+
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "Recent Files",                ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent Pro&jects"
+        BEGIN
+            MENUITEM "Recent Projects",             ID_FILE_MRU_PROJECT1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Generate Change Script",      ID_TOOLS_GENERATE_CHANGE_SCRIPT
+
+        MENUITEM "&XML Schema Management for Databases ...", 
+                                                ID_MANAGE_XML_SCHEMAS
+        MENUITEM SEPARATOR
+        POPUP "&User-defined tools"
+        BEGIN
+            MENUITEM "&<User-defined tools",        ID_TOOLS_ENTRY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Global Resources...",        IDC_GLOBALRESOURCES
+        POPUP "Active configurations"
+        BEGIN
+            MENUITEM "",                            IDC_GLOBALRESOURCES_SUBMENUENTRY1
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize ...",              ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options ...",                ID_DATABASESPY_SETTINGS
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "Generate Change Script",      ID_TOOLS_GENERATE_CHANGE_SCRIPT
+
+        MENUITEM "&XML Schema Management for Databases ...", 
+                                                ID_MANAGE_XML_SCHEMAS
+        MENUITEM SEPARATOR
+        POPUP "&User-defined tools"
+        BEGIN
+            MENUITEM "&<User-defined tools",        ID_TOOLS_ENTRY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize ...",              ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options ...",                ID_DATABASESPY_SETTINGS
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About DatabaseSpy...",       ID_APP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+    END
+END
+
+IDR_POPUP_TOOLBAR MENU DISCARDABLE 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Standard Toolbar",            ID_VIEW_TOOLBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Project",                    ID_VIEW_PROJECT
+        MENUITEM "&Online Browser",             ID_VIEW_BROWSER
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 ID_VIEW_PROPERTIES
+        MENUITEM "Diagram Overview",            ID_VIEW_DIAGRAM_OVERVIEW
+        MENUITEM "&Data Inspector Window",      ID_VIEW_DATA_INSPECTOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Output",                     ID_VIEW_OUTPUT
+        MENUITEM "Database Structure &Change Script", ID_VIEW_SQL_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR1
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR2
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR3
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR4
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR5
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR6
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR7
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR8
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR9
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR10
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+    END
+END
+
+IDR_DATABASESPYTYPETEXT MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Create a Database Connection...\tCtrl+Q", 
+                                                ID_TOOLS_DATASOURCESTEST
+        MENUITEM SEPARATOR
+        POPUP "New"
+        BEGIN
+            MENUITEM "&Project",                    ID_PROJECT_NEWPROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&SQL Editor",                 ID_DATABASESPY_SQLEDITOR
+            MENUITEM "&Design Editor",              ID_DATABASESPY_DESIGNEDITOR
+
+            MENUITEM "Data &Comparison",            ID_DATABASESPY_DATADIFF
+        END
+        POPUP "Open"
+        BEGIN
+            MENUITEM "&Open Project",               ID_FILE_LOAD_PROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&Open File...\tCtrl+O",       ID_FILE_OPEN
+            MENUITEM "Open &Global Resource...",    ID_DATABASESPY_OPEN_GLOBAL_RESOURCE
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Re&load",                     IDC_FILE_RELOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close All",                   ID_FILE_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save Project As...",          ID_FILE_SAVEPROJECTAS
+        MENUITEM SEPARATOR
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_CHANGED_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_CHANGED_FILE_PRINT_PREVIEW
+
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "Recent Files",                ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent Pro&jects"
+        BEGIN
+            MENUITEM "Recent Projects",             ID_FILE_MRU_PROJECT1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "R&eplace...\tCtrl+H",         ID_EDIT_REPLACE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Online &Browser",             ID_VIEW_BROWSER
+        MENUITEM "&Project Window",             ID_VIEW_PROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperty Window",            ID_VIEW_PROPERTIES
+        MENUITEM "&Overview Window",            ID_VIEW_DIAGRAM_OVERVIEW
+        MENUITEM "&Data Inspector Window",      ID_VIEW_DATA_INSPECTOR
+        MENUITEM SEPARATOR
+        MENUITEM "O&utput Window",              ID_VIEW_OUTPUT
+        MENUITEM "Database Structure &Change Script", ID_VIEW_SQL_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Status",                     ID_VIEW_APP_STATUS_BAR
+    END
+    POPUP "S&QL Editor"
+    BEGIN
+        MENUITEM "Execute",                     ID_EXECUTE
+        MENUITEM "Execute for Data Editing",    ID_EXECUTE_WITH_EDIT
+        MENUITEM SEPARATOR
+        POPUP "&Navigation"
+        BEGIN
+            MENUITEM "Next Statement",              ID_SELECT_NEXT
+            MENUITEM "Previous Statement",          ID_SELECT_PREV
+            MENUITEM "Last Statement",              ID_SELECT_LAST
+            MENUITEM "First Statement",             ID_SELECT_FIRST
+            MENUITEM "Select entire Statement",     ID_SELECT_CURR
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Insert"
+        BEGIN
+            MENUITEM "Insert/Remove Block Comment", ID_COMMENT_BLOCK
+            MENUITEM "Insert/Remove Line Comment",  ID_COMMENT_LINE
+            MENUITEM "Insert Target",               ID_COMMENT_TARGET
+            MENUITEM "Insert Region",               ID_COMMENT_REGION
+        END
+        POPUP "&Bookmarks"
+        BEGIN
+            MENUITEM "&Insert/Remove Bookmark",     ID_ICDBSQLVIEW_TOGGLE_BOOKMARK
+
+            MENUITEM "Go to &Next Bookmark",        ID_ICDBSQLVIEW_GOTONEXTBOOKMARK
+
+            MENUITEM "Go to &Previous Bookmark",    ID_ICDBSQLVIEW_GOTOPREVBOOKMARK
+
+            MENUITEM "&Remove All Bookmarks",       ID_ICDBSQLVIEW_REMOVEALLBOOKMARKS
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Result view",                 ID_TOGGLE_CONTENT
+        MENUITEM "Message view",                ID_TOGGLE_MESSAGE
+        MENUITEM SEPARATOR
+        MENUITEM "W&ord Wrap",                  ID_ICDBSQLVIEW_WORD_WRAP
+        MENUITEM SEPARATOR
+        MENUITEM "Text View Settings",          ID_SQLEDITOR_TEXTVIEWSETTINGSDIALOG
+
+    END
+    POPUP "SQL &Refactoring"
+    BEGIN
+        MENUITEM "&Format SQL",                 ID_SQLREFACTORING_PRETTYPRINT
+
+        MENUITEM SEPARATOR
+        MENUITEM "Add Semicolons",              ID_SQLREFACTORING_ADDSEMICOLONS
+
+        MENUITEM "Remove Semicolons",           ID_SQLREFACTORING_REMOVESEMICOLONS
+
+        MENUITEM SEPARATOR
+        MENUITEM "Add quotation to identifiers", 
+                                                ID_SQLREFACTORING_QUOTEIDENTIFIERS
+
+        MENUITEM "Remove quotation from identifiers", 
+                                                ID_SQLREFACTORING_UNQUOTEIDENTIFIERS
+
+        MENUITEM SEPARATOR
+        MENUITEM "&Create View As",             ID_CREATE_VIEW_AS
+        MENUITEM "&Uppercase Keywords",         ID_SQLREFACTORING_UPPERCASEKEYWORDS
+
+        MENUITEM "&Expand columns for star expressions", 
+                                                ID_SQLREFACTORING_EXPANDSTAR
+        MENUITEM SEPARATOR
+        MENUITEM "Remove Comments",             ID_SQLREFACTORING_REMOVECOMMENTS
+
+        MENUITEM "Remove Comments and Formatting", ID_SQLREFACTORING_FLATTEN
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Export database data...",    ID_EXPORT
+        MENUITEM "&Import data to the database...", ID_IMPORT
+        MENUITEM SEPARATOR
+        MENUITEM "Generate Change Script",      ID_TOOLS_GENERATE_CHANGE_SCRIPT
+
+        MENUITEM "&XML Schema Management for Databases ...", 
+                                                ID_MANAGE_XML_SCHEMAS
+        MENUITEM SEPARATOR
+        POPUP "&User-defined tools"
+        BEGIN
+            MENUITEM "&<User-defined tools",        ID_TOOLS_ENTRY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Global Resources...",        IDC_GLOBALRESOURCES
+        POPUP "Active configurations"
+        BEGIN
+            MENUITEM "",                            IDC_GLOBALRESOURCES_SUBMENUENTRY1
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize ...",              ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options ...",                ID_DATABASESPY_SETTINGS
+        MENUITEM SEPARATOR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &vertically",            ID_WINDOW_TILE_VERT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Table of Contents",          ID_HELP_FINDER
+        MENUITEM "&Index...",                   ID_HELP_INDEX
+        MENUITEM "&Search...",                  ID_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "Software Activation...",      ID_HELP_ACTIVATION
+        MENUITEM "&Order form...",              ID_HELP_ORDERFORM
+        MENUITEM "&Registration...",            ID_HELP_REGISTRATION
+        MENUITEM "C&heck for Updates...",       IDC_CHECK_FOR_UPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "S&upport Center...",          ID_HELP_SUPPORTCENTER
+        MENUITEM "&FAQ on the Web...",          ID_HELP_FAQ
+        MENUITEM "Download &Components and Free Tools...", 
+                                                IDC_OPEN_COMPONENTS_PAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&DatabaseSpy on the Internet...", ID_HELP_INTERNET
+        MENUITEM SEPARATOR
+        MENUITEM "&About DatabaseSpy...",       ID_APP_ABOUT
+    END
+END
+
+IDR_DATABASESPYTYPE_DESIGN MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Create a Database Connection...\tCtrl+Q", 
+                                                ID_TOOLS_DATASOURCESTEST
+        MENUITEM SEPARATOR
+        POPUP "New"
+        BEGIN
+            MENUITEM "&Project",                    ID_PROJECT_NEWPROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&SQL Editor",                 ID_DATABASESPY_SQLEDITOR
+            MENUITEM "&Design Editor",              ID_DATABASESPY_DESIGNEDITOR
+
+            MENUITEM "Data &Comparison",            ID_DATABASESPY_DATADIFF
+        END
+        POPUP "Open"
+        BEGIN
+            MENUITEM "&Open Project",               ID_FILE_LOAD_PROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&Open File...\tCtrl+O",       ID_FILE_OPEN
+            MENUITEM "Open &Global Resource...",    ID_DATABASESPY_OPEN_GLOBAL_RESOURCE
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Re&load",                     IDC_FILE_RELOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close All",                   ID_FILE_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save Project As...",          ID_FILE_SAVEPROJECTAS
+        MENUITEM SEPARATOR
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_CHANGED_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_CHANGED_FILE_PRINT_PREVIEW
+
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "Recent Files",                ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent Pro&jects"
+        BEGIN
+            MENUITEM "Recent Projects",             ID_FILE_MRU_PROJECT1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Online &Browser",             ID_VIEW_BROWSER
+        MENUITEM "&Project Window",             ID_VIEW_PROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperty Window",            ID_VIEW_PROPERTIES
+        MENUITEM "&Overview Window",            ID_VIEW_DIAGRAM_OVERVIEW
+        MENUITEM "&Data Inspector Window",      ID_VIEW_DATA_INSPECTOR
+        MENUITEM SEPARATOR
+        MENUITEM "O&utput Window",              ID_VIEW_OUTPUT
+        MENUITEM "Database Structure &Change Script", ID_VIEW_SQL_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Status",                     ID_VIEW_APP_STATUS_BAR
+    END
+    POPUP "&Design Editor"
+    BEGIN
+        MENUITEM "Create New &Table",           ID_DESIGN_NEW_TABLE
+        MENUITEM "Create New &Column",          ID_DESIGN_NEW_COLUMN
+        MENUITEM "&Add Sticky Note",            ID_DESIGN_ADD_STICKY_NOTE
+        MENUITEM SEPARATOR
+        POPUP "Add &related tables"
+        BEGIN
+            MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+
+            MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+
+            MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+        END
+        MENUITEM SEPARATOR
+        POPUP "Show in new SQL Editor"
+        BEGIN
+            MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+            MENUITEM SEPARATOR
+            MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+            MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+            MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+            MENUITEM SEPARATOR
+            MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+            MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+            MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+        END
+        POPUP "Retrieve data"
+        BEGIN
+            MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+            MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Select &User Tables",         ID_DESIGN_SELECT_USERTABLES
+        MENUITEM "Select &System Tables",       ID_DESIGN_SELECT_SYSTEMTABLES
+
+        MENUITEM "Select All",                  ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Zoom In",                    ID_DESIGN_ZOOM_IN
+        MENUITEM "Zoom &Out",                   ID_DESIGN_ZOOM_OUT
+        MENUITEM "Zoom to &fit",                ID_DESIGN_ZOOM_FIT
+        MENUITEM SEPARATOR
+        MENUITEM "&Auto Layout whole Diagram",  ID_DESIGN_LAYOUT_HIERARCHY
+        MENUITEM "Auto La&yout selected Tables", 
+                                                ID_DESIGN_LAYOUT_HIERARCHY_SELECTED
+
+        MENUITEM SEPARATOR
+        MENUITEM "Remove from Design",          ID_DESIGN_REMOVEOBJECTFROMDESIGN
+
+        MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+        MENUITEM "&Save Diagram as Image",      ID_DESIGN_SAVE_DIAGRAM
+        MENUITEM SEPARATOR
+        MENUITEM "&Generate Database Structure Change Script", 
+                                                ID_DESIGN_UPDATE_CHANGESCRIPT
+
+        MENUITEM "Show Design O&ptions",        ID_DESIGN_SHOW_SETTINGS
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Export database data...",    ID_EXPORT
+        MENUITEM "&Import data to the database...", ID_IMPORT
+        MENUITEM SEPARATOR
+        MENUITEM "Generate Change Script",      ID_TOOLS_GENERATE_CHANGE_SCRIPT
+
+        MENUITEM "&XML Schema Management for Databases ...", 
+                                                ID_MANAGE_XML_SCHEMAS
+        MENUITEM SEPARATOR
+        POPUP "&User-defined tools"
+        BEGIN
+            MENUITEM "&<User-defined tools",        ID_TOOLS_ENTRY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Global Resources...",        IDC_GLOBALRESOURCES
+        POPUP "Active configurations"
+        BEGIN
+            MENUITEM "",                            IDC_GLOBALRESOURCES_SUBMENUENTRY1
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize ...",              ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options ...",                ID_DATABASESPY_SETTINGS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &vertically",            ID_WINDOW_TILE_VERT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Table of Contents",          ID_HELP_FINDER
+        MENUITEM "&Index...",                   ID_HELP_INDEX
+        MENUITEM "&Search...",                  ID_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "Software A&ctivation...",     ID_HELP_ACTIVATION
+        MENUITEM "&Order form...",              ID_HELP_ORDERFORM
+        MENUITEM "&Registration...",            ID_HELP_REGISTRATION
+        MENUITEM "Check for U&pdates...",       IDC_CHECK_FOR_UPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "S&upport Center...",          ID_HELP_SUPPORTCENTER
+        MENUITEM "&FAQ on the Web...",          ID_HELP_FAQ
+        MENUITEM "Down&load Components and Free Tools...", 
+                                                IDC_OPEN_COMPONENTS_PAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&DatabaseSpy on the Internet...", ID_HELP_INTERNET
+        MENUITEM SEPARATOR
+        MENUITEM "&About DatabaseSpy...",       ID_APP_ABOUT
+    END
+END
+
+IDR_DATABASESPYTYPE_DATADIFF MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Create a Database Connection...\tCtrl+Q", 
+                                                ID_TOOLS_DATASOURCESTEST
+        MENUITEM SEPARATOR
+        POPUP "New"
+        BEGIN
+            MENUITEM "&Project",                    ID_PROJECT_NEWPROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&SQL Editor",                 ID_DATABASESPY_SQLEDITOR
+            MENUITEM "&Design Editor",              ID_DATABASESPY_DESIGNEDITOR
+
+            MENUITEM "Data &Comparison",            ID_DATABASESPY_DATADIFF
+        END
+        POPUP "Open"
+        BEGIN
+            MENUITEM "&Open Project",               ID_FILE_LOAD_PROJECT
+            MENUITEM SEPARATOR
+            MENUITEM "&Open File...\tCtrl+O",       ID_FILE_OPEN
+            MENUITEM "Open &Global Resource...",    ID_DATABASESPY_OPEN_GLOBAL_RESOURCE
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Re&load",                     IDC_FILE_RELOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close All",                   ID_FILE_CLOSEALL
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save Project As...",          ID_FILE_SAVEPROJECTAS
+        MENUITEM SEPARATOR
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_CHANGED_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_CHANGED_FILE_PRINT_PREVIEW
+
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "Recent Files",                ID_FILE_MRU_FILE1
+            , GRAYED
+        END
+        POPUP "Recent Pro&jects"
+        BEGIN
+            MENUITEM "Recent Projects",             ID_FILE_MRU_PROJECT1
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Online &Browser",             ID_VIEW_BROWSER
+        MENUITEM "&Project Window",             ID_VIEW_PROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperty Window",            ID_VIEW_PROPERTIES
+        MENUITEM "&Overview Window",            ID_VIEW_DIAGRAM_OVERVIEW
+        MENUITEM "&Data Inspector Window",      ID_VIEW_DATA_INSPECTOR
+        MENUITEM SEPARATOR
+        MENUITEM "O&utput Window",              ID_VIEW_OUTPUT
+        MENUITEM "Database Structure &Change Script", ID_VIEW_SQL_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Status",                     ID_VIEW_APP_STATUS_BAR
+    END
+    POPUP "&Data Comparison"
+    BEGIN
+        MENUITEM "Start Comparison",            ID_COMPARISON_START
+        MENUITEM SEPARATOR
+        POPUP "Sort tables"
+        BEGIN
+            MENUITEM "Ascending",                   ID_COMPARISON_SORT_ASC
+            MENUITEM "Descending",                  ID_COMPARISON_SORT_DESC
+            MENUITEM SEPARATOR
+            MENUITEM "Ascending mapped first",      ID_COMPARISON_SORT_MAPPASC
+
+            MENUITEM "Descending mapped first",     ID_COMPARISON_SORT_MAPPDESC
+
+        END
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Export database data...",    ID_EXPORT
+        MENUITEM "&Import data to the database...", ID_IMPORT
+        MENUITEM SEPARATOR
+        MENUITEM "Generate Change Script",      ID_TOOLS_GENERATE_CHANGE_SCRIPT
+
+        MENUITEM "&XML Schema Management for Databases ...", 
+                                                ID_MANAGE_XML_SCHEMAS
+        MENUITEM SEPARATOR
+        POPUP "&User-defined tools"
+        BEGIN
+            MENUITEM "&<User-defined tools",        ID_TOOLS_ENTRY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Global Resources...",        IDC_GLOBALRESOURCES
+        POPUP "Active configurations"
+        BEGIN
+            MENUITEM "",                            IDC_GLOBALRESOURCES_SUBMENUENTRY1
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize ...",              ID_VIEW_CUSTOMIZE
+        MENUITEM "&Options ...",                ID_DATABASESPY_SETTINGS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &vertically",            ID_WINDOW_TILE_VERT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Table of Contents",          ID_HELP_FINDER
+        MENUITEM "&Index...",                   ID_HELP_INDEX
+        MENUITEM "&Search...",                  ID_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "Software A&ctivation...",     ID_HELP_ACTIVATION
+        MENUITEM "&Order form...",              ID_HELP_ORDERFORM
+        MENUITEM "&Registration...",            ID_HELP_REGISTRATION
+        MENUITEM "Check for U&pdates...",       IDC_CHECK_FOR_UPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "S&upport Center...",          ID_HELP_SUPPORTCENTER
+        MENUITEM "&FAQ on the Web...",          ID_HELP_FAQ
+        MENUITEM "Down&load Components and Free Tools...", 
+                                                IDC_OPEN_COMPONENTS_PAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&DatabaseSpy on the Internet...", ID_HELP_INTERNET
+        MENUITEM SEPARATOR
+        MENUITEM "&About DatabaseSpy...",       ID_APP_ABOUT
+    END
+END
+
+IDR_DOCTABMENU_STANDARD MENU DISCARDABLE 
+BEGIN
+    POPUP "DocTabPopup"
+    BEGIN
+        MENUITEM "&Save...",                    ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close All But Ac&tive",       ID_FILE_CLOSEALLBUTACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "Add to Project",              ID_ADDACTIVEFILETOPROJECT
+    END
+END
+
+IDR_DESIGNVIEW_CONTEXT_DESIGN MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Create new &Table",           ID_DESIGN_NEW_TABLE
+    MENUITEM "&Add Sticky Note",            ID_DESIGN_ADD_STICKY_NOTE_CONTEXT
+
+    MENUITEM SEPARATOR
+    POPUP "Select"
+    BEGIN
+        MENUITEM "Select &User Tables",         ID_DESIGN_SELECT_USERTABLES
+        MENUITEM "Select &System Tables",       ID_DESIGN_SELECT_SYSTEMTABLES
+
+        MENUITEM "Select All",                  ID_EDIT_SELECT_ALL
+    END
+    MENUITEM "&Auto Layout whole Diagram",  ID_DESIGN_LAYOUT_HIERARCHY
+    MENUITEM SEPARATOR
+    MENUITEM "&Save Diagram as Image",      ID_DESIGN_SAVE_DIAGRAM
+END
+
+IDR_DESIGNVIEW_CONTEXT_TABLE MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "&Auto Layout whole Diagram",  ID_DESIGN_LAYOUT_HIERARCHY
+    MENUITEM "Auto La&yout selected Tables", 
+                                            ID_DESIGN_LAYOUT_HIERARCHY_SELECTED
+
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Table",                ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DESIGNVIEW_CONTEXT_COLUMN MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Make Index"
+    BEGIN
+        MENUITEM "&Non Clustered Index",        ID_DESIGN_MAKE_NON_CLUSTERED_INDEX_FROM_SELECTED_COLUMNS
+
+        MENUITEM "&Clustered Index",            ID_DESIGN_MAKE_CLUSTERED_INDEX_FROM_SELECTED_COLUMNS
+
+        MENUITEM "&XML Index",                  ID_DESIGN_MAKE_XML_INDEX_FROM_SELECTED_COLUMNS
+
+    END
+    MENUITEM "Make Primary Key",            ID_DESIGN_MAKE_PRIMARY_KEY_FROM_SELECTED_COLUMNS
+
+    MENUITEM "Make Unique Key",             ID_DESIGN_MAKE_UNIQUE_KEY_FROM_SELECTED_COLUMNS
+
+    MENUITEM SEPARATOR
+    MENUITEM "Create Default Constraint",   ID_DESIGN_CREATE_DEFAULT_CONSTRAINT
+
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "&Auto Layout whole Diagram",  ID_DESIGN_LAYOUT_HIERARCHY
+    MENUITEM "Auto La&yout selected Tables", 
+                                            ID_DESIGN_LAYOUT_HIERARCHY_SELECTED
+
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Column",               ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "&Move Column Up",             ID_DESIGN_MOVE_ROW_UP
+    MENUITEM "Move Column Down",            ID_DESIGN_MOVE_ROW_DOWN
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DESIGNVIEW_CONTEXT_KEY MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Key",                  ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DESIGNVIEW_CONTEXT_CHECKCONSTRAINT MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Check Constraint",     ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DESIGNVIEW_CONTEXT_RELATION_LINE MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Rename Foreign Key",          ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM "Hide Relation",               ID_DESIGN_HIDE_RELATION
+    MENUITEM SEPARATOR
+    MENUITEM "&Auto Layout whole Diagram",  ID_DESIGN_LAYOUT_HIERARCHY
+    MENUITEM "Auto La&yout selected Tables", 
+                                            ID_DESIGN_LAYOUT_HIERARCHY_SELECTED
+
+END
+
+IDR_DESIGNVIEW_CONTEXT_RELATION_LABLE MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Rename Foreign Key",          ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM "Hide Relation",               ID_DESIGN_HIDE_RELATION
+    MENUITEM SEPARATOR
+    MENUITEM "&Auto Layout whole Diagram",  ID_DESIGN_LAYOUT_HIERARCHY
+    MENUITEM "Auto La&yout selected Tables", 
+                                            ID_DESIGN_LAYOUT_HIERARCHY_SELECTED
+
+END
+
+IDR_DESIGNVIEW_CONTEXT_STICKY_NOTE MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Edit sticky note",            ID_DESIGN_EDIT_STICKY_NOTE
+    MENUITEM "Remove from Design",          ID_DESIGN_REMOVEOBJECTFROMDESIGN
+END
+
+IDR_DESIGNVIEW_CONTEXT_INDEX MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Index",                ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DESIGNVIEW_CONTEXT_INDEX_SUBCOLUMN MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Index",                ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "&Move Column Up",             ID_DESIGN_MOVE_ROW_UP
+    MENUITEM "Move Column Down",            ID_DESIGN_MOVE_ROW_DOWN
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DESIGNVIEW_CONTEXT_KEY_REFTABLE MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Key",                  ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DESIGNVIEW_CONTEXT_KEY_SUBCOLUMN MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert new"
+    BEGIN
+        MENUITEM "&Column",                     ID_DESIGN_NEW_COLUMN
+        POPUP "Index"
+        BEGIN
+            MENUITEM "&Non Clustered Index",        ID_DESIGN_CREATE_NON_CLUSTERED_INDEX
+
+            MENUITEM "&Clustered Index",            ID_DESIGN_CREATE_CLUSTERED_INDEX
+
+            MENUITEM "&XML Index",                  ID_DESIGN_CREATE_XML_INDEX
+
+        END
+        POPUP "Key"
+        BEGIN
+            MENUITEM "&Primary Key",                ID_DESIGN_CREATE_PRIMARY_KEY
+
+            MENUITEM "&Unique Key",                 ID_DESIGN_CREATE_UNIQUE_KEY
+
+            MENUITEM "&Foreign Key",                ID_DESIGN_CREATE_FOREIGN_KEY
+
+        END
+        MENUITEM "Check Constraint",            ID_DESIGN_CREATE_CHECK_CONSTRAINT
+
+    END
+    MENUITEM SEPARATOR
+    POPUP "Add related tables"
+    BEGIN
+        MENUITEM "Referenced Tables",           ID_DESIGN_SHOW_REFERENCED
+        MENUITEM "Referencing Tables",          ID_DESIGN_SHOW_REFERENCING
+        MENUITEM "All Relations",               ID_DESIGN_SHOW_BOTH_REFS
+    END
+    MENUITEM SEPARATOR
+    POPUP "Show in new SQL Editor"
+    BEGIN
+        MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+        MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+        MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+        MENUITEM SEPARATOR
+        MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+        MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+        MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+    END
+    POPUP "Retrieve data"
+    BEGIN
+        MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+        MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+    END
+    MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+    MENUITEM SEPARATOR
+    MENUITEM "Rename Key",                  ID_DESIGN_RENAME_OBJECT
+    MENUITEM "Remove Table from Design",    ID_DESIGN_REMOVEOBJECTFROMDESIGN
+    MENUITEM "Delete selected Objects",     ID_DESIGN_DROP_OBJECT
+    MENUITEM SEPARATOR
+    MENUITEM "&Move Column Up",             ID_DESIGN_MOVE_ROW_UP
+    MENUITEM "Move Column Down",            ID_DESIGN_MOVE_ROW_DOWN
+    MENUITEM SEPARATOR
+    MENUITEM "Compact View",                ID_DESIGN_COMPACT
+    MENUITEM SEPARATOR
+    MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+END
+
+IDR_DATADIFFVIEW_CONTEXT_VIEW MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Compare all tables",          ID_COMPARISON_START
+    MENUITEM SEPARATOR
+    MENUITEM "Merge all Left to Right",     ID_COMPARISON_MERGELR
+    MENUITEM "Merge all Right to Left",     ID_COMPARISON_MERGERL
+    MENUITEM SEPARATOR
+    MENUITEM "Show all results",            ID_COMPARISON_SHOWRESULT
+    MENUITEM SEPARATOR
+    POPUP "SQL and Data"
+    BEGIN
+        MENUITEM "Show merge script: Left to Right", 
+                                                ID_COMPARISON_SHOWSCRIPTLR
+        MENUITEM "Show merge script: Right to Left", 
+                                                ID_COMPARISON_SHOWSCRIPTRL
+        MENUITEM SEPARATOR
+        MENUITEM "Show restore script: Left",   ID_COMPARISON_SHOWRSCRIPTLR
+        MENUITEM "Show restore script: Right",  ID_COMPARISON_SHOWRSCRIPTRL
+    END
+    MENUITEM SEPARATOR
+    POPUP "Sort tables"
+    BEGIN
+        MENUITEM "Ascending",                   ID_COMPARISON_SORT_ASC
+        MENUITEM "Descending",                  ID_COMPARISON_SORT_DESC
+        MENUITEM SEPARATOR
+        MENUITEM "Ascending mapped first",      ID_COMPARISON_SORT_MAPPASC
+        MENUITEM "Descending mapped first",     ID_COMPARISON_SORT_MAPPDESC
+    END
+    MENUITEM SEPARATOR
+    MENUITEM "Map tables",                  ID_COMPARISON_MAP
+    MENUITEM "Unmap tables",                ID_COMPARISON_UNMAP
+    MENUITEM SEPARATOR
+    MENUITEM "Expand all",                  ID_COMPARISON_EXPAND
+    MENUITEM "Collapse all",                ID_COMPARISON_COLLAPSE
+    MENUITEM SEPARATOR
+    MENUITEM "Autolayout",                  ID_COMPARISON_AUTOLAYOUT
+END
+
+IDR_DATABASESPY_NEW_DOCUMENTS MENU DISCARDABLE 
+BEGIN
+    MENUITEM "&SQL Editor ",                ID_DATABASESPY_SQLEDITOR
+    MENUITEM "&Design Editor ",             ID_DATABASESPY_DESIGNEDITOR
+    MENUITEM "Data &Comparison ",           ID_DATABASESPY_DATADIFF
+END
+
+IDR_DATADIFFVIEW_CONTEXT_ITEM MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Compare selected tables",     ID_COMPARISON_START
+    MENUITEM SEPARATOR
+    MENUITEM "Merge selected Left to Right", ID_COMPARISON_MERGELR
+    MENUITEM "Merge selected Right to Left", ID_COMPARISON_MERGERL
+    MENUITEM SEPARATOR
+    MENUITEM "Show selected results",       ID_COMPARISON_SHOWRESULT
+    MENUITEM SEPARATOR
+    POPUP "SQL and Data"
+    BEGIN
+        MENUITEM "Show merge script: Left to Right", 
+                                                ID_COMPARISON_SHOWSCRIPTLR
+        MENUITEM "Show merge script: Right to Left", 
+                                                ID_COMPARISON_SHOWSCRIPTRL
+        MENUITEM SEPARATOR
+        MENUITEM "Show restore script: Left",   ID_COMPARISON_SHOWRSCRIPTLR
+        MENUITEM "Show restore script: Right",  ID_COMPARISON_SHOWRSCRIPTRL
+        MENUITEM SEPARATOR
+        POPUP "Show in new SQL Editor"
+        BEGIN
+            MENUITEM "Select",                      ID_SHOW_SQL_SELECT
+            MENUITEM SEPARATOR
+            MENUITEM "Create",                      ID_SHOW_SQL_CREATE
+            MENUITEM "Alter",                       ID_SHOW_SQL_ALTER
+            MENUITEM "Drop",                        ID_SHOW_SQL_DROP
+            MENUITEM SEPARATOR
+            MENUITEM "Insert",                      ID_SHOW_SQL_INSERT
+            MENUITEM "Update",                      ID_SHOW_SQL_UPDATE
+            MENUITEM "Delete",                      ID_SHOW_SQL_DELETE
+        END
+        POPUP "Retrieve data"
+        BEGIN
+            MENUITEM "All rows",                    ID_RETRIEVE_ALLROWS
+            MENUITEM "First n rows",                ID_RETRIEVE_FIRSTROWS
+        END
+        MENUITEM "Edit Data",                   ID_EDITRESULTDATA
+        MENUITEM SEPARATOR
+        MENUITEM "&Export database data",       ID_ICDBWND_EXPORT
+    END
+    MENUITEM "Show in new Design Editor",   ID_COMPARISON_SHOWINDESIGN
+    MENUITEM SEPARATOR
+    MENUITEM "Unmap selected",              ID_COMPARISON_UNMAP
+    MENUITEM SEPARATOR
+    MENUITEM "Set as comparison key column", ID_COMPARISON_SETKEYCOLUMN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_RESULTBAR_COPY,      VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_DATABASESPY_DESIGNEDITOR, VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_EXPORT,              VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_EDITRESULTDATA,      VIRTKEY, ALT, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_FILTER,              VIRTKEY, ALT, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_IMPORT,              VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_ICDBWND_BROWSER_SEARCH, VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_DATABASESPY_SQLEDITOR, VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_PROJECT_NEWPROJECT,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_DATABASESPY_SETTINGS, VIRTKEY, CONTROL, ALT, NOINVERT
+    "O",            ID_FILE_LOAD_PROJECT,   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "P",            ID_CHANGED_FILE_PRINT,  VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_TOOLS_DATASOURCESTEST, VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_RETRIEVE_ALLROWS,    VIRTKEY, ALT, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_SAVEPROJECT,         VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVEALL,        VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "T",            ID_RETRIEVE_FIRSTROWS,  VIRTKEY, ALT, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    "V",            IDS_DBQUERY_PASTE,      VIRTKEY, CONTROL, NOINVERT
+    "V",            IDS_DBQUERY_PASTEASNEWROWS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_REMOVE_DATASOURCE,   VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_DROP_DBOBJECT,  VIRTKEY, NOINVERT
+    VK_DELETE,      ID_REMOVE_FROM_PROJECT, VIRTKEY, NOINVERT
+    VK_DELETE,      ID_REMOVE_FAVORITE_ITEM, VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_DOWN,        ID_SELECT_NEXT,         VIRTKEY, ALT, NOINVERT
+    VK_END,         ID_SELECT_LAST,         VIRTKEY, ALT, NOINVERT
+    VK_F1,          ID_HELP_FINDER,         VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_RENAME,         VIRTKEY, NOINVERT
+    VK_F2,          ID_ICDBWND_BROWSER_ADD_TO_FAVOURITES, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F5,          ID_EXECUTE,             VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_SELECT_FIRST,        VIRTKEY, ALT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      IDB_RESULTBAR_NEWLINE,  VIRTKEY, ALT, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      ID_VIEW_PROPERTIES,     VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      IDB_RESULTBAR_SAVE,     VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_RETURN,      ID_SELECT_CURR,         VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_UP,          ID_SELECT_PREV,         VIRTKEY, ALT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DatabaseSpy"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "DatabaseSpy Version 1.0",IDC_STATIC,40,7,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,20,119,8,
+                    SS_CENTERIMAGE
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    PUSHBUTTON      "http://www.<MyCompany>.com",IDC_COMPANY_URL,40,36,119,
+                    14
+END
+
+IDD_DATASOURCESDLG DIALOG DISCARDABLE  0, 0, 399, 273
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Data Sources"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,283,252,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,335,252,50,14
+    GROUPBOX        "Data Sources Placeholder",
+                    IDC_STATIC_DATSOURCES_PLACEHOLDER,16,15,182,111,NOT 
+                    WS_VISIBLE
+    GROUPBOX        "Schema Placeholder",IDC_STATIC_SCHEMA_PLACEHODLER,203,
+                    15,182,111,NOT WS_VISIBLE
+    GROUPBOX        "Table/Views Placeholder",IDC_STATIC_TABLE_PLACEHODLER,
+                    15,129,182,111,NOT WS_VISIBLE
+    GROUPBOX        "Columns/Constraints Placeholder",
+                    IDC_STATIC_COLUMN_PLACEHODLER,203,129,182,111,NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "Get Schemas",IDC_BUTTON_GETSCHEMAS,15,252,54,14
+    PUSHBUTTON      "Get TableInfo",IDC_BUTTON_GETTABLEINFO,131,252,50,14
+    PUSHBUTTON      "Get Tables",IDC_BUTTON_GETTABLES,75,252,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 10,2,0,0
+ PRODUCTVERSION 10,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Altova®\0"
+            VALUE "FileDescription", "DatabaseSpy\0"
+            VALUE "FileVersion", "10, 2, 0, 0\0"
+            VALUE "InternalName", "DatabaseSpy\0"
+            VALUE "LegalCopyright", "Copyright © 1998-2008 Altova GmbH\0"
+            VALUE "LegalTrademarks", "DatabaseSpy and Altova are trademarks of Altova GmbH\0"
+            VALUE "OriginalFilename", "DatabaseSpy.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "DatabaseSpy\0"
+            VALUE "ProductVersion", "10, 2, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 49
+    END
+
+    IDD_DATASOURCESDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 392
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+IDR_XPMANIFEST          24      DISCARDABLE     "res\\DatabaseSpy.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_DATABASESPYAPI      REGISTRY DISCARDABLE    "DatabaseSpyAPI.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Altova DatabaseSpy"
+    IDR_DATABASESPYTYPE     "\nDatabaseSpy\nDatabaseSpy\n\n\nDatabaseSpy.Document\nDatabaseSpy Document"
+    IDS_INIT_GRAMMAR_ERROR  "The Grammar-File ""%s"" describing the XML grammar rules for the parser could not be found or contains an error. Please reinstall this file from the setup program."
+    IDR_DATABASESPYTYPETEXT "\nSQL\nSQL\nSQL Editor (.sql)\n.sql\nSQL.Document\nSQL Editor "
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Altova DatabaseSpy"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CHANGED_FILE_PRINT   "Print the active document\nPrint"
+    ID_CHANGED_FILE_PRINT_PREVIEW "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_USER_TOOLBAR8   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR9   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR10  "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_WORKSPACE       "Show or hide the workspace bar\nToggle Workspace"
+    ID_VIEW_OUTPUT          "Show or hide the output bar\nToggle Output"
+    ID_TOOLS_ENTRY          "User-defined tools\nUser Tools"
+    ID_USER_TOOL1           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL2           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL3           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL4           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL5           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL6           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL7           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL8           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL9           "Activate user-defined tool\nUser Tool"
+    ID_USER_TOOL10          "Activate user-defined tool\nUser Tool"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PROJECT_NEWPROJECT   "Create a new project\nCreate a new project
+    ID_FILE_LOAD_PROJECT    "Open a project file\nOpen a project"
+    ID_SAVEPROJECT 	    "Save the Current Project\nSave Project"
+    ID_ADDFILESTOPROJECT    "Add files to the Project\nAdd files to the Project"
+    ID_ADDACTIVEFILETOPROJECT "Add the active file to the projcet\nAdd the Active file"  
+    ID_VIEW_APPLOOK_2000    "Activate Office 2000 application look\nOffice 2000 Look"
+    ID_VIEW_APPLOOK_XP      "Activate Office XP application look\nOffice XP Look"
+    ID_VIEW_APPLOOK_2003    "Activate Office 2003 application look\nOffice 2003 Look"
+    ID_VIEW_APPLOOK_WIN_XP  "Activate Windows XP application look\nWindows XP Look"
+    ID_FILE_MRU_PROJECT1    "Open this project"
+    IDS_NEED_DATASOURCE_FOR_DESIGNEDITOR 
+                            "In order to work with DatabaseSpy's DesignEditor, \nyou need a connected datasource in your project.\n\nDo you wish to add one?"
+    IDS_CONNECTED_DATASOURCE_REQUIRED 
+                            "DatabaseSpy's DesignEditor requires a connected datasource.\nPlease use the project window to connect one of your datasources first."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATABASESPY_MSG_EDIT_CHANGE_SCRIPT 
+                            "Editing the script forces DatabaseSpy to lose all changes made to the affected database objects.\nDatabaseSpy will refresh itself from the Data Source if you edit this script.\nDo you wish to continue and edit this script?"
+    ID_HELP_REGISTRATION    "Register your copy of DatabaseSpy..."
+    IDC_OPEN_COMPONENTS_PAGE "Download Components and Free Tools..."
+    ID_FILE_SAVEALL         "Saves all modified documents and the project."
+    ID_FILE_CLOSEALL        "Closes all documents"
+    IDS_DATABASESPY_IDLEMESSAGE 
+                            "DatabaseSpy v%s   %s   ©1998-2008 Altova GmbH"
+    ID_MANAGE_XML_SCHEMAS   "Register and unregister XML schemas for databases which support XML\nXML Schema Management"
+    ID_VIEW_OUTPUTDEBUG     "Show or hide the debug output bar\nToggle Debug Output"
+    ID_VIEW_RESULTINSPECTOR "Show or hide the Data Inspector window\nToggle Data Inspector"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SQLREFACTORING_FORMATTINGOPTIONS 
+                            "Options to Format SQL files\nOptions for Format SQL files"
+    ID_SQLREFACTORING_UPPERCASEKEYWORDS 
+                            "Uppercase all keywords in the active SQL Editor.\nUppercase all keywords in the active SQL Editor"
+    ID_SQLREFACTORING_EXPANDSTAR 
+                            "Expand columns for all Select statements which contain star expressions.\nExpand columns for all Select statements which contain star expressions.\nExpand columns for all Select statements which contain star expressions.\n"
+    ID_SQLREFACTORING_QUOTEIDENTIFIERS 
+                            "Add quotation to all identifiers in the active SQL Editor.\nAdd quotation to all identifiers in the active SQL Editor"
+    ID_SQLREFACTORING_UNQUOTEIDENTIFIERS 
+                            "Remove quotation from identifiers in the active SQL Editor.\nRemove quotation from identifiers in the active SQL Editor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Shows help index\nIndex"
+    ID_HELP_FINDER          "Shows table of help contents.\nHelp contents"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_CONFIG_DB_CHANGED 
+                            "The current configuration cannot be deleted because you modified the data source. Please save all your changes before deleting the current configuration."
+    IDS_DATABASESPY_MSG_APPLY_FORMATTING_TO_ALL_OPEN_SQLEDITORS_INFO 
+                            "You can set options to always apply formatting after making changes to the SQL Formatting Configurations or to Never Apply changes from the Options Dialog."
+    IDS_DATABASESPY_MSG_APPLY_FORMATTING_TO_ALL_OPEN_SQLEDITORS 
+                            "Do you want to apply Formatting now to all open SQL Editors?"
+    IDS_DATABASESPY_ERROR_RETRIEVE_TABLE_INFO 
+                            "Unknown Error occurred while trying to retrieve table info"
+    IDS_DATABASESPY_UNRESOLVED_GLOBAL_RESOURCE 
+                            "Global Resource cannot be resolved. Connection aborted."
+    ID_VIEW_DATA_INSPECTOR  "Show or hide the Data Inspector Window\nData Inspector Window"
+    ID_VIEW_APP_STATUS_BAR  "Show or hide the status bar\nToggle StatusBar"
+    IDS_DATABASESPY_DBDIFF_REGION_MERGESCRIPT_FORMAT "merge from %s to %s"
+    IDS_DATABASESPY_DBDIFF_REGION_MERGESCRIPT_REVERSE_FORMAT 
+                            "revert merge from %s to %s"
+    IDS_NEED_DATASOURCE_FOR_DATACOMPARE 
+                            "In order to work with DatabaseSpy's Data Comparison\nyou need a connected datasource in your project.\n\nDo you wish to add one?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_WORKSPACE2      "Show or hide the second workspace bar\nToggle Second Workspace"
+    ID_VIEW_USER_TOOLBAR1   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR2   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR3   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR4   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR5   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR6   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR7   "Show or hide the user toolbar\nToggle User ToolBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_MANAGER       "Manages the currently opened window\nWindow List"
+    ID_VIEW_TASKPANE        "Show or hide the tasks pane\nToggle TaskPane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+    IDS_DATABASESPY_TITLE_SET_NAME_FOR_DATA_SOURCE 
+                            "Warning: Problem Loading Data Source From Project"
+    IDS_DATABASESPY_MSG_BAD_DATA_SOURCE_NAME_PROJECT_NOT_LOADED 
+                            "Due to errors in the data source name the selected project will not be loaded, but a new one will be created for you."
+    IDS_DATABASESPY_ERR_EMPTY_DATA_SOURCE_NAME 
+                            "The project file was corrupted.  One or more data sources do not have a name.  Please enter a temporary identifier:"
+    IDS_DATABASESPY_MSG_FIRSTEDIT_DATABASE_STRUCTURE_SHORT 
+                            "DatabaseSpy has created the change script for the current edit action."
+    IDS_DATABASESPY_PREVIEW_DEFAULT_TAB_NAME "Change Script"
+    IDS_DATABASESPY_MSG_SHOW_SEMICOLON_HINT 
+                            "You do not have semicolons appended to the statement by default. Do you want to set this option now?"
+    IDS_DATABASESPY_DLG_FILE_FORMAT_UPGRADE_TITLE "File Format Upgrade"
+    IDS_DATABASESPY_DLG_FILE_FORMAT_UPGRADE_MESSAGE 
+                            "The project file format version has changed.\nYou will not be able to load this file with a previous version of DatabaseSpy.\n\nDo you want to save the project file ?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DATABASESPY_PREVIEW_UPDATE 
+                            "Generate / Update Database Structure Change Script\nGenerate Change Script"
+    ID_FILE_SAVEPROJECTAS   "Save the active project with a new name\nSave Project As"
+    IDS_DATABASESPY_MSG_FIRSTEDIT_DATABASE_STRUCTURE 
+                            "DatabaseSpy has generated the change script for the current edit action. The change script appears in the 'Database Structure Change Script Window'.\r\n\r\nThis message appears only once on the first database edit. The change script can be generated instantly or on demand. This option is configurable from the Options Dialog.\r\n\r\nThe change script should be reviewed and verified. You can then execute the script to apply the changes to the database or discard the changes."
+    ID_DATABASESPY_PREVIEW_DISCARD "Discard all changes\nDiscard Changes"
+    ID_HELP_SEARCH          "Search for a key-word in help\nSearch"
+    ID_HELP_ACTIVATION      "Activate your copy of DatabaseSpy..."
+    ID_HELP_ORDERFORM       "Open order form..."
+    IDC_CHECK_FOR_UPDATES   "Check for updates..."
+    ID_HELP_SUPPORTCENTER   "Open support form..."
+    ID_HELP_FAQ             "Show Frequently Asked Questions\nFAQ on the web"
+    ID_HELP_INTERNET        "Open DatabaseSpy Homepage..."
+    ID_HELP_TRAINING        "Open DatabaseSpy Training Partner web page"
+    ID_DATABASESPY_PREVIEW_EXECUTE 
+                            "Execute the generated SQL Change Script\nExcute Change Script"
+    ID_DATABASESPY_PREVIEW_EDIT 
+                            "Edit the SQL Change Script in the SQL Editor\nEdit Change Script"
+    ID_DATABASESPY_PREVIEW_SAVE 
+                            "Save the SQL Change Script to a file\nSave Change Script"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATABASESPY_MSG_CHANGE_SCRIPT_DISCARD 
+                            "DatabaseSpy has to refresh the database structure to discard the changes.\n\nDo you want to proceed?"
+    ID_TOOLS_GENERATE_CHANGE_SCRIPT 
+                            "Generate / Update Database Structure Change Script\nGenerate Change Script"
+    ID_DATABASESPY_PREVIEW_EXECUTE_STOP 
+                            "Stop execution of the Database Structure Change Script\nStop Change Script Execution"
+    ID_WINDOW_DATABASESTRUCTURESCRIPTPREVIEW 
+                            "View the Database Structural Change Script\nDatabase Structure Change Script"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATABASESPY_LABEL_XMLMODE "XML View"
+    IDS_DATABASESPY_SAVEPROJECT "SQL Editor\nSQL Editor"
+    IDS_DATABASESPY_ERROR_LOADING_WORKSPACE "Failed to load the workspace!"
+    IDS_DATABASESPY_ERR_SAVING_WORSPACE "Failed to save the workspace!"
+    IDS_DATABASESPY_SAVE_PROJECT "Do you want to save project modifications?"
+    IDS_DATABASESPY_EDITWITH_DATABASESPY "Edit with Altova DatabaseSpy"
+    IDS_DATABASESPY_MESSAGE_MODIFIED_OBJECTS_BEFORE_REFRESH 
+                            "There are modified objects in this database.\nAll changes are lost when you continue refreshing the database structure.\n\nAre you sure you want to refresh?"
+    IDS_DATABASESPY_MESSAGE_MODIFIED_OBJECTS_BEFORE_CHANGE_ROOT 
+                            "There are modified objects in this database.\nAll changes are lost when you continue to switch the root object of the data source.\n\nAre you sure you want to switch the root object?"
+    IDS_DATABASESPY_MESSAGE_MODIFIED_OBJECTS_BEFORE_DISCONNECT 
+                            "There are modified objects in this database.\nAll changes are lost when you disconnect from the database.\n\nAre you sure you want to disconnect?"
+    IDS_DATABASESPY_MSG_CHANGE_SCRIPT_EXECUTION_SUCCEEDED 
+                            "The change script executed successfully.\nStarting to reload the database structure."
+    IDS_DATABASESPY_MSG_CHANGE_SCRIPT_EXECUTION_FAILED 
+                            "The change script failed to execute.\nDo You want to keep the unexecuted portion of the change script ?"
+    IDS_DATABASESPY_MSG_CHANGE_SCRIPT_EXECUTION_INTERRUPTED 
+                            "Do you really want to stop the execution of the change script ?"
+    IDS_DATABASESPY_ONLOADINGDESIGN_ROOTOBJECT_NOT_ACTIVE_TITLE_FMT 
+                            "Open %s - Rootobject is not active"
+    IDS_DATABASESPY_ONLOADINGDESIGN_ROOTOBJECT_NOT_ACTIVE_MESSAGEBODY_FMT 
+                            "The design's rootobject (%s) is not active. Activate it now?\nOtherwise the design cannot be opened."
+    IDS_DATABASESPY_QUICK_CONNECT_DIALOG_TITLE "Quick Connect"
+    IDS_SHUTDOWN_WITHOUT_COMMIT 
+                            "You haven't committed all your changes to the database yet.\nDo you want to close DatabaseSpy anyway and lose your changes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DATABASESPY_SQLEDITOR "Execute SQL statements\nSQL Editor"
+    ID_DATABASESPY_EXECUTE  "Execute the SQL Query\nExecute SQL"
+    IDS_DATABASESPY_LABEL_STANDARDMODE "Test Data Sources\nTest Data Sources"
+    ID_TOOLS_DATASOURCESTEST "Connect to a database\nQuick Connect"
+    ID_VIEW_PROJECT         "Show or hide the Project Window\nProject Window"
+    ID_FILE_CONNECT         "Connect to a Data Source\nQuick Connect allows users to connect to a Data Source"
+    ID_DATABASESPY_DESIGNEDITOR "Create a new design\nDesign Editor"
+    ID_TOOLS_EXPORT_TO_XML  "Export database data"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CUSTOMIZE       "Customize toolbars and menus.\nCustomize"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MAIN_TOOLBAR        "Standard"
+    IDS_WINDOWS_MANAGER     "&Windows..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_PROPERTIES      "Show or hide the Property Window\nProperty Window"
+    ID_VIEW_BROWSER         "Show or hide the Online Browser\nOnline Browser"
+    ID_FILE_CLOSEPROJECT    "Close the current Project\nClose Project"
+    ID_FILE_SAVEPROJECT     "Save the current Project\nSave Project"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DATABASESPY_SETTINGS "Show Application Options\nShow Options"
+    IDC_ENTRY_HELPERS       "Show or hide entry helpers\nEntry helpers"
+    IDC_ALL_BARS            "Show or hide the online browser, project, and the property windows \nAll on/off"
+    ID_IMPORT               "Import\nImport"
+    ID_IMPORT_TEXT2XML      "Import Text to XML\nImport Text to XML"
+    ID_VIEW_SQL_PREVIEW     "Show or hide the Database Structure Change Script Window\nDatabase Structure Change Script"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_CREATE_VIEW_AS       "Preprend Select statement with ""Create View As"" clause.\nPreprend Select statement with ""Create View As"" clause"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EXPORT               "Export database data\nExport"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATABASESPY_MSG_FILE_NOT_FOUND "File can't be found at %s"
+    IDS_DATABASESPY_MESSAGE_REMOVE_TABLE_IMPLICIT 
+                            "You removed the last column from the table.\nDo you want to drop the table ?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DESIGNVIEW_DELETE_SUBOBJECT 
+                            "Deletes the selected columns, indexes, keys and constraints and/or removes selected subcolumns from the according indexes and keys"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATABASESPY_TITLE_PROGRESS_RESOLVE_DEPENDENCIES 
+                            "Resolving required dependencies"
+    IDS_DATABASESPY_FORMAT_PROGRESS_RESOLVE_DEPENDENCIES "resolving %s ..."
+    IDS_DIALOGBARHEADER_DATAINSPECTOR "Data Inspector"
+    IDS_DIALOGBARHEADER_CHANGESCRIPT "Database Structure Change Script"
+    IDS_DIALOGBARHEADER_OUTPUT "Output"
+    IDS_DIALOGBARHEADER_PROJECT "Project"
+    IDS_DIALOGBARHEADER_ONLINEBROWSER "Online Browser"
+    IDS_DIALOGBARHEADER_PROPERTIES "Properties"
+    IDS_DIALOGBARHEADER_OVERVIEW "Overview"
+    IDS_DATABASESPY_EXECUTION_ERROR_UNKNOWN "An unknown error occured."
+    IDS_DATABASESPY_MSG_CHANGE_SCRIPT_EXECUTION_SUMMARY "Execution Summary:"
+    IDS_DATABASESPY_MSG_CHANGE_SCRIPT_EXECUTION_SUMMARY_DETAIL 
+                            "%d succeeded\n%d wanings\n%d errors."
+    IDS_DATABASESPY_LABEL_GLOBALRESOURCEDELETED "Global Resource was changed"
+    IDS_DATABASESPY_LABEL_GLOBALRESOURCEDELETED_QUESTION 
+                            "The Global data source '%s' was deleted.\nDo you wish to also delete the data source from the open DatabaseSpy project\nor convert it into a local data source stored in the project?"
+    IDS_DATABASESPY_LABEL_DELETE_DATASOURCE "Delete"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DATABASESPY_LABEL_MAKELOCAL_DATASOURCE "Make Local"
+    IDS_DATABASESPY_ON_GLOBAL_RESOURCE_CHANGED 
+                            "The active configuration '%s' was changed for the alias '%s'. Do you want to reconnect?"
+    IDS_DATABASESPY_PROJECTGRID_RECENT_PROJECTS "Recent Projects"
+    IDS_DATABASESPY_PROJECTGRID_FOUND_PROJECTS "Projects"
+    IDS_DATABASESPY_PROJECTGRID_PROGRESS_INFO "Search in progress..."
+    IDS_DATABASESPY_PROJECTGRID_PROGRESS_TITLE "Searching for project files"
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_ALIAS_DESIGN 
+                            "The Global data source cannot be deleted because you have an open Design Editor with changes.  Please save and close all your design files before deleting the Global resource.\n\nPlease note that if you delete the a data source that a design file uses you will have to allocate a new data source to use the design file in the future."
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_CONFIG_DESIGN 
+                            "The current configuration cannot be deleted because you have an open Design Editor with changes.  Please save and close all your design files before deleting the configuration.\n\nPlease note that if you delete the a data source that a design file uses you will have to allocate a new data source to use the design file in the future."
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_ALIAS_RETRIEVAL 
+                            "The Global data source is currently being used and cannot be deleted. Please cancel or stop any executions or retrievals and try again."
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_CONFIG_RETRIEVAL 
+                            "The current configuration is currently being used and cannot be deleted. Please cancel or stop any executions or retrievals and try again."
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_ALIAS_QUERY 
+                            "The Global data source is currently being used and cannot be deleted. Please cancel or stop any executions or retrievals and try again."
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_CONFIG_QUERY 
+                            "The current configuration is currently being used and cannot be deleted. Please cancel or stop any executions or retrievals and try again."
+    IDS_DATABASESPY_ON_GLOBAL_RESOURCE_ACTIVE_CONFIG_DROPPED 
+                            "The active configuration name '%s' was deleted from the Global data source '%s'.\nDatabaseSpy will switch to the active configuration to the default configuration named 'Default'."
+    IDS_DATABASESPY_LABEL_CANT_DELETE_GLOBALRESOURCE_ALIAS_DB_CHANGED 
+                            "The Global data source cannot be deleted because you modified it.  Please save all your changes before deleting the Global resource."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SQLREFACTORING_PRETTYPRINT 
+                            "Apply SQL Formatting to the active SQL Editor\nApply SQL Formatting to the active SQL Editor"
+    ID_SQLREFACTORING_ADDSEMICOLONS 
+                            "Add Semicolons in the active SQL Editor.\nAdd Semicolons in the active SQL Editor."
+    ID_SQLREFACTORING_REMOVESEMICOLONS 
+                            "Remove Semicolons in the active SQL Editor.\nRemove Semicolons in the active SQL Editor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SQLREFACTORING_REMOVECOMMENTS 
+                            "Remove all comments in the active SQL Editor.\nRemove all comments in the active SQL Editor."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_FILE_RELOAD         "Reload active document\nReload"
+    ID_DATABASESPY_OPEN_GLOBAL_RESOURCE 
+                            "Open Global Resource\nOpen Global Resource"
+    ID_DATABASESPY_DATADIFF "Create a new data comparison\nData Comparison"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DIFFRESULT_MERGELR   "Merge data from left to right"
+    ID_DIFFRESULT_MERGERL   "Merge data from right to left"
+    ID_DIFFRESULT_SHOWEQUAL "Show/Hide all equal rows"
+    ID_DIFFRESULT_SHOWDIFFERENT "Show/Hide all different rows"
+    ID_DIFFRESULT_SHOWLEFTONLY "Show/Hide rows that are only on the left"
+    ID_DIFFRESULT_SHOWRIGHTONLY "Show/Hide rows that are only on the right"
+    ID_DIFFRESULT_GOTONEXT  "Next difference"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SQLREFACTORING_FLATTEN 
+                            "Remove all whitespace from the current selection"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DIFFRESULT_GOTOPREV  "Previous difference"
+    ID_DIFFRESULT_GOTOFIRST "First difference"
+    ID_DIFFRESULT_GOTOLAST  "Last difference"
+    ID_DIFFRESULT_LINKMAPPING "Go to table mapping"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_DATABASESPYTYPE_DATADIFF 
+                            "\nDatabaseDataComparison\nDatabaseDataComparison\nDatabase Data Comparison Document (.dbdif)\n.dbdif\nDatabaseDataComparison.Document\nDatabase Data Comparison Document "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CONNECTED_DATASOURCE_REQUIRED_DATA_COMPARE 
+                            "DatabaseSpy's Data Comparison requires a connected datasource.\nPlease use the project window to connect one of your datasources first."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Austria) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEA)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN_AUSTRIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""bcgprores.h""\r\n"
+    "\r\n"
+    "#include ""../../libs/ICApplication/resource.h""\r\n"
+    "#include ""../../libs/ICRelDisp/resource.h""\r\n"
+    "#include ""../../libs/ICGUI/resource.h""\r\n"
+    "#include ""../../libs/ICDBDiffGUI/resource.h""\r\n"
+    "#include ""../../libs/ICDBWnds/resource.h""\r\n"
+    "#include ""../../libs/ICDBWnds/ICDBWnds_Commands_Resource.h""\r\n"
+    "#include ""../../libs/ICDBTransformationGui/resource.h""\r\n"
+    "#include ""../../libs/ICDBDesignView/ICDBDesignView_resource.h""\r\n"
+    "#include ""../../libs/ICDBSQLEditor/resource.h""\r\n"
+    "#include ""../../libs/ICDBApplicationCore/resource.h""\r\n"
+    "#include ""../../libs/ICGlobalResources/resource.h""\r\n"
+    "#include ""../../libs/ICGlobalResourcesUI/resource.h""\r\n"
+    "#include ""../../libs/ICGlobalResourcesUI/ICGlobalResourcesUI_Commands_Resource.h""\r\n"
+    "#include ""../../libs/ICComapplication/resource.h""\r\n"
+    "#include ""../../libs/ICSQL/resource.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DatabaseSpy.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#if !defined(_AFXDLL) \r\n"
+    "#include ""BCGCBPro.rc""                               // BCG ControlBar resources\r\n"
+    "#endif\r\n"
+    "#include ""../../Libs/ICJavaExecutor/ICJavaExecutor.rc""\r\n"
+    "#include ""../../Libs/ICDotNetExecutor/ICDotNetExecutor.rc""\r\n"
+    "#include ""../../libs/XMLSpyCommon/XMLSpyCommon.rc""\r\n"
+    "#include ""../../libs/ICURLUtil/ICURLUtil.rc""\r\n"
+    "#include ""../../libs/ICGui/ICGui.rc""\r\n"
+    "#include ""../../libs/ICDB_New/ICDB_New.rc"" \r\n"
+    "#include ""../../libs/ICDBApplicationCore/ICDBApplicationCore.rc""\r\n"
+    "#include ""../../libs/ICApplication/ICApplication.rc""\r\n"
+    "#include ""../../libs/ICLicMan/ICLicMan.rc""\r\n"
+    "#include ""../../libs/ICLicManCore/ICLicManCore.rc""\r\n"
+    "#include ""../../libs/scintilla/ScintRes.rc""\r\n"
+    "#include ""../../libs/ICRelDisp/ICRelDisp.rc""\r\n"
+    "#include ""../../libs/XMLData/XMLData.rc""\r\n"
+    "#include ""../../libs/ICXMLValidator/src/ICXMLValidator.rc""\r\n"
+    "#include ""../../libs/ICDBWnds/ICDBWnds.rc""\r\n"
+    "#include ""../../libs/ICDBDiffGUI/ICDBDiffGui.rc""\r\n"
+    "#include ""../../libs/ICDBTransformationGui/ICDBTransformationGui.rc""\r\n"
+    "#include ""../../libs/ICDBDesignView/ICDBDesignView.rc""\r\n"
+    "#include ""../../libs/ICDBSQLEditor/ICDBSQLEditor.rc""\r\n"
+    "#include ""../../libs/ICRelDispControls/ICRelDispControls.rc""\r\n"
+    "#include ""../../libs/ICUtil/ICUtil.rc""\r\n"
+    "#include ""../../libs/ICglobalresources/ICglobalresources.rc""\r\n"
+    "#include ""../../libs/ICglobalresourcesui/ICglobalresourcesui.rc""\r\n"
+    "#include ""../../libs/ICcomapplication/iccomapplication.rc""\r\n"
+    "#include ""../../libs/ICSQL/ICSQL.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Austria) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\DatabaseSpy.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#if !defined(_AFXDLL) 
+#include "BCGCBPro.rc"                               // BCG ControlBar resources
+#endif
+#include "../../Libs/ICJavaExecutor/ICJavaExecutor.rc"
+#include "../../Libs/ICDotNetExecutor/ICDotNetExecutor.rc"
+#include "../../libs/XMLSpyCommon/XMLSpyCommon.rc"
+#include "../../libs/ICURLUtil/ICURLUtil.rc"
+#include "../../libs/ICGui/ICGui.rc"
+#include "../../libs/ICDB_New/ICDB_New.rc" 
+#include "../../libs/ICDBApplicationCore/ICDBApplicationCore.rc"
+#include "../../libs/ICApplication/ICApplication.rc"
+#include "../../libs/ICLicMan/ICLicMan.rc"
+#include "../../libs/ICLicManCore/ICLicManCore.rc"
+#include "../../libs/scintilla/ScintRes.rc"
+#include "../../libs/ICRelDisp/ICRelDisp.rc"
+#include "../../libs/XMLData/XMLData.rc"
+#include "../../libs/ICXMLValidator/src/ICXMLValidator.rc"
+#include "../../libs/ICDBWnds/ICDBWnds.rc"
+#include "../../libs/ICDBDiffGUI/ICDBDiffGui.rc"
+#include "../../libs/ICDBTransformationGui/ICDBTransformationGui.rc"
+#include "../../libs/ICDBDesignView/ICDBDesignView.rc"
+#include "../../libs/ICDBSQLEditor/ICDBSQLEditor.rc"
+#include "../../libs/ICRelDispControls/ICRelDispControls.rc"
+#include "../../libs/ICUtil/ICUtil.rc"
+#include "../../libs/ICglobalresources/ICglobalresources.rc"
+#include "../../libs/ICglobalresourcesui/ICglobalresourcesui.rc"
+#include "../../libs/ICcomapplication/iccomapplication.rc"
+#include "../../libs/ICSQL/ICSQL.rc"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

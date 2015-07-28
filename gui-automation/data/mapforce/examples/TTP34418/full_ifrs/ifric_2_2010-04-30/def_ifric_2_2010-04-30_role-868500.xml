@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    --><link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ifric_2_2010-04-30_role-868500" xlink:href="rol_ifric_2_2010-04-30.xsd#ifric_2_2010-04-30_role-868500" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member" xlink:type="simple"/>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ifric_2_2010-04-30_role-868500" xlink:title="[868500] Notes - Redemption prohibition, transfer between financial liabilities and equity" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfRedemptionProhibitionTransferBetweenFinancialLiabilitiesAndEquityExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TransferBetweenFinancialLiabilitiesAndEquityAttributableToChangeInRedemptionProhibition" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="10.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TimingAndReasonForTransferBetweenFinancialLiabilitiesAndEquityAttributableToChangeInRedemptionProhibition" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="20.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_3" xlink:type="arc"/>
+  </link:definitionLink>
+</link:linkbase>

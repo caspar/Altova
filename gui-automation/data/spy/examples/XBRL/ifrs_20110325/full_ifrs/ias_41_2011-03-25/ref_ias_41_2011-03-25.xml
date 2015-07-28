@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GrossCarryingAmountMember" xlink:label="loc_12"/>
+    <link:reference xlink:type="resource" xlink:label="res" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>54</ref:Paragraph>
+      <ref:Subparagraph>f</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_54_f&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_12" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AccumulatedDepreciationAmortisationAndImpairmentMember" xlink:label="loc_29"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_29" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CarryingAmountMember" xlink:label="loc_31"/>
+    <link:reference xlink:type="resource" xlink:label="res_2" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_31" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CarryingAmountAccumulatedDepreciationAmortisationAndImpairmentAndGrossCarryingAmountAxis" xlink:label="loc_43"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_43" xlink:to="res_2"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_43" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_BiologicalAssets" xlink:label="loc"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_MeasurementAxis" xlink:label="loc_4"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_4" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AtCostMember" xlink:label="loc_5"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_5" xlink:to="res_2"/>
+    <link:reference xlink:type="resource" xlink:label="res_3" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>55</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_55&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_5" xlink:to="res_3"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AtFairValueMember" xlink:label="loc_6"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_6" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AggregatedMeasurementMember" xlink:label="loc_3"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_3" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfBiologicalAssets" xlink:label="loc_7"/>
+    <link:reference xlink:type="resource" xlink:label="res_4" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>41</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_41&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_7" xlink:to="res_4"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_MethodsAndAssumptionsAppliedInDeterminingFairValueOfBiologicalAssets" xlink:label="loc_8"/>
+    <link:reference xlink:type="resource" xlink:label="res_5" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_47&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_8" xlink:to="res_5"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_UsefulLivesOrDepreciationRatesBiologicalAssetsAtCost" xlink:label="loc_10"/>
+    <link:reference xlink:type="resource" xlink:label="res_11" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>54</ref:Paragraph>
+      <ref:Subparagraph>e</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_54_e&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_10" xlink:to="res_11"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DepreciationMethodBiologicalAssetsAtCost" xlink:label="loc_13"/>
+    <link:reference xlink:type="resource" xlink:label="res_8" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>54</ref:Paragraph>
+      <ref:Subparagraph>d</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_54_d&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_13" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationWhyFairValueCannotBeReliablyMeasuredForBiologicalAssetsAtCost" xlink:label="loc_14"/>
+    <link:reference xlink:type="resource" xlink:label="res_6" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>54</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_54_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_14" xlink:to="res_6"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughTransfersAndOtherChangesBiologicalAssets" xlink:label="loc_17"/>
+    <link:reference xlink:type="resource" xlink:label="res_7" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:Subparagraph>g</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50_g&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_17" xlink:to="res_7"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GainsLossesOnFairValueAdjustmentBiologicalAssets" xlink:label="loc_18"/>
+    <link:reference xlink:type="resource" xlink:label="res_9" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_18" xlink:to="res_9"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughNetExchangeDifferencesBiologicalAssets" xlink:label="loc_20"/>
+    <link:reference xlink:type="resource" xlink:label="res_10" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:Subparagraph>f</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50_f&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_20" xlink:to="res_10"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ChangesInBiologicalAssets" xlink:label="loc_21"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_21" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisposalsBiologicalAssets" xlink:label="loc_22"/>
+    <link:reference xlink:type="resource" xlink:label="res_13" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_22" xlink:to="res_13"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseDueToHarvestBiologicalAssets" xlink:label="loc_25"/>
+    <link:reference xlink:type="resource" xlink:label="res_12" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:Subparagraph>d</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50_d&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_25" xlink:to="res_12"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AcquisitionsThroughBusinessCombinationsBiologicalAssets" xlink:label="loc_26"/>
+    <link:reference xlink:type="resource" xlink:label="res_14" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:Subparagraph>e</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50_e&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_26" xlink:to="res_14"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AdditionsOtherThanThroughBusinessCombinationsBiologicalAssets" xlink:label="loc_27"/>
+    <link:reference xlink:type="resource" xlink:label="res_15" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_50_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_27" xlink:to="res_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfReconciliationOfChangesInBiologicalAssetsTable" xlink:label="loc_2"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_2" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfReconciliationOfChangesInBiologicalAssetsExplanatory" xlink:label="loc_15"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_15" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GainsLossesOnInitialRecognitionOfBiologicalAssetsForCurrentPeriod" xlink:label="loc_23"/>
+    <link:reference xlink:type="resource" xlink:label="res_16" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>40</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_40&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_23" xlink:to="res_16"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfNonfinancialMeasuresOrEstimatesOfBiologicalAssets" xlink:label="loc_28"/>
+    <link:reference xlink:type="resource" xlink:label="res_18" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>46</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_46_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_28" xlink:to="res_18"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfNatureOfActivitiesOfBiologicalAssets" xlink:label="loc_30"/>
+    <link:reference xlink:type="resource" xlink:label="res_20" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>46</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_46_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_30" xlink:to="res_20"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfFairValueLessEstimatedPointofsaleCostsOfAgriculturalProduceHarvestedDuringPeriod" xlink:label="loc_32"/>
+    <link:reference xlink:type="resource" xlink:label="res_23" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>48</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_48&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_32" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CommitmentsForDevelopmentOrAcquisitionOfBiologicalAssets" xlink:label="loc_33"/>
+    <link:reference xlink:type="resource" xlink:label="res_24" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>49</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_49_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_33" xlink:to="res_24"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfFinancialRiskManagementRelatedToAgriculturalActivity" xlink:label="loc_34"/>
+    <link:reference xlink:type="resource" xlink:label="res_34" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>49</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_49_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_34" xlink:to="res_34"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RangeOfEstimatesWithinWhichFairValueIsLikelyToLieForBiologicalAssetsAtCost" xlink:label="loc_35"/>
+    <link:reference xlink:type="resource" xlink:label="res_21" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>54</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_54_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_35" xlink:to="res_21"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfBiologicalAssetsWhereFairValueInformationIsUnreliable" xlink:label="loc_36"/>
+    <link:reference xlink:type="resource" xlink:label="res_22" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>54</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_54_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_36" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ReversalOfImpairmentLossRecognisedInProfitOrLossBiologicalAssets" xlink:label="loc_37"/>
+    <link:reference xlink:type="resource" xlink:label="res_25" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>55</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_55_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_37" xlink:to="res_25"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ImpairmentLossRecognisedInProfitOrLossBiologicalAssets" xlink:label="loc_38"/>
+    <link:reference xlink:type="resource" xlink:label="res_26" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>55</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_55_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_38" xlink:to="res_26"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DepreciationBiologicalAssets" xlink:label="loc_39"/>
+    <link:reference xlink:type="resource" xlink:label="res_27" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>55</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_55_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_39" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfEffectOfChangeForBiologicalAssetForWhichFairValueBecomesReliablyMeasurable" xlink:label="loc_40"/>
+    <link:reference xlink:type="resource" xlink:label="res_28" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>56</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_56_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_40" xlink:to="res_28"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfBiologicalAssetsPreviouslyMeasuredAtCost" xlink:label="loc_41"/>
+    <link:reference xlink:type="resource" xlink:label="res_29" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>56</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_56_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_41" xlink:to="res_29"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationWhyFairValueBecomesReliableForBiologicalAssetsPreviouslyMeasuredAtCost" xlink:label="loc_44"/>
+    <link:reference xlink:type="resource" xlink:label="res_30" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>56</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_56_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_44" xlink:to="res_30"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfSignificantDecreaseInLevelOfGovernmentGrantsForAgriculturalActivity" xlink:label="loc_45"/>
+    <link:reference xlink:type="resource" xlink:label="res_31" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>57</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_57_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_45" xlink:to="res_31"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfNatureAndExtentOfGovernmentGrantsForAgriculturalActivityRecognisedInFinancialStatements" xlink:label="loc_46"/>
+    <link:reference xlink:type="resource" xlink:label="res_32" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>57</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_57_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_46" xlink:to="res_32"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfUnfulfilledConditionsAndOtherContingenciesAttachedToGovernmentGrantForAgriculturalActivity" xlink:label="loc_47"/>
+    <link:reference xlink:type="resource" xlink:label="res_33" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>57</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_57_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_47" xlink:to="res_33"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_BiologicalAssetsWhoseTitleIsRestricted" xlink:label="loc_16"/>
+    <link:reference xlink:type="resource" xlink:label="res_35" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>49</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_49_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_16" xlink:to="res_35"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfBiologicalAssetsAndGovernmentGrantsForAgriculturalActivityExplanatory" xlink:label="loc_9"/>
+    <link:reference xlink:type="resource" xlink:label="res_36" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Disclosure</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=sect_Disclosure&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_9" xlink:to="res_36"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GainsLossesOnFairValueAdjustmentAttributableToPhysicalChangesBiologicalAssets" xlink:label="loc_11"/>
+    <link:reference xlink:type="resource" xlink:label="res_17" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>51</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=para_51&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_11" xlink:to="res_17"/>
+    <link:reference xlink:type="resource" xlink:label="res_19" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>41</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Example 1 XYZ Dairy Ltd</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=41&amp;date=2011-03-25&amp;anchor=sect_Example1XYZDairyLtd&amp;doctype=Illustrative%20Examples</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_11" xlink:to="res_19"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GainsLossesOnFairValueAdjustmentAttributableToPriceChangesBiologicalAssets" xlink:label="loc_48"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_48" xlink:to="res_17"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_48" xlink:to="res_19"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseThroughClassifiedAsHeldForSaleBiologicalAssets" xlink:label="loc_42"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_42" xlink:to="res_13"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GainsLossesOnChangeInFairValueEstimatesOfBiologicalAssetsForCurrentPeriod" xlink:label="loc_24"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_24" xlink:to="res_16"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_BiologicalAssetsPledgedAsSecurityForLiabilities" xlink:label="loc_19"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_19" xlink:to="res_35"/>
+  </link:referenceLink>
+</link:linkbase>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Other things to look out for</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="enhancements_translation.xhtml">Next: Testing German (an other language) projects</a>
+		</div>
+		<div class="previous">
+			<a href="robotscenter.xhtml">Previous: The Robots Center internal application</a>
+		</div>
+		<h1>Other things to look out for</h1>
+		<h2>
+			<a name="0" />Introduction</h2>
+		<div class="p">This page contains some topics not covered already, like details about the picture and font recognition, speed/delay issues, (un)expected dialog boxes popping up, issues with different Windows themes settings, issues with the scrollbar, and finally thoughts about testing other languages. If you discover particularly interesting things about this topics, you might want to extends these pages.
+		</div>
+		<h2>
+			<a name="1" />Picture recognition</h2>
+		<div class="p">The methods for finding icons on the screen is briefly mentioned in <i><a href="robots_methods.xhtml#4">Finding things on the screen</a></i>. Also see the <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html">Java API documentation for the ImageRecognitionRobot</a>. Common for all this is that they eventually call into the methods <i><a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#find(java.awt.image.BufferedImage,%20java.awt.Rectangle,%20boolean)">ImageRecognitionRobot.find(BufferedImage icon, Rectangle hint, boolean searchWholeScreen)</a></i> and <i>ImageRecognitionRobot.comparePixels(int pixel1, int pixel2)</i>. These methods are central to all the image recognition in the framework. They have proved to be stable for the last months of development of the framework and testcases, but there are some issues to know about.
+		</div>
+		<div class="p">First of all, it should be noted that currently, by default it runs using the <i>INTERVAL</i> compare algorithm, which matches pixels which are almost identical, but leaves a bit of room for shadings. The other options are <i>BLACK_WHITE</i> and <i>FULL_COLOR</i> which, as their names suggest compares in 2-bit or with exact color match. Furthermore, note that only the <i>INTERVAL</i> is using the alpha to ignore pixels. This is useful for the toolbar icons, which comes with a defined background color (which change once it's used in the application), or text which can be on different background colors. (Think black text which might be on white or gray background, but you're only interested in the black text). Searching for these algorithm keywords in the source code should give some examples of each.</div>
+		<div class="p">Finally, note that as a result of the alpha channel being ignored, this algorithm might find more than you would expect. That is, searching for black text while ignoring the background, will wrongly match that text on any black box; typically the Command line prompt window. Likewise, matching white text while ignoring the background is almost impossible, since it is going to match on the first area of white on your screen.
+		</div>
+		<h2>
+			<a name="2" />Different fonts</h2>
+		<div class="p">On the Windows Class theme, there are in general three fonts which are widely used for GUI. Selecting the right one when using the <i>findString(...)</i> methods is essential to finding the text you're after. All of them are in size 8 (Windows = 11 in Java), plain (not bold or italic), and sans serifs. The most commonly used for menus and other components is Tahoma, and in the source code this is called <i>WINDOWS_DEFAULT_FONT</i>, and is used by default if no other font is specified for the search. The second most used font is Arial and is used for content in internal windows like the Model Tree in UModel, or the Entry helpers in XMLSpy. In the source code it is called <i>DEFAULT_CONTENT_FONT</i> and has to be explicitly specified as an argument to one of the findString(...) methods which accepts this. Finally, the separate font is used for all dialog boxes, which includes Options in all applications, Find dialogs, and so on. This font is Microsoft Sans Serif and is called <i>MS_SHELL_DLG_FONT</i> in the source. It's mainly used in the <i>Option</i> classes, like <i>AbstractOption</i>.
+		</div>
+		<h2>
+			<a name="3" />Speed of tests</h2>
+		<div class="p">The methods which drives the mouse and keyboard in the Robot class are quite efficient. In fact, the are too quick in some cases, so the applications we're testing cannot keep up. Therefore, the source code for framework and the test cases are littered with calls to the method <i>delay(ms)</i> which waits for the specified number of milliseconds. This is required when you click buttons, confirm dialogs, expect a dialog to open, expect a file to load, and so on. For simple GUI operations, 500-1000 milliseconds is sufficient. Some operations might take seconds, and for disk IO you might have to wait 5 or 10 seconds. Of course, you could wait for a while for each single mouse click and key type, but that would make the tests take forever, so you want to find some balance.</div>
+		<div class="p">A good practice is to optimize the delays for a normal machine and stand-alone application, which you probably will be using most of the time. If running on a virtual machine, or in a IDE which is slower, you can increase the delays by an option. For the Eclipse code, we already do this, by setting the multiplier to 1.5. When running on a virtual machine, you can set the variable <i>DELAY</i> which will indicate the multiplier for all the delay() calls. By default this is 1, but when running on a virtual machine or other slower box, you might go for 2 or 3.</div>
+		<div class="p">You can set this variable by setting the environment variable at the command line:
+	<pre class="cmd">
+	set DELAY=2
+	</pre>
+	Or when running from Eclipse, you can set the VM variable with the same name, like this: <i>-DDELAY=3</i>. Or you could set the same variable in a properties file you specify. See the <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/util/Settings.html">Settings class</a> for more details on this topic.
+		</div>
+				<h2>
+			<a name="4" />Dialog boxes getting in the way</h2>
+		<div class="p">When using any application, you'll very often come across more or less helpful dialog boxes. Common for many of them is that they do not always appear; only sometimes. Like when you close a file, you might or might not have changed it, so a "Save changes?" dialog might or might not appear. Furthermore, the way the dialog is closed might vary. Sometimes pressing ESC is sufficient, sometimes you need to press ENTER, N for No, or Y for Yes.</div>
+		<div class="p">This is handled in the robot framework by the method <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ApplicationRobot.html#escapeDialog(java.lang.String,%20java.lang.Integer...)">escapeDialog(String, Integer...)</a>. It takes any string which is found in the dialog, including the title, message or buttons. If there is a match, it will press the key or keys identified by the KeyEvent integer codes. Here's an example for the "Save changes" dialog:
+<pre class="javacode">
+	escapeDialog("Save changes", VK_N);
+</pre>
+		 </div>
+		<div class="p">If there are multiple dialogs to escape and the order is not know, or might change, there are a different set of methods which can collect a number of actions, and look for them when called for. Here's an example for general dialogs which might appear at different stages in file operations in XMLSpy:
+<pre class="javacode">
+	<b>addEscapeDialogAction</b>("Save changes to", VK_N);
+	addEscapeDialogAction("already exists", VK_Y);
+	addEscapeDialogAction("Confirm Save As", VK_Y);
+	addEscapeDialogAction("Do you want to save Project modifications", VK_N );
+	addEscapeDialogAction("you want to convert this item?",VK_ENTER);
+	
+	// do other stuff...
+	
+	<b>waitAndEsacpe</b>(message);
+</pre>
+		</div>
+		<h2>
+			<a name="5" />Window themes</h2>
+		<div class="p">The image recognition in the robots framework requires the Windows Classic Theme (the gray windows and no shadings on the scrollbars and other artifacts). It does not work on the glossy Vista Theme, the XP Theme or the Windows7 Aero themes .</div>
+		<div class="p">When working with the GUI automation, always switch to the Windows Classic theme. You can do this by a right-click on the Desktop, select Properties (or Personalize in Windows7) and then take <i>Windows Classic</i> from the Themes tab or section.</div>
+		
+		<div class="p">Some <b>additional appearence settings</b> have to be set/unset for <b>Windows7</b> if you want to avoid surprises while running our tests
+		<ul>
+				<li>
+					Go to Control Panel\System and Security\System and then click on Advanced system settings. Select the "Advanced" tab and then "Settings" whitin the "Performance" section. Now, in tab "Visual Effects", uncheck following settings:
+					<ul>
+					
+						<li>	Smooth edges of screen fonts</li>
+						<li>	Use visual styles on windows and buttons</li>	
+					
+					</ul>							
+				</li>	
+				<li>Right-click on the taskbar and select 'Properties' and then the 'Taskbar' tab . Check now option "Use small icon" in the Taskbar appearence section</li>
+			</ul>
+		</div>
+		<div class="p">For further information about this issue, have a look at section <a href="junit_running.xhtml#2">Details about running the test cases: preparing the environment</a></div>
+		<h2>
+			<a name="6" />Scrollbars</h2>
+		<div class="p">Scrollbars are slightly difficult to handle, since it is inherently GUI specific, without and easy way to know the location or status of it. To add to the problem, somebody wanted to run on the Windows XP theme, with obscure colors. So, to work around this, a little hack was made to figure out which scrollbars are present on the system. It was discovered that one of the very few applications which advertises its scrollbar as such by that Windows classname is Excel. So, Excel is used to get a sample of what the up and down arrows of the scrollbar looks like, and then these images are used for later tests. Yes, it's a hack.</div>
+		<div class="p">To create these images, make sure you have Excel installed on your system. Make sure Excel is not running. Then use these commands to generate the images.
+<pre class="cmd">
+	cd c:\work\gui-automation
+	set ROBOTS_OUT_DIR=.
+	ant scrollbar
+</pre>		
+
+You should now see Excel starting up, the scrollbar will be moved up and down two times, and Excel will be closed. Afterwards, you should see this message in your command prompt window:
+<pre class="cmd">
+	[java] INFO: Setting 'OUT_DIR' to '.' based on value in 'ROBOTS_OUT_DIR' environment variable (not case sensitive)
+	[java] Files written to:
+	[java] .\bar_enabled_up.png
+	[java] .\bar_enabled_down.png
+	[java] WARNING: Process had to be killed forcefully. This might indicate an error with the script or the application under test
+	
+</pre>
+
+If you see this, everything is fine, and you might try to run the UModel StylesTest, which used the scrollbar extensively. Please ignore the warning about killing the process. If there was some error, try running it one more time and see if that fixes it. If Excel did not start, it will probably tell you it could not find the EXE file, and where it was looking for it.	
+	</div>
+	<div><b>Important note about versions compatibility! </b> The script to save the scrollbar images based on Excel and explained above in this section was written at MS Office 2003 times, when they indeed used the Windows classic style for its GUI. Therefore , I need to warn you that it won't run for older versions of Excel for obvious reasons. Not because the images cannot be generated if the application path is given but because they won't work for our robot. My reccomendation is that you just use the ones stored in CVS, generate them in a machine containing (still) MS Office Excel 2003 or, otherwise, make a screenshot and adapt them with an image processing application, like 'Paint'.  </div>
+	</body>
+</html>

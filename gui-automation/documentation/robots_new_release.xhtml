@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Maintaining GUI tests for a new release</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="robots_new_app.xhtml">Next: Automating GUI tests for a new application</a>
+		</div>
+		<div class="previous">
+			<a href="robots_plugin_classes.xhtml">Previous: Plugin robots class hierarchy</a>
+		</div>
+		<h1>Maintaining GUI tests for a new release</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">Fortunately, a new release will have only minor impact on the automated GUI tests. In most of the cases, the will probably run just fine without any adjustments, and only expected changes will show up as failures when the release names change in some expected images. There are however a few things to look out for, and this section covers those details.</div>
+		<h2>
+			<a name="2" />Store the expected images for the previous release</h2>
+		<div class="p">Currently, expected images are stored under <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\test_images </div>. These should be stored in a separate directory, according to the release they belong to. In this way, one can continue working with the tests for a new release, but still run and compare to the old one. The section <a href="junit_running.xhtml#3">Output and expected images</a> details how this works.
+		</div>
+		<h2>
+			<a name="3" />Add the new registry key to the robot class</h2>
+		<div class="p">As can be seen from the <i>SpyRobot</i> constructor includes a list of registry keys to be deleted before each test. This is a compromise between deleting the top level entry for the whole application, and not deleting anything. In the first case, it take quite a while (maybe 3-4 minutes) for each startup of the application to reinstall the entries into the registry. Although not a problem for an automated run, this is very tedious when developing the tests. However, if the GUI keys etc are not deleted, some settings might cause a second run of the tests to look different from the first. The will create a lot of frustration. </div>
+		<div class="p">
+		The fix (or hack) has been to put the list of known registry entries that influence the settings and GUI look of the application in each main robot constructor. You'll find similar ones in UModel, etc. So once you know the new name of next release, please add to this list.</div>
+		<div class="p">
+			<b>Please be aware that the registry names are totally unpredictable.</b> For XMLSpy, the current release key is <i>UI_<b>E</b>2007r3sp1_English</i>, while for UModel it is <i>UI_<b>Z</b>2007r3sp1_English</i>. Go figure.
+		
+		<pre class="javacode">
+	private SpyRobot(String appName, ApplicationSettings app, String appRegKey) {
+		super(appName, app, appRegKey, BASEPATH+"XMLSpy.rc", toolbarIds);
+		
+		addSettingsRegistryKey(	"LastStates", "Recent File List", "Recent Project List", "Settings", "URL",
+				"UI_E2007sp2_English", "UI_E2007r3_English", "UI_E2007r3sp1_English", "UI_E2008_English");
+	}
+		</pre>
+		</div>
+		<h2>
+			<a name="3" />Update the installation directory name</h2>
+		<div class="p">The default version names for all the applications are now stored in one single place in the source, in the enumeration <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/util/Settings.AltovaApplication.html">Settings.AltovaApplication</a>. Updating those fields will affect all tests, including the once which rely on example folders. If you want special folder names, for previous versions, etc., please look through the documentation there, since it details how this works.</div>
+		<h2>
+			<a name="4" />Determine the impact of new features</h2>
+		<div class="p">When all of the above steps are taken care of, you can determine the impact of the new features in the next release. Most of the time, this will involve moving new images over to the expected directory (did you remember to take that backup of the old images). For example, the difference for the "About" window will of course be a new release name, as expected. The difference image below is shown in <i>[the diff tool I cannot mention]</i>. It might be a good idea to get a copy of <i>[the diff tool I cannot mention]</i>, or alternatively develop the same functionality yourself. It should not be too hard work, using the class <a href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\ImageFileDiff.html">
+				<i />com.altova.robots.ImageFileDiff</a>
+			<img alt="New XMLSpy release" src="spy_new_release.png" class="screen" />
+		</div>
+		<div class="p">
+		For other changes, it might be that you will have to change some of the code. For example, in the diff shown for UModel below, the diagrams are the same. However, a feature was added to create some diagram border inside the diagram itself, and also add a diagram header. This also had an impact on the colour shading in the diagram, thus almost everything is red (different).
+		<img alt="New UModel release" src="umodel_new_release.png" class="screen" />
+		The fix here was to add a method in a few key places of the code to mitigate this change. As seen below, the method <i>turnOffDiagramJunk()</i> takes care of this. It is later used in some of the test cases which was affected by the change. In the other cases, the new images was manually investigated, and copied across as expected images.
+		
+		<pre class="javacode">
+	public UModelRobot() {
+		...
+		public void turnOffDiagramJunk() {
+			clickDiagramContext("Show Grid");
+			clickDiagramContext("Snap to Grid");
+			clickDiagramContext("Show UML Diagram Heading");
+		}
+		...
+	}
+
+		</pre>
+		</div>
+	</body>
+</html>

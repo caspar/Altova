@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:schema xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.Nanonull.com/TimeService1/" targetNamespace="http://www.Nanonull.com/TimeService1/" elementFormDefault="qualified">
+	<s:element name="getUTCTime">
+		<s:complexType/>
+	</s:element>
+	<s:element name="getUTCTimeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="getUTCTimeResult" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getOffesetUTCTime">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="hoursOffset" type="s:double"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getOffesetUTCTimeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="getOffesetUTCTimeResult" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getServerTime">
+		<s:complexType/>
+	</s:element>
+	<s:element name="getServerTimeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="getServerTimeResult" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getServerTimeZone">
+		<s:complexType/>
+	</s:element>
+	<s:element name="getServerTimeZoneResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="getServerTimeZoneResult" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getServerCity">
+		<s:complexType/>
+	</s:element>
+	<s:element name="getServerCityResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="getServerCityResult" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getTimeZoneTime">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="timezone" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getTimeZoneTimeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="getTimeZoneTimeResult" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getCityTime">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="city" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="getCityTimeResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="getCityTimeResult" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="string" type="s:string" nillable="true"/>
+	<s:element name="errorResponse">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="errorText" type="s:string" minOccurs="0"/>
+				<s:element name="errorItem" type="s:string" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+</s:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="EnumStringType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="One"/>
+			<xs:enumeration value="Two"/>
+			<xs:enumeration value="Three"/>
+			<xs:enumeration value="Four"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="data">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="info" type="xs:string"/>
+				<xs:element name="strings">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="string" type="EnumStringType" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="selected" type="EnumStringType"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="numbers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="number" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="value" type="xs:decimal"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="total" type="xs:decimal"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="verify" type="xs:boolean"/>
+			<xs:attribute name="first-entry" type="xs:date"/>
+			<xs:attribute name="last-edited" type="xs:date"/>
+			<xs:attribute name="sample-string" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

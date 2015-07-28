@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    --><link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_38_2010-04-30_role-823180" xlink:href="rol_ias_38_2010-04-30.xsd#ias_38_2010-04-30_role-823180" xlink:type="simple"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/negatedLabel" xlink:href="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedLabel" xlink:type="simple"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/negatedPeriodEndLabel" xlink:href="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedPeriodEndLabel" xlink:type="simple"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/negatedPeriodStartLabel" xlink:href="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedPeriodStartLabel" xlink:type="simple"/>
+  <link:presentationLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_38_2010-04-30_role-823180" xlink:title="[823180] Notes - Intangible assets" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillMember" xlink:label="loc_4" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_BrandNamesMember" xlink:label="loc_13" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleExplorationAndEvaluationAssetsMember" xlink:label="loc_14" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_14" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleExplorationAndEvaluationAssetsInternallyGeneratedMember" xlink:label="loc_19" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_14" xlink:to="loc_19" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleExplorationAndEvaluationAssetsNotInternallyGeneratedMember" xlink:label="loc_21" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_14" xlink:to="loc_21" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MastheadsAndPublishingTitlesMember" xlink:label="loc_15" xlink:type="locator"/>
+    <link:presentationArc order="30.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_15" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ComputerSoftwareMember" xlink:label="loc_20" xlink:type="locator"/>
+    <link:presentationArc order="40.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_20" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ComputerSoftwareInternallyGeneratedMember" xlink:label="loc_23" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_20" xlink:to="loc_23" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ComputerSoftwareNotInternallyGeneratedMember" xlink:label="loc_26" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_20" xlink:to="loc_26" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LicencesAndFranchisesMember" xlink:label="loc_22" xlink:type="locator"/>
+    <link:presentationArc order="50.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_22" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LicencesAndFranchisesInternallyGeneratedMember" xlink:label="loc_27" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_22" xlink:to="loc_27" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LicencesAndFranchisesNotInternallyGeneratedMember" xlink:label="loc_29" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_22" xlink:to="loc_29" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CopyrightsPatentsAndOtherIndustrialPropertyRightsServiceAndOperatingRightsMember" xlink:label="loc_24" xlink:type="locator"/>
+    <link:presentationArc order="60.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_24" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CopyrightsPatentsAndOtherIndustrialPropertyRightsServiceAndOperatingRightsInternallyGeneratedMember" xlink:label="loc_30" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_24" xlink:to="loc_30" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CopyrightsPatentsAndOtherIndustrialPropertyRightsServiceAndOperatingRightsNotInternallyGeneratedMember" xlink:label="loc_32" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_24" xlink:to="loc_32" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RecipesFormulaeModelsDesignsAndPrototypesMember" xlink:label="loc_25" xlink:type="locator"/>
+    <link:presentationArc order="70.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_25" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RecipesFormulaeModelsDesignsAndPrototypesInternallyGeneratedMember" xlink:label="loc_33" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_25" xlink:to="loc_33" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RecipesFormulaeModelsDesignsAndPrototypesNotInternallyGeneratedMember" xlink:label="loc_35" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_25" xlink:to="loc_35" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsUnderDevelopmentMember" xlink:label="loc_28" xlink:type="locator"/>
+    <link:presentationArc order="80.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_28" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherIntangibleAssetsMember" xlink:label="loc_34" xlink:type="locator"/>
+    <link:presentationArc order="90.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_34" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherIntangibleAssetsInternallyGeneratedMember" xlink:label="loc_36" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_34" xlink:to="loc_36" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherIntangibleAssetsNotInternallyGeneratedMember" xlink:label="loc_37" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_34" xlink:to="loc_37" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfIntangibleAssetsExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfIntangibleAssetsAbstract" xlink:label="loc_16" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_16" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfIntangibleAssetsTable" xlink:label="loc_17" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_16" xlink:to="loc_17" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ClassesOfIntangibleAssetsOtherThanGoodwillAxis" xlink:label="loc_18" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_17" xlink:to="loc_18" xlink:type="arc"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_18" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfIntangibleAssetsLineItems" xlink:label="loc_42" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_16" xlink:to="loc_42" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LineItemsIncludingAmortisationOfIntangibleAssetsIntangibleAssetsOtherThanGoodwill" xlink:label="loc_40" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_42" xlink:to="loc_40" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AmortisationMethodIntangibleAssetsOtherThanGoodwill" xlink:label="loc_41" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_42" xlink:to="loc_41" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_UsefulLivesOrAmortisationRatesIntangibleAssetsOtherThanGoodwill" xlink:label="loc_43" xlink:type="locator"/>
+    <link:presentationArc order="30.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_42" xlink:to="loc_43" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_EffectiveDatesOfRevaluationIntangibleAssetsOtherThanGoodwill" xlink:label="loc_44" xlink:type="locator"/>
+    <link:presentationArc order="40.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_42" xlink:to="loc_44" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReconciliationOfChangesInIntangibleAssetsOtherThanGoodwillAbstract" xlink:label="loc_45" xlink:type="locator"/>
+    <link:presentationArc order="50.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_42" xlink:to="loc_45" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillGross" xlink:label="loc_46" xlink:type="locator"/>
+    <link:presentationArc order="10.0" preferredLabel="http://www.xbrl.org/2003/role/periodStartLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_45" xlink:to="loc_46" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillGross" xlink:label="loc_63" xlink:type="locator"/>
+    <link:presentationArc order="50.0" preferredLabel="http://www.xbrl.org/2003/role/periodEndLabel" priority="1" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_45" xlink:to="loc_63" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillAccumulatedAmortisationAndImpairment" xlink:label="loc_47" xlink:type="locator"/>
+    <link:presentationArc order="20.0" preferredLabel="http://www.xbrl.org/2009/role/negatedPeriodStartLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_45" xlink:to="loc_47" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillAccumulatedAmortisationAndImpairment" xlink:label="loc_64" xlink:type="locator"/>
+    <link:presentationArc order="60.0" preferredLabel="http://www.xbrl.org/2009/role/negatedPeriodEndLabel" priority="1" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_45" xlink:to="loc_64" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwill" xlink:label="loc_48" xlink:type="locator"/>
+    <link:presentationArc order="30.0" preferredLabel="http://www.xbrl.org/2003/role/periodStartLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_45" xlink:to="loc_48" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwill" xlink:label="loc_65" xlink:type="locator"/>
+    <link:presentationArc order="70.0" preferredLabel="http://www.xbrl.org/2003/role/periodEndLabel" priority="1" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_45" xlink:to="loc_65" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ChangesInIntangibleAssetsOtherThanGoodwillAbstract" xlink:label="loc_49" xlink:type="locator"/>
+    <link:presentationArc order="40.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_45" xlink:to="loc_49" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ChangesInIntangibleAssetsOtherThanGoodwill" xlink:label="loc_62" xlink:type="locator"/>
+    <link:presentationArc order="130.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_62" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AdditionsOtherThanThroughBusinessCombinationsIntangibleAssetsOtherThanGoodwill" xlink:label="loc_50" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_50" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AcquisitionsThroughBusinessCombinationsIntangibleAssetsOtherThanGoodwill" xlink:label="loc_51" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_51" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncreaseDecreaseThroughNetExchangeDifferencesIntangibleAssetsOtherThanGoodwill" xlink:label="loc_52" xlink:type="locator"/>
+    <link:presentationArc order="30.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_52" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AmortisationIntangibleAssetsOtherThanGoodwill" xlink:label="loc_53" xlink:type="locator"/>
+    <link:presentationArc order="40.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_53" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ImpairmentLossRecognisedInProfitOrLossIntangibleAssetsOtherThanGoodwill" xlink:label="loc_54" xlink:type="locator"/>
+    <link:presentationArc order="50.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_54" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReversalOfImpairmentLossRecognisedInProfitOrLossIntangibleAssetsOtherThanGoodwill" xlink:label="loc_55" xlink:type="locator"/>
+    <link:presentationArc order="60.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_55" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RevaluationIncreaseDecreaseIntangibleAssetsOtherThanGoodwill" xlink:label="loc_56" xlink:type="locator"/>
+    <link:presentationArc order="70.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_56" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ImpairmentLossRecognisedInOtherComprehensiveIncomeIntangibleAssetsOtherThanGoodwill" xlink:label="loc_57" xlink:type="locator"/>
+    <link:presentationArc order="80.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_57" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReversalOfImpairmentLossRecognisedInOtherComprehensiveIncomeIntangibleAssetsOtherThanGoodwill" xlink:label="loc_58" xlink:type="locator"/>
+    <link:presentationArc order="90.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_58" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncreaseDecreaseThroughTransfersAndOtherChangesIntangibleAssetsOtherThanGoodwill" xlink:label="loc_59" xlink:type="locator"/>
+    <link:presentationArc order="100.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_59" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisposalsIntangibleAssetsOtherThanGoodwill" xlink:label="loc_60" xlink:type="locator"/>
+    <link:presentationArc order="110.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_60" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DecreaseThroughClassifiedAsHeldForSaleIntangibleAssetsOtherThanGoodwill" xlink:label="loc_61" xlink:type="locator"/>
+    <link:presentationArc order="120.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_49" xlink:to="loc_61" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RevaluationOfIntangibleAssetsAbstract" xlink:label="loc_66" xlink:type="locator"/>
+    <link:presentationArc order="60.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_42" xlink:to="loc_66" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillCarryingAmountOfRevaluedAssets" xlink:label="loc_67" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_66" xlink:to="loc_67" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillCarryingAmountAtCostOfRevaluedAssets" xlink:label="loc_68" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_66" xlink:to="loc_68" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsOtherThanGoodwillRevaluationSurplus" xlink:label="loc_69" xlink:type="locator"/>
+    <link:presentationArc order="30.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_66" xlink:to="loc_69" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionAndCarryingAmountOfIntangibleAssetsWithIndefiniteUsefulLife" xlink:label="loc_7" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionAndCarryingAmountOfIntangibleAssetsMaterialToEntity" xlink:label="loc_8" xlink:type="locator"/>
+    <link:presentationArc order="30.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsAcquiredByWayOfGovernmentGrantAtFairValue" xlink:label="loc_5" xlink:type="locator"/>
+    <link:presentationArc order="40.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsAcquiredByWayOfGovernmentGrant" xlink:label="loc_9" xlink:type="locator"/>
+    <link:presentationArc order="50.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfAssetsAcquiredByWayOfGovernmentGrantAndInitiallyRecognisedAtFairValue" xlink:label="loc_38" xlink:type="locator"/>
+    <link:presentationArc order="60.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_38" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsWhoseTitleIsRestricted" xlink:label="loc_39" xlink:type="locator"/>
+    <link:presentationArc order="70.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_39" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsPledgedAsSecurityForLiabilities" xlink:label="loc_70" xlink:type="locator"/>
+    <link:presentationArc order="80.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_70" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContractualCommitmentsForAcquisitionOfIntangibleAssets" xlink:label="loc_6" xlink:type="locator"/>
+    <link:presentationArc order="90.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfFullyAmortisedIntangibleAssets" xlink:label="loc_10" xlink:type="locator"/>
+    <link:presentationArc order="100.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfSignificantIntangibleAssetsControlledByEntityButNotRecognised" xlink:label="loc_11" xlink:type="locator"/>
+    <link:presentationArc order="110.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfRestrictionsOnDistributionOfRevaluationSurplusForIntangibleAssets" xlink:label="loc_2" xlink:type="locator"/>
+    <link:presentationArc order="120.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MethodsAndAssumptionsAppliedForEstimatingFairValueOfRevaluedIntangibleAssets" xlink:label="loc_12" xlink:type="locator"/>
+    <link:presentationArc order="130.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ResearchAndDevelopmentExpendituresRecognisedAsExpenseDuringPeriod" xlink:label="loc_3" xlink:type="locator"/>
+    <link:presentationArc order="140.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_3" xlink:type="arc"/>
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by Alexander Falk (Altova, Inc.) -->
+<SmartGrid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="HTMLTable1.xsd">
+	<Customer>
+		<Name>Alec D. Woodfin</Name>
+		<Street>74 Pacific Terrace</Street>
+		<City>Saratoga</City>
+		<State>MA</State>
+		<ZIP>05550</ZIP>
+	</Customer>
+	<ElectricalConsumption>
+		<MeterID>746932</MeterID>
+		<TableData>
+			<Header>
+				<Row>
+					<Heading>Start Date</Heading>
+					<Heading>End Date</Heading>
+					<Heading>Usage in kWh</Heading>
+					<Heading>Estimated Cost</Heading>
+				</Row>
+			</Header>
+			<Body>
+				<Row>
+					<Element>10/19/2008</Element>
+					<Element>11/19/2008</Element>
+					<Element>3923</Element>
+					<Element>550</Element>
+				</Row>
+				<Row>
+					<Element>11/19/2008</Element>
+					<Element>12/19/2008</Element>
+					<Element>3675</Element>
+					<Element>624.97</Element>
+				</Row>
+				<Row>
+					<Element>12/19/2008</Element>
+					<Element>1/19/2009</Element>
+					<Element>4083</Element>
+					<Element>605.18</Element>
+				</Row>
+				<Row>
+					<Element>1/19/2009</Element>
+					<Element>2/19/2009</Element>
+					<Element>3928</Element>
+					<Element>440.22</Element>
+				</Row>
+				<Row>
+					<Element>2/19/2009</Element>
+					<Element>3/19/2009</Element>
+					<Element>2864</Element>
+					<Element>394.46</Element>
+				</Row>
+				<Row>
+					<Element>3/19/2009</Element>
+					<Element>4/19/2009</Element>
+					<Element>2670</Element>
+					<Element>383.62</Element>
+				</Row>
+				<Row>
+					<Element>4/19/2009</Element>
+					<Element>5/19/2009</Element>
+					<Element>2683</Element>
+					<Element>385.49</Element>
+				</Row>
+				<Row>
+					<Element>5/19/2009</Element>
+					<Element>6/19/2009</Element>
+					<Element>3220</Element>
+					<Element>462.82</Element>
+				</Row>
+			</Body>
+		</TableData>
+	</ElectricalConsumption>
+</SmartGrid>

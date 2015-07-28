@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+	<SignedInfo>
+		<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+		<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1"/>
+		<Reference URI="file://vie.altova.com/dfs/QA/Internal/Test-Cases/CrossProduct/XMLDigitalSignatures/TestCases/TestFiles/Japanese%20Shift_JIS.xml">
+			<Transforms>
+				<Transform Algorithm="http://www.altova.com/xml-signatures/strip-whitespaces"/>
+				<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+			</Transforms>
+			<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+			<DigestValue>+bomVc+MyroMv6MAQshcNY6HX7M=</DigestValue>
+		</Reference>
+	</SignedInfo>
+	<SignatureValue>hj+aMwPvy9kFuHRBC/Cy7UlMIs4=</SignatureValue>
+</Signature>
+

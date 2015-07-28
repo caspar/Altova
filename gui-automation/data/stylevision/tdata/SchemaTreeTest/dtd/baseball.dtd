@@ -1,0 +1,134 @@
+<!ELEMENT YEAR (#PCDATA)>
+  <!ELEMENT LEAGUE (LEAGUE_NAME, DIVISION, DIVISION, DIVISION)>
+  
+  <!-- American or National -->
+  <!ELEMENT LEAGUE_NAME (#PCDATA)>
+
+  <!-- East, West, or Central -->
+  <!ELEMENT DIVISION_NAME (#PCDATA)>
+  <!ELEMENT DIVISION (DIVISION_NAME, TEAM+)>
+  <!ELEMENT SEASON (YEAR, LEAGUE, LEAGUE)>
+  <!ELEMENT TEAM (TEAM_CITY, TEAM_NAME, PLAYER*)>
+  <!ELEMENT TEAM_CITY (#PCDATA)>
+  <!ELEMENT TEAM_NAME (#PCDATA)>
+  <!ELEMENT PLAYER (GIVEN_NAME, SURNAME, P, G, 
+    GS, AB?, R?, H?, D?, T?, HR?, RBI?, SB?, CS?, 
+    SH?, SF?, E?, BB?, S?, HBP?, W?, L?, SV?, CG?, SO?, ERA?, IP?, 
+    HRA?, RA?, ER?, HB?, WP?, B?, WB?, K?)
+  >
+
+<!-- ======================= -->
+  <!-- Player Info -->
+  <!-- Player's last name -->
+  <!ELEMENT SURNAME (#PCDATA)>
+  
+  <!-- Player's first name -->
+  <!ELEMENT GIVEN_NAME (#PCDATA)>
+  
+  <!-- Position -->
+  <!ELEMENT P (#PCDATA)>
+  
+  <!--Games Played -->
+  <!ELEMENT G (#PCDATA)>
+
+  <!--Games Started -->
+  <!ELEMENT GS (#PCDATA)>
+  
+  
+<!-- ======================= -->
+  <!-- Batting Statistics -->
+  <!-- At Bats -->
+  <!ELEMENT AB (#PCDATA)>
+  
+  <!-- Runs -->
+  <!ELEMENT R (#PCDATA)>
+  
+  <!-- Hits -->
+  <!ELEMENT H (#PCDATA)>
+  
+  <!-- Doubles -->
+  <!ELEMENT D (#PCDATA)>
+  
+  <!-- Triples -->
+  <!ELEMENT T (#PCDATA)>
+  
+  <!-- Home Runs -->
+  <!ELEMENT HR (#PCDATA)>
+  
+  <!-- Runs Batted In -->
+  <!ELEMENT RBI (#PCDATA)>
+  
+  <!-- Stolen Bases -->
+  <!ELEMENT SB (#PCDATA)>
+  
+  <!-- Caught Stealing -->
+  <!ELEMENT CS (#PCDATA)>
+  
+  <!-- Sacrifice Hits -->
+  <!ELEMENT SH (#PCDATA)>
+  
+  <!-- Sacrifice Flies -->
+  <!ELEMENT SF (#PCDATA)>
+  
+  <!-- Errors -->
+  <!ELEMENT E (#PCDATA)>
+  
+  <!-- Walks (Base on Balls) -->
+  <!ELEMENT BB (#PCDATA)>
+  
+  <!-- Struck Out -->
+  <!ELEMENT S (#PCDATA)>
+  
+  <!-- Hit By Pitch -->
+  <!ELEMENT HBP (#PCDATA)>
+
+<!-- ======================= -->
+  <!-- Pitching Statistics -->
+  <!-- Complete Games -->
+  <!ELEMENT CG (#PCDATA)>
+  
+  <!-- Wins -->
+  <!ELEMENT W (#PCDATA)>
+  
+  <!-- Losses -->
+  <!ELEMENT L (#PCDATA)>
+  
+  <!-- Losses -->
+  <!ELEMENT SV (#PCDATA)>
+  
+  <!-- Shut Outs -->
+  <!ELEMENT SO (#PCDATA)>
+  
+  <!-- ERA -->
+  <!ELEMENT ERA (#PCDATA)>
+  
+  <!-- Innings Pitched -->
+  <!ELEMENT IP (#PCDATA)>
+  
+  <!-- Home Runs hit Against -->
+  <!ELEMENT HRA (#PCDATA)>
+  
+  <!-- Runs hit Against -->
+  <!ELEMENT RA (#PCDATA)>
+  
+  <!-- Earned Runs -->
+  <!ELEMENT ER (#PCDATA)>
+  
+  <!-- Hit Batter -->    
+  <!ELEMENT HB (#PCDATA)>
+  
+  <!-- Wild Pitches -->
+  <!ELEMENT WP (#PCDATA)>
+  
+  <!-- Balk -->
+  <!ELEMENT B (#PCDATA)>
+  
+  <!-- Walked Batter -->
+  <!ELEMENT WB (#PCDATA)>
+  
+  <!-- Struck Out Batter -->
+  <!ELEMENT K (#PCDATA)>
+
+<!-- ======================= -->
+  <!-- Fielding Statistics -->
+  <!-- Not yet supported -->

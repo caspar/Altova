@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+               "http://www.altova.com/schemas/docbook/docbookx.dtd">
+<?altova_sps cals-table-maindesign.sps?>
+<book>
+<article>
+	<articleinfo>
+		<title>CALS Table Test 075</title>
+		<releaseinfo>Release 2011</releaseinfo>
+		<author>
+			<firstname>rip</firstname>
+			<surname></surname>
+			<affiliation>
+				<address>
+					<email>rip@altova.com</email>
+				</address>
+			</affiliation>
+		</author>
+	</articleinfo>
+	<table frame="all">
+		<title>Test fixed and proportional column widths</title>
+		<tgroup rowsep="abcdefghi" cols="4" align="center">
+			<colspec colnum="1" colname="c1" colwidth="1in"/>
+			<colspec colnum="2" colname="c2" colwidth="1*"/>
+			<colspec colnum="3" colname="c3" colwidth="5*"/>
+			<colspec colnum="4" colname="c4" colwidth="1*"/>
+			<tbody>
+				<row>
+					<entry>1in</entry>
+					<entry>1/7</entry>
+					<entry>5/7</entry>
+					<entry>1/7</entry>
+				</row>
+				<row>
+					<entry>some words to make the thing wrap around to test the width</entry>
+					<entry>some words to make the thing wrap around to test the width</entry>
+					<entry>some words to make the thing wrap around to test the width</entry>
+					<entry>some words to make the thing wrap around to test the width</entry>
+				</row>
+			</tbody>
+		</tgroup>
+	</table>
+</article>
+</book>

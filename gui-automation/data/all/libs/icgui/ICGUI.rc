@@ -1,0 +1,415 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "ICGUI_Commands_Resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_TOOLBAR_HORZDRAG    CURSOR  DISCARDABLE     "..\\..\\libs\\ICGUI\\RES\\horzdrag.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROGRESS_DIALOG DIALOG DISCARDABLE  0, 0, 186, 55
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "XMLSpy"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,3,
+                    21,177,9
+    PUSHBUTTON      "Cancel",IDCANCEL,111,36,66,15
+    CTEXT           "326 of 7364",IDC_PROGRESS_INFO,7,9,172,9
+END
+
+IDD_SPLASH DIALOG DISCARDABLE  0, 0, 182, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Splash"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_SPLASH_NT DIALOG DISCARDABLE  0, 0, 186, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_OPEN_URL DIALOGEX 0, 0, 334, 258
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "..."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "&File URL:",IDC_STATIC,7,10,30,8
+    COMBOBOX        IDC_URL_COMBO,41,7,228,76,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Open as:",IDC_OPEN_AS_GROUP,7,25,117,24,WS_GROUP
+    CONTROL         "&Auto",IDC_FILE_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,13,36,30,9
+    CONTROL         "&XML",IDC_FILE_XML,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,49,36,30,9
+    CONTROL         "&DTD",IDC_FILE_DTD,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,84,36,28,9
+    GROUPBOX        "File load",IDC_CACHE_GROUP,132,25,137,24,WS_GROUP
+    CONTROL         "Use cache/&proxy",IDC_CACHE_ON,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,141,36,69,9
+    CONTROL         "&Reload",IDC_CACHE_OFF,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,217,36,38,9
+    GROUPBOX        "Identification",IDC_STATIC,7,54,262,29
+    RTEXT           "Us&er:",IDC_STATIC,14,67,19,8
+    EDITTEXT        IDC_URLDLG_USERNAME,37,65,74,12,ES_AUTOHSCROLL
+    RTEXT           "Pass&word:",IDC_STATIC,119,67,34,8
+    EDITTEXT        IDC_URLDLG_PASSWORD,157,65,70,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    CONTROL         "&save",IDC_SAVE_PASSWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,232,67,27,8
+    GROUPBOX        "Available files",IDC_STATIC,7,89,320,163
+    LTEXT           "Ser&ver URL:",IDC_STATIC,14,102,39,8
+    COMBOBOX        IDC_SERVER_COMBO,57,100,208,76,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Browse",IDC_BROWSE_URL,270,99,50,14
+    LTEXT           "Static",IDC_URL_FILES,13,117,307,111,SS_SUNKEN
+    PUSHBUTTON      "&New Folder",IDC_NEW_FOLDER,215,233,50,14
+    PUSHBUTTON      "De&lete",IDC_DELETE_URL,271,233,50,14
+    DEFPUSHBUTTON   "OK",IDOK,276,7,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,276,24,50,14
+END
+
+IDD_OPEN_URL_NEW_FOLDER DIALOG DISCARDABLE  0, 0, 248, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Folder"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_URLDLG_NAME,35,7,140,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,191,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,191,24,50,14
+    LTEXT           "Name:",IDC_STATIC,7,8,25,12
+    LTEXT           "Please enter the name of the new folder to be created",
+                    IDC_STATIC,7,28,172,11
+END
+
+IDD_FILEALERT_DLG DIALOG DISCARDABLE  0, 0, 300, 150
+STYLE WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "Changed files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Reload",ID_FILEALERT_RELOAD,130,129,50,14
+    PUSHBUTTON      "&Close",ID_FILEALERT_CLOSE,187,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,129,50,14
+    LTEXT           "Comment3",IDC_COMMENT3,7,117,286,11
+    LTEXT           "Comment2",IDC_COMMENT2,7,92,286,18
+    LTEXT           "Static",IDC_FILE_ALERT_GRID_PLACEHOLDER2,8,17,285,70,
+                    WS_TABSTOP
+    LTEXT           "Comment1",IDC_COMMENT1,7,7,286,11
+    LTEXT           "Static",IDC_FILE_ALERT_GRID_PLACEHOLDER1,7,18,285,95
+END
+
+IDD_CUSTOM_MESSAGE_BOX DIALOG DISCARDABLE  0, 0, 203, 86
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_FILEALERT_DLG_MAPFORCELIKE DIALOG DISCARDABLE  0, 0, 300, 150
+STYLE WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "Changed files"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Reload",ID_FILEALERT_RELOAD,187,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,129,50,14
+    LTEXT           "Comment3",IDC_COMMENT3,7,117,286,11
+    LTEXT           "Comment2",IDC_COMMENT2,7,92,286,18
+    LTEXT           "Static",IDC_FILE_ALERT_GRID_PLACEHOLDER2,8,17,285,70,
+                    WS_TABSTOP
+    LTEXT           "Comment1",IDC_COMMENT1,7,7,286,11
+    LTEXT           "Static",IDC_FILE_ALERT_GRID_PLACEHOLDER1,7,18,285,95
+END
+
+IDD_GUI_SETTINGS_FONTS DIALOG DISCARDABLE  0, 0, 288, 178
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Fonts"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_GUI_FONT_GROUP_SELECTOR,7,7,130,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Grid place holder",IDC_GUI_GRID,7,24,130,150,SS_SUNKEN
+    GROUPBOX        "Font face and script",IDC_STATIC,145,3,134,58
+    COMBOBOX        IDC_GUI_FONT_FACE,152,14,122,71,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_GUI_FONT_SCRIPT,152,30,122,63,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use the same for all",IDC_GUI_USE_SAME_FACE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,152,47,85,9
+    GROUPBOX        "Size",IDC_STATIC,145,64,134,39
+    COMBOBOX        IDC_GUI_FONT_SIZE,153,74,35,79,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Use the same for all",IDC_GUI_USE_SAME_SIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,153,90,85,9
+    GROUPBOX        "Styles",IDC_STATIC,145,106,134,26,WS_GROUP
+    LTEXT           "Toolbar place holder",IDC_GUI_STATES,151,115,120,13,
+                    SS_SUNKEN
+    GROUPBOX        "Text view background",IDC_GUI_TEXTVIEW_BACK_COLOR_GROUP,
+                    145,135,134,39,NOT WS_VISIBLE | WS_GROUP
+    LTEXT           "",IDC_GUI_TEXTVIEW_BACK_COLOR,153,144,48,13,SS_SUNKEN | 
+                    NOT WS_VISIBLE
+    LTEXT           "",IDC_GUI_TEXTVIEW_BACK_COLOR_CHANGE,203,144,17,13,
+                    SS_SUNKEN | NOT WS_VISIBLE
+    CONTROL         "Use the same for all",IDC_GUI_USE_TEXTVIEW_BACK_COLOR,
+                    "Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_GROUP | 
+                    WS_TABSTOP,153,159,85,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_RULER_ARROW         ICON    DISCARDABLE     "..\\..\\libs\\ICGUI\\res\\rulerarrow.ico"
+IDI_RULER_ARROW_FOCUSED ICON    DISCARDABLE     "..\\..\\libs\\ICGUI\\res\\rulerarrow_focused.ico"
+IDI_RULER_ARROW_HORZ    ICON    DISCARDABLE     "..\\..\\libs\\ICGUI\\res\\rulerarrow_horz.ico"
+IDI_RULER_ARROW_HORZ_FOCUSED ICON    DISCARDABLE     "..\\..\\libs\\ICGUI\\res\\rulerarrow_horzfocused.ico"
+IDI_RULER_ARROW_DELETE  ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\rulerdelete.ico"
+IDI_RULER_ARROW_HORZ_DELETE ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\rulerdeletehorz.ico"
+IDI_OUTPUT_ERROR        ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\error.ico"
+IDI_OUTPUT_INFO         ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\info.ico"
+IDI_OUTPUT_WARNING      ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\warning.ico"
+IDI_OUTPUT_EMPTYICON    ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\EmptyIcon.ico"
+IDI_COMPARTMENT_EXPANDED ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\comp_expanded.ico"
+IDI_COMPARTMENT_COLLAPSED ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\comp_collapsed.ico"
+IDI_COMPARTMENT_EXPANDED_HILITE ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\comp_expanded_hilite.ico"
+IDI_COMPARTMENT_COLLAPSED_HILITE ICON    DISCARDABLE     "..\\..\\libs\\icgui\\res\\comp_collapsed_hilite.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_OUTPUT_COPYLINE     BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_copyline.bmp"
+IDB_OUTPUT_COPYALL      BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_copyall.bmp"
+IDB_OUTPUT_COPYCHILD    BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_copychild.bmp"
+IDB_OUTPUT_CLEAR        BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_clear.bmp"
+IDB_OUTPUT_NEXT         BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_next.bmp"
+IDB_OUTPUT_FILTER       BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_filter.bmp"
+IDB_OUTPUT_PREV         BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_prev.bmp"
+IDB_OUTPUT_FINDNEXT     BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_findnext.bmp"
+IDB_OUTPUT_FIND         BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_find.bmp"
+IDB_OUTPUT_FINDPREV     BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_findprev.bmp"
+IDB_OUTPUT_COPYSUBLINE  BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\output_copysubline.bmp"
+IDT_GUI_FONT_SETTINGS   BITMAP  DISCARDABLE     "..\\..\\libs\\icgui\\res\\font_settings.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""ICGUI_Commands_Resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "#include ""ICGUI_Commands_RC.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CUSTOM_MESSAGE_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDT_GUI_FONT_SETTINGS TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      IDC_GUI_BOLD
+    BUTTON      IDC_GUI_ITALIC
+    BUTTON      IDC_GUI_UNDERLINE
+    BUTTON      IDC_GUI_COLOR
+    BUTTON      IDC_GUI_BACK_COLOR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_GUI_SETTINGS_FONTS DLGINIT
+BEGIN
+    IDC_GUI_FONT_SIZE, 0x403, 2, 0
+0x0038, 
+    IDC_GUI_FONT_SIZE, 0x403, 2, 0
+0x0039, 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3831, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3232, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3432, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3632, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3832, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3633, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3834, "\000" 
+    IDC_GUI_FONT_SIZE, 0x403, 3, 0
+0x3237, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OUTPUT_CLEAR        "Clear"
+    IDS_OUTPUT_NEXT         "Next%s"
+    IDS_OUTPUT_PREV         "Previous%s"
+    IDS_OUTPUT_FILTER       "Filter"
+    IDS_OUTPUT_CHECKALLSEVERITIES "Check All"
+    IDS_OUTPUT_UNCHECKALLSEVERITIES "Uncheck All"
+    IDS_OUTPUT_COPY         "Copy the selected message to the clipboard"
+    IDS_OUTPUT_COPYCHILD    "Copy the selected message including its children to the clipboard"
+    IDS_OUTPUT_COPYALL      "Copy all messages to the clipboard"
+    IDS_OUTPUT_COPYSUBLINE  "Copy the selected text line to the clipboard"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OUTPUT_FIND         "Find"
+    IDS_OUTPUT_FINDNEXT     "Find next"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILEALERT1_SPY      "These files have been modified by an external application:"
+    IDS_FILEALERT2_SPY      "You can reload the file, close the document or ignore the modification"
+    IDS_FILEALERT1_MF       "These files or their components are modified or deleted from outside of the application:"
+    IDS_FILEALERT2_MF       "You can reload the file or ignore the modification."
+    IDS_FILEALERT_ASTERISK  "Files with an asterisk at the end of the file name have already been modified within this application. You will lose the changes made if you reload."
+    IDS_OUTPUT_FINDPREV     "Find previous"
+    IDS_GUICOLOR_AQUA       "aqua"
+    IDS_GUICOLOR_BLACK      "black"
+    IDS_GUICOLOR_BLUE       "blue"
+    IDS_GUICOLOR_FUCHSIA    "fuchsia"
+    IDS_GUICOLOR_GRAY       "gray"
+    IDS_GUICOLOR_GREEN      "green"
+    IDS_GUICOLOR_LIME       "lime"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_GUICOLOR_MAROON     "maroon"
+    IDS_GUICOLOR_NAVY       "navy"
+    IDS_GUICOLOR_OLIVE      "olive"
+    IDS_GUICOLOR_PURPLE     "purple"
+    IDS_GUICOLOR_RED        "red"
+    IDS_GUICOLOR_SILVER     "silver"
+    IDS_GUICOLOR_TEAL       "teal"
+    IDS_GUICOLOR_YELLOW     "yellow"
+    IDS_GUICOLOR_WHITE      "white"
+    IDS_DLG_YES             "&Yes"
+    IDS_DLG_YESTOALL        "Yes to &all"
+    IDS_DLG_NO              "&No"
+    IDS_DLG_NOTOALL         "No to all"
+    IDS_DLG_OK              "OK"
+    IDS_DLG_CANCEL          "Cancel"
+    IDS_DLG_DONT_SHOW_AGAIN "Don't show this dialog again!"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_GUI_FONT_CANNOT_BE_USED 
+                            "We are sorry, but the font you have selected cannot be used on this version of Windows, because it does not contain any characters for the regular (Latin-1) character set.\nThis will most likely happen, if you attempt to simply copy a multi-byte font from a FarEast version of Windows to a European or American version. Please install full support for CJK character encodings using your Windows setup CD-ROM."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+#include "ICGUI_Commands_RC.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

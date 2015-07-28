@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="abstract_type" abstract="true">
+		<xs:sequence>
+			<xs:element name="a"/>
+			<xs:element name="b" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="e" type="abstract_type"/>
+	<xs:complexType name="concrete_type">
+		<xs:complexContent>
+			<xs:restriction base="abstract_type">
+				<xs:sequence>
+					<xs:element name="a"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="root"/>
+</xs:schema>

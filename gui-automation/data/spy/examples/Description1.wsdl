@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Bb (Altova GmbH) -->
+<wsdl:description targetNamespace="http://myFileToBeImported.org" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://new.webservice.namespace" xmlns:ns="http://myFileToBeImported.org">
+	<wsdl:documentation>This file is valid</wsdl:documentation>
+	<wsdl:types>
+		<xs:schema targetNamespace="http://new.webservice.namespace" elementFormDefault="qualified">
+			<xs:element name="elementRequest" type="xs:string"/>
+			<xs:element name="elementResponse" type="xs:string"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:interface name="Interface1">
+		<wsdl:operation name="Operation1" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<wsdl:input messageLabel="In" element="tns:elementRequest"/>
+			<wsdl:output messageLabel="Out" element="tns:elementResponse"/>
+		</wsdl:operation>
+		<wsdl:fault name="MyFaultInInterface1"/>
+	</wsdl:interface>
+	<wsdl:interface name="Interface2">
+		<wsdl:operation name="Operation2" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<wsdl:input messageLabel="In" element="tns:elementRequest"/>
+		</wsdl:operation>
+	</wsdl:interface>
+</wsdl:description>

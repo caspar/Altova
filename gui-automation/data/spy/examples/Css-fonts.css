@@ -1,0 +1,29 @@
+@import "mystyle.css";
+
+p:first-child{
+	text-indent:0
+}
+p.special:before {content: "Special! " !important; }
+p.special:first-letter {color: #ffd800}
+
+p.special:after{
+
+content: "hello"}
+
+h1 { font-family: sans-serif }
+h2 { font-family: sans-serif }
+h3 { font-family: sans-serif }
+
+*.pastoral { color: green }  /* all elements with class~=pastoral */
+H1.pastoral { color: green }  /* H1 elements with class~=pastoral */
+
+h1#chapter1 { text-align: center }
+H1#z98y { letter-spacing: 0.5em }
+
+span[class=example] { color: blue; }
+span[hello="Cleveland"][goodbye="Columbus"] { color: blue; }
+a[rel~="copyright"], a[href="http://www.w3.org/"],*[lang|="en"] ,*[lang=fr] { display : none }
+
+r:unknownpseudoclass{height:0cm}
+
+s{unknownproperty:hehe}

@@ -1,0 +1,59 @@
+.header 
+{ 
+font-size:14pt;
+font-weight:bold;
+margin-bottom:14px;
+text-align:center;
+ }
+ .title
+ { 
+font-size:14pt;
+font-weight:bold;
+margin-bottom:7px;
+margin-top:7px;
+ }
+ .term 
+{ 
+color:blue;
+ }
+ .not-in-force
+ {
+ background-color:#d2d2d2;
+ }
+ .margin-note
+ {
+color:green;
+font-size:12pt;
+font-weight:bold;
+margin-top:7px;
+ }
+.italic
+ {
+font-style:italic;
+ }
+.bold
+{
+font-weight:bold;
+}
+.super
+{
+vertical-align:super;
+}
+.sub
+{
+vertical-align:sub;
+}
+.underline
+{
+text-decoration:underline;
+}
+.heading
+{
+font-size:12pt;
+font-weight:bold;
+margin-top:7px;
+}
+.para
+{
+margin-top:7px;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns="http://www.xmlspy.com/schemas/formatting" xmlns:f="http://www.xmlspy.com/schemas/formatting" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xmlspy.com/schemas/formatting" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="ParagraphTextType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="bold"/>
+			<xs:element ref="italic"/>
+			<xs:element ref="underline"/>
+			<xs:element ref="marker"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="bold" type="ParagraphTextType"/>
+	<xs:element name="italic" type="ParagraphTextType"/>
+	<xs:element name="underline" type="ParagraphTextType"/>
+	<xs:complexType name="MarkedTextType" mixed="true">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="marker" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="marker">
+		<xs:complexType mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:extension base="MarkedTextType">
+					<xs:attribute name="type" type="xs:string" use="optional"/>
+					<xs:attribute name="ref" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

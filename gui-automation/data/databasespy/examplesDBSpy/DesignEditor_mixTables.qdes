@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design version="1" datasource="OrgChart" kind="MS Access" root="OrgChart">
+	<Table left="30" top="10" right="244" bottom="267" id="1" expanded="1">
+		<ColumnWidths col0="22.000000" col1="68.000000" col2="60.000000" col3="44.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="Person" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="330" top="20" right="479" bottom="115" id="2" expanded="1">
+		<ColumnWidths col0="21.000000" col1="33.000000" col2="31.000000" col3="44.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="MSysACEs" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="330" top="160" right="479" bottom="255" id="3" expanded="1">
+		<ColumnWidths col0="21.000000" col1="33.000000" col2="31.000000" col3="44.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="MSysObjects" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="330" top="300" right="479" bottom="395" id="4" expanded="1">
+		<ColumnWidths col0="21.000000" col1="33.000000" col2="31.000000" col3="44.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="MSysQueries" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="600" top="20" right="806" bottom="149" id="5" expanded="1">
+		<ColumnWidths col0="22.000000" col1="60.000000" col2="60.000000" col3="44.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" Keys="2" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="Department" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+</Design>

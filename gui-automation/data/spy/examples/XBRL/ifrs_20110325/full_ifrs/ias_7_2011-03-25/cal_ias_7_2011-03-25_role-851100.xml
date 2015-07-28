@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://xbrl.ifrs.org/role/ifrs/ias_7_2011-03-25_role-851100" xlink:type="simple" xlink:href="rol_ias_7_2011-03-25.xsd#ias_7_2011-03-25_role-851100"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://xbrl.ifrs.org/role/ifrs/ias_7_2011-03-25_role-851100">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CashAndCashEquivalentsIfDifferentFromStatementOfFinancialPosition" xlink:label="loc_5"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CashAndCashEquivalents" xlink:label="loc_6"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_5" xlink:to="loc_6" order="10.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_BankOverdraftsClassifiedAsCashEquivalents" xlink:label="loc_7"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_5" xlink:to="loc_7" order="20.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OtherDifferencesToCashAndCashEquivalentsInStatementOfCashFlows" xlink:label="loc_8"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_5" xlink:to="loc_8" order="40.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CashAndCashEquivalentsClassifiedAsPartOfDisposalGroupHeldForSale" xlink:label="loc_9"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_5" xlink:to="loc_9" order="30.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncomeTaxesPaidRefund" xlink:label="loc"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncomeTaxesPaidRefundClassifiedAsOperatingActivities" xlink:label="loc_2"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_2" order="10.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncomeTaxesPaidRefundClassifiedAsInvestingActivities" xlink:label="loc_3"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_3" order="20.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncomeTaxesPaidRefundClassifiedAsFinancingActivities" xlink:label="loc_4"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_4" order="30.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

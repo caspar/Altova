@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="People">
+<xs:annotation>
+<xs:documentation>Famous people and their quotes</xs:documentation>
+</xs:annotation>
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Person" minOccurs="0" maxOccurs="unbounded">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="FirstName" type="xs:string"/>
+<xs:element name="LastName" type="xs:string"/>
+<xs:element name="DOB" type="xs:gYear"/>
+<xs:element name="Quotation" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>

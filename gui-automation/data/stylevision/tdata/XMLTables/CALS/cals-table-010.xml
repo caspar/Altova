@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
++........+........+........+
+ |A       |B       |C       |
++........+........+........+
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+               "http://www.altova.com/schemas/docbook/docbookx.dtd">
+<?altova_sps cals-table-maindesign.sps?>
+<book>
+	<article>
+		<articleinfo>
+			<title>CALS Table Test 010</title>
+			<releaseinfo>Release 2011</releaseinfo>
+			<author>
+				<firstname>rip</firstname>
+				<surname></surname>
+				<affiliation>
+					<address>
+						<email>rip@altova.com</email>
+					</address>
+				</affiliation>
+			</author>
+			<subtitle>neg TCase: invalid value for attribute frame. It should take the default value &apos;all&apos;</subtitle>
+		</articleinfo>
+		<table frame="xyz">
+			<!--invalid value for attribute frame. It should take the default value 'all' -->
+			<title>CALS Table Test 010</title>
+			<tgroup cols="3">
+				<colspec colname="col1"/>
+				<colspec colname="spycolgen2" colwidth="1*"/>
+				<colspec colname="spycolgen3" colwidth="1*"/>
+				<tbody>
+					<row>
+						<entry>A</entry>
+						<entry>B</entry>
+						<entry>C</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</article>
+</book>

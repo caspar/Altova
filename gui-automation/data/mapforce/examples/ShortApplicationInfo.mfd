@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="11">
+	<component name="defaultmap2" blackbox="0" uid="70504912" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="xslt"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="80935560" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="260" rby="225"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Page" expanded="1">
+								<entry name="Item" outkey="114009192" expanded="1">
+									<entry name="Title" outkey="114009416"/>
+									<entry name="MainSection" expanded="1">
+										<entry name="SubSection" outkey="114009640" expanded="1">
+											<entry name="Trademark" outkey="114009864"/>
+											<entry name="Keyword" outkey="114010088"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="SectionedPage.xsd" inputinstance="ApplicationsPage.xml" outputinstance="ApplicationsPage.xml" instanceroot="{}Page"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="70236680" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="395" lty="46" rbx="543" rby="191"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ShortInfo" expanded="1">
+								<entry name="Info" inpkey="114003808" expanded="1">
+									<entry name="Title" inpkey="114003400"/>
+									<entry name="Description" inpkey="114003624" expanded="1">
+										<entry name="Bold" inpkey="114004032"/>
+										<entry name="Italic" inpkey="114004256"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ShortInfo.xsd" instanceroot="{}ShortInfo"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="113002968">
+						<data>
+							<dataconnection type="1" copy_text="1"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="114009192">
+						<edges>
+							<edge vertexkey="114003808" edgekey="113034544"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114009416">
+						<edges>
+							<edge vertexkey="114003400" edgekey="113034488"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114009640">
+						<edges>
+							<edge vertexkey="114003624" edgekey="113002968"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114009864">
+						<edges>
+							<edge vertexkey="114004032" edgekey="113033992"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114010088">
+						<edges>
+							<edge vertexkey="114004256" edgekey="113034048"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

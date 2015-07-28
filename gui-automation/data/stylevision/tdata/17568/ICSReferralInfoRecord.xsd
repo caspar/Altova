@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Gillian (Anite Public Sector) -->
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Maninder Mulligan (Anite Public Sector Housing Division) -->
+<xs:schema xmlns="http://www.aniteps.com/schemas/swift/sxapi" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.aniteps.com/schemas/swift/sxapi" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="SXAPI-ICS-CONTEXEM">
+	<xs:include schemaLocation="sxapi-common.xsd">
+		<xs:annotation>
+			<xs:documentation>
+				Common data types
+			</xs:documentation>
+		</xs:annotation>
+	</xs:include>
+	<xs:element name="Report">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ReferralIdentifier" type="SxapiIdentifier.type"/>
+				<xs:element name="SubjectIdentifier" type="SxapiIdentifier.type"/>
+				<xs:element name="SubjectForename" type="SxapiNameForename.type" minOccurs="0"/>
+				<xs:element name="SubjectSurname" type="SxapiNameSurname.type"/>
+				<xs:element name="HomeAddress" type="SxapiAddress.type" minOccurs="0"/>
+				<xs:element name="HomeAddressConfidential" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="CurrentAddressConfidential" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="MainTelephone" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+				<xs:element name="CurrentAddress" type="SxapiAddress.type" minOccurs="0"/>
+				<xs:element name="CurrentTelephone" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+				<xs:element name="MobileTelephone" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+				<xs:element name="Gender" type="SxapiSex.type" minOccurs="0"/>
+				<xs:element name="BirthDate" type="SxapiDate.type" minOccurs="0"/>
+				<xs:element name="ExpectedDateOfBirth" type="SxapiDate.type" minOccurs="0"/>
+				<xs:element name="KeyTeamName" type="SxapiOrganisationName.type" minOccurs="0"/>
+				<xs:element name="ResponsibleCSSRName" type="SxapiOrganisationName.type" minOccurs="0"/>
+				<xs:element name="MainLanguage" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="EthnicOrigin" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="Religion" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="Nationality" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="RefugeeStatus" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="HomeOfficeNumber" type="SxapiHomeOfficeNumber.type" minOccurs="0"/>
+				<xs:element name="InterpreterRequired" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="PrevReferralUnsatisfactory" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="DateOfReferral" type="SxapiDate.type"/>
+				<xs:element name="SourceConfidential" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="ResponsibleAdultAware" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="SourceType" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="Rereferral" type="SxapiYesNo.type"/>
+				<xs:element name="ReasonForActions" type="SxapiNotes.type" minOccurs="0"/>
+				<xs:element name="ReferralReason" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="ReferralNotes" type="SxapiClob.type" minOccurs="0"/>
+				<xs:element name="ReferredBy" type="SxapiShortNote.type" minOccurs="0"/>
+				<xs:element name="SourceAgency" type="SxapiOrganisationName.type" minOccurs="0"/>
+				<xs:element name="SourceAddress" type="SxapiAddress.type" minOccurs="0"/>
+				<xs:element name="SourceTelephoneNumber" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+				<xs:element name="ReferralOutcome" type="SxapiMeaning.type" minOccurs="0"/>
+				<xs:element name="IsDisabled" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="OnDisabilityRegister" type="SxapiYesNo.type" minOccurs="0"/>
+				<xs:element name="InformedActionTaken" type="SxapiYesNoUnknown.type" minOccurs="0"/>
+				<xs:element name="InformedActionDate" type="SxapiDate.type" minOccurs="0"/>
+				<xs:element name="InformedActionText" type="SxapiNotes.type" minOccurs="0"/>
+				<xs:element name="AuthoriseReferralWorkerDate" type="SxapiDate.type" minOccurs="0"/>
+				<xs:element name="AuthoriseReferralManager" type="SxapiNotes.type" minOccurs="0"/>
+				<xs:element name="AuthoriseReferralManagerDate" type="SxapiDate.type" minOccurs="0"/>
+				<xs:element name="AuthoriseReferralWorker" type="SxapiNotes.type" minOccurs="0"/>
+				<xs:element name="MainCarers" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MainCarer" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="MainCarerIdentifier" type="SxapiIdentifier.type"/>
+										<xs:element name="DisplayName" type="SxapiShortNote.type"/>
+										<xs:element name="Relationship" type="SxapiMeaning.type" minOccurs="0"/>
+										<xs:element name="CurrentAddress" type="SxapiAddress.type" minOccurs="0"/>
+										<xs:element name="CurrentTelephoneNumber" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+										<xs:element name="EthnicOrigin" type="SxapiMeaning.type" minOccurs="0"/>
+										<xs:element name="MainLanguage" type="SxapiMeaning.type" minOccurs="0"/>
+										<xs:element name="ParentalResponsibility" type="SxapiYesNoUnknown.type"/>
+										<xs:element name="PrincipalCarer" type="SxapiYesNoUnknown.type"/>
+										<xs:element name="InterpreterRequired" type="SxapiYesNo.type" minOccurs="0"/>
+										<xs:element name="IsDisabled" type="SxapiYesNo.type" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="HouseholdMembers" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="HouseholdMember" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="HouseholdMemberIdentifier" type="SxapiIdentifier.type"/>
+										<xs:element name="DisplayName" type="SxapiShortNote.type"/>
+										<xs:element name="AddressSummary" type="SxapiAddress.type" minOccurs="0"/>
+										<xs:element name="BirthDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="Relationship" type="SxapiMeaning.type" minOccurs="0"/>
+										<xs:element name="OpenSSCase" type="SxapiYesNo.type" minOccurs="0"/>
+										<xs:element name="ReferredSameTime" type="SxapiYesNo.type" minOccurs="0"/>
+										<xs:element name="HazardsExist" type="SxapiYesNo.type" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SignificantPersons" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SignificantPerson" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SignificantPersonIdentifier" type="SxapiIdentifier.type"/>
+										<xs:element name="DisplayName" type="SxapiShortNote.type"/>
+										<xs:element name="AddressSummary" type="SxapiAddress.type" minOccurs="0"/>
+										<xs:element name="TelephoneNumber" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+										<xs:element name="Relationship" type="SxapiMeaning.type" minOccurs="0"/>
+										<xs:element name="OpenSSCase" type="SxapiYesNo.type" minOccurs="0"/>
+										<xs:element name="HazardsExist" type="SxapiYesNo.type" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="KeyAgencies" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="KeyAgency" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DisplayName" type="SxapiShortNote.type"/>
+										<xs:element name="InvolvementAddress" type="SxapiAddress.type" minOccurs="0"/>
+										<xs:element name="InvolvementTelephone" type="SxapiTelephoneNumber.type" minOccurs="0"/>
+										<xs:element name="ParentalConsent" type="SxapiYesNo.type" minOccurs="0"/>
+										<xs:element name="ParentalConsentDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="InvolvementTypes" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="InvolvementType" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Type" type="SxapiMeaning.type"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CSSRCPRecords" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CSSRCPRecord" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="AuthorityName" type="SxapiOrganisationName.type" minOccurs="0"/>
+										<xs:element name="RegistrationDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="DeregistrationDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="Category" type="SxapiMeaning.type" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CSSRLARecords" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CSSRLARecord" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="AuthorityName" type="SxapiOrganisationName.type" minOccurs="0"/>
+										<xs:element name="StartDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="EndDate" type="SxapiDate.type" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RelatedCPs" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RelatedCP" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DisplayName" type="SxapiShortNote.type"/>
+										<xs:element name="Relationship" type="SxapiMeaning.type" minOccurs="0"/>
+										<xs:element name="AuthorityName" type="SxapiOrganisationName.type" minOccurs="0"/>
+										<xs:element name="RegistrationDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="EndDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="AuthorityIdentifier" type="SxapiIdentifier.type"/>
+										<xs:element name="PersonRelatedToIdentifier" type="SxapiIdentifier.type"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RelatedLACs" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RelatedLAC" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DisplayName" type="SxapiShortNote.type"/>
+										<xs:element name="Relationship" type="SxapiMeaning.type" minOccurs="0"/>
+										<xs:element name="AuthorityName" type="SxapiOrganisationName.type" minOccurs="0"/>
+										<xs:element name="StartDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="EndDate" type="SxapiDate.type" minOccurs="0"/>
+										<xs:element name="AuthorityIdentifier" type="SxapiIdentifier.type"/>
+										<xs:element name="PersonRelatedToIdentifier" type="SxapiIdentifier.type"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ActionsInformed" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ActionInformed" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ActionTakenText" type="SxapiNotes.type" minOccurs="0"/>
+										<xs:element name="ActionTaken" type="SxapiYesNoUnknown.type" minOccurs="0"/>
+										<xs:element name="ActionTakenDate" type="SxapiDate.type" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CSSRCaseNumber" type="SxapiOtherReferenceIdentifier.type" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Beilla (Altova GmbH) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:x="http://xsdtesting" targetNamespace="http://xsdtesting" elementFormDefault="qualified">
+	<xsd:attribute name="att1" type="xsd:string"/>
+	<xsd:element name="doc">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element name="elem">
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:extension base="x:attRef_derived">
+								<xsd:attribute ref="x:bar"/>
+							</xsd:extension>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="attRef">
+		<xsd:attributeGroup ref="x:attG1"/>
+	</xsd:complexType>
+	<xsd:attributeGroup name="attG1">
+		<xsd:attribute ref="x:foo"/>
+	</xsd:attributeGroup>
+	<xsd:attribute name="foo" type="xsd:int"/>
+	<xsd:attribute name="bar" type="xsd:int"/>
+	<xsd:complexType name="attRef_derived" mixed="true">
+		<xsd:complexContent mixed="true">
+			<xsd:restriction base="x:attRef">
+				<xsd:sequence>
+					<xsd:element ref="x:doc"/>
+				</xsd:sequence>
+				<xsd:attribute ref="x:foo"/>
+				<xsd:anyAttribute namespace="##local"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

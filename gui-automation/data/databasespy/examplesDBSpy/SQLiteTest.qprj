@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  DatabaseSpy Project File  -->
+<Project Version="4" Expanded="Yes" Type="Root" Title="SQLiteTest">
+	<Folder FolderName="Data Sources" Expanded="Yes" Type="DataSourceFolder">
+		<datasource database_kind="SQLite" import_kind="SQLite" version="3.8" ConnectionString="C:\work\gui-automation\data\databasespy\examplesDBSpy\SQLiteDB.sqlite" name="SQLiteDB" Type="DataSourceItem">
+			<properties>
+				<property name="Database Kind" value="SQLite"/>
+				<property name="Import Kind" value="SQLite"/>
+				<property name="Root Object" value="main"/>
+				<property name="Data Source" value="SQLiteDB.sqlite"/>
+			</properties>
+			<LocalViewStorage/>
+			<LocalRelationsStorage/>
+		</datasource>
+	</Folder>
+	<Folder FolderName="SQL" Type="SQLRootFolder" database_kind="Unknown" datasource="Offline" description="Store and organize SQL files for this project." blockingstrategy="semi"/>
+	<Folder FolderName="Design" Type="DesignRootFolder" database_kind="Unknown" datasource="Offline" description="Store and organize Design files for this project."/>
+	<Folder FolderName="Data Diff" Type="DataDiffRootFolder"/>
+	<Folder FolderName="Schema Diff" Type="SchemaDiffRootFolder"/>
+	<Folder FolderName="Favorites" Type="FavoriteFolder"/>
+</Project>

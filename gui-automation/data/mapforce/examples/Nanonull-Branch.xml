@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Altova xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Altova_Hierarchical.xsd">
+	<PrimaryKey>1</PrimaryKey>
+	<Name>Organization Chart</Name>
+	<Office>
+		<PrimaryKey>2</PrimaryKey>
+		<ForeignKey>1</ForeignKey>
+		<Desc>On March 1st, 2000, Nanonull established it's new office in Brenton, MA. This subsidiary primarily is responsible for marketing, technical support and sales to key customers and partner networks.</Desc>
+		<EMail>nextoffice@nanonull.com</EMail>
+		<Established>2001-03-01</Established>
+		<Fax>+1 (927) 555 1845</Fax>
+		<Name>Nanonull Partners, Inc.</Name>
+		<Phone>+1 (927) 555 0094</Phone>
+		<Address>
+			<PrimaryKey>2</PrimaryKey>
+			<ForeignKey>2</ForeignKey>
+			<city>Brenton</city>
+			<state>MA</state>
+			<street>9865 Millenium Center, Suite 456</street>
+			<zip>5985</zip>
+		</Address>
+		<Department>
+			<PrimaryKey>5</PrimaryKey>
+			<ForeignKey>2</ForeignKey>
+			<Name>Administration</Name>
+			<Person>
+				<PrimaryKey>16</PrimaryKey>
+				<ForeignKey>5</ForeignKey>
+				<EMail>s.meier@nanonull.com</EMail>
+				<First>Steve</First>
+				<Last>Meier</Last>
+				<PhoneExt>114</PhoneExt>
+				<Title>Office Manager</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>17</PrimaryKey>
+				<ForeignKey>5</ForeignKey>
+				<EMail>t.bone@nanonull.com</EMail>
+				<First>Theo</First>
+				<Last>Bone</Last>
+				<PhoneExt>331</PhoneExt>
+				<Title>Accounts Receivable</Title>
+			</Person>
+		</Department>
+		<Department>
+			<PrimaryKey>6</PrimaryKey>
+			<ForeignKey>2</ForeignKey>
+			<Name>Marketing</Name>
+			<Person>
+				<PrimaryKey>18</PrimaryKey>
+				<ForeignKey>6</ForeignKey>
+				<EMail>m.nafta@nanonull.com</EMail>
+				<First>Max</First>
+				<Last>Nafta</Last>
+				<PhoneExt>122</PhoneExt>
+				<Title>PR &amp; Marketing Manager US</Title>
+			</Person>
+		</Department>
+		<Department>
+			<PrimaryKey>7</PrimaryKey>
+			<ForeignKey>2</ForeignKey>
+			<Name>IT &amp; Technical Support</Name>
+			<Person>
+				<PrimaryKey>19</PrimaryKey>
+				<ForeignKey>7</ForeignKey>
+				<EMail>v.bass@nanonull.com</EMail>
+				<First>Valentin</First>
+				<Last>Bass</Last>
+				<PhoneExt>716</PhoneExt>
+				<Title>IT Manager</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>20</PrimaryKey>
+				<ForeignKey>7</ForeignKey>
+				<EMail>c.franken@nanonull.com</EMail>
+				<First>Carl</First>
+				<Last>Franken</Last>
+				<PhoneExt>147</PhoneExt>
+				<Title>Support Engineer</Title>
+			</Person>
+			<Person>
+				<PrimaryKey>21</PrimaryKey>
+				<ForeignKey>7</ForeignKey>
+				<EMail>m.redgreen@nanonull.com</EMail>
+				<First>Mark</First>
+				<Last>Redgreen</Last>
+				<PhoneExt>152</PhoneExt>
+				<Title>Support Engineer</Title>
+			</Person>
+		</Department>
+	</Office>
+</Altova>

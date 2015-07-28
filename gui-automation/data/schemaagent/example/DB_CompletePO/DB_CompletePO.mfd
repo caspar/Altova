@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13">
+	<component name="defaultmap1" blackbox="0" uid="52418656" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="Customers" library="core" uid="52468496" kind="3">
+					<sources>
+						<datapoint pos="0" key="85891488"/>
+						<datapoint pos="1" key="85467584"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="73420664"/>
+						<datapoint/>
+					</targets>
+					<view ltx="362" lty="16" rbx="-209" rby="-425"/>
+				</component>
+				<component name="equal" library="core" uid="49533912" kind="5" prioritycontext="72822152">
+					<sources>
+						<datapoint pos="0" key="72822152"/>
+						<datapoint pos="1" key="83701000"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="62064568"/>
+					</targets>
+					<view ltx="252" lty="336" rbx="20" rby="46"/>
+				</component>
+				<component name="multiply" library="core" uid="38399736" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="62071304"/>
+						<datapoint pos="1" key="73870184"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="62072872"/>
+					</targets>
+					<view ltx="368" lty="409" rbx="-110" rby="33"/>
+				</component>
+				<component name="Articles" library="core" uid="39053232" kind="3">
+					<sources>
+						<datapoint pos="0" key="85081624"/>
+						<datapoint pos="1" key="76549296"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="84898080"/>
+						<datapoint/>
+					</targets>
+					<view ltx="331" lty="251" rbx="-242" rby="-190"/>
+				</component>
+				<component name="equal" library="core" uid="53603936" kind="5" prioritycontext="85270064">
+					<sources>
+						<datapoint pos="0" key="85270064"/>
+						<datapoint pos="1" key="76354872"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="76355088"/>
+					</targets>
+					<view ltx="284" lty="127" rbx="59" rby="-270"/>
+				</component>
+				<component name="structure" library="db" uid="52785328" kind="15">
+					<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.mdb);" DBDataSource="CustomersAndArticles.mdb" OLEDBProvider="Microsoft.Jet.OLEDB.4.0"/>
+					<view ltx="-7" lty="164" rbx="147" rby="426"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="Articles" type="table" outkey="81728696" expanded="1">
+									<entry name="Number" outkey="82857872" expanded="1"/>
+									<entry name="Name" outkey="84196176"/>
+									<entry name="SinglePrice" outkey="84560200" expanded="1"/>
+								</entry>
+								<entry name="Customers" type="table" outkey="76890200" expanded="1">
+									<entry name="Number" outkey="84381008" expanded="1"/>
+									<entry name="FirstName" outkey="84789552"/>
+									<entry name="LastName" outkey="82271400"/>
+									<entry name="Addresses|CustomerNr" type="table" outkey="85057952" expanded="1">
+										<entry name="City" outkey="84950776"/>
+										<entry name="State" outkey="81716520"/>
+										<entry name="Street" outkey="76967480"/>
+										<entry name="ZIP" outkey="84819704"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<database>
+							<database_connection database_kind="MS Access" import_kind="ADO" version="04.00.0000" name="CustomersAndArticles" path="CustomersAndArticles">
+								<properties>
+									<property name="Database Kind" value="MS Access"/>
+									<property name="Import Kind" value="ADO"/>
+									<property name="Root Object" value="CustomersAndArticles"/>
+									<property name="Data Source" value="CustomersAndArticles.mdb"/>
+									<property name="Provider" value="Microsoft.Jet.OLEDB.4.0"/>
+									<property name="User ID"/>
+									<property name="Password"/>
+									<property name="Persist Security Info" value="false"/>
+									<property name="Jet OLEDB:System Database"/>
+									<property name="Jet OLEDB:Sandbox Mode"/>
+									<property name="Jet OLEDB:Exclusive Async Delay"/>
+									<property name="Jet OLEDB:Flush Transaction Timeout"/>
+									<property name="Jet OLEDB:Implicit Commit Sync"/>
+									<property name="Jet OLEDB:Lock Delay"/>
+									<property name="Jet OLEDB:Lock Retry"/>
+									<property name="Jet OLEDB:Max Buffer Size"/>
+									<property name="Jet OLEDB:Max Locks Per File"/>
+									<property name="Jet OLEDB:Page Locks to Table Lock"/>
+									<property name="Jet OLEDB:Page Timeout"/>
+									<property name="Jet OLEDB:Recycle Long-Valued Pages"/>
+									<property name="Jet OLEDB:Shared Async Delay"/>
+									<property name="Jet OLEDB:User Commit Sync"/>
+									<property name="Jet OLEDB:Compact Without Replica Repair"/>
+									<property name="Jet OLEDB:Create System Database"/>
+									<property name="Jet OLEDB:Database Locking Mode"/>
+									<property name="Jet OLEDB:Database Password"/>
+									<property name="Jet OLEDB:New Database Password"/>
+									<property name="Jet OLEDB:Registry Path"/>
+								</properties>
+								<LocalViewStorage/>
+								<LocalRelationsStorage/>
+								<selections>
+									<selection>
+										<PathElement Name="CustomersAndArticles" Kind="DataSource"/>
+										<PathElement Name="CustomersAndArticles" Kind="Database"/>
+										<PathElement Name="Addresses" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="CustomersAndArticles" Kind="DataSource"/>
+										<PathElement Name="CustomersAndArticles" Kind="Database"/>
+										<PathElement Name="Articles" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="CustomersAndArticles" Kind="DataSource"/>
+										<PathElement Name="CustomersAndArticles" Kind="Database"/>
+										<PathElement Name="Customers" Kind="Table"/>
+									</selection>
+								</selections>
+							</database_connection>
+						</database>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="49595592" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="145" rby="104"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="ShortPO" expanded="1">
+										<entry name="CustomerNr" outkey="71084264"/>
+										<entry name="LineItems" outkey="73378880" expanded="1">
+											<entry name="LineItem" outkey="70908824" expanded="1">
+												<entry name="ArticleNr" outkey="72450928"/>
+												<entry name="Amount" outkey="72755000"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ShortPO.xsd" inputinstance="ShortPO.xml" instanceroot="{}ShortPO" userdefinedschemalocation="C:/Projects/development/files/XMLSpyExeFolder/SchemaAgentExamples/DB_CompletePO/ShortPO.xsd"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="49409168" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="599" lty="42" rbx="781" rby="372"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="CompletePO" expanded="1">
+										<entry name="Customer" inpkey="61954728" expanded="1">
+											<entry name="Number" inpkey="85037440"/>
+											<entry name="FirstName" inpkey="75127320"/>
+											<entry name="LastName" inpkey="61955008"/>
+											<entry name="Address" inpkey="61954848" expanded="1">
+												<entry name="Street" inpkey="73415272"/>
+												<entry name="City" inpkey="74459872"/>
+												<entry name="ZIP" inpkey="86282472"/>
+												<entry name="State" inpkey="74459592"/>
+											</entry>
+										</entry>
+										<entry name="LineItems" inpkey="85037280" expanded="1">
+											<entry name="LineItem" inpkey="75378288" expanded="1">
+												<entry name="Article" inpkey="86282632" expanded="1">
+													<entry name="Number" inpkey="74459712"/>
+													<entry name="Name" inpkey="73674408"/>
+													<entry name="SinglePrice" inpkey="86282352"/>
+													<entry name="Amount" inpkey="68324840"/>
+													<entry name="Price" inpkey="75127688"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="CompletePO.xsd" instanceroot="{}CompletePO" userdefinedschemalocation="C:/Projects/development/files/XMLSpyExeFolder/SchemaAgentExamples/DB_CompletePO/CompletePO.xsd"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="62064568">
+						<edges>
+							<edge vertexkey="76549296" edgekey="82222984"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62072872">
+						<edges>
+							<edge vertexkey="75127688" edgekey="66066048"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="70908824">
+						<edges>
+							<edge vertexkey="75378288" edgekey="73933944"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="71084264">
+						<edges>
+							<edge vertexkey="85270064" edgekey="73125408"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72450928">
+						<edges>
+							<edge vertexkey="72822152" edgekey="76766304"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72755000">
+						<edges>
+							<edge vertexkey="68324840" edgekey="73125632"/>
+							<edge vertexkey="62071304" edgekey="73125744"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="73378880">
+						<edges>
+							<edge vertexkey="85037280" edgekey="73125520"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="73420664">
+						<edges>
+							<edge vertexkey="61954728" edgekey="75225080"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76355088">
+						<edges>
+							<edge vertexkey="85467584" edgekey="85617248"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76890200">
+						<edges>
+							<edge vertexkey="85891488" edgekey="75225304"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76967480">
+						<edges>
+							<edge vertexkey="73415272" edgekey="66065824"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81716520">
+						<edges>
+							<edge vertexkey="74459592" edgekey="85617696"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81728696">
+						<edges>
+							<edge vertexkey="85081624" edgekey="85520920"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82271400">
+						<edges>
+							<edge vertexkey="61955008" edgekey="73860176"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82857872">
+						<edges>
+							<edge vertexkey="83701000" edgekey="76619624"/>
+							<edge vertexkey="74459712" edgekey="76619736"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84196176">
+						<edges>
+							<edge vertexkey="73674408" edgekey="85617360"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84381008">
+						<edges>
+							<edge vertexkey="76354872" edgekey="76765968"/>
+							<edge vertexkey="85037440" edgekey="76766080"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84560200">
+						<edges>
+							<edge vertexkey="86282352" edgekey="85617472"/>
+							<edge vertexkey="73870184" edgekey="75225192"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84789552">
+						<edges>
+							<edge vertexkey="75127320" edgekey="76766192"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84819704">
+						<edges>
+							<edge vertexkey="86282472" edgekey="66065936"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84898080">
+						<edges>
+							<edge vertexkey="86282632" edgekey="66066160"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84950776">
+						<edges>
+							<edge vertexkey="74459872" edgekey="85617584"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="85057952">
+						<edges>
+							<edge vertexkey="61954848" edgekey="66102592"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

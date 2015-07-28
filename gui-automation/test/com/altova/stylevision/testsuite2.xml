@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by test (Altova GmbH) -->
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testsuite.xsd">
+	<tcase>
+		<id>1</id>
+		<name>orgchart - add para in authentic</name>
+		<purpose/>
+		<testdir>c:\temp\tdata\</testdir>
+		<objective/>
+		<spsfile>orgchart.sps</spsfile>
+		<schemafile/>
+		<workingxml/>
+		<templatexml/>
+		<design/>
+		<authentic>y</authentic>
+		<editelement>bold</editelement>
+		<editelementtext>A Christmas Carol by Charles Dickens is a story that is rich in metaphors that ultimately questions the morals and ethics of society during the time of his life. In the story, Ebenezer Scrooge, is a greedy but rich accountant who is visited by his old business partners ghost Jacob Marley tells Scrooge that he may face penalty of becoming a lost soul if he continues to value money more than anything else in his life. He also foretells Scrooge will be visited by three other ghost that will give him the chance to redeem himself and he can break the iron chain of greed that he has woven. The plot, story, and the end of this book shows that it was well written and well thought up by the author. This book also show Dickens works are some of the best of our time. Ebenezer Scrooge a miserly, cold- hearted creditor, continues his stingy, greedy ways on Christmas Eve. He rejects a Christmas dinner invitation and all good tidings of the holiday, from his jolly nephew Fred.</editelementtext>
+	</tcase>
+	<tcase>
+		<id>2</id>
+		<name>Expense Report</name>
+		<purpose/>
+		<testdir>c:\temp\tdata\</testdir>
+		<objective/>
+		<spsfile>expreport.sps</spsfile>
+		<schemafile/>
+		<workingxml/>
+		<templatexml/>
+		<design/>
+		<authentic>y</authentic>
+		<editelement>expense</editelement>
+		<editelementtext>1</editelementtext>
+	</tcase>
+	<tcase>
+		<id>3</id>
+		<name>new Orgchart</name>
+		<purpose/>
+		<testdir>c:\temp\tdata\</testdir>
+		<objective/>
+		<spsfile/>
+		<schemafile>orgchart.xsd</schemafile>
+		<workingxml>orgchart.xml</workingxml>
+		<templatexml/>
+		<design>Root Elements/n1:OrgChart/n1:Office/n1:Desc/n1:para</design>
+		<authentic>y</authentic>
+		<editelement>para</editelement>
+		<editelementtext>All is quiet on New Years Day A world in white gets underway I want to be with you Be with you night and day Nothing changes on New Years Day On New Years Day</editelementtext>
+	</tcase>
+	<tcase>
+		<id>4</id>
+		<name>NanonullOrg - add para in authentic</name>
+		<purpose/>
+		<testdir>c:\temp\tdata\StyleVisionExamples\</testdir>
+		<objective/>
+		<spsfile>NanonullOrg.sps</spsfile>
+		<schemafile/>
+		<workingxml/>
+		<templatexml/>
+		<design/>
+		<authentic>y</authentic>
+		<editelement>ts:bold</editelement>
+		<editelementtext> in a new Location </editelementtext>
+	</tcase>
+</testsuite>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by Markus Kreska (Altova GmbH) -->
+<UML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="uml_interactions.xsd" diagram="Activity">
+	<StartElement name="State">
+		<Attaches>
+			<EndElement name="Pseudostate (EntryPoint)"/>
+			<EndElement name="Pseudostate (ExitPoint)"/>
+		</Attaches>
+	</StartElement>
+	<StartElement name="Composite State">
+		<Attaches>
+			<EndElement name="Pseudostate (EntryPoint)"/>
+			<EndElement name="Pseudostate (ExitPoint)"/>
+			<EndElement name="ConnectionPointReference"/>
+		</Attaches>
+		<Contains>
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Pseudostate (Initial)"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="Pseudostate (EntryPoint)"/>
+			<EndElement name="Pseudostate (ExitPoint)"/>
+			<EndElement name="Pseudostate (Junction)"/>
+			<EndElement name="Pseudostate (Terminate)"/>
+			<EndElement name="Pseudostate (Choice)"/>
+			<EndElement name="Pseudostate (Fork)"/>
+			<EndElement name="Pseudostate (Join)"/>
+			<EndElement name="Pseudostate (Join, horizontal)"/>
+			<EndElement name="Pseudostate (Fork, horizontal)"/>
+			<EndElement name="Pseudostate (ShallowHistory)"/>
+			<EndElement name="Pseudostate (DeepHistory)"/>
+		</Contains>
+	</StartElement>
+	<StartElement name="Orthogonal State">
+		<Attaches>
+			<EndElement name="Pseudostate (EntryPoint)"/>
+			<EndElement name="Pseudostate (ExitPoint)"/>
+			<EndElement name="ConnectionPointReference"/>
+		</Attaches>
+		<Contains>
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Pseudostate (Initial)"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="Pseudostate (EntryPoint)"/>
+			<EndElement name="Pseudostate (ExitPoint)"/>
+			<EndElement name="Pseudostate (Junction)"/>
+			<EndElement name="Pseudostate (Terminate)"/>
+			<EndElement name="Pseudostate (Choice)"/>
+			<EndElement name="Pseudostate (Fork)"/>
+			<EndElement name="Pseudostate (Join)"/>
+			<EndElement name="Pseudostate (Join, horizontal)"/>
+			<EndElement name="Pseudostate (Fork, horizontal)"/>
+			<EndElement name="Pseudostate (ShallowHistory)"/>
+			<EndElement name="Pseudostate (DeepHistory)"/>
+		</Contains>
+	</StartElement>
+	<StartElement name="Submachine State">
+		<Attaches>
+			<EndElement name="Pseudostate (EntryPoint)"/>
+			<EndElement name="Pseudostate (ExitPoint)"/>
+			<EndElement name="ConnectionPointReference"/>
+		</Attaches>
+	</StartElement>
+</UML>

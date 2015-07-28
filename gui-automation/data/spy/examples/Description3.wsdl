@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<wsdl:description targetNamespace="http://myFileToBeImported.org" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://myFileToBeImported.org">
+	<wsdl:documentation>This test shows an invalid use of description.For each component in the imported namespace, a corresponding Element Declaration component or Type Definition component MUST appear in the {element declarations} or {type definitions} property respectively of the Description component corresponding to the WSDL document that imports the schema, or that imports directly or indirectly a WSDL document that imports the schema.
+		This document violates assertion Description-1067</wsdl:documentation>
+		<wsdl:include location="Description1.wsdl"/>
+	<wsdl:interface name="Interface3" extends="tns:Interface1 tns:Interface2">
+		<wsdl:fault name="MyFault"/>
+	</wsdl:interface>
+</wsdl:description>

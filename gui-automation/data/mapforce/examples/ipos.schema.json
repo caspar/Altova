@@ -1,0 +1,88 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"required": [ "Customer", "PurchaseOrders" ],
+	"properties": {
+		"Customer": { "type": "string", "title": "Customer Identifier" },
+		"PurchaseOrders": {
+			"type": "array",
+			"title": "Purchase Orders",
+			"items": {
+				"type": "object",
+				"required": [ "orderDate", "shipTo", "billTo", "items" ],
+				"properties": {
+					"orderDate": { "type": "string", "title": "Ordering Date" },
+					"shipTo": {
+						"type": "object",
+						"title": "Receiver Address",
+						"oneOf": [
+							{ "$ref": "#/definitions/EU-Address" },
+							{ "$ref": "#/definitions/US-Address" }
+						]
+					},
+					"billTo": {
+						"type": "object",
+						"title": "Bill Address",
+						"oneOf": [
+							{ "$ref": "#/definitions/EU-Address" },
+							{ "$ref": "#/definitions/US-Address" }
+						]
+					},
+					"items": {
+						"$ref": "#/definitions/PurchaseOrderItems"
+					}
+				},
+				"additionalProperties": false
+			}
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		"EU-Address": {
+			"properties": {
+				"name": { "type": "string", "title": "Name" },
+				"street": { "type": "string", "title": "Street" },
+				"city": { "type": "string", "title": "City (Europe)" },
+				"postcode": { "type": "number", "title": "Postcode" }
+			},
+			"required": [ "name", "street", "city", "postcode" ],
+			"additionalProperties": false
+		},
+		"US-Address": {
+			"properties": {
+				"name": { "type": "string", "title": "Name" },
+				"street": { "type": "string", "title": "Street" },
+				"city": { "type": "string", "title": "US City" },
+				"state": { "type": "string", "title": "US State" },
+				"zip": { "type": "number", "title": "ZIP Code" }
+			},
+			"required": [ "name", "street", "city", "state", "zip" ],
+			"additionalProperties": false
+		},
+		"PurchaseOrderItems": {
+			"type": "object",
+			"title": "Items",
+			"required": [ "item" ],
+			"properties": {
+				"item": {
+					"type": "array",
+					"title": "item",
+					"items": {
+						"type": "object",
+						"required": [ "partNum", "productName", "quantity", "price" ],
+						"properties": {
+							"partNum": { "type": "string", "title": "Part Identifier", "description": "Is an alphanumeric code consisting of three digits, an hyphen and the product acronym, e. g. 150-RS"  },
+							"productName": { "type": "string", "title": "Name of the product" },
+							"quantity": { "type": "number", "title": "Quantity in pieces" },
+							"price": { "type": "number", "title": "Price", "description": "Price in US-Dollar" },
+							"comment": { "type": "string", "description": "Any further shipment comments" },
+							"shipDate": { "type": "string", "title": "Date of shipping" }
+						},
+						"additionalProperties": false
+					}
+				}	
+			},
+			"additionalProperties": false
+		}
+	}
+}

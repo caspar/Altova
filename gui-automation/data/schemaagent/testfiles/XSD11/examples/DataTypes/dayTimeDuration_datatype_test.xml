@@ -1,0 +1,19 @@
+<?xml version="1.1"?>
+<!-- dayTimeDuration_datatype_test.xml
+ - Copyright (c) 2013 by Dr. Herong Yang, herongyang.com
+-->
+<DayTimeDuration_Datatype_Test xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="daTimeDuration_datatype_test.xsd">
+	<!-- 6 valid "DayTimeDuration" elements -->
+	<DayTimeDuration>    P0DT0H0M0S    </DayTimeDuration>
+	<DayTimeDuration>    P2147483647D    </DayTimeDuration>
+	<DayTimeDuration>   -PT2147483647H   </DayTimeDuration>
+	<DayTimeDuration>    PT2147483647M    </DayTimeDuration>
+	<DayTimeDuration>-PT12345678901234.12345678901234S</DayTimeDuration>
+	<DayTimeDuration>
+P2147483647DT2147483647H2147483647M123456789012345.123456789012345S
+  </DayTimeDuration>
+	<!-- 3 invalid "DayTimeDuration" elements -->
+	<DayTimeDuration>    PT2147483648H    </DayTimeDuration>
+	<DayTimeDuration>    P1M    </DayTimeDuration>
+	<DayTimeDuration>    PT1S1M    </DayTimeDuration>
+</DayTimeDuration_Datatype_Test>

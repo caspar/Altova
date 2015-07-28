@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
++........+........+
+ |A       |B       |
++........+........+
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+               "http://www.altova.com/schemas/docbook/docbookx.dtd">
+<?altova_sps cals-table-maindesign.sps?>
+<book>
+	<article>
+		<articleinfo>
+			<title>CALS Table Test 030</title>
+			<releaseinfo>Release 2011</releaseinfo>
+			<author>
+				<firstname>rip</firstname>
+				<surname></surname>
+				<affiliation>
+					<address>
+						<email>rip@altova.com</email>
+					</address>
+				</affiliation>
+			</author>
+			<subtitle>neg CALS Table Test: Title after thead is an error</subtitle>
+		</articleinfo>
+		<table frame="all" colsep="1" rowsep="1">
+			<title>CALS Table Test 030</title>
+			<tgroup cols="2">
+				<colspec colname="col1"/>
+				<colspec colname="spycolgen2" colwidth="1*"/>
+				<thead>
+					<title>CALS Table Test: Title after thead is an error</title>
+					<row>
+						<entry>Header</entry>
+						<entry colname="spycolgen2"/>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>A</entry>
+						<entry>B</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</article>
+</book>

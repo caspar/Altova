@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Automating GUI tests for new plugins</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="toolbar_rc.xhtml">Next: Maintaining toolbar resource files</a>
+		</div>
+		<div class="previous">
+			<a href="robots_new_app.xhtml">Previous: Automating GUI tests for a new application</a>
+		</div>
+		<h1>Automating GUI tests for new plugins</h1>
+		<h2>
+			<a name="intro" />Introduction</h2>
+		<div class="p">As <a href="robots_plugin_classes.xhtml#1">already discussed</a>, the unit tests in the GUI robots framework for a stand-alone application can easily be applied to plugins in Eclipse and Visual Studio. So far, this has been done for the XMLSpy ,UModel and MapForce tests, but other plugins might be relevant in the future. <b>This section assumes tests have already been implemented for the stand-alone application.</b> If this is not the case, please have a look at the section <a href="robots_new_app.xhtml"><i>Automating GUI tests for a new application</i></a> first.
+		</div>
+		<h2>
+			<a name="1" />1 - Figure out the differences</h2>
+		<div class="p">The first step is to manually look at the stand-alone application, the Eclipse plugin, and the Visual Studio plugin, and figure out how they compare. Hopefully, there are only minor differences. (If not, there might be a good idea to take this up with the developers - if you cannot find your way around, how are the customers going to?)</div>
+		<div class="p">One example of a simple difference, is the way you open a file in the three environments. Another is where the Altova Help menu is located. What's nice a about the later one, is that you most likely do not have to worry about it. Since the Help menu will be (or at least should be) in the same location for all the Altova plugins, it's taken care of in a central class, as you will see.</div>
+		<h2>
+			<a name="2" />2 - Create the plugin specific robot classes</h2>
+		<div class="p">
+		<img alt="plugin robots hierarchy" src="robots_plugin_classes_simple.png" class="diagram" usemap="#robots_plugin_classes_simple" />
+		Whether there are few or many differences, you will need to create plugin specific robot classes, as seen in the diagram above, using XMLSpy as an example. These new classes should sit in the same package as the stand-alone class. E.g. <i>SpyRobot</i> is located in <i>com.altova.spy</i>, so the two plugin classes should go there too.
+		</div>
+		<h2>
+			<a name="3" />3 - Add a new constructor</h2>
+		<div class="p">In the constructor for the stand-alone robot, you will find something similar to the code below. The task is now to add a second constructor, which will allow the two plugin robots to pass on the application information from the IDEs.
+		
+		<pre class="javacode">
+	public UModelRobot() {
+		super("Altova UModel", AltovaApplication.UMODEL, "UModel", BASEPATH+"UModel.rc", toolbarIds);
+		
+		...
+	}
+		</pre>
+		
+		However since we do not want to duplicate some of these strings, and the list of registry keys, we will add a third, private constructor which calls the super-constructor. It can take the form of the constructor below. Notice one is protected, since it should only be accessed from the plugin subclasses, while the third is private, since it is only accessed using the <i>this</i> constructor call internally in the class.
+		
+				<pre class="javacode">
+	<b>public</b> UModelRobot() {
+		<b>this</b>("Altova UModel", AltovaApplication.UMODEL, "UModel");
+	}
+	
+	<b>protected</b> UModelRobot(String appName, ApplicationSettings product) {
+		<b>this</b>(appName, product, "UModelControl");
+	}
+	
+	<b>private</b> UModelRobot(String appName, ApplicationSettings product, String appRegKey) {
+		<b>super</b>(appName, product, appRegKey, BASEPATH+"UModel.rc", toolbarIds);
+		
+		addSettingsRegistryKey(	"MessageWindow", "Recent File List", "Search", "Settings",
+				"UI_Z2007_English", "UI_Z2007r3_English", "UI_Z2007r3sp1_English");
+	}
+		</pre>
+		</div>
+		<h2>
+			<a name="4" />4 - Use the new constructor in the subclasses</h2>
+		<div class="p">Now we can use the new constructor above in the plugin subclasses. Note that the example below retrieves the application name, path and exe information from static methods in the <i>EclipseRobotImpl</i> class. In this way, all that information is accessed and retained in one single place. If, at a later point, there is a need to change this, to is only necessary to change one single string. Furthermore, notice the construction of the <i>EclipseRobotImpl</i> in the second line of the project, this is class which holds all methods and data which is similar to the plugin robots.
+		
+		<pre class="javacode">
+public class EclipseUModelRobot extends UModelRobot implements EclipseRobot {
+	...
+	protected EclipseRobotImpl eRobotImpl;
+	
+	public EclipseUModelRobot() {
+		super(EclipseRobotImpl.getAppName(), EclipseRobotImpl.getAppPath().getParentFile(),
+			 EclipseRobotImpl.getAppExe());
+			 
+		eRobotImpl = new EclipseRobotImpl(this);
+	}
+	...
+}
+		</pre>
+		
+		</div>
+
+		<h2>
+			<a name="5" />5 - Implement plugin specific methods in the plugin robot classes</h2>
+		<div class="p">New we can put special methods and work-arounds for the plugins in these new classes. Just be careful where the code actually ends up. If the solution is similar for all plugins, the code should be in the <i>EclipseRobotImpl</i> or <i>VSnetRobotPluginImpl</i> class, and a method with the same name, but just a call to the impl object should be used. One example of the later, is the <i>startApplication()</i>-method. It will be special for Eclipse, but the same for all Eclipse plugins, so we have this method in the new <i>EclipseUModelRobot</i> class.</div>
+		<div class="p">A special problem with this method though, is that it needs to the call the super-method with the same name in it's code. This can not be done from outside though, so we'll have to split up the method a bit.
+		<pre class="javacode">
+public class <b>EclipseUModelRobot</b> extends UModelRobot implements EclipseRobot {
+	...
+	public void <b>startApplication()</b> {
+		eRobotImpl.<b>preStartApplication()</b>;
+		<b>super.startApplication()</b>;
+		eRobotImpl.<b>postStartApplication()</b>;
+	}
+	...
+}
+		</pre>
+		Now, in the <i>EclipseRobotImpl</i> we'll find the actual code for the <i>startApplication()</i>-method, however, it has been split into two methods. Also notice that all the calls to the robot methods now has to be prefixed by the robot object, since the <i>EclipseRobotImpl</i> only implements interfaces and nothing else.
+		
+	<pre class="javacode">
+public class <b>EclipseRobotImpl</b> implements EclipseRobot {
+	...
+	public void <b>preStartApplication()</b> {
+		IOUtils.deleteAll(workspace);
+		<b>robot</b>.addEscapeDialogAction("Problems", VK_ENTER);
+	}
+		
+	public void <b>postStartApplication()</b> {
+		robot.delay(5000);
+		try {
+			robot.closeAll();
+		} catch (ScriptMistakeException e) {
+			logger.fine("Did not find close all menu item, as no file was open");
+		}
+		robot.delay(5000);
+
+		robot.maximizeWindow();
+		closeEclipsePane("Welcome", ImageRecognitionRobot.WINDOWS_DEFAULT_FONT, Color.WHITE);
+	}
+
+	...
+}
+		</pre>
+		
+		However, methods that are specific for the both the plugin and the application, should stay in the plugin robot, i.e. <i>EclipseUModelRobot</i>. Here is one example of this:
+		
+		<pre class="javacode">
+public class <b>EclipseUModelRobot</b> extends UModelRobot implements EclipseRobot {
+	...
+	public String getExtraHelpMenus() {
+		return "UModel Help";
+	}
+	...
+}
+		</pre>
+		</div>
+		<h2>
+			<a name="6" />The final overview</h2>
+		<div class="p">Finally, the diagram below shows how all these classes hang together, seen from the XMLSpy application and plugin perspective. For more details about these classes, please see the section <a href="robots_plugin_classes.xhtml"><i>Plugin robots class hierarchy</i></a>.
+		<img alt="plugin robots hierarchy" src="robots_plugin_classes_spy.png" class="diagram" usemap="#robots_plugin_classes_spy" />
+		</div>
+
+	</body>
+</html>

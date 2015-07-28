@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://xbrl.ifrs.org/role/ifrs/ifrs-dim_role-903000" xlink:type="simple" xlink:href="rol_ifrs-dim_2011-03-25.xsd#ifrs-dim_role-903000"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://xbrl.ifrs.org/role/ifrs/ifrs-dim_role-903000">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ContinuingAndDiscontinuedOperationsAxis" xlink:label="loc"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AggregateContinuingAndDiscontinuedOperationsMember" xlink:label="loc_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc" xlink:to="loc_2" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ContinuingOperationsMember" xlink:label="loc_3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_2" xlink:to="loc_3" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DiscontinuedOperationsMember" xlink:label="loc_4"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_2" xlink:to="loc_4" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisposalGroupsClassifiedAsHeldForSaleMember" xlink:label="loc_5"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_4" xlink:to="loc_5" order="10.0"/>
+  </link:definitionLink>
+</link:linkbase>

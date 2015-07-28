@@ -1,0 +1,7 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://www.w3.org/2003/05/soap-envelope" xmlns:SOAP-ENC="http://www.w3.org/2003/05/soap-encoding" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<SOAP-ENV:Body>
+		<m:getOffsetUTCTime xmlns:m="http://www.Nanonull.com/TimeService/">
+			<m:hoursOffset>1</m:hoursOffset>
+		</m:getOffsetUTCTime>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

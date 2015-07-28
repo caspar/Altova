@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Page">
+		<xs:annotation>
+			<xs:documentation>All the applications</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Item" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>One specific application</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Title" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>The application's title</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="MainSection" type="SectionType" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Description of the application.</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="SectionType" mixed="true">
+		<xs:annotation>
+			<xs:documentation>Type containing description sections.</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Trademark" type="xs:string">
+			</xs:element>
+			<xs:element name="Keyword" type="xs:string">
+			</xs:element>
+			<xs:element name="SubSection" type="SectionType">
+				<xs:annotation>
+					<xs:documentation>Further description sections.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute name="author" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>Author of the describing text.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

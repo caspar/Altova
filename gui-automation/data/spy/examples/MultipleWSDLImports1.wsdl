@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<wsdl:description targetNamespace="http://new.webservice.namespace" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://new.webservice.namespace" xmlns:tns1="http://new.webservice.namespace1" xmlns:tns2="http://new.webservice.namespace2" xmlns:ns="http://example.org/name">
+	<wsdl:import namespace="http://new.webservice.namespace1" location="ToBeImportedorIncluded1.wsdl"/>
+	<wsdl:import namespace="http://new.webservice.namespace2" location="ToBeImportedorIncluded2.wsdl"/>
+	<wsdl:import namespace="http://myFileToBeImported.org" location="Description1.wsdl"/>
+	<wsdl:types>
+		<xs:schema targetNamespace="http://new.webservice.namespace" elementFormDefault="qualified">
+			<xs:element name="NewMessageRequest" type="xs:string"/>
+			<xs:element name="NewMessageResponse" type="xs:string"/>
+		</xs:schema>
+		<xs:import namespace="http://example.org/name" schemaLocation="name.xsd"/>
+		<xs:import namespace="http://example.org/name" schemaLocation="name.xsd"/>
+	</wsdl:types>
+	<wsdl:interface name="NewInterface" extends="tns1:InterfaceToBeImported1 tns2:InterfaceToBeImported2">
+		<wsdl:operation name="NewOperation" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<wsdl:input messageLabel="In" element="tns:NewMessageRequest"/>
+			<wsdl:output messageLabel="Out" element="tns:NewMessageResponse"/>
+		</wsdl:operation>
+	</wsdl:interface>
+	<wsdl:binding name="NewBinding" interface="tns:NewInterface" type="http://www.w3.org/ns/wsdl/soap" wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+		<wsdl:operation ref="tns:NewOperation" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+		<wsdl:operation ref="tns1:OperationToBeImported1"/>
+		<wsdl:operation ref="tns2:OperationToBeImported2"/>
+	</wsdl:binding>
+	<wsdl:service name="NewService" interface="tns:NewInterface">
+		<wsdl:endpoint name="NewEndpoint" binding="tns:NewBinding"/>
+	</wsdl:service>
+</wsdl:description>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" 
+           xmlns:sml="http://www.opengis.net/sensorML" 
+		   xmlns:swe="http://www.opengis.net/swe"
+		   xmlns:xlink="http://www.w3.org/1999/xlink" 
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="../../../sweCommon/1.0.30/positionData.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://schemas.opengis.net/gml/3.1.0/xlink/xlinks.xsd"/>
+	<xs:include schemaLocation="./process.xsd"/>
+	<!--=============-->
+	<!--  Processes  -->
+	<!--=============-->
+	<xs:element name="GenericSampling" substitutionGroup="sml:_Process">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="sml:_AbstractProcessType">
+					<xs:sequence>
+						<xs:group ref="sml:processMetadataGroup" minOccurs="0"/>
+						<xs:element name="inputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:inputsType">
+										<xs:sequence minOccurs="0">
+											<xs:element name="InputList">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:_AbstractListType">
+															<xs:sequence>
+																<xs:element name="realValue">
+																	<xs:complexType>
+																		<xs:group ref="swe:AnyScalar"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="position" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:Position"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="outputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:outputsType">
+										<xs:sequence minOccurs="0">
+											<xs:element name="OutputList">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:_AbstractListType">
+															<xs:sequence>
+																<xs:element name="sampledValue">
+																	<xs:complexType>
+																		<xs:group ref="swe:AnyScalar"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="parameters">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:parametersType">
+										<xs:sequence minOccurs="0">
+											<xs:element name="ParameterList">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:_AbstractListType">
+															<xs:choice maxOccurs="2">
+																<xs:element name="temporalResponse">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:NormalizedCurve"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:sequence>
+																	<xs:element name="directionalResponse" minOccurs="1" maxOccurs="3">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element ref="swe:NormalizedCurve"/>
+																			</xs:sequence>
+																			<xs:attribute name="name" type="swe:axisCodeSimpleType" use="required"/>
+																		</xs:complexType>
+																	</xs:element>
+																	<xs:element name="rotationOrder">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element ref="swe:Category"/>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:choice>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="method">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:methodType">
+										<xs:attribute ref="xlink:href" use="required" fixed="urn:ogc:process:genericSampling"/>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>						
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

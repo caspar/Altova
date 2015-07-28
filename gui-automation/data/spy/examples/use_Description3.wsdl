@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Bb (Altova GmbH) -->
+<wsdl:description targetNamespace="http://myFileToBeImported.org" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://myFileToBeImported.org" xmlns:impns="http://myFileToBeImported.org" xmlns:ns="http://new.webservice.namespace">
+	<wsdl:documentation>This file is valid</wsdl:documentation>
+	<wsdl:include location="Description3.wsdl"/>
+	<wsdl:binding name="NewBinding" interface="impns:Interface1" type="http://www.w3.org/ns/wsdl/soap" wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+		<wsdl:operation ref="impns:Operation1" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response"/>
+		<wsdl:fault ref="tns:MyFaultInInterface1"/>
+	</wsdl:binding>
+	<wsdl:service name="NewService" interface="impns:Interface1">
+		<wsdl:endpoint name="NewEndpoint" binding="tns:NewBinding"/>
+	</wsdl:service>
+</wsdl:description>

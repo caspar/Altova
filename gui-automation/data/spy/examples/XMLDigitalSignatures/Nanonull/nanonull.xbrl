@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns:n0="http://www.altova.com/nanonull" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:us-gaap-all="http://xbrl.us/us-gaap-all/2008-03-31" xmlns:us-gaap-std="http://xbrl.us/us-gaap-std/2008-03-31" xmlns:us-gaap="http://xbrl.us/us-gaap/2008-03-31" xmlns:us-roles="http://xbrl.us/us-roles/2008-03-31" xmlns:us-types="http://xbrl.us/us-types/2008-03-31" xmlns="http://www.xbrl.org/2003/instance">
+	<link:schemaRef xlink:type="simple" xlink:href="nanonull.xsd" />
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx1" unitRef="USD" decimals="-6">1135400000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx1" unitRef="USD" decimals="-6">227900000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx2">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Europe</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2007-12-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx2" unitRef="USD" decimals="-6">1701600000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx2" unitRef="USD" decimals="-6">341850000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx3">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:USA</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2007-12-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx3" unitRef="USD" decimals="-6">2836000000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx3" unitRef="USD" decimals="-6">569750000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx4">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Asia</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2006-12-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx4" unitRef="USD" decimals="-6">990900000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx4" unitRef="USD" decimals="-6">230200000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx5">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Europe</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2006-12-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx5" unitRef="USD" decimals="-6">1486350000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx5" unitRef="USD" decimals="-6">345300000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx6">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:USA</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2006-12-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx6" unitRef="USD" decimals="-6">2477250000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx6" unitRef="USD" decimals="-6">573500000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx7">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Asia</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2007-06-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx7" unitRef="USD" decimals="-6">432100000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx7" unitRef="USD" decimals="-6">147000000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx8">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Europe</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2007-06-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx8" unitRef="USD" decimals="-6">648150000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx8" unitRef="USD" decimals="-6">223500000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx9">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:USA</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2007-06-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx9" unitRef="USD" decimals="-6">1080250000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx9" unitRef="USD" decimals="-6">372500000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx10">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Asia</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2008-06-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx10" unitRef="USD" decimals="-6">481400000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx10" unitRef="USD" decimals="-6">146000000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx11">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Europe</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2008-06-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx11" unitRef="USD" decimals="-6">722100000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx11" unitRef="USD" decimals="-6">222750000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx12">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:USA</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2008-06-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:SegmentReportingInformationRevenue contextRef="ctx12" unitRef="USD" decimals="-6">1203500000</us-gaap:SegmentReportingInformationRevenue>
+	<us-gaap:SegmentReportingInformationOperatingIncomeLoss contextRef="ctx12" unitRef="USD" decimals="-6">371250000</us-gaap:SegmentReportingInformationOperatingIncomeLoss>
+	<context id="ctx13">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<startDate>2007-12-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:ShareBasedCompensation contextRef="ctx13" unitRef="USD" decimals="-6">20500000</us-gaap:ShareBasedCompensation>
+	<us-gaap:OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations contextRef="ctx13" unitRef="USD" decimals="-6">-6000000</us-gaap:OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations>
+	<us-gaap:IncreaseDecreaseInReceivables contextRef="ctx13" unitRef="USD" decimals="-6">122000000</us-gaap:IncreaseDecreaseInReceivables>
+	<us-gaap:IncreaseDecreaseInInventories contextRef="ctx13" unitRef="USD" decimals="-6">20500000</us-gaap:IncreaseDecreaseInInventories>
+	<us-gaap:IncreaseDecreaseInPrepaidExpense contextRef="ctx13" unitRef="USD" decimals="-6">14000000</us-gaap:IncreaseDecreaseInPrepaidExpense>
+	<us-gaap:IncreaseDecreaseInAccountsPayable contextRef="ctx13" unitRef="USD" decimals="-6">-23500000</us-gaap:IncreaseDecreaseInAccountsPayable>
+	<us-gaap:IncreaseDecreaseInAccruedLiabilities contextRef="ctx13" unitRef="USD" decimals="-6">62000000</us-gaap:IncreaseDecreaseInAccruedLiabilities>
+	<us-gaap:IncreaseDecreaseInCustomerDeposits contextRef="ctx13" unitRef="USD" decimals="-6">95500000</us-gaap:IncreaseDecreaseInCustomerDeposits>
+	<us-gaap:NetCashProvidedByUsedInOperatingActivities contextRef="ctx13" unitRef="USD" decimals="-6">1439500000</us-gaap:NetCashProvidedByUsedInOperatingActivities>
+	<us-gaap:PaymentsToAcquirePropertyPlantAndEquipment contextRef="ctx13" unitRef="USD" decimals="-6">1361500000</us-gaap:PaymentsToAcquirePropertyPlantAndEquipment>
+	<us-gaap:PaymentsToAcquireShortTermInvestments contextRef="ctx13" unitRef="USD" decimals="-6">1500000</us-gaap:PaymentsToAcquireShortTermInvestments>
+	<us-gaap:ProceedsFromSaleOfShortTermInvestments contextRef="ctx13" unitRef="USD" decimals="-6">5000000</us-gaap:ProceedsFromSaleOfShortTermInvestments>
+	<us-gaap:PaymentsForProceedsFromOtherInvestingActivities contextRef="ctx13" unitRef="USD" decimals="-6">-1000000</us-gaap:PaymentsForProceedsFromOtherInvestingActivities>
+	<us-gaap:NetCashProvidedByUsedInInvestingActivities contextRef="ctx13" unitRef="USD" decimals="-6">-1358000000</us-gaap:NetCashProvidedByUsedInInvestingActivities>
+	<us-gaap:ProceedsFromIssuanceOfLongTermDebt contextRef="ctx13" unitRef="USD" decimals="-6">2502500000</us-gaap:ProceedsFromIssuanceOfLongTermDebt>
+	<us-gaap:RepaymentsOfLongTermDebt contextRef="ctx13" unitRef="USD" decimals="-6">2081000000</us-gaap:RepaymentsOfLongTermDebt>
+	<us-gaap:PaymentsOfDividends contextRef="ctx13" unitRef="USD" decimals="-6">472500000</us-gaap:PaymentsOfDividends>
+	<us-gaap:PaymentsForRepurchaseOfCommonStock contextRef="ctx13" unitRef="USD" decimals="-6">42000000</us-gaap:PaymentsForRepurchaseOfCommonStock>
+	<us-gaap:RepaymentsOfShortTermDebt contextRef="ctx13" unitRef="USD" decimals="-6">35000000</us-gaap:RepaymentsOfShortTermDebt>
+	<us-gaap:ProceedsFromStockOptionsExercised contextRef="ctx13" unitRef="USD" decimals="-6">8000000</us-gaap:ProceedsFromStockOptionsExercised>
+	<us-gaap:ProceedsFromPaymentsForOtherFinancingActivities contextRef="ctx13" unitRef="USD" decimals="-6">-9000000</us-gaap:ProceedsFromPaymentsForOtherFinancingActivities>
+	<us-gaap:NetCashProvidedByUsedInFinancingActivities contextRef="ctx13" unitRef="USD" decimals="-6">-129000000</us-gaap:NetCashProvidedByUsedInFinancingActivities>
+	<us-gaap:EffectOfExchangeRateOnCashAndCashEquivalents contextRef="ctx13" unitRef="USD" decimals="-6">-29000000</us-gaap:EffectOfExchangeRateOnCashAndCashEquivalents>
+	<us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease contextRef="ctx13" unitRef="USD" decimals="-6">-76000000</us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease>
+	<context id="ctx14">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<startDate>2006-12-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:ShareBasedCompensation contextRef="ctx14" unitRef="USD" decimals="-6">25500000</us-gaap:ShareBasedCompensation>
+	<us-gaap:OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations contextRef="ctx14" unitRef="USD" decimals="-6">6000000</us-gaap:OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations>
+	<us-gaap:IncreaseDecreaseInReceivables contextRef="ctx14" unitRef="USD" decimals="-6">62500000</us-gaap:IncreaseDecreaseInReceivables>
+	<us-gaap:IncreaseDecreaseInInventories contextRef="ctx14" unitRef="USD" decimals="-6">16000000</us-gaap:IncreaseDecreaseInInventories>
+	<us-gaap:IncreaseDecreaseInPrepaidExpense contextRef="ctx14" unitRef="USD" decimals="-6">14000000</us-gaap:IncreaseDecreaseInPrepaidExpense>
+	<us-gaap:IncreaseDecreaseInAccountsPayable contextRef="ctx14" unitRef="USD" decimals="-6">17000000</us-gaap:IncreaseDecreaseInAccountsPayable>
+	<us-gaap:IncreaseDecreaseInAccruedLiabilities contextRef="ctx14" unitRef="USD" decimals="-6">78000000</us-gaap:IncreaseDecreaseInAccruedLiabilities>
+	<us-gaap:IncreaseDecreaseInCustomerDeposits contextRef="ctx14" unitRef="USD" decimals="-6">141500000</us-gaap:IncreaseDecreaseInCustomerDeposits>
+	<us-gaap:NetCashProvidedByUsedInOperatingActivities contextRef="ctx14" unitRef="USD" decimals="-6">1606000000</us-gaap:NetCashProvidedByUsedInOperatingActivities>
+	<us-gaap:PaymentsToAcquirePropertyPlantAndEquipment contextRef="ctx14" unitRef="USD" decimals="-6">1188000000</us-gaap:PaymentsToAcquirePropertyPlantAndEquipment>
+	<us-gaap:PaymentsToAcquireShortTermInvestments contextRef="ctx14" unitRef="USD" decimals="-6">709000000</us-gaap:PaymentsToAcquireShortTermInvestments>
+	<us-gaap:ProceedsFromSaleOfShortTermInvestments contextRef="ctx14" unitRef="USD" decimals="-6">549000000</us-gaap:ProceedsFromSaleOfShortTermInvestments>
+	<us-gaap:PaymentsForProceedsFromOtherInvestingActivities contextRef="ctx14" unitRef="USD" decimals="-6">76000000</us-gaap:PaymentsForProceedsFromOtherInvestingActivities>
+	<us-gaap:NetCashProvidedByUsedInInvestingActivities contextRef="ctx14" unitRef="USD" decimals="-6">-1424000000</us-gaap:NetCashProvidedByUsedInInvestingActivities>
+	<us-gaap:ProceedsFromIssuanceOfLongTermDebt contextRef="ctx14" unitRef="USD" decimals="-6">793500000</us-gaap:ProceedsFromIssuanceOfLongTermDebt>
+	<us-gaap:RepaymentsOfLongTermDebt contextRef="ctx14" unitRef="USD" decimals="-6">406000000</us-gaap:RepaymentsOfLongTermDebt>
+	<us-gaap:PaymentsOfDividends contextRef="ctx14" unitRef="USD" decimals="-6">356500000</us-gaap:PaymentsOfDividends>
+	<us-gaap:PaymentsForRepurchaseOfCommonStock contextRef="ctx14" unitRef="USD" decimals="-6">53500000</us-gaap:PaymentsForRepurchaseOfCommonStock>
+	<us-gaap:RepaymentsOfShortTermDebt contextRef="ctx14" unitRef="USD" decimals="-6">65000000</us-gaap:RepaymentsOfShortTermDebt>
+	<us-gaap:ProceedsFromStockOptionsExercised contextRef="ctx14" unitRef="USD" decimals="-6">22000000</us-gaap:ProceedsFromStockOptionsExercised>
+	<us-gaap:ProceedsFromPaymentsForOtherFinancingActivities contextRef="ctx14" unitRef="USD" decimals="-6">-2500000</us-gaap:ProceedsFromPaymentsForOtherFinancingActivities>
+	<us-gaap:NetCashProvidedByUsedInFinancingActivities contextRef="ctx14" unitRef="USD" decimals="-6">-69000000</us-gaap:NetCashProvidedByUsedInFinancingActivities>
+	<us-gaap:EffectOfExchangeRateOnCashAndCashEquivalents contextRef="ctx14" unitRef="USD" decimals="-6">10500000</us-gaap:EffectOfExchangeRateOnCashAndCashEquivalents>
+	<us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease contextRef="ctx14" unitRef="USD" decimals="-6">124000000</us-gaap:CashAndCashEquivalentsPeriodIncreaseDecrease>
+	<context id="ctx15">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<instant>2006-11-30</instant>
+		</period>
+	</context>
+	<us-gaap:CashAndCashEquivalentsAtCarryingValue id="fact1" contextRef="ctx15" unitRef="USD" decimals="-6">581500000</us-gaap:CashAndCashEquivalentsAtCarryingValue>
+	<context id="ctx16">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<instant>2007-11-30</instant>
+		</period>
+	</context>
+	<us-gaap:CashAndCashEquivalentsAtCarryingValue id="fact2" contextRef="ctx16" unitRef="USD" decimals="-6">471500000</us-gaap:CashAndCashEquivalentsAtCarryingValue>
+	<context id="ctx17">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<instant>2007-08-31</instant>
+		</period>
+	</context>
+	<us-gaap:CashAndCashEquivalentsAtCarryingValue id="fact3" contextRef="ctx17" unitRef="USD" decimals="-6">706000000</us-gaap:CashAndCashEquivalentsAtCarryingValue>
+	<context id="ctx18">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<instant>2008-08-31</instant>
+		</period>
+	</context>
+	<us-gaap:CashAndCashEquivalentsAtCarryingValue id="fact4" contextRef="ctx18" unitRef="USD" decimals="-6">396000000</us-gaap:CashAndCashEquivalentsAtCarryingValue>
+	<context id="ctx19">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<instant>2007-08-31</instant>
+		</period>
+	</context>
+	<us-gaap:ShortTermInvestments contextRef="ctx19" unitRef="USD" decimals="-6">170500000</us-gaap:ShortTermInvestments>
+	<us-gaap:ReceivablesNetCurrent contextRef="ctx19" unitRef="USD" decimals="-6">211500000</us-gaap:ReceivablesNetCurrent>
+	<us-gaap:InventoryNet contextRef="ctx19" unitRef="USD" decimals="-6">148500000</us-gaap:InventoryNet>
+	<us-gaap:PrepaidExpenseCurrent contextRef="ctx19" unitRef="USD" decimals="-6">124500000</us-gaap:PrepaidExpenseCurrent>
+	<us-gaap:AssetsCurrent contextRef="ctx19" unitRef="USD" decimals="-6">1363000000</us-gaap:AssetsCurrent>
+	<us-gaap:PropertyPlantAndEquipmentNet contextRef="ctx19" unitRef="USD" decimals="-6">12567000000</us-gaap:PropertyPlantAndEquipmentNet>
+	<us-gaap:Goodwill contextRef="ctx19" unitRef="USD" decimals="-6">1678000000</us-gaap:Goodwill>
+	<us-gaap:IndefiniteLivedTrademarks contextRef="ctx19" unitRef="USD" decimals="-6">667000000</us-gaap:IndefiniteLivedTrademarks>
+	<us-gaap:OtherAssetsNoncurrent contextRef="ctx19" unitRef="USD" decimals="-6">321000000</us-gaap:OtherAssetsNoncurrent>
+	<us-gaap:Assets contextRef="ctx19" unitRef="USD" decimals="-6">16596000000</us-gaap:Assets>
+	<us-gaap:ShortTermBorrowings contextRef="ctx19" unitRef="USD" decimals="-6">155500000</us-gaap:ShortTermBorrowings>
+	<us-gaap:LongTermDebtCurrent contextRef="ctx19" unitRef="USD" decimals="-6">683000000</us-gaap:LongTermDebtCurrent>
+	<us-gaap:ConvertibleDebtCurrent contextRef="ctx19" unitRef="USD" decimals="-6">585000000</us-gaap:ConvertibleDebtCurrent>
+	<us-gaap:AccountsPayable contextRef="ctx19" unitRef="USD" decimals="-6">234000000</us-gaap:AccountsPayable>
+	<us-gaap:AccruedLiabilities contextRef="ctx19" unitRef="USD" decimals="-6">606000000</us-gaap:AccruedLiabilities>
+	<us-gaap:CustomerDepositsCurrent contextRef="ctx19" unitRef="USD" decimals="-6">1310000000</us-gaap:CustomerDepositsCurrent>
+	<us-gaap:LiabilitiesCurrent contextRef="ctx19" unitRef="USD" decimals="-6">3573500000</us-gaap:LiabilitiesCurrent>
+	<us-gaap:LongTermDebtNoncurrent contextRef="ctx19" unitRef="USD" decimals="-6">2867500000</us-gaap:LongTermDebtNoncurrent>
+	<us-gaap:OtherLiabilitiesNoncurrent contextRef="ctx19" unitRef="USD" decimals="-6">299000000</us-gaap:OtherLiabilitiesNoncurrent>
+	<us-gaap:CommitmentsAndContingencies contextRef="ctx19" unitRef="USD" decimals="-6">0</us-gaap:CommitmentsAndContingencies>
+	<us-gaap:CommonStockValue contextRef="ctx19" unitRef="USD" decimals="-6">3000000</us-gaap:CommonStockValue>
+	<us-gaap:CommonStockAdditionalSeriesValue contextRef="ctx19" unitRef="USD" decimals="-6">177000000</us-gaap:CommonStockAdditionalSeriesValue>
+	<us-gaap:AdditionalPaidInCapital contextRef="ctx19" unitRef="USD" decimals="-6">3788500000</us-gaap:AdditionalPaidInCapital>
+	<us-gaap:RetainedEarningsAccumulatedDeficit contextRef="ctx19" unitRef="USD" decimals="-6">6439000000</us-gaap:RetainedEarningsAccumulatedDeficit>
+	<us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax contextRef="ctx19" unitRef="USD" decimals="-6">442500000</us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax>
+	<us-gaap:TreasuryStockValue contextRef="ctx19" unitRef="USD" decimals="-6">996000000</us-gaap:TreasuryStockValue>
+	<us-gaap:StockholdersEquity contextRef="ctx19" unitRef="USD" decimals="-6">9855000000</us-gaap:StockholdersEquity>
+	<us-gaap:LiabilitiesAndStockholdersEquity contextRef="ctx19" unitRef="USD" decimals="-6">16596000000</us-gaap:LiabilitiesAndStockholdersEquity>
+	<context id="ctx20">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<instant>2007-11-30</instant>
+		</period>
+	</context>
+	<us-gaap:ShortTermInvestments contextRef="ctx20" unitRef="USD" decimals="-6">8500000</us-gaap:ShortTermInvestments>
+	<us-gaap:ReceivablesNetCurrent contextRef="ctx20" unitRef="USD" decimals="-6">218000000</us-gaap:ReceivablesNetCurrent>
+	<us-gaap:InventoryNet contextRef="ctx20" unitRef="USD" decimals="-6">165500000</us-gaap:InventoryNet>
+	<us-gaap:PrepaidExpenseCurrent contextRef="ctx20" unitRef="USD" decimals="-6">124500000</us-gaap:PrepaidExpenseCurrent>
+	<us-gaap:AssetsCurrent contextRef="ctx20" unitRef="USD" decimals="-6">990000000</us-gaap:AssetsCurrent>
+	<us-gaap:PropertyPlantAndEquipmentNet contextRef="ctx20" unitRef="USD" decimals="-6">13319500000</us-gaap:PropertyPlantAndEquipmentNet>
+	<us-gaap:Goodwill contextRef="ctx20" unitRef="USD" decimals="-6">1805000000</us-gaap:Goodwill>
+	<us-gaap:IndefiniteLivedTrademarks contextRef="ctx20" unitRef="USD" decimals="-6">696500000</us-gaap:IndefiniteLivedTrademarks>
+	<us-gaap:OtherAssetsNoncurrent contextRef="ctx20" unitRef="USD" decimals="-6">281500000</us-gaap:OtherAssetsNoncurrent>
+	<us-gaap:Assets contextRef="ctx20" unitRef="USD" decimals="-6">17094000000</us-gaap:Assets>
+	<us-gaap:ShortTermBorrowings contextRef="ctx20" unitRef="USD" decimals="-6">57500000</us-gaap:ShortTermBorrowings>
+	<us-gaap:LongTermDebtCurrent contextRef="ctx20" unitRef="USD" decimals="-6">514000000</us-gaap:LongTermDebtCurrent>
+	<us-gaap:ConvertibleDebtCurrent contextRef="ctx20" unitRef="USD" decimals="-6">698000000</us-gaap:ConvertibleDebtCurrent>
+	<us-gaap:AccountsPayable contextRef="ctx20" unitRef="USD" decimals="-6">280500000</us-gaap:AccountsPayable>
+	<us-gaap:AccruedLiabilities contextRef="ctx20" unitRef="USD" decimals="-6">676500000</us-gaap:AccruedLiabilities>
+	<us-gaap:CustomerDepositsCurrent contextRef="ctx20" unitRef="USD" decimals="-6">1403500000</us-gaap:CustomerDepositsCurrent>
+	<us-gaap:LiabilitiesCurrent contextRef="ctx20" unitRef="USD" decimals="-6">3632000000</us-gaap:LiabilitiesCurrent>
+	<us-gaap:LongTermDebtNoncurrent contextRef="ctx20" unitRef="USD" decimals="-6">3156500000</us-gaap:LongTermDebtNoncurrent>
+	<us-gaap:OtherLiabilitiesNoncurrent contextRef="ctx20" unitRef="USD" decimals="-6">322500000</us-gaap:OtherLiabilitiesNoncurrent>
+	<us-gaap:CommitmentsAndContingencies contextRef="ctx20" unitRef="USD" decimals="-6">0</us-gaap:CommitmentsAndContingencies>
+	<us-gaap:CommonStockValue contextRef="ctx20" unitRef="USD" decimals="-6">3000000</us-gaap:CommonStockValue>
+	<us-gaap:CommonStockAdditionalSeriesValue contextRef="ctx20" unitRef="USD" decimals="-6">177000000</us-gaap:CommonStockAdditionalSeriesValue>
+	<us-gaap:AdditionalPaidInCapital contextRef="ctx20" unitRef="USD" decimals="-6">3799500000</us-gaap:AdditionalPaidInCapital>
+	<us-gaap:RetainedEarningsAccumulatedDeficit contextRef="ctx20" unitRef="USD" decimals="-6">6460500000</us-gaap:RetainedEarningsAccumulatedDeficit>
+	<us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax contextRef="ctx20" unitRef="USD" decimals="-6">648000000</us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax>
+	<us-gaap:TreasuryStockValue contextRef="ctx20" unitRef="USD" decimals="-6">1106500000</us-gaap:TreasuryStockValue>
+	<us-gaap:StockholdersEquity contextRef="ctx20" unitRef="USD" decimals="-6">9981500000</us-gaap:StockholdersEquity>
+	<us-gaap:LiabilitiesAndStockholdersEquity contextRef="ctx20" unitRef="USD" decimals="-6">17094000000</us-gaap:LiabilitiesAndStockholdersEquity>
+	<context id="ctx21">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<instant>2008-08-31</instant>
+		</period>
+	</context>
+	<us-gaap:ShortTermInvestments contextRef="ctx21" unitRef="USD" decimals="-6">4500000</us-gaap:ShortTermInvestments>
+	<us-gaap:ReceivablesNetCurrent contextRef="ctx21" unitRef="USD" decimals="-6">321000000</us-gaap:ReceivablesNetCurrent>
+	<us-gaap:InventoryNet contextRef="ctx21" unitRef="USD" decimals="-6">182500000</us-gaap:InventoryNet>
+	<us-gaap:PrepaidExpenseCurrent contextRef="ctx21" unitRef="USD" decimals="-6">122500000</us-gaap:PrepaidExpenseCurrent>
+	<us-gaap:AssetsCurrent contextRef="ctx21" unitRef="USD" decimals="-6">1028000000</us-gaap:AssetsCurrent>
+	<us-gaap:PropertyPlantAndEquipmentNet contextRef="ctx21" unitRef="USD" decimals="-6">13867500000</us-gaap:PropertyPlantAndEquipmentNet>
+	<us-gaap:Goodwill contextRef="ctx21" unitRef="USD" decimals="-6">1750000000</us-gaap:Goodwill>
+	<us-gaap:IndefiniteLivedTrademarks contextRef="ctx21" unitRef="USD" decimals="-6">679500000</us-gaap:IndefiniteLivedTrademarks>
+	<us-gaap:OtherAssetsNoncurrent contextRef="ctx21" unitRef="USD" decimals="-6">315500000</us-gaap:OtherAssetsNoncurrent>
+	<us-gaap:Assets contextRef="ctx21" unitRef="USD" decimals="-6">17642000000</us-gaap:Assets>
+	<us-gaap:ShortTermBorrowings contextRef="ctx21" unitRef="USD" decimals="-6">31500000</us-gaap:ShortTermBorrowings>
+	<us-gaap:LongTermDebtCurrent contextRef="ctx21" unitRef="USD" decimals="-6">444000000</us-gaap:LongTermDebtCurrent>
+	<us-gaap:ConvertibleDebtCurrent contextRef="ctx21" unitRef="USD" decimals="-6">116000000</us-gaap:ConvertibleDebtCurrent>
+	<us-gaap:AccountsPayable contextRef="ctx21" unitRef="USD" decimals="-6">252500000</us-gaap:AccountsPayable>
+	<us-gaap:AccruedLiabilities contextRef="ctx21" unitRef="USD" decimals="-6">612000000</us-gaap:AccruedLiabilities>
+	<us-gaap:CustomerDepositsCurrent contextRef="ctx21" unitRef="USD" decimals="-6">1458500000</us-gaap:CustomerDepositsCurrent>
+	<us-gaap:LiabilitiesCurrent contextRef="ctx21" unitRef="USD" decimals="-6">2916000000</us-gaap:LiabilitiesCurrent>
+	<us-gaap:LongTermDebtNoncurrent contextRef="ctx21" unitRef="USD" decimals="-6">4172500000</us-gaap:LongTermDebtNoncurrent>
+	<us-gaap:OtherLiabilitiesNoncurrent contextRef="ctx21" unitRef="USD" decimals="-6">391500000</us-gaap:OtherLiabilitiesNoncurrent>
+	<us-gaap:CommitmentsAndContingencies contextRef="ctx21" unitRef="USD" decimals="-6">0</us-gaap:CommitmentsAndContingencies>
+	<us-gaap:CommonStockValue contextRef="ctx21" unitRef="USD" decimals="-6">3000000</us-gaap:CommonStockValue>
+	<us-gaap:CommonStockAdditionalSeriesValue contextRef="ctx21" unitRef="USD" decimals="-6">177000000</us-gaap:CommonStockAdditionalSeriesValue>
+	<us-gaap:AdditionalPaidInCapital contextRef="ctx21" unitRef="USD" decimals="-6">3833000000</us-gaap:AdditionalPaidInCapital>
+	<us-gaap:RetainedEarningsAccumulatedDeficit contextRef="ctx21" unitRef="USD" decimals="-6">6962500000</us-gaap:RetainedEarningsAccumulatedDeficit>
+	<us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax contextRef="ctx21" unitRef="USD" decimals="-6">333000000</us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax>
+	<us-gaap:TreasuryStockValue contextRef="ctx21" unitRef="USD" decimals="-6">1148000000</us-gaap:TreasuryStockValue>
+	<us-gaap:StockholdersEquity contextRef="ctx21" unitRef="USD" decimals="-6">10160500000</us-gaap:StockholdersEquity>
+	<us-gaap:LiabilitiesAndStockholdersEquity contextRef="ctx21" unitRef="USD" decimals="-6">17642000000</us-gaap:LiabilitiesAndStockholdersEquity>
+	<context id="ctx22">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<startDate>2007-12-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:PassengerRevenue contextRef="ctx22" unitRef="USD" decimals="-6">4342000000</us-gaap:PassengerRevenue>
+	<n0:OnboardAndOther contextRef="ctx22" unitRef="USD" decimals="-6">1154500000</n0:OnboardAndOther>
+	<us-gaap:OtherSalesRevenueNet contextRef="ctx22" unitRef="USD" decimals="-6">175500000</us-gaap:OtherSalesRevenueNet>
+	<us-gaap:Revenues contextRef="ctx22" unitRef="USD" decimals="-6">5673000000</us-gaap:Revenues>
+	<n0:CruiseCommissionsTransportationAndOther contextRef="ctx22" unitRef="USD" decimals="-6">871500000</n0:CruiseCommissionsTransportationAndOther>
+	<n0:CostOfOnboardAndOther contextRef="ctx22" unitRef="USD" decimals="-6">190000000</n0:CostOfOnboardAndOther>
+	<us-gaap:FuelCosts contextRef="ctx22" unitRef="USD" decimals="-6">673000000</us-gaap:FuelCosts>
+	<us-gaap:CostOfServicesDirectLabor contextRef="ctx22" unitRef="USD" decimals="-6">553000000</us-gaap:CostOfServicesDirectLabor>
+	<us-gaap:ConcessionsCosts contextRef="ctx22" unitRef="USD" decimals="-6">324000000</us-gaap:ConcessionsCosts>
+	<us-gaap:DirectOperatingCosts contextRef="ctx22" unitRef="USD" decimals="-6">714000000</us-gaap:DirectOperatingCosts>
+	<us-gaap:OtherCostOfOperatingRevenue contextRef="ctx22" unitRef="USD" decimals="-6">128000000</us-gaap:OtherCostOfOperatingRevenue>
+	<us-gaap:CostOfRevenue contextRef="ctx22" unitRef="USD" decimals="-6">3453500000</us-gaap:CostOfRevenue>
+	<us-gaap:SellingGeneralAndAdministrativeExpense contextRef="ctx22" unitRef="USD" decimals="-6">611000000</us-gaap:SellingGeneralAndAdministrativeExpense>
+	<us-gaap:DepreciationAndAmortization contextRef="ctx22" unitRef="USD" decimals="-6">468000000</us-gaap:DepreciationAndAmortization>
+	<us-gaap:CostsAndExpenses contextRef="ctx22" unitRef="USD" decimals="-6">4532500000</us-gaap:CostsAndExpenses>
+	<us-gaap:OperatingIncomeLoss contextRef="ctx22" unitRef="USD" decimals="-6">1139500000</us-gaap:OperatingIncomeLoss>
+	<us-gaap:InvestmentIncomeInterest contextRef="ctx22" unitRef="USD" decimals="-6">15000000</us-gaap:InvestmentIncomeInterest>
+	<us-gaap:InterestExpense contextRef="ctx22" unitRef="USD" decimals="-6">154000000</us-gaap:InterestExpense>
+	<us-gaap:OtherNonoperatingIncomeExpense contextRef="ctx22" unitRef="USD" decimals="-6">3000000</us-gaap:OtherNonoperatingIncomeExpense>
+	<us-gaap:NonoperatingIncomeExpense contextRef="ctx22" unitRef="USD" decimals="-6">-136000000</us-gaap:NonoperatingIncomeExpense>
+	<us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments contextRef="ctx22" unitRef="USD" decimals="-6">1003600000</us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments>
+	<us-gaap:IncomeTaxExpenseBenefit contextRef="ctx22" unitRef="USD" decimals="-6">24000000</us-gaap:IncomeTaxExpenseBenefit>
+	<us-gaap:NetIncomeLoss contextRef="ctx22" unitRef="USD" decimals="-6">979500000</us-gaap:NetIncomeLoss>
+	<us-gaap:EarningsPerShareBasic contextRef="ctx22" unitRef="perShareItemType" decimals="2">2.49</us-gaap:EarningsPerShareBasic>
+	<us-gaap:EarningsPerShareDiluted contextRef="ctx22" unitRef="perShareItemType" decimals="2">2.43</us-gaap:EarningsPerShareDiluted>
+	<us-gaap:CommonStockDividendsPerShareCashPaid contextRef="ctx22" unitRef="perShareItemType" decimals="2">1.2</us-gaap:CommonStockDividendsPerShareCashPaid>
+	<context id="ctx23">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<startDate>2006-12-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:PassengerRevenue contextRef="ctx23" unitRef="USD" decimals="-6">3718500000</us-gaap:PassengerRevenue>
+	<n0:OnboardAndOther contextRef="ctx23" unitRef="USD" decimals="-6">1060000000</n0:OnboardAndOther>
+	<us-gaap:OtherSalesRevenueNet contextRef="ctx23" unitRef="USD" decimals="-6">176000000</us-gaap:OtherSalesRevenueNet>
+	<us-gaap:Revenues contextRef="ctx23" unitRef="USD" decimals="-6">4954500000</us-gaap:Revenues>
+	<n0:CruiseCommissionsTransportationAndOther contextRef="ctx23" unitRef="USD" decimals="-6">746500000</n0:CruiseCommissionsTransportationAndOther>
+	<n0:CostOfOnboardAndOther contextRef="ctx23" unitRef="USD" decimals="-6">183000000</n0:CostOfOnboardAndOther>
+	<us-gaap:FuelCosts contextRef="ctx23" unitRef="USD" decimals="-6">381000000</us-gaap:FuelCosts>
+	<us-gaap:CostOfServicesDirectLabor contextRef="ctx23" unitRef="USD" decimals="-6">488000000</us-gaap:CostOfServicesDirectLabor>
+	<us-gaap:ConcessionsCosts contextRef="ctx23" unitRef="USD" decimals="-6">278000000</us-gaap:ConcessionsCosts>
+	<us-gaap:DirectOperatingCosts contextRef="ctx23" unitRef="USD" decimals="-6">614500000</us-gaap:DirectOperatingCosts>
+	<us-gaap:OtherCostOfOperatingRevenue contextRef="ctx23" unitRef="USD" decimals="-6">130500000</us-gaap:OtherCostOfOperatingRevenue>
+	<us-gaap:CostOfRevenue contextRef="ctx23" unitRef="USD" decimals="-6">2823000000</us-gaap:CostOfRevenue>
+	<us-gaap:SellingGeneralAndAdministrativeExpense contextRef="ctx23" unitRef="USD" decimals="-6">576500000</us-gaap:SellingGeneralAndAdministrativeExpense>
+	<us-gaap:DepreciationAndAmortization contextRef="ctx23" unitRef="USD" decimals="-6">405500000</us-gaap:DepreciationAndAmortization>
+	<us-gaap:CostsAndExpenses contextRef="ctx23" unitRef="USD" decimals="-6">3806000000</us-gaap:CostsAndExpenses>
+	<us-gaap:OperatingIncomeLoss contextRef="ctx23" unitRef="USD" decimals="-6">1149000000</us-gaap:OperatingIncomeLoss>
+	<us-gaap:InvestmentIncomeInterest contextRef="ctx23" unitRef="USD" decimals="-6">23500000</us-gaap:InvestmentIncomeInterest>
+	<us-gaap:InterestExpense contextRef="ctx23" unitRef="USD" decimals="-6">136000000</us-gaap:InterestExpense>
+	<us-gaap:OtherNonoperatingIncomeExpense contextRef="ctx23" unitRef="USD" decimals="-6">0</us-gaap:OtherNonoperatingIncomeExpense>
+	<us-gaap:NonoperatingIncomeExpense contextRef="ctx23" unitRef="USD" decimals="-6">-112000000</us-gaap:NonoperatingIncomeExpense>
+	<us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments contextRef="ctx23" unitRef="USD" decimals="-6">1037000000</us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments>
+	<us-gaap:IncomeTaxExpenseBenefit contextRef="ctx23" unitRef="USD" decimals="-6">13000000</us-gaap:IncomeTaxExpenseBenefit>
+	<us-gaap:NetIncomeLoss contextRef="ctx23" unitRef="USD" decimals="-6">1024000000</us-gaap:NetIncomeLoss>
+	<us-gaap:EarningsPerShareBasic contextRef="ctx23" unitRef="perShareItemType" decimals="2">2.58</us-gaap:EarningsPerShareBasic>
+	<us-gaap:EarningsPerShareDiluted contextRef="ctx23" unitRef="perShareItemType" decimals="2">2.51</us-gaap:EarningsPerShareDiluted>
+	<us-gaap:CommonStockDividendsPerShareCashPaid contextRef="ctx23" unitRef="perShareItemType" decimals="2">0.975</us-gaap:CommonStockDividendsPerShareCashPaid>
+	<context id="ctx24">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<startDate>2007-06-01</startDate>
+			<endDate>2007-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:PassengerRevenue contextRef="ctx24" unitRef="USD" decimals="-6">1603000000</us-gaap:PassengerRevenue>
+	<n0:OnboardAndOther contextRef="ctx24" unitRef="USD" decimals="-6">408000000</n0:OnboardAndOther>
+	<us-gaap:OtherSalesRevenueNet contextRef="ctx24" unitRef="USD" decimals="-6">149500000</us-gaap:OtherSalesRevenueNet>
+	<us-gaap:Revenues contextRef="ctx24" unitRef="USD" decimals="-6">2160500000</us-gaap:Revenues>
+	<n0:CruiseCommissionsTransportationAndOther contextRef="ctx24" unitRef="USD" decimals="-6">291500000</n0:CruiseCommissionsTransportationAndOther>
+	<n0:CostOfOnboardAndOther contextRef="ctx24" unitRef="USD" decimals="-6">73000000</n0:CostOfOnboardAndOther>
+	<us-gaap:FuelCosts contextRef="ctx24" unitRef="USD" decimals="-6">144000000</us-gaap:FuelCosts>
+	<us-gaap:CostOfServicesDirectLabor contextRef="ctx24" unitRef="USD" decimals="-6">172000000</us-gaap:CostOfServicesDirectLabor>
+	<us-gaap:ConcessionsCosts contextRef="ctx24" unitRef="USD" decimals="-6">100000000</us-gaap:ConcessionsCosts>
+	<us-gaap:DirectOperatingCosts contextRef="ctx24" unitRef="USD" decimals="-6">213500000</us-gaap:DirectOperatingCosts>
+	<us-gaap:OtherCostOfOperatingRevenue contextRef="ctx24" unitRef="USD" decimals="-6">100500000</us-gaap:OtherCostOfOperatingRevenue>
+	<us-gaap:CostOfRevenue contextRef="ctx24" unitRef="USD" decimals="-6">1096000000</us-gaap:CostOfRevenue>
+	<us-gaap:SellingGeneralAndAdministrativeExpense contextRef="ctx24" unitRef="USD" decimals="-6">181500000</us-gaap:SellingGeneralAndAdministrativeExpense>
+	<us-gaap:DepreciationAndAmortization contextRef="ctx24" unitRef="USD" decimals="-6">139500000</us-gaap:DepreciationAndAmortization>
+	<us-gaap:CostsAndExpenses contextRef="ctx24" unitRef="USD" decimals="-6">1418000000</us-gaap:CostsAndExpenses>
+	<us-gaap:OperatingIncomeLoss contextRef="ctx24" unitRef="USD" decimals="-6">743000000</us-gaap:OperatingIncomeLoss>
+	<us-gaap:InvestmentIncomeInterest contextRef="ctx24" unitRef="USD" decimals="-6">10000000</us-gaap:InvestmentIncomeInterest>
+	<us-gaap:InterestExpense contextRef="ctx24" unitRef="USD" decimals="-6">47500000</us-gaap:InterestExpense>
+	<us-gaap:OtherNonoperatingIncomeExpense contextRef="ctx24" unitRef="USD" decimals="-6">500000</us-gaap:OtherNonoperatingIncomeExpense>
+	<us-gaap:NonoperatingIncomeExpense contextRef="ctx24" unitRef="USD" decimals="-6">-37000000</us-gaap:NonoperatingIncomeExpense>
+	<us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments contextRef="ctx24" unitRef="USD" decimals="-6">706000000</us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments>
+	<us-gaap:IncomeTaxExpenseBenefit contextRef="ctx24" unitRef="USD" decimals="-6">19500000</us-gaap:IncomeTaxExpenseBenefit>
+	<us-gaap:NetIncomeLoss contextRef="ctx24" unitRef="USD" decimals="-6">686000000</us-gaap:NetIncomeLoss>
+	<us-gaap:EarningsPerShareBasic contextRef="ctx24" unitRef="perShareItemType" decimals="2">1.73</us-gaap:EarningsPerShareBasic>
+	<us-gaap:EarningsPerShareDiluted contextRef="ctx24" unitRef="perShareItemType" decimals="2">1.67</us-gaap:EarningsPerShareDiluted>
+	<us-gaap:CommonStockDividendsPerShareCashPaid contextRef="ctx24" unitRef="perShareItemType" decimals="2">0.35</us-gaap:CommonStockDividendsPerShareCashPaid>
+	<context id="ctx25">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+		</entity>
+		<period>
+			<startDate>2008-06-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+	<us-gaap:PassengerRevenue contextRef="ctx25" unitRef="USD" decimals="-6">1829000000</us-gaap:PassengerRevenue>
+	<n0:OnboardAndOther contextRef="ctx25" unitRef="USD" decimals="-6">432000000</n0:OnboardAndOther>
+	<us-gaap:OtherSalesRevenueNet contextRef="ctx25" unitRef="USD" decimals="-6">146000000</us-gaap:OtherSalesRevenueNet>
+	<us-gaap:Revenues contextRef="ctx25" unitRef="USD" decimals="-6">2407000000</us-gaap:Revenues>
+	<n0:CruiseCommissionsTransportationAndOther contextRef="ctx25" unitRef="USD" decimals="-6">330000000</n0:CruiseCommissionsTransportationAndOther>
+	<n0:CostOfOnboardAndOther contextRef="ctx25" unitRef="USD" decimals="-6">67000000</n0:CostOfOnboardAndOther>
+	<us-gaap:FuelCosts contextRef="ctx25" unitRef="USD" decimals="-6">264500000</us-gaap:FuelCosts>
+	<us-gaap:CostOfServicesDirectLabor contextRef="ctx25" unitRef="USD" decimals="-6">190500000</us-gaap:CostOfServicesDirectLabor>
+	<us-gaap:ConcessionsCosts contextRef="ctx25" unitRef="USD" decimals="-6">115500000</us-gaap:ConcessionsCosts>
+	<us-gaap:DirectOperatingCosts contextRef="ctx25" unitRef="USD" decimals="-6">252500000</us-gaap:DirectOperatingCosts>
+	<us-gaap:OtherCostOfOperatingRevenue contextRef="ctx25" unitRef="USD" decimals="-6">97000000</us-gaap:OtherCostOfOperatingRevenue>
+	<us-gaap:CostOfRevenue contextRef="ctx25" unitRef="USD" decimals="-6">1319000000</us-gaap:CostOfRevenue>
+	<us-gaap:SellingGeneralAndAdministrativeExpense contextRef="ctx25" unitRef="USD" decimals="-6">186000000</us-gaap:SellingGeneralAndAdministrativeExpense>
+	<us-gaap:DepreciationAndAmortization contextRef="ctx25" unitRef="USD" decimals="-6">161500000</us-gaap:DepreciationAndAmortization>
+	<us-gaap:CostsAndExpenses contextRef="ctx25" unitRef="USD" decimals="-6">1667000000</us-gaap:CostsAndExpenses>
+	<us-gaap:OperatingIncomeLoss contextRef="ctx25" unitRef="USD" decimals="-6">740000000</us-gaap:OperatingIncomeLoss>
+	<us-gaap:InvestmentIncomeInterest contextRef="ctx25" unitRef="USD" decimals="-6">4000000</us-gaap:InvestmentIncomeInterest>
+	<us-gaap:InterestExpense contextRef="ctx25" unitRef="USD" decimals="-6">54000000</us-gaap:InterestExpense>
+	<us-gaap:OtherNonoperatingIncomeExpense contextRef="ctx25" unitRef="USD" decimals="-6">0</us-gaap:OtherNonoperatingIncomeExpense>
+	<us-gaap:NonoperatingIncomeExpense contextRef="ctx25" unitRef="USD" decimals="-6">-50000000</us-gaap:NonoperatingIncomeExpense>
+	<us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments contextRef="ctx25" unitRef="USD" decimals="-6">690000000</us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments>
+	<us-gaap:IncomeTaxExpenseBenefit contextRef="ctx25" unitRef="USD" decimals="-6">26000000</us-gaap:IncomeTaxExpenseBenefit>
+	<us-gaap:NetIncomeLoss contextRef="ctx25" unitRef="USD" decimals="-6">664000000</us-gaap:NetIncomeLoss>
+	<us-gaap:EarningsPerShareBasic contextRef="ctx25" unitRef="perShareItemType" decimals="2">1.7</us-gaap:EarningsPerShareBasic>
+	<us-gaap:EarningsPerShareDiluted contextRef="ctx25" unitRef="perShareItemType" decimals="2">1.65</us-gaap:EarningsPerShareDiluted>
+	<us-gaap:CommonStockDividendsPerShareCashPaid contextRef="ctx25" unitRef="perShareItemType" decimals="2">0.4</us-gaap:CommonStockDividendsPerShareCashPaid>
+	<unit id="USD">
+		<measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:USD</measure>
+	</unit>
+	<unit id="perShareItemType">
+		<divide>
+			<unitNumerator>
+				<measure xmlns:iso4217="http://www.xbrl.org/2003/iso4217">iso4217:USD</measure>
+			</unitNumerator>
+			<unitDenominator>
+				<measure xmlns:xbrli="http://www.xbrl.org/2003/instance">xbrli:shares</measure>
+			</unitDenominator>
+		</divide>
+	</unit>
+	<link:footnoteLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+		<link:footnote xlink:type="resource" xlink:label="footnote1" xlink:role="http://www.xbrl.org/2003/role/footnote" xml:lang="en">Derived from audited consolidated financial statements.</link:footnote>
+		<link:loc xlink:type="locator" xlink:label="fact1" xlink:href="#fact1" />
+		<link:loc xlink:type="locator" xlink:label="fact1" xlink:href="#fact2" />
+		<link:loc xlink:type="locator" xlink:label="fact1" xlink:href="#fact3" />
+		<link:loc xlink:type="locator" xlink:label="fact1" xlink:href="#fact4" />
+		<link:footnoteArc xlink:type="arc" xlink:from="fact1" xlink:to="footnote1" xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote" />
+	</link:footnoteLink>
+	<context id="ctx1">
+		<entity>
+			<identifier scheme="http://www.nanonull.com">Nanonull</identifier>
+			<segment>
+				<explicitMember dimension="us-gaap:StatementOperatingActivitiesSegmentAxis" xmlns="http://xbrl.org/2006/xbrldi" xmlns:nanonull="http://www.altova.com/nanonull">nanonull:Asia</explicitMember>
+			</segment>
+		</entity>
+		<period>
+			<startDate>2007-12-01</startDate>
+			<endDate>2008-08-31</endDate>
+		</period>
+	</context>
+</xbrl>

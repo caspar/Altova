@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Rows xmlns:xmi="http://www.hello.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MixAttsAndElementsTest_out.xsd">
+	<xmi:Field1/>
+	<Field2>
+		<xmi:Field1/>
+		<xmi:Field3/>
+		<Field4/>
+		<xmi:Field5>f5</xmi:Field5>
+	</Field2>
+	<xmi:Field3>
+		<xmi:Field1/>
+		<Field2/>
+		<Field4/>
+		<xmi:Field5/>
+	</xmi:Field3>
+	<ComplexField>
+		<xmi:Field1>f1</xmi:Field1>
+		<Field2>f2</Field2>
+	</ComplexField>
+</Rows>

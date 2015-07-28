@@ -1,0 +1,340 @@
+<!-- edited with XMLSpy v2006 rel. 3 sp1 (http://www.altova.com) by Markus Kreska (Altova GmbH) -->
+<Links diagram="      Machine" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="uml_link_matrix.xsd">
+	<StartElement name="State">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Composite State">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Orthogonal State">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Submachine State">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Initial">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="FinalState"/>
+	<StartElement name="EntryPoint">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="ExitPoint">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Choice">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Junction">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Terminate">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Fork">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Join">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Fork (horizontal)">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Join (horizontal)">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="DeepHistory">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+	<StartElement name="ShallowHistory">
+		<Link name="Transition">
+			<EndElement name="State"/>
+			<EndElement name="Composite State"/>
+			<EndElement name="Orthogonal State"/>
+			<EndElement name="Submachine State"/>
+			<EndElement name="Initial"/>
+			<EndElement name="FinalState"/>
+			<EndElement name="EntryPoint"/>
+			<EndElement name="ExitPoint"/>
+			<EndElement name="Choice"/>
+			<EndElement name="Junction"/>
+			<EndElement name="Terminate"/>
+			<EndElement name="Fork"/>
+			<EndElement name="Join"/>
+			<EndElement name="Fork (horizontal)"/>
+			<EndElement name="Join (horizontal)"/>
+			<EndElement name="DeepHistory"/>
+			<EndElement name="ShallowHistory"/>
+		</Link>
+	</StartElement>
+</Links>

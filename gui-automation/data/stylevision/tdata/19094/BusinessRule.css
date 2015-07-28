@@ -1,0 +1,127 @@
+body
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+table.fiche
+{
+	border: 1px solid #ccc;
+	border-color: black;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.fiche th
+{
+	text-align: left;
+	vertical-align: top;
+	width: 150;
+}
+
+table.contexts
+{
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
+table.ruleSet, table.target
+{
+	border-collapse: collapse;
+	vertical-align: top;
+	width=100%;
+}
+
+table.comment
+{
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
+table.context
+{
+	border-collapse: collapse;
+	vertical-align: top;
+	width: 100%;
+}
+
+table.changeType
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+table.action
+{
+	vertical-align: top;
+	text-align: left;
+	width: 100%;
+}
+
+td.changeType
+{
+	text-align: left;
+	vertical-align: top;
+}
+table.contexts_changetypes td
+{
+}
+
+td.changeType, td.contexts
+{
+	text-align: left;
+	vertical-align: top;
+}
+
+table.rulelogic
+{
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	border-color: black;
+	width: 100%;
+}
+
+table.rulelogic td
+{
+	border: 1px solid #000;
+	font-style: normal;
+	font-variant: normal;
+	border-color: black;
+	color: black;
+}
+table.rulelogic td.header
+{
+	text-align: center;
+}
+
+table.rulelogic td.if
+{
+	text-align: left;
+	colspan: 2;
+	padding: 1em;
+}
+
+table.rulelogic td.then
+{
+	padding: 1em;
+}
+
+td.fiche
+{
+	padding: 5;
+}
+
+table.and td
+{
+	border: 0;
+	vertical-align: top;
+}
+
+td.indent
+{
+	padding: 0 0 0 10;
+}
+
+td.desc_context
+{
+	vertical-align: top;
+}

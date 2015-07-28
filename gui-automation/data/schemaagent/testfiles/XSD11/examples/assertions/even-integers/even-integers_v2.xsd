@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2013 rel. 2 (http://www.altova.com) by test (Altova GmbH) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.1">
+	<element name="Example">
+		<complexType>
+			<sequence>
+				<element name="even-integer">
+					<simpleType>
+						<restriction base="integer">
+							<minInclusive value="0"/>
+							<maxInclusive value="100"/>
+							<assertion test="$value mod 2 = 0"/>
+						</restriction>
+					</simpleType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

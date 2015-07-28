@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:ResponsibleParty xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sensorML
+C:\ResEau_SensorML\sensorML\1.0.30\base\base.xsd">
+  <sml:organizationName>Interior Water Association of Canada</sml:organizationName>
+  <sml:contactInfo>
+    <sml:phone>
+      <sml:voice>(999) 999-9999</sml:voice>
+      <sml:facsimile>(999) 999-9998</sml:facsimile>
+    </sml:phone>
+    <sml:address>
+      <sml:deliveryPoint>99 Cremazie St.</sml:deliveryPoint>
+      <sml:city>Anytown</sml:city>
+      <sml:administrativeArea>MB</sml:administrativeArea>
+      <sml:postalCode>M1M 1M1</sml:postalCode>
+      <sml:country>CA</sml:country>
+      <sml:electronicMailAddress>iwa_contact@iwa.org</sml:electronicMailAddress>
+    </sml:address>
+    <sml:onlineResource xlink:href="www.iwaoc.ca"/>
+    <sml:hoursOfService>9 am - 4pm Monday to Friday</sml:hoursOfService>
+    <sml:contactInstructions>Closed for the months of December and January</sml:contactInstructions>
+  </sml:contactInfo>
+</sml:ResponsibleParty>

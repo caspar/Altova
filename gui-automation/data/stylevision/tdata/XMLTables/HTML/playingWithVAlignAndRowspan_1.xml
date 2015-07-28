@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "xhtml1-transitional.dtd">
+<?altova_sps playingWithVAlignAndRowspan.sps?>
+<html>
+	<head>
+		<title>Tables Rowspan Test</title>
+	</head>
+	<body>
+		<table cellspacing="0" cellpadding="3" width="100%" border="1">
+			<tbody>
+				<tr>
+					<td valign="top">
+							&nbsp;Tables Rowspan Test
+							
+							Table Header Cells spanning
+multiple rows:
+							<table width="90%" border="1">
+							<tbody valign="bottom">
+								<tr>
+									<th width="100" bgcolor="#ffe4c4" rowspan="2">Header 1 span=2 rows</th>
+									<td bgcolor="#ee82ee" width="250" valign="top">valign=top</td>
+									<td bgcolor="#ee82ee">col 2</td>
+									<td width="150" bgcolor="#ee82ee">col 3</td>
+									<td bgcolor="#ee82ee">col 4</td>
+									<td bgcolor="#ee82ee">col 5</td>
+									<td bgcolor="#ee82ee">col 6</td>
+									<td bgcolor="#ee82ee">col 7</td>
+									<td bgcolor="#ee82ee">col 8</td>
+									<td bgcolor="#ee82ee">col 9</td>
+								</tr>
+								<tr>
+									<td bgcolor="#ee82ee" valign="bottom">valign=bottom</td>
+									<td bgcolor="#ee82ee">col 2</td>
+									<td width="150" bgcolor="#ee82ee">col 3</td>
+									<td bgcolor="#ee82ee">col 4</td>
+									<td bgcolor="#ee82ee">col 5</td>
+									<td bgcolor="#ee82ee">col 6</td>
+									<td bgcolor="#ee82ee">col 7</td>
+									<td bgcolor="#ee82ee">col 8</td>
+									<td/>
+								</tr>
+								<tr>
+									<th bgcolor="#ffe4c4" rowspan="5">Header 2 span=5 rows</th>
+									<td bgcolor="#90ee90" valign="baseline">valign=baseline</td>
+									<td bgcolor="#90ee90">rest should be bottom</td>
+									<td width="150" bgcolor="#90ee90">col 3</td>
+									<td bgcolor="#90ee90">col 4</td>
+									<td bgcolor="#90ee90">col 5</td>
+									<td bgcolor="#90ee90">col 6</td>
+									<td bgcolor="#90ee90">col 7</td>
+									<td bgcolor="#90ee90">col 8</td>
+									<td bgcolor="#90ee90">col 9</td>
+								</tr>
+								<tr>
+									<td bgcolor="#90ee90" valign="middle">valign=middle</td>
+									<td bgcolor="#90ee90">rest should be bottom</td>
+									<td width="150" style="Arial" bgcolor="#90ee90">col 3</td>
+									<td bgcolor="#90ee90">col 4</td>
+									<td bgcolor="#90ee90">col 5</td>
+									<td bgcolor="#90ee90">col 6</td>
+									<td bgcolor="#90ee90">col 7</td>
+									<td bgcolor="#90ee90">col 8</td>
+									<td bgcolor="#90ee90">col 9</td>
+								</tr>
+								<tr bgcolor="#ffe4c4" valign="top">
+									<td bgcolor="#90ee90">valign=top</td>
+									<td bgcolor="#90ee90">col 2 valigned top</td>
+									<td width="150" bgcolor="#90ee90">col 3 valigned top</td>
+									<td bgcolor="#90ee90">col 4 valigned top</td>
+									<td bgcolor="#90ee90">col 5 valigned top</td>
+									<td bgcolor="#90ee90">col 6 valigned top</td>
+									<td bgcolor="#90ee90">col 7 valigned top</td>
+									<td bgcolor="#90ee90">col 8 valigned top</td>
+									<td bgcolor="#90ee90">col 9 valigned top</td>
+								</tr>
+								<tr>
+									<td bgcolor="#90ee90">col 1</td>
+									<td bgcolor="#90ee90">col 2</td>
+									<td width="150" bgcolor="#90ee90">col 3</td>
+									<td bgcolor="#90ee90">col 4</td>
+									<td bgcolor="#90ee90">col 5</td>
+									<td bgcolor="#90ee90">col 6</td>
+									<td bgcolor="#90ee90">col 7</td>
+									<td bgcolor="#90ee90">col 8</td>
+									<td bgcolor="#90ee90">col 9</td>
+								</tr>
+								<tr>
+									<td bgcolor="#90ee90">col 1</td>
+									<td bgcolor="#90ee90">col 2</td>
+									<td width="150" bgcolor="#90ee90">col 3</td>
+									<td bgcolor="#90ee90">col 4</td>
+									<td bgcolor="#90ee90">col 5</td>
+									<td bgcolor="#90ee90">col 6</td>
+									<td bgcolor="#90ee90">col 7</td>
+									<td bgcolor="#90ee90">col 8</td>
+									<td bgcolor="#90ee90">col 9</td>
+								</tr>
+								<tr>
+									<th bgcolor="#ffe4c4" rowspan="3">Header 3 span=3 rows</th>
+									<td bgcolor="#add8e6">col 1</td>
+									<td bgcolor="#add8e6">col 2</td>
+									<td width="150" bgcolor="#add8e6">col 3</td>
+									<td bgcolor="#add8e6">col 4</td>
+									<td bgcolor="#add8e6">col 5</td>
+									<td bgcolor="#add8e6">col 6</td>
+									<td bgcolor="#add8e6">col 7</td>
+									<td bgcolor="#add8e6">col 8</td>
+									<td bgcolor="#add8e6">col 9</td>
+								</tr>
+								<tr>
+									<td bgcolor="#add8e6">col 1</td>
+									<td bgcolor="#add8e6">col 2</td>
+									<td width="150" bgcolor="#add8e6">col 3</td>
+									<td bgcolor="#add8e6">col 4</td>
+									<td bgcolor="#add8e6">col 5</td>
+									<td bgcolor="#add8e6">col 6</td>
+									<td bgcolor="#add8e6">col 7</td>
+									<td bgcolor="#add8e6">col 8</td>
+									<td bgcolor="#add8e6">col 9</td>
+								</tr>
+								<tr>
+									<td bgcolor="#add8e6">col 1</td>
+									<td bgcolor="#add8e6">col 2</td>
+									<td width="150" bgcolor="#add8e6">col 3</td>
+									<td bgcolor="#add8e6">col 4</td>
+									<td bgcolor="#add8e6">col 5</td>
+									<td bgcolor="#add8e6">col 6</td>
+									<td bgcolor="#add8e6">col 7</td>
+									<td bgcolor="#add8e6">col 8</td>
+									<td bgcolor="#add8e6">col 9</td>
+								</tr>
+							</tbody>
+						</table>
+							Table Data Cells spanning multiple
+rows:
+							
+						Nested Table Header Cells &amp; Data Cells spanning multiple
+rows:
+	
+							&nbsp;
+							</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

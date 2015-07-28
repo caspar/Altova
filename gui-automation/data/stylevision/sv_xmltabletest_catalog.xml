@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 (http://www.altova.com) by test (Altova GmbH) -->
+<test:test-group name="robot-catalog" xsi:schemaLocation="http://www.altova.com/test AltovaXMLCatalog.xsd" xmlns:test="http://www.altova.com/test" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<test:GroupInfo>
+		<test:title>StyleVision docx compare automation</test:title>
+		<test:description/>
+	</test:GroupInfo>
+	<test:test-group name="CALStables">
+		<test:GroupInfo>
+			<test:title>CALS tables test</test:title>
+			<test:description>CALS tables test</test:description>
+		</test:GroupInfo>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_1" Creator="rip">
+			<test:description>cals-table-000</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-000.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_2" Creator="rip">
+			<test:description>cals-table-001</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-001.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_3" Creator="rip">
+			<test:description>cals-table-003</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-003.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_4" Creator="rip">
+			<test:description>cals-table-010</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-010.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_5" Creator="rip">
+			<test:description>cals-table-029</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-029.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_6" Creator="rip">
+			<test:description>cals-table-030</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-030.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_7" Creator="rip">
+			<test:description>cals-table-031</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-031.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_8" Creator="rip">
+			<test:description>cals-table-032</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-032.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_9" Creator="rip">
+			<test:description>cals-table-033</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-033.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_10" Creator="rip">
+			<test:description>cals-table-034</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-034.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_11" Creator="rip">
+			<test:description>cals-table-035</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-035.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_12" Creator="rip">
+			<test:description>cals-table-037</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-037.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_13" Creator="rip">
+			<test:description>cals-table-038</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-038.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_14" Creator="rip">
+			<test:description>cals-table-039</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-039.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_15" Creator="rip">
+			<test:description>cals-table-041</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-041.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_16" Creator="rip">
+			<test:description>cals-table-046</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-046.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_17" Creator="rip">
+			<test:description>cals-table-058</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-058.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_18" Creator="rip">
+			<test:description>cals-table-074</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-074.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_19" Creator="rip">
+			<test:description>cals-table-075</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-075.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_20" Creator="rip">
+			<test:description>cals-table-076</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-076.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_21" Creator="rip">
+			<test:description>cals-table-077</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-077.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_22" Creator="rip">
+			<test:description>cals-table-078</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-078.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_23" Creator="rip">
+			<test:description>cals-table-079</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-079.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_24" Creator="rip">
+			<test:description>cals-table-080</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-080.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_cals_25" Creator="rip">
+			<test:description>cals-table-082</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/CALS/</test:basefile>
+			<test:input-file>cals-table-082.xml</test:input-file>
+		</test:test-case>
+	</test:test-group>
+	<test:test-group name="HTMLStables">
+		<test:GroupInfo>
+			<test:title>HTML tables test</test:title>
+			<test:description>HTML tables test</test:description>
+		</test:GroupInfo>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_1" Creator="rip">
+			<test:description>HTMLTable1</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>HTMLTable1.sps</test:furtherfiles>
+			<test:input-file>HTMLTable1.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_2" Creator="rip">
+			<test:description>HTMLTable1</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>HTMLTable1Chart.sps</test:furtherfiles>
+			<test:input-file>HTMLTable1.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_3" Creator="rip">
+			<test:description>html_variation</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>html_variation.sps</test:furtherfiles>
+			<test:input-file>html_variation.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_4" Creator="rip">
+			<test:description>frame-above</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>frame-above.sps</test:furtherfiles>
+			<test:input-file>frame-above.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_5" Creator="rip">
+			<test:description>html</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>html.sps</test:furtherfiles>
+			<test:input-file>html.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_6" Creator="rip">
+			<test:description>alignAndWidthInTables</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>alignAndWidthInTables.sps</test:furtherfiles>
+			<test:input-file>alignAndWidthInTables.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_7" Creator="rip">
+			<test:description>playingWithVAlignAndRowspan</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>playingWithVAlignAndRowspan.sps</test:furtherfiles>
+			<test:input-file>playingWithVAlignAndRowspan.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_html_8" Creator="rip">
+			<test:description>html-table-002</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/HTML/</test:basefile>
+			<test:furtherfiles>html_sample2.sps</test:furtherfiles>
+			<test:input-file>html-table-002.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_mix_1" Creator="rip">
+			<test:description>DocBookSV</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/mix/</test:basefile>
+			<test:furtherfiles>DocBook.sps</test:furtherfiles>
+			<test:input-file>DocBookSV.xml</test:input-file>
+		</test:test-case>
+		<test:test-case scenario="standard" FilePath="out" name="TC_mix_2" Creator="rip">
+			<test:description>HTMLCALS_DocBook</test:description>
+			<test:basefile>data/stylevision/tdata/XMLTables/mix/</test:basefile>
+			<test:furtherfiles>DocBook.sps</test:furtherfiles>
+			<test:input-file>HTMLCALS_DocBook.xml</test:input-file>
+		</test:test-case>
+	</test:test-group>
+</test:test-group>

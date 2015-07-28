@@ -1,0 +1,21 @@
+<!--this comment is different-->
+<!DOCTYPE element2 [
+  <!ELEMENT element1 (#PCDATA)>
+]>
+
+<?altova  Schneewittchen?>
+
+<element1 attr2="hello">
+	<script><![CDATA[
+function TEST(a,b)
+{
+if (a < b && a < 0) then
+  {
+  return 1;
+  }
+else
+  {
+  return 0;
+  }
+}
+]]></script>here we go</element1>

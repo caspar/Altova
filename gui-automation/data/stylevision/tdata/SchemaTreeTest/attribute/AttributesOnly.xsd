@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" attributeFormDefault="qualified">
+    <xs:element name="DB">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="employee" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="employee">
+        <xs:complexType>
+            <xs:attribute name="emp_id" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="fname" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="minit">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="lname" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="job_id" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:maxInclusive value="32767" />
+                        <xs:minInclusive value="-32768" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="job_lvl" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:unsignedByte">
+                        <xs:maxInclusive value="255" />
+                        <xs:minInclusive value="0" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="pub_id" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="hire_date" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:dateTime">
+                        <xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css"/>
+		<title>Mantaining toolbar resource files</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="robotscenter.xhtml">Next: The Robots Center internal application</a>
+		</div>
+		<div class="previous">
+			<a href="robots_new_plugins.xhtml">Previous: Automating GUI tests for new plugins</a>
+		</div>
+		<h1>Maintinging toolbar resource files</h1>
+		<h2><a name="1"/>Background</h2>
+		<div class="p">To click toolbar buttons like New, Open, Save, etc, but also all the links and elements in UModel, the robots framework is searching for the images on those toolbar buttons. These images are stored in the developer 
+ and are defined in Visual Studio resource files (.RC) and stored in bitmap files (.BMP). To use them in our Robots framework, we get these resource from the dev CVS and import them into the QA CVS. The following explains how to carry out this.</div>
+		<h2><a name="2"/>Checking out the required files from Dev CVS</h2>
+		<div class="p">Please see the <a href="cvs_howto.xhtml">general CVS HOW-TO</a> first, if it has been a while since you used CVS. <b>Also note that this section is using a different CVS repository, so please read every bit of this carefully.</b> To check out all required files, issue the following commands. Please replace <b>your_windows_username</b> for your Window VIE domain username, and use your windows password and asked. Note that you have to rerun the cvs login command when you change you Windows password.
+		<pre class="cmd">
+		mkdir c:\temp\cvs_branch_Development
+		cd c:\temp\cvs_branch_Development
+		
+		set CVSROOT=:pserver:<b>your_windows_username</b>@cvs.vie.altova.com:f:/sources/altova
+		cvs login
+		
+		cvs co -r Development apps
+		cvs co -r Development libs
+		cvs co -r Development files
+		</pre>
+		If you have previously checked the files out with these commands, and want to update, please use these commands:
+		<pre class="cmd">
+		cd c:\temp\cvs_branch_Development
+		set CVSROOT=:pserver:<b>your_windows_username</b>@cvs.vie.altova.com:f:/sources/altova
+
+		cd apps
+		cvs update -d
+		cd ..
+		
+		cd libs
+		cvs update -d
+		cd ..
+		
+		cd files
+		cvs update -d
+		cd ..
+		</pre>
+		</div>
+		<h2><a name="3"/>Generating resource files</h2>
+		<div class="p">This step only has to be carried out for the Altova applications which used the internal tool Command Manager for its toolbar resources. Please ask <a href="http://employees/userADProp.aspx?lookup=che@vie.altova.com">Christian Heiderer (Dev)</a> for more. As of writing, these include XMLSpy, MapForce, UModel and StyleVision.</div>
+		<div class="p">In the apps folders of these applications, you will find an XML named <i>APP_Commands.xml</i>, where APP is the name of the application. E.g. for UModel, there is <div class="file">C:\temp\cvs_branch_Development\apps\UModel\UModel_Commands.xml</div>. You will have to use this file as the input arugment to the CommandManager, which will generate the old style resource and bitmap files. Please use the following commands (UModel used as an example):
+		<pre class="cmd">
+		cd C:\temp\cvs_branch_Development\files\XMLSpyExeFolder
+		CommandManager.exe C:\temp\cvs_branch_Development\apps\UModel\UModel_Commands.xml -genRes -app
+		</pre>
+		This will generate the file <div class="file">C:\temp\cvs_branch_Development\apps\UModel\UModel_Commands_RC.rc </div> and several new BMP files under <div class="file">C:\temp\cvs_branch_Development\apps\UModel\res</div>. You will need to copy these files across to the QA CVS.
+		</div>
+		<h2><a name="4"/>Checking in into QA CVS</h2>
+		<div class="p">At this step, you either have the newly generated bitmap and resource files, or the already existig files from the dev CVS. These will have to be copied across to the QA CVS. <b>Please start a new command line session, which does not have the developer CVS set in the variable CVSROOT.</b> Issue the following command to copy the files across, and update in QA CVS. Using UModel as an example:
+		<pre class="cmd">
+		cd c:\work\gui-automation\data\umodel
+		copy C:\temp\cvs_branch_Development\apps\UModel\UModel_Commands_RC.rc .
+		
+		cd res
+		copy C:\temp\cvs_branch_Development\apps\UModel\res\*.bmp .
+		
+		cd ..
+		cvs commit -m "Updated toolbar resources"
+		</pre>
+		</div>
+		<h2><a name="5"/>Verifing that the files can be loaded</h2>
+		<div class="p">At the end, you should verify that your Robot still loads these files correctly. A smoke test can be done by running the robot JUnit test class, if one exits, or alterantily, any class which uses the robot class for the application you updated toolbars for. Example for UModel:
+		<pre class="cmd">
+		cd c:\work\gui-automation
+		ant test -Dclassname=UModelRobotTest
+		</pre>
+		</div>
+	</body>
+</html>

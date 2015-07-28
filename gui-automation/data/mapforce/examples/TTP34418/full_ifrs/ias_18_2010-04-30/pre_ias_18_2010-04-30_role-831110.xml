@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    --><link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_18_2010-04-30_role-831110" xlink:href="rol_ias_18_2010-04-30.xsd#ias_18_2010-04-30_role-831110" xlink:type="simple"/>
+  <link:presentationLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_18_2010-04-30_role-831110" xlink:title="[831110] Notes - Revenue" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfRevenueExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfAccountingPolicyForRecognitionOfRevenue" xlink:label="loc_2" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+  </link:presentationLink>
+</link:linkbase>

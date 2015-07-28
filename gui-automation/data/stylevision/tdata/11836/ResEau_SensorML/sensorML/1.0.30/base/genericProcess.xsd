@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Mike Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:swe="http://www.opengis.net/swe" xmlns:sml="http://www.opengis.net/sensorML" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="../../../sweCommon/1.0.30/positionData.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://schemas.opengis.net/gml/3.1.0/xlink/xlinks.xsd"/>
+	<xs:include schemaLocation="./process.xsd"/>
+	<!--===================-->
+	<!--  Process Element  -->
+	<!--===================-->
+	<xs:element name="LookUpTable" type="sml:LookUpTableType" substitutionGroup="sml:_Process">
+		<xs:annotation>
+			<xs:documentation>Process allowing to compute output using input/output value pairs and a specific interpolation method</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!--================-->
+	<!--  Process Type  -->
+	<!--================-->
+	<xs:complexType name="LookUpTableType">
+		<xs:complexContent>
+			<xs:restriction base="sml:_AbstractProcessType">
+				<xs:sequence>
+					<xs:group ref="sml:processMetadataGroup" minOccurs="0"/>
+					<xs:element name="inputs">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:inputsType">
+									<xs:sequence minOccurs="0">
+										<xs:element name="InputList">
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:restriction base="sml:_AbstractListType">
+														<xs:sequence>
+															<xs:element name="input">
+																<xs:complexType>
+																	<xs:group ref="swe:AnyScalar" minOccurs="0"/>
+																	<xs:attribute name="name" type="swe:qnameSimpleType"/>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:restriction>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="outputs">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:outputsType">
+									<xs:sequence minOccurs="0">
+										<xs:element name="OutputList">
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:restriction base="sml:_AbstractListType">
+														<xs:sequence>
+															<xs:element name="output">
+																<xs:complexType>
+																	<xs:group ref="swe:AnyScalar" minOccurs="0"/>
+																	<xs:attribute name="name" type="swe:qnameSimpleType"/>
+																	<xs:attributeGroup ref="swe:AssociationAttributes"/>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:restriction>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="parameters">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:parametersType">
+									<xs:sequence minOccurs="0">
+										<xs:element name="ParameterList">
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:restriction base="sml:_AbstractListType">
+														<xs:sequence>
+															<xs:element name="inputBias" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Quantity"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="inputGain" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Quantity"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="outputBias" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Quantity"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="outputGain" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Quantity"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="interpolationMethod" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Category"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="interpolationOrder" minOccurs="0">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Count"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+															<xs:element name="function">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element ref="swe:Curve"/>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:restriction>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="method">
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:restriction base="sml:methodType">
+									<xs:attribute ref="xlink:href" use="required" fixed="urn:ogc:process:LUT"/>
+								</xs:restriction>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

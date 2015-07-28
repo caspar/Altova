@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.1">
+	<xs:element name="meeting">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="start-time" type="xs:time"/>
+				<xs:element name="end-time" type="xs:time"/>
+				<xs:element name="room-number" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="calendar">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="meeting" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

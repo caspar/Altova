@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2016 (x64) (http://www.altova.com) by Altova QA (Concurrent 50 Users) (Altova GmbH) -->
+<!--Filename: GenerateNonMandatoryAttributes_6.xsd-->
+<!--TC number: TC XMLOptions13-->
+<!--: XMLGenOptions-->
+<!--Entered / Modified by: baa-->
+<!--Expected Behaviour: SUCCESS-->
+<!--Purpose: Option1: Generate non-mandatory attributes = TRUE
+Option2: Fill attributes with data = TRUE
+
+ReferenceFile: ReferenceFiles\GenerateNonMandatoryAttributes_5.xml
+
+Expected behavior: use="prohibited". > Size should not be generated-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="Normalsize">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Small|Medium|Large"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UKSize">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="XS|S|M|L|XL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="root" type="complexType">
+		<xs:unique name="test">
+			<xs:selector xpath="test"/>
+			<xs:field xpath="test"/>
+		</xs:unique>
+	</xs:element>
+	<xs:complexType name="complexType">
+		<xs:sequence>
+			<xs:element name="TShirt">
+				<xs:complexType>
+					<xs:attributeGroup ref="myAttrGroup"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:attributeGroup name="myAttrGroup">
+		<xs:attribute name="Size" type="Normalsize" use="required"/>
+		<xs:attribute name="SizeUK" type="UKSize" use="required"/>
+		<xs:attribute name="test" type="Normalsize" use="optional" default="Large"/>
+	</xs:attributeGroup>
+</xs:schema>

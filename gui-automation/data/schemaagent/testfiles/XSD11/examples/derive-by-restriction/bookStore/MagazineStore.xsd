@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2013 rel. 2 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.books.org" targetNamespace="http://www.books.org" elementFormDefault="qualified" version="1.1">
+	<xs:complexType name="Publication">
+		<xs:sequence>
+			<xs:element name="Title" type="xs:string"/>
+			<xs:element name="Author" type="xs:string" maxOccurs="unbounded"/>
+			<xs:element name="Date" type="xs:string"/>
+			<xs:element name="ISBN" type="xs:string"/>
+			<xs:element name="Publisher" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MagazineType">
+		<xs:complexContent>
+			<xs:restriction base="Publication">
+				<xs:sequence>
+					<xs:element name="Title" type="xs:string"/>
+					<xs:element name="Author" type="xs:string"/>
+					<xs:element name="Date" type="xs:string"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="MagazineStore">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Magazine" type="MagazineType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

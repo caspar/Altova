@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- 
+base definitions -->
+	<xsd:complexType name="starWarsEntity">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"/>
+			<xsd:element name="species" type="xsd:string"/>
+			<xsd:element name="language" type="xsd:string"/>
+			<xsd:element name="home" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="gallery">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="character" type="starWarsEntity" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

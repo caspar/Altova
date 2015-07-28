@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes_2011-03-25_role-834480" xlink:type="simple" xlink:href="rol_ifrs_for_smes_2011-03-25.xsd#ifrs_for_smes_2011-03-25_role-834480"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes_2011-03-25_role-834480">
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ChangesInDefinedBenefitObligationAtPresentValue" xlink:label="loc"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughCurrentServiceCostDefinedBenefitObligationAtPresentValue" xlink:label="loc_2"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_2" order="10.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughInterestCostDefinedBenefitObligationAtPresentValue" xlink:label="loc_3"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_3" order="20.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_AcquisitionsThroughBusinessCombinationsDefinedBenefitObligationAtPresentValue" xlink:label="loc_4"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_4" order="30.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseIncreaseThroughActuarialGainsLossesDefinedBenefitObligationAtPresentValue" xlink:label="loc_5"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_5" order="40.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ContributionsByPlanParticipantsDefinedBenefitObligationAtPresentValue" xlink:label="loc_6"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_6" order="50.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseThroughBenefitsPaidDefinedBenefitObligationAtPresentValue" xlink:label="loc_7"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_7" order="60.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughPastServiceCostDefinedBenefitObligationAtPresentValue" xlink:label="loc_8"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_8" order="70.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseIncreaseThroughCurtailmentsDefinedBenefitObligationAtPresentValue" xlink:label="loc_9"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_9" order="80.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseIncreaseThroughSettlementsDefinedBenefitObligationAtPresentValue" xlink:label="loc_10"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_10" order="90.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughNetExchangeDifferencesDefinedBenefitObligationAtPresentValue" xlink:label="loc_11"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc" xlink:to="loc_11" order="100.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ChangesInPlanAssetsAtFairValue" xlink:label="loc_12"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughExpectedReturnPlanAssetsAtFairValue" xlink:label="loc_13"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_13" order="30.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughActuarialGainsLossesPlanAssetsAtFairValue" xlink:label="loc_14"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_14" order="10.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughBusinessCombinationsPlanAssetsAtFairValue" xlink:label="loc_15"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_15" order="20.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseIncreaseThroughSettlementsPlanAssetsAtFairValue" xlink:label="loc_16"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_16" order="80.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseThroughBenefitsPaidPlanAssetsAtFairValue" xlink:label="loc_17"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_17" order="40.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughContributionsByPlanParticipantsPlanAssetsAtFairValue" xlink:label="loc_18"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_18" order="50.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughContributionsByEmployerPlanAssetsAtFairValue" xlink:label="loc_19"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_19" order="60.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughNetExchangeDifferencesPlanAssetsAtFairValue" xlink:label="loc_20"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_12" xlink:to="loc_20" order="70.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ChangesInReimbursementRightsAtFairValue" xlink:label="loc_21"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughExpectedReturnReimbursementRightsAtFairValue" xlink:label="loc_22"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_22" order="30.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughActuarialGainsLossesReimbursementRightsAtFairValue" xlink:label="loc_23"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_23" order="10.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughBusinessCombinationsReimbursementRightsAtFairValue" xlink:label="loc_24"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_24" order="20.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseIncreaseThroughSettlementsReimbursementRightsAtFairValue" xlink:label="loc_25"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_25" order="80.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DecreaseThroughBenefitsPaidReimbursementRightsAtFairValue" xlink:label="loc_26"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_26" order="40.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughContributionsByPlanParticipantsReimbursementRightsAtFairValue" xlink:label="loc_27"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_27" order="50.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughContributionsByEmployerReimbursementRightsAtFairValue" xlink:label="loc_28"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_28" order="60.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughNetExchangeDifferencesReimbursementRightsAtFairValue" xlink:label="loc_29"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_21" xlink:to="loc_29" order="70.0" weight="1"/>
+  </link:calculationLink>
+  <link:calculationLink xlink:type="extended" xlink:role="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes_2011-03-25_role-834480">
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CostRelatingToDefinedBenefitPlans" xlink:label="loc_2"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PostemploymentBenefitExpenseDefinedBenefitPlans" xlink:label="loc"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_2" xlink:to="loc" order="10.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CostRelatingToDefinedBenefitPlansForPeriodIncludedInCostOfAssets" xlink:label="loc_3"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="loc_2" xlink:to="loc_3" order="20.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

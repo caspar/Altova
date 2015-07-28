@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE SEASON SYSTEM "baseball.dtd" >
+<SEASON>
+  <YEAR>1999</YEAR>
+  <LEAGUE>
+    <LEAGUE_NAME>National</LEAGUE_NAME>
+    <DIVISION>
+       <DIVISION_NAME>East</DIVISION_NAME>
+        <TEAM>
+          <TEAM_CITY>Florida</TEAM_CITY>
+          <TEAM_NAME>Marlins</TEAM_NAME>
+        </TEAM>
+        <TEAM>
+          <TEAM_CITY>Montreal</TEAM_CITY>
+          <TEAM_NAME>Expos</TEAM_NAME>
+        </TEAM>
+        <TEAM>
+          <TEAM_CITY>New York</TEAM_CITY>
+          <TEAM_NAME>Mets</TEAM_NAME>
+        </TEAM>
+        <TEAM>
+          <TEAM_CITY>Philadelphia</TEAM_CITY>
+          <TEAM_NAME>Phillies</TEAM_NAME>
+        </TEAM>
+    </DIVISION>
+    <DIVISION>
+       <DIVISION_NAME>Central</DIVISION_NAME>
+        <TEAM>
+          <TEAM_CITY>Chicago</TEAM_CITY>
+          <TEAM_NAME>Cubs</TEAM_NAME>
+        </TEAM>
+    </DIVISION>
+    <DIVISION>
+       <DIVISION_NAME>West</DIVISION_NAME>
+        <TEAM>
+          <TEAM_CITY>Arizona</TEAM_CITY>
+          <TEAM_NAME>Diamondbacks</TEAM_NAME>
+        </TEAM>
+    </DIVISION>
+  </LEAGUE>
+  <LEAGUE>
+    <LEAGUE_NAME>American</LEAGUE_NAME>
+    <DIVISION>
+       <DIVISION_NAME>East</DIVISION_NAME>
+        <TEAM>
+          <TEAM_CITY>Baltimore</TEAM_CITY>
+          <TEAM_NAME>Orioles</TEAM_NAME>
+        </TEAM>
+    </DIVISION>
+    <DIVISION>
+       <DIVISION_NAME>Central</DIVISION_NAME>
+        <TEAM>
+          <TEAM_CITY>Chicago</TEAM_CITY>
+          <TEAM_NAME>White Sox</TEAM_NAME>
+        </TEAM>
+    </DIVISION>
+    <DIVISION>
+       <DIVISION_NAME>West</DIVISION_NAME>
+        <TEAM>
+          <TEAM_CITY>Anaheim</TEAM_CITY>
+          <TEAM_NAME>Angels</TEAM_NAME>
+        </TEAM>
+     </DIVISION>
+  </LEAGUE>
+</SEASON>

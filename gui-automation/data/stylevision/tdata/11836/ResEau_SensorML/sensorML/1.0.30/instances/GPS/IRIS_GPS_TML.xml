@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<!-- This example doesn't validate to any TML or SensorML schema ...
+     It's an example of how we could combine existing SWE components to support TML -->
+<TML xmlns="http://www.opengis.net/sensorML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xsi:schemaLocation="http://www.opengis.net/sensorML ../../base/sensorML.xsd" version="1.0">
+	<system>
+		<Sensor id="Iris_GPS">
+			<identification>
+				<IdentifierList>
+					<identifier name="longName">
+						<Term>Unknown GPS</Term>
+					</identifier>
+					<identifier name="shortName">
+						<Term>Unknown GPS</Term>
+					</identifier>
+					<identifier name="modelNumber">
+						<Term qualifier="urn:ogc:identifier:modelNumber">unknown</Term>
+					</identifier>
+					<identifier name="manufacturer">
+						<Term qualifier="urn:ogc:identifier:manufacturer">unknown</Term>
+					</identifier>
+				</IdentifierList>
+			</identification>
+			<classification>
+				<ClassifierList>
+					<classifier name="intendedApplication">
+						<Term qualifier="urn:sensor:classifier:application">position</Term>
+					</classifier>
+					<classifier name="sensorType">
+						<Term qualifier="urn:sensor:classifier:sensorType">gps</Term>
+					</classifier>
+					<classifier name="phenomenon">
+						<Term qualifier="urn:ogc:phenomenon">location</Term>
+					</classifier>
+					<classifier name="phenomenon">
+						<Term qualifier="urn:ogc:phenomenon">time</Term>
+					</classifier>
+				</ClassifierList>
+			</classification>
+			<capabilities>
+				<PropertyList>
+					<!-- add Discoverable Capabilities -->
+					<property name="unknown"/>
+				</PropertyList>
+			</capabilities>
+			<characteristics>
+				<PropertyList>
+					<!-- add characteristics you wish to expose -->
+					<property name="unknown"/>
+				</PropertyList>
+			</characteristics>
+			<!-- add any desired contacts and references 
+		<contact xlink:href="./unknown" role="urn:ogc:role:manufacturer"/>
+		<documentation xlink:href="http://www.davisnet.com/product_documents/weather/spec_sheets/weather_monitor2_station.pdf" role="urn:ogc:role:specificationSheet"/>
+		<documentation xlink:href="http://www.davisnet.com/product_documents/weather/diagrams/wm2_installation.pdf" role="urn:ogc:role:image"/>
+		~~~~~~~~~~~~~~~~~~~~~~~-->
+			<!--Station Coordinate Frame-->
+			<referenceFrame>
+				<LocalSpatialCRS id="GPS_FRAME">
+					<srsName>GPS Frame</srsName>
+					<usesCS xlink:href="urn:ogc:cs:xyzFrame"/>
+					<usesDatum>
+						<LocalSpatialDatum>
+							<datumName>GPS Datum</datumName>
+							<anchorPoint>origin is at the top center mark</anchorPoint>
+							<orientation>orientation is irrelevant</orientation>
+						</LocalSpatialDatum>
+					</usesDatum>
+				</LocalSpatialCRS>
+			</referenceFrame>
+			<!--~~~~~~~~~~~~~-->
+			<!--Sensor Inputs-->
+			<!--~~~~~~~~~~~~~-->
+			<inputs>
+				<InputList>
+					<input name="physicalPhenomena">
+						<swe:DataGroup>
+							<swe:component name="time">
+								<swe:Quantity definition="urn:ogc:phenomenon:time"/>
+							</swe:component>
+							<swe:component name="location">
+								<swe:Quantity definition="urn:ogc:phenomenon:location"/>
+							</swe:component>
+						</swe:DataGroup>
+					</input>
+				</InputList>
+			</inputs>
+			<!--~~~~~~~~~~~~~~-->
+			<!--Sensor Outputs-->
+			<!--~~~~~~~~~~~~~~-->
+			<outputs>
+				<OutputList>
+					<output name="LLA">
+						<swe:DataGroup id="LatLonAlt">
+							<swe:component name="latitude">
+								<swe:Quantity definition="urn:ogc:phenomenon:latitude" uom="urn:ogc:unit:degree"/>
+							</swe:component>
+							<swe:component name="longitude">
+								<swe:Quantity definition="urn:ogc:phenomenon:longitude" uom="urn:ogc:unit:degree"/>
+							</swe:component>
+							<swe:component name="altitude">
+								<swe:Quantity definition="urn:ogc:phenomenon:altitude" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="groundSpeed">
+								<swe:Quantity definition="urn:ogc:phenomenon:speed" uom="urn:ogc:unit:metersPerSecond"/>
+							</swe:component>
+							<swe:component name="trackAngle">
+								<swe:Quantity definition="urn:ogc:phenomenon:angleToTrueNorth" uom="urn:ogc:unit:radians"/>
+							</swe:component>
+							<swe:component name="northVelocity">
+								<swe:Quantity definition="urn:ogc:phenomenon:velocity" uom="urn:ogc:unit:metersPerSecond"/>
+							</swe:component>
+							<swe:component name="eastVelocity">
+								<swe:Quantity definition="urn:ogc:phenomenon:velocity" uom="urn:ogc:unit:metersPerSecond"/>
+							</swe:component>
+							<swe:component name="verticalVelocity">
+								<swe:Quantity definition="urn:ogc:phenomenon:velocity" uom="urn:ogc:unit:metersPerSecond"/>
+							</swe:component>
+						</swe:DataGroup>
+					</output>
+					<output name="ECF-xyz">
+						<swe:DataGroup id="XYZ">
+							<swe:component name="x">
+								<swe:Time definition="urn:ogc:phenomenon:ECEF-X" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="y">
+								<swe:Quantity definition="urn:ogc:phenomenon:ECEF-Y" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="z">
+								<swe:Quantity definition="urn:ogc:phenomenon:ECEF-Z" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="deltaX">
+								<swe:Quantity definition="urn:ogc:phenomenon:ECEF-delX" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="deltaX">
+								<swe:Quantity definition="urn:ogc:phenomenon:ECEF-delY" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="deltaX">
+								<swe:Quantity definition="urn:ogc:phenomenon:ECEF-delZ" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+						</swe:DataGroup>
+					</output>
+					<!-- ISO encoded Time stamp -->
+					<output name="Timestamp_ISO">
+						<swe:IsoDateTime id="IsoTime"/>
+					</output>
+					<!-- GPS specific Time stamp -->
+					<!-- YEAR MONTH DAY HOUR MIN SEC-->
+					<!-- 2004 11 09 09 27 04.01 -->
+					<output name="TimeStamp_GPS">
+						<swe:DataGroup id="TimeStamp">
+							<swe:component name="year">
+								<swe:Count definition="urn:ogc:data:year_4Digit"/>
+							</swe:component>
+							<swe:component name="month">
+								<swe:Count definition="urn:ogc:data:month_2Digit"/>
+							</swe:component>
+							<swe:component name="day">
+								<swe:Count definition="urn:ogc:data:day_2Digit"/>
+							</swe:component>
+							<swe:component name="hour">
+								<swe:Count definition="urn:ogc:data:hour_2Digit"/>
+							</swe:component>
+							<swe:component name="minute">
+								<swe:Count definition="urn:ogc:data:minute_2Digit"/>
+							</swe:component>
+							<swe:component name="second">
+								<swe:Quantity definition="urn:ogc:data:second_decimal"/>
+							</swe:component>
+						</swe:DataGroup>
+					</output>
+					<output name="GPS_status">
+						<swe:DataGroup id="Status">
+							<swe:component name="HFOM">
+								<swe:Time definition="urn:ogc:data:gps:HFOM" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="VFOM">
+								<swe:Quantity definition="urn:ogc:data:gps:VFOM" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="HDOP">
+								<swe:Quantity definition="urn:ogc:data:gps:HDOP" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="VDOP">
+								<swe:Quantity definition="urn:ogc:data:gps:VDOP" uom="urn:ogc:unit:meter"/>
+							</swe:component>
+							<swe:component name="NUMSYS">
+								<swe:Count definition="urn:ogc:data:gps:NUMSYS"/>
+							</swe:component>
+							<swe:component name="NAV_MODE">
+								<swe:Count definition="urn:ogc:data:gps:navMode"/>
+							</swe:component>
+						</swe:DataGroup>
+					</output>
+					<output name="channelAssignment1">
+						<swe:DataGroup id="Assign1">
+							<swe:component name="channel1">
+								<swe:DataGroup id="ChannelAssign">
+									<swe:component name="channel">
+										<swe:Count definition="urn:ogc:data:gps:channelNumber"/>
+									</swe:component>
+									<swe:component name="sv">
+										<swe:Count definition="urn:ogc:data:gps:sv"/>
+									</swe:component>
+									<swe:component name="svType">
+										<swe:Count definition="urn:ogc:data:gps:svType"/>
+									</swe:component>
+									<swe:component name="carrier">
+										<swe:Count definition="urn:ogc:data:gps:carrierFreqRes"/>
+									</swe:component>
+									<swe:component name="snr">
+										<swe:Quantity definition="urn:ogc:data:gps:signalToNoiseRatio" uom="urn:ogc:unit:dB-Hz"/>
+									</swe:component>
+									<swe:component name="track">
+										<swe:Count definition="urn:ogc:data:gps:trackState"/>
+									</swe:component>
+									<swe:component name="allocState">
+										<swe:Count definition="urn:ogc:data:gps:allocationState"/>
+									</swe:component>
+									<swe:component name="channelMode">
+										<swe:Count definition="urn:ogc:data:gps:channelMode"/>
+									</swe:component>
+									<swe:component name="snrLevel">
+										<swe:Count definition="urn:ogc:data:gps:snrLevel"/>
+									</swe:component>
+								</swe:DataGroup>
+							</swe:component>
+							<swe:component name="channel_2" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_3" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_4" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_5" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_6" xlink:href="#ChannelAssign"/>
+						</swe:DataGroup>
+					</output>
+					<output name="channelAssignment2">
+						<swe:DataGroup id="Assign2">
+							<swe:component name="channel_7" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_8" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_9" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_10" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_11" xlink:href="#ChannelAssign"/>
+							<swe:component name="channel_12" xlink:href="#ChannelAssign"/>
+						</swe:DataGroup>
+					</output>
+				</OutputList>
+			</outputs>
+			<!-- parameters such as accuracy, etc can go here if you wish -->
+			<!-- otherwise remove parameters -->
+			<parameters>
+				<ParameterList>
+					<parameter name="missingOrNotExisting"/>
+				</ParameterList>
+			</parameters>
+		</Sensor>
+	</system>
+	<dataDescription>
+		<DataList>
+			<measure name="latLonPosition">
+				<Measurement id="UAV01_GPS_LLA_ASCII">
+					<procedure xlink:href="#Iris_GPS"/>
+					<dataComponents xlink:href="#LatLonAlt"/>
+					<encoding>
+						<swe:XML_ASCII tokenSeparator=" "/>
+					</encoding>
+				</Measurement>
+			</measure>
+			<measure name="ecefPosition">
+				<Measurement id="UAV01_GPS_XYZ_ASCII">
+					<procedure xlink:href="#Iris_GPS"/>
+					<dataComponents xlink:href="#XYZ"/>
+					<encoding>
+						<swe:XML_ASCII tokenSeparator=" "/>
+					</encoding>
+				</Measurement>
+			</measure>
+			<measure name="isoTime">
+				<Measurement id="UAV01_GPS_TIMESTAMP">
+					<procedure xlink:href="#Iris_GPS"/>
+					<dataComponents xlink:href="#IsoTime"/>
+					<encoding>
+						<swe:XML_ASCII tokenSeparator=" "/>
+					</encoding>
+				</Measurement>
+			</measure>
+			<measure name="gpsTime">
+				<Measurement id="UAV01_GPS_TIMESTAMP_ASCII">
+					<procedure xlink:href="#Iris_GPS"/>
+					<dataComponents xlink:href="#TimeStamp"/>
+					<encoding>
+						<swe:XML_ASCII tokenSeparator=" "/>
+					</encoding>
+				</Measurement>
+			</measure>
+			<measure name="gpsStatus">
+				<Measurement id="UAV01_GPS_STATUS_ASCII">
+					<procedure xlink:href="#Iris_GPS"/>
+					<dataComponents xlink:href="#Status"/>
+					<encoding>
+						<swe:XML_ASCII tokenSeparator=" "/>
+					</encoding>
+				</Measurement>
+			</measure>
+			<measure name="assignment1">
+				<Measurement id="UAV01_GPS_CHANNEL_ASSIGNMENT_1_ASCII">
+					<procedure xlink:href="#Iris_GPS"/>
+					<dataComponents xlink:href="#Assign1"/>
+					<encoding>
+						<swe:XML_ASCII tokenSeparator=" "/>
+					</encoding>
+				</Measurement>
+			</measure>
+			<measure name="assignment2">
+				<Measurement id="UAV01_GPS_CHANNEL_ASSIGNMENT_2_ASCII">
+					<procedure xlink:href="#Iris_GPS"/>
+					<dataComponents xlink:href="#Assign2"/>
+					<encoding>
+						<swe:XML_ASCII tokenSeparator=" "/>
+					</encoding>
+				</Measurement>
+			</measure>
+		</DataList>
+	</dataDescription>
+	<results>
+		<TmlStream>
+			<data clk="57437043" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160777.300000</data>-
+			<data clk="57437173" ref="UAV01_GPS_LLA_ASCII">0.694178 -1.467748 215.584473 0.000000 0.000000 0.000000 0.000000 0.000000</data>
+			<data clk="57437173" ref="UAV01_GPS_TIMESTAMP_ASCII">2005 04 11 20 39 24</data>
+			<data clk="57437173" ref="UAV01_GPS_TIMESTAMP">2005-04-11T20:39:24.000000Z</data>
+			<data clk="57437173" ref="UAV01_GPS_STATUS_ASCII">2e+08 3e+08 0 0 0 1 0 0 0 0</data>-
+			<data clk="57437217" ref="UAV01_GPS_XYZ_ASCII">504970.383044 -4882962.079571 4058823.097537 0.000000 0.000000 0.000000</data>
+			<data clk="57437227" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160777.400000</data>
+			<data clk="57437243" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160777.500000</data>
+			<data clk="57437345" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160777.600000</data>
+			<data clk="57437443" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160777.700000</data>
+			<data clk="57437543" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160777.800000</data>
+			<data clk="57437643" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160777.900000</data>-
+			<data clk="57437689" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_1_ASCII">00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1</data>-
+			<data clk="57437737" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_2_ASCII">00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1 00 29 0 140532 0.000000 0 1 1 1 00  1 1 141113 0.000000 0 1 1 1 00  1 1 141113 0.000000 0 1 1 1</data>
+			<data clk="57437747" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160778.000000</data>
+			<data clk="57437844" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160778.100000</data>
+			<data clk="57437944" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160778.200000</data>
+			<data clk="57438046" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160778.300000</data>-
+			<data clk="57438173" ref="UAV01_GPS_LLA_ASCII">0.694178 -1.467748 215.584473 0.000000 0.000000 0.000000 0.000000 0.000000</data>
+			<data clk="57438173" ref="UAV01_GPS_TIMESTAMP_ASCII">2005 04 11 20 39 25</data>
+			<data clk="57438173" ref="UAV01_GPS_TIMESTAMP">2005-04-11T20:39:25.000000Z</data>
+			<data clk="57438173" ref="UAV01_GPS_STATUS_ASCII">2e+08 3e+08 0 0 0 1 0 0 0 0</data>-
+			<data clk="57438217" ref="UAV01_GPS_XYZ_ASCII">504970.383044 -4882962.079571 4058823.097537 0.000000 0.000000 0.000000</data>
+			<data clk="57438227" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160778.400000</data>
+			<data clk="57438243" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160778.500000</data>
+			<data clk="57438343" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160778.600000</data>
+			<data clk="57438443" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160778.700000</data>
+			<data clk="57438543" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160778.800000</data>
+			<data clk="57438643" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160778.900000</data>-
+			<data clk="57438689" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_1_ASCII">00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1</data>-
+			<data clk="57438737" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_2_ASCII">00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1 00 29 0 138586 0.000000 0 1 1 1 00 14 1 140363 0.000000 0 1 1 1 00 14 1 140363 0.000000 0 1 1 1</data>
+			<data clk="57438745" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160779.000000</data>
+			<data clk="57438844" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160779.100000</data>
+			<data clk="57438943" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160779.200000</data>
+			<data clk="57439042" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160779.300000</data>-
+			<data clk="57439176" ref="UAV01_GPS_LLA_ASCII">0.694178 -1.467748 215.584473 0.000000 0.000000 0.000000 0.000000 0.000000</data>
+			<data clk="57439176" ref="UAV01_GPS_TIMESTAMP_ASCII">2005 04 11 20 39 26</data>
+			<data clk="57439176" ref="UAV01_GPS_TIMESTAMP">2005-04-11T20:39:26.000000Z</data>
+			<data clk="57439176" ref="UAV01_GPS_STATUS_ASCII">2e+08 3e+08 0 0 0 1 0 0 0 0</data>-
+			<data clk="57439220" ref="UAV01_GPS_XYZ_ASCII">504970.383044 -4882962.079571 4058823.097537 0.000000 0.000000 0.000000</data>
+			<data clk="57439228" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160779.400000</data>
+			<data clk="57439242" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160779.500000</data>
+			<data clk="57439342" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160779.600000</data>
+			<data clk="57439442" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160779.700000</data>
+			<data clk="57439542" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160779.800000</data>
+			<data clk="57439642" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160779.900000</data>-
+			<data clk="57439690" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_1_ASCII">00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1</data>-
+			<data clk="57439736" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_2_ASCII">00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1 00 29 0 140882 0.000000 0 1 1 1 00 14 1 140363 0.000000 0 1 1 1 00 14 1 140363 0.000000 0 1 1 1</data>
+			<data clk="57439746" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160780.000000</data>
+			<data clk="57439842" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160780.100000</data>
+			<data clk="57439942" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160780.200000</data>
+			<data clk="57440042" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160780.300000</data>-
+			<data clk="57440174" ref="UAV01_GPS_LLA_ASCII">0.694178 -1.467748 215.584473 0.000000 0.000000 0.000000 0.000000 0.000000</data>
+			<data clk="57440174" ref="UAV01_GPS_TIMESTAMP_ASCII">2005 04 11 20 39 27</data>
+			<data clk="57440174" ref="UAV01_GPS_TIMESTAMP">2005-04-11T20:39:27.000000Z</data>
+			<data clk="57440174" ref="UAV01_GPS_STATUS_ASCII">2e+08 3e+08 0 0 0 1 0 0 0 0</data>-
+			<data clk="57440218" ref="UAV01_GPS_XYZ_ASCII">504970.383044 -4882962.079571 4058823.097537 0.000000 0.000000 0.000000</data>
+			<data clk="57440226" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160780.400000</data>
+			<data clk="57440244" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160780.500000</data>
+			<data clk="57440342" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160780.600000</data>
+			<data clk="57440442" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160780.700000</data>
+			<data clk="57440542" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160780.800000</data>
+			<data clk="57440644" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160780.900000</data>-
+			<data clk="57440692" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_1_ASCII">00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1</data>-
+			<data clk="57440738" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_2_ASCII">00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1 00 29 0 140332 0.000000 0 1 1 1 00 14 1 140413 0.000000 0 1 1 1 00 14 1 140413 0.000000 0 1 1 1</data>
+			<data clk="57440748" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160781.000000</data>
+			<data clk="57440842" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160781.100000</data>
+			<data clk="57440942" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160781.200000</data>
+			<data clk="57441042" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160781.300000</data>-
+			<data clk="57441174" ref="UAV01_GPS_LLA_ASCII">0.694178 -1.467748 215.584473 0.000000 0.000000 0.000000 0.000000 0.000000</data>
+			<data clk="57441174" ref="UAV01_GPS_TIMESTAMP_ASCII">2005 04 11 20 39 28</data>
+			<data clk="57441174" ref="UAV01_GPS_TIMESTAMP">2005-04-11T20:39:28.000000Z</data>
+			<data clk="57441174" ref="UAV01_GPS_STATUS_ASCII">2e+08 3e+08 0 0 0 1 0 0 0 0</data>-
+			<data clk="57441218" ref="UAV01_GPS_XYZ_ASCII">504970.383044 -4882962.079571 4058823.097537 0.000000 0.000000 0.000000</data>
+			<data clk="57441226" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160781.400000</data>
+			<data clk="57441242" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160781.500000</data>
+			<data clk="57441344" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160781.600000</data>
+			<data clk="57441442" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160781.700000</data>
+			<data clk="57441542" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160781.800000</data>
+			<data clk="57441642" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160781.900000</data>-
+			<data clk="57441690" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_1_ASCII">00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1</data>-
+			<data clk="57441736" ref="UAV01_GPS_CHANNEL_ASSIGNMENT_2_ASCII">00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1 00 29 0 141032 0.000000 0 1 1 1 00 14 1 140313 0.000000 0 1 1 1 00 14 1 140313 0.000000 0 1 1 1</data>
+			<data clk="57441746" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160782.000000</data>
+			<data clk="57441842" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160782.100000</data>
+			<data clk="57441942" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">0 0 160782.200000</data>
+			<data clk="57442044" ref="UAV01_GPS_CP_MEASURE_BLOCK_ASCII">175 0 160782.300000</data>-
+			<data clk="57442174" ref="UAV01_GPS_LLA_ASCII">0.694178 -1.467748 215.584473 0.000000 0.000000 0.000000 0.000000 0.000000</data>
+			<data clk="57442174" ref="UAV01_GPS_TIMESTAMP_ASCII">2005 04 11 20 39 29</data>
+			<data clk="57442174" ref="UAV01_GPS_TIMESTAMP">2005-04-11T20:39:29.000000Z</data>
+			<data clk="57442174" ref="UAV01_GPS_STATUS_ASCII">2e+08 3e+08 0 0 0 1 0 0 0 0</data>-
+			<data clk="57442218" ref="UAV01_GPS_XYZ_ASCII">504970.383044 -4882962.079571 4058823.097537 0.000000 0.000000 0.000000</data>
+		</TmlStream>
+	</results>
+</TML>

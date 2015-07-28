@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources>
+		<datasources>
+			<datasource name="CustomersTarget">
+				<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.mdb);" DBDataSource="CustomersTarget.mdb" DBCatalog="CustomersTarget" OLEDBProvider="Microsoft.Jet.OLEDB.4.0"/>
+				<database_connection database_kind="MS Access" import_kind="ADO" version="04.00.0000" name="CustomersTarget" path="CustomersTarget" use_driver_for_retrieval="Yes" allow_background_retrieval="No">
+					<properties>
+						<property name="Database Kind" value="MS Access"/>
+						<property name="Import Kind" value="ADO"/>
+						<property name="Root Object" value="CustomersTarget"/>
+						<property name="Data Source" value="CustomersTarget.mdb"/>
+						<property name="Provider" value="Microsoft.Jet.OLEDB.4.0"/>
+						<property name="User ID"/>
+						<property name="Password"/>
+						<property name="Persist Security Info"/>
+						<property name="Jet OLEDB:System Database"/>
+						<property name="Jet OLEDB:Sandbox Mode"/>
+						<property name="Jet OLEDB:Exclusive Async Delay"/>
+						<property name="Jet OLEDB:Flush Transaction Timeout"/>
+						<property name="Jet OLEDB:Implicit Commit Sync"/>
+						<property name="Jet OLEDB:Lock Delay"/>
+						<property name="Jet OLEDB:Lock Retry"/>
+						<property name="Jet OLEDB:Max Buffer Size"/>
+						<property name="Jet OLEDB:Max Locks Per File"/>
+						<property name="Jet OLEDB:Page Locks to Table Lock"/>
+						<property name="Jet OLEDB:Page Timeout"/>
+						<property name="Jet OLEDB:Recycle Long-Valued Pages"/>
+						<property name="Jet OLEDB:Shared Async Delay"/>
+						<property name="Jet OLEDB:User Commit Sync"/>
+						<property name="Jet OLEDB:Compact Without Replica Repair"/>
+						<property name="Jet OLEDB:Create System Database"/>
+						<property name="Jet OLEDB:Database Locking Mode"/>
+						<property name="Jet OLEDB:Database Password"/>
+						<property name="Jet OLEDB:New Database Password"/>
+						<property name="Jet OLEDB:Registry Path"/>
+					</properties>
+					<LocalViewStorage/>
+					<LocalRelationsStorage/>
+					<RecordSetStructureStorage/>
+				</database_connection>
+			</datasource>
+		</datasources>
+	</resources>
+	<component name="defaultmap2" blackbox="0" uid="49517016" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="49474096" kind="2">
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="275" lty="193" rbx="330" rby="211"/>
+					<data>
+						<constant value="BY" datatype="string"/>
+					</data>
+				</component>
+				<component name="Number" library="core" uid="52524544" kind="3">
+					<sources>
+						<datapoint pos="0" key="23"/>
+						<datapoint pos="1" key="14"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+						<datapoint/>
+					</targets>
+					<view ltx="565" lty="432" rbx="668" rby="488"/>
+				</component>
+				<component name="NAD" library="core" uid="38080776" kind="3">
+					<sources>
+						<datapoint pos="0" key="59"/>
+						<datapoint pos="1" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+						<datapoint/>
+					</targets>
+					<view ltx="451" lty="176" rbx="554" rby="232"/>
+				</component>
+				<component name="equal" library="core" uid="49473912" kind="5">
+					<sources>
+						<datapoint pos="0" key="8"/>
+						<datapoint pos="1" key="64"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="363" lty="174" rbx="416" rby="230"/>
+				</component>
+				<component name="to-datetime" library="edifact" uid="49213472" kind="5">
+					<sources>
+						<datapoint pos="0" key="53"/>
+						<datapoint pos="1" key="56"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="434" lty="69" rbx="515" rby="125"/>
+				</component>
+				<component name="structure" library="db" uid="38178800" kind="15">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="701" lty="100" rbx="890" rby="631"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="Customers" type="table" inpkey="2" expanded="1">
+									<tableactions>
+										<action operation="update" proceedchildren="1">
+											<field name="FirstName" function="equal"/>
+										</action>
+										<action proceedchildren="1"/>
+									</tableactions>
+									<entry name="CustomerID" inpkey="73"/>
+									<entry name="FirstName" inpkey="85"/>
+									<entry name="LastName" inpkey="76"/>
+									<entry name="Addresses|CustomerNr" type="table" inpkey="61" expanded="1">
+										<tableactions>
+											<action operation="update" deletewithchildren="1" proceedchildren="1">
+												<field name="CustomerNr" function="equal"/>
+												<field name="Street" function="equal"/>
+											</action>
+											<action proceedchildren="1">
+												<field name="CustomerNr" function="equal"/>
+											</action>
+										</tableactions>
+										<entry name="City" inpkey="67"/>
+										<entry name="State" inpkey="82"/>
+										<entry name="Street" inpkey="79"/>
+										<entry name="ZIP" inpkey="70"/>
+									</entry>
+								</entry>
+								<entry name="Orders" type="table" inpkey="44" expanded="1">
+									<entry name="CustomerNr" inpkey="5"/>
+									<entry name="OrderID" inpkey="50"/>
+									<entry name="Received" inpkey="17"/>
+									<entry name="Articles|OrderNr" type="table" inpkey="26" expanded="1">
+										<entry name="Amount" inpkey="35"/>
+										<entry name="ArticleID" inpkey="29"/>
+										<entry name="Name" inpkey="32"/>
+										<entry name="Price" inpkey="38"/>
+										<entry name="Tax" inpkey="41"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<database ref="CustomersTarget">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Addresses" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Articles" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Customers" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Orders" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="38177472" kind="5">
+					<sources>
+						<datapoint pos="0" key="87"/>
+						<datapoint pos="1" key="20"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="482" lty="403" rbx="535" rby="459"/>
+				</component>
+				<component name="structure" library="db" uid="38393912" kind="15">
+					<properties/>
+					<view ltx="268" lty="453" rbx="436" rby="559"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="document" expanded="1">
+								<entry name="Customers" type="table" expanded="1">
+									<entry name="FirstName" outkey="19"/>
+									<entry name="Number" outkey="22"/>
+								</entry>
+							</entry>
+						</root>
+						<database ref="CustomersTarget">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Customers" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+					</data>
+				</component>
+				<component name="LineItems-To-Articles" library="user" blackbox="0" uid="52778026" kind="19" visible="0">
+					<view ltx="342" lty="608" rbx="607" rby="677"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="LineItems" componentid="52778018" expanded="1">
+								<entry name="SG29" inpkey="47" expanded="1"/>
+							</entry>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Articles" componentid="52778019" expanded="1">
+								<entry name="Articles" outkey="25" expanded="1">
+									<entry name="Amount" type="attribute" outkey="34" expanded="1"/>
+									<entry name="ArticleID" type="attribute" outkey="28" expanded="1"/>
+									<entry name="Name" type="attribute" outkey="31" expanded="1"/>
+									<entry name="Number" type="attribute" valuekeygeneration="databasegenerated"/>
+									<entry name="Price" type="attribute" outkey="37" expanded="1"/>
+									<entry name="Tax" type="attribute" outkey="40" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+					</data>
+				</component>
+				<component name="ORDERS" library="text" uid="52750504" kind="16">
+					<properties/>
+					<view ltx="10" rbx="240" rby="678"/>
+					<data>
+						<root scrollposition="103">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Envelope" expanded="1">
+										<entry name="Interchange" expanded="1">
+											<entry name="Group" expanded="1">
+												<entry name="Message_ORDERS" outkey="43" expanded="1">
+													<entry name="UNH" expanded="1">
+														<entry name="S009" expanded="1">
+															<entry name="F0052" expanded="1"/>
+															<entry name="F0054" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="BGM" expanded="1">
+														<entry name="C106" expanded="1">
+															<entry name="F1004" outkey="49"/>
+														</entry>
+													</entry>
+													<entry name="DTM" expanded="1">
+														<entry name="C507" expanded="1">
+															<entry name="F2380" outkey="52"/>
+															<entry name="F2379" outkey="55"/>
+														</entry>
+													</entry>
+													<entry name="SG2" expanded="1">
+														<entry name="NAD" outkey="58" expanded="1">
+															<entry name="F3035" outkey="63"/>
+															<entry name="C082" expanded="1">
+																<entry name="F3039" outkey="72"/>
+															</entry>
+															<entry name="C080" expanded="1">
+																<entry name="F3036" outkey="75"/>
+															</entry>
+															<entry name="C059" expanded="1">
+																<entry name="F3042" outkey="78"/>
+															</entry>
+															<entry name="F3164" outkey="66"/>
+															<entry name="C819" expanded="1">
+																<entry name="F3229" outkey="81"/>
+															</entry>
+															<entry name="F3251" outkey="69"/>
+														</entry>
+														<entry name="SG3" expanded="1"/>
+														<entry name="SG5" expanded="1">
+															<entry name="CTA" expanded="1">
+																<entry name="C056" expanded="1">
+																	<entry name="F3412" outkey="84"/>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="SG29" outkey="46">
+														<entry name="LIN" expanded="1">
+															<entry name="C212" expanded="1"/>
+														</entry>
+														<entry name="IMD" expanded="1">
+															<entry name="C272" expanded="1"/>
+															<entry name="C273" expanded="1"/>
+														</entry>
+														<entry name="QTY" expanded="1">
+															<entry name="C186" expanded="1"/>
+														</entry>
+														<entry name="SG33" expanded="1">
+															<entry name="PRI" expanded="1">
+																<entry name="C509" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+													<entry name="UNT" expanded="1">
+														<entry name="F0074" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="edi" kind="EDIFACT" inputinstance="ORDERS.EDI" encoding="1000" byteorder="1" byteordermark="0" config="EDIFACT\Envelope.Config">
+							<messages>
+								<message type="ORDERS"/>
+							</messages>
+							<settings unpackedformat="false" autocompletedata="true" terminatewithlinefeed="true" syntaxversionnumber="4" controllingagency="UNO" syntaxlevel="A" writeuna="true">
+								<separators dataelement="+" component=":" subcomponent="" segment="&apos;" decimal="." escape="?" repetition="*"/>
+								<validation>
+									<case kind="missing-segment" action="stop"/>
+									<case kind="missing-group" action="stop"/>
+									<case kind="missing-field-or-composite" action="report+reject"/>
+									<case kind="extra-data" action="report+reject"/>
+									<case kind="invalid-field-value" action="report+reject"/>
+									<case kind="invalid-date" action="report+reject"/>
+									<case kind="invalid-time" action="report+reject"/>
+									<case kind="extra-repeat" action="report+reject"/>
+									<case kind="numeric-overflow" action="report+reject"/>
+									<case kind="data-element-too-short" action="report+reject"/>
+									<case kind="data-element-too-long" action="report+reject"/>
+									<case kind="unexpected-eof" action="stop"/>
+									<case kind="invalid-codelist-value" action="report+reject"/>
+									<case kind="semantic" action="report+reject"/>
+									<case kind="segment-not-in-message" action="stop"/>
+									<case kind="unrecognized-segment-id" action="stop"/>
+									<case kind="impl-not-used-present" action="report+reject"/>
+									<case kind="not-all-data-parsed" action="report+reject"/>
+								</validation>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="48">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="11" edgekey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="17" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="20" edgekey="21"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="23" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="26" edgekey="27"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="29" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="32" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="35" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="38" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="41" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="44" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="47" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="50" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="53" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="56" edgekey="57"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="58">
+						<edges>
+							<edge vertexkey="59" edgekey="60"/>
+							<edge vertexkey="61" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="64" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="66">
+						<edges>
+							<edge vertexkey="67" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="69">
+						<edges>
+							<edge vertexkey="70" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72">
+						<edges>
+							<edge vertexkey="73" edgekey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="75">
+						<edges>
+							<edge vertexkey="76" edgekey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="79" edgekey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81">
+						<edges>
+							<edge vertexkey="82" edgekey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84">
+						<edges>
+							<edge vertexkey="85" edgekey="86"/>
+							<edge vertexkey="87" edgekey="88"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="LineItems-To-Articles" library="user" blackbox="0" uid="52778027" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="structure" library="db" uid="52778019" kind="15">
+					<properties/>
+					<view ltx="699" lty="133" rbx="849" rby="333"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="Articles" type="table" inpkey="16" expanded="1">
+								<entry name="Amount" inpkey="25"/>
+								<entry name="ArticleID" inpkey="19"/>
+								<entry name="Name" inpkey="22"/>
+								<entry name="Price" inpkey="7"/>
+								<entry name="Tax" inpkey="2"/>
+							</entry>
+						</root>
+						<wsdl/>
+						<database ref="CustomersTarget" InstanceRoot="Articles">
+							<data>
+								<selections>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Articles" Kind="Table"/>
+									</selection>
+								</selections>
+							</data>
+						</database>
+						<parameter usageKind="output" name="Articles"/>
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="52778021" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="5"/>
+						<datapoint pos="1" key="10"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="523" lty="274" rbx="22" rby="-200"/>
+				</component>
+				<component name="multiply" library="core" uid="52778020" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="27"/>
+						<datapoint pos="1" key="30"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="423" lty="220" rbx="-99" rby="-236"/>
+				</component>
+				<component name="constant" library="core" uid="52778023" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="287" lty="342" rbx="-161" rby="-7"/>
+					<data>
+						<constant value="100.0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="divide" library="core" uid="52778022" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="33"/>
+						<datapoint pos="1" key="13"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="420" lty="304" rbx="-90" rby="-147"/>
+				</component>
+				<component name="edi" library="text" uid="52778018" kind="16">
+					<properties/>
+					<view ltx="-1" lty="-8" rbx="226" rby="499"/>
+					<data>
+						<root scrollposition="1177">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="SG29" outkey="15" expanded="1">
+								<entry name="LIN" expanded="1">
+									<entry name="C212" expanded="1">
+										<entry name="F7140" outkey="18"/>
+									</entry>
+								</entry>
+								<entry name="IMD" expanded="1">
+									<entry name="C272" expanded="1"/>
+									<entry name="C273" expanded="1">
+										<entry name="F7008" outkey="21"/>
+									</entry>
+								</entry>
+								<entry name="QTY" expanded="1">
+									<entry name="C186" expanded="1">
+										<entry name="F6060" outkey="24"/>
+									</entry>
+								</entry>
+								<entry name="SG33" expanded="1">
+									<entry name="PRI" expanded="1">
+										<entry name="C509" expanded="1">
+											<entry name="F5118" outkey="29"/>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="SG38" expanded="1">
+									<entry name="SG39" expanded="1"/>
+								</entry>
+								<entry name="SG40" expanded="1">
+									<entry name="TAX" expanded="1">
+										<entry name="C243" expanded="1">
+											<entry name="F5278" outkey="32"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="edi" kind="EDIFACT" encoding="1" byteorder="1" byteordermark="0" config="EDIFACT\Envelope.Config" root="Envelope/Interchange/Group/Message_ORDERS/SG29">
+							<messages>
+								<message type="ORDERS"/>
+							</messages>
+							<settings unpackedformat="false" autocompletedata="true" terminatewithlinefeed="true" syntaxversionnumber="2" controllingagency="UNO" syntaxlevel="A" writeuna="true">
+								<separators dataelement="+" component=":" subcomponent="" segment="&apos;" decimal="." escape="?" repetition="*"/>
+								<validation>
+									<case kind="missing-segment" action="stop"/>
+									<case kind="missing-group" action="stop"/>
+									<case kind="missing-field-or-composite" action="report+reject"/>
+									<case kind="extra-data" action="report+reject"/>
+									<case kind="invalid-field-value" action="report+reject"/>
+									<case kind="invalid-date" action="report+reject"/>
+									<case kind="invalid-time" action="report+reject"/>
+									<case kind="extra-repeat" action="report+reject"/>
+									<case kind="numeric-overflow" action="report+reject"/>
+									<case kind="data-element-too-short" action="report+reject"/>
+									<case kind="data-element-too-long" action="report+reject"/>
+									<case kind="unexpected-eof" action="stop"/>
+									<case kind="invalid-codelist-value" action="report+reject"/>
+									<case kind="semantic" action="report+reject"/>
+									<case kind="segment-not-in-message" action="stop"/>
+									<case kind="unrecognized-segment-id" action="stop"/>
+									<case kind="impl-not-used-present" action="report+reject"/>
+									<case kind="not-all-data-parsed" action="report+reject"/>
+								</validation>
+							</settings>
+						</text>
+						<parameter usageKind="input" name="LineItems"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5" edgekey="6"/>
+							<edge vertexkey="7" edgekey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="10" edgekey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="13" edgekey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="16" edgekey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="19" edgekey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="22" edgekey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="25" edgekey="26"/>
+							<edge vertexkey="27" edgekey="28"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="30" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="33" edgekey="34"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

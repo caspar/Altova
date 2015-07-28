@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsig:Signature xmlns:xsig="http://www.w3.org/2000/09/xmldsig#">
+	<xsig:SignedInfo>
+		<xsig:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></xsig:CanonicalizationMethod>
+		<xsig:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1"></xsig:SignatureMethod>
+		<xsig:Reference URI="NanonullOrg_SignedWithPW.xml">
+			<xsig:Transforms>
+				<xsig:Transform Algorithm="http://www.altova.com/xml-signatures/strip-whitespaces"></xsig:Transform>
+			</xsig:Transforms>
+			<xsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></xsig:DigestMethod>
+			<xsig:DigestValue>pJpK+YRybUCcjC09/ovQW83jYeE=</xsig:DigestValue>
+		</xsig:Reference>
+	</xsig:SignedInfo>
+	<xsig:SignatureValue>8E95dvDv+cToimvn2Dk/ZxfPKKA=</xsig:SignatureValue>
+</xsig:Signature>

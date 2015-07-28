@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Introduction</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="install.xhtml">Next: Installing the development environment</a>
+		</div>
+		<div class="previous">
+			<a href="toc.xhtml">Previous: Contents</a>
+		</div>
+		<h1>Introduction to GUI Automation at Altova</h1>
+		<h2>
+			<a name="1" />Motivation for writing these pages</h2>
+		<div class="p">These pages include an overview of the GUI test automation framework developed by Havard Rast Blok at Altova between 2006 and 2007. It is my intention that it should be relatively easy install, run, maintain and get a grasp of what's going on. Therefore I've started with the very basic installation steps of the required tools, and then moved on to more details about the framework. I realise that some Java experience is required, but by following examples, hints and guide from these pages and the embedded Java documentation (in the Java files themselves), I hope the learning curve is smooth.</div>
+		<h2>
+			<a name="2" />Who should read these pages</h2>
+		<div class="p">Most of the pages in this documentation is intended for those who want to run, maintain create GUI automation test cases, and develop the framework further. Basic programming skills are required, and for some details Java is a plus.</div>
+		<h2>
+			<a name="3" />Why yet another test automation tool</h2>
+		<div class="p">When I started to look at test automation in UModel, one problem was immediately apparent: It was not possible to identify <b>toolbar buttons</b> or <b>diagram elements</b> as separate elements on the screen. Basically, it was not possible to test even basic GUI functionality automatically with the existing tools available. This was mostly due to the bespoke BCG GUI classes used in our applications, however, it is not certain the diagrams would have been easier to test using the MFC classes either.</div>
+		<div class="p">After some initial trails, it quickly became apparent that it was possible to work around this by using very simple picture recognition, however, this did not fit very well into the existing tests for Test Complete. Thus a separate framework grew up around JUnit and some very simple Ant tasks. The remaining work has mostly been extending the coverage of the test cases, which now goes far beyond what was possible with Test Complete. </div>
+		<div class="p">Another advantage, is that this Robots framework can be used on as many machines, and by as many as we would like, as opposed to a single dedicated machine. This is useful when the tests have scaled to the level they already have, and will be essential when even more applications are included.</div>
+		<h2>
+			<a name="4" />How these pages are organised</h2>
+		<div class="p">The first sections of these pages focus around setting up the testing and developer environment. Not all of this is required to only run the tests, or even creating basic test cases, so pick out what you need for your task at hand. Secondly, it goes into some detail about the hierarchy of the classes, and how to develop and extend the framework. Thirdly, JUnit classes and test cases are covered, and finally, common pitfalls and errors (which I've all made myself) are included with examples.
+		</div>
+		<h2>
+			<a name="5" />Keeping these pages up to date</h2>
+		<div class="p">These pages are all included in CVS, under the module <i>gui-automation</i>, and directory <i>documentation</i>. An extra copy is also checked out for convenience under <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\documentation</div>. Finally, the documentation can be generated using ant, and a copy of the source and Java Doc documentation is in <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\gui-automation</div> To keep these files up to date, make sure you commit any changes, and then update this location on the S: drive:
+		
+		<pre class="cmd">		
+	cd c:\work\gui-automation\documentation
+	cvs commit -m "updated documentation"
+		</pre>
+		and
+		<pre class="cmd">
+	S:
+	cd S:\QA\Internal\Test-Cases\Automated_GUI_Tests\documentation
+	cvs update
+	
+	cd S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\gui-automation
+	ant update doc
+		</pre>
+		</div>
+		<h2>
+			<a name="6" />Changing the look of these pages</h2>
+		<div class="p">All this documentation is deliberately written with minimal formatting, and some very basic navigation options. If you feel that this is to bare, please feel free to make some XSL transforms on the pages. The are all written in XHTML, validating XML, and currently use the very simple style sheet <i>plain.css</i>. Furthermore: 
+		<ul>
+			<li>All path names are DIV-tagged with <i>file</i>.</li>
+			<li>The navigation links at the top is tagged with <i>toc, next</i> and <i>previous</i>.</li>
+			<li>DOS prompt commands are tagged with <i>cmd</i>.</li>
+			<li>Java code is tagged with <i>javacode</i>.</li>
+			<li>Images are adjusted by the <i>screen</i> and <i>diagram</i> style settings.</li>
+			<li>And finally, UModel diagrams use image maps copied from the UModel document generation feature. The documentation path used is <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi</div>. If this changes, it should be enough to run a full replace-in-files on all the .xhtml files.</li>
+		</ul>
+		 </div>
+	</body>
+</html>

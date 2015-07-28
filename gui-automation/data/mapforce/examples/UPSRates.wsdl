@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://mackeybros.com/WebServices/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://mackeybros.com/WebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://mackeybros.com/WebServices/">
+      <s:element name="GetShippingRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SvcCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateChart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipperZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiverZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipperCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiverCountry" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PkgWeight" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsResidential" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="PkgType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShippingRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetShippingRateResult" type="tns:ShippingDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ShippingDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PossibleValues">
+        <s:complexType />
+      </s:element>
+      <s:element name="PossibleValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PossibleValuesResult" type="tns:ParameterValues" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParameterValues">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RateCharts" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="SvcCodes" type="tns:ArrayOfString" />
+          <s:element minOccurs="0" maxOccurs="1" name="PkgTypes" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ShippingDetail" type="tns:ShippingDetail" />
+      <s:element name="ParameterValues" nillable="true" type="tns:ParameterValues" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetShippingRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShippingRate" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShippingRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="PossibleValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:PossibleValues" />
+  </wsdl:message>
+  <wsdl:message name="PossibleValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:PossibleValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingRateHttpGetIn">
+    <wsdl:part name="SvcCode" type="s:string" />
+    <wsdl:part name="RateChart" type="s:string" />
+    <wsdl:part name="ShipperZip" type="s:string" />
+    <wsdl:part name="ReceiverZip" type="s:string" />
+    <wsdl:part name="ShipperCountry" type="s:string" />
+    <wsdl:part name="ReceiverCountry" type="s:string" />
+    <wsdl:part name="PkgWeight" type="s:string" />
+    <wsdl:part name="IsResidential" type="s:string" />
+    <wsdl:part name="PkgType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingRateHttpGetOut">
+    <wsdl:part name="Body" element="tns:ShippingDetail" />
+  </wsdl:message>
+  <wsdl:message name="PossibleValuesHttpGetIn" />
+  <wsdl:message name="PossibleValuesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ParameterValues" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingRateHttpPostIn">
+    <wsdl:part name="SvcCode" type="s:string" />
+    <wsdl:part name="RateChart" type="s:string" />
+    <wsdl:part name="ShipperZip" type="s:string" />
+    <wsdl:part name="ReceiverZip" type="s:string" />
+    <wsdl:part name="ShipperCountry" type="s:string" />
+    <wsdl:part name="ReceiverCountry" type="s:string" />
+    <wsdl:part name="PkgWeight" type="s:string" />
+    <wsdl:part name="IsResidential" type="s:string" />
+    <wsdl:part name="PkgType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingRateHttpPostOut">
+    <wsdl:part name="Body" element="tns:ShippingDetail" />
+  </wsdl:message>
+  <wsdl:message name="PossibleValuesHttpPostIn" />
+  <wsdl:message name="PossibleValuesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ParameterValues" />
+  </wsdl:message>
+  <wsdl:portType name="UPSRatesSoap">
+    <wsdl:operation name="GetShippingRate">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This function returns a "&lt;strong&gt;ShippingDetail&lt;/strong&gt;" struct with details of the rate request.</documentation>
+      <wsdl:input message="tns:GetShippingRateSoapIn" />
+      <wsdl:output message="tns:GetShippingRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PossibleValues">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This function returns a set of possible values for the "&lt;strong&gt;GetShippingRate&lt;/strong&gt;" function</documentation>
+      <wsdl:input message="tns:PossibleValuesSoapIn" />
+      <wsdl:output message="tns:PossibleValuesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UPSRatesHttpGet">
+    <wsdl:operation name="GetShippingRate">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This function returns a "&lt;strong&gt;ShippingDetail&lt;/strong&gt;" struct with details of the rate request.</documentation>
+      <wsdl:input message="tns:GetShippingRateHttpGetIn" />
+      <wsdl:output message="tns:GetShippingRateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PossibleValues">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This function returns a set of possible values for the "&lt;strong&gt;GetShippingRate&lt;/strong&gt;" function</documentation>
+      <wsdl:input message="tns:PossibleValuesHttpGetIn" />
+      <wsdl:output message="tns:PossibleValuesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UPSRatesHttpPost">
+    <wsdl:operation name="GetShippingRate">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This function returns a "&lt;strong&gt;ShippingDetail&lt;/strong&gt;" struct with details of the rate request.</documentation>
+      <wsdl:input message="tns:GetShippingRateHttpPostIn" />
+      <wsdl:output message="tns:GetShippingRateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PossibleValues">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">This function returns a set of possible values for the "&lt;strong&gt;GetShippingRate&lt;/strong&gt;" function</documentation>
+      <wsdl:input message="tns:PossibleValuesHttpPostIn" />
+      <wsdl:output message="tns:PossibleValuesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UPSRatesSoap" type="tns:UPSRatesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="GetShippingRate">
+      <soap:operation soapAction="http://mackeybros.com/WebServices/GetShippingRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PossibleValues">
+      <soap:operation soapAction="http://mackeybros.com/WebServices/PossibleValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UPSRatesHttpGet" type="tns:UPSRatesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetShippingRate">
+      <http:operation location="/GetShippingRate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PossibleValues">
+      <http:operation location="/PossibleValues" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UPSRatesHttpPost" type="tns:UPSRatesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetShippingRate">
+      <http:operation location="/GetShippingRate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PossibleValues">
+      <http:operation location="/PossibleValues" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UPSRates">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">Obtains UPS shipping rates</documentation>
+    <wsdl:port name="UPSRatesSoap" binding="tns:UPSRatesSoap">
+      <soap:address location="http://mackeybros.com/aspx/mackeybros/WebServices/UPSRates.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UPSRatesHttpGet" binding="tns:UPSRatesHttpGet">
+      <http:address location="http://mackeybros.com/aspx/mackeybros/WebServices/UPSRates.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UPSRatesHttpPost" binding="tns:UPSRatesHttpPost">
+      <http:address location="http://mackeybros.com/aspx/mackeybros/WebServices/UPSRates.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

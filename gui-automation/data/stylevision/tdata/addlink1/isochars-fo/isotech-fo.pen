@@ -1,0 +1,85 @@
+
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOtech PUBLIC
+       "ISO 8879:1986//ENTITIES General Technical//EN//XML" 
+       "ISOtech.pen">
+     %ISOtech;
+-->
+<!-- This version of the entity set can be used with any SGML document
+     which uses ISO 10646 as its document character set. 
+     This includes XML documents and ISO HTML documents.
+     This entity set uses hexadecimal numeric character references. 
+          
+     Creator: Rick Jelliffe, Allette Systems
+     
+     Version: 1997-07-07
+-->
+<!ENTITY aleph  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2135;</inline>" ><!--/aleph =aleph, Hebrew-->
+<!ENTITY and    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2227;</inline>" ><!--/wedge /land B: =logical and-->
+<!ENTITY ang90  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x221F;</inline>" ><!--=right (90 degree) angle-->
+<!ENTITY angsph "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2222;</inline>" ><!--/sphericalangle =angle-spherical-->
+<!ENTITY ap     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2249;</inline>" ><!--/approx R: =approximate-->
+<!ENTITY becaus "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2235;</inline>" ><!--/because R: =because-->
+<!ENTITY bottom "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x22A5;</inline>" ><!--/bot B: =perpendicular-->
+<!ENTITY cap    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2229;</inline>" ><!--/cap B: =intersection-->
+<!ENTITY cong   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2245;</inline>" ><!--/cong R: =congruent with-->
+<!ENTITY conint "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x222E;</inline>" ><!--/oint L: =contour integral operator-->
+<!ENTITY cup    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x222A;</inline>" ><!--/cup B: =union or logical sum-->
+<!ENTITY equiv  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2261;</inline>" ><!--/equiv R: =identical with-->
+<!ENTITY exist  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2203;</inline>" ><!--/exists =at least one exists-->
+<!ENTITY forall "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2200;</inline>" ><!--/forall =for all-->
+<!ENTITY fnof   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x192;</inline>" ><!--=function of (italic small f)-->
+<!ENTITY ge     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2265;</inline>" ><!--/geq /ge R: =greater-than-or-equal-->
+<!ENTITY iff    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x21D4;</inline>" ><!--/iff =if and only if-->
+<!ENTITY infin  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x221E;</inline>" ><!--/infty =infinity-->
+<!ENTITY int    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x222B;</inline>" ><!--/int L: =integral operator-->
+<!ENTITY isin   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2208;</inline>" ><!--/in R: =set membership-->
+<!ENTITY lang   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2329;</inline>" ><!--/langle O: =left angle bracket-->
+<!ENTITY lArr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x21D0;</inline>" ><!--/Leftarrow A: =is implied by-->
+<!ENTITY le     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2264;</inline>" ><!--/leq /le R: =less-than-or-equal-->
+<!ENTITY minus  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>-</inline>" ><!--B: =minus sign-->
+<!ENTITY mnplus "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2213;</inline>" ><!--/mp B: =minus-or-plus sign-->
+<!ENTITY nabla  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2207;</inline>" ><!--/nabla =del, Hamilton operator-->
+<!ENTITY ne     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2260;</inline>" ><!--/ne /neq R: =not equal-->
+<!ENTITY ni     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x220B;</inline>" ><!--/ni /owns R: =contains-->
+<!ENTITY or     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2228;</inline>" ><!--/vee /lor B: =logical or-->
+<!ENTITY par    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2225;</inline>" ><!--/parallel R: =parallel-->
+<!ENTITY part   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2202;</inline>" ><!--/partial =partial differential-->
+<!ENTITY permil "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2030;</inline>" ><!--=per thousand-->
+<!ENTITY perp   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x22A5;</inline>" ><!--/perp R: =perpendicular-->
+<!ENTITY prime  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2032;</inline>" ><!--/prime =prime or minute-->
+<!ENTITY Prime  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2033;</inline>" ><!--=double prime or second-->
+<!ENTITY prop   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x221D;</inline>" ><!--/propto R: =is proportional to-->
+<!ENTITY radic  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x221A;</inline>" ><!--/surd =radical-->
+<!ENTITY rang   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x232A;</inline>" ><!--/rangle C: =right angle bracket-->
+<!ENTITY rArr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x21D2;</inline>" ><!--/Rightarrow A: =implies-->
+<!ENTITY sim    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x223C;</inline>" ><!--/sim R: =similar-->
+<!ENTITY sime   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2243;</inline>" ><!--/simeq R: =similar, equals-->
+<!ENTITY square "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25A1;</inline>" ><!--/square B: =square-->
+<!ENTITY sub    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2282;</inline>" ><!--/subset R: =subset or is implied by-->
+<!ENTITY sube   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2286;</inline>" ><!--/subseteq R: =subset, equals-->
+<!ENTITY sup    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2283;</inline>" ><!--/supset R: =superset or implies-->
+<!ENTITY supe   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2287;</inline>" ><!--/supseteq R: =superset, equals-->
+<!ENTITY there4 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2234;</inline>" ><!--/therefore R: =therefore-->
+<!ENTITY Verbar "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2016;</inline>" ><!--/Vert =dbl vertical bar-->
+
+<!ENTITY angst  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x212B;</inline>" ><!--Angstrom =capital A, ring-->
+<!ENTITY bernou "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x212C;</inline>" ><!--Bernoulli function (script capital B)-->
+<!ENTITY compfn "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2218;</inline>" ><!--B: composite function (small circle)-->
+<!ENTITY Dot    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xA8;</inline>" ><!--=dieresis or umlaut mark-->
+<!ENTITY DotDot "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x20DC;</inline>" ><!--four dots above-->
+<!ENTITY hamilt "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x210B;</inline>" ><!--Hamiltonian (script capital H)-->
+<!ENTITY lagran "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2112;</inline>" ><!--Lagrangian (script capital L)-->
+<!ENTITY lowast "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2217;</inline>" ><!--low asterisk-->
+<!ENTITY notin  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2209;</inline>" ><!--N: negated set membership-->
+<!ENTITY order  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2134;</inline>" ><!--order of (script small o)-->
+<!ENTITY phmmat "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2133;</inline>" ><!--physics M-matrix (script capital M)-->
+<!ENTITY tdot   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x20DB;</inline>" ><!--three dots above-->
+<!ENTITY tprime "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2034;</inline>" ><!--triple prime-->
+<!ENTITY wedgeq "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2259;</inline>" ><!--R: corresponds to (wedge, equals)-->
+

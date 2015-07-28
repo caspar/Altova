@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsig:Signature xmlns:xsig="http://www.w3.org/2000/09/xmldsig#">
+	<xsig:SignedInfo>
+		<xsig:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></xsig:CanonicalizationMethod>
+		<xsig:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></xsig:SignatureMethod>
+		<xsig:Reference URI="NanonullOrg_SignedWithCert.xml">
+			<xsig:Transforms>
+				<xsig:Transform Algorithm="http://www.altova.com/xml-signatures/strip-whitespaces"></xsig:Transform>
+			</xsig:Transforms>
+			<xsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></xsig:DigestMethod>
+			<xsig:DigestValue>Fj6pl0xOJw7gazhL3Ci1JPMiuPg=</xsig:DigestValue>
+		</xsig:Reference>
+	</xsig:SignedInfo>
+	<xsig:SignatureValue>DbZPSc9aUk1tsc29vy9sXtCCQ3yt0T2PmnyAu3iZTdee622nvIp3pbdZoFXpeq0gPELB/mPVuxygkXYeUVaY8M+ikU6PkJPgdxlIRdUMc4CQS/jKKS6F1QvNdxU7lMCPWQTA0dxY6nAqas7Jl8RiEosI6k4mCSF10nyig1sDUvU=</xsig:SignatureValue>
+	<xsig:KeyInfo>
+		<xsig:KeyValue>
+			<xsig:RSAKeyValue>
+				<xsig:Modulus>pqtpOV5M/13jqoNtkbGPguyuqaZ+6Mu0JXXO26epEPemmY4Oq4QqOtEN4aCm3X1jvxkmqV35LCyLIgcfMDkIERGEnUc1KyKgfRfNZUjyp2/cyi8DmMEJ/YvezApROyvNVHbEQOU5+0Ygi6NSVnliE6A/cGyta1sItlbG+ZdLVcc=</xsig:Modulus>
+				<xsig:Exponent>AAEAAQ==</xsig:Exponent>
+			</xsig:RSAKeyValue>
+		</xsig:KeyValue>
+		<xsig:X509Data>
+			<xsig:X509Certificate>MIICLTCCAZqgAwIBAgIQuHqmYumnZo5OVftUpmNRLzAJBgUrDgMCHQUAMCkxJzAl
+BgNVBAMTHkJhYnMgU2lnbmF0dXJlIENlcnRpZmljYXRlIFJTQTAeFw0xMTA0MjEw
+ODM2MzFaFw0zOTEyMzEyMzU5NTlaMCkxJzAlBgNVBAMTHkJhYnMgU2lnbmF0dXJl
+IENlcnRpZmljYXRlIFJTQTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEApqtp
+OV5M/13jqoNtkbGPguyuqaZ+6Mu0JXXO26epEPemmY4Oq4QqOtEN4aCm3X1jvxkm
+qV35LCyLIgcfMDkIERGEnUc1KyKgfRfNZUjyp2/cyi8DmMEJ/YvezApROyvNVHbE
+QOU5+0Ygi6NSVnliE6A/cGyta1sItlbG+ZdLVccCAwEAAaNeMFwwWgYDVR0BBFMw
+UYAQ42nQ+885CHkHua+DYCPRlqErMCkxJzAlBgNVBAMTHkJhYnMgU2lnbmF0dXJl
+IENlcnRpZmljYXRlIFJTQYIQuHqmYumnZo5OVftUpmNRLzAJBgUrDgMCHQUAA4GB
+AIpK8hDDjs+pRUOYLTPbVI9hRoDwiMVj0g1p27iaQVIRGjIWLlbYMR4wwCwXC0OU
+qmZ92HwzRYfXAwcSrUT+phHtWV/cVHZbsPKdsckgW9wVkQ4V/G+cJsQeHvrLxqIi
+MyUnTfzLgyKUQ0+/IT22SGhQDyAPnuscIEcpMd3Xjs1r</xsig:X509Certificate>
+		</xsig:X509Data>
+	</xsig:KeyInfo>
+</xsig:Signature>

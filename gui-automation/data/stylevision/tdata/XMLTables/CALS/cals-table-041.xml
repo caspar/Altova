@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This document is invalid. tgroup must be the child of table.
++........+........+
+  A       |B     
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+               "http://www.altova.com/schemas/docbook/docbookx.dtd">
+<?altova_sps cals-table-maindesign.sps?>
+<book>
+	<article>
+		<articleinfo>
+			<title>CALS Table Test 041     ErrorCase - tgroup is parent of table - must be child !</title>
+			<releaseinfo>Release 2011</releaseinfo>
+			<author>
+				<firstname>rip</firstname>
+				<surname></surname>
+				<affiliation>
+					<address>
+						<email>rip@altova.com</email>
+					</address>
+				</affiliation>
+			</author>
+			<subtitle>neg tcase: tgroup on wrong possition</subtitle>
+		</articleinfo>
+		<tgroup cols="2">
+			<table frame="top">
+				<title>CALS Table Test 041</title>
+				<colspec colname="col1" colnum="1"/>
+				<tbody>
+					<row>
+						<entry>A</entry>
+						<entry>B</entry>
+					</row>
+				</tbody>
+			</table>
+		</tgroup>
+	</article>
+</book>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v5 beta 4 U (http://www.xmlspy.com) by Alexander Falk (Altova, Inc.) -->
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.Nanonull.com/TimeService/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.Nanonull.com/TimeService/">
+	<types>
+		<s:schema elementFormDefault="qualified" targetNamespace="http://www.Nanonull.com/TimeService/">
+		<s:import namespace="http://www.Nanonull.com/TimeService1/" schemaLocation="schema1.xsd"/>
+			<s:element name="getUTCTime">
+				<s:complexType/>
+			</s:element>
+		</s:schema>
+	</types>
+	<message name="getUTCTimeSoapIn">
+		<part name="parameters" element="s0:getUTCTime"/>
+	</message>
+	<message name="getUTCTimeSoapOut"/>
+	<message name="getUTCTimeHttpGetIn"/>
+	<message name="getUTCTimeHttpGetOut"/>
+	<message name="getUTCTimeHttpPostIn"/>
+	<message name="getUTCTimeHttpPostOut"/>
+	<portType name="TimeServiceSoap">
+		<operation name="getUTCTime">
+			<input message="s0:getUTCTimeSoapIn"/>
+			<output message="s0:getUTCTimeSoapOut"/>
+		</operation>
+	</portType>
+	<portType name="TimeServiceHttpGet">
+		<operation name="getUTCTime">
+			<input message="s0:getUTCTimeHttpGetIn"/>
+			<output message="s0:getUTCTimeHttpGetOut"/>
+		</operation>
+	</portType>
+	<portType name="TimeServiceHttpPost">
+		<operation name="getUTCTime">
+			<input message="s0:getUTCTimeHttpPostIn"/>
+			<output message="s0:getUTCTimeHttpPostOut"/>
+		</operation>
+	</portType>
+	<binding name="TimeServiceSoap" type="s0:TimeServiceSoap">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="getUTCTime">
+			<soap:operation soapAction="http://www.Nanonull.com/TimeService/getUTCTime" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="TimeServiceHttpGet" type="s0:TimeServiceHttpGet">
+		<http:binding verb="GET"/>
+		<operation name="getUTCTime">
+			<http:operation location="/getUTCTime"/>
+			<input>
+				<http:urlEncoded/>
+			</input>
+			<output/>
+		</operation>
+	</binding>
+	<binding name="TimeServiceHttpPost" type="s0:TimeServiceHttpPost">
+		<http:binding verb="POST"/>
+		<operation name="getUTCTime">
+			<http:operation location="/getUTCTime"/>
+			<input>
+				<mime:content type="application/x-www-form-urlencoded"/>
+			</input>
+			<output/>
+		</operation>
+	</binding>
+	<service name="TimeService">
+		<documentation>A sample Time service</documentation>
+		<port name="TimeServiceSoap" binding="s0:TimeServiceSoap">
+			<soap:address location="http://www.nanonull.com/TimeService/TimeService.asmx"/>
+		</port>
+		<port name="TimeServiceHttpGet" binding="s0:TimeServiceHttpGet">
+			<http:address location="http://www.nanonull.com/TimeService/TimeService.asmx"/>
+		</port>
+		<port name="TimeServiceHttpPost" binding="s0:TimeServiceHttpPost">
+			<http:address location="http://www.nanonull.com/TimeService/TimeService.asmx"/>
+		</port>
+	</service>
+</definitions>

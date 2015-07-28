@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/recognitionRef" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/reference-2009-12-16.xsd#recognitionRef"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/commonPracticeRef" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/reference-2009-12-16.xsd#commonPracticeRef"/>
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OtherProvisions" xlink:label="loc"/>
+    <link:reference xlink:type="resource" xlink:label="res" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>84</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_84_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfContingentLiabilitiesExplanatory" xlink:label="loc_4"/>
+    <link:reference xlink:type="resource" xlink:label="res_2" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>86</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_86&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_4" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfOtherProvisionsContingentLiabilitiesAndContingentAssetsExplanatory" xlink:label="loc_5"/>
+    <link:reference xlink:type="resource" xlink:label="res_3" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Disclosure</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=sect_Disclosure&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_5" xlink:to="res_3"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShorttermRestructuringProvision" xlink:label="loc_13"/>
+    <link:reference xlink:type="resource" xlink:label="res_4" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>70</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_70&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_13" xlink:to="res_4"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShorttermOnerousContractsProvision" xlink:label="loc_14"/>
+    <link:reference xlink:type="resource" xlink:label="res_5" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Example 8 An onerous contract</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=sect_Example8Anonerouscontract&amp;doctype=Illustrative%20Examples</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_14" xlink:to="res_5"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LongtermWarrantyProvision" xlink:label="loc_16"/>
+    <link:reference xlink:type="resource" xlink:label="res_6" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Example 1 Warranties</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=sect_Example1Warranties&amp;doctype=Illustrative%20Examples</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_16" xlink:to="res_6"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShorttermLegalProceedingsProvision" xlink:label="loc_17"/>
+    <link:reference xlink:type="resource" xlink:label="res_7" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Example 10 A court case</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=sect_Example10Acourtcase&amp;doctype=Illustrative%20Examples</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_17" xlink:to="res_7"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LongtermOnerousContractsProvision" xlink:label="loc_18"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_18" xlink:to="res_5"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LegalProceedingsProvision" xlink:label="loc_24"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_24" xlink:to="res_7"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShorttermWarrantyProvision" xlink:label="loc_25"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_25" xlink:to="res_6"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WarrantyProvision" xlink:label="loc_26"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_26" xlink:to="res_6"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OnerousContractsProvision" xlink:label="loc_27"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_27" xlink:to="res_5"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LongtermRestructuringProvision" xlink:label="loc_28"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_28" xlink:to="res_4"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LongtermLegalProceedingsProvision" xlink:label="loc_29"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_29" xlink:to="res_7"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RestructuringProvision" xlink:label="loc_30"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_30" xlink:to="res_4"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughTransfersAndOtherChangesOtherProvisions" xlink:label="loc_31"/>
+    <link:reference xlink:type="resource" xlink:label="res_8" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>84</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_84_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_31" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughNetExchangeDifferencesOtherProvisions" xlink:label="loc_33"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_33" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AdditionalProvisionsOtherProvisions" xlink:label="loc_35"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_35" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ProvisionUsedOtherProvisions" xlink:label="loc_38"/>
+    <link:reference xlink:type="resource" xlink:label="res_10" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>84</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_84_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_38" xlink:to="res_10"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_UnusedProvisionReversedOtherProvisions" xlink:label="loc_40"/>
+    <link:reference xlink:type="resource" xlink:label="res_11" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>84</ref:Paragraph>
+      <ref:Subparagraph>d</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_84_d&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_40" xlink:to="res_11"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfEstimatedFinancialEffectOfContingentAssets" xlink:label="loc_41"/>
+    <link:reference xlink:type="resource" xlink:label="res_12" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>89</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_89&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_41" xlink:to="res_12"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfNatureOfContingentAssets" xlink:label="loc_44"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_44" xlink:to="res_12"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationAboutContingentAssetsThatDisclosureIsNotPracticable" xlink:label="loc_45"/>
+    <link:reference xlink:type="resource" xlink:label="res_13" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>91</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_91&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_45" xlink:to="res_13"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationAboutContingentLiabilitiesThatDisclosureIsNotPracticable" xlink:label="loc_59"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_59" xlink:to="res_13"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfReasonForNondisclosureOfInformationRegardingProvision" xlink:label="loc_61"/>
+    <link:reference xlink:type="resource" xlink:label="res_14" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>92</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_92&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_61" xlink:to="res_14"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfReasonForNondisclosureOfInformationRegardingContingentLiability" xlink:label="loc_63"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_63" xlink:to="res_14"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfReasonForNondisclosureOfInformationRegardingContingentAsset" xlink:label="loc_65"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_65" xlink:to="res_14"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ChangesInOtherProvisions" xlink:label="loc_66"/>
+    <link:reference xlink:type="resource" xlink:label="res_15" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>84</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_84&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_66" xlink:to="res_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfOtherProvisionsTable" xlink:label="loc_2"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_2" xlink:to="res_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfProvisionsAxis" xlink:label="loc_3"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_3" xlink:to="res_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfNatureOfObligationOtherProvisions" xlink:label="loc_6"/>
+    <link:reference xlink:type="resource" xlink:label="res_16" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>85</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_85_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_6" xlink:to="res_16"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfExpectedTimingOfOutflowsOtherProvisions" xlink:label="loc_7"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_7" xlink:to="res_16"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IndicationOfUncertaintiesOfAmountOrTimingOfOutflowsOtherProvisions" xlink:label="loc_8"/>
+    <link:reference xlink:type="resource" xlink:label="res_17" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>85</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_85_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_8" xlink:to="res_17"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AssetRecognisedForExpectedReimbursementOtherProvisions" xlink:label="loc_9"/>
+    <link:reference xlink:type="resource" xlink:label="res_18" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>85</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_85_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_9" xlink:to="res_18"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExpectedReimbursementOtherProvisions" xlink:label="loc_15"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_15" xlink:to="res_18"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OtherProvisionsMember" xlink:label="loc_19"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_19" xlink:to="res_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WarrantyProvisionMember" xlink:label="loc_20"/>
+    <link:reference xlink:type="resource" xlink:label="res_19" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Example 1 Warranties</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=sect_Example1Warranties&amp;doctype=Illustrative%20Examples</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_20" xlink:to="res_19"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RestructuringProvisionMember" xlink:label="loc_21"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_21" xlink:to="res_4"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LegalProceedingsProvisionMember" xlink:label="loc_22"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_22" xlink:to="res_7"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OnerousContractsProvisionMember" xlink:label="loc_23"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_23" xlink:to="res_5"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_MiscellaneousOtherProvisionsMember" xlink:label="loc_34"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_34" xlink:to="res_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfContingentLiabilitiesTable" xlink:label="loc_36"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_36" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfContingentLiabilitiesAxis" xlink:label="loc_39"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_39" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ContingentLiabilitiesMember" xlink:label="loc_42"/>
+    <link:reference xlink:type="resource" xlink:label="res_21" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>88</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_88&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_42" xlink:to="res_21"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WarrantyContingentLiabilityMember" xlink:label="loc_43"/>
+    <link:reference xlink:type="resource" xlink:label="res_22" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>88</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_88&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_43" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RestructuringContingentLiabilityMember" xlink:label="loc_46"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_46" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LegalProceedingsContingentLiabilityMember" xlink:label="loc_47"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_47" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OnerousContractsContingentLiabilityMember" xlink:label="loc_48"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_48" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ContingentLiabilityForDecommissioningRestorationAndRehabilitationCostsMember" xlink:label="loc_49"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_49" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_OtherContingentLiabilitiesMember" xlink:label="loc_53"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_53" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfNatureOfObligationContingentLiabilities" xlink:label="loc_54"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_54" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfFinancialEffectOfContingentLiabilities" xlink:label="loc_56"/>
+    <link:reference xlink:type="resource" xlink:label="res_23" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>86</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_86_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_56" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfPossibilityOfReimbursementContingentLiabilities" xlink:label="loc_57"/>
+    <link:reference xlink:type="resource" xlink:label="res_25" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>86</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_86_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_57" xlink:to="res_25"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IndicationOfUncertaintiesOfAmountOrTimingOfOutflowsContingentLiabilities" xlink:label="loc_58"/>
+    <link:reference xlink:type="resource" xlink:label="res_26" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>86</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_86_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_58" xlink:to="res_26"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfOtherProvisionsExplanatory" xlink:label="loc_37"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_37" xlink:to="res_15"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RefundsProvisionMember" xlink:label="loc_68"/>
+    <link:reference xlink:type="resource" xlink:label="res_29" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Example 4 Refunds policy</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=sect_Example4Refundspolicy&amp;doctype=Illustrative%20Examples</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_68" xlink:to="res_29"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_NoncurrentRefundsProvision" xlink:label="loc_70"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_70" xlink:to="res_29"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CurrentRefundsProvision" xlink:label="loc_71"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_71" xlink:to="res_29"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RefundsProvision" xlink:label="loc_73"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_73" xlink:to="res_29"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LongtermProvisionForDecommissioningRestorationAndRehabilitationCosts" xlink:label="loc_10"/>
+    <link:reference xlink:type="resource" xlink:label="res_9" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>D Examples: disclosures</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=sect_DExamples:disclosures&amp;doctype=Illustrative%20Examples</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_10" xlink:to="res_9"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughChangeInDiscountRateOtherProvisions" xlink:label="loc_75"/>
+    <link:reference xlink:type="resource" xlink:label="res_30" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>37</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>84</ref:Paragraph>
+      <ref:Subparagraph>e</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=37&amp;date=2011-03-25&amp;anchor=para_84_e&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_75" xlink:to="res_30"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseInExistingProvisionsOtherProvisions" xlink:label="loc_69"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_69" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AcquisitionsThroughBusinessCombinationsOtherProvisions" xlink:label="loc_55"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_55" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfMajorAssumptionsMadeConcerningFutureEventsOtherProvisions" xlink:label="loc_52"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_52" xlink:to="res_17"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseThroughTimeValueOfMoneyAdjustmentOtherProvisions" xlink:label="loc_76"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_76" xlink:to="res_30"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ContingentLiabilitiesOfJointVentureMember" xlink:label="loc_50"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_50" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOfContingentLiabilitiesOfAssociatesMember" xlink:label="loc_51"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_51" xlink:to="res_22"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShorttermProvisionForDecommissioningRestorationAndRehabilitationCosts" xlink:label="loc_11"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_11" xlink:to="res_9"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ProvisionForDecommissioningRestorationAndRehabilitationCosts" xlink:label="loc_12"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_12" xlink:to="res_9"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ProvisionForDecommissioningRestorationAndRehabilitationCostsMember" xlink:label="loc_32"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_32" xlink:to="res_9"/>
+  </link:referenceLink>
+</link:linkbase>

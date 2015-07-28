@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<wsdl:description targetNamespace="http://new.webservice.namespace2" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://new.webservice.namespace2">
+	<wsdl:interface name="InterfaceToBeImported2">
+		<wsdl:operation name="OperationToBeImported2" pattern="http://www.w3.org/ns/wsdl/in-only">
+			<wsdl:input messageLabel="In"/>
+		</wsdl:operation>
+	</wsdl:interface>
+</wsdl:description>

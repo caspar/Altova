@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 U (http://www.xmlspy.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:sql="urn:schemas-microsoft-com:mapping-schema" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Address" sql:relation="Address">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PrimaryKey" nillable="true" sql:relation="Address" sql:field="PrimaryKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ForeignKey" nillable="true" sql:relation="Address" sql:field="ForeignKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="city" nillable="true" sql:relation="Address" sql:field="city" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="state" nillable="true" sql:relation="Address" sql:field="state" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="street" nillable="true" sql:relation="Address" sql:field="street" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="zip" nillable="true" sql:relation="Address" sql:field="zip" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="Address_UniqueKey">
+			<xs:selector xpath="."/>
+			<xs:field xpath="PrimaryKey"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="Altova" sql:relation="Altova">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PrimaryKey" nillable="true" sql:relation="Altova" sql:field="PrimaryKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Name" nillable="true" sql:relation="Altova" sql:field="Name" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Office" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="Altova_UniqueKey">
+			<xs:selector xpath="."/>
+			<xs:field xpath="PrimaryKey"/>
+		</xs:unique>
+		<xs:keyref name="Office_To_Altova" refer="Altova_UniqueKey">
+			<xs:selector xpath="./Office"/>
+			<xs:field xpath="ForeignKey"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Department" sql:relation="Department">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PrimaryKey" nillable="true" sql:relation="Department" sql:field="PrimaryKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ForeignKey" nillable="true" sql:relation="Department" sql:field="ForeignKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Name" nillable="true" sql:relation="Department" sql:field="Name" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="Department_UniqueKey">
+			<xs:selector xpath="."/>
+			<xs:field xpath="PrimaryKey"/>
+		</xs:unique>
+		<xs:keyref name="Person_To_Department" refer="Department_UniqueKey">
+			<xs:selector xpath="./Person"/>
+			<xs:field xpath="ForeignKey"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Office" sql:relation="Office">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PrimaryKey" nillable="true" sql:relation="Office" sql:field="PrimaryKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ForeignKey" nillable="true" sql:relation="Office" sql:field="ForeignKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Desc" nillable="true" sql:relation="Office" sql:field="Desc" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EMail" nillable="true" sql:relation="Office" sql:field="EMail" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Established" nillable="true" sql:relation="Office" sql:field="Established" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Fax" nillable="true" sql:relation="Office" sql:field="Fax" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Name" nillable="true" sql:relation="Office" sql:field="Name" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Phone" nillable="true" sql:relation="Office" sql:field="Phone" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Address" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Department" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="Office_UniqueKey">
+			<xs:selector xpath="."/>
+			<xs:field xpath="PrimaryKey"/>
+		</xs:unique>
+		<xs:keyref name="Address_To_Office" refer="Office_UniqueKey">
+			<xs:selector xpath="./Address"/>
+			<xs:field xpath="ForeignKey"/>
+		</xs:keyref>
+		<xs:keyref name="Department_To_Office" refer="Office_UniqueKey">
+			<xs:selector xpath="./Office"/>
+			<xs:field xpath="ForeignKey"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Person" sql:relation="Person">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PrimaryKey" nillable="true" sql:relation="Person" sql:field="PrimaryKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ForeignKey" nillable="true" sql:relation="Person" sql:field="ForeignKey" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EMail" nillable="true" sql:relation="Person" sql:field="EMail" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="First" nillable="true" sql:relation="Person" sql:field="First" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Last" nillable="true" sql:relation="Person" sql:field="Last" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PhoneExt" nillable="true" sql:relation="Person" sql:field="PhoneExt" sql:datatype="int">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Title" nillable="true" sql:relation="Person" sql:field="Title" sql:datatype="nvarchar">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="Person_UniqueKey">
+			<xs:selector xpath="."/>
+			<xs:field xpath="PrimaryKey"/>
+		</xs:unique>
+	</xs:element>
+</xs:schema>

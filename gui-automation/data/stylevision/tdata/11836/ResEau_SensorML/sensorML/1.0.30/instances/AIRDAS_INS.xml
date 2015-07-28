@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:SensorML xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xsi:schemaLocation="http://www.opengis.net/sensorML ../base/sensorML.xsd" version="1.0">
+	<sml:Sensor id="AIRDAS_INS">
+		<!--~~~~~~~~~~~~~~~~~~~-->
+		<!--General Sensor Info-->
+		<!--~~~~~~~~~~~~~~~~~~~-->
+		<sml:identification>
+			<sml:IdentifierList>
+				<sml:identifier name="short_name">
+					<sml:Term qualifier="urn:ogc:identifier:shortName">INS</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="long_name">
+					<sml:Term qualifier="urn:ogc:identifier:longName">Inertial Navigation System</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="uid">
+					<sml:Term qualifier="urn:ogc:identifier:uid">urn:nasa:arc:sensor:airdas:ins:v1:001</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="serial_number">
+					<sml:Term qualifier="urn:ogc:identifier:serialNumber">ins001</sml:Term>
+				</sml:identifier>
+			</sml:IdentifierList>
+		</sml:identification>
+		<sml:classification>
+			<sml:ClassifierList>
+				<sml:classifier name="sensor_type">
+					<sml:Term qualifier="urn:ogc:classifier:sensorType">Positioning System</sml:Term>
+				</sml:classifier>
+				<sml:classifier name="application">
+					<sml:Term qualifier="urn:ogc:classifier:application">Navigation Measurements</sml:Term>
+				</sml:classifier>
+			</sml:ClassifierList>
+		</sml:classification>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Sensor Coordinate Frame-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:referenceFrame>
+			<sml:LocalSpatialCRS id="SENSOR_FRAME">
+				<sml:srsName>INS Unit Frame</sml:srsName>
+				<sml:usesCS xlink:href="urn:ogc:cs:xyzFrame"/>
+				<sml:usesDatum>
+					<sml:LocalSpatialDatum>
+						<sml:datumName>Navigation System Datum</sml:datumName>
+						<sml:anchorPoint>
+							origin is on the bottom left corner of the INS system box
+						</sml:anchorPoint>
+						<sml:orientation>
+							as defined by manufacturer
+						</sml:orientation>
+					</sml:LocalSpatialDatum>
+				</sml:usesDatum>
+			</sml:LocalSpatialCRS>
+		</sml:referenceFrame>		
+		<!--~~~~~~~~~~~~~-->
+		<!--Sensor Inputs-->
+		<!--~~~~~~~~~~~~~-->
+		<sml:inputs>
+			<sml:InputList>
+				<sml:input name="satellite_signals">
+					<swe:DataArray arraySize="12">
+						<swe:component>
+							<swe:Quantity definition="urn:ogc:data:digital"/>
+						</swe:component>
+					</swe:DataArray>
+				</sml:input>
+			</sml:InputList>
+		</sml:inputs>
+		<!--~~~~~~~~~~~~~~-->
+		<!--Sensor Outputs-->
+		<!--~~~~~~~~~~~~~~-->
+		<sml:outputs>
+			<sml:OutputList>
+				<sml:output name="gps_data">
+					<swe:DataGroup>
+						<swe:component name="location">
+							<swe:GeoLocation>
+								<swe:latitude>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle:latitude" uom="deg"/>
+								</swe:latitude>
+								<swe:longitude>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle:longitude" uom="deg"/>
+								</swe:longitude>
+								<swe:altitude>
+									<swe:Quantity definition="urn:ogc:data:quantity:distance:altitude" uom="m"/>
+								</swe:altitude>							
+							</swe:GeoLocation>
+						</swe:component>
+						<swe:component name="bearing">
+							<swe:DataGroup>
+								<swe:component name="true_heading">
+									<swe:Quantity definition="urn:ogc:data:quantity:angle:trueHeading"/>
+								</swe:component>
+								<swe:component name="travel_speed">
+									<swe:Quantity definition="urn:ogc:data:quantity:speed"/>
+								</swe:component>
+							</swe:DataGroup>
+						</swe:component>
+						<swe:component name="errors">
+							<swe:DataGroup>
+								<swe:component name="HDOP">
+									<swe:Quantity definition="urn:ogc:phenomenon:distance" uom="m"/>
+								</swe:component>
+								<swe:component name="VDOP">
+									<swe:Quantity definition="urn:ogc:phenomenon:distance" uom="m"/>
+								</swe:component>
+								<swe:component name="TDOP">
+									<swe:Quantity definition="urn:ogc:phenomenon:duration" uom="s"/>
+								</swe:component>
+							</swe:DataGroup>
+						</swe:component>
+					</swe:DataGroup>						
+				</sml:output>
+				<sml:output name="imu_data">
+					<swe:DataGroup definition="urn:ogc:phenomenon:orientation">
+						<swe:component name="pitch">
+							<swe:Quantity definition="urn:ogc:data:quantity:angle"/>
+						</swe:component>
+						<swe:component name="roll">
+							<swe:Quantity definition="urn:ogc:data:quantity:angle"/>
+						</swe:component>
+						<swe:component name="yaw">
+							<swe:Quantity definition="urn:ogc:data:quantity:angle"/>
+						</swe:component>
+					</swe:DataGroup>
+				</sml:output>
+			</sml:OutputList>
+		</sml:outputs>
+		<!--~~~~~~~~~~~~~~~~~-->
+		<!-- Response Models -->
+		<!--~~~~~~~~~~~~~~~~~-->
+		<sml:processes>
+			<sml:ProcessList>
+				<sml:process name="gps_response" xlink:href="urn:nasa:ames:process:GPS_Internals"/>
+				<sml:process name="imu_response" xlink:href="urn:nasa:ames:process:IMU_Internals"/>
+			</sml:ProcessList>
+		</sml:processes>
+		<!--~~~~~~~~~~~~~~~~~~~~~-->
+		<!-- Process Connections -->
+		<!--~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:connections>
+			<sml:ConnectionList>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/satellite_signals"/>
+						<sml:destination ref="ins_response/inputs/satellite_signals"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="ins_response/outputs"/>
+						<sml:destination ref="this/outputs"/>
+					</sml:Link>
+				</sml:connection>
+			</sml:ConnectionList>
+		</sml:connections>		
+	</sml:Sensor>
+</sml:SensorML>

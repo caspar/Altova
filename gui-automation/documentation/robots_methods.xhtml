@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Important methods in the robots framework</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="robots_examples.xhtml">Next: Usage examples of robot classes and methods</a>
+		</div>
+		<div class="previous">
+			<a href="robots_classes.xhtml">Previous: Robots class hierarchy</a>
+		</div>
+		<h1>Important methods in the robots framework</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">The previous section covered the overall <a href="robots_classes.xhtml">robots class hierarchy</a>. In this section, we'll drill a bit more into the details of these classes, and look at methods of particular interest.</div>
+		<div class="p">
+		However, before I start, I must stress that we are now focusing on the <b>internals</b> of the Robots classes. <b>Some of these methods should only be used from within other robot methods.</b> Some of them are also <i>protected</i>, to enforce this, and should probably remain so, unless a very good reason exits to access them from outside.
+		</div>
+		<h2>
+			<a name="2" />Basic mouse move and click, and typing</h2>
+		<div class="p">
+			<map id="GenericRobot">
+				<area alt="GenericRobot" coords="186,35,271,54" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html" />
+				<area alt="delay" coords="143,65,340,84" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#delay(int)" />
+				<area alt="leftClick" coords="143,84,340,103" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#leftClick()" />
+				<area alt="rightClick" coords="143,103,340,122" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#rightClick()" />
+				<area alt="mouseMove" coords="143,122,340,141" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#mouseMove(int,%20int)" />
+				<area alt="leftClick" coords="143,141,340,160" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#leftClick(int,%20int)" />
+				<area alt="rightClick" coords="143,160,340,179" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#rightClick(int,%20int)" />
+				<area alt="leftClickMid" coords="143,179,340,198" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#leftClickMid(java.awt.Rectangle)" />
+				<area alt="rightClickMid" coords="143,198,340,217" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#rightClickMid(java.awt.Rectangle)" />
+				<area alt="moveMid" coords="143,217,340,236" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#moveMid(java.awt.Rectangle)" />
+				<area alt="leftClick" coords="143,236,340,255" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#leftClick(java.awt.Point)" />
+				<area alt="rightClick" coords="143,255,340,274" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#rightClick(java.awt.Point)" />
+				<area alt="dragDrop" coords="143,274,340,293" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#dragDrop(java.awt.Point,%20java.awt.Point)" />
+				<area alt="keyType" coords="143,293,340,312" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#keyType(int)" />
+				<area alt="keyType" coords="143,312,340,331" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#keyType(char)" />
+				<area alt="typeString" coords="143,331,340,350" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#typeString(java.lang.String)" />
+				<area alt="typeStringEnter" coords="143,350,340,369" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#typeStringEnter(java.lang.String)" />
+				<area alt="typeStringConditional" coords="143,369,340,388" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/GenericRobot.html#typeStringConditional(java.lang.String)" />
+			</map>
+			<img alt="GenericRobot" src="GenericRobot.png" class="diagram" usemap="#GenericRobot" />
+			<i>Click on the methods to go directly to the Java Doc.</i>
+		</div>
+		<div class="p">
+		First, let's look at the top level class <a href="robots_classes.xhtml#GenericRobot">
+				<i>GenericRobot</i>
+			</a>, with its basic move, click and type methods. As seen in the diagram above, there are several methods for both left and right click, different methods for moving the cursor (without a click) and also a special method for drag &amp; drop. Furthermore, there are methods for typing a string. Here's an example of how this can be combined to do a task in the <i>StyleVisionRobot</i>:
+		<pre class="javacode">
+	public void assigningWorkingXML(String name) {
+		checkFile(name);
+		
+		<b>leftClickMid</b>( findTag("XML Files", BW) );
+		delay(500);
+		<b>typeString</b>("+");
+		delay(500);
+		Rectangle working = findTag("Working", BW);
+		<b>leftClick</b>(working.x-18, working.y);
+		delay(2000);
+		<b>typeStringEnter</b>(name);
+	}
+
+		</pre>
+		</div>
+		<h2>
+			<a name="3" />Hang on a second...</h2>
+		<div class="p">From the code above, you will notice several calls to the method <i>delay(int)</i>. This pauses the automation steps for the given number of milli seconds, and is very often required after mouse clicks and typing. The problem is that the Altova applications and Windows in general are very often lagging behind in responsiveness, and sometimes it might take some time before dialogs appears, etc. Other usages include waiting for the application to start up, like seen in the code from <i>ApplicationRobot</i>:
+		
+		<pre class="javacode">
+		ProcessStreamReader ps = runCommand(cmd);
+		<b>delay(10000)</b>;
+		
+		addEscapeDialogAction("You must restart", VK_N);
+		addEscapeDialogAction("Remind me later", VK_ESCAPE);
+
+		int i = 0;
+		int trys = 3;
+		while(!ps.hasTerminated() &amp;&amp; !isApplicationFront() &amp;&amp; i &lt; trys) {
+			logger.finest("Waiting for application to start up");
+			<b>delay(10000)</b>;
+			
+			if( findComponentName("Please wait") != null) {
+				continue;
+			}
+			checkEscapeDialogActions();
+			i++;
+		}
+		
+		//remove all escape actions
+		escapeDialogActions.clear();
+		
+		<b>delay(10000)</b>;		
+		</pre>
+		
+		Another important aspect of the <i>delay</i>-method, is that it can be dynamically adjusted through a parameter. This is useful on slower machines, like the virtual machines. One way of doing this, is to set the delay multiplier in a environment variable, which will multiply all delay times with the given number (the default is 1):
+		<pre class="cmd">
+	set ROBOTS_DELAY=3
+		</pre>
+		</div>
+		<h2>
+			<a name="4" />Finding things on the screen</h2>
+		<div class="p">
+			<map id="ImageRecognitionRobot">
+				<area alt="ImageRecognitionRobot" coords="244,35,385,54" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html" />
+				<area alt="leftClickString" coords="85,65,571,84" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#leftClickString(java.lang.String)" />
+				<area alt="leftClickString" coords="85,84,571,103" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#leftClickString(java.lang.String,%20java.awt.Font)" />
+				<area alt="leftClickString" coords="85,103,571,122" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#leftClickString(java.lang.String,%20java.awt.Font,%20java.awt.Color,%20java.awt.Rectangle)" />
+				<area alt="rightClickString" coords="85,122,571,141" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#rightClickString(java.lang.String)" />
+				<area alt="rightClickString" coords="85,141,571,160" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#rightClickString(java.lang.String,%20java.awt.Font)" />
+				<area alt="findString" coords="85,160,571,179" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findString(java.lang.String)" />
+				<area alt="findString" coords="85,179,571,198" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findString(java.lang.String,%20java.awt.Font)" />
+				<area alt="findString" coords="85,198,571,217" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findString(java.lang.String,%20java.awt.Font,%20java.awt.Color,%20java.awt.Color)" />
+				<area alt="findString" coords="85,217,571,236" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findString(java.lang.String,%20java.awt.Font,%20java.awt.Color)" />
+				<area alt="findString" coords="85,236,571,255" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findString(java.lang.String,%20java.awt.Rectangle,%20boolean)" />
+				<area alt="findString" coords="85,255,571,274" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findString(java.lang.String,%20java.awt.Font,%20java.awt.Rectangle,%20boolean)" />
+				<area alt="leftClickImage" coords="85,274,571,293" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#leftClickImage(java.lang.String)" />
+				<area alt="rightClickImage" coords="85,293,571,312" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#rightClickImage(java.lang.String)" />
+				<area alt="leftClickImage" coords="85,312,571,331" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#leftClickImage(java.awt.image.BufferedImage)" />
+				<area alt="findImage" coords="85,331,571,350" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findImage(java.lang.String)" />
+				<area alt="findImage" coords="85,350,571,369" href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findImage(java.net.URL)" />
+			</map>
+			<img alt="ImageRecognitionRobot" src="ImageRecognitionRobot.png" class="diagram" usemap="#ImageRecognitionRobot" />
+			<i>Click on the methods to go directly to the Java Doc.</i>
+		</div>
+		<div class="p">
+		When designing the Robots classes, and adding new general operations, you'll often need to search for both text and images on screen. As discussed in the section about <a href="robots_overview.xhtml#Image_Recognition">Image Recognition</a>, these locations <b>should not be hard coded</b>, but rather dynamically discovered through "land marks" or distinct features on the screen. In the simplest form, this will mean searching for an icon, or text, which the <a href="robots_classes.xhtml#4">ImageRecognitionRobot</a> has several methods for. The diagram above, gives a flavour of these.
+		</div>
+		<h2>
+			<a name="5" />Setting application options</h2>
+		<div class="p">
+			<map id="options_classes">
+				<area alt="Options" coords="280,30,527,80" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\Option.html" />
+				<area alt="Options" coords="746,155,799,174" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\Options.html" />
+				<area alt="RadioOption" coords="476,245,552,264" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\RadioOption.html" />
+				<area alt="ColorOption" coords="191,245,267,264" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\ColorOption.html" />
+				<area alt="AbstractOption" coords="326,155,420,173" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\AbstractOption.html" />
+				<area alt="TextFieldOption" coords="596,245,692,264" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\TextFieldOption.html" />
+				<area alt="CheckboxOption" coords="41,245,142,264" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\CheckboxOption.html" />
+				<area alt="DropDownOption" coords="326,245,429,264" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\DropDownOption.html" />
+			</map>
+			<img alt="robot hierarchy" src="options_classes_hierarchy.png" class="diagram" usemap="#options_classes" />
+			<i>Click on the classes to go directly to the Java Doc.</i>
+		</div>
+		<div class="p">
+			Finally, an important set of classes to know about is the <i>Options</i> hierarchy, for setting the values of options in various dialogs, including the <i>Tools -&gt; Options</i> dialog which is present in most applications. Five basic option types are already included, with the possibility for more specialised once if necessary. (As you might expect, there is a huge amount of inconsistency in this area, and you will have to work around some of them). The five types are presented below, with some screenshot examples for Altova products.
+		</div>
+		<h3>CheckboxOption</h3>
+		<div class="p">The names of the option should be fairly self explanatory, and the <i>CheckboxOption</i> is just what it says on the tin. Below is an example from the XMLSpy options dialog, with now less than six check boxes in this tiny area. So what if you want to click the bottom <i>Attributes</i> box, and not the top, you ask. I'm afraid you'll have to come up with something clever here.
+			<img alt="checkboxes" src="checkbox.png" class="screen" />
+		</div>
+		<h3>ColorOption</h3>
+		<div class="p">The <i>ColorOption</i> is a special kind of control in several of the Altova applications, to set font and background colours for various bits of the GUI. This class is also used for some sections present in the <i>Text fonts</i>, <i>WSDL fonts</i>, etc. tabs, as it covers both situations shown in the picture below. In that very same case, some font must be selected first, and then appropriate size, font, font attribute and colours must be set. However, the class <i>FontsOption</i> , which is explained below, manage to cover this specific case. 
+		
+			<img alt="color_options" src="color_options.png" class="screen" />
+		</div>
+		<h3>DropDownOption</h3>
+		<div class="p">The dropdown option is a standard GUI component found in most designs. It already contains predefined selections, for the related combo-box, please see the <i>TextFieldOption</i> class. Typically, the label for the dropdown is to the left or above of the interactive component, as seen in the pictures below (from UModel and XMLSpy options, respectively ). 
+		
+			<img alt="dropdown" src="dropdown.png" class="screen" />
+		</div>
+		<h3>RadioOption</h3>
+		<div class="p">The radio buttons are another example of staple GUI design, and come in a group of two or more predefined selections. Usually, they are stacked on top of each other, as seen in the left hand picture below. In the right hand picture, the are on a line, but luckily, the current implementation should handle this fine.
+			<img alt="radio buttons" src="radiobuttons.png" class="screen" />
+		</div>
+		<h3>TextFieldOption</h3>
+		<div class="p">The text field is a standard freeform input field, typically used for name, path locations, etc. Please note that this should be used for the combo-box as well, as seen in the example of the <i>Directory</i> field below (from the UModel <i>Import source</i> dialog). For the very special case of the combo-box for the Font names, a similar functionality seems to be enough to reach our purpose. Since <i>DropDownOption</i> is a much more complicated and, therefore, less stable class than <i>TextFieldOption</i>, an extension of the lattest has been implemented: <i>FontTextFieldOption</i>. 
+			<img alt="text fields" src="textfield.png" class="screen" />
+		</div>
+		<h3>FontTextFieldOption</h3>
+		<div class="p">As roughly explained above, this class covers this specific hybrid between drop-down option and text field functionality for the cases in which the drop-down list is not displayed by clicking in the current value, behavior followed in the pure drop-down cases. However, the value can be typed to be entered and, therefore, its similarity with the <i>TextFieldOption</i> class.  Since it can be found in some sections of  Options dialog's font tabs to set the size and fontname, a separate class has been created for this.
+		<img alt="font text field options" src="font_text_field_option.png" class="screen" />
+		</div>
+		<h3>FontOption</h3>
+		<div class="p">This is a special class case in the XMLSpy options dialog to set font colours, size, and style to all different components typically contained in a xml file. The tabs Grid fonts, Schema fonts and WSDL fonts , from Spy's option dialog, as well as the Umodel's dialog where documentation can be tested calling this class. 
+		Just a special remark must be made: In the case of  the components  set to bold in the default registry settings and since they must be previously selected to change its properties , a screenshot of each must be provided. This is due to the difference between java's and window's bold fonts. If you happen to have to generate a new one, just look at the existing examples. Leave out the grey background and take special care at naming the file. 
+		<img alt="font options" src="font_options.png" class="screen" />
+		</div>		
+		<h3>Using the options classes</h3>
+		<div class="p">All these issues with the various options might seem tedious, but luckily the straight forward cases are very ease to use in the code. Below is an example which sets the language and directory to import source code from in UModel. Note how multiple options are wrapped up in the <i>Options</i> class, and then applied by passing in the robot object (<i>this</i> in the example below).
+		<pre class="javacode">
+	leftClickMenuItem("Project", "Import Source Directory");
+	
+	<b>Options</b> options = new <b>Options</b>();
+	options.add(new <b>DropDownOption</b>("Language", "Java5.0"));
+	options.add(new <b>TextFieldOption</b>("Directory", "c:\work\gui-automation\src"));
+	options.<b>applyOption</b>(<b>this</b>);
+		</pre>
+		
+		Please note that the above is only an example, and the real use case would wrap some of this in a separate method, like seen below. And of course, if a large part of the test cases are importing Java projects specifically, it might make sense to wrap this further, with an <i>import<b>Java</b>SourceDirectory(String directory)</i>, which takes care of the code below.
+		
+		<pre class="javacode">
+	Options options = new Options();
+	options.add(new DropDownOption("Language", "Java5.0"));
+	options.add(new TextFieldOption("Directory", "c:\work\gui-automation\src"));
+	robot.<b>importSourceDirectory</b>(options);
+		</pre>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<sml:SensorML xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://www.opengis.net/sensorML ../base/sensorML.xsd" version="1.0">
+	<sml:System id="AIRDAS_SYSTEM">
+		<!--~~~~~~~~~~~~~~~~~~~~~-->
+		<!--General Platform Info-->
+		<!--~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:identification>
+			<sml:IdentifierList>
+				<sml:identifier name="short_name">
+					<sml:Term qualifier="urn:ogc:identifier:shortName">Canberra</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="long_name">
+					<sml:Term qualifier="urn:ogc:identifier:longName">Canberra Aircraft</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="uid">
+					<sml:Term qualifier="urn:ogc:identifier:uid"
+						>urn:nasa:arc:platform:canberra:001:v1</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="serial_number">
+					<sml:Term qualifier="urn:ogc:identifier:serialNumber">canberra001</sml:Term>
+				</sml:identifier>
+			</sml:IdentifierList>
+		</sml:identification>
+		<sml:classification>
+			<sml:ClassifierList>
+				<sml:classifier name="platform_type">
+					<sml:Term qualifier="urn:ogc:classifier:sensorType">Aircraft</sml:Term>
+				</sml:classifier>
+				<sml:classifier name="application">
+					<sml:Term qualifier="urn:ogc:classifier:application">Fire Imaging</sml:Term>
+				</sml:classifier>
+			</sml:ClassifierList>
+		</sml:classification>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Platform Characteristics-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:capabilities>
+			<sml:PropertyList>
+				<sml:property name="range">
+					<swe:Quantity definition="urn:ogc:data:quantity:distance"
+						uom="urn:ogc:unit:mile">3200</swe:Quantity>
+				</sml:property>
+				<sml:property name="maximum_altitude">
+					<swe:Quantity definition="urn:ogc:data:quantity:distance"
+						uom="urn:ogc:unit:foot">53800</swe:Quantity>
+				</sml:property>
+				<sml:property name="maximum_speed">
+					<swe:Quantity definition="urn:ogc:data:quantity:speed"
+						uom="urn:ogc:unit:milePerHour">547</swe:Quantity>
+				</sml:property>
+			</sml:PropertyList>
+		</sml:capabilities>
+		<sml:characteristics>
+			<sml:PropertyList>
+				<sml:property name="wing_span">
+					<swe:Quantity definition="urn:ogc:data:quantity:distance"
+						uom="urn:ogc:unit:meter">20.66</swe:Quantity>
+				</sml:property>
+				<sml:property name="length">
+					<swe:Quantity definition="urn:ogc:data:quantity:distance"
+						uom="urn:ogc:unit:meter">20.36</swe:Quantity>
+				</sml:property>
+			</sml:PropertyList>
+		</sml:characteristics>
+		<!--~~~~~~~~-->
+		<!--Contacts-->
+		<!--~~~~~~~~-->
+		<sml:contact role="operator">
+			<sml:ResponsibleParty>
+				<sml:individualName>Jian Zheng</sml:individualName>
+				<sml:organizationName>NASA Ames Research Center</sml:organizationName>
+				<sml:contactInfo>
+					<sml:phone>
+						<sml:voice>+1 (650) 604-3617</sml:voice>
+					</sml:phone>
+					<sml:address>
+						<sml:deliveryPoint>Mail Stop 242-2</sml:deliveryPoint>
+						<sml:city>Moffett Field</sml:city>
+						<sml:administrativeArea>CA</sml:administrativeArea>
+						<sml:postalCode>94035-1000</sml:postalCode>
+					</sml:address>
+				</sml:contactInfo>
+			</sml:ResponsibleParty>
+		</sml:contact>
+		<!--~~~~~~~~~~~~~~~~~-->
+		<!--System Parameters-->
+		<!--~~~~~~~~~~~~~~~~~-->
+		<sml:parameters>
+			<sml:ParameterList>
+				<sml:parameter name="scannerPosition">
+					<swe:Position>
+						<swe:location>
+							<swe:Location referenceFrame="AIRDAS_INS.xml#SENSOR_FRAME">
+								<swe:x>
+									<swe:Quantity definition="urn:ogc:data:quantity:distance" uom="urn:ogc:unit:meter">2.5</swe:Quantity>
+								</swe:x>
+								<swe:y>
+									<swe:Quantity definition="urn:ogc:data:quantity:distance" uom="urn:ogc:unit:meter">-0.4</swe:Quantity>
+								</swe:y>
+								<swe:z>
+									<swe:Quantity definition="urn:ogc:data:quantity:distance" uom="urn:ogc:unit:meter">0.2</swe:Quantity>
+								</swe:z>
+							</swe:Location>
+						</swe:location>
+						<swe:orientation>
+							<swe:Orientation referenceFrame="AIRDAS_INS.xml#SENSOR_FRAME">
+								<swe:x>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle" uom="urn:unit:degree">30.0</swe:Quantity>
+								</swe:x>
+								<swe:y>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle" uom="urn:unit:degree">30.0</swe:Quantity>
+								</swe:y>
+								<swe:z>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle" uom="urn:unit:degree">180.0</swe:Quantity>
+								</swe:z>
+								<swe:order>
+									<swe:Count>123</swe:Count>
+								</swe:order>
+							</swe:Orientation>
+						</swe:orientation>
+					</swe:Position>
+				</sml:parameter>
+				<sml:parameter name="platformPosition">
+					<swe:Position>
+						<swe:location>
+							<swe:Location referenceFrame="AIRDAS_INS.xml#SENSOR_FRAME">
+								<swe:x>
+									<swe:Quantity definition="urn:ogc:data:quantity:distance" uom="urn:ogc:unit:meter">2.5</swe:Quantity>
+								</swe:x>
+								<swe:y>
+									<swe:Quantity definition="urn:ogc:data:quantity:distance" uom="urn:ogc:unit:meter">-0.4</swe:Quantity>
+								</swe:y>
+								<swe:z>
+									<swe:Quantity definition="urn:ogc:data:quantity:distance" uom="urn:ogc:unit:meter">0.2</swe:Quantity>
+								</swe:z>
+							</swe:Location>
+						</swe:location>
+						<swe:orientation>
+							<swe:Orientation referenceFrame="AIRDAS_INS.xml#SENSOR_FRAME">
+								<swe:x>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle" uom="urn:unit:degree">30.0</swe:Quantity>
+								</swe:x>
+								<swe:y>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle" uom="urn:unit:degree">30.0</swe:Quantity>
+								</swe:y>
+								<swe:z>
+									<swe:Quantity definition="urn:ogc:data:quantity:angle" uom="urn:unit:degree">180.0</swe:Quantity>
+								</swe:z>
+								<swe:order>
+									<swe:Count>123</swe:Count>
+								</swe:order>
+							</swe:Orientation>
+						</swe:orientation>
+					</swe:Position>
+				</sml:parameter>
+			</sml:ParameterList>
+		</sml:parameters>
+		<!--~~~~~~~~~~~~~~~~~-->
+		<!--System components-->
+		<!--~~~~~~~~~~~~~~~~~-->
+		<sml:processes>
+			<sml:ProcessList>
+				<sml:process name="scanner" xlink:href="AIRDAS_Scanner.xml#AIRDAS_SCANNER"/>
+				<sml:process name="ins" xlink:href="AIRDAS_INS.xml#AIRDAS_INS"/>
+				<sml:process name="insToECEF" xlink:href="urn:ogc:process:T"/>
+				<sml:process name="scannerToIns" xlink:href="urn:ogc:process:T"/>
+			</sml:ProcessList>
+		</sml:processes>
+		<!--~~~~~~~~~~~~~~~~~~-->
+		<!--System connections-->
+		<!--~~~~~~~~~~~~~~~~~~-->
+		<sml:connections>
+			<sml:ConnectionList>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/parameters/scannerPosition"/>
+						<sml:destination ref="scannerToIns/inputs/referencePosition"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="scanner/outputs/localPosition"/>
+						<sml:destination ref="scannerToIns/inputs/localPosition"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="ins/outputs/ecefPosition"/>
+						<sml:destination ref="insToECEF/inputs/referencePosition"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="scannerToIns/outputs/position"/>
+						<sml:destination ref="insToECEF/inputs/localPosition"/>
+					</sml:Link>
+				</sml:connection>
+			</sml:ConnectionList>
+		</sml:connections>
+	</sml:System>
+</sml:SensorML>

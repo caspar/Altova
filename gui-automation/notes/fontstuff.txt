@@ -1,0 +1,42 @@
+
+For dev code, see:
+libs\icgui\ICGuiDefaultFont.cpp (void ICGuiDefaultFont::EnsureInitialized())
+
+	m_GuiDefaultLogFont = ICGuiDefaultFont::FillGUIDefaultFont( _T( "Arial" ), &ICGuiDefaultFont::m_GuiDefaultFont );
+	memset( &m_GuiDefaultDlgCtrlLogFont, 0, sizeof m_GuiDefaultDlgCtrlLogFont );
+	_tcscpy( m_GuiDefaultDlgCtrlLogFont.lfFaceName, _T( "MS Shell Dlg" ) );
+	m_GuiDefaultDlgCtrlLogFont.lfCharSet = DEFAULT_CHARSET;
+	m_GuiDefaultDlgCtrlLogFont.lfHeight = -11;
+
+In registry, see:
+
+C:\>reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes"
+
+! REG.EXE VERSION 3.0
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
+    Arial CE,238        REG_SZ  Arial,238
+    Arial CYR,204       REG_SZ  Arial,204
+    Arial Greek,161     REG_SZ  Arial,161
+    Arial TUR,162       REG_SZ  Arial,162
+    Courier New CE,238  REG_SZ  Courier New,238
+    Courier New CYR,204 REG_SZ  Courier New,204
+    Courier New Greek,161       REG_SZ  Courier New,161
+    Courier New TUR,162 REG_SZ  Courier New,162
+    Helv        REG_SZ  MS Sans Serif
+    Helvetica   REG_SZ  Arial
+    MS Shell Dlg 2      REG_SZ  Tahoma
+    Times       REG_SZ  Times New Roman
+    Times New Roman CE,238      REG_SZ  Times New Roman,238
+    Times New Roman CYR,204     REG_SZ  Times New Roman,204
+    Times New Roman Greek,161   REG_SZ  Times New Roman,161
+    Times New Roman TUR,162     REG_SZ  Times New Roman,162
+    Tms Rmn     REG_SZ  MS Serif
+    Arial Baltic,186    REG_SZ  Arial,186
+    Courier New Baltic,186      REG_SZ  Courier New,186
+    Times New Roman Baltic,186  REG_SZ  Times New Roman,186
+    MS Shell Dlg        REG_SZ  Microsoft Sans Serif
+
+
+On web, see:
+http://support.microsoft.com/kb/282187

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:SensorML xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+	          xsi:schemaLocation="http://www.opengis.net/sensorML ../base/sensorML.xsd" version="1.0">
+	<sml:System id="SPOT5_SAT">
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Satellite Coordinate Frame-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:referenceFrame>
+			<sml:LocalSpatialCRS id="SAT_FRAME">
+				<sml:srsName>Sensor Frame</sml:srsName>
+				<sml:usesCS xlink:href="urn:ogc:cs:xyzFrame"/>
+				<sml:usesDatum>
+					<sml:LocalSpatialDatum>
+						<sml:datumName>SPOT5 Satellite Spatial Datum</sml:datumName>
+						<sml:anchorPoint>
+							origin is at the center of mass of the satellite
+						</sml:anchorPoint>
+						<sml:orientation>
+							x (tangage) along the solar panel arm and toward the solar panel,
+							y (roulis) perpendicular to the front face of the satellite (sweep axis),
+							z (lacet) perpendicular to x and y (points to the center of the earth in flight).
+						</sml:orientation>
+					</sml:LocalSpatialDatum>
+				</sml:usesDatum>
+			</sml:LocalSpatialCRS>
+		</sml:referenceFrame>
+		<!--~~~~~~~~~~~~~~-->
+		<!--System Outputs-->
+		<!--~~~~~~~~~~~~~~-->
+		<sml:outputs>
+			<sml:OutputList>
+				<sml:output name="HRG_scanLine">
+					<swe:DataArray arraySize="3000">
+						<swe:component name="pixel">
+							<swe:DataGroup>
+								<swe:component name="xs1">
+									<swe:Quantity definition="urn:ogc:data:DN"/>
+								</swe:component>
+								<swe:component name="xs2">
+									<swe:Quantity definition="urn:ogc:data:DN"/>
+								</swe:component>
+								<swe:component name="xs3">
+									<swe:Quantity definition="urn:ogc:data:DN"/>
+								</swe:component>
+								<swe:component name="swir">
+									<swe:Quantity definition="urn:ogc:data:DN"/>
+								</swe:component>
+							</swe:DataGroup>
+						</swe:component>
+					</swe:DataArray>
+				</sml:output>
+			</sml:OutputList>
+		</sml:outputs>
+		<!--~~~~~~~~~~~~~~~~~-->
+		<!--System components-->
+		<!--~~~~~~~~~~~~~~~~~-->
+		<sml:processes>
+			<sml:ProcessList>
+				<sml:process name="hrg_scanner" xlink:href="./SPOT5_Scanner.xml"/>
+			</sml:ProcessList>
+		</sml:processes>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Processes Interconnections-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:connections>
+			<sml:ConnectionList>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="hrg_scanner/outputs/scanLine"/>
+						<sml:destination ref="this/outputs/HRG_scanLine"/>
+					</sml:Link>
+				</sml:connection>
+			</sml:ConnectionList>
+		</sml:connections>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Component Frames Position-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:positions>
+			<sml:PositionList>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!-- Position of satellite relative to ECEF frame -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<sml:position name="satelliteLocation">
+					<sml:GenericPosition>
+						<sml:inputs>
+							<sml:InputList>
+								<sml:time>
+									<swe:Time definition="urn:ogc:phenomenon:time:iso8601"/>
+								</sml:time>
+							</sml:InputList>
+						</sml:inputs>
+						<sml:outputs>
+							<sml:OutputList>
+								<sml:position>
+									<swe:LocationData definition="urn:ogc:phenomenon:location" localFrame="#SAT_FRAME" referenceFrame="urn:ogc:crs:ecef"/>
+								</sml:position>
+							</sml:OutputList>
+						</sml:outputs>
+						<sml:parameters>
+							<sml:ParameterList>
+								<sml:location name="doris_location">
+									<swe:NormalizedCurve>
+										<swe:function>
+											<swe:Curve arraySize="80"> <!-- number of location points-->
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="t">
+															<swe:Time definition="urn:ogc:phenomenon:time:iso8601"/>
+														</swe:axis>
+														<swe:axis name="x">
+															<swe:Quantity axisCode="X" uom="m"/>
+														</swe:axis>
+														<swe:axis name="y">
+															<swe:Quantity axisCode="Y" uom="m"/>
+														</swe:axis>
+														<swe:axis name="z">
+															<swe:Quantity axisCode="Z" uom="m"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>
+													2004-01-20T11:04:28.0Z,4.6454661745e+06,1.4337345174e+05,5.4967369404e+06
+													2004-01-20T11:04:58.0Z,4.8108486546e+06,8.5664035155e+04,5.3541720158e+06
+													...
+													<!--for each point in /Ephemeris--> 
+												</swe:tupleValues>
+											</swe:Curve>
+										</swe:function>
+									</swe:NormalizedCurve>
+								</sml:location>
+								<sml:velocity name="doris_velocity">
+									<swe:NormalizedCurve>
+										<swe:function>
+											<swe:Curve arraySize="80"> <!-- number of velocity points-->
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="t">
+															<swe:Time definition="urn:ogc:phenomenon:time:iso8601"/>
+														</swe:axis>
+														<swe:axis name="vx">
+															<swe:Quantity axisCode="X" uom="m.s-1"/>
+														</swe:axis>
+														<swe:axis name="vy">
+															<swe:Quantity axisCode="Y" uom="m.s-1"/>
+														</swe:axis>
+														<swe:axis name="vz">
+															<swe:Quantity axisCode="Z" uom="m.s-1"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>
+													2004-01-20T11:04:28.0Z,5.5917508560e+03,-1.9095527700e+03,-4.6647906330e+03
+													2004-01-20T11:04:58.0Z,5.4328482490e+03,-1.9373205000e+03,-4.8387781290e+03
+													...
+													<!--for each point in /Ephemeris--> 
+												</swe:tupleValues>
+											</swe:Curve>
+										</swe:function>
+									</swe:NormalizedCurve>
+								</sml:velocity>
+							</sml:ParameterList>
+						</sml:parameters>
+						<sml:method xlink:href="urn:ogc:process:genericPosition"/>
+					</sml:GenericPosition>
+				</sml:position>
+				<sml:position name="satelliteAttitude">
+					<sml:GenericPosition>
+						<sml:inputs>
+							<sml:InputList>
+								<sml:time>
+									<swe:Time definition="urn:ogc:phenomenon:time:iso8601"/>
+								</sml:time>
+							</sml:InputList>
+						</sml:inputs>
+						<sml:outputs>
+							<sml:OutputList>
+								<sml:position>
+									<swe:OrientationData definition="urn:ogc:phenomenon:orientation" localFrame="#SAT_FRAME" referenceFrame="urn:ogc:crs:ecef"/>
+								</sml:position>
+							</sml:OutputList>
+						</sml:outputs>
+						<sml:parameters>
+							<sml:ParameterList>
+								<sml:orientation name="corrected_attitude">
+									<swe:NormalizedCurve>
+										<swe:function>
+											<swe:Curve arraySize="300"> <!-- number of orientation points-->
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="t">
+															<swe:Time definition="urn:ogc:phenomenon:time:iso8601"/>
+														</swe:axis>
+														<swe:axis name="yaw">
+															<swe:Quantity axisCode="Z" uom="rad"/>
+														</swe:axis>
+														<swe:axis name="pitch">
+															<swe:Quantity axisCode="X" uom="rad"/>
+														</swe:axis>
+														<swe:axis name="roll">
+															<swe:Quantity axisCode="Y" uom="rad"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>
+													2004-01-20T11:06:43.762445Z,1.1048898666e-03,-4.0862285906e-04,-9.3330583274e-05
+													2004-01-20T11:06:43.887445Z,1.1049021162e-03,-4.0890350327e-04,-9.3342130615e-05
+													...
+													<!--for each point in /Satellite_Attitudes/Corrected_Attitudes/Angles-->
+												</swe:tupleValues>
+											</swe:Curve>
+										</swe:function>
+									</swe:NormalizedCurve>
+								</sml:orientation>
+								<sml:rotationOrder>
+									<swe:Category>ZXY</swe:Category>
+								</sml:rotationOrder>
+							</sml:ParameterList>
+						</sml:parameters>
+						<sml:method xlink:href="urn:ogc:process:genericPosition"/>
+					</sml:GenericPosition>
+				</sml:position>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!-- Position of sensor relative to satellite frame -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<sml:position>
+					<swe:Position localFrame="./SPOT5_Scanner.xml#SENSOR_FRAME" referenceFrame="#SENSOR_FRAME">
+						<swe:location>
+							<swe:Location definition="urn:ogc:phenomenon:location">
+								<swe:x><swe:Quantity uom="m">0.0</swe:Quantity></swe:x>
+								<swe:y><swe:Quantity uom="m">0.0</swe:Quantity></swe:y>
+								<swe:z><swe:Quantity uom="m">0.0</swe:Quantity></swe:z>
+							</swe:Location>
+						</swe:location>
+						<swe:orientation>
+							<swe:Orientation definition="urn:ogc:phenomenon:orientation">
+								<swe:x><swe:Quantity uom="deg">0.0</swe:Quantity></swe:x>
+								<swe:y><swe:Quantity uom="deg">0.0</swe:Quantity></swe:y>
+								<swe:z><swe:Quantity uom="deg">0.0</swe:Quantity></swe:z>
+								<swe:order><swe:Category>XYZ</swe:Category></swe:order>
+							</swe:Orientation>
+						</swe:orientation>
+					</swe:Position>									
+				</sml:position>
+			</sml:PositionList>
+		</sml:positions>	
+	</sml:System>
+</sml:SensorML>

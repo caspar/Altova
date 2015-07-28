@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+-->
+<article xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cals-table-001.xsd">
+	<articleinfo>
+		<title>CALS Table Test  001</title>
+		<releaseinfo>Release 4.4</releaseinfo>
+		<author>
+			<firstname>Lobsang</firstname>
+			<surname>Gyalpo</surname>
+			<affiliation>
+				<address>
+					<email>gyalpo@altova.com</email>
+				</address>
+			</affiliation>
+		</author>
+	</articleinfo>
+	<table frame="all">
+		<title>CALS Table Test 001</title>
+		<tgroup cols="2">
+			<colspec colname="col1" colnum="1"/>
+			<tbody>
+				<row>
+					<entry>A</entry>
+					<entry>B</entry>
+				</row>
+			</tbody>
+		</tgroup>
+		<table frame="all">
+			<title>CALS Table Test 001 - invalid second table element in a table</title>
+			<tgroup cols="2">
+				<colspec colname="col1" colnum="1"/>
+				<tbody>
+					<row>
+						<entry>A</entry>
+						<entry>B</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</table>
+</article>

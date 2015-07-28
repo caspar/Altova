@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    --><link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570" xlink:href="rol_ias_37_2010-04-30.xsd#ias_37_2010-04-30_role-827570" xlink:type="simple"/>
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570a" xlink:href="rol_ias_37_2010-04-30.xsd#ias_37_2010-04-30_role-827570a" xlink:type="simple"/>
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570b" xlink:href="rol_ias_37_2010-04-30.xsd#ias_37_2010-04-30_role-827570b" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default" xlink:type="simple"/>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570" xlink:title="[827570] Notes - Other provisions, contingent liabilities and contingent assets" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfOtherProvisionsContingentLiabilitiesAndContingentAssetsExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfContingentLiabilitiesExplanatory" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfOtherProvisionsExplanatory" xlink:label="loc_4" xlink:type="locator"/>
+    <link:definitionArc order="10.0" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfNatureOfContingentAssets" xlink:label="loc_5" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfEstimatedFinancialEffectOfContingentAssets" xlink:label="loc_6" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_InformationAboutContingentAssetsThatDisclosureIsNotPracticable" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_3" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_InformationAboutContingentLiabilitiesThatDisclosureIsNotPracticable" xlink:label="loc_7" xlink:type="locator"/>
+    <link:definitionArc order="60.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfReasonForNondisclosureOfInformationRegardingProvision" xlink:label="loc_8" xlink:type="locator"/>
+    <link:definitionArc order="70.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfReasonForNondisclosureOfInformationRegardingContingentLiability" xlink:label="loc_9" xlink:type="locator"/>
+    <link:definitionArc order="80.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfReasonForNondisclosureOfInformationRegardingContingentAsset" xlink:label="loc_10" xlink:type="locator"/>
+    <link:definitionArc order="90.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_10" xlink:type="arc"/>
+  </link:definitionLink>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570a" xlink:title="[827570a] Notes - Other provisions, contingent liabilities and contingent assets" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfOtherProvisionsExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfOtherProvisionsAbstract" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfOtherProvisionsTable" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xbrldt:closed="true" xbrldt:contextElement="scenario" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_2" xlink:to="loc_3" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ClassesOfProvisionsAxis" xlink:label="loc_4" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_3" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherProvisionsMember" xlink:label="loc_5" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_4" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherProvisionsMember" xlink:label="loc_12" xlink:type="locator"/>
+    <link:definitionArc order="20.0" priority="1" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_4" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_WarrantyProvisionMember" xlink:label="loc_6" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RestructuringProvisionMember" xlink:label="loc_7" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LegalProceedingsProvisionMember" xlink:label="loc_8" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OnerousContractsProvisionMember" xlink:label="loc_9" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ProvisionForDecommissioningRestorationAndRehabilitationCostsMember" xlink:label="loc_10" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MiscellaneousOtherProvisionsMember" xlink:label="loc_11" xlink:type="locator"/>
+    <link:definitionArc order="60.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfOtherProvisionsLineItems" xlink:label="loc_13" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_2" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReconciliationOfChangesInOtherProvisionsAbstract" xlink:label="loc_14" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_13" xlink:to="loc_14" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherProvisions" xlink:label="loc_15" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_14" xlink:to="loc_15" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ChangesInOtherProvisionsAbstract" xlink:label="loc_16" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_14" xlink:to="loc_16" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ChangesInOtherProvisions" xlink:label="loc_26" xlink:type="locator"/>
+    <link:definitionArc order="100.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_26" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AdditionalProvisionsOtherProvisions" xlink:label="loc_17" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_17" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ProvisionUsedOtherProvisions" xlink:label="loc_20" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_20" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_UnusedProvisionReversedOtherProvisions" xlink:label="loc_21" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_21" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncreaseDecreaseThroughNetExchangeDifferencesOtherProvisions" xlink:label="loc_24" xlink:type="locator"/>
+    <link:definitionArc order="80.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_24" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncreaseDecreaseThroughTransfersAndOtherChangesOtherProvisions" xlink:label="loc_25" xlink:type="locator"/>
+    <link:definitionArc order="90.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_25" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncreaseDecreaseInExistingProvisionsOtherProvisions" xlink:label="loc_18" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_18" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AcquisitionsThroughBusinessCombinationsOtherProvisions" xlink:label="loc_19" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_19" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncreaseDecreaseThroughTimeValueOfMoneyAdjustmentOtherProvisions" xlink:label="loc_22" xlink:type="locator"/>
+    <link:definitionArc order="60.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_22" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncreaseDecreaseThroughChangeInDiscountRateOtherProvisions" xlink:label="loc_23" xlink:type="locator"/>
+    <link:definitionArc order="70.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_16" xlink:to="loc_23" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfNatureOfObligationOtherProvisions" xlink:label="loc_27" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_13" xlink:to="loc_27" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfExpectedTimingOfOutflowsOtherProvisions" xlink:label="loc_28" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_13" xlink:to="loc_28" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IndicationOfUncertaintiesOfAmountOrTimingOfOutflowsOtherProvisions" xlink:label="loc_29" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_13" xlink:to="loc_29" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfMajorAssumptionsMadeConcerningFutureEventsOtherProvisions" xlink:label="loc_30" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_13" xlink:to="loc_30" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AssetRecognisedForExpectedReimbursementOtherProvisions" xlink:label="loc_31" xlink:type="locator"/>
+    <link:definitionArc order="60.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_13" xlink:to="loc_31" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExpectedReimbursementOtherProvisions" xlink:label="loc_32" xlink:type="locator"/>
+    <link:definitionArc order="70.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_13" xlink:to="loc_32" xlink:type="arc"/>
+  </link:definitionLink>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570b" xlink:title="[827570b] Notes - Other provisions, contingent liabilities and contingent assets" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfContingentLiabilitiesExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfContingentLiabilitiesAbstract" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfContingentLiabilitiesTable" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xbrldt:closed="true" xbrldt:contextElement="scenario" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_2" xlink:to="loc_3" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ClassesOfContingentLiabilitiesAxis" xlink:label="loc_4" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_3" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentLiabilitiesMember" xlink:label="loc_5" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_4" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentLiabilitiesMember" xlink:label="loc_14" xlink:type="locator"/>
+    <link:definitionArc order="20.0" priority="1" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_4" xlink:to="loc_14" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_WarrantyContingentLiabilityMember" xlink:label="loc_6" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RestructuringContingentLiabilityMember" xlink:label="loc_7" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LegalProceedingsContingentLiabilityMember" xlink:label="loc_8" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OnerousContractsContingentLiabilityMember" xlink:label="loc_9" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentLiabilityForDecommissioningRestorationAndRehabilitationCostsMember" xlink:label="loc_10" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentLiabilitiesOfJointVentureMember" xlink:label="loc_11" xlink:type="locator"/>
+    <link:definitionArc order="60.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ShareOfContingentLiabilitiesOfAssociatesMember" xlink:label="loc_12" xlink:type="locator"/>
+    <link:definitionArc order="70.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherContingentLiabilitiesMember" xlink:label="loc_13" xlink:type="locator"/>
+    <link:definitionArc order="80.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfContingentLiabilitiesLineItems" xlink:label="loc_15" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_2" xlink:to="loc_15" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfNatureOfObligationContingentLiabilities" xlink:label="loc_16" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_15" xlink:to="loc_16" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfFinancialEffectOfContingentLiabilities" xlink:label="loc_17" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_15" xlink:to="loc_17" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfPossibilityOfReimbursementContingentLiabilities" xlink:label="loc_18" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_15" xlink:to="loc_18" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IndicationOfUncertaintiesOfAmountOrTimingOfOutflowsContingentLiabilities" xlink:label="loc_19" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_15" xlink:to="loc_19" xlink:type="arc"/>
+  </link:definitionLink>
+</link:linkbase>

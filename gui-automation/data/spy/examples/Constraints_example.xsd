@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by user (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Categories">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CategoryID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CategoryName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Description" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Picture" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:base64Binary">
+							<xs:maxLength value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Products" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Categories_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="CategoryID"/>
+		</xs:key>
+		<xs:unique name="Categories_UniqueKey_0">
+			<xs:selector xpath="."/>
+			<xs:field xpath="CategoryName"/>
+			<xs:field xpath="Description"/>
+		</xs:unique>
+		<xs:keyref name="Categories_To_Products_CategoriesProducts" refer="Categories_PrimaryKey_1">
+			<xs:selector xpath="Products"/>
+			<xs:field xpath="CategoryID"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Customers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="CustomerID">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CompanyName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ContactName" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ContactTitle" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Address" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="City" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Region" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PostalCode" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Country" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Phone" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="24"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Fax" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="24"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Orders" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Customers_PrimaryKey_0">
+			<xs:selector xpath="."/>
+			<xs:field xpath="CustomerID"/>
+		</xs:key>
+		<xs:keyref name="Customers_To_Orders_CustomersOrders" refer="Customers_PrimaryKey_0">
+			<xs:selector xpath="Orders"/>
+			<xs:field xpath="CustomerID"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Employees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EmployeeID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="LastName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="FirstName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Title" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TitleOfCourtesy" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="25"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="BirthDate" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="HireDate" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Address" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="City" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Region" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PostalCode" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Country" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="HomePhone" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="24"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Extension" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Photo" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="255"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Notes" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ReportsTo" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Orders" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Employees_PrimaryKey_0">
+			<xs:selector xpath="."/>
+			<xs:field xpath="EmployeeID"/>
+		</xs:key>
+		<xs:keyref name="Employees_To_Orders_EmployeesOrders" refer="Employees_PrimaryKey_0">
+			<xs:selector xpath="Orders"/>
+			<xs:field xpath="EmployeeID"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Identifiers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="identifiers_id" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x003A_emp1" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="col_x003A_1" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="work_x005F_x0040_home" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="work_x005F_xhome" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="work_x005F_x" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_mL" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_mLn" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_mlcc" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_ml4" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_MLgh" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_MLtt" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_Mlnn" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_Mlvv" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_mLmm" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_mLui" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_mlio" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_mldd" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_MLbb" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_MLzz" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_Mlll" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_Mlg6" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="emp2" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_emp3_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_Emp4_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="emp_x0040_home" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022__x0040__x0040__x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0078_ml_column1" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0058_ML_column2" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_xml_column3_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_XML_column4_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x005F_xml_column1" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_XML_column2" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_v_x002a_k_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_n_x002b_m_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_b_x002a_b_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_v_x0024_v_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_V_x00a7_V_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_V_x0025_T_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_v_x0026_v_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x0022_m_x003f_n_x0022_" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Identifiers2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="_x0058_ml" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="b-l" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="_x002d_c2" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="b_x003e_s" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="s_x003c_b" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Number">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="column1" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:unsignedByte">
+							<xs:maxInclusive value="255"/>
+							<xs:minInclusive value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="column2" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="18"/>
+							<xs:fractionDigits value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="column3" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:double"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="column4">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Order_x0020_Details">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OrderID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ProductID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="UnitPrice">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="19"/>
+							<xs:fractionDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Quantity">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="32767"/>
+							<xs:minInclusive value="-32768"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Discount">
+					<xs:simpleType>
+						<xs:restriction base="xs:float"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Order_x0020_Details_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="OrderID"/>
+			<xs:field xpath="ProductID"/>
+		</xs:key>
+	</xs:element>
+	<xs:element name="Orders">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OrderID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CustomerID" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="5"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EmployeeID" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="OrderDate" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="RequiredDate" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShippedDate" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipVia" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Freight" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="19"/>
+							<xs:fractionDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipName" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipAddress" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipCity" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipRegion" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipPostalCode" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ShipCountry" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Order_x0020_Details" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Orders_PrimaryKey_2">
+			<xs:selector xpath="."/>
+			<xs:field xpath="OrderID"/>
+		</xs:key>
+		<xs:keyref name="Orders_To_Order_x0020_Details_OrdersOrder_x0020_Details" refer="Orders_PrimaryKey_2">
+			<xs:selector xpath="Order_x005F_x0020_Details"/>
+			<xs:field xpath="OrderID"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Products">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ProductID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ProductName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SupplierID" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CategoryID" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="QuantityPerUnit" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="UnitPrice" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="19"/>
+							<xs:fractionDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="UnitsInStock" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="32767"/>
+							<xs:minInclusive value="-32768"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="UnitsOnOrder" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="32767"/>
+							<xs:minInclusive value="-32768"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ReorderLevel" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="32767"/>
+							<xs:minInclusive value="-32768"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Discontinued">
+					<xs:simpleType>
+						<xs:restriction base="xs:boolean"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Order_x0020_Details" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Products_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="ProductID"/>
+		</xs:key>
+		<xs:keyref name="Products_To_Order_x0020_Details_ProductsOrder_x0020_Details" refer="Products_PrimaryKey_1">
+			<xs:selector xpath="Order_x005F_x0020_Details"/>
+			<xs:field xpath="ProductID"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Shippers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ShipperID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CompanyName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Phone" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="24"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Orders" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Shippers_PrimaryKey_1">
+			<xs:selector xpath="."/>
+			<xs:field xpath="ShipperID"/>
+		</xs:key>
+		<xs:unique name="Shippers_UniqueKey_0">
+			<xs:selector xpath="."/>
+			<xs:field xpath="CompanyName"/>
+			<xs:field xpath="Phone"/>
+		</xs:unique>
+		<xs:keyref name="Shippers_To_Orders_ShippersOrders" refer="Shippers_PrimaryKey_1">
+			<xs:selector xpath="Orders"/>
+			<xs:field xpath="ShipVia"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Suppliers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SupplierID">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CompanyName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ContactName" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ContactTitle" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Address" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="60"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="City" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Region" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PostalCode" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Country" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Phone" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="24"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Fax" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="24"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="HomePage" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="Products" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Suppliers_PrimaryKey_0">
+			<xs:selector xpath="."/>
+			<xs:field xpath="SupplierID"/>
+		</xs:key>
+		<xs:keyref name="Suppliers_To_Products_SuppliersProducts" refer="Suppliers_PrimaryKey_0">
+			<xs:selector xpath="Products"/>
+			<xs:field xpath="SupplierID"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="Types">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="c1">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c2" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="200"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c3" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c4" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c5" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="32767"/>
+							<xs:minInclusive value="-32768"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c6" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:unsignedByte">
+							<xs:maxInclusive value="255"/>
+							<xs:minInclusive value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c7" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="18"/>
+							<xs:fractionDigits value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c8" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:float"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c9" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:double"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c10" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c11" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="19"/>
+							<xs:fractionDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c12" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:dateTime">
+							<xs:pattern value="\p{Nd}{4}-\p{Nd}{2}-\p{Nd}{2}T\p{Nd}{2}:\p{Nd}{2}:\p{Nd}{2}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c13">
+					<xs:simpleType>
+						<xs:restriction base="xs:boolean"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c14" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:base64Binary">
+							<xs:maxLength value="2147483647"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c15" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="8000"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="c16" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="Types_PrimaryKey_0">
+			<xs:selector xpath="."/>
+			<xs:field xpath="c1"/>
+		</xs:key>
+	</xs:element>
+	<xs:element name="umlaut">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="c1" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="böm" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="umlaut_x0020_with_x0020_blank">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="c1" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxInclusive value="2147483647"/>
+							<xs:minInclusive value="-2147483648"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="böm" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="third_x0020_column" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

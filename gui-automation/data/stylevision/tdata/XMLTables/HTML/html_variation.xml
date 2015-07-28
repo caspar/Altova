@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- author: Brian A. Cole (bcole@nsf.gov) -->
+<!-- filename: embed.xml (XML data conforming to embed.xsd Schema) -->
+<!-- Must specify a prefix for any element in the default namespace 
+    because any un-prefixed tags are in the XHTML namespace. -->
+<def:root xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xmlns:def="http://testing.es" xmlns:n1="http://www.w3.org/2001/XMLSchema-instance" n1:schemaLocation="http://testing.es html_variation.xsd">
+	<def:child1>foo</def:child1>
+	<def:child2>This element has <em>mixed content</em>
+          containining <em>un-prefixed <ul>XHTML</ul>
+          sub-elements</em>.
+          <TABLE summary="The price of golden turnips is over 100 times the price of lettuce." border="1">
+			<!--colgroup is not supported so table will not be displayed -->
+			<!-- <COLGROUP>
+				<COL/>
+				<COL align="char" char="."/>
+			</COLGROUP> -->
+			<THEAD>
+				<TR>
+					<TH>Vegetable</TH>
+					<TH>Cost per kilo </TH>
+				</TR>
+			</THEAD>
+			<TBODY>
+				<TR>
+					<TD>Lettuce</TD>
+					<TD>$1</TD>
+				</TR>
+				<TR>
+					<TD>Silver carrots</TD>
+					<TD>$10.50</TD>
+				</TR>
+				<TR>
+					<TD>Golden turnips</TD>
+					<TD>$100.30</TD>
+				</TR>
+			</TBODY>
+		</TABLE>
+	</def:child2>
+	<def:child3>bar</def:child3>
+</def:root>

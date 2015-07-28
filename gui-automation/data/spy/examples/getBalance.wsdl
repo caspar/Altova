@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:description targetNamespace="http://example.org/getBalance/" xmlns:tns="http://example.org/getBalance/" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://example.org/name">
+	<wsdl:documentation>
+		This test shows how to use elements from an included no-target
+		namespace xsd (i.e. chameleon include)
+	</wsdl:documentation>
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://example.org/getBalance/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:include schemaLocation="getBalance.xsd"/>
+			<xsd:import namespace="http://example.org/name" schemaLocation="name.xsd"/>
+			<xsd:element name="InternalElement"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:interface name="getBalanceInf">
+		<wsdl:operation name="getBalance" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<wsdl:input element="tns:custInfo"/>
+			<wsdl:output element="tns:accInfo"/>
+		</wsdl:operation>
+	</wsdl:interface>
+</wsdl:description>

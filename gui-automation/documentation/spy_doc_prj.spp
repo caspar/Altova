@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;mtx;rdf;smil;svg;wml"/>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
+		<File FilePath="make_index.xslt" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp">
+		<File FilePath="quick_start.xhtml" HomeFolder="Yes"/>
+		<File FilePath="intro.xhtml" HomeFolder="Yes"/>
+		<Folder FolderName="Setting up">
+			<File FilePath="eclipse.xhtml" HomeFolder="Yes"/>
+			<File FilePath="install.xhtml" HomeFolder="Yes"/>
+			<File FilePath="junit.xhtml" HomeFolder="Yes"/>
+			<File FilePath="cvs_howto.xhtml" HomeFolder="Yes"/>
+			<File FilePath="ant_howto.xhtml" HomeFolder="Yes"/>
+			<File FilePath="java_howto.xhtml" HomeFolder="Yes"/>
+			<File FilePath="toc_setting_up.xhtml" HomeFolder="Yes"/>
+			<File FilePath="eclipse_howto.xhtml" HomeFolder="Yes"/>
+			<File FilePath="jni_howto.xhtml" HomeFolder="Yes"/>
+		</Folder>
+		<File FilePath="template.xhtml" HomeFolder="Yes"/>
+		<Folder FolderName="robot_framework">
+			<File FilePath="robots_classes.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robotscenter.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robots_overview.xhtml" HomeFolder="Yes"/>
+			<File FilePath="toolbar_rc.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robots_methods.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robots_new_plugins.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robots_new_app.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robots_new_release.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robots_plugin_classes.xhtml" HomeFolder="Yes"/>
+			<File FilePath="robots_examples.xhtml" HomeFolder="Yes"/>
+			<File FilePath="enhancements_translation.xhtml" HomeFolder="Yes"/>
+			<File FilePath="lookout.xhtml" HomeFolder="Yes"/>
+		</Folder>
+		<File FilePath="toc.xhtml" HomeFolder="Yes"/>
+		<File FilePath="junit_classes.xhtml" HomeFolder="Yes"/>
+		<File FilePath="plain.css" HomeFolder="Yes"/>
+		<File FilePath="junit_running.xhtml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<File FilePath="c:\program files\altova\xmlspy2007\schemas\xhtml\xhtml1-strict.dtd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="Entities" ExtStr="ent">
+		<File FilePath="c:\program files\altova\xmlspy2007\schemas/xhtml/xhtml-lat1.ent" HomeFolder="Yes"/>
+		<File FilePath="c:\program files\altova\xmlspy2007\schemas/xhtml/xhtml-special.ent" HomeFolder="Yes"/>
+		<File FilePath="c:\program files\altova\xmlspy2007\schemas/xhtml/xhtml-symbol.ent" HomeFolder="Yes"/>
+	</Folder>
+</Project>

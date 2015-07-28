@@ -1,0 +1,3980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_sps ..\BCMTable.sps?>
+<?xml-stylesheet type="text/xsl" href="..\BCM2SPS.xsl"?>
+<bcmTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../BusinessRule.xsd">
+<bcmDefinition>
+	<bcmId>772</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>dateDeNaissanceAssure</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1120</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>776</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>gensMaisonCodeNACE</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>777</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>gensMaisonNumeroONSS</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>768</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>libelleParticulariteGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>771</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>natureDuRisquePrincipal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>770</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>nombreDePersonnesAssurees</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1083</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>particularitesGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1081</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>particularitesGestion[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>767</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>particularitesGestion[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>775</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>particularitesProduitUUAP</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>769</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>professionPrincipale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>774</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>sexeDeLAssure</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>773</bcmId>
+	<bcmEntity>Accident</bcmEntity>
+	<bcmAttribute>typeDAssure</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>684</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>datePlanifiee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>687</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>destinataire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>688</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>langue</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>685</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>libelleLibre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>683</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>numeroDeLettre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>689</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>numeroGestionnaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>686</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>rappel</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>690</bcmId>
+	<bcmEntity>Agenda</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>165</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>BMaPosteriori</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>212</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>antecedentsTempo1</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>287</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>antecedentsTempo2</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1261</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>applicationOrigineDuContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>166</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>attestationSinistreDelivree</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>156</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>branche</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>39</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>canalDeGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>972</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>codeDeterminationCiePourAccesTablesAnnexes</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>285</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>codeEMIRegionDerogatoireDuCourtier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>284</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>codeSINRegionDerogatoireDuCourtier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>7</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>compagnieDEmission</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>167</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>compagnieDOrigine</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>40</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>compagnieDeGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>164</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>contratDOrigineUAB</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>785</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>conversion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>289</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>courrierGenius</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1208</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateConditionsGenerales</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>179</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateCreationSituationContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>217</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateDArchivage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1207</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateDEcheancePrincipale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>210</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateDEffetPremiereSituation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>983</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateDEffetSituationContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>899</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateDeCreationPremierePolice</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>5</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>datePAVDDCRE</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>226</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>datePremierEffetRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>144</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateProchaineQuittanceTerme</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>172</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dateReceptionDuCourrier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>663</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>demandeComplete</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>980</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dernierNumeroDOffre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>976</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>dernierNumeroDePolice</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1000</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>derniereTransactionEffectuee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>8</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>deviseDuContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1096</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>fractionnement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>720</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>gestionnaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1032</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>heureCreationSituationDeContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1036</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>indiceDeRenouvellement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>237</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>joker</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>238</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>jokerBM</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>9</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>labellisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>213</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>langue</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>177</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>libelleParticulariteGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>247</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>mentionIdProducteurDerogatoir</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>168</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>methodeDeGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>2</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>modeDEncaissement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>664</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>motifDemandeIncomplete</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1262</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>natureDeLEvolutionDuContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>281</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>nbreDePersonnesCieClient</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>180</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>nombreDeDeclenchementsPCX</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>6</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>numero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>134</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>numeroConditionsGenerales</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>140</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>numeroDeCx</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>209</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>numeroDeDomiciliationBancaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>3</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>numeroDePolice</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>174</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>numeroDePoliceDeBase</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>11</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>numeroDeSituation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>170</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>offreLieeAContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>907</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>organisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>219</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>particulariteDeGestion1</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>220</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>particulariteDeGestion2</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>214</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>particulierCorporate</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>139</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>pcxCx</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>960</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>policeDeTypeMarsh</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>279</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>policeProvientDUneAutreCompagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>661</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>referencePreneur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>662</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>referenceProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>790</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>saphir</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>900</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>sousAgentLaPoste</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1300</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>statutDeLOffre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1282</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>typeDeContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>194</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>typeDePolice</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>173</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>typeDePoliceDeBase</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>286</bcmId>
+	<bcmEntity>Agreement</bcmEntity>
+	<bcmAttribute>typeDeSousAgentLaPoste</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1115</bcmId>
+	<bcmEntity>AgreementConnexity</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>711</bcmId>
+	<bcmEntity>AgreementConnexity</bcmEntity>
+	<bcmAttribute>motif</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>787</bcmId>
+	<bcmEntity>AgreementConnexity</bcmEntity>
+	<bcmAttribute>policeConnexe</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>831</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>coutsDePolice</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>911</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>dateDeDebut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>912</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>830</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>primeAPayer</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>826</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>primeCommerciale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>910</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>primeTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>913</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>scalingFactor</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>914</bcmId>
+	<bcmEntity>AgreementPremiumCalculation</bcmEntity>
+	<bcmAttribute>utilisePrimeDeBaseStockee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1031</bcmId>
+	<bcmEntity>AgreementProcessingInfo</bcmEntity>
+	<bcmAttribute>macroEcranSousTypeDeTransaction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1023</bcmId>
+	<bcmEntity>AntecedentAccident</bcmEntity>
+	<bcmAttribute>accidentEnHebriete</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1022</bcmId>
+	<bcmEntity>AntecedentAccident</bcmEntity>
+	<bcmAttribute>assureInfirme</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1125</bcmId>
+	<bcmEntity>AntecedentAccident</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1019</bcmId>
+	<bcmEntity>AntecedentAccident</bcmEntity>
+	<bcmAttribute>preneurDejaAssure</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1020</bcmId>
+	<bcmEntity>AntecedentAccident</bcmEntity>
+	<bcmAttribute>resiliationCompagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1021</bcmId>
+	<bcmEntity>AntecedentAccident</bcmEntity>
+	<bcmAttribute>responsabiliteDejaEngagee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1260</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>aDesCavesCatNat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1016</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>annexesCatNat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1015</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>appartementALEtageCatNat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1018</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>dommageCavesUniquementCatNat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1124</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1017</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>innondationsDepuis5AnsCatNat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1009</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>preneurDejaAssure</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1012</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>preneurDejaAssureRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1010</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>resiliationCompagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1013</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>resiliationCompagnieRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1014</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>responsabiliteDejaEngageeRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1011</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>sinistreDepuis5Ans</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1206</bcmId>
+	<bcmEntity>AntecedentFireNew</bcmEntity>
+	<bcmAttribute>sinistreDepuis5AnsRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1123</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1001</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>preneurDejaAssure</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1006</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>preneurDejaAssureRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1002</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>resiliationCompagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1007</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>resiliationCompagnieRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1008</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>responsabiliteDejaEngageeRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1005</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>sinistreDepuis5Ans</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1205</bcmId>
+	<bcmEntity>AntecedentFireOld</bcmEntity>
+	<bcmAttribute>sinistreDepuis5AnsRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>702</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>conducteurContratPrecedentAnnule</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>701</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>conducteurHandicapMaladie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>703</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>conducteurSinistreAvecDelit</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>704</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>conducteurSinistreEnTort</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1126</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>705</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>preneurAntecedents</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>706</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>preneurContratPrecedentAnnule</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>707</bcmId>
+	<bcmEntity>AntecedentVehicle</bcmEntity>
+	<bcmAttribute>preneurSinistreEnTort</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1122</bcmId>
+	<bcmEntity>Antecedents</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1039</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>codeRegion3</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>63</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>compagnieComptable</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>819</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>compteProducteurCibleDuTransfert</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>818</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>dateDuTransfertGlobal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>905</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>delegationDePouvoir</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1097</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1060</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>721</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[10]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1051</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1052</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1053</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1054</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[4]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1055</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[5]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1056</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[6]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1057</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[7]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1058</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[8]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1059</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>information[9]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>62</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>marque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1093</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>modeDEncaissementBranche</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>872</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>modeDEncaissementGeneral</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>897</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>natureDuCompte</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1220</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>niveauDAutorisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>59</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>numeroDeCompteProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>962</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>particularite2</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>898</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>particularite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>906</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>particulariteBranche</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1219</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>reductionPrimeMaximumSurGarantieParSituation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>61</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>region</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1038</bcmId>
+	<bcmEntity>Broker</bcmEntity>
+	<bcmAttribute>scoring</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1242</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>bonusMalus</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1245</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>degressiviteAgreePV</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1247</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>effetDiffere</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1246</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>franchiseVolConducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1249</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>retroactiviteFire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1248</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>retroactiviteLiability</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1241</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>retroactivitePV</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1240</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>retroactiviteRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1243</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>valeurCatalogueAssureNeuf</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1244</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>valeurCatalogueAssureOccasion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1239</bcmId>
+	<bcmEntity>BrokerHabilitation</bcmEntity>
+	<bcmAttribute>valeurScoring</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>708</bcmId>
+	<bcmEntity>ClaimAntecedent</bcmEntity>
+	<bcmAttribute>date</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1114</bcmId>
+	<bcmEntity>ClaimAntecedent</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>710</bcmId>
+	<bcmEntity>ClaimAntecedent</bcmEntity>
+	<bcmAttribute>montant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>709</bcmId>
+	<bcmEntity>ClaimAntecedent</bcmEntity>
+	<bcmAttribute>numeroGarantie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>677</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>date</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>681</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>dateDebutRecuperationFranchise</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>682</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>dateFinRecuperationFranchise</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>678</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>degats</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1112</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>680</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>etatDuDossier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>675</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>numero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>679</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>particularite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>676</bcmId>
+	<bcmEntity>Claims</bcmEntity>
+	<bcmAttribute>referenceDuGestionnaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1209</bcmId>
+	<bcmEntity>ClauseDescription</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>698</bcmId>
+	<bcmEntity>ClauseDescription</bcmEntity>
+	<bcmAttribute>libelleLibre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>700</bcmId>
+	<bcmEntity>ClauseDescription</bcmEntity>
+	<bcmAttribute>libelleLong</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>697</bcmId>
+	<bcmEntity>ClauseDescription</bcmEntity>
+	<bcmAttribute>numeroDeClause</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>817</bcmId>
+	<bcmEntity>CommissionCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>montantDeLaCommission</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>815</bcmId>
+	<bcmEntity>CommissionCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>numeroDeCompteProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1026</bcmId>
+	<bcmEntity>CommissionCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>typeDExploitation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>816</bcmId>
+	<bcmEntity>CommissionCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>typeDeCommission</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>814</bcmId>
+	<bcmEntity>CommissionCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>typeDeCompteProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>695</bcmId>
+	<bcmEntity>CompetitorCompany</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>696</bcmId>
+	<bcmEntity>CompetitorCompany</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1113</bcmId>
+	<bcmEntity>CompetitorCompany</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>692</bcmId>
+	<bcmEntity>CompetitorCompany</bcmEntity>
+	<bcmAttribute>identiteDeLaCompagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>694</bcmId>
+	<bcmEntity>CompetitorCompany</bcmEntity>
+	<bcmAttribute>montantDeLaPrime</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>693</bcmId>
+	<bcmEntity>CompetitorCompany</bcmEntity>
+	<bcmAttribute>numeroDePoliceConcurrente</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>691</bcmId>
+	<bcmEntity>CompetitorCompany</bcmEntity>
+	<bcmAttribute>typeDeConcurrence</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>954</bcmId>
+	<bcmEntity>CompetitorCompanySubPeriod</bcmEntity>
+	<bcmAttribute>resultat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>278</bcmId>
+	<bcmEntity>ComplementaryDescription</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>277</bcmId>
+	<bcmEntity>ComplementaryDescription</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>276</bcmId>
+	<bcmEntity>ComplementaryDescription</bcmEntity>
+	<bcmAttribute>libelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>275</bcmId>
+	<bcmEntity>ComplementaryDescription</bcmEntity>
+	<bcmAttribute>numero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>89</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>90</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1098</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>91</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>exoneration</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>92</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>intervention</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>94</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>qualificatifDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>188</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>typeDExploitation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>93</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>typeDeChargement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>95</bcmId>
+	<bcmEntity>Cost</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>964</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>dateDeDebut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>965</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>967</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>exoneration</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>966</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>intervention</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>861</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>ordre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>856</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>qualificatifDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>860</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>resultat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>855</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>typeDeChargement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>854</bcmId>
+	<bcmEntity>CostPeriod</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>836</bcmId>
+	<bcmEntity>CostTotalsForAgreement</bcmEntity>
+	<bcmAttribute>chargementTotal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>835</bcmId>
+	<bcmEntity>CostTotalsForAgreement</bcmEntity>
+	<bcmAttribute>typeDeChargement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1024</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>categorie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>143</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>categorieSousCategorie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>162</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>compagnieDeGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>14</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>158</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>dateDExpiration</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>16</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>17</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>dateDeFinDeGratuite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>21</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>dateDuTarifApplique</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>133</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>dureeDeReconductionTacite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>157</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>dureeInitiale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>159</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>emissionPrimeManuelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1099</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>142</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>etatCPCompagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1250</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>garantieBloquee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>205</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>groupeAssistance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>141</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>groupeDeReassurance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>163</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>hausseTarifaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>136</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>indiceDeBlocage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>155</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>libelleComplementaireAuxCodesOrigineSituation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>132</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>motifFinDeGarantie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>131</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>motifGratuite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>304</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>nombreDePersonnes</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>206</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>nombreDeVehicules</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>22</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>numeroDeGarantie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>152</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>origineSituation1</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>153</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>origineSituation2</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>154</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>origineSituation3</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>138</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>primeProvisionnelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>161</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>situationDepasseePourQuittance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1025</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>sousCategorie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>20</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>tarificationManuelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>160</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>tauxApplique</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>137</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>tauxDeBaseAnnuel</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>18</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>typeDIndex</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>19</bcmId>
+	<bcmEntity>Coverage</bcmEntity>
+	<bcmAttribute>valeurDeLIndexALaSouscription</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>186</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>arrondiFranchise</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>27</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>28</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>187</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>detailALaCarte</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1100</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1175</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>fractionnement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>68</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>indexDeDepart</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>23</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>numeroDOption</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>25</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>qualificatifDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>185</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>resultat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>67</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>typeDIndexation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>24</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>typeDOption</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>26</bcmId>
+	<bcmEntity>CoverageOption</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>803</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>804</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>802</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>numeroDeGarantie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>805</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>primeNetteTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>806</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>typeDIndexation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>808</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>typeDePersonnalisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>807</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>valeurDeLIndex</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>809</bcmId>
+	<bcmEntity>CoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>valeurDePersonnalisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>845</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>dateDeDebut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>846</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>915</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>dateDeReferenceChargementsCie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>916</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>dateDeReferenceChargementsLegaux</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>842</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>dateDeReferenceIndex</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>922</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>dateDuTarifApplique</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>979</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>flagDeCalcul</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>843</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>indexDerogatoire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>844</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>indexPeriodeCalcul</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>901</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>montantDeBaseDeLaCommissionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>838</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>primeCommerciale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>840</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>primeDeBase</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>837</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>primeDeBaseAnnuelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>920</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>primeIntermediaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>919</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>primeMinimaleBT</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>921</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>primePureReelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>839</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>primeTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>923</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>tarifPrimeDeBaseManuel</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>917</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>totalDeChargementsCompagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>918</bcmId>
+	<bcmEntity>CoveragePremiumCalculationPeriod</bcmEntity>
+	<bcmAttribute>totalDeChargementsLegaux</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>863</bcmId>
+	<bcmEntity>CoveragePremiumCalculationSubPeriod</bcmEntity>
+	<bcmAttribute>dateDeDebut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>864</bcmId>
+	<bcmEntity>CoveragePremiumCalculationSubPeriod</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1302</bcmId>
+	<bcmEntity>CoveragePremiumCalculationSubPeriod</bcmEntity>
+	<bcmAttribute>montantDeBaseDeLaCommissionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>868</bcmId>
+	<bcmEntity>CoveragePremiumCalculationSubPeriod</bcmEntity>
+	<bcmAttribute>primeCommerciale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>862</bcmId>
+	<bcmEntity>CoveragePremiumCalculationSubPeriod</bcmEntity>
+	<bcmAttribute>primeDeBase</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>871</bcmId>
+	<bcmEntity>CoveragePremiumCalculationSubPeriod</bcmEntity>
+	<bcmAttribute>primeIntermediaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>867</bcmId>
+	<bcmEntity>CoveragePremiumCalculationSubPeriod</bcmEntity>
+	<bcmAttribute>prorata</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1004</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>codePostal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>765</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>critere</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1119</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>766</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>988</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDEmplacementVoiture</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>990</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeBureau</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>986</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeCave</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>989</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeChambre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>987</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeGarage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>999</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeGrenier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>984</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeLiving</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>991</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDePieceAutre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>985</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeSalleDeBain</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1003</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>nombreDeVeranda</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>993</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>plafondHaut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>992</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>plusDUneSalleDeBain</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>995</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>presenceAscensseur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>996</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>quatreFacade</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>998</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>rangeeCinqMetres</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>994</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>solPierreNature</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1040</bcmId>
+	<bcmEntity>EvaluationGrid</bcmEntity>
+	<bcmAttribute>toitureMateriauxNobles</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>738</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>adresseDuRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>755</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>calculDuCapital</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>732</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>capitalContenant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>733</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>capitalContenu</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>740</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>capitalDeReferenceVolumeIdeal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>728</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>classeDuRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>731</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>contiguite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>754</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>dateDeNaissance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>752</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>dateDeReceptionDesTravaux</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1116</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>745</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>libelleParticulariteGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>741</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>loyerAnnuelChargesInclues</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>746</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>montantLimiteDIndemnite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>756</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>nombreDeBatiments</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>734</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>nombreDeLogements</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>727</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>nombreDePieces</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>739</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>nombreDeRisques</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>750</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>nombreDeTranches</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>747</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>nombreDeVehicules</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>751</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>nouvelleConstruction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>730</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>occupationDuRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1084</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>particularitesGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1082</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>particularitesGestion[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>744</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>particularitesGestion[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>753</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>preventionVol</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>729</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>qualiteDuProprietaireDuBatiment</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>748</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>score</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>742</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>superficie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>724</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDHabitation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>735</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDeConstruction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>737</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDeCouvertureContenant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>736</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDeCouvertureContenu</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>726</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDeFinition</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>743</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDeFormule</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>725</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDeGrille</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>749</bcmId>
+	<bcmEntity>Fire</bcmEntity>
+	<bcmAttribute>typeDeTranche</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>973</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>blocageHausseTarifaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1050</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>clause</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1041</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>clause[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1042</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>clause[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1043</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>clause[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>331</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>clause[4]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>718</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>codePostal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>332</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>compagnie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>321</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>compteFinancier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>326</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>dateDAssainissement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>315</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>dateDeDerniereModification</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>719</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>314</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>dateIntroductionParticulierCorporate</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>318</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>demandeDAffiliationGenius</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>316</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>demandeDeMailingGenius</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>308</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>intitule</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>309</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleComplementaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1070</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>329</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[10]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1061</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1062</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1063</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1064</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[4]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1065</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[5]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1066</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[6]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1067</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[7]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1068</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[8]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1069</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>libelleLibreGarantie[9]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>327</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>memoDAssainissement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>322</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>nomPersonneDeContact</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>317</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>nombreDePersonnes</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>606</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>numeroDeRegroupement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>311</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>numeroFormuleSimple</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>310</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>numeroGrandCompte</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>313</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>organisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>312</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>particulierCorporate</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>717</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>produit</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>320</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>regionDeGestionSinistre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>716</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>statut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>610</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>325</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>typeDAssainissement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>319</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>typeDeDestinataireGenius</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>323</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>typeDeGestion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>604</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>typeDeRegroupement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>324</bcmId>
+	<bcmEntity>Fleet</bcmEntity>
+	<bcmAttribute>useridGestionnaireDeModification</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>887</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>dedoublement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>894</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>marque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>895</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>modele</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>884</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>ordreQuittanceGlobale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>889</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>ordreQuittanceGlobaleDedoublee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>893</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>plaque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>882</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>policeMere</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>891</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>quittanceAnnulee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>883</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>quittanceGlobale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>888</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>quittanceGlobaleDedoublee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>890</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>reglobalisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>886</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>sequenceDetailQuittanceGlobale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>885</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>situationContractuelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>892</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>typeDePlaque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>896</bcmId>
+	<bcmEntity>GlobalRelease</bcmEntity>
+	<bcmAttribute>version</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>822</bcmId>
+	<bcmEntity>Index</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>823</bcmId>
+	<bcmEntity>Index</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1121</bcmId>
+	<bcmEntity>Index</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>821</bcmId>
+	<bcmEntity>Index</bcmEntity>
+	<bcmAttribute>typeDIndex</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>824</bcmId>
+	<bcmEntity>Index</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1107</bcmId>
+	<bcmEntity>InsurableObject</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>904</bcmId>
+	<bcmEntity>InsurableObject</bcmEntity>
+	<bcmAttribute>numeroDeReferenceRisquePrincipal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>225</bcmId>
+	<bcmEntity>InsurableObject</bcmEntity>
+	<bcmAttribute>numeroDeSequenceDuRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>812</bcmId>
+	<bcmEntity>LegalCostCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>chargementManuel</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>813</bcmId>
+	<bcmEntity>LegalCostCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>exonerationDuChargement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>811</bcmId>
+	<bcmEntity>LegalCostCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>montant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>810</bcmId>
+	<bcmEntity>LegalCostCoveragePeriodRelease</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>712</bcmId>
+	<bcmEntity>MainDriver</bcmEntity>
+	<bcmAttribute>aDesEnfants</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1101</bcmId>
+	<bcmEntity>MainDriver</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>621</bcmId>
+	<bcmEntity>MainDriver</bcmEntity>
+	<bcmAttribute>etatStageDeConduite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>58</bcmId>
+	<bcmEntity>MainDriver</bcmEntity>
+	<bcmAttribute>parentsAssuresChezAXA</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>69</bcmId>
+	<bcmEntity>MainDriver</bcmEntity>
+	<bcmAttribute>suiviStageDeConduite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1301</bcmId>
+	<bcmEntity>MainDriver</bcmEntity>
+	<bcmAttribute>tarifJeuneConducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>296</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>295</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1037</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>derogeAuxDatesGarantie</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>80</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>indexation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>292</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>indiceDeBlocage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>294</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>libelleLibre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>699</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>libelleLong</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>307</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>numeroDOrdreDAppel</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>297</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>numeroDeMajorationReduction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>81</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>qualificatifDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>97</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>qualificatifMajorationReduction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>103</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>resultatDuCalcul</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>293</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>tarificationManuelle</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>84</bcmId>
+	<bcmEntity>MajorationReduction</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>853</bcmId>
+	<bcmEntity>MajorationReductionPeriod</bcmEntity>
+	<bcmAttribute>resultat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>971</bcmId>
+	<bcmEntity>MajorationReductionSubPeriod</bcmEntity>
+	<bcmAttribute>numeroDeSequence</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>955</bcmId>
+	<bcmEntity>MajorationReductionSubPeriod</bcmEntity>
+	<bcmAttribute>resultat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>969</bcmId>
+	<bcmEntity>MajorationReductionSubPeriod</bcmEntity>
+	<bcmAttribute>typeDeDerogation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>970</bcmId>
+	<bcmEntity>MajorationReductionSubPeriod</bcmEntity>
+	<bcmAttribute>typeDePrime</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>655</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>application</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>788</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>ecran</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>616</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>statutDuCopy</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>789</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>texteLibre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>622</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>transaction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1280</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>typeDeFrontEnd</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>628</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>typeDeMouvement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1281</bcmId>
+	<bcmEntity>Operation</bcmEntity>
+	<bcmAttribute>typeDeTransactionAXALink</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1299</bcmId>
+	<bcmEntity>Organisation</bcmEntity>
+	<bcmAttribute>appellation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>261</bcmId>
+	<bcmEntity>Organisation</bcmEntity>
+	<bcmAttribute>numeroDEntreprise</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1034</bcmId>
+	<bcmEntity>Organisation</bcmEntity>
+	<bcmAttribute>numeroDeTVA</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>280</bcmId>
+	<bcmEntity>Organisation</bcmEntity>
+	<bcmAttribute>organisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>763</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>codePostal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1118</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1204</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>lettreDernierNumero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>762</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>localite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1203</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>numero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1202</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>numeroBoite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>764</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>pays</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>761</bcmId>
+	<bcmEntity>ParkingAddress</bcmEntity>
+	<bcmAttribute>rue</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>981</bcmId>
+	<bcmEntity>PartialSegmentationCoefficientPeriod</bcmEntity>
+	<bcmAttribute>nom</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>982</bcmId>
+	<bcmEntity>PartialSegmentationCoefficientPeriod</bcmEntity>
+	<bcmAttribute>sequence</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1176</bcmId>
+	<bcmEntity>PartialSegmentationCoefficientPeriod</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>66</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>Genre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>169</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>accordDirectMarketing</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>248</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>249</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1108</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>260</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>flagTVAAPayer</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>290</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>historique</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>250</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>langue</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>264</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>nom</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>256</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>numeroCIF</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>262</bcmId>
+	<bcmEntity>Party</bcmEntity>
+	<bcmAttribute>numeroDeClient</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>101</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>affinity</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1048</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>codeParentSouscriptionConducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1044</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>codeParentSouscriptionConducteur[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1045</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>codeParentSouscriptionConducteur[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1046</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>codeParentSouscriptionConducteur[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1047</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>codeParentSouscriptionConducteur[4]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1035</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>codeParentSouscriptionConducteur[5]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1102</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>723</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>fonction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>263</bcmId>
+	<bcmEntity>PartyRole</bcmEntity>
+	<bcmAttribute>fonctionCourrier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>799</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>chargesTotales</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>801</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>commissionTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>795</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>dateDeDebut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>796</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>794</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>numeroDeFormule</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>792</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>numeroDeSequence</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>793</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>numeroDeSequenceDuRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>798</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>primeNetteTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>800</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>primeTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>797</bcmId>
+	<bcmEntity>PeriodRelease</bcmEntity>
+	<bcmAttribute>typeDePeriode</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>252</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>categorieDePermisDeConduire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>54</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>dateDeNaissance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>64</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>dateDePermisDeConduire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1095</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>251</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>nationalite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>273</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>numeroNational</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>254</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>prefixe</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>255</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>prefixeTexteLibre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>265</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>prenom</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>56</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>profession</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>55</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>sexe</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>274</bcmId>
+	<bcmEntity>Person</bcmEntity>
+	<bcmAttribute>typeConjoint</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>72</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>73</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>106</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>dateProchaineReevaluation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>71</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>degre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1110</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>302</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>intervention</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>104</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>motifIntervention</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>105</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>referenceLieeALEvolution</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>70</bcmId>
+	<bcmEntity>Personalisation</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>943</bcmId>
+	<bcmEntity>PersonalisationPeriod</bcmEntity>
+	<bcmAttribute>coefficient</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>944</bcmId>
+	<bcmEntity>PersonalisationPeriod</bcmEntity>
+	<bcmAttribute>coefficientDePersonnalisationGlobal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>945</bcmId>
+	<bcmEntity>PersonalisationPeriod</bcmEntity>
+	<bcmAttribute>dateDeReference</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>942</bcmId>
+	<bcmEntity>PersonalisationPeriod</bcmEntity>
+	<bcmAttribute>pourcentage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>175</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>compteBancaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>102</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>deductibiliteTVA</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1109</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>660</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>packageSouscrit</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>659</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>plusDe5VehiculesAssures</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>258</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>pourcentageProbaPerteClient</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>259</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>scoreCampagneApprocheClient</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>257</bcmId>
+	<bcmEntity>PolicyHolder</bcmEntity>
+	<bcmAttribute>scoreClientNormal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>269</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>boite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>53</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>codePostal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1103</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>268</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>lettreDerriereNumero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>272</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>localite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>267</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>numero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>270</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>numeroBoite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1094</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>pays</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>266</bcmId>
+	<bcmEntity>PostalAddress</bcmEntity>
+	<bcmAttribute>rue</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1104</bcmId>
+	<bcmEntity>Premium</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>30</bcmId>
+	<bcmEntity>Premium</bcmEntity>
+	<bcmAttribute>primeDeBase</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>29</bcmId>
+	<bcmEntity>Premium</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>135</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>conditionsGeneralesAJoindre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>149</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>destinatairesDocuments</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>145</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>impressionCP</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>147</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>impressionComptant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>150</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>impressionDocumentsSupplementaires</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>146</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>nombreDExemplairesCP</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>148</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>nombreDExemplairesComptant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>151</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>nombreDExemplairesDocumentsSupplementaires</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>974</bcmId>
+	<bcmEntity>PrintAgreement</bcmEntity>
+	<bcmAttribute>typeDeLettre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1279</bcmId>
+	<bcmEntity>Relation</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>648</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>calculManuAuto</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>647</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>chargementTotal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>650</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>coutPolice</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>651</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>coutQuittance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>630</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>dateDeCreation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>631</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>dateDeDebut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>632</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>634</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>dateDeLEtat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>978</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>dateDuDernierQuittancement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>638</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>dateLettreRecommandee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>977</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>dernierNumeroQuittanceComptant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>975</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>destinataireDeLImprime</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>641</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>destinataireDuComptant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>652</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>devise</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>633</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>etat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>639</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>impressionDocumentComptant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>653</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>impressionDocumentsSupplementaires</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>642</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>libelleLibrePasDeComptant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>636</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>modeDEncaissement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>637</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>646</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montantPrimeNetteTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1075</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montantTotalCommissionProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1071</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montantTotalCommissionProducteur[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1072</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montantTotalCommissionProducteur[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1073</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montantTotalCommissionProducteur[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1074</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montantTotalCommissionProducteur[4]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>645</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>montantTotalCommissionProducteur[5]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>635</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>motifDAnnulation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>654</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>nombreDExemplairesDocumentsSupplementaires</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>640</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>nombreExDocumentComptantSupplementaires</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>625</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1080</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroCompteProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1076</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroCompteProducteur[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1077</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroCompteProducteur[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1078</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroCompteProducteur[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1079</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroCompteProducteur[4]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>644</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroCompteProducteur[5]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>626</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroDOrdre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>627</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>numeroDeSequenceSituationContrat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>649</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>pourcentageAppliqueSurCalculComptant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>629</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1303</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>typeDeMouvement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1089</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>typeProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1085</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>typeProducteur[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1086</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>typeProducteur[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1087</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>typeProducteur[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1088</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>typeProducteur[4]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>643</bcmId>
+	<bcmEntity>Release</bcmEntity>
+	<bcmAttribute>typeProducteur[5]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>881</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>batchExecute</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>876</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>873</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>dateDeDemande</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>877</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>880</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>heureDemande</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>875</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>sequenceDeDemande</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>879</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>typeDEncaissement</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>878</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>typeDeCalcul</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>874</bcmId>
+	<bcmEntity>ReleaseCalcul</bcmEntity>
+	<bcmAttribute>typeDeDemande</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>778</bcmId>
+	<bcmEntity>ResponsabilityCivil</bcmEntity>
+	<bcmAttribute>classeDuRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>780</bcmId>
+	<bcmEntity>ResponsabilityCivil</bcmEntity>
+	<bcmAttribute>qualiteAssurance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1092</bcmId>
+	<bcmEntity>ResponsabilityCivil</bcmEntity>
+	<bcmAttribute>typeRC</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1090</bcmId>
+	<bcmEntity>ResponsabilityCivil</bcmEntity>
+	<bcmAttribute>typeRC[1]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1091</bcmId>
+	<bcmEntity>ResponsabilityCivil</bcmEntity>
+	<bcmAttribute>typeRC[2]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>779</bcmId>
+	<bcmEntity>ResponsabilityCivil</bcmEntity>
+	<bcmAttribute>typeRC[3]</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>784</bcmId>
+	<bcmEntity>ResponsabilitySingle</bcmEntity>
+	<bcmAttribute>capitalUnique</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>781</bcmId>
+	<bcmEntity>ResponsabilitySingle</bcmEntity>
+	<bcmAttribute>classeDuRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>782</bcmId>
+	<bcmEntity>ResponsabilitySingle</bcmEntity>
+	<bcmAttribute>nomBeneficiaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>783</bcmId>
+	<bcmEntity>ResponsabilitySingle</bcmEntity>
+	<bcmAttribute>typeDeCouverture</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>759</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>codePostal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1117</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1201</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>lettreDernierNumero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>758</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>localite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1200</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>numero</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1199</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>numeroBoite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>760</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>pays</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>757</bcmId>
+	<bcmEntity>RiskAddress</bcmEntity>
+	<bcmAttribute>rue</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>298</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>coefficientGlobalDeSegmentation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>110</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>coefficientImpose</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>619</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>620</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>618</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>dateProchaineReevaluation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>107</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>degreDeSegmentation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>109</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>degreImpose</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>228</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>intervention</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>229</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>motifIntervention</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>108</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>nombreDePoints</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>112</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>nombreDePointsDeroges</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>902</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>referenceLieeALEvolution</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>111</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>tarifPlafonne</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>227</bcmId>
+	<bcmEntity>Segmentation</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>232</bcmId>
+	<bcmEntity>SegmentationCriterium</bcmEntity>
+	<bcmAttribute>nom</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>115</bcmId>
+	<bcmEntity>SegmentationCriterium</bcmEntity>
+	<bcmAttribute>traitementDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>117</bcmId>
+	<bcmEntity>SegmentationCriterium</bcmEntity>
+	<bcmAttribute>typeDeValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>233</bcmId>
+	<bcmEntity>SegmentationCriterium</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>938</bcmId>
+	<bcmEntity>SegmentationCriteriumPeriod</bcmEntity>
+	<bcmAttribute>modifiable</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>935</bcmId>
+	<bcmEntity>SegmentationCriteriumPeriod</bcmEntity>
+	<bcmAttribute>nom</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>941</bcmId>
+	<bcmEntity>SegmentationCriteriumPeriod</bcmEntity>
+	<bcmAttribute>sequence</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>940</bcmId>
+	<bcmEntity>SegmentationCriteriumPeriod</bcmEntity>
+	<bcmAttribute>traitementDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>936</bcmId>
+	<bcmEntity>SegmentationCriteriumPeriod</bcmEntity>
+	<bcmAttribute>typeDeValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>937</bcmId>
+	<bcmEntity>SegmentationCriteriumPeriod</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>939</bcmId>
+	<bcmEntity>SegmentationCriteriumPeriod</bcmEntity>
+	<bcmAttribute>valeurParDefaut</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1259</bcmId>
+	<bcmEntity>SegmentationPartial</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>114</bcmId>
+	<bcmEntity>SegmentationPartial</bcmEntity>
+	<bcmAttribute>nomCoefficientDetail</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>231</bcmId>
+	<bcmEntity>SegmentationPartial</bcmEntity>
+	<bcmAttribute>valeurCoefficientDetail</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>929</bcmId>
+	<bcmEntity>SegmentationPeriod</bcmEntity>
+	<bcmAttribute>coefficientDeSegmentationGlobal</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>932</bcmId>
+	<bcmEntity>SegmentationPeriod</bcmEntity>
+	<bcmAttribute>conservationDerogationPermanente</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>933</bcmId>
+	<bcmEntity>SegmentationPeriod</bcmEntity>
+	<bcmAttribute>conservationDerogationTemporaire</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>930</bcmId>
+	<bcmEntity>SegmentationPeriod</bcmEntity>
+	<bcmAttribute>dateDeReference</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>968</bcmId>
+	<bcmEntity>SegmentationPeriod</bcmEntity>
+	<bcmAttribute>intervention</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>931</bcmId>
+	<bcmEntity>SegmentationPeriod</bcmEntity>
+	<bcmAttribute>reactualisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1105</bcmId>
+	<bcmEntity>Specification</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>12</bcmId>
+	<bcmEntity>Specification</bcmEntity>
+	<bcmAttribute>formule</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>908</bcmId>
+	<bcmEntity>Specification</bcmEntity>
+	<bcmAttribute>gamme</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>909</bcmId>
+	<bcmEntity>Specification</bcmEntity>
+	<bcmAttribute>label</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>96</bcmId>
+	<bcmEntity>Specification</bcmEntity>
+	<bcmAttribute>produit</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>947</bcmId>
+	<bcmEntity>TariffAdjustementPeriod</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>951</bcmId>
+	<bcmEntity>TariffAdjustementPeriod</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>946</bcmId>
+	<bcmEntity>TariffAdjustementPeriod</bcmEntity>
+	<bcmAttribute>dateDeTarification</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>948</bcmId>
+	<bcmEntity>TariffAdjustementPeriod</bcmEntity>
+	<bcmAttribute>qualificatifDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>950</bcmId>
+	<bcmEntity>TariffAdjustementPeriod</bcmEntity>
+	<bcmAttribute>typeDePrime</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>949</bcmId>
+	<bcmEntity>TariffAdjustementPeriod</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1304</bcmId>
+	<bcmEntity>TariffAdjustment</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>118</bcmId>
+	<bcmEntity>TariffAdjustment</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>38</bcmId>
+	<bcmEntity>TariffAdjustment</bcmEntity>
+	<bcmAttribute>dateDeTarification</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>78</bcmId>
+	<bcmEntity>TariffAdjustment</bcmEntity>
+	<bcmAttribute>qualificatifDeLaValeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>77</bcmId>
+	<bcmEntity>TariffAdjustment</bcmEntity>
+	<bcmAttribute>typeDePrime</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>79</bcmId>
+	<bcmEntity>TariffAdjustment</bcmEntity>
+	<bcmAttribute>valeur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>124</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>calculManuelAuto</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>299</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>300</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>301</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>montantDeBaseCommissionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>120</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>numeroDeCompteProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>83</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>qualificatifDeLaCommissionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>181</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>qualificatifDeLaRetrocessionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>121</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>typeDeCommission</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>119</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>typeDeProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>126</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>typeDeRetrocessionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>15</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>valeurDeLaCommissionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>13</bcmId>
+	<bcmEntity>TariffCommission</bcmEntity>
+	<bcmAttribute>valeurDeLaRetrocessionIndexee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>847</bcmId>
+	<bcmEntity>TariffCommissionPeriod</bcmEntity>
+	<bcmAttribute>resultatCommission</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>848</bcmId>
+	<bcmEntity>TariffCommissionPeriod</bcmEntity>
+	<bcmAttribute>resultatRetrocession</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>926</bcmId>
+	<bcmEntity>TariffCommissionSubPeriod</bcmEntity>
+	<bcmAttribute>resultatCommission</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>927</bcmId>
+	<bcmEntity>TariffCommissionSubPeriod</bcmEntity>
+	<bcmAttribute>resultatRetrocession</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>833</bcmId>
+	<bcmEntity>TariffCommissionTotalsForAgreement</bcmEntity>
+	<bcmAttribute>commissionTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>832</bcmId>
+	<bcmEntity>TariffCommissionTotalsForAgreement</bcmEntity>
+	<bcmAttribute>numeroDeCompteProducteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>834</bcmId>
+	<bcmEntity>TariffCommissionTotalsForAgreement</bcmEntity>
+	<bcmAttribute>retrocessionTotale</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>959</bcmId>
+	<bcmEntity>TariffIdentifier</bcmEntity>
+	<bcmAttribute>dateRelease</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>956</bcmId>
+	<bcmEntity>TariffIdentifier</bcmEntity>
+	<bcmAttribute>gamme</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>957</bcmId>
+	<bcmEntity>TariffIdentifier</bcmEntity>
+	<bcmAttribute>label</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>958</bcmId>
+	<bcmEntity>TariffIdentifier</bcmEntity>
+	<bcmAttribute>produit</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>670</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>aperiteur</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>76</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>dateDEffet</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>667</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>dateDeFin</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1111</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>672</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>numeroDeCompagnieCreancier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>669</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>numeroDePoliceCollective</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>668</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>policeCollective</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>673</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>referenceChezCompagnieCreancier</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>674</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>tauxDeRepartitionCoassurance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>671</bcmId>
+	<bcmEntity>ThirdPartyCompany</bcmEntity>
+	<bcmAttribute>typeDIntervenant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>223</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>antivol</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>42</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>carburant</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>34</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>categorieDeTransport</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>31</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>cylindree</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>130</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>dateDAchat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>190</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>dateDeConstruction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>50</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>dateDePremiereMiseEnCirculation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>657</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>dateKilometrage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1106</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>entite</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>236</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>factureDAchat</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>234</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>garageDeNuit</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>47</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>genre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>656</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>kilometrage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>51</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>masseMaximaleAutorisee</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>903</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>montantDuMobilophone</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>791</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>nombreDAnneesDePossession</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>128</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>nombreDAnneesSansSinistre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>46</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>nombreDePlaces</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>197</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>nombreKmAParcourir</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>189</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>numeroDeChassis</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>191</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>numeroDePlaque1</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>193</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>numeroDePlaque2</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>221</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>particulariteDeGestionTexte</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>195</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>poidsAVide</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>196</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>pourcentageEcartValCatalogueValAssuree</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>45</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>produitsDangereuxTransportes</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>242</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>puissance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>32</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>traction</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>49</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>type</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>224</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>typeDeCirculation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>37</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>typeDePlaque1</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>192</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>typeDePlaque2</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>52</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>typeDeTarificationRemorque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>199</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>typeDeValorisation</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>48</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>usage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>43</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurAssuree</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>820</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurAssureeGlobalCar</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>44</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurCatalogueAvecOptions</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>198</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurCatalogueSansPlus</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>41</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurDesAccessoires</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>201</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurExpertise</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>202</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurMaximumBagages</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>36</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurPremierRisque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>203</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>valeurVitrage</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>129</bcmId>
+	<bcmEntity>Vehicle</bcmEntity>
+	<bcmAttribute>versionTexteLibre</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>924</bcmId>
+	<bcmEntity>VehiclePremiumCalculation</bcmEntity>
+	<bcmAttribute>age</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1177</bcmId>
+	<bcmEntity>VehiclePremiumCalculation</bcmEntity>
+	<bcmAttribute>caracteristiques</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>925</bcmId>
+	<bcmEntity>VehiclePremiumCalculation</bcmEntity>
+	<bcmAttribute>rapportPoidsPuissance</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1178</bcmId>
+	<bcmEntity>VehiclePremiumCalculation</bcmEntity>
+	<bcmAttribute>typePuissanceCylindree</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>239</bcmId>
+	<bcmEntity>VehicleReference</bcmEntity>
+	<bcmAttribute>libelleMarque</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>240</bcmId>
+	<bcmEntity>VehicleReference</bcmEntity>
+	<bcmAttribute>libelleModele</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>241</bcmId>
+	<bcmEntity>VehicleReference</bcmEntity>
+	<bcmAttribute>libelleVersion</bcmAttribute>
+</bcmDefinition>
+<bcmDefinition>
+	<bcmId>1210</bcmId>
+	<bcmEntity>VehicleReference</bcmEntity>
+	<bcmAttribute>rapportPuissancePoids</bcmAttribute>
+</bcmDefinition>
+</bcmTable>

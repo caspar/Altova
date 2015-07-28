@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp2 U (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ShortInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Info" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Title" type="xs:string"/>
+							<xs:element name="Description">
+								<xs:complexType mixed="true">
+									<xs:choice minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Bold" type="xs:string"/>
+										<xs:element name="Italic" type="xs:string"/>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2014 (x64) (http://www.altova.com) by spyy (Altova GmbH) -->
+<xs:schema elementFormDefault="qualified" targetNamespace="http://xbrl.Formula.com/2013" xmlns:us-gaap-std="http://fasb.org/us-gaap-std/2012-01-31" xmlns:us-gaap="http://fasb.org/us-gaap/2012-01-31" xmlns:us-roles="http://fasb.org/us-roles/2012-01-31" xmlns:us-types="http://fasb.org/us-types/2012-01-31" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2004/ref" xmlns:xfi="http://www.xbrl.org/2008/function/instance" xmlns:utr="http://www.xbrl.org/2009/utr" xmlns:xff="http://www.xbrl.org/2010/function/formula" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:n1="http://xbrl.Formula.com/2013" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:formula="http://xbrl.org/2008/formula" xmlns:n2="http://xbrl.org/2008/generic" xmlns:dei-std="http://xbrl.sec.gov/dei-std/2012-01-31" xmlns:dei="http://xbrl.sec.gov/dei/2012-01-31" xmlns:invest-std="http://xbrl.sec.gov/invest-std/2012-01-31" xmlns:invest="http://xbrl.sec.gov/invest/2012-01-31">
+	<xs:import namespace="http://fasb.org/us-gaap-std/2012-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2012/elts/us-gaap-std-2012-01-31.xsd"/>
+	<xs:import namespace="http://fasb.org/us-types/2012-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2012/elts/us-types-2012-01-31.xsd"/>
+	<xs:annotation>
+		<xs:appinfo>
+			<link:linkbaseRef xlink:type="simple" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="Formula-20131108_for.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/referenceLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="Formula-20131108_ref.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="Formula-20131108_lab.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="Formula-20131108_cal.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="Formula-20131108_def.xml"/>
+			<link:linkbaseRef xlink:type="simple" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:href="Formula-20131108_pre.xml"/>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+	<xs:import namespace="http://www.xbrl.org/2004/ref" schemaLocation="http://www.xbrl.org/2004/ref-2004-08-10.xsd"/>
+	<xs:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+</xs:schema>

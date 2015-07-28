@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.1">
+	<xs:element name="Example">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Meeting" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Beverage" type="BeverageType">
+								<xs:alternative test="@end-time le '12:00:00'" type="MorningBeverage"/>
+								<xs:alternative test="@end-time gt '12:00:00'" type="AfternoonBeverage"/>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="start-time" type="xs:time"/>
+						<xs:attribute name="end-time" type="xs:time"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="BeverageType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="current-time" type="xs:time" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="MorningBeverage">
+		<xs:simpleContent>
+			<xs:restriction base="BeverageType">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="tea"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="AfternoonBeverage">
+		<xs:simpleContent>
+			<xs:restriction base="BeverageType">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="juice"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:restriction>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

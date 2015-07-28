@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout>
+		<Schema X="30" Width="155">C:\Documents and Settings\d.bugnone\My Documents\Altova\SchemaAgentLocalServer2010\SchemaAgentExamples\Tut-OrgChart.xsd<Include height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Include>
+			<Import height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Import>
+			<Redefine height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Redefine>
+			<Globals height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Globals>
+		</Schema>
+		<XML X="430" Y="10" Width="162" extended="1">C:\Documents and Settings\d.bugnone\My Documents\Altova\SchemaAgentLocalServer2010\SchemaAgentExamples\OrgChart.xml<Schema height="50" widthpercentage="1.000000" extended="1">
+				<Entry/>
+			</Schema>
+			<Stylesheet height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Stylesheet>
+			<Root height="51" widthpercentage="1.000000" extended="1">
+				<Entry/>
+			</Root>
+		</XML>
+		<Schema X="-10" Y="90" Width="252" extended="1">C:\Documents and Settings\d.bugnone\My Documents\Altova\SchemaAgentLocalServer2010\SchemaAgentExamples\OrgChart.xsd<Include height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Include>
+			<Import height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Import>
+			<Redefine height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Redefine>
+			<Globals height="503" widthpercentage="1.000000" extended="1">
+				<Entry>
+					<Entry name="Namespace">
+						<Entry name="http://www.w3.org/2001/XMLSchema"/>
+					</Entry>
+					<Entry name="element">
+						<Entry name="Desc">
+							<Entry>
+								<Entry/>
+							</Entry>
+						</Entry>
+						<Entry name="OrgChart">
+							<Entry>
+								<Entry>
+									<Entry name="CompanyLogo">
+										<Entry/>
+									</Entry>
+								</Entry>
+							</Entry>
+						</Entry>
+						<Entry name="Person"/>
+					</Entry>
+				</Entry>
+			</Globals>
+		</Schema>
+		<MapForce X="300" Y="340" Width="347" extended="1">C:\Documents and Settings\d.bugnone\My Documents\Altova\SchemaAgentLocalServer2010\SchemaAgentExamples\OrgChart.mfd<Inputs height="324" widthpercentage="0.500000" extended="1">
+				<Entry>
+					<Entry name="OrgChart.xsd">
+						<Entry name="Instances"/>
+						<Entry name="Components">
+							<Entry name="OrgChart">
+								<Entry name="Office"/>
+							</Entry>
+						</Entry>
+					</Entry>
+				</Entry>
+			</Inputs>
+			<Design height="324" widthpercentage="0.333333">
+				<Entry/>
+			</Design>
+			<Outputs height="324" widthpercentage="0.500000" extended="1">
+				<Entry>
+					<Entry name="Person.xsd">
+						<Entry name="Components">
+							<Entry name="Company-Person">
+								<Entry name="Office"/>
+							</Entry>
+						</Entry>
+					</Entry>
+				</Entry>
+			</Outputs>
+		</MapForce>
+		<Schema X="690" Y="70" Width="242" extended="1">C:\Documents and Settings\d.bugnone\My Documents\Altova\SchemaAgentLocalServer2010\SchemaAgentExamples\Person.xsd<Include height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Include>
+			<Import height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Import>
+			<Redefine height="50" widthpercentage="1.000000">
+				<Entry/>
+			</Redefine>
+			<Globals height="521" widthpercentage="1.000000" extended="1">
+				<Entry>
+					<Entry name="element">
+						<Entry name="Company-Person">
+							<Entry>
+								<Entry/>
+							</Entry>
+						</Entry>
+					</Entry>
+					<Entry name="simpleType"/>
+					<Entry name="complexType"/>
+				</Entry>
+			</Globals>
+		</Schema>
+	</Layout>

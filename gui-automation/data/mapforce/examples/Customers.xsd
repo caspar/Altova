@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 U (http://www.xmlspy.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="Customer.xsd"/>
+	<xs:element name="Customers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Customer" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

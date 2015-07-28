@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2013 rel. 2 (http://www.altova.com) by test (Altova GmbH) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.stereo.org" targetNamespace="http://www.stereo.org" elementFormDefault="qualified" version="1.1">
+	<xsd:element name="Stereo">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="description" type="xsd:string"/>
+			</xsd:sequence>
+			<xsd:attribute name="model-number" type="xsd:ID" use="optional" default="model1"/>
+			<xsd:attribute name="serial-number" type="xsd:ID" use="optional" default="xs1234"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="Example">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Publication" type="PublicationType" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PublicationType">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string"/>
+            <xs:element name="Author" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Date" type="xs:gYear"/>
+            <xs:element name="ISBN" type="xs:string"  minOccurs="0"/>
+            <xs:element name="Publisher" type="xs:string"  minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="kind" type="xs:string" />
+        <xs:assert test="if (@kind eq 'book') then
+                            Title and Date and ISBN and Publisher and empty(* except (Title[1],Date[1],Author,ISBN[1],Publisher[1]))
+                         else
+                            if (@kind eq 'magazine') then
+                               Title and Date and empty(* except (Title[1],Date[1]))
+                            else
+                               Title and Date and empty(* except (Title[1],Date[1], Author))" />
+    </xs:complexType>
+
+</xs:schema>
+
+<!--
+
+   Here's an alternate way to express the XPath:
+
+                         if (@kind eq 'book') then 
+                            count(Title) eq 1 and
+                            count(Author) ge 0 and
+                            count(Date) eq 1 and 
+                            count(ISBN) eq 1 and
+                            count(Publisher) eq 1 and
+                            count(*[not(name() = ('Title','Author','Date','ISBN','Publisher'))]) eq 0
+                         else 
+                            if (@kind eq 'magazine') then 
+                               count(Title) eq 1 and
+                               count(Date) eq 1 and 
+                               count(*[not(name() = ('Title','Date'))]) eq 0
+                            else 
+                               count(Title) eq 1 and
+                               count(Author) ge 0 and
+                               count(Date) eq 1 and
+                               count(*[not(name() = ('Title','Author','Date'))]) eq 0
+
+-->

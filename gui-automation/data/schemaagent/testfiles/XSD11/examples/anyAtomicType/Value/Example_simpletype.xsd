@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org" targetNamespace="http://www.example.org" elementFormDefault="qualified" version="1.1">
+	<xs:element name="Example">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Value" type="xs:anySimpleType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="LotteryNumbers">
+		<xs:list itemType="xs:positiveInteger"/>
+	</xs:simpleType>
+</xs:schema>

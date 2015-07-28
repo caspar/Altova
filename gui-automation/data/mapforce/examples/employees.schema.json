@@ -1,0 +1,31 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"required": [ "Company" ],
+	"properties": {
+		"Company":  { "type": "string", "title": "Company name" },
+		"Employees": {
+			"type": "array",
+			"title": "Employees",
+			"items": {
+				"type": "object",
+				"required": [ "First", "Last" ],
+				"properties": {
+					"First": { "type": "string", "title": "First name" },
+					"Last": { "type": "string", "title": "Surname" },
+					"Phone": {
+						"type": "object",
+						"properties": {
+							"Extension": { "type": "number", "title": "Phone extension" },
+							"May be provided to external contacts": { "type": "boolean", "title": "Publish", "description": "Indicates whether the extension may be provided externally" }
+						},
+						"additionalProperties": false
+					},
+					"Shares": { "type": ["number","null"], "title": "Shares", "description": "The shares owned by the employee or null if unknown." }
+				},
+				"additionalProperties": false
+			}
+		}
+	},
+	"additionalProperties": false
+}

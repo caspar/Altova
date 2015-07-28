@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<wsdl:description targetNamespace="http://new.webservice.namespace1" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://new.webservice.namespace1">
+	<wsdl:interface name="InterfaceToBeImported1">
+		<wsdl:operation name="OperationToBeImported1" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<wsdl:input messageLabel="In"/>
+			<wsdl:output messageLabel="Out"/>
+		</wsdl:operation>
+	</wsdl:interface>
+	<wsdl:binding name="BindingTest" interface="tns:InterfaceToBeImported1" type="http://www.w3.org/ns/wsdl/http">
+	<wsdl:operation ref="tns:OperationToBeImported1"/>
+	</wsdl:binding>
+</wsdl:description>

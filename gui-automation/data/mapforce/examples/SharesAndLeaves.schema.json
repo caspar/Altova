@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"Shares": { "type": "integer" },
+		"Leaves": {
+			"type": "object",
+			"properties": {
+				"Total": { "type": "number" },
+				"Used": { "type": "number" },
+				"Left": { "type": "number" }
+			},
+			"additionalProperties": false
+		}
+	},
+	"additionalProperties": false
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+    <include schemaLocation="countries.xsd" />
+
+    <element name="Example">
+        <complexType>
+            <sequence>
+                <element name="country" type="string" />
+            </sequence>
+            <assert test="country = doc('countries.xml')//country" />
+        </complexType>
+    </element>
+
+</schema>

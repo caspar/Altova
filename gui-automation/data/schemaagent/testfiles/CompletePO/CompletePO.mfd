@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="11">
+	<component name="defaultmap1" blackbox="0" uid="49431880" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="xslt2"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="49427664" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="4" lty="372" rbx="153" rby="458"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Articles" expanded="1">
+								<entry name="Article" outkey="82034664" expanded="1">
+									<entry name="Number" outkey="82034768"/>
+									<entry name="Name" outkey="82034872"/>
+									<entry name="SinglePrice" outkey="82034976"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" inputinstance="Articles.xml" instanceroot="{}Articles"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="52858576" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="-3" lty="151" rbx="149" rby="323"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Customers" expanded="1">
+								<entry name="Customer" outkey="82037480" expanded="1">
+									<entry name="Number" outkey="82037584"/>
+									<entry name="Address" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Customers.xsd" inputinstance="Customers.xml" instanceroot="{}Customers"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="52570224" kind="5" prioritycontext="81867520">
+					<sources>
+						<datapoint pos="0" key="81867520"/>
+						<datapoint pos="1" key="81886064"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="81886168"/>
+					</targets>
+					<view ltx="272" lty="112" rbx="47" rby="-285"/>
+				</component>
+				<component name="Article" library="core" uid="52700680" kind="3">
+					<sources>
+						<datapoint pos="0" key="81886376"/>
+						<datapoint pos="1" key="81886480"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="81886584"/>
+						<datapoint/>
+					</targets>
+					<view ltx="331" lty="251" rbx="-242" rby="-190"/>
+				</component>
+				<component name="multiply" library="core" uid="49499840" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="81886712"/>
+						<datapoint pos="1" key="81886816"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="81886920"/>
+					</targets>
+					<view ltx="224" lty="453" rbx="-254" rby="77"/>
+				</component>
+				<component name="equal" library="core" uid="52844128" kind="5" prioritycontext="81887128">
+					<sources>
+						<datapoint pos="0" key="81887128"/>
+						<datapoint pos="1" key="81875592"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="81875696"/>
+					</targets>
+					<view ltx="252" lty="336" rbx="20" rby="46"/>
+				</component>
+				<component name="Customer" library="core" uid="52529552" kind="3">
+					<sources>
+						<datapoint pos="0" key="81876080"/>
+						<datapoint pos="1" key="81876184"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="81876288"/>
+						<datapoint/>
+					</targets>
+					<view ltx="362" lty="16" rbx="-209" rby="-425"/>
+				</component>
+				<component name="document" library="xml" uid="52496680" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="635" lty="99" rbx="809" rby="405"/>
+					<data>
+						<root scrollposition="52">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="CompletePO" expanded="1">
+								<entry name="Customer" inpkey="82044856" expanded="1">
+									<entry name="Address" expanded="1"/>
+								</entry>
+								<entry name="LineItems" inpkey="82045080" expanded="1">
+									<entry name="LineItem" inpkey="82040320" expanded="1">
+										<entry name="Article" inpkey="82043048" expanded="1">
+											<entry name="Number" inpkey="82043272"/>
+											<entry name="Name" inpkey="82043496"/>
+											<entry name="SinglePrice" inpkey="82043680"/>
+											<entry name="Amount" inpkey="82043960"/>
+											<entry name="Price" inpkey="82044184"/>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="Total" expanded="1">
+									<entry name="TotalSum" inpkey="82044368"/>
+									<entry name="TotalItems" inpkey="82044632"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="CompletePO.xsd" instanceroot="{}CompletePO"/>
+					</data>
+				</component>
+				<component name="sum" library="core" uid="52858577" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="82023920"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="82033928"/>
+					</targets>
+					<view ltx="482" lty="402" rbx="-63"/>
+				</component>
+				<component name="count" library="core" uid="52858578" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="82034088"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="82034192"/>
+					</targets>
+					<view ltx="347" lty="184" rbx="-103" rby="-146"/>
+				</component>
+				<component name="filter" library="core" uid="52858581" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="82034352"/>
+						<datapoint pos="1" key="82034456"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="82034560"/>
+						<datapoint/>
+					</targets>
+					<view ltx="371" lty="480" rbx="64" rby="82"/>
+				</component>
+				<component name="document" library="xml" uid="52293320" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="145" rby="104"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ShortPO" expanded="1">
+								<entry name="CustomerNr" outkey="82035968"/>
+								<entry name="LineItems" outkey="82036072" expanded="1">
+									<entry name="LineItem" outkey="82036176" expanded="1">
+										<entry name="ArticleNr" outkey="82036336"/>
+										<entry name="Amount" outkey="82036440"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ShortPO.xsd" inputinstance="ShortPO.xml" instanceroot="{}ShortPO"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="82053032">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="82053208">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="81875696">
+						<edges>
+							<edge vertexkey="82034456" edgekey="82055112"/>
+							<edge vertexkey="81886480" edgekey="82055304"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81876288">
+						<edges>
+							<edge vertexkey="82044856" edgekey="82053032"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81886168">
+						<edges>
+							<edge vertexkey="81876184" edgekey="82055488"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81886584">
+						<edges>
+							<edge vertexkey="82043048" edgekey="82055648"/>
+							<edge vertexkey="82034088" edgekey="82055832"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="81886920">
+						<edges>
+							<edge vertexkey="82034352" edgekey="82054536"/>
+							<edge vertexkey="82044184" edgekey="82054720"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82033928">
+						<edges>
+							<edge vertexkey="82044368" edgekey="82053400"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82034192">
+						<edges>
+							<edge vertexkey="82044632" edgekey="82054192"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82034560">
+						<edges>
+							<edge vertexkey="82023920" edgekey="82054352"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82034664">
+						<edges>
+							<edge vertexkey="81886376" edgekey="82053640"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82034768">
+						<edges>
+							<edge vertexkey="82043272" edgekey="82053824"/>
+							<edge vertexkey="81875592" edgekey="82054008"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82034872">
+						<edges>
+							<edge vertexkey="82043496" edgekey="82056888"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82034976">
+						<edges>
+							<edge vertexkey="82043680" edgekey="82056520"/>
+							<edge vertexkey="81886816" edgekey="82056704"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82035968">
+						<edges>
+							<edge vertexkey="81867520" edgekey="82054904"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82036072">
+						<edges>
+							<edge vertexkey="82045080" edgekey="82057048"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82036176">
+						<edges>
+							<edge vertexkey="82040320" edgekey="82057232"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82036336">
+						<edges>
+							<edge vertexkey="81887128" edgekey="82056360"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82036440">
+						<edges>
+							<edge vertexkey="82043960" edgekey="82056016"/>
+							<edge vertexkey="81886712" edgekey="82056176"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82037480">
+						<edges>
+							<edge vertexkey="81876080" edgekey="82053208"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82037584">
+						<edges>
+							<edge vertexkey="81886064" edgekey="82053264"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

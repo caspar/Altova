@@ -1,0 +1,2129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- created with EXP2XML V1.9a (perl 5 program) written by Thomas Liebich (TLConsulting) -->
+<!-- validated with XML Spy v4.0b1 NT (http://www.xmlspy.com) by Thomas Liebich (TLConsulting) -->
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns="http://www.iai-international.org/ifcXML/ifc2x/COS" xmlns:ifc2x="http://www.iai-international.org/ifcXML/ifc2x/COS" targetNamespace="http://www.iai-international.org/ifcXML/ifc2x/COS" xmlns:xlink="http://www.w3.org/2001/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- root element declaration (for SCHEMA definitions) -->
+
+<xsd:element name="ifcXML">
+	<xsd:complexType>
+		<xsd:choice maxOccurs="unbounded" minOccurs="0">
+			<xsd:element ref="ActorRole"/>
+			<xsd:element ref="Budget"/>
+			<xsd:element ref="Classification"/>
+			<xsd:element ref="ClassificationNotation"/>
+			<xsd:element ref="ClassificationNotationFacet"/>
+			<xsd:element ref="ClassificationReference"/>
+			<xsd:element ref="ComplexProperty"/>
+			<xsd:element ref="ContextDependentUnit"/>
+			<xsd:element ref="ConversionBasedUnit"/>
+			<xsd:element ref="Cost"/>
+			<xsd:element ref="CostModifier"/>
+			<xsd:element ref="CostModifierValue"/>
+			<xsd:element ref="CostQuantity"/>
+			<xsd:element ref="CostSchedule"/>
+			<xsd:element ref="CostValue"/>
+			<xsd:element ref="DerivedUnit"/>
+			<xsd:element ref="DerivedUnitElement"/>
+			<xsd:element ref="DocumentElectronicFormat"/>
+			<xsd:element ref="DocumentInformation"/>
+			<xsd:element ref="DocumentReference"/>
+			<xsd:element ref="ElementQuantity"/>
+			<xsd:element ref="ManufacturerInformation"/>
+			<xsd:element ref="Material"/>
+			<xsd:element ref="MaterialLayer"/>
+			<xsd:element ref="MaterialLayerSet"/>
+			<xsd:element ref="MaterialList"/>
+			<xsd:element ref="MeasureWithUnit"/>
+			<xsd:element ref="MonetaryUnit"/>
+			<xsd:element ref="Organization"/>
+			<xsd:element ref="Person"/>
+			<xsd:element ref="PersonAndOrganization"/>
+			<xsd:element ref="PostalAddress"/>
+			<xsd:element ref="PropertyBoundedValue"/>
+			<xsd:element ref="PropertyEnumeratedValue"/>
+			<xsd:element ref="PropertyEnumeration"/>
+			<xsd:element ref="PropertySet"/>
+			<xsd:element ref="PropertySingleValue"/>
+			<xsd:element ref="PropertyTableValue"/>
+			<xsd:element ref="QuantityArea"/>
+			<xsd:element ref="QuantityCount"/>
+			<xsd:element ref="QuantityLength"/>
+			<xsd:element ref="QuantityVolume"/>
+			<xsd:element ref="QuantityWeight"/>
+			<xsd:element ref="SIUnit"/>
+			<xsd:element ref="TelecomAddress"/>
+			<xsd:element ref="TypeObject"/>
+		</xsd:choice>
+		<xsd:attributeGroup ref="configTypes"/>
+		<xsd:attributeGroup ref="configTags"/>
+	</xsd:complexType>
+	<xsd:key name="COS.ActorRole">
+		<xsd:selector xpath="ActorRole"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ActorRole" name="COS.ActorRole-ref">
+		<xsd:selector xpath=".//ActorRole"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.Budget">
+		<xsd:selector xpath="Budget"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.Budget" name="COS.Budget-ref">
+		<xsd:selector xpath=".//Budget"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.Classification">
+		<xsd:selector xpath="Classification"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.Classification" name="COS.Classification-ref">
+		<xsd:selector xpath=".//Classification"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ClassificationNotation">
+		<xsd:selector xpath="ClassificationNotation"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ClassificationNotation" name="COS.ClassificationNotation-ref">
+		<xsd:selector xpath=".//ClassificationNotation"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ClassificationNotationFacet">
+		<xsd:selector xpath="ClassificationNotationFacet"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ClassificationNotationFacet" name="COS.ClassificationNotationFacet-ref">
+		<xsd:selector xpath=".//ClassificationNotationFacet"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ClassificationReference">
+		<xsd:selector xpath="ClassificationReference"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ClassificationReference" name="COS.ClassificationReference-ref">
+		<xsd:selector xpath=".//ClassificationReference"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ComplexProperty">
+		<xsd:selector xpath="ComplexProperty"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ComplexProperty" name="COS.ComplexProperty-ref">
+		<xsd:selector xpath=".//ComplexProperty"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ContextDependentUnit">
+		<xsd:selector xpath="ContextDependentUnit"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ContextDependentUnit" name="COS.ContextDependentUnit-ref">
+		<xsd:selector xpath=".//ContextDependentUnit"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ConversionBasedUnit">
+		<xsd:selector xpath="ConversionBasedUnit"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ConversionBasedUnit" name="COS.ConversionBasedUnit-ref">
+		<xsd:selector xpath=".//ConversionBasedUnit"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.Cost">
+		<xsd:selector xpath="Cost"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.Cost" name="COS.Cost-ref">
+		<xsd:selector xpath=".//Cost"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.CostModifier">
+		<xsd:selector xpath="CostModifier"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.CostModifier" name="COS.CostModifier-ref">
+		<xsd:selector xpath=".//CostModifier"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.CostModifierValue">
+		<xsd:selector xpath="CostModifierValue"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.CostModifierValue" name="COS.CostModifierValue-ref">
+		<xsd:selector xpath=".//CostModifierValue"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.CostQuantity">
+		<xsd:selector xpath="CostQuantity"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.CostQuantity" name="COS.CostQuantity-ref">
+		<xsd:selector xpath=".//CostQuantity"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.CostSchedule">
+		<xsd:selector xpath="CostSchedule"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.CostSchedule" name="COS.CostSchedule-ref">
+		<xsd:selector xpath=".//CostSchedule"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.CostValue">
+		<xsd:selector xpath="CostValue"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.CostValue" name="COS.CostValue-ref">
+		<xsd:selector xpath=".//CostValue"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.DerivedUnit">
+		<xsd:selector xpath="DerivedUnit"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.DerivedUnit" name="COS.DerivedUnit-ref">
+		<xsd:selector xpath=".//DerivedUnit"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.DerivedUnitElement">
+		<xsd:selector xpath="DerivedUnitElement"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.DerivedUnitElement" name="COS.DerivedUnitElement-ref">
+		<xsd:selector xpath=".//DerivedUnitElement"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.DocumentElectronicFormat">
+		<xsd:selector xpath="DocumentElectronicFormat"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.DocumentElectronicFormat" name="COS.DocumentElectronicFormat-ref">
+		<xsd:selector xpath=".//DocumentElectronicFormat"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.DocumentInformation">
+		<xsd:selector xpath="DocumentInformation"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.DocumentInformation" name="COS.DocumentInformation-ref">
+		<xsd:selector xpath=".//DocumentInformation"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.DocumentReference">
+		<xsd:selector xpath="DocumentReference"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.DocumentReference" name="COS.DocumentReference-ref">
+		<xsd:selector xpath=".//DocumentReference"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ElementQuantity">
+		<xsd:selector xpath="ElementQuantity"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ElementQuantity" name="COS.ElementQuantity-ref">
+		<xsd:selector xpath=".//ElementQuantity"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.ManufacturerInformation">
+		<xsd:selector xpath="ManufacturerInformation"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.ManufacturerInformation" name="COS.ManufacturerInformation-ref">
+		<xsd:selector xpath=".//ManufacturerInformation"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.Material">
+		<xsd:selector xpath="Material"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.Material" name="COS.Material-ref">
+		<xsd:selector xpath=".//Material"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.MaterialLayer">
+		<xsd:selector xpath="MaterialLayer"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.MaterialLayer" name="COS.MaterialLayer-ref">
+		<xsd:selector xpath=".//MaterialLayer"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.MaterialLayerSet">
+		<xsd:selector xpath="MaterialLayerSet"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.MaterialLayerSet" name="COS.MaterialLayerSet-ref">
+		<xsd:selector xpath=".//MaterialLayerSet"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.MaterialList">
+		<xsd:selector xpath="MaterialList"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.MaterialList" name="COS.MaterialList-ref">
+		<xsd:selector xpath=".//MaterialList"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.MeasureWithUnit">
+		<xsd:selector xpath="MeasureWithUnit"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.MeasureWithUnit" name="COS.MeasureWithUnit-ref">
+		<xsd:selector xpath=".//MeasureWithUnit"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.MonetaryUnit">
+		<xsd:selector xpath="MonetaryUnit"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.MonetaryUnit" name="COS.MonetaryUnit-ref">
+		<xsd:selector xpath=".//MonetaryUnit"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.Organization">
+		<xsd:selector xpath="Organization"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.Organization" name="COS.Organization-ref">
+		<xsd:selector xpath=".//Organization"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.Person">
+		<xsd:selector xpath="Person"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.Person" name="COS.Person-ref">
+		<xsd:selector xpath=".//Person"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PersonAndOrganization">
+		<xsd:selector xpath="PersonAndOrganization"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PersonAndOrganization" name="COS.PersonAndOrganization-ref">
+		<xsd:selector xpath=".//PersonAndOrganization"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PostalAddress">
+		<xsd:selector xpath="PostalAddress"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PostalAddress" name="COS.PostalAddress-ref">
+		<xsd:selector xpath=".//PostalAddress"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PropertyBoundedValue">
+		<xsd:selector xpath="PropertyBoundedValue"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PropertyBoundedValue" name="COS.PropertyBoundedValue-ref">
+		<xsd:selector xpath=".//PropertyBoundedValue"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PropertyEnumeratedValue">
+		<xsd:selector xpath="PropertyEnumeratedValue"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PropertyEnumeratedValue" name="COS.PropertyEnumeratedValue-ref">
+		<xsd:selector xpath=".//PropertyEnumeratedValue"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PropertyEnumeration">
+		<xsd:selector xpath="PropertyEnumeration"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PropertyEnumeration" name="COS.PropertyEnumeration-ref">
+		<xsd:selector xpath=".//PropertyEnumeration"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PropertySet">
+		<xsd:selector xpath="PropertySet"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PropertySet" name="COS.PropertySet-ref">
+		<xsd:selector xpath=".//PropertySet"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PropertySingleValue">
+		<xsd:selector xpath="PropertySingleValue"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PropertySingleValue" name="COS.PropertySingleValue-ref">
+		<xsd:selector xpath=".//PropertySingleValue"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.PropertyTableValue">
+		<xsd:selector xpath="PropertyTableValue"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.PropertyTableValue" name="COS.PropertyTableValue-ref">
+		<xsd:selector xpath=".//PropertyTableValue"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.QuantityArea">
+		<xsd:selector xpath="QuantityArea"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.QuantityArea" name="COS.QuantityArea-ref">
+		<xsd:selector xpath=".//QuantityArea"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.QuantityCount">
+		<xsd:selector xpath="QuantityCount"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.QuantityCount" name="COS.QuantityCount-ref">
+		<xsd:selector xpath=".//QuantityCount"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.QuantityLength">
+		<xsd:selector xpath="QuantityLength"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.QuantityLength" name="COS.QuantityLength-ref">
+		<xsd:selector xpath=".//QuantityLength"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.QuantityVolume">
+		<xsd:selector xpath="QuantityVolume"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.QuantityVolume" name="COS.QuantityVolume-ref">
+		<xsd:selector xpath=".//QuantityVolume"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.QuantityWeight">
+		<xsd:selector xpath="QuantityWeight"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.QuantityWeight" name="COS.QuantityWeight-ref">
+		<xsd:selector xpath=".//QuantityWeight"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.SIUnit">
+		<xsd:selector xpath="SIUnit"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.SIUnit" name="COS.SIUnit-ref">
+		<xsd:selector xpath=".//SIUnit"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.TelecomAddress">
+		<xsd:selector xpath="TelecomAddress"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.TelecomAddress" name="COS.TelecomAddress-ref">
+		<xsd:selector xpath=".//TelecomAddress"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+	<xsd:key name="COS.TypeObject">
+		<xsd:selector xpath="TypeObject"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	<xsd:keyref refer="COS.TypeObject" name="COS.TypeObject-ref">
+		<xsd:selector xpath=".//TypeObject"/>
+		<xsd:field xpath="@href"/>
+	</xsd:keyref>
+</xsd:element>
+
+
+
+<!-- element declarations (for ENTITY definitions) -->
+
+<xsd:element nillable="true" type="ActorRole" name="ActorRole"/>
+
+<xsd:element abstract="true" nillable="true" type="Address" name="Address"/>
+
+<xsd:element nillable="true" type="Budget" substitutionGroup="CostSchedule" name="Budget"/>
+
+<xsd:element nillable="true" type="Classification" name="Classification"/>
+
+<xsd:element nillable="true" type="ClassificationNotation" name="ClassificationNotation"/>
+
+<xsd:element nillable="true" type="ClassificationNotationFacet" name="ClassificationNotationFacet"/>
+
+<xsd:element nillable="true" type="ClassificationReference" substitutionGroup="ExternalReference" name="ClassificationReference"/>
+
+<xsd:element nillable="true" type="ComplexProperty" substitutionGroup="Property" name="ComplexProperty"/>
+
+<xsd:element nillable="true" type="ContextDependentUnit" substitutionGroup="NamedUnit" name="ContextDependentUnit"/>
+
+<xsd:element abstract="true" nillable="true" type="Control" substitutionGroup="Object" name="Control"/>
+
+<xsd:element nillable="true" type="ConversionBasedUnit" substitutionGroup="NamedUnit" name="ConversionBasedUnit"/>
+
+<xsd:element nillable="true" type="Cost" substitutionGroup="Control" name="Cost"/>
+
+<xsd:element nillable="true" type="CostModifier" name="CostModifier"/>
+
+<xsd:element nillable="true" type="CostModifierValue" name="CostModifierValue"/>
+
+<xsd:element nillable="true" type="CostQuantity" name="CostQuantity"/>
+
+<xsd:element nillable="true" type="CostSchedule" substitutionGroup="Control" name="CostSchedule"/>
+
+<xsd:element nillable="true" type="CostValue" name="CostValue"/>
+
+<xsd:element nillable="true" type="DerivedUnit" name="DerivedUnit"/>
+
+<xsd:element nillable="true" type="DerivedUnitElement" name="DerivedUnitElement"/>
+
+<xsd:element nillable="true" type="DocumentElectronicFormat" name="DocumentElectronicFormat"/>
+
+<xsd:element nillable="true" type="DocumentInformation" name="DocumentInformation"/>
+
+<xsd:element nillable="true" type="DocumentReference" substitutionGroup="ExternalReference" name="DocumentReference"/>
+
+<xsd:element nillable="true" type="ElementQuantity" substitutionGroup="PropertySetDefinition" name="ElementQuantity"/>
+
+<xsd:element abstract="true" nillable="true" type="ExternalReference" name="ExternalReference"/>
+
+<xsd:element nillable="true" type="ManufacturerInformation" substitutionGroup="PropertySetDefinition" name="ManufacturerInformation"/>
+
+<xsd:element nillable="true" type="Material" name="Material"/>
+
+<xsd:element nillable="true" type="MaterialLayer" name="MaterialLayer"/>
+
+<xsd:element nillable="true" type="MaterialLayerSet" name="MaterialLayerSet"/>
+
+<xsd:element nillable="true" type="MaterialList" name="MaterialList"/>
+
+<xsd:element nillable="true" type="MeasureWithUnit" name="MeasureWithUnit"/>
+
+<xsd:element nillable="true" type="MonetaryUnit" name="MonetaryUnit"/>
+
+<xsd:element abstract="true" nillable="true" type="NamedUnit" name="NamedUnit"/>
+
+<xsd:element abstract="true" nillable="true" type="Object" substitutionGroup="Root" name="Object"/>
+
+<xsd:element nillable="true" type="Organization" name="Organization"/>
+
+<xsd:element nillable="true" type="Person" name="Person"/>
+
+<xsd:element nillable="true" type="PersonAndOrganization" name="PersonAndOrganization"/>
+
+<xsd:element abstract="true" nillable="true" type="PhysicalQuantity" name="PhysicalQuantity"/>
+
+<xsd:element nillable="true" type="PostalAddress" substitutionGroup="Address" name="PostalAddress"/>
+
+<xsd:element abstract="true" nillable="true" type="Property" name="Property"/>
+
+<xsd:element nillable="true" type="PropertyBoundedValue" substitutionGroup="SimpleProperty" name="PropertyBoundedValue"/>
+
+<xsd:element abstract="true" nillable="true" type="PropertyDefinition" substitutionGroup="Root" name="PropertyDefinition"/>
+
+<xsd:element nillable="true" type="PropertyEnumeratedValue" substitutionGroup="SimpleProperty" name="PropertyEnumeratedValue"/>
+
+<xsd:element nillable="true" type="PropertyEnumeration" name="PropertyEnumeration"/>
+
+<xsd:element nillable="true" type="PropertySet" substitutionGroup="PropertySetDefinition" name="PropertySet"/>
+
+<xsd:element abstract="true" nillable="true" type="PropertySetDefinition" substitutionGroup="PropertyDefinition" name="PropertySetDefinition"/>
+
+<xsd:element nillable="true" type="PropertySingleValue" substitutionGroup="SimpleProperty" name="PropertySingleValue"/>
+
+<xsd:element nillable="true" type="PropertyTableValue" substitutionGroup="SimpleProperty" name="PropertyTableValue"/>
+
+<xsd:element nillable="true" type="QuantityArea" substitutionGroup="PhysicalQuantity" name="QuantityArea"/>
+
+<xsd:element nillable="true" type="QuantityCount" substitutionGroup="PhysicalQuantity" name="QuantityCount"/>
+
+<xsd:element nillable="true" type="QuantityLength" substitutionGroup="PhysicalQuantity" name="QuantityLength"/>
+
+<xsd:element nillable="true" type="QuantityVolume" substitutionGroup="PhysicalQuantity" name="QuantityVolume"/>
+
+<xsd:element nillable="true" type="QuantityWeight" substitutionGroup="PhysicalQuantity" name="QuantityWeight"/>
+
+<xsd:element abstract="true" nillable="true" type="Root" name="Root"/>
+
+<xsd:element nillable="true" type="SIUnit" substitutionGroup="NamedUnit" name="SIUnit"/>
+
+<xsd:element abstract="true" nillable="true" type="SimpleProperty" substitutionGroup="Property" name="SimpleProperty"/>
+
+<xsd:element nillable="true" type="TelecomAddress" substitutionGroup="Address" name="TelecomAddress"/>
+
+<xsd:element nillable="true" type="TypeObject" substitutionGroup="PropertyDefinition" name="TypeObject"/>
+
+
+
+<!-- complex types for element declarations (for ENTITY definitions) -->
+
+<xsd:complexType name="ActorRole">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="RoleEnum" name="role"/>
+				<xsd:element type="Label" minOccurs="0" name="userDefinedRole"/>
+				<xsd:element type="Text" minOccurs="0" name="description"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="Address">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="AddressTypeEnum" minOccurs="0" name="purpose"/>
+				<xsd:element type="Text" minOccurs="0" name="description"/>
+				<xsd:element type="Label" minOccurs="0" name="userDefinedPurpose"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Budget">
+	<xsd:complexContent>
+		<xsd:extension base="CostSchedule">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="budgetSource"/>
+				<xsd:element name="balance">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="CostValue"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Classification">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" name="source"/>
+				<xsd:element type="Label" name="edition"/>
+				<xsd:element type="CalendarDate" minOccurs="0" name="editionDate"/>
+				<xsd:element type="Label" name="name"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ClassificationNotation">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element name="notationFacets">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="ClassificationNotationFacet"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ClassificationNotationFacet">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" name="notationValue"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ClassificationReference">
+	<xsd:complexContent>
+		<xsd:extension base="ExternalReference">
+			<xsd:sequence>
+				<xsd:element minOccurs="0" name="referencedSource">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="Classification"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ComplexProperty">
+	<xsd:complexContent>
+		<xsd:extension base="Property">
+			<xsd:sequence>
+				<xsd:element type="Identifier" name="usageName"/>
+				<xsd:element name="hasProperties">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="Property"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ContextDependentUnit">
+	<xsd:complexContent>
+		<xsd:extension base="NamedUnit">
+			<xsd:sequence>
+				<xsd:element type="Label" name="name"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="Control">
+	<xsd:complexContent>
+		<xsd:extension base="Object">
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ConversionBasedUnit">
+	<xsd:complexContent>
+		<xsd:extension base="NamedUnit">
+			<xsd:sequence>
+				<xsd:element type="Label" name="name"/>
+				<xsd:element name="conversionFactor">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="MeasureWithUnit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Cost">
+	<xsd:complexContent>
+		<xsd:extension base="Control">
+			<xsd:sequence>
+				<xsd:element type="Label" name="contextDescription"/>
+				<xsd:element minOccurs="0" name="elementCost">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="CostValue"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="extensionCost">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="CostValue"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="CostUseEnum" name="costUse"/>
+				<xsd:element type="CalendarDate" minOccurs="0" name="preparedOn"/>
+				<xsd:element minOccurs="0" name="quantities">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="CostQuantity"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Label" name="costType"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="CostModifier">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Text" name="purpose"/>
+				<xsd:element name="modifierValue">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="CostModifierValueSelect"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="CalendarDate" name="modifierDate"/>
+				<xsd:element type="CostOperatorEnum" name="costOperator"/>
+				<xsd:element type="CostModifierBasisEnum" minOccurs="0" name="modifierBasis"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="CostModifierValue">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="MonetaryMeasure" name="modifierAmount"/>
+				<xsd:element type="CurrencyEnum" minOccurs="0" name="currency"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="CostQuantity">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element minOccurs="0" name="baseQuantity">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="MeasureWithUnit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="finalQuantity">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="MeasureWithUnit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="PositiveRatioMeasure" minOccurs="0" name="wasteFactor"/>
+				<xsd:element type="Real" name="roundOffIncrement"/>
+				<xsd:element type="QuantityRoundOffBasisEnum" name="roundOffBasis"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="CostSchedule">
+	<xsd:complexContent>
+		<xsd:extension base="Control">
+			<xsd:sequence>
+				<xsd:element type="Label" name="title"/>
+				<xsd:element minOccurs="0" name="submittedBy">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="ActorSelect"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="approvedBy">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="ActorSelect"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="preparedBy">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="Person"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="CalendarDate" minOccurs="0" name="submittedOn"/>
+				<xsd:element name="totalCost">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="CostValue"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="costElements">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="Cost"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Label" name="status"/>
+				<xsd:element type="Text" minOccurs="0" name="intendedUse"/>
+				<xsd:element minOccurs="0" name="comments">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Text" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="targetUsers">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="ActorSelect"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="CalendarDate" minOccurs="0" name="validFromDate"/>
+				<xsd:element type="CalendarDate" minOccurs="0" name="validToDate"/>
+				<xsd:element type="CalendarDate" minOccurs="0" name="updateDate"/>
+				<xsd:element type="Identifier" name="scheduleNumber"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="CostValue">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="MonetaryMeasure" minOccurs="0" name="baseCostValue"/>
+				<xsd:element type="MonetaryMeasure" minOccurs="0" name="finalCostValue"/>
+				<xsd:element type="CurrencyEnum" minOccurs="0" name="currency"/>
+				<xsd:element minOccurs="0" name="unitCostBasis">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="MeasureWithUnit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Label" minOccurs="0" name="costType"/>
+				<xsd:element type="CalendarDate" minOccurs="0" name="costDate"/>
+				<xsd:element minOccurs="0" name="costModifiers">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="CostModifier"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="DerivedUnit">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element name="elements">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="DerivedUnitElement"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="DerivedUnitEnum" name="unitType"/>
+				<xsd:element type="Label" minOccurs="0" name="userDefinedType"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="DerivedUnitElement">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element name="unit">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="NamedUnit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="xsd:long" name="exponent"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="DocumentElectronicFormat">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="fileExtension"/>
+				<xsd:element type="Label" minOccurs="0" name="mimeContentType"/>
+				<xsd:element type="Label" minOccurs="0" name="mimeSubtype"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="DocumentInformation">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Identifier" name="documentId"/>
+				<xsd:element type="Label" name="name"/>
+				<xsd:element type="Text" minOccurs="0" name="description"/>
+				<xsd:element minOccurs="0" name="documentReferences">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="DocumentReference"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Text" minOccurs="0" name="purpose"/>
+				<xsd:element type="Text" minOccurs="0" name="intendedUse"/>
+				<xsd:element type="Text" minOccurs="0" name="scope"/>
+				<xsd:element type="Label" minOccurs="0" name="revision"/>
+				<xsd:element minOccurs="0" name="documentOwner">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="ActorSelect"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="editors">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="ActorSelect"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="DateAndTime" minOccurs="0" name="creationTime"/>
+				<xsd:element type="DateAndTime" minOccurs="0" name="lastRevisionTime"/>
+				<xsd:element minOccurs="0" name="electronicFormat">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="DocumentElectronicFormat"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="CalendarDate" minOccurs="0" name="validFrom"/>
+				<xsd:element type="CalendarDate" minOccurs="0" name="validUntil"/>
+				<xsd:element type="DocumentConfidentialityEnum" minOccurs="0" name="confidentiality"/>
+				<xsd:element type="DocumentStatusEnum" minOccurs="0" name="status"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="DocumentReference">
+	<xsd:complexContent>
+		<xsd:extension base="ExternalReference">
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ElementQuantity">
+	<xsd:complexContent>
+		<xsd:extension base="PropertySetDefinition">
+			<xsd:sequence>
+				<xsd:element type="Label" name="methodOfMeasurement"/>
+				<xsd:element name="quantities">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="PhysicalQuantity"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="ExternalReference">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="location"/>
+				<xsd:element type="Identifier" minOccurs="0" name="itemReference"/>
+				<xsd:element type="Label" minOccurs="0" name="name"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="ManufacturerInformation">
+	<xsd:complexContent>
+		<xsd:extension base="PropertySetDefinition">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="modelLabel"/>
+				<xsd:element type="Label" minOccurs="0" name="modelReference"/>
+				<xsd:element minOccurs="0" name="manufacturer">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="Organization"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="quantityInformation">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="PhysicalQuantity"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Material">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" name="name"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="MaterialLayer">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element minOccurs="0" name="material">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="Material"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="PositiveLengthMeasure" name="layerThickness"/>
+				<xsd:element type="Boolean" minOccurs="0" name="isVentilated"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="MaterialLayerSet">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element name="materialLayers">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="MaterialLayer"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Label" minOccurs="0" name="layerSetName"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="MaterialList">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element name="materials">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="Material"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="MeasureWithUnit">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element name="valueComponent">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="unitComponent">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Unit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="MonetaryUnit">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="CurrencyEnum" name="currency"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="NamedUnit">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="UnitEnum" name="unitType"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="Object">
+	<xsd:complexContent>
+		<xsd:extension base="Root">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="objectType"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Organization">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Identifier" minOccurs="0" name="id"/>
+				<xsd:element type="Label" name="name"/>
+				<xsd:element type="Text" minOccurs="0" name="description"/>
+				<xsd:element minOccurs="0" name="roles">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="ActorRole"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="addresses">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="Address"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="Person">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Identifier" minOccurs="0" name="id"/>
+				<xsd:element type="Label" minOccurs="0" name="familyName"/>
+				<xsd:element type="Label" minOccurs="0" name="givenName"/>
+				<xsd:element minOccurs="0" name="middleNames">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Label" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="prefixTitles">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Label" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="suffixTitles">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Label" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="roles">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="ActorRole"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="addresses">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="Address"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PersonAndOrganization">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element name="thePerson">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="Person"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="theOrganization">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="Organization"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="roles">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="ActorRole"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="PhysicalQuantity">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" name="name"/>
+				<xsd:element type="Text" minOccurs="0" name="description"/>
+				<xsd:element minOccurs="0" name="unit">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:element ref="NamedUnit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PostalAddress">
+	<xsd:complexContent>
+		<xsd:extension base="Address">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="internalLocation"/>
+				<xsd:element minOccurs="0" name="addressLines">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Label" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Label" minOccurs="0" name="postalBox"/>
+				<xsd:element type="Label" minOccurs="0" name="town"/>
+				<xsd:element type="Label" minOccurs="0" name="region"/>
+				<xsd:element type="Label" minOccurs="0" name="postalCode"/>
+				<xsd:element type="Label" minOccurs="0" name="country"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="Property">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Identifier" name="name"/>
+				<xsd:element type="Text" minOccurs="0" name="description"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PropertyBoundedValue">
+	<xsd:complexContent>
+		<xsd:extension base="SimpleProperty">
+			<xsd:sequence>
+				<xsd:element name="upperBoundValue">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="lowerBoundValue">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="unit">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Unit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="PropertyDefinition">
+	<xsd:complexContent>
+		<xsd:extension base="Root">
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PropertyEnumeratedValue">
+	<xsd:complexContent>
+		<xsd:extension base="SimpleProperty">
+			<xsd:sequence>
+				<xsd:element name="enumerationValues">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PropertyEnumeration">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" name="name"/>
+				<xsd:element name="enumerationValues">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="unit">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Unit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PropertySet">
+	<xsd:complexContent>
+		<xsd:extension base="PropertySetDefinition">
+			<xsd:sequence>
+				<xsd:element name="hasProperties">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="Property"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="PropertySetDefinition">
+	<xsd:complexContent>
+		<xsd:extension base="PropertyDefinition">
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PropertySingleValue">
+	<xsd:complexContent>
+		<xsd:extension base="SimpleProperty">
+			<xsd:sequence>
+				<xsd:element name="nominalValue">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="unit">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Unit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="PropertyTableValue">
+	<xsd:complexContent>
+		<xsd:extension base="SimpleProperty">
+			<xsd:sequence>
+				<xsd:element name="definingValues">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="definedValues">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:group ref="Value"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Text" minOccurs="0" name="expression"/>
+				<xsd:element minOccurs="0" name="definingUnit">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Unit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="definedUnit">
+					<xsd:complexType>
+						<xsd:choice>
+							<xsd:group ref="Unit"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="QuantityArea">
+	<xsd:complexContent>
+		<xsd:extension base="PhysicalQuantity">
+			<xsd:sequence>
+				<xsd:element type="AreaMeasure" name="areaValue"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="QuantityCount">
+	<xsd:complexContent>
+		<xsd:extension base="PhysicalQuantity">
+			<xsd:sequence>
+				<xsd:element type="CountMeasure" name="countValue"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="QuantityLength">
+	<xsd:complexContent>
+		<xsd:extension base="PhysicalQuantity">
+			<xsd:sequence>
+				<xsd:element type="LengthMeasure" name="lengthValue"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="QuantityVolume">
+	<xsd:complexContent>
+		<xsd:extension base="PhysicalQuantity">
+			<xsd:sequence>
+				<xsd:element type="VolumeMeasure" name="volumeValue"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="QuantityWeight">
+	<xsd:complexContent>
+		<xsd:extension base="PhysicalQuantity">
+			<xsd:sequence>
+				<xsd:element type="MassMeasure" name="weightValue"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="Root">
+	<xsd:complexContent>
+		<xsd:extension base="element">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="name"/>
+				<xsd:element type="Text" minOccurs="0" name="description"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="SIUnit">
+	<xsd:complexContent>
+		<xsd:extension base="NamedUnit">
+			<xsd:sequence>
+				<xsd:element type="SIPrefix" minOccurs="0" name="prefix"/>
+				<xsd:element type="SIUnitName" name="name"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType abstract="true" name="SimpleProperty">
+	<xsd:complexContent>
+		<xsd:extension base="Property">
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="TelecomAddress">
+	<xsd:complexContent>
+		<xsd:extension base="Address">
+			<xsd:sequence>
+				<xsd:element minOccurs="0" name="telephoneNumbers">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Label" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element minOccurs="0" name="facsimileNumbers">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Label" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Label" minOccurs="0" name="pagerNumber"/>
+				<xsd:element minOccurs="0" name="electronicMailAddresses">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element type="Label" name="String"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element type="Label" minOccurs="0" name="wWWHomePageURL"/>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+<xsd:complexType name="TypeObject">
+	<xsd:complexContent>
+		<xsd:extension base="PropertyDefinition">
+			<xsd:sequence>
+				<xsd:element type="Label" minOccurs="0" name="applicableOccurrence"/>
+				<xsd:element minOccurs="0" name="hasPropertySets">
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded" minOccurs="1">
+							<xsd:element ref="PropertySetDefinition"/>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+
+
+<!-- group declarations (for SELECT data type definitions) -->
+
+<xsd:group name="ActorSelect">
+	<xsd:choice>
+		<xsd:element ref="Organization"/>
+		<xsd:element ref="Person"/>
+		<xsd:element ref="PersonAndOrganization"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:group name="CostModifierValueSelect">
+	<xsd:choice>
+		<xsd:element ref="CostModifierValue"/>
+		<xsd:element type="RatioMeasure" name="RatioMeasure"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:group name="MeasureValue">
+	<xsd:choice>
+		<xsd:element type="VolumeMeasure" name="VolumeMeasure"/>
+		<xsd:element type="PositiveRatioMeasure" name="PositiveRatioMeasure"/>
+		<xsd:element type="RatioMeasure" name="RatioMeasure"/>
+		<xsd:element type="MassMeasure" name="MassMeasure"/>
+		<xsd:element type="PositiveLengthMeasure" name="PositiveLengthMeasure"/>
+		<xsd:element type="LengthMeasure" name="LengthMeasure"/>
+		<xsd:element type="CountMeasure" name="CountMeasure"/>
+		<xsd:element type="AreaMeasure" name="AreaMeasure"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:group name="SimpleValue">
+	<xsd:choice>
+		<xsd:element type="Integer" name="Integer"/>
+		<xsd:element type="Real" name="Real"/>
+		<xsd:element type="Boolean" name="Boolean"/>
+		<xsd:element type="Identifier" name="Identifier"/>
+		<xsd:element type="Text" name="Text"/>
+		<xsd:element type="Label" name="Label"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:group name="Unit">
+	<xsd:choice>
+		<xsd:element ref="DerivedUnit"/>
+		<xsd:element ref="NamedUnit"/>
+		<xsd:element ref="MonetaryUnit"/>
+	</xsd:choice>
+</xsd:group>
+
+<xsd:group name="Value">
+	<xsd:choice>
+		<xsd:group ref="MeasureValue"/>
+		<xsd:group ref="SimpleValue"/>
+	</xsd:choice>
+</xsd:group>
+
+
+
+<!-- enumeration type declarations (for ENUMERATION data type definitions) -->
+
+<xsd:simpleType name="AddressTypeEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="office"/>
+		<xsd:enumeration value="site"/>
+		<xsd:enumeration value="home"/>
+		<xsd:enumeration value="distributionpoint"/>
+		<xsd:enumeration value="userdefined"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="CostModifierBasisEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="running"/>
+		<xsd:enumeration value="static"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="CostOperatorEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="addvalue"/>
+		<xsd:enumeration value="subtractvalue"/>
+		<xsd:enumeration value="multiplyvalue"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="CostUseEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="extensiononly"/>
+		<xsd:enumeration value="elementonly"/>
+		<xsd:enumeration value="elementsetextensioncalc"/>
+		<xsd:enumeration value="extensionsetelementcalc"/>
+		<xsd:enumeration value="userdefined"/>
+		<xsd:enumeration value="notdefined"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="CurrencyEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="aed"/>
+		<xsd:enumeration value="aes"/>
+		<xsd:enumeration value="ats"/>
+		<xsd:enumeration value="aud"/>
+		<xsd:enumeration value="bbd"/>
+		<xsd:enumeration value="beg"/>
+		<xsd:enumeration value="bgl"/>
+		<xsd:enumeration value="bhd"/>
+		<xsd:enumeration value="bmd"/>
+		<xsd:enumeration value="bnd"/>
+		<xsd:enumeration value="brl"/>
+		<xsd:enumeration value="bsd"/>
+		<xsd:enumeration value="bwp"/>
+		<xsd:enumeration value="bzd"/>
+		<xsd:enumeration value="cad"/>
+		<xsd:enumeration value="cbd"/>
+		<xsd:enumeration value="chf"/>
+		<xsd:enumeration value="clp"/>
+		<xsd:enumeration value="cny"/>
+		<xsd:enumeration value="cys"/>
+		<xsd:enumeration value="czk"/>
+		<xsd:enumeration value="ddp"/>
+		<xsd:enumeration value="dem"/>
+		<xsd:enumeration value="dkk"/>
+		<xsd:enumeration value="egl"/>
+		<xsd:enumeration value="est"/>
+		<xsd:enumeration value="eur"/>
+		<xsd:enumeration value="fak"/>
+		<xsd:enumeration value="fim"/>
+		<xsd:enumeration value="fjd"/>
+		<xsd:enumeration value="fkp"/>
+		<xsd:enumeration value="frf"/>
+		<xsd:enumeration value="gbp"/>
+		<xsd:enumeration value="gip"/>
+		<xsd:enumeration value="gmd"/>
+		<xsd:enumeration value="grx"/>
+		<xsd:enumeration value="hkd"/>
+		<xsd:enumeration value="huf"/>
+		<xsd:enumeration value="ick"/>
+		<xsd:enumeration value="idr"/>
+		<xsd:enumeration value="ils"/>
+		<xsd:enumeration value="inr"/>
+		<xsd:enumeration value="irp"/>
+		<xsd:enumeration value="itl"/>
+		<xsd:enumeration value="jmd"/>
+		<xsd:enumeration value="jod"/>
+		<xsd:enumeration value="jpy"/>
+		<xsd:enumeration value="kes"/>
+		<xsd:enumeration value="krw"/>
+		<xsd:enumeration value="kwd"/>
+		<xsd:enumeration value="kyd"/>
+		<xsd:enumeration value="lkr"/>
+		<xsd:enumeration value="luf"/>
+		<xsd:enumeration value="mtl"/>
+		<xsd:enumeration value="mur"/>
+		<xsd:enumeration value="mxn"/>
+		<xsd:enumeration value="myr"/>
+		<xsd:enumeration value="nlg"/>
+		<xsd:enumeration value="nzd"/>
+		<xsd:enumeration value="omr"/>
+		<xsd:enumeration value="pgk"/>
+		<xsd:enumeration value="php"/>
+		<xsd:enumeration value="pkr"/>
+		<xsd:enumeration value="pln"/>
+		<xsd:enumeration value="ptn"/>
+		<xsd:enumeration value="qar"/>
+		<xsd:enumeration value="rur"/>
+		<xsd:enumeration value="sar"/>
+		<xsd:enumeration value="scr"/>
+		<xsd:enumeration value="sek"/>
+		<xsd:enumeration value="sgd"/>
+		<xsd:enumeration value="skp"/>
+		<xsd:enumeration value="thb"/>
+		<xsd:enumeration value="trl"/>
+		<xsd:enumeration value="ttd"/>
+		<xsd:enumeration value="twd"/>
+		<xsd:enumeration value="usd"/>
+		<xsd:enumeration value="veb"/>
+		<xsd:enumeration value="vnd"/>
+		<xsd:enumeration value="xeu"/>
+		<xsd:enumeration value="zar"/>
+		<xsd:enumeration value="zwd"/>
+		<xsd:enumeration value="nok"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="DerivedUnitEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="angularvelocityunit"/>
+		<xsd:enumeration value="compoundplaneangleunit"/>
+		<xsd:enumeration value="dynamicviscosityunit"/>
+		<xsd:enumeration value="heatfluxdensityunit"/>
+		<xsd:enumeration value="integercountrateunit"/>
+		<xsd:enumeration value="isothermalmoisturecapacityunit"/>
+		<xsd:enumeration value="kinematicviscosityunit"/>
+		<xsd:enumeration value="linearvelocityunit"/>
+		<xsd:enumeration value="massdensityunit"/>
+		<xsd:enumeration value="massflowrateunit"/>
+		<xsd:enumeration value="moisturediffusivityunit"/>
+		<xsd:enumeration value="molecularweightunit"/>
+		<xsd:enumeration value="specificheatcapacityunit"/>
+		<xsd:enumeration value="thermaladmittanceunit"/>
+		<xsd:enumeration value="thermalconductanceunit"/>
+		<xsd:enumeration value="thermalresistanceunit"/>
+		<xsd:enumeration value="thermaltransmittanceunit"/>
+		<xsd:enumeration value="vaporpermeabilityunit"/>
+		<xsd:enumeration value="volumetricflowrateunit"/>
+		<xsd:enumeration value="rotationalfrequencyunit"/>
+		<xsd:enumeration value="torqueunit"/>
+		<xsd:enumeration value="momentorinertiaunit"/>
+		<xsd:enumeration value="linearmomentunit"/>
+		<xsd:enumeration value="linearforceunit"/>
+		<xsd:enumeration value="planarforceunit"/>
+		<xsd:enumeration value="modulusofelasticityunit"/>
+		<xsd:enumeration value="shearmodulusunit"/>
+		<xsd:enumeration value="linearstiffnessunit"/>
+		<xsd:enumeration value="rotationalstiffnessunit"/>
+		<xsd:enumeration value="modulusofsubgradereactionunit"/>
+		<xsd:enumeration value="accelerationunit"/>
+		<xsd:enumeration value="userdefined"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="DocumentConfidentialityEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="public"/>
+		<xsd:enumeration value="restricted"/>
+		<xsd:enumeration value="confidential"/>
+		<xsd:enumeration value="personal"/>
+		<xsd:enumeration value="notdefined"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="DocumentStatusEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="draft"/>
+		<xsd:enumeration value="finaldraft"/>
+		<xsd:enumeration value="final"/>
+		<xsd:enumeration value="revision"/>
+		<xsd:enumeration value="notdefined"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="QuantityRoundOffBasisEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="roundtoclosest"/>
+		<xsd:enumeration value="roundtup"/>
+		<xsd:enumeration value="roundtdown"/>
+		<xsd:enumeration value="none"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="RoleEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="supplier"/>
+		<xsd:enumeration value="manufacturer"/>
+		<xsd:enumeration value="contractor"/>
+		<xsd:enumeration value="subcontractor"/>
+		<xsd:enumeration value="architect"/>
+		<xsd:enumeration value="structuralengineer"/>
+		<xsd:enumeration value="costengineer"/>
+		<xsd:enumeration value="client"/>
+		<xsd:enumeration value="buildingowner"/>
+		<xsd:enumeration value="buildingoperator"/>
+		<xsd:enumeration value="mechanicalengineer"/>
+		<xsd:enumeration value="electricalengineer"/>
+		<xsd:enumeration value="projectmanager"/>
+		<xsd:enumeration value="facilitiesmanager"/>
+		<xsd:enumeration value="civilengineer"/>
+		<xsd:enumeration value="comissioningengineer"/>
+		<xsd:enumeration value="engineer"/>
+		<xsd:enumeration value="owner"/>
+		<xsd:enumeration value="consultant"/>
+		<xsd:enumeration value="constructionmanager"/>
+		<xsd:enumeration value="fieldconstructionmanager"/>
+		<xsd:enumeration value="reseller"/>
+		<xsd:enumeration value="userdefined"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="SIPrefix">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="exa"/>
+		<xsd:enumeration value="peta"/>
+		<xsd:enumeration value="tera"/>
+		<xsd:enumeration value="giga"/>
+		<xsd:enumeration value="mega"/>
+		<xsd:enumeration value="kilo"/>
+		<xsd:enumeration value="hecto"/>
+		<xsd:enumeration value="deca"/>
+		<xsd:enumeration value="deci"/>
+		<xsd:enumeration value="centi"/>
+		<xsd:enumeration value="milli"/>
+		<xsd:enumeration value="micro"/>
+		<xsd:enumeration value="nano"/>
+		<xsd:enumeration value="pico"/>
+		<xsd:enumeration value="femto"/>
+		<xsd:enumeration value="atto"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="SIUnitName">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="ampere"/>
+		<xsd:enumeration value="becquerel"/>
+		<xsd:enumeration value="candela"/>
+		<xsd:enumeration value="coulomb"/>
+		<xsd:enumeration value="cubic_metre"/>
+		<xsd:enumeration value="degree_celsius"/>
+		<xsd:enumeration value="farad"/>
+		<xsd:enumeration value="gram"/>
+		<xsd:enumeration value="gray"/>
+		<xsd:enumeration value="henry"/>
+		<xsd:enumeration value="hertz"/>
+		<xsd:enumeration value="joule"/>
+		<xsd:enumeration value="kelvin"/>
+		<xsd:enumeration value="lumen"/>
+		<xsd:enumeration value="lux"/>
+		<xsd:enumeration value="metre"/>
+		<xsd:enumeration value="mole"/>
+		<xsd:enumeration value="newton"/>
+		<xsd:enumeration value="ohm"/>
+		<xsd:enumeration value="pascal"/>
+		<xsd:enumeration value="radian"/>
+		<xsd:enumeration value="second"/>
+		<xsd:enumeration value="siemens"/>
+		<xsd:enumeration value="sievert"/>
+		<xsd:enumeration value="square_metre"/>
+		<xsd:enumeration value="steradian"/>
+		<xsd:enumeration value="tesla"/>
+		<xsd:enumeration value="volt"/>
+		<xsd:enumeration value="watt"/>
+		<xsd:enumeration value="weber"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="UnitEnum">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="absorbeddoseunit"/>
+		<xsd:enumeration value="amountofsubstanceunit"/>
+		<xsd:enumeration value="areaunit"/>
+		<xsd:enumeration value="doseequivalentunit"/>
+		<xsd:enumeration value="electriccapacitanceunit"/>
+		<xsd:enumeration value="electricchargeunit"/>
+		<xsd:enumeration value="electricconductanceunit"/>
+		<xsd:enumeration value="electriccurrentunit"/>
+		<xsd:enumeration value="electricresistanceunit"/>
+		<xsd:enumeration value="electricvoltageunit"/>
+		<xsd:enumeration value="energyunit"/>
+		<xsd:enumeration value="forceunit"/>
+		<xsd:enumeration value="frequencyunit"/>
+		<xsd:enumeration value="illuminanceunit"/>
+		<xsd:enumeration value="inductanceunit"/>
+		<xsd:enumeration value="lengthunit"/>
+		<xsd:enumeration value="luminousfluxunit"/>
+		<xsd:enumeration value="luminousintensityunit"/>
+		<xsd:enumeration value="magneticfluxdensityunit"/>
+		<xsd:enumeration value="magneticfluxunit"/>
+		<xsd:enumeration value="massunit"/>
+		<xsd:enumeration value="planeangleunit"/>
+		<xsd:enumeration value="powerunit"/>
+		<xsd:enumeration value="pressureunit"/>
+		<xsd:enumeration value="radioactivityunit"/>
+		<xsd:enumeration value="solidangleunit"/>
+		<xsd:enumeration value="thermodynamictemperatureunit"/>
+		<xsd:enumeration value="timeunit"/>
+		<xsd:enumeration value="volumeunit"/>
+		<xsd:enumeration value="userdefined"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+
+<!-- simple type declarations (for TYPE defined data type definitions) -->
+
+<xsd:simpleType name="AreaMeasure">
+	<xsd:restriction base="xsd:double"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="Boolean">
+	<xsd:restriction base="xsd:boolean"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="CalendarDate">
+	<xsd:restriction base="xsd:date"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="CountMeasure">
+	<xsd:restriction base="xsd:decimal"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="DateAndTime">
+	<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="Identifier">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="Integer">
+	<xsd:restriction base="xsd:long"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="Label">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="LengthMeasure">
+	<xsd:restriction base="xsd:double"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="LocalTime">
+	<xsd:restriction base="xsd:time"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="MassMeasure">
+	<xsd:restriction base="xsd:double"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="MonetaryMeasure">
+	<xsd:restriction base="xsd:double"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="PositiveLengthMeasure">
+	<xsd:restriction base="LengthMeasure"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="PositiveRatioMeasure">
+	<xsd:restriction base="RatioMeasure"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="RatioMeasure">
+	<xsd:restriction base="xsd:double"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="Real">
+	<xsd:restriction base="xsd:double"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="Text">
+	<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+<xsd:simpleType name="VolumeMeasure">
+	<xsd:restriction base="xsd:double"/>
+</xsd:simpleType>
+
+
+
+<!-- standard declarations, elementType, simpleType, logical (for each translation) -->
+
+<xsd:complexType name="element">
+	<xsd:attribute use="optional" type="xsd:ID" name="id"/>
+	<xsd:attribute use="optional" type="xsd:IDREF" name="href"/>
+</xsd:complexType>
+<xsd:attributeGroup name="configTags">
+	<xsd:attribute default="choice" name="containmentType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="containmentOnly"/>
+				<xsd:enumeration value="referenceOnly"/>
+				<xsd:enumeration value="choice"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute default="exclude" name="inverseAttributes">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="include"/>
+				<xsd:enumeration value="exclude"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute default="exclude" name="derivedAttributes">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="include"/>
+				<xsd:enumeration value="exclude"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute default="iso8601" name="timeDeclarations">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="iso10303"/>
+				<xsd:enumeration value="iso8601"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+</xsd:attributeGroup>
+<xsd:attributeGroup name="configTypes">
+	<xsd:attribute default="long" name="integerType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="long"/>
+				<xsd:enumeration value="short"/>
+				<xsd:enumeration value="integer"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute default="double" name="realType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="decimal"/>
+				<xsd:enumeration value="double"/>
+				<xsd:enumeration value="float"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute default="decimal" name="numberType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="decimal"/>
+				<xsd:enumeration value="double"/>
+				<xsd:enumeration value="float"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute default="hexBinary" name="binaryType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="hexBinary"/>
+				<xsd:enumeration value="base64Binary"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+</xsd:attributeGroup>
+
+</xsd:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<item attr1="1" attr2="2" attr3="3" attr4="4" attr5="5" attr6="6"/>
+	<item attr4="4" attr5="5" attr6="6" attr1="1" attr2="2" attr3="3"/>
+	<item attr2="2" attr3="3" attr4="4" attr1="1" attr5="5" attr6="6"/>
+	<item attr1="1" attr2="2" attr3="3" attr4="4" attr5="5" attr6="6"/>
+	<List/>
+	<List>
+	
+		hello first world
+		<child/>
+		hello second world
+	</List>
+	<c>
+		<b/>
+		<b/>
+		<b/>
+	</c>
+	<c/>
+</root>

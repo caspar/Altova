@@ -1,0 +1,278 @@
+<!-- edited with XML Spy v4.4 alpha 1 U build Apr  4 2002 (http://www.xmlspy.com) by Lobsang Gyalpo (Altova GmbH) -->
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "xhtml1-transitional.dtd">
+<?altova_sps html_sample1.sps?>
+<html>
+	<head>
+		<title>HTML Table Test 002</title>
+	</head>
+	<body>
+		<br/>
+		<p>In this table definition, we specify that the cell in row four,
+column two should span a total of three columns, including the
+current column</p>
+		<table bgcolor="yellow" border="7" frame="border" align="center" width="25%">
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td bgcolor="pink" align="right">
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<b>Tables with different cellpaddings:</b>
+&nbsp;</p>
+		<table bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table with CELLPADDING=2 . Lots of extra styles applied in html</caption>
+			<thead>
+				<tr>
+					<th bgcolor="green">Head 1a</th>
+					<th bgcolor="yellow">Head 1b</th>
+					<th>Head 1c</th>
+				</tr>
+			</thead>
+			<tfoot valign="middle">
+				<!--tfoot aligned in the middle-->
+				<tr>
+					<th bgcolor="#8080FF">Foot 1a</th>
+					<th align="right">Foot 1b</th>
+					<th>Foot 1c</th>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td style="text-align: right">
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table cellpadding="2" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table with CELLPADDING=2</caption>
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table cellpadding="3" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table with CELLPADDING=3</caption>
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table cellpadding="4" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table with CELLPADDING=4</caption>
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table cellpadding="5" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table with CELLPADDING=5</caption>
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table cellpadding="10" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table with CELLPADDING=10</caption>
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<p>&nbsp;</p>
+		<table cellpadding="30" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table with CELLPADDING=30</caption>
+			<tbody align="left">
+				<tr>
+					<th align="right">
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr/>
+		<br/>
+		<b>Table with cellpadding =0 :</b>
+		<table cellpadding="0" bgcolor="#ffe4c4" border="1">
+			<tbody>
+				<tr>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+					<th>
+						<p>table head</p>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>cell 1</p>
+					</td>
+					<td>
+						<p>cell 2</p>
+					</td>
+					<td>
+						<p>cell 3</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

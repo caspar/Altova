@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Harlan Hersey (Computer Sciences Corp. Systems) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:udt="urn:us:gov:dod:don:enterprise:udt:1:0" xmlns="http://usw.xml.wg" xmlns:taml="http://usw.xml.wg" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" targetNamespace="http://usw.xml.wg" elementFormDefault="qualified">
+	<xsd:annotation>
+		<xsd:documentation>Tactical Assessment Markup Language.  Version 0.9.6 beta 8 UDT rules </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="urn:us:gov:dod:don:enterprise:udt:1:0" schemaLocation="DON-Enterprise-UDT-1.0.0.xsd"/>
+	<xsd:element name="_Taml" type="TamlType">
+		<xsd:annotation>
+			<xsd:documentation>For documentation purposes;  Root element is still TAML</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AbsolutePosition" type="AbsolutePositionType">
+		<xsd:annotation>
+			<xsd:documentation>Position with no ellipse or line of bearing error</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="AbsolutePositionType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Absolute Position Type - Lattitude, Longitude and Altitude</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Latitude"/>
+			<xsd:element ref="Longitude"/>
+			<xsd:element ref="Altitude" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="AcousticMode" type="udt:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AlertCode">
+		<xsd:simpleType>
+			<xsd:restriction base="udt:CodeContentType">
+				<xsd:enumeration value="TGT"/>
+				<xsd:enumeration value="SUS"/>
+				<xsd:enumeration value="HIT"/>
+				<xsd:enumeration value="NSP"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Altitude">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="AltitudeType"/>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="AltitudeType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Altitude type default expressed in feet.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:MeasureType">
+				<xsd:attribute name="units" type="xsd:string" use="optional" default="feet"/>
+				<xsd:attribute name="uncertainty" type="xsd:decimal" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="AmbiguityStatus" type="AmbiguityStatusType"/>
+	<xsd:complexType name="AmbiguityStatusType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Ambiguity Status type is an enumeration of contact ambiguity</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:CodeType">
+				<xsd:enumeration value="NON-AMBIGUOUS"/>
+				<xsd:enumeration value="AMBIGUOUS"/>
+				<xsd:enumeration value="AMBIGUOUS RESOLVED PORT"/>
+				<xsd:enumeration value="AMBIGUOUS RESOLVED STBD"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="Applicability">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:restriction base="udt:TextType">
+					<xsd:enumeration value="REAL WORLD"/>
+					<xsd:enumeration value="LIVE TRAINING"/>
+					<xsd:enumeration value="SIMULATED"/>
+				</xsd:restriction>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ArrayTemperature" type="udt:MeasureType"/>
+	<xsd:element name="AzimuthalCoverage" type="udt:MeasureType"/>
+	<xsd:element name="BathyThermograph" type="BathyThermographType"/>
+	<xsd:complexType name="BathyThermographType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type BathyThermograph type assembles Depth, Temperature, and Salinity Observations</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="TimePosition"/>
+			<xsd:sequence maxOccurs="unbounded">
+				<xsd:element ref="Depth"/>
+				<xsd:element ref="Temperature"/>
+				<xsd:element ref="Salinity" minOccurs="0"/>
+				<xsd:element ref="SoundVelocity" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="BatteryAtEnd" type="udt:MeasureType"/>
+	<xsd:element name="BatteryAtStart" type="udt:MeasureType"/>
+	<xsd:element name="BuoyLife" type="udt:TimeType"/>
+	<xsd:element name="CableScope" type="udt:MeasureType"/>
+	<xsd:element name="CalculatedCant" type="RelativeDegreesType"/>
+	<xsd:element name="CategoryCode" type="CategoryCodeType"/>
+	<xsd:simpleType name="CategoryCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Simple type Category Code Type enumerates the contact categories</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="udt:CodeContentType">
+			<xsd:enumeration value="AIR"/>
+			<xsd:enumeration value="NAV"/>
+			<xsd:enumeration value="SUR"/>
+			<xsd:enumeration value="MER"/>
+			<xsd:enumeration value="FSH"/>
+			<xsd:enumeration value="SUB"/>
+			<xsd:enumeration value="LND"/>
+			<xsd:enumeration value="UNK"/>
+			<xsd:enumeration value="SPC"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="Channel" type="udt:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Sonobuoy Radio Frequency (RF) Channel 1-99</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Configuration" type="ConfigurationType"/>
+	<xsd:complexType name="ConfigurationType">
+		<xsd:sequence>
+			<xsd:element ref="ConfigurationItem" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="ConfigurationItem" type="ConfigurationItemType"/>
+	<xsd:complexType name="ConfigurationItemType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Configuration Item Type is a unique ID, with type attributes and a nomenclature of the configuration and sensor</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:TextType">
+				<xsd:attribute name="id" type="xsd:NMTOKENS" use="required"/>
+				<xsd:attribute name="type" type="ContactCodeType" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="ConfigurationRef" type="RefType"/>
+	<xsd:element name="ConicalBearing" type="RelativeDegreesType"/>
+	<xsd:element name="Contact" type="ContactType"/>
+	<xsd:complexType name="ContactType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Contact Type describes a contact event.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DateTimeGroup"/>
+			<xsd:element ref="GUID" minOccurs="0"/>
+			<xsd:element ref="Position"/>
+			<xsd:element ref="Orientation"/>
+			<xsd:element ref="Course"/>
+			<xsd:element ref="Speed"/>
+			<xsd:element ref="ConfigurationRef"/>
+			<xsd:element ref="DepthElevationAngle" minOccurs="0"/>
+			<xsd:element ref="Frequency" minOccurs="0"/>
+			<xsd:element ref="ContactDesignator" minOccurs="0"/>
+			<xsd:element ref="ReportingStatus" minOccurs="0"/>
+			<xsd:element ref="ContactClassification" minOccurs="0"/>
+			<xsd:element ref="ThreatCode" minOccurs="0"/>
+			<xsd:element ref="AlertCode" minOccurs="0"/>
+			<xsd:element ref="ForceCode" minOccurs="0"/>
+			<xsd:element ref="Applicability" minOccurs="0"/>
+			<xsd:element ref="CountryCode" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:sequence>
+					<xsd:annotation>
+						<xsd:documentation>Active Sonar
+Contact</xsd:documentation>
+					</xsd:annotation>
+					<xsd:element ref="PulseType" minOccurs="0"/>
+					<xsd:element ref="PulseWidth" minOccurs="0"/>
+					<xsd:element ref="PulseMode" minOccurs="0"/>
+					<xsd:element ref="TargetDoppler" minOccurs="0"/>
+					<xsd:element ref="SoundPressureLevel" minOccurs="0"/>
+					<xsd:element ref="Power" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:annotation>
+						<xsd:documentation>Electronic 
+Surveillance 
+Contact</xsd:documentation>
+					</xsd:annotation>
+					<xsd:element ref="Emitter" minOccurs="0"/>
+					<xsd:element ref="Credibility" minOccurs="0"/>
+					<xsd:element ref="SignalStrength" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:sequence>
+					<xsd:annotation>
+						<xsd:documentation>Towed Array 
+Contact</xsd:documentation>
+					</xsd:annotation>
+					<xsd:element ref="CableScope" minOccurs="0"/>
+					<xsd:element ref="CalculatedCant" minOccurs="0"/>
+					<xsd:element ref="MeasuredCant" minOccurs="0"/>
+					<xsd:element ref="ConicalBearing" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:NMTOKENS" use="required"/>
+		<xsd:attribute name="type" type="ContactCodeType" use="required"/>
+		<xsd:attribute name="categoryType" type="CategoryCodeType" use="optional"/>
+		<xsd:attribute name="class" type="xsd:string"/>
+		<xsd:attribute name="shipControlNumber" type="xsd:integer"/>
+		<xsd:attribute name="targetType" type="xsd:string"/>
+		<xsd:attribute name="unitIdentificationCode" type="UnitIdentificationCodeType"/>
+	</xsd:complexType>
+	<xsd:simpleType name="ContactCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Simple type Contact Code Type describes the method of Contact as an enumeration</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="udt:CodeContentType">
+			<xsd:enumeration value="Active">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EER">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ESM">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IUSS">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MAD">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Passive">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Radar">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TowedArray">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Visual">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="ContactClassification" type="udt:TextType"/>
+	<xsd:element name="ContactDesignator" type="udt:IdentifierType"/>
+	<xsd:element name="ContactRef" type="RefType"/>
+	<xsd:element name="CountryCode" type="udt:CodeType"/>
+	<xsd:element name="Course" type="TrueDegreesType"/>
+	<xsd:element name="Credibility" type="udt:TextType"/>
+	<xsd:element name="DataRate" type="udt:MeasureType"/>
+	<xsd:element name="DateTime" type="udt:DateTimeType"/>
+	<xsd:element name="DateTimeGroup" type="DateTimeGroupType"/>
+	<xsd:complexType name="DateTimeGroupType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Date Time Group Type provides the choice of a date and time element or Time and Julian days from a reference date </xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice>
+			<xsd:element ref="DateTime"/>
+			<xsd:sequence>
+				<xsd:element ref="JulianDate"/>
+				<xsd:element ref="Time"/>
+			</xsd:sequence>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:element name="DateTimeGroupRef" type="RefType"/>
+	<xsd:element name="Day" type="udt:QuantityType"/>
+	<xsd:element name="Depth" type="DepthType"/>
+	<xsd:complexType name="DepthType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Depth Type</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:MeasureType">
+				<xsd:attribute name="units" type="xsd:string" use="optional" default="fathoms"/>
+				<xsd:attribute name="uncertainty" type="xsd:decimal" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="DepthElevationAngle" type="RelativeDegreesType">
+		<xsd:annotation>
+			<xsd:documentation>Azimuth - positive elevation and negative for depth angle</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Description" type="udt:TextType"/>
+	<xsd:element name="DopplerEnable" type="udt:MeasureType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DropTime" type="udt:DateTimeType"/>
+	<xsd:element name="DropDepth" type="DepthType"/>
+	<xsd:element name="Ellipse" type="EllipseType"/>
+	<xsd:complexType name="EllipseType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Ellipse type specifies an uncertain position as an Ellipse with Origin, Semi-major and -minor Axes with Semi-Major Axis Orientation in degrees</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Origin"/>
+			<xsd:element ref="SemiMajorAxis"/>
+			<xsd:element ref="SemiMinorAxis"/>
+			<xsd:element ref="AxisOrientationAngle"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Emission" type="udt:TextType"/>
+	<xsd:element name="Emitter" type="udt:TextType"/>
+	<xsd:element name="EndTime" type="udt:DateTimeType"/>
+	<xsd:element name="Endurance" type="udt:TimeType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Endurance</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Engagement" type="EngagementType"/>
+	<xsd:complexType name="EngagementType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Engagement Type describes a weapon engagement event</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DateTimeGroup"/>
+			<xsd:element ref="Weapon"/>
+			<xsd:element ref="Position"/>
+			<xsd:element ref="Orientation"/>
+			<xsd:element ref="Course"/>
+			<xsd:element ref="Speed"/>
+			<xsd:element ref="Solution"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Event" type="EventType"/>
+	<xsd:complexType name="EventType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Event with associated platforms and time frame</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="StartTime"/>
+			<xsd:element ref="EndTime"/>
+			<xsd:element ref="PlatformRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Objective" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:NMTOKENS" use="required"/>
+	</xsd:complexType>
+	<xsd:element name="Exercise" type="ExerciseType"/>
+	<xsd:complexType name="ExerciseType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Exercise type encloses Events and Platforms</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Event" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PlatformRef" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Objective" minOccurs="0"/>
+			<xsd:element ref="Description" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:NMTOKENS" use="required"/>
+	</xsd:complexType>
+	<xsd:element name="Exposure" type="ExposureType"/>
+	<xsd:complexType name="ExposureType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Exposure describing the eveidence of a hidden submersible</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="StartTime"/>
+			<xsd:element ref="EndTime"/>
+			<xsd:element ref="ExposureCode"/>
+			<xsd:element ref="Emission"/>
+			<xsd:element ref="Mast"/>
+			<xsd:element ref="BatteryAtStart"/>
+			<xsd:element ref="BatteryAtEnd"/>
+			<xsd:element ref="Frequency"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="ExposureCode" type="ExposureCodeType"/>
+	<xsd:simpleType name="ExposureCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Simple type ExposureCode enumerates for specific exposure of a submersible</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="udt:CodeContentType">
+			<xsd:enumeration value="SNORKEL">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MAST">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EMISSION">
+				<xsd:annotation>
+					<xsd:documentation/>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:element name="ForceCode">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:restriction base="udt:NumericType">
+					<xsd:maxInclusive value="99"/>
+				</xsd:restriction>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Frequency" type="udt:MeasureType"/>
+	<xsd:element name="FrequencySlope" type="udt:MeasureType"/>
+	<xsd:element name="GUID" type="udt:IdentifierType"/>
+	<xsd:element name="Gyro" type="udt:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="InterceptCourse" type="TrueDegreesType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="JulianDate" type="JulianDateType"/>
+	<xsd:complexType name="JulianDateType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Julian Date type describes the number of days from a reference date</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ReferenceDate"/>
+			<xsd:element ref="Day"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="LaminarDistance" type="RangeType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Latitude" type="LatitudeType"/>
+	<xsd:complexType name="LatitudeType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Latitude Base type is positive degrees North and negative degrees South of the Eauator to fractions of a degree</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="PrecisionMeasureType">
+				<xsd:minInclusive value="-90"/>
+				<xsd:maxInclusive value="90"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="LaunchTube" type="udt:QuantityType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Launch Tube</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LineOfBearing" type="LineOfBearingType"/>
+	<xsd:complexType name="LineOfBearingType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Line of Bearing type gives optional Origin, Bearing, and optional Range</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Origin" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="RelativeBearing"/>
+				<xsd:element ref="TrueBearing"/>
+			</xsd:choice>
+			<xsd:element ref="Range" minOccurs="0"/>
+			<xsd:element ref="AmbiguityStatus" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Longitude" type="LongitudeType"/>
+	<xsd:complexType name="LongitudeType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Longitude Base type is positive degrees West and negative degrees East of the Prime Meridian to fractions of a degree</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="PrecisionMeasureType">
+				<xsd:minInclusive value="-180"/>
+				<xsd:maxInclusive value="180"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="Mast" type="udt:TextType"/>
+	<xsd:element name="MeasuredCant" type="RelativeDegreesType"/>
+	<xsd:element name="Mode" type="udt:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Mute" type="udt:TextType"/>
+	<xsd:element name="Narrative" type="NarrativeType"/>
+	<xsd:complexType name="NarrativeType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Narrative Type for analysis narrative entered @time </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DateTimeGroup"/>
+			<xsd:element ref="Text"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Objective" type="udt:TextType"/>
+	<xsd:element name="OmniDirectionalTargetingStatus" type="udt:CodeContentType"/>
+	<xsd:element name="Operation">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="ExerciseType">
+					<xsd:sequence>
+						<xsd:element ref="PlatformRef" minOccurs="0" maxOccurs="unbounded"/>
+						<xsd:element ref="Objective" minOccurs="0"/>
+						<xsd:element ref="Description" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="Orientation" type="OrientationType"/>
+	<xsd:complexType name="OrientationType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Orientation Type describes the pitch, roll and yaw of an object</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Pitch" minOccurs="0"/>
+			<xsd:element ref="Roll" minOccurs="0"/>
+			<xsd:element ref="Yaw" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Origin" type="AbsolutePositionType">
+		<xsd:annotation>
+			<xsd:documentation>Origin of ellipse or line of bearing</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AxisOrientationAngle" type="TrueDegreesType">
+		<xsd:annotation>
+			<xsd:documentation>True bearing of ellipse major axis</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Pitch" type="PitchType"/>
+	<xsd:complexType name="PitchType">
+		<xsd:simpleContent>
+			<xsd:extension base="RelativeDegreesType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="PlacementAtTimeOfFire" type="udt:MeasureType"/>
+	<xsd:element name="PlacementAtActual" type="udt:MeasureType"/>
+	<xsd:element name="Platform" type="PlatformType">
+		<xsd:annotation>
+			<xsd:documentation>Complex element Platform of Platform Type with contraints PlatformContactID and PlatformConfigurationID</xsd:documentation>
+		</xsd:annotation>
+		<xsd:key name="ContactId">
+			<xsd:selector xpath="taml:Contact"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<xsd:keyref name="ConfigurationContactIdRef" refer="ContactId">
+			<xsd:selector xpath="taml:Configuration/taml:ContactRef"/>
+			<xsd:field xpath="@idref"/>
+		</xsd:keyref>
+		<xsd:keyref name="SolutionContactIdRef" refer="ContactId">
+			<xsd:selector xpath="taml:Solution/taml:ContactRef"/>
+			<xsd:field xpath="@idref"/>
+		</xsd:keyref>
+		<xsd:key name="ConfigurationId">
+			<xsd:selector xpath="taml:Configuration/taml:ConfgurationItem"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<xsd:keyref name="ContactConfigurationIdRef" refer="ConfigurationId">
+			<xsd:selector xpath="taml:Contact/taml:DetectingConfigurationRef"/>
+			<xsd:field xpath="@idref"/>
+		</xsd:keyref>
+	</xsd:element>
+	<xsd:complexType name="PlatformType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Platform Type with a track, Sonar, Configurations, Contacts, Solutions, and Attacks</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element ref="GUID" minOccurs="0"/>
+			<xsd:element name="Track" minOccurs="0">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="TrackType">
+							<xsd:sequence maxOccurs="unbounded">
+								<xsd:element ref="TimePosition" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="Configuration" minOccurs="0"/>
+			<xsd:element ref="BathyThermograph" minOccurs="0"/>
+			<xsd:element ref="Search" minOccurs="0"/>
+			<xsd:element ref="Contact" minOccurs="0"/>
+			<xsd:element ref="Solution" minOccurs="0"/>
+			<xsd:element ref="Engagement" minOccurs="0"/>
+			<xsd:element ref="Narrative" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:NMTOKENS" use="required"/>
+		<xsd:attribute name="callSign" type="xsd:string" use="optional"/>
+		<xsd:attribute name="categoryCode" type="CategoryCodeType" use="optional"/>
+		<xsd:attribute name="unitIdentificationCode" type="UnitIdentificationCodeType" use="optional"/>
+		<xsd:attribute name="name" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	<xsd:element name="PlatformRef" type="RefType"/>
+	<xsd:element name="Position" type="PositionType"/>
+	<xsd:complexType name="PositionType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Position Type of PositionGroup @time</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Type" minOccurs="0"/>
+			<xsd:element ref="Source" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="AbsolutePosition"/>
+				<xsd:element ref="Ellipse"/>
+				<xsd:element ref="LineOfBearing"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="PositionRef" type="RefType"/>
+	<xsd:element name="Power" type="udt:MeasureType"/>
+	<xsd:element name="PowerAttenuation" type="udt:MeasureType"/>
+	<xsd:complexType name="PrecisionMeasureType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Precision Measure type extends Measure type with precision attribute</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:MeasureType">
+				<xsd:attribute name="precision" type="xsd:decimal" use="optional"/>
+				<xsd:attribute name="uncertainty" type="xsd:decimal" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="PreEnableSpeed" type="SpeedType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Presets" type="WeaponPresetsType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PulseMode" type="udt:CodeType"/>
+	<xsd:element name="PulseType" type="udt:CodeType"/>
+	<xsd:element name="PulseWidth" type="udt:MeasureType"/>
+	<xsd:element name="Range" type="RangeType"/>
+	<xsd:complexType name="RangeType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Range type measures distance to targer in @units with @uncertainty</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:MeasureType">
+				<xsd:attribute name="units" type="xsd:string" use="optional" default="yards"/>
+				<xsd:attribute name="uncertainty" type="xsd:decimal" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="RangeEnable" type="RangeType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ReferenceDate" type="udt:DateType"/>
+	<xsd:element name="RelativeBearing">
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="RelativeBearingType"/>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="RelativeBearingType">
+		<xsd:simpleContent>
+			<xsd:extension base="RelativeDegreesType">
+				<xsd:attribute name="uncertainty" type="xsd:decimal" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="RelativeBearingEnable" type="RelativeDegreesType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RelativeDegrees" type="RelativeDegreesType"/>
+	<xsd:complexType name="RelativeDegreesType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Degrees Relative type in degrees relative to own heading.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:MeasureType">
+				<xsd:maxInclusive value="180"/>
+				<xsd:minExclusive value="-180"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="RelativeMotionDirection" type="RelativeDegreesType"/>
+	<xsd:element name="RelativeMotionSpeed" type="SpeedType"/>
+	<xsd:element name="ReportingStatus" type="udt:TextType"/>
+	<xsd:complexType name="RefType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Ref Type is an ID reference</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="idref" type="xsd:NMTOKENS"/>
+	</xsd:complexType>
+	<xsd:element name="Roll" type="RollType"/>
+	<xsd:complexType name="RollType">
+		<xsd:simpleContent>
+			<xsd:extension base="RelativeDegreesType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="Run" type="RangeType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RunToEnable" type="RangeType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Salinity" type="udt:MeasureType"/>
+	<xsd:element name="Search" type="SearchType"/>
+	<xsd:complexType name="SearchType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Search Type describes an object search by time span, altitude, configuration, and optionally pule specifications</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="StartTime"/>
+			<xsd:element ref="EndTime"/>
+			<xsd:element ref="ConfigurationRef"/>
+			<xsd:element ref="Altitude" minOccurs="0"/>
+			<xsd:element ref="CableScope" minOccurs="0"/>
+			<xsd:element ref="DepthElevationAngle" minOccurs="0"/>
+			<xsd:element ref="PulseType" minOccurs="0"/>
+			<xsd:element ref="PulseWidth" minOccurs="0"/>
+			<xsd:element ref="PulseMode" minOccurs="0"/>
+			<xsd:element ref="Power" minOccurs="0"/>
+			<xsd:element ref="Frequency" minOccurs="0"/>
+			<xsd:element ref="PowerAttenuation" minOccurs="0"/>
+			<xsd:element ref="Mute" minOccurs="0"/>
+			<xsd:element ref="AzimuthalCoverage" minOccurs="0"/>
+			<xsd:element ref="DataRate" minOccurs="0"/>
+			<xsd:element ref="ZoneStart" minOccurs="0"/>
+			<xsd:element ref="ZoneWidth" minOccurs="0"/>
+			<xsd:element ref="TrueBearing" minOccurs="0"/>
+			<xsd:element ref="FrequencySlope" minOccurs="0"/>
+			<xsd:element ref="OmniDirectionalTargetingStatus" minOccurs="0"/>
+			<xsd:element ref="SectorCenter" minOccurs="0"/>
+			<xsd:element ref="SearchDepth" minOccurs="0"/>
+			<xsd:element ref="ArrayTemperature" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SearchDepth" type="DepthType"/>
+	<xsd:element name="SearchAngle" type="TrueDegreesType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SearchSpeed" type="SpeedType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SectorCenter" type="udt:MeasureType"/>
+	<xsd:element name="SemiMajorAxis" type="udt:MeasureType"/>
+	<xsd:element name="SemiMinorAxis" type="udt:MeasureType"/>
+	<xsd:element name="SignalStrength" type="udt:MeasureType"/>
+	<xsd:element name="SoftwareVersion" type="udt:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Software Varsion</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Solution" type="SolutionType"/>
+	<xsd:complexType name="SolutionType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Solution Type predicts the Contact, bearing, range, position, orientation, course, and speed within an area of uncertainty at @time</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DateTimeGroup"/>
+			<xsd:element ref="ContactRef"/>
+			<xsd:element ref="Position"/>
+			<xsd:element ref="Orientation"/>
+			<xsd:element ref="Course"/>
+			<xsd:element ref="Speed"/>
+			<xsd:element ref="RelativeMotionDirection" minOccurs="0"/>
+			<xsd:element ref="RelativeMotionSpeed" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Source" type="udt:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Source of Position Report: GPS, SINS, RLGN, etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Sonobuoy" type="SonobuoyType"/>
+	<xsd:complexType name="SonobuoyType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Sonobuoy Type describes a sonobuoy event by unique ID, type, time, life, alttude, position, and contacts</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Channel"/>
+			<xsd:element ref="GUID" minOccurs="0"/>
+			<xsd:element ref="Type"/>
+			<xsd:element ref="DropTime"/>
+			<xsd:element ref="BuoyLife"/>
+			<xsd:element ref="DropDepth"/>
+			<xsd:element name="Track">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:restriction base="TrackType">
+							<xsd:sequence maxOccurs="unbounded">
+								<xsd:element ref="TimePosition" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:restriction>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element ref="ContactRef" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SoundPressureLevel" type="udt:MeasureType"/>
+	<xsd:element name="SoundVelocity" type="SpeedType"/>
+	<xsd:element name="Speed" type="SpeedType"/>
+	<xsd:complexType name="SpeedType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Speed Type describes speed in @units with @uncertainity</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="udt:MeasureType">
+				<xsd:attribute name="units" type="xsd:string" use="optional" default="knots"/>
+				<xsd:attribute name="uncertainty" type="xsd:decimal" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="StartTime" type="udt:DateTimeType"/>
+	<xsd:element name="TAML" type="TamlType">
+		<xsd:annotation>
+			<xsd:documentation/>
+		</xsd:annotation>
+		<xsd:key name="PlatformId">
+			<xsd:selector xpath="taml:Platform"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<xsd:keyref name="EventPlatformIdRef" refer="PlatformId">
+			<xsd:selector xpath="taml:Event/taml:PlatformRef"/>
+			<xsd:field xpath="@idref"/>
+		</xsd:keyref>
+		<xsd:keyref name="ThreatTrackDetectingPlatformIdRef" refer="PlatformId">
+			<xsd:selector xpath="taml:Threat/taml:Track/taml:TimePosition/taml:DetectingPlatformRef"/>
+			<xsd:field xpath="@idref"/>
+		</xsd:keyref>
+		<xsd:key name="PlatformConfigurationId">
+			<xsd:selector xpath="taml:Platform/taml:Configuration/taml:ConfigurationItem"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		<xsd:keyref name="ThreatTrackDetectingPlatformConfigurationIdRef" refer="PlatformConfigurationId">
+			<xsd:selector xpath="taml:Threat/taml:Track/taml:TimePosition/taml:DetectingConfigurationRef"/>
+			<xsd:field xpath="@idref"/>
+		</xsd:keyref>
+	</xsd:element>
+	<xsd:complexType name="TamlType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Taml Type contains the platforms, events, and threats.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="Exercise"/>
+				<xsd:element ref="Operation"/>
+			</xsd:choice>
+			<xsd:element ref="Platform" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Sonobuoy" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Threat" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="classification" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="udt:CodeContentType">
+					<xsd:enumeration value="Unclassified"/>
+					<xsd:enumeration value="Confidential"/>
+					<xsd:enumeration value="Secret"/>
+					<xsd:enumeration value="Top Secret"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:element name="TargetDoppler" type="udt:MeasureType"/>
+	<xsd:element name="TargetMode" type="udt:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Temperature" type="udt:MeasureType"/>
+	<xsd:element name="Text" type="udt:TextType"/>
+	<xsd:element name="Threat" type="ThreatType"/>
+	<xsd:complexType name="ThreatType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Threat type permits the correlation of multiple Position references</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Track" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="trackNumber" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:element name="ThreatCode">
+		<xsd:simpleType>
+			<xsd:restriction base="udt:CodeContentType">
+				<xsd:enumeration value="FRD"/>
+				<xsd:enumeration value="HOS"/>
+				<xsd:enumeration value="NEU"/>
+				<xsd:enumeration value="AFD"/>
+				<xsd:enumeration value="SUS"/>
+				<xsd:enumeration value="UNK"/>
+				<xsd:enumeration value="PND"/>
+				<xsd:enumeration value="JOKER"/>
+				<xsd:enumeration value="FAKER"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Time" type="udt:TimeType"/>
+	<xsd:element name="TimePosition" type="TimePositionType"/>
+	<xsd:complexType name="TimePositionType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Time Position Type describes the position, orientation, course, speed, contact, platform and configuration at @time</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DateTimeGroup"/>
+			<xsd:element ref="Position"/>
+			<xsd:element ref="Orientation" minOccurs="0"/>
+			<xsd:element ref="Course" minOccurs="0"/>
+			<xsd:element ref="Speed" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:NMTOKENS" use="required"/>
+	</xsd:complexType>
+	<xsd:element name="TimePositionRef" type="TimePositionRefType"/>
+	<xsd:complexType name="TimePositionRefType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Time Position Type describes the position, orientation, course, speed, contact, platform and configuration at @time</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="DateTimeGroupRef"/>
+			<xsd:element ref="PositionRef"/>
+			<xsd:element ref="Orientation" minOccurs="0"/>
+			<xsd:element ref="Course"/>
+			<xsd:element ref="Speed"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Track" type="TrackType"/>
+	<xsd:complexType name="TrackType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Track Type gives time and position at @time for @source</xsd:documentation>
+		</xsd:annotation>
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="TimePosition" maxOccurs="unbounded"/>
+			<xsd:element ref="ContactRef" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="source" type="xsd:string" use="optional"/>
+		<xsd:attribute name="type" type="xsd:string" use="optional"/>
+		<xsd:attribute name="id" type="xsd:NMTOKENS" use="optional"/>
+	</xsd:complexType>
+	<xsd:element name="TrajectoryMode" type="udt:TextType">
+		<xsd:annotation>
+			<xsd:documentation>Weapon Presets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="TrueBearing" type="TrueBearingType"/>
+	<xsd:complexType name="TrueBearingType">
+		<xsd:simpleContent>
+			<xsd:extension base="TrueDegreesType">
+				<xsd:attribute name="uncertainty" type="xsd:decimal" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="TrueDegrees" type="TrueDegreesType"/>
+	<xsd:complexType name="TrueDegreesType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Degrees True type in degrees relative to true North</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:restriction base="udt:MeasureType">
+				<xsd:minInclusive value="0"/>
+				<xsd:maxExclusive value="360"/>
+			</xsd:restriction>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="Type" type="udt:TextType"/>
+	<xsd:simpleType name="UnitIdentificationCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Simple type Unit Identification Code is also referred to as UIC</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="udt:CodeContentType"/>
+	</xsd:simpleType>
+	<xsd:element name="Weapon" type="WeaponType"/>
+	<xsd:complexType name="WeaponType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Weapon Type descrives weapon presets, launch, software, endurance, and placements along with track</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Presets"/>
+			<xsd:element ref="LaunchTube"/>
+			<xsd:element ref="SoftwareVersion"/>
+			<xsd:element ref="Endurance"/>
+			<xsd:element ref="PlacementAtTimeOfFire"/>
+			<xsd:element ref="PlacementAtActual"/>
+			<xsd:element ref="Track"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="WeaponPresets" type="WeaponPresetsType"/>
+	<xsd:complexType name="WeaponPresetsType">
+		<xsd:annotation>
+			<xsd:documentation>Complex type Weapon Presets Type describes weapon settings prior to launch</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Mode"/>
+			<xsd:element ref="TargetMode"/>
+			<xsd:element ref="TrajectoryMode"/>
+			<xsd:element ref="SearchDepth"/>
+			<xsd:element ref="SearchAngle"/>
+			<xsd:element ref="PreEnableSpeed"/>
+			<xsd:element ref="SearchSpeed"/>
+			<xsd:element ref="AcousticMode"/>
+			<xsd:element ref="DopplerEnable"/>
+			<xsd:element ref="RangeEnable"/>
+			<xsd:element ref="RelativeBearingEnable"/>
+			<xsd:element ref="Run"/>
+			<xsd:element ref="LaminarDistance"/>
+			<xsd:element ref="InterceptCourse"/>
+			<xsd:element ref="RunToEnable"/>
+			<xsd:element ref="Gyro"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Yaw" type="YawType"/>
+	<xsd:complexType name="YawType">
+		<xsd:simpleContent>
+			<xsd:extension base="RelativeDegreesType"/>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="ZoneStart" type="udt:MeasureType"/>
+	<xsd:element name="ZoneWidth" type="udt:MeasureType"/>
+</xsd:schema>

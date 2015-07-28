@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>German translation</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="junit_running.xhtml">Next: Running the test cases</a>
+		</div>
+		<div class="previous">
+			<a href="lookout.xhtml">Previous: Other things to look out for</a>
+		</div>
+		<h1>German translation</h1>
+		<div class="p">Currently, all the test are performed on the English versions of the product. This is usually sufficent, since what we are looking for are anomalies on the new releases, compared to the previous one. However, if you would like to consider testing the German installations as well, here are a few things to consider. Surely there will be other hacks needed, but at least this should take care of some of them.</div>
+		<div class="p">The main areas where the robot framework uses English text is when searching for text on the screen, using the image recognition, and when searching for text contained in dialog boxes. Both of these have multiple entry methods for various types of search, however both have a single point where all the execution flow passes. At this point, it seems it would be convient to call an external class, translate the English string to German and then continue as normal.</div>
+		<h2><a name="2" />findString(...) and related text recognition methods</h2>
+	<div class="p">For the text search and recogniton, this point is the method <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/src-code/robotsapi/com/altova/robots/ImageRecognitionRobot.html#findString(java.lang.String,%20java.awt.Font,%20java.awt.Color,%20java.awt.Color,%20java.awt.Rectangle,%20boolean)">ImageRecognitionRobot.findString(String string, Font font, Color background, Color text, Rectangle hint, boolean searchWholeScreen)</a>. It currently looks like this:
+	<pre class="javacode">
+	protected Rectangle findString(String string, Font font, Color background, Color text, Rectangle hint, boolean searchWholeScreen) {
+		int oldIgnoreCount = this.ignorePixels;
+		
+		//text search can be a bit tricky - let's start with ignoring 3 pixels..
+		ignorePixels = 3;
+		
+		//let's ignore more pixels for specific letters.
+		for(char c : string.toCharArray()) {
+			//BE AWARE, these are case sensitive
+			switch(c) {
+				case('m'): ignorePixels+=3; break;
+				case('M'): ignorePixels+=7; break;
+				case('n'): ignorePixels+=2; break;
+				case('s'): ignorePixels+=4; break;
+				case('v'): ignorePixels+=2; break;
+				case('V'): ignorePixels+=2; break;
+				case('X'): ignorePixels+=4; break;
+			}
+		}
+		
+		<i>// create the image containting the text and find here</i>
+	}
+	</pre>
+	Before it starts examing the string to ignore pixels, it might be translated to German, like this:
+	<pre class="javacode">
+	protected Rectangle findString(String string, Font font, Color background, Color text, Rectangle hint, boolean searchWholeScreen) {
+		int oldIgnoreCount = this.ignorePixels;
+		<b>
+		if( translator.getLanguage() != Translator.DEFAULT_LANGUAGE ) {
+			string = translator.translate(string);
+		}
+		</b>
+		
+		//text search can be a bit tricky - let's start with ignoring 3 pixels..
+		ignorePixels = 3;
+		
+		//let's ignore more pixels for specific letters.
+		<i>(...)</i>
+	}
+	</pre>
+	</div>
+	<h2><a name="3" />findComponent(...) and related native GUI methods</h2>
+	<div class="p">
+		Similary, the <i>findComponents</i> methods might be intercepted at one single point, for example in the method <i>ApplicationRobot.filterComponents(List&lt;ComponentInfo&gt; cmps, String windowText, String className)</i>. It might be changed in the same way to do the translation. (Make sure that you don't transalte the <i>className</i> variable, as this will stay the same.
+	<pre class="javacode">
+	private List&lt;ComponentInfo&gt; filterComponents(List&lt;ComponentInfo&gt; cmps, String windowText, String className) {
+		List &lt;ComponentInfo&gt; ans = new ArrayList&lt;ComponentInfo&gt;();
+		<b>
+		if( translator.getLanguage() != Translator.DEFAULT_LANGUAGE ) {
+			windowText = translator.translate(windowText);
+		}
+		</b>
+		
+		for(ComponentInfo info : cmps) {
+			if(windowText == null || className == null ) {
+				if(windowText == null &amp;&amp; info.getClassName().indexOf(className) &gt; -1 ) {
+					ans.add( info );
+				}
+	
+	</pre>
+	</div>
+	<h2><a name="4" />The Translator</h2>
+	<div class="p">
+	Finally, the Translator class might look something like this:
+	
+	<pre class="javacode">
+package com.altova.robots;
+
+import java.util.Map;
+
+public class Translator {
+
+	public enum Language {
+		ENGLISH, GERMAN;
+	}
+	
+	public static Language DEFAULT_LANGUAGE = Language.ENGLISH;
+	
+	private Language currentLanguage;
+	
+	private Map&lt;String, String&gt; dictionary;
+	
+	public Translator(Language lang) {
+		currentLanguage = lang;
+		
+		//read some dictionary file based on the given language
+		//put it all in a hastmap or something
+		dictionary = readDictionaryFile(lang);
+	}
+	
+	private Map&lt;String, String&gt; readDictionaryFile(Language lang) {
+		//somehow read the file which you got from the documentation department
+		//it might be CSV, XML or what ever you asked for
+		return null;
+	}
+
+	public String translate(String string) {
+		
+		//first see if there is a full match 
+		if(dictionary.containsKey(string)) {
+			return dictionary.get(string);
+		}
+		
+		//now, let's search for a partial match...
+		for(String key : dictionary.keySet()) {
+			if(key.indexOf(string) &gt; -1) {
+				//well, so how are going to handle this?
+				//maybe is was a bad idea after all...
+			}
+		}
+		
+		throw new ScriptMistakeException("Could not translate '"+string+"' to "+currentLanguage); 
+	}
+}
+	</pre>
+	</div>
+	</body>
+</html>

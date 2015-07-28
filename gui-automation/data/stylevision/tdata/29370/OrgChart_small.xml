@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.0 NT beta 2 build Jul 26 2001 (http://www.xmlspy.com) by Vladislav Gavrielov (Altova) -->
+<?altova_sps OrgChart.sps?>
+<OrgChart xmlns="http://www.xmlspy.com/schemas/orgchart" xmlns:ipo="http://www.altova.com/IPO" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ts="http://www.xmlspy.com/schemas/textstate" xsi:schemaLocation="http://www.xmlspy.com/schemas/orgchart OrgChart_small.xsd">
+	<CompanyLogo href="nanonull.gif"/>
+	<Name>Organization Chart</Name>
+	<Office>
+		<Name>Nanonull, Inc.</Name>
+		<Desc>
+			<para>The company was established <ts:bold>in Vereno in 1995</ts:bold> as a privately held software company. Since 1996, Nanonull has been actively involved in developing nanoelectronic software technologies. It released the first version of its acclaimed <ts:italic>NanoSoft Development Suite </ts:italic>in February 1999. Also in 1999, Nanonull increased its capital base with investment from a consortium of private investment firms. The company has been expanding rapidly ever since.</para>
+			<para>Due to the fact that nanoelectronic software components are new and that sales are restricted to corporate customers, Nanonull and its product line have not received much media publicity in the company&apos;s early years. This has however changed in recent months as trade journals have realized the importance of this revolutionary technology.</para>
+		</Desc>
+		<Location>US</Location>
+		<Address>
+			<ipo:street>119 Oakstreet, Suite 4876</ipo:street>
+			<ipo:city>Vereno</ipo:city>
+			<ipo:state>DC</ipo:state>
+			<ipo:zip>29213</ipo:zip>
+		</Address>
+		<Phone>+1 (321) 555 5155 0</Phone>
+		<Fax>+1 (321) 555 5155 4</Fax>
+		<EMail>office@nanonull.com</EMail>
+	</Office>
+</OrgChart>

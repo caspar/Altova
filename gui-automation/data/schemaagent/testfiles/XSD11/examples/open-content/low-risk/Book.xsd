@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.book.org" targetNamespace="http://www.book.org" elementFormDefault="qualified" version="1.1">
+	<element name="Binding">
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="Hardcover"/>
+				<enumeration value="Softcover"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name="Size">
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="5 x 7"/>
+				<enumeration value="8 x 11"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name="InStock" type="boolean"/>
+	<element name="Category">
+		<simpleType>
+			<restriction base="string">
+				<enumeration value="Non-fiction"/>
+				<enumeration value="Fiction"/>
+			</restriction>
+		</simpleType>
+	</element>
+	<element name="AvailableOnTape" type="boolean"/>
+	<element name="NumPages" type="integer"/>
+</schema>

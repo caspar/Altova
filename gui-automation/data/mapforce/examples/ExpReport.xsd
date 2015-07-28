@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 U (http://www.xmlspy.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="expense-report">
+		<xs:annotation>
+			<xs:documentation>expense-report is the root element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Person">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="First">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Last">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Title" type="xs:string"/>
+							<xs:element name="Phone">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="[0-9 \-]*"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Email" type="emailType"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="expense-item" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="detailed" type="xs:boolean" use="required"/>
+			<xs:attribute name="currency" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="USD"/>
+						<xs:enumeration value="Euro"/>
+						<xs:enumeration value="JPY"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="total-sum" type="xs:decimal" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="expense" type="xs:decimal"/>
+	<xs:complexType name="TextType" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="strong"/>
+			<xs:element ref="italic"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="Date" type="xs:date"/>
+	<xs:simpleType name="emailType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[\p{L}_-]+(\.[\p{L}_-]+)*@[\p{L}_]+(\.[\p{L}_]+)+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="expense-item">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Date"/>
+				<xs:element ref="expense"/>
+			</xs:sequence>
+			<xs:attribute name="type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Meal"/>
+						<xs:enumeration value="Lodging"/>
+						<xs:enumeration value="Travel"/>
+						<xs:enumeration value="Parking"/>
+						<xs:enumeration value="Entertainment"/>
+						<xs:enumeration value="Misc"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="expto" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Development"/>
+						<xs:enumeration value="Marketing"/>
+						<xs:enumeration value="Accounting"/>
+						<xs:enumeration value="Sales"/>
+						<xs:enumeration value="Operations"/>
+						<xs:enumeration value="Support"/>
+						<xs:enumeration value="IT"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Location" type="xs:string"/>
+	<xs:element name="strong" type="TextType"/>
+	<xs:element name="italic" type="TextType"/>
+</xs:schema>

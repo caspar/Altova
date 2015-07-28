@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/swe" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="../../../sweCommon/1.0.30/parameters.xsd"/>
+    <xs:include schemaLocation="../../../sweCommon/1.0.30/positionData.xsd"/>
+</xs:schema>

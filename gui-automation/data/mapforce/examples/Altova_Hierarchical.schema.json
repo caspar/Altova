@@ -1,0 +1,81 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"$ref": "#/definitions/altova",
+	"definitions": {
+		"altova": {
+			"type": "object",
+			"required": [
+				"Name", "Office"
+			],
+			"properties": {
+				"Name": { "type": "string" },
+				"Office": { "type": "array", "title": "Office", "items": { "$ref": "#/definitions/office" }
+				}
+			},
+			"additionalProperties": false
+		},
+		"office": {
+			"type": "object",
+			"required": [
+				"Name", "Address", "Department"
+			],
+			"properties": {
+				"Desc": { "type": "string" },
+				"EMail": { "type": "string" },
+				"Established": { "type": "string" },
+				"Fax": { "type": "string" },
+				"Name": { "type": "string" },
+				"Phone": { "type": "string" },
+				"Address": {
+					"type": "object",
+					"title": "Address",
+					"required": [
+						"city", "state", "street"
+					],
+					"properties": {
+						"city": { "type": "string" },
+						"state": { "type": "string" },
+						"street": { "type": "string" },
+						"zip": { "type": "string" }
+					},
+					"additionalProperties": false
+				},
+				"Department": {
+					"type": "array",
+					"title": "Department",
+					"items": { "$ref": "#/definitions/department" }
+				}
+			},
+			"additionalProperties": false
+		},
+		"department": {
+			"type": "object",
+			"required": [
+				"Name", "Person"
+			],
+			"properties": {
+				"Name": { "type": "string" },
+				"Person": {
+					"type": "array",
+					"title": "Person",
+					"items": {
+						"type": "object",
+						"title": "Person",
+						"required": [
+							"First", "Last"
+						],
+						"properties": {
+							"EMail": { "type": "string" },
+							"First": { "type": "string" },
+							"Last": { "type": "string" },
+							"PhoneExt": { "type": "integer" },
+							"Title": { "type": "string" }
+						},
+						"additionalProperties": false
+					}
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Automating GUI tests for a new application</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="robots_new_plugins.xhtml">Next: Automating GUI tests for new plugins</a>
+		</div>
+		<div class="previous">
+			<a href="robots_new_release.xhtml">Previous: Maintaining GUI tests for a new release</a>
+		</div>
+		<h1>Automating GUI tests for a new application</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">These are some brief thought about what to look at when starting GUI test automation for a new application.
+		</div>
+		<h2>
+			<a name="2" />Your application class already exists</h2>
+		<div class="p">First of all, unless Altova comes out with a brand new product, the base Robot class for your application already exists. Under <div class="file">C:\work\gui-automation\src\com\altova </div> you will find a package for each of the applications, and inside a Robot class for each. E.g. under <div class="file">C:\work\gui-automation\src\com\altova\databasespy </div> there is <i>DatabaseSpyRobot.java</i>. However, it is probably rather empty, so you'll need to fill out methods.
+		</div>
+		<h2>
+			<a name="3" />What do you want to test?</h2>
+		<div class="p">When work started on UModel, it was important to get up the diagram functionality, clicking on the UML element buttons, etc. Other functionality like code import and export was ignored, at least in the beginning, since it was already being tested by the UModelBatch tool. For the XMLSpy GUI tests a different approach was take: implement GUI tests for all the menu items. Obviously, this lead to a different set of methods in the <i>SpyRobot</i> class.	</div>
+		<div class="p">
+		When designing the first methods of your new application robot class, you should focus on the functionality you actually will need for your test. Anything which you might need, can wait till the future. Spend time solving the problems that do come up, rather than the once you think you will have. A good way to start this is to implement the first page or two of the tutorial, or the a few of the most basic operations of the applications. In UModel it was the diagram, in MapForce it will be the creating the links between boxes, in StyleVision it was dragging out tags (a test for the two first pages of the tutorial already exits for StyleVision).
+		</div>
+
+		<h2>
+			<a name="4" />Separate application methods from test methods</h2>
+		<div class="p">When creating new robot methods and test methods, it is very import to separate the general functionality for handling the application from the test code which carries out a very specific series of actions. <a href="robots_overview.xhtml#2">This section</a> already touched on some of this, but it should be emphasized again. Putting application functionality in the test methods will lead to a lot of duplicate code, which leads us to the next point.
+		</div>
+		<h2>
+			<a name="5" />Do not copy &amp; paste</h2>
+		<div class="p">Do never duplicate code. Create a new method which take the input parameters you need. If the method you need is in the wrong place, move it to a better location. Never make a copy. :-)
+		</div>
+		<h2>
+			<a name="6" />Create your own internal unit tests</h2>
+		<div class="p">For the <i>UModelRobot</i> there is an internal test class called <i>UModelRobot</i>, which can be found under <div class="file">C:\work\gui-automation\<b>test</b>\com\altova\umodel </div>. It is itself a JUnit test class, and can be run as any other test. Creating such internal test classes is useful in any development work, also for ours. Running it once in a while will ensure that major changes or refactoring to your code does not break other things. It will in general not test the application, but rather your own test and robot code.
+		</div>
+
+		<h2>
+			<a name="7" />Get the application images and resource files</h2>
+		<div class="p">Finally, for some of the application, like UModel, it is necessary to get some of the icon resource to be able to find out where to click. This has been solved by coping the BMP and .RC files from the developer CVS and checking them into our own QA CVS. These kind of files should go under <div class="file">C:\work\gui-automation\data\<b>application name</b> </div>. Please see the section <a href="toolbar_rc.xhtml"><i>Maintaining toolbar resource files</i></a> for details about how to handle this.
+		</div>
+	</body>
+</html>

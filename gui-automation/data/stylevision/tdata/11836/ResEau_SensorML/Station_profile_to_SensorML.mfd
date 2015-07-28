@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping version="6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<component name="defaultmap1" blackbox="0" uid="36957728" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="51153744" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="689" lty="1115" rbx="-88" rby="495"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51544376" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="597" lty="749" rbx="-180" rby="263"/>
+					<data>
+						<constant value=" " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51545288" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="639" lty="963" rbx="-138" rby="477"/>
+					<data>
+						<constant value="species" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51546320" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="772" lty="950" rbx="86" rby="467"/>
+					<data>
+						<constant value="," datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51547288" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="790" lty="926" rbx="104" rby="443"/>
+					<data>
+						<constant datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51548328" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="745" lty="902" rbx="59" rby="419"/>
+					<data>
+						<constant value=" " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51549272" kind="2">
+					<properties/>
+					<targets>
+						<datapoint/>
+					</targets>
+					<view ltx="749" lty="1027" rbx="63" rby="544"/>
+					<data>
+						<constant datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51550264" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51551288"/>
+					</targets>
+					<view ltx="1100" lty="759" rbx="323" rby="273"/>
+					<data>
+						<constant value="m" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51551400" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51552488"/>
+					</targets>
+					<view ltx="743" lty="674" rbx="-34" rby="193"/>
+					<data>
+						<constant value="°" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51552600" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51553784"/>
+					</targets>
+					<view ltx="602" lty="784" rbx="-175" rby="298"/>
+					<data>
+						<constant value="southwestCorner" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51553896" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51555056"/>
+					</targets>
+					<view ltx="603" lty="809" rbx="-174" rby="323"/>
+					<data>
+						<constant value="southeastCorner" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51555168" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51556328"/>
+					</targets>
+					<view ltx="610" lty="849" rbx="-167" rby="363"/>
+					<data>
+						<constant value="northeastCorner" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51556440" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51557600"/>
+					</targets>
+					<view ltx="558" lty="895" rbx="-219" rby="409"/>
+					<data>
+						<constant value="northwestCorner" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51557712" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51558872"/>
+					</targets>
+					<view ltx="636" lty="-151" rbx="-120" rby="-626"/>
+					<data>
+						<constant value="recordCreationDate" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="now" library="lang" uid="51558984" kind="5">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51559736"/>
+					</targets>
+					<view ltx="572" lty="-94" rbx="277" rby="-37"/>
+				</component>
+				<component name="constant" library="core" uid="51559848" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51560960"/>
+					</targets>
+					<view ltx="688" lty="-52" rbx="-89" rby="-533"/>
+					<data>
+						<constant value="siteName" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51561072" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51562176"/>
+					</targets>
+					<view ltx="869" lty="-7" rbx="129" rby="-551"/>
+					<data>
+						<constant value="Data Extraction, Reports etc." datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51562288" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51563392"/>
+					</targets>
+					<view ltx="973" lty="14" rbx="136" rby="-630"/>
+					<data>
+						<constant value="html" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51563504" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51564632"/>
+					</targets>
+					<view ltx="831" lty="23" rbx="54" rby="-458"/>
+					<data>
+						<constant value=".jpeg" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51564744" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51565912"/>
+					</targets>
+					<view ltx="694" lty="36" rbx="-83" rby="-445"/>
+					<data>
+						<constant value="currentStatus" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51566024" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51567168"/>
+					</targets>
+					<view ltx="603" lty="5" rbx="-174" rby="-476"/>
+					<data>
+						<constant value="keyword" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51567280" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51568440"/>
+					</targets>
+					<view ltx="585" lty="-24" rbx="-192" rby="-505"/>
+					<data>
+						<constant value="knowYourWatershedID" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51568552" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51569712"/>
+					</targets>
+					<view ltx="528" lty="27" rbx="-249" rby="-454"/>
+					<data>
+						<constant value="samplingFrequency" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51569824" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51570984"/>
+					</targets>
+					<view ltx="539" lty="56" rbx="-238" rby="-425"/>
+					<data>
+						<constant value="siteDescription" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51572368" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51573472"/>
+					</targets>
+					<view ltx="682" lty="79" rbx="-74" rby="-396"/>
+					<data>
+						<constant value="supplementalInformation" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51573584" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51574688"/>
+					</targets>
+					<view ltx="539" lty="97" rbx="-238" rby="-384"/>
+					<data>
+						<constant value="collectionLevelMetadataLink" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51574800" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51575960"/>
+					</targets>
+					<view ltx="540" lty="129" rbx="-237" rby="-352"/>
+					<data>
+						<constant value="siteInfluences" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51576072" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51577232"/>
+					</targets>
+					<view ltx="675" lty="116" rbx="-164" rby="-365"/>
+					<data>
+						<constant value="siteActivationDate" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51577344" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51578504"/>
+					</targets>
+					<view ltx="604" lty="148" rbx="-235" rby="-340"/>
+					<data>
+						<constant value="siteFinalSamplingDate" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51578616" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51579760"/>
+					</targets>
+					<view ltx="723" lty="-93" rbx="-54" rby="-574"/>
+					<data>
+						<constant value="siteID" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="51584040" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="51584880"/>
+						<datapoint pos="1" key="51585048"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="51585272"/>
+					</targets>
+					<view ltx="589" lty="388" rbx="31" rby="3"/>
+				</component>
+				<component name="constant" library="core" uid="51585384" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51586584"/>
+					</targets>
+					<view ltx="507" lty="521" rbx="-190" rby="100"/>
+					<data>
+						<constant datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51586696" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51587800"/>
+					</targets>
+					<view ltx="931" lty="89" rbx="154" rby="-397"/>
+					<data>
+						<constant value="biotaObservedOrSampled" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51587912" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51589072"/>
+					</targets>
+					<view ltx="787" lty="558" rbx="8" rby="-62"/>
+					<data>
+						<constant value="waterQualityVariables" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="51589184" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="51590256"/>
+						<datapoint pos="1" key="51590424"/>
+						<datapoint pos="2" key="51590648"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="51590872"/>
+					</targets>
+					<view ltx="941" lty="288" rbx="74" rby="-133"/>
+				</component>
+				<component name="constant" library="core" uid="51590984" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51592224"/>
+					</targets>
+					<view ltx="723" lty="286" rbx="-144" rby="-135"/>
+					<data>
+						<constant value="http://www.cbif.gc.ca/pls/itisca" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51571096" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51572256"/>
+					</targets>
+					<view ltx="707" lty="62" rbx="-70" rby="-419"/>
+					<data>
+						<constant value="sitePhotograph" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="47487896" kind="14">
+					<properties XSLTDefaultOutput="1" TnsPrefix="sml"/>
+					<view ltx="1257" lty="-116" rbx="1501" rby="993"/>
+					<data>
+						<root scrollposition="449">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.opengis.net/sensorML"/>
+									<namespace uid="http://www.w3.org/1999/xlink"/>
+									<namespace uid="http://www.opengis.net/swe"/>
+								</namespaces>
+							</header>
+							<entry name="1:System" expanded="1" inpkey="171935456">
+								<entry name="1:identification">
+									<entry name="1:IdentifierList" expanded="1">
+										<entry name="1:identifier" expanded="1">
+											<entry name="0:@name" inpkey="171940984"/>
+											<entry name="1:Term" inpkey="171936864"/>
+										</entry>
+										<entry name="1:identifier" expanded="1" clone="1">
+											<entry name="0:@name" inpkey="171935312"/>
+											<entry name="1:Term" inpkey="171938896"/>
+										</entry>
+										<entry name="1:identifier" expanded="1" clone="1">
+											<entry name="0:@name" inpkey="171938592"/>
+											<entry name="1:Term" inpkey="171938104"/>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="1:classification">
+									<entry name="1:ClassifierList" expanded="1">
+										<entry name="1:classifier" expanded="1">
+											<entry name="0:@name" inpkey="171939120"/>
+											<entry name="1:Term" inpkey="171939424"/>
+										</entry>
+										<entry name="1:classifier" expanded="1" clone="1">
+											<entry name="0:@name" inpkey="171938328"/>
+											<entry name="1:Term" inpkey="171937008"/>
+										</entry>
+										<entry name="1:classifier" expanded="1" inpkey="171937264" clone="1">
+											<entry name="0:@name" inpkey="171939648"/>
+											<entry name="1:Term" expanded="1" inpkey="171937576">
+												<entry name="0:@qualifier" inpkey="171937352"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="1:description">
+									<entry name="0:@id" inpkey="171937800"/>
+									<entry name="0:@topic" inpkey="171939912"/>
+								</entry>
+								<entry name="1:validTime">
+									<entry name="1:TimeStamp" expanded="1" inpkey="171940496">
+										<entry name="0:@id" inpkey="171940176"/>
+									</entry>
+								</entry>
+								<entry name="1:documentation" expanded="1">
+									<entry name="1:DocumentList" expanded="1">
+										<entry name="0:@id" inpkey="171941248"/>
+										<entry name="1:member" expanded="1">
+											<entry name="0:@name" inpkey="171990936"/>
+											<entry name="1:Document" expanded="1">
+												<entry name="1:description" inpkey="171935912"/>
+												<entry name="1:date" inpkey="171936000"/>
+												<entry name="1:format" inpkey="171936144"/>
+												<entry name="1:fileLocation" inpkey="171935712"/>
+											</entry>
+										</entry>
+										<entry name="1:member" expanded="1" clone="1">
+											<entry name="0:@name" inpkey="171940720"/>
+											<entry name="2:@href" inpkey="171936288"/>
+										</entry>
+										<entry name="1:member" expanded="1" clone="1">
+											<entry name="0:@name" inpkey="171936432"/>
+											<entry name="2:@href" inpkey="171936576"/>
+										</entry>
+										<entry name="1:member" expanded="1" clone="1">
+											<entry name="1:Document" expanded="1">
+												<entry name="1:description" inpkey="171942440"/>
+												<entry name="1:date" inpkey="171941552"/>
+												<entry name="1:format" inpkey="171941816"/>
+												<entry name="1:fileLocation" inpkey="171942160"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="1:history">
+									<entry name="1:EventList" expanded="1">
+										<entry name="1:member" expanded="1">
+											<entry name="0:@name" inpkey="171936720"/>
+											<entry name="1:Event" expanded="1">
+												<entry name="1:identification" expanded="1">
+													<entry name="1:IdentifierList" expanded="1">
+														<entry name="1:identifier" expanded="1">
+															<entry name="0:@name" inpkey="171942608"/>
+															<entry name="1:Term" inpkey="171943176"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="1:member" expanded="1" clone="1">
+											<entry name="0:@name" inpkey="171942872"/>
+											<entry name="1:Event" expanded="1">
+												<entry name="1:identification" expanded="1">
+													<entry name="1:IdentifierList" expanded="1">
+														<entry name="1:identifier" expanded="1">
+															<entry name="0:@name" inpkey="171943400"/>
+															<entry name="1:Term" inpkey="171943968"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="1:outputs" expanded="1">
+									<entry name="1:OutputList" expanded="1">
+										<entry name="1:output" expanded="1">
+											<entry name="0:@name" inpkey="171943664"/>
+											<entry name="3:DataGroup" expanded="1">
+												<entry name="3:component" expanded="1" inpkey="171944248">
+													<entry name="0:@name" inpkey="171944472"/>
+													<entry name="2:@href" inpkey="171944736"/>
+													<entry name="3:Category" expanded="1" inpkey="171945056">
+														<entry name="0:@id" inpkey="171945280"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="1:output" expanded="1" clone="1">
+											<entry name="0:@name" inpkey="171945824"/>
+											<entry name="3:DataGroup" expanded="1" inpkey="171946408">
+												<entry name="0:@id" inpkey="171946088"/>
+												<entry name="3:component" expanded="1" inpkey="171945600">
+													<entry name="0:@name" inpkey="171946912"/>
+													<entry name="3:DataGroup" expanded="1">
+														<entry name="3:component" expanded="1" inpkey="171946688">
+															<entry name="0:@name" inpkey="171947176"/>
+															<entry name="2:@href" inpkey="171947440"/>
+															<entry name="3:Quantity" expanded="1">
+																<entry name="0:@uom" inpkey="171947704"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+								<entry name="1:positions">
+									<entry name="1:PositionList" expanded="1">
+										<entry name="1:position">
+											<entry name="0:@name" inpkey="171947968"/>
+											<entry name="3:GeoLocation">
+												<entry name="3:latitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171948288">
+														<entry name="0:@uom" inpkey="171948512"/>
+													</entry>
+												</entry>
+												<entry name="3:longitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171948832">
+														<entry name="0:@uom" inpkey="171949056"/>
+													</entry>
+												</entry>
+												<entry name="3:altitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171949376">
+														<entry name="0:@uom" inpkey="171949600"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="1:position" clone="1">
+											<entry name="0:@name" inpkey="171949864"/>
+											<entry name="3:GeoLocation">
+												<entry name="3:latitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171950184">
+														<entry name="0:@uom" inpkey="171950408"/>
+													</entry>
+												</entry>
+												<entry name="3:longitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171950728">
+														<entry name="0:@uom" inpkey="171950952"/>
+													</entry>
+												</entry>
+												<entry name="3:altitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171951272">
+														<entry name="0:@uom" inpkey="171951496"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="1:position" clone="1">
+											<entry name="0:@name" inpkey="171951760"/>
+											<entry name="3:GeoLocation">
+												<entry name="3:latitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171952080">
+														<entry name="0:@uom" inpkey="171952304"/>
+													</entry>
+												</entry>
+												<entry name="3:longitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171952624">
+														<entry name="0:@uom" inpkey="171952848"/>
+													</entry>
+												</entry>
+												<entry name="3:altitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171953168">
+														<entry name="0:@uom" inpkey="171953392"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="1:position" clone="1">
+											<entry name="0:@name" inpkey="171953656"/>
+											<entry name="3:GeoLocation" expanded="1">
+												<entry name="3:latitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171953976">
+														<entry name="0:@uom" inpkey="171954200"/>
+													</entry>
+												</entry>
+												<entry name="3:longitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171954520">
+														<entry name="0:@scale" inpkey="171954744"/>
+													</entry>
+												</entry>
+												<entry name="3:altitude" expanded="1">
+													<entry name="3:Quantity" inpkey="171955064">
+														<entry name="0:@uom" inpkey="171955288"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="sensorML\1.0.30\base\system.xsd" outputinstance="sensorML\1.0.30\base\system.xml" instanceroot="{http://www.opengis.net/sensorML}System"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="51582216" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="51583312"/>
+						<datapoint pos="1" key="51583480"/>
+						<datapoint pos="2" key="51583704"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="51583928"/>
+					</targets>
+					<view ltx="642" lty="467" rbx="-188" rby="50"/>
+				</component>
+				<component name="constant" library="core" uid="173937112" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="175834664"/>
+					</targets>
+					<view ltx="399" lty="491" rbx="-385" rby="90"/>
+					<data>
+						<constant value="tsn" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="47252656" kind="15">
+					<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.mdb);" DBDataSource="C:\ResEau_SensorML\Station_profile_to_SensorML_full.mdb" DBCatalog="Station_profile_to_SensorML_full" OLEDBProvider="Microsoft.Jet.OLEDB.4.0"/>
+					<view ltx="168" lty="-81" rbx="380" rby="983"/>
+					<data>
+						<root>
+							<header/>
+							<entry name="Site_profile" expanded="1" outkey="171855456">
+								<entry name="Site_ID" outkey="171886208"/>
+								<entry name="Site_Name" outkey="171886064"/>
+								<entry name="Site_Description" outkey="171885976"/>
+								<entry name="Know_Your_Watershed_ID" outkey="171882976"/>
+								<entry name="Site_Activation_Date" outkey="171879840"/>
+								<entry name="Site_Final_Sampling_Date" outkey="171882192"/>
+								<entry name="Sampling_Frequency" outkey="171857808"/>
+								<entry name="Current_Status" outkey="171879928"/>
+								<entry name="Site_Elevation_m" outkey="171886464"/>
+								<entry name="North_bounding_Latitude" outkey="171886640"/>
+								<entry name="South_bounding_Latitude" outkey="171886952"/>
+								<entry name="West_bounding_Longitude" outkey="171887264"/>
+								<entry name="East_bounding_Longitude" outkey="171887576"/>
+								<entry name="Site_photograph" outkey="171887912"/>
+								<entry name="Local_site_influences" outkey="171888224"/>
+								<entry name="Collection_level_metadata_link" outkey="171888392"/>
+								<entry name="Other_link" outkey="171888744"/>
+								<entry name="Biota_observed_or_sampled_at_Site" expanded="1" outkey="171889528">
+									<entry name="ITIS_Taxonomic_Serial_Number" outkey="171889944"/>
+									<entry name="Taxon_Rank_Name" outkey="171890280"/>
+									<entry name="Taxon _Rank_Value" outkey="171890560"/>
+								</entry>
+								<entry name="Site_keywords" expanded="1" outkey="171890784">
+									<entry name="Keyword" outkey="171891048"/>
+									<entry name="Keywork_source_link" outkey="171891384"/>
+								</entry>
+								<entry name="Variables_measured_at_Site" expanded="1">
+									<entry name="Variable_subgroups" expanded="1">
+										<entry name="Variable_groups" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="Variable_groups" expanded="1" outkey="171889080">
+								<entry name="Variable_group" outkey="171889360"/>
+								<entry name="Variable_subgroups" expanded="1" outkey="171891664">
+									<entry name="Variable_subgroup" outkey="171891944"/>
+									<entry name="Variables_measured_at_Site" expanded="1" outkey="171892200">
+										<entry name="Variable" outkey="171892464"/>
+										<entry name="Units_of_measure" outkey="171892800"/>
+										<entry name="Variable_thesaurus_link" outkey="171893056"/>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="Variable_subgroups">
+								<entry name="Variable_groups" expanded="1"/>
+								<entry name="Variables_measured_at_Site" expanded="1"/>
+							</entry>
+						</root>
+						<wsdl/>
+						<database>
+							<database_connection>
+								<connect database-kind="Access" import-kind="Access">
+									<connection_type>
+										<connection_string>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ResEau_SensorML\Station_profile_to_SensorML_full.mdb</connection_string>
+									</connection_type>
+								</connect>
+								<server name="Station_profile_to_SensorML_full.mdb">
+									<database name="Station_profile_to_SensorML_full">
+										<schema name="">
+											<table name="Biota_observed_or_sampled_at_Site" kind="UserTable"/>
+											<table name="Site_keywords" kind="UserTable"/>
+											<table name="Site_profile" kind="UserTable"/>
+											<table name="Variable_groups" kind="UserTable"/>
+											<table name="Variable_subgroups" kind="UserTable"/>
+											<table name="Variables_measured_at_Site" kind="UserTable"/>
+										</schema>
+									</database>
+								</server>
+							</database_connection>
+						</database>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="51579872" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="51580976"/>
+					</targets>
+					<view ltx="522" lty="397" rbx="-175" rby="-20"/>
+					<data>
+						<constant value="3" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="string-length" library="core" uid="51581088" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="51581880"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="51582104"/>
+					</targets>
+					<view ltx="485" lty="450" rbx="34"/>
+				</component>
+				<component name="concat" library="core" uid="173994472" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="175835608"/>
+						<datapoint pos="1" key="174123304"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="175834840"/>
+					</targets>
+					<view ltx="427" lty="528" rbx="-117" rby="-26"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="172011960"/>
+					<edge edgekey="172208472"/>
+					<edge edgekey="172208544"/>
+					<edge edgekey="172208616"/>
+					<edge edgekey="172208688"/>
+					<edge edgekey="172208760"/>
+					<edge edgekey="172208832"/>
+					<edge edgekey="172208904"/>
+					<edge edgekey="172208976"/>
+					<edge edgekey="172209048"/>
+					<edge edgekey="172209120"/>
+					<edge edgekey="172209192"/>
+					<edge edgekey="172209264"/>
+					<edge edgekey="172209336"/>
+					<edge edgekey="172209408"/>
+					<edge edgekey="172209480"/>
+					<edge edgekey="172209552"/>
+					<edge edgekey="172209624"/>
+					<edge edgekey="172209696"/>
+					<edge edgekey="172209768"/>
+					<edge edgekey="172209840"/>
+					<edge edgekey="172209912"/>
+					<edge edgekey="172209984"/>
+					<edge edgekey="172210056"/>
+					<edge edgekey="172210128"/>
+					<edge edgekey="172210200"/>
+					<edge edgekey="172210272"/>
+					<edge edgekey="172210344"/>
+					<edge edgekey="172210416"/>
+					<edge edgekey="172210488"/>
+					<edge edgekey="172210560"/>
+					<edge edgekey="172210632"/>
+					<edge edgekey="172210704"/>
+					<edge edgekey="172210776"/>
+					<edge edgekey="172210848"/>
+					<edge edgekey="172210920"/>
+					<edge edgekey="172210992"/>
+					<edge edgekey="172211064"/>
+					<edge edgekey="172211136"/>
+					<edge edgekey="172211208"/>
+					<edge edgekey="172211280"/>
+					<edge edgekey="172211352"/>
+					<edge edgekey="172211424"/>
+					<edge edgekey="172211496"/>
+					<edge edgekey="172211568"/>
+					<edge edgekey="172211640"/>
+					<edge edgekey="172211712"/>
+					<edge edgekey="172211784"/>
+					<edge edgekey="172211856"/>
+					<edge edgekey="172211928"/>
+					<edge edgekey="172212000"/>
+					<edge edgekey="172212072"/>
+					<edge edgekey="172212144"/>
+					<edge edgekey="172212216"/>
+					<edge edgekey="172212288"/>
+					<edge edgekey="172212360"/>
+					<edge edgekey="172212504"/>
+					<edge edgekey="172212576"/>
+					<edge edgekey="172212648"/>
+					<edge edgekey="172212720"/>
+					<edge edgekey="172212792"/>
+					<edge edgekey="172212864"/>
+					<edge edgekey="172212936"/>
+					<edge edgekey="172213008"/>
+					<edge edgekey="172213080"/>
+					<edge edgekey="172213152"/>
+					<edge edgekey="172213224"/>
+					<edge edgekey="172213296"/>
+					<edge edgekey="172213368"/>
+					<edge edgekey="172213440"/>
+					<edge edgekey="172213592"/>
+					<edge edgekey="172213744"/>
+					<edge edgekey="172213896"/>
+					<edge edgekey="172214048"/>
+					<edge edgekey="172214200"/>
+					<edge edgekey="172214352"/>
+					<edge edgekey="172214504"/>
+					<edge edgekey="172214656"/>
+					<edge edgekey="172214808"/>
+					<edge edgekey="172214960"/>
+					<edge edgekey="172215112"/>
+					<edge edgekey="172215264"/>
+					<edge edgekey="172215416"/>
+					<edge edgekey="172215568"/>
+					<edge edgekey="172215720"/>
+					<edge edgekey="172215872"/>
+					<edge edgekey="172216024"/>
+					<edge edgekey="172216176"/>
+					<edge edgekey="172216328"/>
+					<edge edgekey="172216480"/>
+					<edge edgekey="172216632"/>
+					<edge edgekey="172216784"/>
+					<edge edgekey="172216936"/>
+					<edge edgekey="172217088"/>
+					<edge edgekey="172217240"/>
+					<edge edgekey="172217392"/>
+					<edge edgekey="172217544"/>
+					<edge edgekey="172217696"/>
+					<edge edgekey="172217848"/>
+					<edge edgekey="172218000"/>
+					<edge edgekey="172218152"/>
+					<edge edgekey="172218304"/>
+					<edge edgekey="172218456"/>
+					<edge edgekey="172499720"/>
+					<edge edgekey="176122184"/>
+					<edge edgekey="176125760"/>
+					<edge edgekey="176125880"/>
+				</edges>
+				<vertices>
+					<vertex vertexkey="51551288">
+						<edges>
+							<edge vertexkey="171955288" edgekey="172210056"/>
+							<edge vertexkey="171953392" edgekey="172211856"/>
+							<edge vertexkey="171951496" edgekey="172212000"/>
+							<edge vertexkey="171949600" edgekey="172212072"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51552488">
+						<edges>
+							<edge vertexkey="171954200" edgekey="172211280"/>
+							<edge vertexkey="171954744" edgekey="172211712"/>
+							<edge vertexkey="171952848" edgekey="172211424"/>
+							<edge vertexkey="171952304" edgekey="172210128"/>
+							<edge vertexkey="171950408" edgekey="172210200"/>
+							<edge vertexkey="171950952" edgekey="172211928"/>
+							<edge vertexkey="171948512" edgekey="172210344"/>
+							<edge vertexkey="171949056" edgekey="172210272"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51553784">
+						<edges>
+							<edge vertexkey="171947968" edgekey="172209768"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51555056">
+						<edges>
+							<edge vertexkey="171949864" edgekey="172208472"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51556328">
+						<edges>
+							<edge vertexkey="171951760" edgekey="172208544"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51557600">
+						<edges>
+							<edge vertexkey="171953656" edgekey="172212144"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51558872">
+						<edges>
+							<edge vertexkey="171940176" edgekey="172215416"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51559736">
+						<edges>
+							<edge vertexkey="171940496" edgekey="172215568"/>
+							<edge vertexkey="171936000" edgekey="172210848"/>
+							<edge vertexkey="171941552" edgekey="172209408"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51560960">
+						<edges>
+							<edge vertexkey="171935312" edgekey="172210632"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51562176">
+						<edges>
+							<edge vertexkey="171942440" edgekey="172209480"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51563392">
+						<edges>
+							<edge vertexkey="171941816" edgekey="172209552"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51564632">
+						<edges>
+							<edge vertexkey="171936144" edgekey="172208904"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51565912">
+						<edges>
+							<edge vertexkey="171939120" edgekey="172210776"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51567168">
+						<edges>
+							<edge vertexkey="171939648" edgekey="172216632"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51568440">
+						<edges>
+							<edge vertexkey="171938592" edgekey="172210488"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51569712">
+						<edges>
+							<edge vertexkey="171938328" edgekey="172216784"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51570984">
+						<edges>
+							<edge vertexkey="171937800" edgekey="172210704"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51572256">
+						<edges>
+							<edge vertexkey="171935912" edgekey="172209624"/>
+							<edge vertexkey="171990936" edgekey="172499720"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51573472">
+						<edges>
+							<edge vertexkey="171941248" edgekey="172208616"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51574688">
+						<edges>
+							<edge vertexkey="171936432" edgekey="172212792"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51575960">
+						<edges>
+							<edge vertexkey="171940720" edgekey="172211496"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51577232">
+						<edges>
+							<edge vertexkey="171936720" edgekey="172213152"/>
+							<edge vertexkey="171942608" edgekey="172214656"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51578504">
+						<edges>
+							<edge vertexkey="171943400" edgekey="172213008"/>
+							<edge vertexkey="171942872" edgekey="172214352"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51579760">
+						<edges>
+							<edge vertexkey="171940984" edgekey="172210560"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51580976">
+						<edges>
+							<edge vertexkey="51584880" edgekey="172209048"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51582104">
+						<edges>
+							<edge vertexkey="51585048" edgekey="172211208"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51583928">
+						<edges>
+							<edge vertexkey="171945280" edgekey="176125880"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51585272">
+						<edges>
+							<edge vertexkey="51583312" edgekey="172212288"/>
+							<edge vertexkey="51590256" edgekey="172212216"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51586584">
+						<edges>
+							<edge vertexkey="51583480" edgekey="172208976"/>
+							<edge vertexkey="51590424" edgekey="172209120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51587800">
+						<edges>
+							<edge vertexkey="171943664" edgekey="172214808"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51589072">
+						<edges>
+							<edge vertexkey="171945824" edgekey="172217392"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51590872">
+						<edges>
+							<edge vertexkey="171944736" edgekey="172212648"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51592224">
+						<edges>
+							<edge vertexkey="51590648" edgekey="172212576"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171855456">
+						<edges>
+							<edge vertexkey="171935456" edgekey="172209336"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171857808">
+						<edges>
+							<edge vertexkey="171937008" edgekey="172216936"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171879840">
+						<edges>
+							<edge vertexkey="171943176" edgekey="172214504"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171879928">
+						<edges>
+							<edge vertexkey="171939424" edgekey="172217088"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171882192">
+						<edges>
+							<edge vertexkey="171943968" edgekey="172214200"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171882976">
+						<edges>
+							<edge vertexkey="171938104" edgekey="172217240"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171885976">
+						<edges>
+							<edge vertexkey="171939912" edgekey="172211568"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171886064">
+						<edges>
+							<edge vertexkey="171938896" edgekey="172209192"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171886208">
+						<edges>
+							<edge vertexkey="171936864" edgekey="172209264"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171886464">
+						<edges>
+							<edge vertexkey="171949376" edgekey="172215720"/>
+							<edge vertexkey="171951272" edgekey="172209984"/>
+							<edge vertexkey="171955064" edgekey="172211784"/>
+							<edge vertexkey="171953168" edgekey="172215264"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171886640">
+						<edges>
+							<edge vertexkey="171953976" edgekey="172211352"/>
+							<edge vertexkey="171952080" edgekey="172214960"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171886952">
+						<edges>
+							<edge vertexkey="171948288" edgekey="172216024"/>
+							<edge vertexkey="171950184" edgekey="172209840"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171887264">
+						<edges>
+							<edge vertexkey="171948832" edgekey="172215872"/>
+							<edge vertexkey="171954520" edgekey="172211640"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171887576">
+						<edges>
+							<edge vertexkey="171950728" edgekey="172209912"/>
+							<edge vertexkey="171952624" edgekey="172215112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171887912">
+						<edges>
+							<edge vertexkey="171935712" edgekey="172209696"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171888224">
+						<edges>
+							<edge vertexkey="171936288" edgekey="172208688"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171888392">
+						<edges>
+							<edge vertexkey="171936576" edgekey="172210920"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171888744">
+						<edges>
+							<edge vertexkey="171942160" edgekey="172216176"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171889080">
+						<edges>
+							<edge vertexkey="171946408" edgekey="172011960"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171889360">
+						<edges>
+							<edge vertexkey="171946088" edgekey="172217544"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171889528">
+						<edges>
+							<edge vertexkey="171944248" edgekey="172212720"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171889944">
+						<edges>
+							<edge vertexkey="174123304" edgekey="172212360"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171890280">
+						<edges>
+							<edge vertexkey="171944472" edgekey="172208832"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171890560">
+						<edges>
+							<edge vertexkey="171945056" edgekey="172208760"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171890784">
+						<edges>
+							<edge vertexkey="171937264" edgekey="172211064"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171891048">
+						<edges>
+							<edge vertexkey="171937576" edgekey="172216480"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171891384">
+						<edges>
+							<edge vertexkey="171937352" edgekey="172216328"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171891664">
+						<edges>
+							<edge vertexkey="171945600" edgekey="172218456"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171891944">
+						<edges>
+							<edge vertexkey="171946912" edgekey="172217696"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171892200">
+						<edges>
+							<edge vertexkey="171946688" edgekey="172218304"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171892464">
+						<edges>
+							<edge vertexkey="171947176" edgekey="172217848"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171892800">
+						<edges>
+							<edge vertexkey="171947704" edgekey="172218000"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171893056">
+						<edges>
+							<edge vertexkey="171947440" edgekey="172218152"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="175834664">
+						<edges>
+							<edge vertexkey="175835608" edgekey="176125760"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="175834840">
+						<edges>
+							<edge vertexkey="51581880" edgekey="176122184"/>
+							<edge vertexkey="51583704" edgekey="172212504"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

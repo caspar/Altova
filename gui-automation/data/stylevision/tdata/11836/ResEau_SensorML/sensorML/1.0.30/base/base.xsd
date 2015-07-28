@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Base class definitions for core SensorML</xs:documentation>
+	</xs:annotation>
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="./sweImports.xsd"/>
+	<!--=================-->
+	<!--  Global Groups  -->
+	<!--=================-->
+	<xs:group name="constraints">
+		<xs:sequence>
+			<xs:element name="securityConstraint" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="sml:Security"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element ref="sml:validTime" minOccurs="0"/>
+			<xs:element name="legalConstraint" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="sml:Rights"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="generalInfo">
+		<xs:sequence>
+			<xs:element ref="sml:identification" maxOccurs="unbounded"/>
+			<xs:element ref="sml:classification" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="sml:description" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="references">
+		<xs:sequence>
+			<xs:element ref="sml:contact" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="sml:documentation" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="history">
+		<xs:sequence>
+			<xs:element name="history">
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element ref="sml:EventList"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="swe:AssociationAttributes"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="properties">
+		<xs:sequence>
+			<xs:element ref="sml:capabilities" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="sml:characteristics" minOccurs="0" maxOccurs="unbounded"/>
+			<!--<xs:element ref="sml:taskableProperties" minOccurs="0" maxOccurs="unbounded"/>-->
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="contact">
+		<xs:choice>
+			<xs:element ref="sml:Person"/>
+			<xs:element ref="sml:ResponsibleParty"/>
+		</xs:choice>
+	</xs:group>
+	<!--==============================-->
+	<!--  Global Concrete Properties  -->
+	<!--==============================-->
+	<xs:element name="description" type="swe:TextType">
+		<xs:annotation>
+			<xs:documentation>Textual description of the object</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="identification">
+		<xs:annotation>
+			<xs:documentation>Mean of providing various identity and alias values, with types such as "longName", "abbreviation", "modelNumber", "serialNumber", whose terms can be defined in a dictionary</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IdentifierList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="identifier" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="sml:Term"/>
+									</xs:sequence>
+									<xs:attribute name="name" type="swe:qnameSimpleType" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="classification">
+		<xs:annotation>
+			<xs:documentation>Mean of specifying classification values with types such as "sensorType", "intendedApplication", etc., whose terms can be defined in a dictionary</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ClassifierList">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="classifier" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="sml:Term"/>
+									</xs:sequence>
+									<xs:attribute name="name" type="swe:qnameSimpleType" use="optional"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="contact">
+		<xs:annotation>
+			<xs:documentation>Relevant contacts for that object</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0">
+				<xs:element ref="sml:ContactList"/>
+				<xs:group ref="sml:contact"/>
+			</xs:choice>
+			<xs:attributeGroup ref="swe:AssociationAttributes"/>
+			<xs:attribute name="role" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="documentation">
+		<xs:annotation>
+			<xs:documentation>Relevant documentation for that object</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice minOccurs="0">
+				<xs:element ref="sml:DocumentList"/>
+				<xs:element ref="sml:Document"/>
+			</xs:choice>
+			<xs:attributeGroup ref="swe:AssociationAttributes"/>
+			<xs:attribute name="role" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="capabilities">
+		<xs:annotation>
+			<xs:documentation>Capability list for quick discovery</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="sml:PropertyList"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="swe:AssociationAttributes"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="characteristics">
+		<xs:annotation>
+			<xs:documentation>Characteristic list for quick discovery</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="sml:PropertyList"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="swe:AssociationAttributes"/>
+		</xs:complexType>
+	</xs:element>
+	<!--<xs:element name="taskableProperties">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sml:TaskablePropertyList"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>-->
+	<!--===========================-->
+	<!--  Global Concrete Objects  -->
+	<!--===========================-->
+	<xs:element name="PropertyList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sml:description" minOccurs="0"/>
+				<xs:element name="property" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:group ref="swe:AnyData" minOccurs="0"/>
+						<xs:attribute name="name" type="swe:qnameSimpleType" use="optional"/>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<!--<xs:element name="TaskablePropertyList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sml:description" minOccurs="0"/>
+				<xs:element name="property" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>includes authorityGroup attribute to indicate tasking permissions</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:group ref="swe:AnyData" minOccurs="0"/>
+						<xs:attribute name="name" type="swe:nameSimpleType" use="optional"/>
+						<xs:attribute name="authorityGroup" type="xs:anyURI" use="optional"/>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>-->
+	<xs:element name="Document">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sml:description"/>
+				<xs:element name="date" type="swe:IsoDateTimeType">
+					<xs:annotation>
+						<xs:documentation>Date of creation</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="sml:contact" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Person who created the document</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="format" type="swe:CategoryType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Specifies the fornat of the file pointed to by location</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="fileLocation">
+					<xs:annotation>
+						<xs:documentation>Points to the actual document corresponding to that version</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+			<xs:attribute name="version" type="xs:token" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DocumentList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sml:description" minOccurs="0"/>
+				<xs:element name="member" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element ref="sml:Document"/>
+						</xs:sequence>
+						<xs:attribute name="name" type="swe:qnameSimpleType" use="required"/>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Event">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:group ref="sml:generalInfo"/>
+				<xs:group ref="sml:references"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EventList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="member" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="sml:Event"/>
+						</xs:sequence>
+						<xs:attribute name="name" type="swe:qnameSimpleType" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<!--===========================-->
+	<!-- Contact Info  -->
+	<!--===========================-->
+	<xs:element name="Person">
+		<xs:annotation>
+			<xs:documentation>based on IC:DMMS</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="surname" type="xs:token"/>
+				<xs:element name="name" type="xs:token"/>
+				<xs:element name="userID" type="xs:token"/>
+				<xs:element name="affiliation" type="xs:token"/>
+				<xs:element name="phoneNumber" type="xs:token"/>
+				<xs:element name="email" type="xs:token"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContactList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sml:description" minOccurs="0"/>
+				<xs:element name="member" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:group ref="sml:contact"/>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+						<xs:attribute name="role" type="xs:anyURI" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ResponsibleParty" type="sml:ResponsiblePartyType">
+		<xs:annotation>
+			<xs:documentation>based on ISO 19115</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="ResponsiblePartyType">
+		<xs:sequence>
+			<xs:element name="individualName" type="xs:string" minOccurs="0"/>
+			<xs:element name="organizationName" type="xs:string" minOccurs="0"/>
+			<xs:element name="positionName" type="xs:string" minOccurs="0"/>
+			<xs:element ref="sml:contactInfo" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID" use="optional"/>
+	</xs:complexType>
+	<xs:element name="contactInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="phone" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="voice" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="facsimile" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="address" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="deliveryPoint" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="city" minOccurs="0"/>
+							<xs:element name="administrativeArea" minOccurs="0"/>
+							<xs:element name="postalCode" minOccurs="0"/>
+							<xs:element name="country" minOccurs="0"/>
+							<xs:element name="electronicMailAddress" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="onlineResource" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="hoursOfService" type="xs:string" minOccurs="0"/>
+				<xs:element name="contactInstructions" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--===========================-->
+	<!-- Constraints  -->
+	<!--===========================-->
+	<xs:element name="Security">
+		<xs:annotation>
+			<xs:documentation>based on IC:DDMS definition</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attributeGroup ref="sml:securityAttributes"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="validTime">
+		<xs:annotation>
+			<xs:documentation>Time validity constraint of description</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="StartTime" type="swe:IsoDateTimeType"/>
+					<xs:element name="EndTime" type="swe:IsoDateTimeType"/>
+				</xs:sequence>
+				<xs:element name="TimeStamp" type="swe:IsoDateTimeType"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Rights">
+		<xs:annotation>
+			<xs:documentation>based on IC:DDMS definition</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="privacyAct" type="xs:boolean" use="optional"/>
+			<xs:attribute name="intellectualPropertyRights" type="xs:boolean" use="optional"/>
+			<xs:attribute name="copyRights" type="xs:boolean" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Term">
+		<xs:annotation>
+			<xs:documentation>A simple token identifying a term (single spaces allowed)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:token">
+					<xs:attribute name="qualifier" type="xs:anyURI"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="securityAttributes">
+		<xs:attribute name="classification" type="xs:token" use="required"/>
+		<xs:attribute name="ownerProducer" type="xs:token" use="required"/>
+		<xs:attribute name="classificationReason" type="xs:token" use="optional"/>
+		<xs:attribute name="classifiedBy" type="xs:token" use="optional"/>
+		<xs:attribute name="declassDate" type="xs:date" use="optional"/>
+		<xs:attribute name="SCIcontrols" type="xs:token" use="required"/>
+		<xs:attribute name="disseminationControls" type="xs:token" use="optional"/>
+		<xs:attribute name="FGIsourceOpen" type="xs:token" use="optional"/>
+		<xs:attribute name="releaableTo" type="xs:token" use="required"/>
+	</xs:attributeGroup>
+</xs:schema>

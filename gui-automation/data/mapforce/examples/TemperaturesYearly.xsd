@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Temperatures">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="YearlyStats" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MinimumTemp" type="xs:decimal"/>
+							<xs:element name="MaximumTemp" type="xs:decimal"/>
+							<xs:element name="AverageTemp" type="xs:decimal"/>
+						</xs:sequence>
+						<xs:attribute name="Year" type="xs:int" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

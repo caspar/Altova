@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\user_files\work\uml_interactions.xsd" diagram="Activity">
+	<StartElement name="Action (CallBehaviorAction)">
+		<Attaches>
+			<EndElement name="ValuePin"/>
+			<EndElement name="InputPin"/>
+			<EndElement name="OutputPin"/>
+		</Attaches>
+	</StartElement>
+	<StartElement name="Action (CallOperationAction)">
+		<Attaches>
+			<EndElement name="ValuePin"/>
+			<EndElement name="InputPin"/>
+			<EndElement name="OutputPin"/>
+		</Attaches>
+	</StartElement>
+		<StartElement name="Action (OpaqueAction)">
+		<Attaches>
+			<EndElement name="ValuePin"/>
+			<EndElement name="InputPin"/>
+			<EndElement name="OutputPin"/>
+		</Attaches>
+	</StartElement>
+	<StartElement name="AcceptEventAction">
+		<Attaches>
+			<EndElement name="OutputPin"/>
+		</Attaches>
+	</StartElement>
+	<StartElement name="AcceptEventAction (TimeEvent)">
+		<Attaches>
+			<EndElement name="OutputPin"/>
+		</Attaches>
+	</StartElement>
+	<StartElement name="SendSignalAction">
+		<Attaches>
+			<EndElement name="ValuePin"/>
+			<EndElement name="InputPin"/>
+		</Attaches>
+	</StartElement>
+	<StartElement name="ActivityPartition">
+		<Contains>
+			<EndElement name="Action (CallBehaviorAction)"/>
+			<EndElement name="Action (CallOperationAction)"/>
+			<EndElement name="Action (OpaqueAction)"/>
+			<EndElement name="AcceptEventAction"/>
+			<EndElement name="AcceptEventAction (TimeEvent)"/>
+			<EndElement name="SendSignalAction"/>
+			<EndElement name="DecisionNode"/>
+			<EndElement name="MergeNode"/>
+			<EndElement name="ActivityFinalNode"/>
+			<EndElement name="FlowFinalNode"/>
+			<EndElement name="ForkNode"/>
+			<EndElement name="JoinNode"/>
+			<EndElement name="ForkNode (horizontal)"/>
+			<EndElement name="Join Node (horizontal)"/>
+			<EndElement name="CentralBufferNode"/>
+			<EndElement name="DataStoreNode"/>
+			<EndElement name="ActivityParameterNode"/>
+			<EndElement name="StructuredActivityNode"/>
+			<EndElement name="ExpansionRegion"/>
+		</Contains>
+	</StartElement>
+	<StartElement name="ActivityPartition (2 dimensions)">
+		<Contains>
+			<EndElement name="Action (CallBehaviorAction)"/>
+			<EndElement name="Action (CallOperationAction)"/>
+		    <EndElement name="Action (OpaqueAction)"/>
+			<EndElement name="AcceptEventAction"/>
+			<EndElement name="AcceptEventAction (TimeEvent)"/>
+			<EndElement name="SendSignalAction"/>
+			<EndElement name="DecisionNode"/>
+			<EndElement name="MergeNode"/>
+			<EndElement name="ActivityFinalNode"/>
+			<EndElement name="FlowFinalNode"/>
+			<EndElement name="ForkNode"/>
+			<EndElement name="JoinNode"/>
+			<EndElement name="ForkNode (horizontal)"/>
+			<EndElement name="Join Node (horizontal)"/>
+			<EndElement name="CentralBufferNode"/>
+			<EndElement name="DataStoreNode"/>
+			<EndElement name="ActivityParameterNode"/>
+			<EndElement name="StructuredActivityNode"/>
+			<EndElement name="ExpansionRegion"/>
+		</Contains>
+	</StartElement>
+	<StartElement name="Activity">
+		<Attaches>
+			<EndElement name="ActivityParameterNode"/>
+		</Attaches>
+		<Contains>
+			<EndElement name="Action (CallBehaviorAction)"/>
+			<EndElement name="Action (CallOperationAction)"/>
+			<EndElement name="Action (OpaqueAction)"/>
+			<EndElement name="AcceptEventAction"/>
+			<EndElement name="AcceptEventAction (TimeEvent)"/>
+			<EndElement name="SendSignalAction"/>
+			<EndElement name="DecisionNode"/>
+			<EndElement name="MergeNode"/>
+			<EndElement name="ActivityFinalNode"/>
+			<EndElement name="FlowFinalNode"/>
+			<EndElement name="ForkNode"/>
+			<EndElement name="JoinNode"/>
+			<EndElement name="ForkNode (horizontal)"/>
+			<EndElement name="Join Node (horizontal)"/>
+			<EndElement name="CentralBufferNode"/>
+			<EndElement name="DataStoreNode"/>
+			<EndElement name="ActivityParameterNode"/>
+			<EndElement name="StructuredActivityNode"/>
+			<EndElement name="ExpansionRegion"/>
+		</Contains>
+	</StartElement>
+	<StartElement name="StructuredActivityNode">
+		<Attaches>
+			<EndElement name="ActivityParameterNode"/>
+		</Attaches>
+		<Contains>
+			<EndElement name="Action (CallBehaviorAction)"/>
+			<EndElement name="Action (CallOperationAction)"/>
+			<EndElement name="Action (OpaqueAction)"/>
+			<EndElement name="AcceptEventAction"/>
+			<EndElement name="AcceptEventAction (TimeEvent)"/>
+			<EndElement name="SendSignalAction"/>
+			<EndElement name="DecisionNode"/>
+			<EndElement name="MergeNode"/>
+			<EndElement name="ActivityFinalNode"/>
+			<EndElement name="FlowFinalNode"/>
+			<EndElement name="ForkNode"/>
+			<EndElement name="JoinNode"/>
+			<EndElement name="ForkNode (horizontal)"/>
+			<EndElement name="Join Node (horizontal)"/>
+			<EndElement name="CentralBufferNode"/>
+			<EndElement name="DataStoreNode"/>
+			<EndElement name="ActivityParameterNode"/>
+			<EndElement name="StructuredActivityNode"/>
+			<EndElement name="ExpansionRegion"/>
+		</Contains>
+	</StartElement>
+	<StartElement name="ExpansionRegion">
+		<Attaches>
+			<EndElement name="ActivityParameterNode"/>
+			<EndElement name="ExpansionNode"/>
+		</Attaches>
+		<Contains>
+			<EndElement name="Action (CallBehaviorAction)"/>
+			<EndElement name="Action (CallOperationAction)"/>
+			<EndElement name="Action (OpaqueAction)"/>
+			<EndElement name="AcceptEventAction"/>
+			<EndElement name="AcceptEventAction (TimeEvent)"/>
+			<EndElement name="SendSignalAction"/>
+			<EndElement name="DecisionNode"/>
+			<EndElement name="MergeNode"/>
+			<EndElement name="ActivityFinalNode"/>
+			<EndElement name="FlowFinalNode"/>
+			<EndElement name="ForkNode"/>
+			<EndElement name="JoinNode"/>
+			<EndElement name="ForkNode (horizontal)"/>
+			<EndElement name="Join Node (horizontal)"/>
+			<EndElement name="CentralBufferNode"/>
+			<EndElement name="DataStoreNode"/>
+			<EndElement name="ActivityParameterNode"/>
+			<EndElement name="StructuredActivityNode"/>
+			<EndElement name="ExpansionRegion"/>
+		</Contains>
+	</StartElement>
+	<StartElement name="InterruptibleActivityRegion">
+		<Attaches>
+			<EndElement name="ActivityParameterNode"/>
+		</Attaches>
+		<Contains>
+			<EndElement name="Action (CallBehaviorAction)"/>
+			<EndElement name="Action (CallOperationAction)"/>
+			<EndElement name="Action (OpaqueAction)"/>
+			<EndElement name="AcceptEventAction"/>
+			<EndElement name="AcceptEventAction (TimeEvent)"/>
+			<EndElement name="SendSignalAction"/>
+			<EndElement name="DecisionNode"/>
+			<EndElement name="MergeNode"/>
+			<EndElement name="ActivityFinalNode"/>
+			<EndElement name="FlowFinalNode"/>
+			<EndElement name="ForkNode"/>
+			<EndElement name="JoinNode"/>
+			<EndElement name="ForkNode (horizontal)"/>
+			<EndElement name="Join Node (horizontal)"/>
+			<EndElement name="CentralBufferNode"/>
+			<EndElement name="DataStoreNode"/>
+			<EndElement name="ActivityParameterNode"/>
+			<EndElement name="StructuredActivityNode"/>
+			<EndElement name="ExpansionRegion"/>
+		</Contains>
+	</StartElement>
+</UML>

@@ -1,0 +1,1898 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "../ICApplication/resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SCHEMATREE MENU DISCARDABLE 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Add &XML Schema / DTD...",    IDC_SCHEMA_FROMFILE
+        MENUITEM "Add &DB Schema...",           IDC_SCHEMA_FROMDB
+        MENUITEM "Add &User-defined Schema",    IDC_SCHEMA_USER
+    END
+    POPUP "CONTEXT"
+    BEGIN
+        MENUITEM "&Rename",                     IDR_SCHEMASOURCES_RENAME
+        MENUITEM SEPARATOR
+        POPUP "Add &Schema"
+        BEGIN
+            MENUITEM "&XML Schema/DTD...",          IDC_SCHEMA_FROMFILE
+            MENUITEM "&DB Schema...",               IDC_SCHEMA_FROMDB
+            MENUITEM "&User Defined Schema",        IDC_SCHEMA_USER
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Set as main schema",          IDR_SCHEMASOURCES_SET_MAIN
+        MENUITEM SEPARATOR
+        MENUITEM "A&ppend Element",             IDR_SCHEMASOURCES_ADD_ELEMENT
+
+        MENUITEM "A&dd Child Element",          IDR_SCHEMASOURCES_CHILD_ELEMENT
+
+        MENUITEM "Append &Attribute",           IDR_SCHEMASOURCES_ADD_ATTRIBUTE
+
+        MENUITEM "Add &Child Attribute",        IDR_SCHEMASOURCES_CHILD_ATTRIBUTE
+
+        MENUITEM SEPARATOR
+        MENUITEM "Con&vert to Attribute / Element", 
+                                                IDR_SCHEMASOURCES_CONVERT_ATTRIBUTE_ELEMENT
+
+        MENUITEM "&Make / Remove Global Template", IDR_SCHEMASOURCES_GLOBAL
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand All",                 IDC_TREE_EXPANDALL
+        MENUITEM "&Collapse All",               IDC_TREE_COLLAPSE
+        MENUITEM SEPARATOR
+        MENUITEM "Expand &from this point",     IDC_TREE_EXPAND_KNOT
+        MENUITEM "Collapse to &this point",     IDC_TREE_COLLAPSE_KNOT
+        MENUITEM SEPARATOR
+        MENUITEM "Expand/ Collapse all to this &level", IDC_TREE_SAME_LEVEL
+        MENUITEM SEPARATOR
+        MENUITEM "Re&move Item",                IDR_SCHEMASOURCES_REMOVE
+    END
+    POPUP "Popup for Add nodes In HTML Import Mode"
+    BEGIN
+        MENUITEM "Convert selection to &elements", 
+                                                IDC_SCHEMASOURCES_CONVERT_TO_ELEMENTS
+
+        MENUITEM "Convert selection to &attributes", 
+                                                IDC_SCHEMASOURCES_CONVERT_TO_ATTRIBUTES
+
+        MENUITEM SEPARATOR
+        MENUITEM "&Surround selection with element", 
+                                                IDC_SCHEMASOURCES_SURROUND_TEMPLATE
+
+        MENUITEM SEPARATOR
+        MENUITEM "&Convert selected table/list to elements", 
+                                                IDC_SCHEMASOURCES_CONVERT_TO_ELEMENTS_TABLE
+
+        MENUITEM "C&onvert selected table/list to attributes", 
+                                                IDC_SCHEMASOURCES_CONVERT_TO_ATTRIBUTES_TABLE
+
+    END
+    POPUP "ELEMENT"
+    BEGIN
+        MENUITEM "&Append Element",             IDR_SCHEMASOURCES_ADD_ELEMENT
+
+        MENUITEM "&Insert Element",             IDR_SCHEMASOURCES_INSERT_ELEMENT
+
+        MENUITEM "Add &Child Element",          IDR_SCHEMASOURCES_CHILD_ELEMENT
+
+    END
+    POPUP "ATTRIBUTE"
+    BEGIN
+        MENUITEM "&Append Attribute",           IDR_SCHEMASOURCES_ADD_ATTRIBUTE
+
+        MENUITEM "&Insert Attribute",           IDR_SCHEMASOURCES_INSERT_ATTRIBUTE
+
+        MENUITEM "Add &Child Attribute",        IDR_SCHEMASOURCES_CHILD_ATTRIBUTE
+
+    END
+END
+
+IDR_STYLETREE MENU DISCARDABLE 
+BEGIN
+    POPUP "CONTEXT"
+    BEGIN
+        MENUITEM "&Add",                        IDR_STYLES_ADD
+        POPUP "Add &Selector"
+        BEGIN
+            POPUP "&HTML"
+            BEGIN
+                MENUITEM "",                            ID_STYLES_ADD_SELECTOR_HTML_0
+
+            END
+            POPUP "&Class"
+            BEGIN
+                MENUITEM "",                            ID_STYLES_ADD_SELECTOR_CLASS_0
+
+            END
+            POPUP "&ID"
+            BEGIN
+                MENUITEM "",                            ID_STYLES_ADD_SELECTOR_ID_0
+
+            END
+        END
+        MENUITEM "&Insert",                     IDR_STYLES_INSERT
+        MENUITEM SEPARATOR
+        MENUITEM "Move &Up",                    IDR_STYLES_MOVE_UP
+        MENUITEM "Move &Down",                  IDR_STYLES_MOVE_DOWN
+        MENUITEM SEPARATOR
+        POPUP "&View Mode"
+        BEGIN
+            MENUITEM "&Grouped",                    IDR_STYLES_VIEWMODE_GROUPED
+
+            MENUITEM "List &All",                   IDR_STYLES_VIEWMODE_ALPHA
+
+            MENUITEM "List &Non-Empty",             IDR_STYLES_VIEWMODE_ALPHA_SET
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand All",                 IDC_STYLES_EXPANDALL
+        MENUITEM "&Collapse All",               IDC_STYLES_COLLAPSE
+        MENUITEM SEPARATOR
+        MENUITEM "Rese&t",                      IDR_STYLES_RESET
+        MENUITEM "&Remove / Reset",             IDR_STYLES_REMOVE
+    END
+END
+
+IDR_DESIGNTREE MENU DISCARDABLE 
+BEGIN
+    POPUP "CONTEXT"
+    BEGIN
+        POPUP "&Add "
+        BEGIN
+            MENUITEM "&Cover Page",                 IDC_DESIGNTREE_ADD_COVERPAGE
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Header",                     IDC_DESIGNTREE_ADD_HEADER_ALL
+
+            MENUITEM "Header &Odd",                 IDC_DESIGNTREE_ADD_HEADER_ODD
+
+            MENUITEM "Header &Even",                IDC_DESIGNTREE_ADD_HEADER_EVEN
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Footer",                     IDC_DESIGNTREE_ADD_FOOTER_ALL
+
+            MENUITEM "F&ooter Odd",                 IDC_DESIGNTREE_ADD_FOOTER_ODD
+
+            MENUITEM "Foo&ter Even",                IDC_DESIGNTREE_ADD_FOOTER_EVEN
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Remove",                     ID_DESIGNTREE_REMOVE
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand All",                 IDC_TREE_EXPANDALL
+        MENUITEM "&Collapse All",               IDC_TREE_COLLAPSE
+        MENUITEM SEPARATOR
+        MENUITEM "Expand &from this point",     IDC_TREE_EXPAND_KNOT
+        MENUITEM "Collapse to &this point",     IDC_TREE_COLLAPSE_KNOT
+        MENUITEM SEPARATOR
+        MENUITEM "Expand/ Collapse all to this &level", IDC_TREE_SAME_LEVEL
+    END
+END
+
+IDR_CONTEXTTREE MENU DISCARDABLE 
+BEGIN
+    POPUP "STYLES"
+    BEGIN
+        POPUP "&View Mode"
+        BEGIN
+            MENUITEM "&Grouped",                    IDR_CONTEXT_VIEWMODE_GROUPED
+
+            MENUITEM "List &All",                   IDR_CONTEXT_VIEWMODE_ALPHA
+
+            MENUITEM "List &Non-Empty",             IDR_CONTEXT_VIEWMODE_ALPHA_SET
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Reset",                      IDR_CONTEXT_REMOVE_ATTRIBUTE
+    END
+END
+
+IDR_POPUP_CREATE_DYNAMIC MENU DISCARDABLE 
+BEGIN
+    POPUP "Create dynamic"
+    BEGIN
+        MENUITEM "Create &Contents",            ID_CREATE_ALL_CONTENTS
+        MENUITEM "Create T&emplates",           ID_CREATE_TEMPLATES
+        MENUITEM "Create &Paragraph",           ID_CREATE_PARAGRAPH
+        MENUITEM SEPARATOR
+        MENUITEM "Create &Table...",            ID_CREATE_TABLE
+        MENUITEM "Create Bullets and &Numbering...", ID_CREATE_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "Create Ima&ge...",            IDC_CREATE_DYNAMIC_IMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "Create &Input Field",         IDC_CREATE_FIELD
+        MENUITEM "Create &Multiline Input Field", IDC_CREATE_MULTILINE_FIELD
+        MENUITEM "Create C&ombo Box...",        IDC_CREATE_DYNAMIC_SELECTION
+        MENUITEM "Create C&heck Box...",        IDC_CREATE_CHECKBOX
+        MENUITEM "Create &Radio Button...",     IDC_CREATE_RADIOBUTTON
+        MENUITEM "Create &Button",              IDC_CREATE_BUTTON
+        MENUITEM SEPARATOR
+        MENUITEM "&Use Global Template",        IDC_USE_GLOBAL_TEMPLATE
+    END
+END
+
+IDR_POPUP_TABWND_XSLT MENU DISCARDABLE 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find",                       ID_EDIT_FIND
+        MENUITEM SEPARATOR
+        MENUITEM "Insert/Remove &Bookmark",     IDC_TOGGLE_BOOKMARK
+        MENUITEM "Remove A&ll Bookmarks",       IDC_REMOVEALLBOOKMARKS
+        MENUITEM "Goto &Next Bookmark",         IDC_GOTONEXTBOOKMARK
+        MENUITEM "Goto &Previous Bookmark",     IDC_GOTOPREVBOOKMARK
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_HTML_IMPORT_SELECT_LIST_TYPE DIALOG DISCARDABLE  0, 0, 162, 78
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Convert List"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Convert",IDOK,47,59,50,14
+    PUSHBUTTON      "S&kip",IDCANCEL,107,59,50,14
+    GROUPBOX        "Convert the selected list",-1,5,5,151,46
+    CONTROL         "To a &static list",IDC_FIXED_LIST,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,20,59,10
+    CONTROL         "To a &dynamic list",IDC_DYNAMIC_LIST,"Button",
+                    BS_AUTORADIOBUTTON,15,33,69,10
+END
+
+IDD_HTML_IMPORT_SELECT_TABLE_TYPE DIALOG DISCARDABLE  0, 0, 186, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Convert Table"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Convert the selected table",-1,5,5,176,90
+    CONTROL         "To a &static table",IDC_TABLE_TYPE_STATIC,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,20,67,10
+    CONTROL         "To a &dynamic table",IDC_TABLE_TYPE_DYNAMIC,"Button",
+                    BS_AUTORADIOBUTTON,15,33,76,10
+    CONTROL         "Growing &top/down",IDC_TABLE_ORIENT_VER,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,35,46,75,10
+    CONTROL         "Growing &left/right",IDC_TABLE_ORIENT_HOR,"Button",
+                    BS_AUTORADIOBUTTON,35,59,70,10
+    CONTROL         "First row/column is a &header",IDC_CHECK_WITH_HEADER,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,35,74,
+                    133,10
+    DEFPUSHBUTTON   "&Convert",IDOK,71,102,50,14
+    PUSHBUTTON      "S&kip",IDCANCEL,131,102,50,14
+END
+
+IDD_BOOKMARK DIALOG DISCARDABLE  0, 0, 199, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Bookmark"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Bookmark name:",IDC_STATIC,7,7,54,8
+    EDITTEXT        IDC_BOOKMARK_NAME_EDIT,7,18,185,12,ES_AUTOHSCROLL
+    LTEXT           "&Other bookmarks on this page:",IDC_STATIC,7,36,98,8
+    LISTBOX         IDC_BOOKMARK_LIST,7,47,129,91,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Goto",IDC_GOTO,142,47,50,14
+    PUSHBUTTON      "Clear",IDC_CLEAR,142,64,50,14,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "OK",IDOK,85,144,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,144,50,14
+END
+
+IDD_FORMAT_BULLETS_PLAIN DIALOGEX 0, 0, 224, 156
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Bulleted"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "IDB_LIST_NO_BULLETS",IDC_LIST_NO_BULLETS,"Button",
+                    BS_OWNERDRAW | WS_GROUP | WS_TABSTOP,8,8,64,64,
+                    WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_BULLETS_NORMAL",IDC_LIST_BULLETS_NORMAL,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,80,8,64,64,WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_BULLETS_CIRCLE",IDC_LIST_BULLETS_CIRCLE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,8,84,64,64,WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_BULLETS_SQUARE",IDC_LIST_BULLETS_SQUARE,"Button",
+                    BS_OWNERDRAW | WS_TABSTOP,80,84,64,64,WS_EX_STATICEDGE
+END
+
+IDD_FORMAT_BULLETS_NUMBERING DIALOGEX 0, 0, 224, 175
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Numbered"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "IDB_LIST_NO_BULLETS",IDC_LIST_NO_BULLETS,"Button",
+                    BS_OWNERDRAW | WS_GROUP | WS_TABSTOP,8,8,64,64,
+                    WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_NUMBERING_NORMAL",IDC_LIST_NUMBERING_NORMAL,
+                    "Button",BS_OWNERDRAW | WS_TABSTOP,80,8,64,64,
+                    WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_NUMBERING_LETTERS_U",
+                    IDC_LIST_NUMBERING_LETTERS_U,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,152,8,64,64,WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_NUMBERING_LETTERS_L",
+                    IDC_LIST_NUMBERING_LETTERS_L,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,8,84,64,64,WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_NUMBERING_ROMAN_U",IDC_LIST_NUMBERING_ROMAN_U,
+                    "Button",BS_OWNERDRAW | WS_TABSTOP,80,84,64,64,
+                    WS_EX_STATICEDGE
+    CONTROL         "IDB_LIST_NUMBERING_ROMAN_L",IDC_LIST_NUMBERING_ROMAN_L,
+                    "Button",BS_OWNERDRAW | WS_TABSTOP,152,84,64,64,
+                    WS_EX_STATICEDGE
+    LTEXT           "&Start at:",IDC_STATIC,8,156,26,8
+    EDITTEXT        IDC_LIST_EDIT_START,36,154,36,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin2",IDC_LIST_EDIT_START_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,72,154,11,14
+END
+
+IDD_CREATE_TABLE DIALOGEX 0, 0, 233, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create Dynamic Table"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "for each",IDC_STATIC,7,6,28,12
+    LTEXT           "a:Person",IDC_CREATE_TABLE_ELEMENT_NAME,35,6,161,11
+    GROUPBOX        "Table growth",IDC_STATIC,7,23,84,51,WS_GROUP
+    CONTROL         "&Top/Down",IDC_TABLE_DIR_TOPDOWN,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,34,51,10
+    CONTROL         "&Left/Right",IDC_TABLE_DIR_LEFTRIGHT,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,15,47,48,10
+    GROUPBOX        "Header/Footer",IDC_STATIC,98,23,126,51,WS_GROUP
+    CONTROL         "Create &Header",IDC_HEADER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,106,34,62,10
+    CONTROL         "Create &Footer",IDC_FOOTER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,106,47,59,10
+    CONTROL         "&Summary for numeric fields",IDC_FOOTER_SUMMARY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,117,60,99,10
+    GROUPBOX        "Display cells as",IDC_STATIC,7,76,84,93,WS_GROUP
+    CONTROL         "Contents",IDC_CELL_TYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,88,59,10
+    CONTROL         "Combo Box",IDC_CELL_TYPE2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,15,101,59,10
+    CONTROL         "Edit Field",IDC_CELL_TYPE3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,15,114,59,10
+    CONTROL         "Multiline Edit Field",IDC_CELL_TYPE4,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,15,127,72,10
+    CONTROL         "Check Box",IDC_CELL_TYPE6,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,15,140,59,10
+    CONTROL         "Radio Button",IDC_CELL_TYPE7,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,15,153,59,10
+    GROUPBOX        "Select attributes/elements",IDC_STATIC,98,76,126,93,
+                    WS_GROUP
+    LISTBOX         IDC_LIST1,104,87,112,77,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,114,175,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,174,175,50,14
+END
+
+IDD_TEXT_STATE_ICONS DIALOG DISCARDABLE  0, 0, 275, 122
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Text State Icons"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "To make user editing experience in Authentic more comfortable, this dialog lets you define toolbar buttons for specific schema elements which modify text styles, such as bold and italic.\nThe data entered here applies to the main schema only.",
+                    IDC_STATIC,6,5,204,34
+    LTEXT           "Grid Placeholder",IDC_GRID,6,44,200,73,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,217,6,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,217,24,50,14
+END
+
+IDD_CALS_HTML_TABLES DIALOG DISCARDABLE  0, 0, 275, 194
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CALS / HTML Table Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Schema:",IDC_STATIC,8,9,29,8
+    COMBOBOX        IDC_SCHEMA,43,7,98,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Enable XML tables for this schema in Authentic",
+                    IDC_XMLTABLE_ENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,43,24,166,14
+    LTEXT           "&Type:",IDC_STATIC,8,45,26,11
+    COMBOBOX        IDC_XMLTABLE_TYPE,43,43,98,33,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Description",IDC_STATIC,8,63,50,9
+    LTEXT           "Default",IDC_STATIC,84,63,50,9
+    LTEXT           "User defined",IDC_STATIC,140,63,50,9
+    LTEXT           "Static",IDC_TAGGRID,8,74,201,115,SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,218,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,218,24,50,14
+    PUSHBUTTON      "Clear",IDC_CLEAR,218,58,50,14
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 58
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About StyleVision"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            128,IDC_STATIC,7,7,21,20
+    LTEXT           "StyleVision Version 1.0",IDC_STATIC,40,7,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    PUSHBUTTON      "http://www.<MyCompany>.com",IDC_COMPANY_URL,40,36,119,
+                    14
+END
+
+IDD_BUTTON_DIALOG DIALOG DISCARDABLE  0, 0, 222, 198
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Button properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,109,177,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,165,177,50,14
+    CONTROL         "Do nothing",IDC_ACTION_RADIO_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,27,107,10
+    CONTROL         "Follow a hyperlink",IDC_ACTION_RADIO_HYPERLINK,"Button",
+                    BS_AUTORADIOBUTTON,7,49,107,10
+    CONTROL         "Custom (Javascript):",IDC_ACTION_RADIO_BUTTON,"Button",
+                    BS_AUTORADIOBUTTON,7,71,107,10
+    CONTROL         "Open a date picker:",IDC_ACTION_RADIO_DATEPICKER,"Button",
+                    BS_AUTORADIOBUTTON,7,93,107,10
+    CONTROL         "Database action:",IDC_ACTION_RADIO_DBCONTROL,"Button",
+                    BS_AUTORADIOBUTTON,7,115,107,10
+    CONTROL         "XPath",IDC_ACTION_RADIO_XPATH,"Button",
+                    BS_AUTORADIOBUTTON,7,137,107,10
+    CONTROL         "Insert new item",IDC_ACTION_RADIO_INSERTER,"Button",
+                    BS_AUTORADIOBUTTON,7,158,107,10
+    EDITTEXT        IDC_EDIT_HYPERLINK,121,46,80,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "...",IDC_EDIT_HYPERLINK_BUTTON,203,46,11,14
+    COMBOBOX        IDC_COMBO_JAVASCRIPT_FUNCTION,121,70,94,30,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_DBCONTROL,121,114,94,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_XPATH,121,134,80,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_EDIT_XPATH_BUTTON,203,134,11,14
+    LTEXT           "What should happen when you click on the selected item?",
+                    IDC_STATIC,7,7,207,8
+END
+
+IDD_HYPERLINK DIALOG DISCARDABLE  0, 0, 375, 110
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hyperlink"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,265,91,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,320,91,50,14
+    LTEXT           "Placeholder for Propertysheet",
+                    IDC_PROPERTYSHEET_PLACEHOLDER,5,0,365,84,NOT WS_VISIBLE | 
+                    WS_BORDER
+    PUSHBUTTON      "&Remove Link",IDC_REMOVE_LINK,199,91,50,14
+END
+
+IDD_PROPPAGE_TARGET_STATIC DIALOG DISCARDABLE  0, 0, 358, 64
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Static"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ADDRESS_STATIC1,35,15,320,13,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    CONTROL         "Absolute Path",IDC_BROWSE_ABSOLUTE_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,36,34,60,10
+    PUSHBUTTON      "Browse...",IDC_BROWSE,96,32,50,14
+    PUSHBUTTON      "Bookmark...",IDC_BOOKMARK_BUTTON2,151,32,50,14
+    LTEXT           "Use above field to enter a simple static Address.",
+                    IDC_STATIC,275,29,79,16
+    LTEXT           "Addr&ess:",IDC_STATIC,4,16,28,8
+    LTEXT           "Static",IDC_STATIC,35,6,19,8
+END
+
+IDD_PROPPAGE_TARGET_DYNAMIC DIALOG DISCARDABLE  0, 0, 357, 64
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Dynamic"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ADDRESS_DYNAMIC1,35,15,320,13,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    PUSHBUTTON      "Schema...",IDC_SCHEMA,35,32,50,14
+    LTEXT           "Use above field to enter a dynamic (XPath) Address. Use button to select Schema content.",
+                    IDC_STATIC,189,30,168,17
+    LTEXT           "Dynamic",IDC_STATIC,35,6,28,8
+    LTEXT           "Addr&ess:",IDC_STATIC,4,16,28,8
+    CONTROL         "Treat as unparsed entity for XSLT transformation",
+                    IDC_CHECK_UNPARSEDENTITY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,51,314,10
+END
+
+IDD_PROPPAGE_TARGET_STATIC_AND_DYNAMIC DIALOG DISCARDABLE  0, 0, 359, 64
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Static and Dynamic"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ADDRESS_STATIC2,35,15,104,13,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    EDITTEXT        IDC_ADDRESS_DYNAMIC3,143,15,104,13,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    EDITTEXT        IDC_ADDRESS_STATIC4,251,15,104,13,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    PUSHBUTTON      "Schema...",IDC_SCHEMA,143,32,50,14
+    LTEXT           "Dynamic",IDC_STATIC,143,6,28,8
+    LTEXT           "Static",IDC_STATIC,251,6,19,8
+    LTEXT           "Static",IDC_STATIC,35,6,19,8
+    LTEXT           "Addr&ess:",IDC_STATIC,4,16,28,8
+    LTEXT           "Compose Address by combining two Static and one Dynamic expression.",
+                    IDC_STATIC,4,32,136,28
+    CONTROL         "Treat dynamic part as unparsed entity for XSLT transformation",
+                    IDC_CHECK_UNPARSEDENTITY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,143,51,211,10
+END
+
+IDD_BOOKMARK_SELECTOR DIALOG DISCARDABLE  0, 0, 198, 191
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Bookmark Selector"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,85,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,170,50,14
+    LTEXT           "Select an existent place in the document:",IDC_STATIC,5,
+                    5,131,8
+    LISTBOX         IDC_BOOKMARK_LIST,6,15,186,150,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_SCHEMA_SELECTOR DIALOG DISCARDABLE  0, 0, 198, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Schema Selector"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,85,170,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,170,50,14
+    LTEXT           "Select Schema Attribute or Element:",IDC_STATIC,5,5,114,
+                    8
+    LTEXT           "Placeholder for Schema Tree",IDC_SCHEMA_TREE,5,16,187,
+                    146,SS_SUNKEN | NOT WS_VISIBLE
+    CONTROL         "Absolute XPath",IDC_SCHEMA_ABSOLUTE_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,170,65,10
+END
+
+IDD_CHOICE_TEST_EXPRESSION DIALOG DISCARDABLE  0, 0, 202, 173
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Edit XPath expression"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_TEST_EXPRESSION,49,15,140,33,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_NOHIDESEL | 
+                    ES_WANTRETURN
+    DEFPUSHBUTTON   "&OK",IDOK,43,152,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,109,152,50,14
+    GROUPBOX        "",IDC_CHOICETEST_STATICFRAME_TOP,5,6,189,59
+    LTEXT           "Expression:",IDC_STATIC,9,16,37,8
+    CONTROL         "Otherwise:",IDC_CHECK_OTHERWISE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,8,51,50,9
+    GROUPBOX        "Select Schema Attribute or Element",
+                    IDC_CHOICETEST_STATICFRAME_LEFT,5,70,75,73
+    LTEXT           "Selection:",IDC_CHOICETEST_STATICTEXT_SELECTION,9,87,33,
+                    8
+    EDITTEXT        IDC_CURRENT_SELECTION,44,85,31,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Placeholder for Schema Tree",IDC_SCHEMA_TREE,9,102,66,
+                    23,SS_SUNKEN | NOT WS_VISIBLE | NOT WS_GROUP
+    CONTROL         "Absolute XPath",IDC_SCHEMA_ABSOLUTE_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,129,65,10
+    LTEXT           "Select Operator",IDC_CHOICETEST_STATICTEXT_OPERATOR,86,
+                    70,50,8
+    CONTROL         "List1",IDC_OPERATORS_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,85,80,52,62
+    LTEXT           "Select Function",IDC_CHOICETEST_STATICTEXT_FUNCTION,142,
+                    70,54,8
+    CONTROL         "List2",IDC_FUNCTIONS_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,142,80,52,62
+END
+
+IDD_ENCODING DIALOGEX 0, 0, 227, 107
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Encoding"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Select Output Encoding for",IDC_STATIC,7,7,213,72
+    LTEXT           "&HTML:",IDC_STATIC,13,25,23,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_ENCODING_HTML,41,23,173,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&RTF:",IDC_STATIC_ENCODING_RTF,13,42,23,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_ENCODING_RTF,41,40,173,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&PDF:",IDC_STATIC_ENCODING_PDF,13,61,23,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_ENCODING_PDF,41,58,173,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,113,86,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,170,86,50,14
+END
+
+IDD_PROPPAGE_ENCODING DIALOGEX 0, 0, 222, 89
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Encoding"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Default Output Encoding for",IDC_STATIC,3,7,213,72
+    LTEXT           "&HTML:",IDC_STATIC,9,25,23,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_ENCODING_HTML,37,23,173,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&RTF:",IDC_STATIC_ENCODING_RTF,9,42,23,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_ENCODING_RTF,37,40,173,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&PDF:",IDC_STATIC_ENCODING_PDF,9,61,23,8,0,WS_EX_RIGHT
+    COMBOBOX        IDC_ENCODING_PDF,37,58,173,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PROPPAGE_XSL DIALOG DISCARDABLE  0, 0, 222, 121
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "XSL-FO"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "XSL-FO Generation",IDC_STATIC,3,7,213,43
+    CONTROL         "FOP 0.20.5 compliant",IDC_FO_COMPLIANT_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,9,20,84,10
+    CONTROL         "Full usage of XSL-FO standard",IDC_FO_COMPLIANT_RADIO2,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,9,33,112,10
+    GROUPBOX        "FO Processor",IDC_STATIC,3,58,213,55,WS_GROUP
+    EDITTEXT        IDC_PAGESETUP_FO_PROCESSOR,9,72,200,14,ES_AUTOHSCROLL
+    LTEXT           "Please enter path to XSL-FO transformation engine (if using FOP enter path to fop.bat).",
+                    IDC_STATIC,9,89,142,22
+    PUSHBUTTON      "Browse...",IDC_BROWSE,159,90,50,14
+END
+
+IDD_FORMAT_PROPERTIES DIALOG DISCARDABLE  0, 0, 298, 113
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Input Formatting"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Unformatted (<format>)",IDC_FORMATRADIO_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,10,18,224,10
+    CONTROL         "Formatted:",IDC_FORMATRADIO_LIST,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,10,33,149,10
+    COMBOBOX        IDC_FORMATCBAUTOCALCDT,162,32,73,109,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FORMATCB,10,46,225,88,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Formats for type '<type>'",IDC_FORMATFRAME,5,3,235,91
+    PUSHBUTTON      "&Insert Field...",IDC_FORMAT_INSERTFIELD,21,75,59,14
+    PUSHBUTTON      "&Field Options...",IDC_FORMAT_FIELDOPTIONS,97,75,60,14
+    PUSHBUTTON      "Go to &Error",IDC_FORMAT_GOTOERROR,171,75,64,14,
+                    WS_DISABLED
+    CONTROL         "Apply same format to XSLToutput (not all formatting options can be applied)",
+                    IDC_FORMAT_APPLYXSLT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,98,284,10
+    DEFPUSHBUTTON   "&OK",IDOK,244,7,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,244,25,50,14
+    LTEXT           "Error message",IDC_FORMAT_ERRMESG,10,61,223,8,NOT 
+                    WS_GROUP
+    PUSHBUTTON      "»",IDC_FORMAT_NEXTFIELD,82,75,9,14
+    PUSHBUTTON      "«",IDC_FORMAT_PREVFIELD,10,75,9,14
+END
+
+IDD_FORMAT_PREDEFINES DIALOG DISCARDABLE  0, 0, 167, 106
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Predefined Input Formatting Strings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,31,85,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,93,85,50,14
+    COMBOBOX        IDC_FORMATPD_DATATYPE,87,7,73,109,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Predefined formats for:",IDC_STATIC,7,9,76,8
+    LTEXT           "Grid placeholder",IDC_FORMATPD_GRIDPLACEHOLDER,7,24,153,
+                    55,SS_SUNKEN
+END
+
+IDD_FORMAT_EDITSTRING DIALOG DISCARDABLE  0, 0, 304, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Format String"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,247,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,247,24,50,14
+    COMBOBOX        IDC_FORMATCB,7,7,225,88,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Insert Field...",IDC_FORMAT_INSERTFIELD,18,36,59,14
+    PUSHBUTTON      "&Field Options...",IDC_FORMAT_FIELDOPTIONS,93,36,60,14
+    PUSHBUTTON      "Go to &Error",IDC_FORMAT_GOTOERROR,168,36,64,14,
+                    WS_DISABLED
+    LTEXT           "Error message",IDC_FORMAT_ERRMESG,7,22,223,8,NOT 
+                    WS_GROUP
+    PUSHBUTTON      "»",IDC_FORMAT_NEXTFIELD,79,36,9,14
+    PUSHBUTTON      "«",IDC_FORMAT_PREVFIELD,7,36,9,14
+END
+
+IDD_RADIO_EDIT DIALOG DISCARDABLE  0, 0, 216, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "caption"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Attribute or Element",IDC_STR_MAPPER_ELEMENT_NAME,
+                    "Static",SS_SIMPLE | WS_GROUP,7,6,136,11
+    LTEXT           "placeholder for grid",IDC_STATIC_GRID,7,36,142,92,
+                    SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,159,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,25,50,14
+    CONTROL         "Use schema enumerations",IDC_HANDLE_GRID,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,22,99,10
+END
+
+IDD_CHECK_EDIT DIALOG DISCARDABLE  0, 0, 232, 156
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "caption"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "placeholder for grid",IDC_STATIC_GRID,7,20,158,92,
+                    SS_SUNKEN
+    DEFPUSHBUTTON   "OK",IDOK,174,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,24,50,14
+    EDITTEXT        IDC_EDIT_FIELD,7,134,158,14,ES_AUTOHSCROLL
+    CONTROL         "Attribute or Element",IDC_STR_MAPPER_ELEMENT_NAME,
+                    "Static",SS_SIMPLE | WS_GROUP,7,6,158,11
+    LTEXT           "Unchecked value:",IDC_STATIC,7,124,158,8
+END
+
+IDD_COMBO_EDIT DIALOG DISCARDABLE  0, 0, 236, 215
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Combo Box"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Attribute or Element",IDC_STR_MAPPER_ELEMENT_NAME,
+                    "Static",SS_SIMPLE | WS_GROUP,7,7,136,11
+    CONTROL         "Use schema enumerations",IDC_USE_ENUMERATION,"Button",
+                    BS_AUTORADIOBUTTON,7,21,99,10
+    CONTROL         "Use list of values",IDC_USE_LIST,"Button",
+                    BS_AUTORADIOBUTTON,7,35,69,10
+    LTEXT           "placeholder for grid",IDC_STATIC_GRID,20,49,209,58,
+                    SS_SUNKEN
+    CONTROL         "Use XPath expression",IDC_USE_XPATH,"Button",
+                    BS_AUTORADIOBUTTON,7,114,85,10
+    EDITTEXT        IDC_EDIT_XPATH,19,129,210,58,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "...",IDC_BUTTON_XPATH,94,111,11,14
+    DEFPUSHBUTTON   "OK",IDOK,120,194,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,179,194,50,14
+END
+
+IDD_ROOT_NODE DIALOG DISCARDABLE  0, 0, 260, 185
+STYLE WS_POPUP | WS_CAPTION | WS_THICKFRAME
+CAPTION "Select Root Elements"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "The list below contains all root elements available in the schema.",
+                    IDC_STEXT,7,7,246,9
+    LISTBOX         IDC_POSSIBLE_ROOT_NODES,7,66,246,92,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_NOSEL | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,122,164,60,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,164,60,14
+    LTEXT           "A check mark next to an element indicates the element is currently visible in the schema source tree. An element that is greyed out is used in the design, so its check mark may not be removed.",
+                    IDC_STEXT2,7,20,246,26
+    LTEXT           "Please check the elements you want to be visible in the schema source tree.",
+                    IDC_STEXT3,7,51,246,9
+END
+
+IDD_ADDVALIDATION_EDIT DIALOG DISCARDABLE  0, 0, 299, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add validation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Grid Placeholder",IDC_STATIC_GRID,13,18,272,70,
+                    SS_SUNKEN
+    GROUPBOX        "Additional validation with XPath (valid when all XPath results are true)",
+                    IDC_STATIC,7,7,285,87,WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,188,101,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,242,101,50,14
+END
+
+IDD_MESSAGE_DIALOG DIALOG DISCARDABLE  0, 0, 186, 55
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "StyleVision"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Message",IDC_MESSAGE_TEXT,7,20,172,14,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_HTML_IMPORT_SELECT_LIST_TYPE, DIALOG
+    BEGIN
+        VERTGUIDE, 6
+        VERTGUIDE, 157
+        HORZGUIDE, 5
+        HORZGUIDE, 73
+    END
+
+    IDD_HTML_IMPORT_SELECT_TABLE_TYPE, DIALOG
+    BEGIN
+        VERTGUIDE, 5
+        VERTGUIDE, 181
+        HORZGUIDE, 5
+        HORZGUIDE, 116
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BUTTON_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        VERTGUIDE, 121
+        VERTGUIDE, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 191
+    END
+
+    IDD_HYPERLINK, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 106
+        HORZGUIDE, 105
+    END
+
+    IDD_FORMAT_PROPERTIES, DIALOG
+    BEGIN
+        RIGHTMARGIN, 295
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_FORMAT_PREDEFINES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_FORMAT_EDITSTRING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_COMBO_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_ROOT_NODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_ADDVALIDATION_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""../ICApplication/resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_DESIGNTREE TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_DESIGNTREE_REMOVE
+    SEPARATOR
+    BUTTON      ID_DESIGNTREE_SYNC
+END
+
+IDR_STYLEREPOSITORY TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDR_STYLES_ADD
+    BUTTON      IDR_STYLES_INSERT
+    BUTTON      IDR_STYLES_MOVE_UP
+    BUTTON      IDR_STYLES_MOVE_DOWN
+    SEPARATOR
+    BUTTON      IDR_STYLES_VIEWMODE_GROUPED
+    BUTTON      IDR_STYLES_VIEWMODE_ALPHA
+    BUTTON      IDR_STYLES_VIEWMODE_ALPHA_SET
+    SEPARATOR
+    BUTTON      IDR_STYLES_IMPORTANT
+    SEPARATOR
+    BUTTON      IDR_STYLES_RELOAD
+    SEPARATOR
+    BUTTON      IDR_STYLES_REMOVE
+END
+
+IDR_LOCALSTYLE TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDR_CONTEXT_VIEWMODE_GROUPED
+    BUTTON      IDR_CONTEXT_VIEWMODE_ALPHA
+    BUTTON      IDR_CONTEXT_VIEWMODE_ALPHA_SET
+    SEPARATOR
+    BUTTON      IDR_CONTEXT_IMPORTANT
+    SEPARATOR
+    BUTTON      IDR_CONTEXT_REMOVE_ATTRIBUTE
+END
+
+IDR_SCHEMASOURCES TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDR_SCHEMASOURCES_ADD_SCHEMA
+    BUTTON      IDR_SCHEMASOURCES_ADD_ELEMENT
+    BUTTON      IDR_SCHEMASOURCES_ADD_ATTRIBUTE
+    SEPARATOR
+    BUTTON      IDR_SCHEMASOURCES_GLOBAL
+    SEPARATOR
+    BUTTON      IDR_SCHEMASOURCES_REMOVE
+    SEPARATOR
+    BUTTON      IDR_SCHEMASOURCES_SYNC
+END
+
+IDR_PROPERTIES TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDR_CONTEXT_VIEWMODE_GROUPED
+    BUTTON      IDR_CONTEXT_VIEWMODE_ALPHA
+    BUTTON      IDR_CONTEXT_VIEWMODE_ALPHA_SET
+    SEPARATOR
+    BUTTON      IDR_CONTEXT_REMOVE_ATTRIBUTE
+END
+
+IDR_SCHEMASOURCE_NEW TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDC_SCHEMA_FROMFILE
+    BUTTON      IDC_SCHEMA_FROMDB
+    BUTTON      IDC_SCHEMA_USER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_DESIGNTREE          BITMAP  DISCARDABLE     "res\\designtr.bmp"
+IDR_STYLEREPOSITORY     BITMAP  DISCARDABLE     "res\\StyleRepository.bmp"
+IDR_SCHEMASOURCES       BITMAP  DISCARDABLE     "res\\schemasc.bmp"
+IDR_LOCALSTYLE          BITMAP  DISCARDABLE     "res\\localsty.bmp"
+IDB_LIST_BULLETS_SQUAREF BITMAP  DISCARDABLE     "res\\BN_Bullets_SquareF.bmp"
+IDB_LIST_BULLETS_CIRCLEU BITMAP  DISCARDABLE     "res\\BN_Bullets_Circle.bmp"
+IDB_LIST_BULLETS_CIRCLEF BITMAP  DISCARDABLE     "res\\BN_Bullets_CircleF.bmp"
+IDB_LIST_BULLETS_NORMALU BITMAP  DISCARDABLE     "res\\BN_Bullets_Normal.bmp"
+IDB_LIST_BULLETS_NORMALF BITMAP  DISCARDABLE     "res\\BN_Bullets_NormalF.bmp"
+IDB_LIST_BULLETS_SQUAREU BITMAP  DISCARDABLE     "res\\BN_Bullets_Square.bmp"
+IDB_LIST_NO_BULLETSF    BITMAP  DISCARDABLE     "res\\BN_NO_BNF.bmp"
+IDB_LIST_NO_BULLETSU    BITMAP  DISCARDABLE     "res\\BN_NO_BN.bmp"
+IDB_LIST_NUMBERING_ROMAN_UF BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_UppercaseF.bmp"
+IDB_LIST_NUMBERING_LETTERS_LU BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_Lowercase.bmp"
+IDB_LIST_NUMBERING_LETTERS_UU BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_Uppercase.bmp"
+IDB_LIST_NUMBERING_LETTERS_UF BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_UppercaseF.bmp"
+IDB_LIST_NUMBERING_NORMALU BITMAP  DISCARDABLE     "res\\BN_Numbering_Normal.bmp"
+IDB_LIST_NUMBERING_NORMALF BITMAP  DISCARDABLE     "res\\BN_Numbering_NormalF.bmp"
+IDB_LIST_NUMBERING_ROMAN_UU BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_Uppercase.bmp"
+IDB_LIST_NUMBERING_ROMAN_LU BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_Lowercase.bmp"
+IDB_LIST_NUMBERING_ROMAN_LF BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_LowercaseF.bmp"
+IDB_LIST_NUMBERING_LETTERS_LF BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_LowercaseF.bmp"
+IDR_PROPERTIES          BITMAP  DISCARDABLE     "res\\properti.bmp"
+IDB_LIST_BULLETS_CIRCLED BITMAP  DISCARDABLE     "res\\BN_Bullets_CircleD.bmp"
+IDB_LIST_BULLETS_CIRCLEX BITMAP  DISCARDABLE     "res\\BN_Bullets_CircleX.bmp"
+IDB_LIST_BULLETS_NORMALD BITMAP  DISCARDABLE     "res\\BN_Bullets_NormalD.bmp"
+IDB_LIST_BULLETS_NORMALX BITMAP  DISCARDABLE     "res\\BN_Bullets_NormalX.bmp"
+IDB_LIST_BULLETS_SQUARED BITMAP  DISCARDABLE     "res\\BN_Bullets_SquareD.bmp"
+IDB_LIST_BULLETS_SQUAREX BITMAP  DISCARDABLE     "res\\BN_Bullets_SquareX.bmp"
+IDB_LIST_NO_BULLETSD    BITMAP  DISCARDABLE     "res\\BN_NO_BND.bmp"
+IDB_LIST_NO_BULLETSX    BITMAP  DISCARDABLE     "res\\BN_NO_BNX.bmp"
+IDB_LIST_NUMBERING_LETTERS_LD BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_LowercaseD.bmp"
+IDB_LIST_NUMBERING_LETTERS_LX BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_LowercaseX.bmp"
+IDB_LIST_NUMBERING_LETTERS_UD BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_UppercaseD.bmp"
+IDB_LIST_NUMBERING_LETTERS_UX BITMAP  DISCARDABLE     "res\\BN_Numbering_Letters_UppercaseX.bmp"
+IDB_LIST_NUMBERING_NORMALD BITMAP  DISCARDABLE     "res\\BN_Numbering_NormalD.bmp"
+IDB_LIST_NUMBERING_NORMALX BITMAP  DISCARDABLE     "res\\BN_Numbering_NormalX.bmp"
+IDB_LIST_NUMBERING_ROMAN_LD BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_LowercaseD.bmp"
+IDB_LIST_NUMBERING_ROMAN_LX BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_LowercaseX.bmp"
+IDB_LIST_NUMBERING_ROMAN_UD BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_UppercaseD.bmp"
+IDB_LIST_NUMBERING_ROMAN_UX BITMAP  DISCARDABLE     "res\\BN_Numbering_Roman_UppercaseX.bmp"
+IDR_SCHEMASOURCE_NEW    BITMAP  DISCARDABLE     "res\\schemaso.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_SPSGUI_ELEMENT_CROSS ICON    DISCARDABLE     "res\\elem_cross.ico"
+IDI_SPSGUI_ATTRIBUTE    ICON    DISCARDABLE     "res\\attribute.ico"
+IDI_SPSGUI_ELEMENT      ICON    DISCARDABLE     "res\\element.ico"
+IDI_SPSGUI_COVERPAGE    ICON    DISCARDABLE     "res\\pagecover.ico"
+IDI_SPSGUI_FOOTER       ICON    DISCARDABLE     "res\\pagefooter.ico"
+IDI_SPSGUI_HEADER       ICON    DISCARDABLE     "res\\pageheader.ico"
+IDI_SPSGUI_PAGELAYOUT   ICON    DISCARDABLE     "res\\pagelayout.ico"
+IDI_SPSGUI_ROOTELEMENT  ICON    DISCARDABLE     "res\\rootslash.ico"
+IDI_SPSGUI_SCHEMASRC    ICON    DISCARDABLE     "res\\schema.ico"
+IDI_SPSGUI_PARTS        ICON    DISCARDABLE     "res\\parts.ico"
+IDI_SPSGUI_DESIGN       ICON    DISCARDABLE     "res\\design.ico"
+IDI_SPSGUI_NAMESPACES   ICON    DISCARDABLE     "res\\namespaces.ico"
+IDI_SPSGUI_SCRIPTS      ICON    DISCARDABLE     "res\\scripts.ico"
+IDI_SPSGUI_TEMPLATES    ICON    DISCARDABLE     "res\\templates.ico"
+IDI_SPSGUI_STYLES_EXTERNAL ICON    DISCARDABLE     "res\\link_external.ico"
+IDI_SPSGUI_STYLES_GLOBAL ICON    DISCARDABLE     "res\\global_styles.ico"
+IDI_SPSGUI_STYLES_EXTERNALIMPORT ICON    DISCARDABLE     "res\\link_import.ico"
+IDI_SPSGUI_STYLES_EXTERNALREFERENCE ICON    DISCARDABLE     "res\\html_refer.ico"
+IDI_SPSGUI_PROPERTIES_COLOR ICON    DISCARDABLE     "res\\color_dlg.ico"
+IDI_SPSGUI_STYLES_EDITURL ICON    DISCARDABLE     "res\\s_editurl.ico"
+IDI_SPSGUI_PROPERTIES_HTML ICON    DISCARDABLE     "res\\tab_html.ico"
+IDI_SPSGUI_PROPERTIES_AUTHENTIC ICON    DISCARDABLE     "res\\tab_authentic.ico"
+IDI_SPSGUI_PROPERTIES_ELEMENT ICON    DISCARDABLE     "res\\tab_element.ico"
+IDI_SPSGUI_PROPERTIES_STYLE ICON    DISCARDABLE     "res\\tab_css.ico"
+IDI_SPSGUI_SCHEMASOURCE_XSD ICON    DISCARDABLE     "res\\source_xsd.ico"
+IDI_SPSGUI_SCHEMASOURCES ICON    DISCARDABLE     "res\\source_all.ico"
+IDI_SPSGUI_SCHEMASOURCE_DB ICON    DISCARDABLE     "res\\source_db.ico"
+IDI_SPSGUI_SCHEMASOURCE_USER ICON    DISCARDABLE     "res\\source_user.ico"
+IDI_SPSGUI_PROPERTIES_ALL ICON    DISCARDABLE     "res\\tab_all.ico"
+IDI_SPSGUI_PROPERTIES_DISABLED ICON    DISCARDABLE     "res\\spsgui_disabled.ico"
+IDI_SPSGUI_LAYOUT       ICON    DISCARDABLE     "res\\spsgui_l.ico"
+IDI_SPSGUI_PARAMETER    ICON    DISCARDABLE     "res\\spsgui_p.ico"
+IDI_SPSGUI_PROPERTIES_APPEND ICON    DISCARDABLE     "res\\append.ico"
+IDI_SPSGUI_ELEMENT_DBFILTER ICON    DISCARDABLE     "res\\xml_filter.ico"
+IDI_SPSGUI_ATTRIBUTE_IMPORT ICON    DISCARDABLE     "res\\spsgui_a.ico"
+IDI_SPSGUI_ELEMENT_IMPORT ICON    DISCARDABLE     "res\\spsgui_e.ico"
+IDI_TABLE_INSERT        ICON    DISCARDABLE     "res\\tableins.ico"
+IDI_TABLE_DELETE        ICON    DISCARDABLE     "res\\tabledel.ico"
+IDI_TABLE_APPEND        ICON    DISCARDABLE     "res\\tableapp.ico"
+IDI_AA_STYLEVISION256   ICON    DISCARDABLE     "res\\StyleVision256.ico"
+IDI_SPSGUI_ASSIGN_TEMPLATEXML ICON    DISCARDABLE     "res\\assign_template.ico"
+IDI_SPSGUI_ASSIGN_WORKINGXML ICON    DISCARDABLE     "res\\assign_working.ico"
+IDI_SPSGUI_ASSIGN_XML_GROUP ICON    DISCARDABLE     "res\\group_xml.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_FORMAT_PROPERTIES DLGINIT
+BEGIN
+    IDC_FORMATCBAUTOCALCDT, 0x403, 5, 0
+0x6164, 0x6574, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 5, 0
+0x6974, 0x656d, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 9, 0
+0x6164, 0x6574, 0x6954, 0x656d, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 9, 0
+0x7564, 0x6172, 0x6974, 0x6e6f, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 21, 0
+0x6e69, 0x6574, 0x6567, 0x2072, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 21, 0
+0x6564, 0x6963, 0x616d, 0x206c, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 6, 0
+0x5967, 0x6165, 0x0072, 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 7, 0
+0x4d67, 0x6e6f, 0x6874, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 5, 0
+0x4467, 0x7961, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 11, 0
+0x5967, 0x6165, 0x4d72, 0x6e6f, 0x6874, "\000" 
+    IDC_FORMATCBAUTOCALCDT, 0x403, 10, 0
+0x4d67, 0x6e6f, 0x6874, 0x6144, 0x0079, 
+    IDC_FORMATCB, 0x403, 5, 0
+0x6164, 0x6574, "\000" 
+    IDC_FORMATCB, 0x403, 5, 0
+0x6974, 0x656d, "\000" 
+    IDC_FORMATCB, 0x403, 9, 0
+0x6164, 0x6574, 0x6954, 0x656d, "\000" 
+    IDC_FORMATCB, 0x403, 9, 0
+0x7564, 0x6172, 0x6974, 0x6e6f, "\000" 
+    IDC_FORMATCB, 0x403, 21, 0
+0x6e69, 0x6574, 0x6567, 0x2072, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    IDC_FORMATCB, 0x403, 21, 0
+0x6564, 0x6963, 0x616d, 0x206c, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    0
+END
+
+IDD_FORMAT_PREDEFINES DLGINIT
+BEGIN
+    IDC_FORMATPD_DATATYPE, 0x403, 5, 0
+0x6164, 0x6574, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 5, 0
+0x6974, 0x656d, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 9, 0
+0x6164, 0x6574, 0x6954, 0x656d, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 9, 0
+0x7564, 0x6172, 0x6974, 0x6e6f, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 21, 0
+0x6e69, 0x6574, 0x6567, 0x2072, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 21, 0
+0x6564, 0x6963, 0x616d, 0x206c, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 6, 0
+0x5967, 0x6165, 0x0072, 
+    IDC_FORMATPD_DATATYPE, 0x403, 7, 0
+0x4d67, 0x6e6f, 0x6874, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 5, 0
+0x4467, 0x7961, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 11, 0
+0x5967, 0x6165, 0x4d72, 0x6e6f, 0x6874, "\000" 
+    IDC_FORMATPD_DATATYPE, 0x403, 10, 0
+0x4d67, 0x6e6f, 0x6874, 0x6144, 0x0079, 
+    0
+END
+
+IDD_FORMAT_EDITSTRING DLGINIT
+BEGIN
+    IDC_FORMATCB, 0x403, 5, 0
+0x6164, 0x6574, "\000" 
+    IDC_FORMATCB, 0x403, 5, 0
+0x6974, 0x656d, "\000" 
+    IDC_FORMATCB, 0x403, 9, 0
+0x6164, 0x6574, 0x6954, 0x656d, "\000" 
+    IDC_FORMATCB, 0x403, 9, 0
+0x7564, 0x6172, 0x6974, 0x6e6f, "\000" 
+    IDC_FORMATCB, 0x403, 21, 0
+0x6e69, 0x6574, 0x6567, 0x2072, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    IDC_FORMATCB, 0x403, 21, 0
+0x6564, 0x6963, 0x616d, 0x206c, 0x6f28, 0x2072, 0x6572, 0x616c, 0x6574, 
+0x2964, "\000" 
+    0
+END
+
+IDD_CALS_HTML_TABLES DLGINIT
+BEGIN
+    IDC_XMLTABLE_TYPE, 0x403, 5, 0
+0x5448, 0x4c4d, "\000" 
+    IDC_XMLTABLE_TYPE, 0x403, 5, 0
+0x4143, 0x534c, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCHEMA_NOT_CREATED  "Error: Schema couldn't be added."
+    IDS_SELECTOR_INVALID_NAME_ALREADY_USED "Selector name is not valid"
+    IDS_SELECTOR_INVALID_NAME_EMPTY 
+                            "Selector name is not valid. The field can not be empty."
+    IDS_SPS_V2DBXPATHREMINDER 
+                            "StyleVision has converted the Stylesheet from an older SPS version. The design and/or the schema layout may have changed in the process.\nPlease check the design and adapt any XPath expressions to the new design layout."
+    IDS_SPSDESIGNERROR_SCHEMANOTFOUND "Internal error: Schema not found."
+    IDS_SPSDESIGNSECTION_GLOBALELEMENTS "Global Elements"
+    IDS_SPSDESIGNSECTION_LAYOUT "Page Layout"
+    IDS_SPSDESIGNSECTION_NAMESPACES "Namespaces"
+    IDS_SPSDESIGNSECTION_PARAMETER "Parameter"
+    IDS_SPSDESIGNSECTION_PARTS "Global Templates"
+    IDS_SPSDESIGNSECTION_ROOTELEMENTS "Root elements"
+    IDS_SPSDESIGNSECTION_SCHEMASOURCES "Schema sources"
+    IDS_SPSDESIGNSECTION_SCRIPTS "Scripts"
+    IDS_SPSDESIGNSECTION_SCRIPTS_JAVA "Javascript"
+    IDS_SPSDESIGNSECTION_UNIFIEDNS "Unified Namespaces"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FORMATSTATIC_NOFORMATCHOSEN "No format chosen."
+    IDS_FORMATSTATIC_AUTOCALCDT "Format for AutoCalc field"
+    IDS_FORMATSTATIC_UNFORMATTED "Unformatted"
+    IDS_FORMATSTATIC_FORMATAUTOCALC "Formatted - please choose data type:"
+    IDS_FORMAT_EMPTY        "Format string is empty."
+    IDS_FORMAT_DUPLICATE    "Format string duplicates already predefined system or user format."
+    IDS_PROPERTY_GROUP_IE   "IE"
+    IDS_SPSDESIGNSECTION_ALL_GLOBALELEMENTS "All Global Elements"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SPSDESIGNSTRING_DEFAULT "(default)"
+    IDS_STYLETREE_MEDIA     "media:"
+    IDS_STYLETREE_SELECTOR  "selector"
+    IDS_STYLETREE_URL       "URL:"
+    IDS_STYLETREE_URL_STANDARD "http://"
+    IDS_STYLEVISION_EDITDBFILTERSCAPTION "Edit Database Filters"
+    IDS_STYLEVISION_PROPERTIES_ALL "All"
+    IDS_STYLEVISION_PROPERTIES_AUTHENTIC "authentic"
+    IDS_STYLEVISION_PROPERTIES_ELEMENT "Authentic"
+    IDS_STYLEVISION_PROPERTIES_HTML "HTML"
+    IDS_STYLEVISION_PROPERTIES_LAYOUT "Layout"
+    IDS_STYLEVISION_PROPERTIES_STYLE "Style"
+    IDS_STYLEVISION_STYLES_EXTERNAL "External"
+    IDS_STYLEVISION_STYLES_GLOBAL "Global"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDIT_COMBO_BOX      "Edit Combo Box"
+    IDR_STYLES_RELOAD       "Reload all external CSS files.\nReload All"
+    IDS_STYLEVISION_STYLES_IMPORTS "Imports"
+    IDS_STYLEVISION_STYLES_RULES "Rules"
+    IDR_STYLES_ERROR_DUPLICATE_FILES "The specified file already exists."
+    IDR_STYLES_ERROR_NO_EMPTY_FILENAME "Filename cannot be empty."
+    IDC_TOGGLE_BOOKMARK     "Insert/Remove Bookmark in Text View\nInsert-Remove Bookmark"
+    IDC_REMOVEALLBOOKMARKS  "Remove All Bookmarks in Text View\nRemove All Bookmarks"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_TYPE_EDITFIELD "editfield"
+    IDS_STYLEVISION_TYPE_IMAGE "image"
+    IDS_STYLEVISION_TYPE_LINK "link"
+    IDS_STYLEVISION_TYPE_MULTILINEEDITFIELD "multiline editfield"
+    IDS_STYLEVISION_TYPE_RADIOBUTTON "radio button"
+    IDS_STYLEVISION_TYPE_TEXT "text"
+    IDS_STYLEVISION_TYPE_AUTOCALC "autocalc"
+    IDS_STYLEVISION_TYPE_CONTENT "content"
+    IDS_STYLEVISION_TYPE_LINE "line"
+	IDS_STYLEVISION_TYPE_FIELD "field"
+    IDS_STYLEVISION_STYLES_NO_PROPERTIES "No properties available"
+    IDS_EDITIMAGEDLGTITLE   "Edit Image"
+    IDS_EDITHYPERLINKDLGTITLE "Edit Hyperlink"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_CHECKED_VALUE_EMPTY "empty"
+    IDS_PROPERTY_LISTITEM_INHERITED "inherited"
+    IDS_SVGUI_USERSCHEMA_LISTNODE "ListNode%d"
+    IDS_SVGUI_USERSCHEMA_LISTITEMNODE "ListItemNode%d"
+    IDS_PROPERTY_AUTHENTIC_ALT_TARGET "alt"
+    IDS_SVGUI_USERSCHEMA_TABLENODEROW "TableRowNode%d"
+    IDS_SVGUI_USERSCHEMA_TABLENODECOL "TableColumnNode%d"
+    IDS_SVGUI_USERSCHEMA_TABLENODE "TableNode%d"
+    IDS_STYLEVISION_STYLES_SWITCHTODESIGN 
+                            " Please switch to Design to do modifications."
+    IDS_SCHEMASOURCE_INTERACTIVE_NOT_VALID "The given name is invalid !"
+    IDS_EDIT_TABLE_PROPERTIES 
+                            "To edit table properties, please use the Properties window."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_TYPE_CURSOR_FILEDLGFILTER "Cursor files (*.cur)|*.cur;|"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_TYPE_ALL_FILEDLGFILTER "All files (*.*)|*.*;|"
+    IDS_STYLEVISIONGUI_HTML_IMPORT_MISPLACED_ELEMENT 
+                            "HTML-file contains misplaced element: %s"
+    IDS_STYLEVISIONGUI_HTML_IMPORT_UNKNOWN_ELEMENT 
+                            "HTML-file contains unknown element: %s"
+    IDS_STYLEVISION_TYPE_NEWLINE "new line"
+    IDS_STYLEVISION_TYPE_NEWLINES "new lines"
+    IDS_SCHEMASOURCE_INTERACTIVE_NOT_UNIQUE "The given name is not unique !"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_HTML       "HTML"
+    IDS_CSS_FILES_FILEDLGFILTER "CSS Files (*.css)|*.css||"
+    IDS_STYLEVISION_TYPE_HEADER_CSS "Styles For:"
+    IDS_STYLEVISION_TYPE_HEADER_PROPERTIES "Properties For:"
+    IDS_STYLEVISION_STYLES_SELECTOR "selector: "
+    IDS_STYLEVISION_TYPE_CONDITION "condition"
+    IDS_STYLEVISION_TYPE_CONDITIONBRANCH "condition branch"
+    IDS_STYLEVISION_TYPE_TEMPLATE "template"
+    IDS_EDIT_RADIO_BUTTON   "Edit Radio Button"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_TYPE_LIST "list"
+    IDS_STYLEVISION_TYPE_LIST_ITEM "list item"
+    IDS_STYLEVISION_STYLES_NO_STYLES "No styles available"
+    IDS_STYLEVISION_TYPE_PARAGRAPH "paragraph"
+    IDS_STYLEVISION_TYPE_BUTTON "button"
+    IDS_STYLEVISION_TYPE_CHECKBOX "checkbox"
+    IDS_STYLEVISION_TYPE_COMBOBOX "combobox"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_TYPE_TABLE "table"
+    IDS_STYLEVISION_TYPE_TABLE_BODY "body"
+    IDS_STYLEVISION_TYPE_TABLE_CAPTION "caption"
+    IDS_STYLEVISION_TYPE_TABLE_CELL "cell"
+    IDS_STYLEVISION_TYPE_TABLE_FOOTER "footer"
+    IDS_STYLEVISION_TYPE_TABLE_HEADER "header"
+    IDS_STYLEVISION_TYPE_TABLE_ROW "row"
+    IDS_STYLEVISION_TYPE_TABLE_COLUMN "column"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DLGTITLE_BULLETS_NUMBERING "Bullets and Numbering"
+    IDS_BOOKMARK_EXISTS     "There is already another bookmark with that name."
+    IDS_BOOKMARK_INSERT     "Insert Bookmark"
+    IDS_BOOKMARK_EDIT       "Edit Bookmark"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDITHYPERLINKDLGFILETYPES 
+                            "HTML files (*.htm;*.html;*.shtm;*.shtml;*.xhtm;*.xhtml)|*.htm;*.html;*.shtm;*.shtml;*.xhtm;*.xhtml|"
+    IDS_STYLEVISION_TYPE_TABLES "tables"
+    IDS_STYLEVISION_TYPE_TABLE_BODIES "bodies"
+    IDS_STYLEVISION_TYPE_TABLE_CAPTIONS "captions"
+    IDS_STYLEVISION_TYPE_TABLE_CELLS "cells"
+    IDS_STYLEVISION_TYPE_TABLE_FOOTERS "footers"
+    IDS_STYLEVISION_TYPE_TABLE_HEADERS "headers"
+    IDS_STYLEVISION_TYPE_TABLE_ROWS "rows"
+    IDS_STYLEVISION_TYPE_TABLE_COLUMNS "columns"
+    IDS_STYLEVISION_TYPE_LISTS "lists"
+    IDS_STYLEVISION_TYPE_LIST_ITEMS "list items"
+    IDS_STYLEVISION_TYPE_PARAGRAPHS "paragraphs"
+    IDS_STYLEVISION_TYPE_BUTTONS "buttons"
+    IDS_STYLEVISION_TYPE_CHECKBOXES "checkboxes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_TYPE_COMBOBOXES "comboboxes"
+    IDS_STYLEVISION_TYPE_EDITFIELDS "editfields"
+    IDS_STYLEVISION_TYPE_IMAGES "images"
+    IDS_STYLEVISION_TYPE_LINKS "links"
+    IDS_STYLEVISION_TYPE_MULTILINEEDITFIELDS "multiline editfields"
+    IDS_STYLEVISION_TYPE_RADIOBUTTONS "radio buttons"
+    IDS_STYLEVISION_TYPE_TEXTS "texts"
+    IDS_STYLEVISION_TYPE_AUTOCALCS "autocalcs"
+    IDS_STYLEVISION_TYPE_CONTENTS "contents"
+    IDS_STYLEVISION_TYPE_LINES "lines"
+	IDS_STYLEVISION_TYPE_FIELDS "fields"
+    IDS_XML_FILES_FILEDLGFILTER "XML Files (*.xml)|*.xml||"
+    IDS_SAVEDLG_DBXMLFILE   "Generated DB XML Data"
+    IDS_SAVEDLG_DBSCHEMAFILE "Generated DB Schema"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SAVEDLG_USERDEFXMLFILE "User-Defined XML Data"
+    IDS_SAVEDLG_USERDEFSCHEMAFILE "User-Defined Schema"
+    IDS_SCHEMA_FILES_TITLE  "Open XML Schema / DTD file"
+    IDR_SCHEMASOURCES_INSERT_ELEMENT 
+                            "Add new child element\nAdd New Child Element"
+    IDR_SCHEMASOURCES_INSERT_ATTRIBUTE 
+                            "Insert new attribute.\nInsert New Attribute"
+    IDR_SCHEMASOURCES_CHILD_ELEMENT "Add child element\nAdd Child Element"
+    IDR_SCHEMASOURCES_CHILD_ATTRIBUTE 
+                            "Add new child attribute\nAdd New Child Attribute"
+    IDS_SCHEMASOURCE_USER_DEFINED "User-Defined Schema Source"
+    IDS_SCHEMASOURCE_DB     "Database Schema Source"
+    IDS_PROPERTY_GROUP_HTML "HTML"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCHEMASOURCES_ADD_AS_SIBLING "Add as new sibling"
+    IDS_SCHEMASOURCES_ADD_AS_CHILD "Add as new child"
+    IDS_PROPERTY_COMBOBOX_ORIGIN_SCHEMA "Schema"
+    IDS_PROPERTY_COMBOBOX_ORIGIN_LIST "List"
+    IDS_PROPERTY_COMBOBOX_ORIGIN_XPATH "XPath"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_ELEMENT_COMBOBOX "content origin"
+    IDS_PROPERTY_ELEMENT_CHECKBOX "checked values ( true / false )"
+    IDS_PROPERTY_ELEMENT_RADIOBUTTON "checked values ( true / false )"
+    IDS_PROPERTY_ELEMENT_BULLETS "bullets & numbering type"
+    IDS_PROPERTY_ELEMENT_LINK "bookmark name"
+    IDS_ADD_VALIDATION_GRID_HEADER0 "Error message"
+    IDS_ADD_VALIDATION_GRID_HEADER1 "XPath expression"
+    IDS_ADD_VALIDATION_ERROR_MSG_REQUIRED 
+                            "Please enter the error message to be displayed when validation fails!"
+    IDS_ADD_VALIDATION_XPATH_REQUIRED 
+                            "Please enter the XPath statement to validate data!"
+    IDR_SCHEMASOURCES_ASSIGN_WORKINGXML "Assign Working XML"
+    IDR_SCHEMASOURCES_ASSIGN_TEMPLATEXML "Assign Template XML"
+    IDS_STYLEVISION_CONTINUE_ANYWAY "\n\nContinue anyway?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_TYPE_DIFFERENT "different"
+    IDS_STYLEVISION_STYLES_NOT_COMPATIBLE_SELECTOR 
+                            " ( Will be discarded in PDF, RTF )"
+    IDS_CREATEIMAGEDLGTITLE "Insert Image"
+    IDS_CREATEIMAGEDLGFILETYPES 
+                            "All Image Files (*.gif,*.jpg,*.png,*.bmp,*.tif,*.wmf,*.ras,*.tga,*.jff,*.jtf)|*.gif;*.jpg;*.jpeg;*.png;*.bmp;*.tif;*.tiff;*.wmf;*.ras;*.tga;*.jff;*.jtf|"
+    IDS_CREATEBUTTONDEFNAME "Button text"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_LAYOUT_NUMBERING_STARTS_AT "numbering starts at"
+    IDS_PROPERTY_LAYOUT_ORIENTATION "orientation"
+    IDS_PROPERTY_LAYOUT_ORIENTATION_LANDSCAPE "landscape"
+    IDS_PROPERTY_LAYOUT_ORIENTATION_PORTRAIT "portrait"
+    IDS_PROPERTY_LAYOUT_PAGE_NR "Page: "
+    IDS_PROPERTY_LAYOUT_SIZE "size"
+    IDS_PROPERTY_LAYOUT_SIZE_A4 "A4"
+    IDS_PROPERTY_LAYOUT_SIZE_A5 "A5"
+    IDS_PROPERTY_LAYOUT_SIZE_CUSTOM "custom size"
+    IDS_PROPERTY_LAYOUT_SIZE_EXECUTIVE "executive"
+    IDS_PROPERTY_LAYOUT_SIZE_LEGAL "legal"
+    IDS_PROPERTY_LAYOUT_SIZE_LETTER "letter"
+    IDS_PROPERTY_LAYOUT_TITLE "Document Title"
+    IDS_PROPERTY_LAYOUT_WIDTH "paper width"
+    IDS_PROPERTY_SET        "set"
+    IDS_PROPERTY_TYPE_DO_NOT_CHANGE "don't change"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_LAYOUT_ADD_FOOTER_EXISTING 
+                            "Do you want to use the existing Footer for all pages?"
+    IDS_PROPERTY_LAYOUT_ADD_FOOTER_REPLACE 
+                            "Do you want to replace the footer for odd and even page with a new footer for all?"
+    IDS_PROPERTY_LAYOUT_ADD_HEADER_EXISTING 
+                            "Do you want to use the existing header for all pages?"
+    IDS_PROPERTY_LAYOUT_ADD_HEADER_REPLACE 
+                            "Do you want to replace the headers for odd and even page with a new header for all?"
+    IDS_PROPERTY_LAYOUT_AUTHOR "Author"
+    IDS_PROPERTY_LAYOUT_FOOTER_TITLE "Document: "
+    IDS_PROPERTY_LAYOUT_HEADER_TITLE "Title: "
+    IDS_PROPERTY_LAYOUT_HEIGHT "paper height"
+    IDS_PROPERTY_LAYOUT_MARGIN_BOTTOM "margin bottom"
+    IDS_PROPERTY_LAYOUT_MARGIN_LEFT "margin left"
+    IDS_PROPERTY_LAYOUT_MARGIN_RIGHT "margin right"
+    IDS_PROPERTY_LAYOUT_MARGIN_TOP "margin top"
+    IDS_PROPERTY_LAYOUT_MULTIPLEPAGES "multiple pages"
+    IDS_PROPERTY_LAYOUT_MULTIPLEPAGES_MIRROR "mirror margins"
+    IDS_PROPERTY_LAYOUT_MULTIPLEPAGES_NORMAL "normal"
+    IDS_PROPERTY_LAYOUT_NUMBERING_FORMAT "numbering format"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_TYPE_FORMAT_BOOL3 "YES|NO|inherit"
+    IDS_PROPERTY_TYPE_FORMAT_BOOL3_INHERIT "inherit"
+    IDS_PROPERTY_TYPE_FORMAT_BOOL3_NO "NO"
+    IDS_PROPERTY_TYPE_FORMAT_BOOL3_YES "YES"
+    IDS_PROPERTY_TYPE_FORMAT_COLOR "name of color | #rrggbb | #rgb"
+    IDS_PROPERTY_TYPE_FORMAT_INT "NUM"
+    IDS_PROPERTY_TYPE_FORMAT_LENGTH 
+                            "NUM[.NUM] ( px | cm | mm | in | pt | pc )"
+    IDS_PROPERTY_TYPE_FORMAT_PERCENTAGE "NUM.NUM %"
+    IDS_PROPERTY_TYPE_FORMAT_REAL "NUM.NUM"
+    IDS_PROPERTY_TYPE_FORMAT_URL "URL"
+    IDS_PROPERTY_TYPE_INHERIT "inherit"
+    IDS_QUESTION_DELETE_DB_FILTERS 
+                            "Do you really want to delete the filters assigned to this table?"
+    IDS_SCHEMA_FILES_FILEDLGFILTER "Schema files (*.xsd;*.dtd)|*.xsd;*.dtd|"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_ACTION_XPATH "XPath:"
+    IDS_PROPERTY_AUTHENTIC_AUTOCALC_UPDATE "Update XML node in Authentic"
+    IDS_PROPERTY_AUTHENTIC_EDITABLE "editable"
+    IDS_PROPERTY_AUTHENTIC_FACET_EDITABLE "Editable"
+    IDS_PROPERTY_AUTHENTIC_FACET_FORMAT "Input Formatting"
+    IDS_PROPERTY_AUTHENTIC_FACET_MATCH "Match"
+    IDS_PROPERTY_AUTHENTIC_FACET_TARGET "URL"
+    IDS_PROPERTY_AUTHENTIC_FACET_TARGET_NAME "Target"
+    IDS_PROPERTY_AUTHENTIC_FACET_TARGET_TYPE "Type"
+    IDS_PROPERTY_AUTHENTIC_FACET_TARGET_TYPE_ENTITY "Entity XPath"
+    IDS_PROPERTY_AUTHENTIC_FACET_TARGET_TYPE_STATIC "static"
+    IDS_PROPERTY_AUTHENTIC_FACET_TARGET_TYPE_XPATH "XPath"
+    IDS_PROPERTY_AUTHENTIC_FACET_XPATH "XPath"
+    IDS_PROPERTY_AUTHENTIC_PARAGRAPH_TYPE "paragraph type"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_PARAGRAPH_NORMAL "Normal"
+    IDS_PROPERTY_PARAGRAPH_ADDRESS "Address"
+    IDS_PROPERTY_PARAGRAPH_BLOCK "Block (div)"
+    IDS_PROPERTY_PARAGRAPH_BLOCKQUOTE "Blockquote"
+    IDS_PROPERTY_PARAGRAPH_CENTER "Center"
+    IDS_PROPERTY_PARAGRAPH_FIELDSET "Fieldset"
+    IDS_PROPERTY_PARAGRAPH_FORMATTED "Formatted (pre)"
+    IDS_PROPERTY_PARAGRAPH_HEADING_1 "Heading 1 (h1)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_PARAGRAPH_HEADING_2 "Heading 2 (h2)"
+    IDS_PROPERTY_PARAGRAPH_HEADING_3 "Heading 3 (h3)"
+    IDS_PROPERTY_PARAGRAPH_HEADING_4 "Heading 4 (h4)"
+    IDS_PROPERTY_PARAGRAPH_HEADING_5 "Heading 5 (h5)"
+    IDS_PROPERTY_PARAGRAPH_HEADING_6 "Heading 6 (h6)"
+    IDS_PROPERTY_PARAGRAPH_PARAGRAPH "Paragraph"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_ADD "add children"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_ADD_ALL "all"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_ADD_MAN "mandatory"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_ADD_NO "none"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_MARKUP "mixed-markup"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_MARKUP_HIDE "hide markup"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_MARKUP_LARGE "large markup"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_MARKUP_SMALL "small markup"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_MAX_RECORDS "Max. records"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_MAX_RECORDS_ALL "all"
+    IDS_PROPERTY_AUTHENTIC_TEMPLATE_SHOW 
+                            "Show 'add Name' when\n\rXML Element is missing"
+    IDS_PROPERTY_AUTHENTIC_USERINFO "user Info"
+    IDS_PROPERTY_AUTHENTIC_VALIDATION "additional validation"
+    IDS_PROPERTY_AUTHENTIC_VALIDATION_PROPERTY "Error Message"
+    IDS_PROPERTY_AUTHENTIC_VALIDATION_VALUE "XPath-Expression"
+    IDS_PROPERTY_ELEMENT_ACTION "Action"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ACTION_DATEPICKER   "Date Picker"
+    IDS_ACTION_DBCONTROL    "DbControl"
+    IDS_ACTION_INSERT       "Insert"
+    IDS_ACTION_JAVASCRIPT   "Javascript"
+    IDS_ACTION_LINK         "Link"
+    IDS_ACTION_NONE         "None"
+    IDS_ACTION_XPATH        "XPath"
+    IDS_BROWSE_FO_PROCESSOR "Browse FO Processor Filename"
+    IDS_BROWSE_STATIC_ADDRESS "Browse Static Address"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_ELEMENT_CHECKED_VALUE "Checked Values"
+    IDS_PROPERTY_ELEMENT_CHECKED_VALUE_FALSE "False"
+    IDS_PROPERTY_ELEMENT_CHECKED_VALUE_TRUE "True"
+    IDS_PROPERTY_ELEMENT_COMBOBOXOPTIONORIGIN "Origin"
+    IDS_PROPERTY_ELEMENT_COMBOBOXOPTIONORIGIN_LIST "List"
+    IDS_PROPERTY_ELEMENT_COMBOBOXOPTIONORIGIN_SCHEMA "Schema Enumeration"
+    IDS_PROPERTY_ELEMENT_COMBOBOXOPTIONORIGIN_XPATH "XPath"
+    IDS_PROPERTY_ELEMENT_COMBOBOXOPTIONS "Options"
+    IDS_PROPERTY_ELEMENT_COMBOBOXOPTIONS_DISPLAY "Display"
+    IDS_PROPERTY_ELEMENT_COMBOBOXOPTIONS_XML "XML"
+    IDS_PROPERTY_ELEMENT_LINKNAME "Name"
+    IDS_PROPERTY_GROUP_AUTHENTIC "authentic"
+    IDS_PROPERTY_GROUP_BOX  "box"
+    IDS_PROPERTY_GROUP_BR   "br"
+    IDS_PROPERTY_GROUP_BUTTON "button"
+    IDS_PROPERTY_GROUP_CAPTION "caption"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SCHEMASOURCES_CONVERT_TO_ELEMENTS_TABLE 
+                            "Add schema elements to selected element\nAdd schema elements"
+    IDC_SCHEMASOURCES_CONVERT_TO_ATTRIBUTES_TABLE 
+                            "Add schema attributes to selected element\nAdd schema attributes"
+    IDR_STYLES_ADD          "Add\nAdd"
+    IDR_STYLES_INSERT       "Insert\nInsert"
+    IDR_STYLES_MOVE_DOWN    "Move Down\nMove Down"
+    IDR_STYLES_MOVE_UP      "Move Up\nMove Up"
+    IDR_STYLES_REMOVE       "Reset attribute.\nReset"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_RTF_WORD_NOT_FOUND 
+                            "MS Word not found. Maybe MS Word is not installed on your system."
+    IDS_STYLEVISION_RTF_COULD_NOT_OPEN_FILE 
+                            "ERROR: Could not open generated RTF-file. Maybe file is corrupt."
+    IDS_STYLEVISION_XSLFO_NEED_FO_PROCESSOR 
+                            "FO Preview Failed: You must first specify a FO Processor under menu Tools/Options..."
+    IDS_STYLEVISION_DB_IMPORT_FAILED "ERROR: Database import failed!"
+    IDS_STYLEVISION_XSLT_GENERATION_FAILED "ERROR: Could not generate XSLT!"
+    IDS_STYLEVISION_XSLT_TRANSFORMATION_FAILED 
+                            "ERROR: XSLT Transformation failed!"
+    IDS_STYLEVISION_XSLFO_TRANSFORMATION_FAILED 
+                            "ERROR: XSL-FO Processor Error(s) occured!"
+    IDS_STYLEVISIONTAB_AUTHENTIC "Authentic"
+    IDS_STYLEVISIONTAB_DESIGN "Design"
+    IDS_STYLEVISIONTAB_HTML "HTML"
+    IDS_STYLEVISIONTAB_JS   "JavaScript"
+    IDS_STYLEVISIONTAB_OUTPUT "Output"
+    IDS_STYLEVISIONTAB_PDF  "PDF"
+    IDS_STYLEVISIONTAB_RTF  "RTF"
+    IDS_STYLEVISIONTAB_XSLT "XSLT"
+    IDS_STYLEVISIONTAB_HTMLOUTPUT "Preview HTML"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISIONTAB_HTMLXSLT "XSLT-HTML"
+    IDS_STYLEVISIONTAB_RTFOUTPUT "Preview RTF"
+    IDS_STYLEVISIONTAB_RTFXSLT "XSLT-RTF"
+    IDS_STYLEVISION_OUTPUT_NO_WORKING_XML_FILE_ASSIGNED 
+                            "Following schemas have no Working XML File assigned:\n"
+    IDS_STYLEVISION_MESSAGE_GENERATING_HTML 
+                            "Wait while generating HTML file ..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TITLE_OPTIONS       "Options"
+    IDS_SAVE_AUTHENTIC_DATA_MESSAGE "Save changes in Authentic?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CONDITION_DESCRIPTION_COLUMN_NAME "Description"
+    IDS_CONDITION_FUNCTIONS_COLUMN_NAME "Function"
+    IDS_CONDITION_OPERANDS_COLUMN_NAME "Operands"
+    IDS_CONDITION_OPERATORS_COLUMN_NAME "Operator"
+    IDS_CONDITION_PARAMETER_COLUMN_NAME "Parameters"
+    IDS_CONDITION_RETURNS_COLUMN_NAME "Returns"
+    IDS_CONTEXTTREE_GROUP   "Group"
+    IDS_CONTEXTTREE_PROPERTY "Attribute"
+    IDS_CONTEXTTREE_VALUE   "Value"
+    IDS_DBCONTROL_DELETE    "Delete"
+    IDS_DBCONTROL_FIRST     "First"
+    IDS_DBCONTROL_INSERT    "Insert"
+    IDS_DBCONTROL_LAST      "Last"
+    IDS_DBCONTROL_NEXT      "Next"
+    IDS_DBCONTROL_PREV      "Prev"
+    IDS_DBCONTROL_GOTO      "Goto"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DBCONTROL_QUERY     "Query"
+    IDS_NAMESPACE_INTERACTIVE_EXISTING "Prefix already exists"
+    IDS_NEW_FROM_DB_BUTTON  "Start"
+    IDS_NEW_FROM_DB_DIALOG_TITLE "Select Base Table Information"
+    IDS_PROPERTY_ACTION_ENTITY_XPATH "Entity XPath:"
+    IDS_PROPERTY_ACTION_STATIC "static"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_GROUP_SPAN "span"
+    IDS_PROPERTY_GROUP_TABLE "table"
+    IDS_PROPERTY_GROUP_TBODY "table body"
+    IDS_PROPERTY_GROUP_TD   "table cell"
+    IDS_PROPERTY_GROUP_TEXT "text"
+    IDS_PROPERTY_GROUP_TEXTAREA "textarea"
+    IDS_PROPERTY_GROUP_TFOOT "table footer"
+    IDS_PROPERTY_GROUP_THEAD "table header"
+    IDS_PROPERTY_GROUP_TR   "table row"
+    IDS_PROPERTY_GROUP_UI   "UI"
+    IDS_PROPERTY_GROUP_USER "user"
+    IDS_PROPERTY_INHERIT    "inherit"
+    IDS_PROPERTY_INVALID_NAME "Property name is not valid."
+    IDS_PROPERTY_INVALID_NAME_ALREADY_USED 
+                            "Property name is not valid. The name is already used."
+    IDS_PROPERTY_INVALID_NAME_EMPTY 
+                            "Property name is not valid.The field can not be empty."
+    IDS_PROPERTY_LAYOUT     "Page Layout"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDIT_CHECK_BOX      "Edit Check Box"
+    IDS_STYLEVISIONTAB_PDFFO "PDF-FO"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROPERTY_GROUP_COLOR "color"
+    IDS_PROPERTY_GROUP_COMMON "common"
+    IDS_PROPERTY_GROUP_DETAILS "details"
+    IDS_PROPERTY_GROUP_EFFECTS "effects"
+    IDS_PROPERTY_GROUP_EVENT "event"
+    IDS_PROPERTY_GROUP_FONT "font"
+    IDS_PROPERTY_GROUP_HR   "line"
+    IDS_PROPERTY_GROUP_IMG  "image"
+    IDS_PROPERTY_GROUP_INPUT "input"
+    IDS_PROPERTY_GROUP_LI   "list"
+    IDS_PROPERTY_GROUP_LINK "link"
+    IDS_PROPERTY_GROUP_NUMBERING "numbering"
+    IDS_PROPERTY_GROUP_OL_UL "list"
+    IDS_PROPERTY_GROUP_P    "paragraph"
+    IDS_PROPERTY_GROUP_PAGED_MEDIA "paged media"
+    IDS_PROPERTY_GROUP_SELECT "select"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_CONTEXT_REMOVE_ATTRIBUTE "Reset attribute.\nReset"
+    IDR_CONTEXT_REMOVE_ALL_ATTRIBUTES 
+                            "Remove All Attributes\nRemove All Attributes"
+    IDR_CONTEXT_VIEWMODE_ALPHA "Show all items in a list.\nList All"
+    IDR_CONTEXT_VIEWMODE_ALPHA_SET 
+                            "Show all non-empty items in a list.\nList Non-Empty"
+    IDR_CONTEXT_VIEWMODE_GROUPED "Show items grouped.\nGrouped"
+    IDS_SCHEMASOURCE_INTERACTIVE_NONQUALIFIED 
+                            "The given name is not qualified!"
+    IDS_SCHEMASOURCE_INTERACTIVE_EXISTS "Schema source name already exists!"
+    IDS_PROPERTY_GROUP_BODY "body"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_GOTONEXTBOOKMARK    "Goto Next Bookmark in Text View\nNext Bookmark"
+    IDC_GOTOPREVBOOKMARK    "Goto Previous Bookmark in Text View\nPrevious Bookmark"
+    IDS_SCHEMASOURCE_SOURCE_PATH "Schema source"
+    IDS_SCHEMASOURCE_WORKING_XML " Working"
+    IDS_SCHEMASOURCE_TEMPLATE_XML " Template"
+    IDC_SAVE_FILE_FILTER    "%s files(*.%s)|*.%s||"
+    IDC_SAVE_AS_TITLE       "Save %s File As"
+    IDS_SAVE_GEN_XSLT_HTML  "Generated XSLT-HTML"
+    IDS_SAVE_GEN_XSLT_FO    "Generated XSLT-FO"
+    IDS_SAVE_GEN_XSLT_RTF   "Generated XSLT-RTF"
+    IDS_SAVE_GEN_HTML       "Generated HTML"
+    IDS_SAVE_GEN_FO         "Generated FO"
+    IDS_SAVE_GEN_PDF        "Generated PDF"
+    IDS_SAVE_GEN_RTF        "Generated RTF"
+    IDS_SAVE_GEN_FILE_SAVE_FAILED "Failed Saving Generated File:\n %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SCHEMASOURCE_XMLS   "XML Files"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_STYLES_IMPORTANT    "Set/ remove important flag.\nToggle Important Flag."
+    IDR_CONTEXT_IMPORTANT   "Set/ remove important flag.\nToggle Important Flag."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_SCHEMASOURCES_ADD_SCHEMA "Add Schema\nAdd Schema"
+    IDR_SCHEMASOURCES_GLOBAL 
+                            "Convert global element to global template\nGlobal template"
+    IDR_SCHEMASOURCES_MOVE_DOWN "Move Up\nMove Up"
+    IDR_SCHEMASOURCES_MOVE_UP "Move Up\nMove Up"
+    IDR_SCHEMASOURCES_REMOVE "Remove Item\nRemove Item"
+    IDR_SCHEMASOURCES_SET_MAIN "Declare schema as main\nSet to main"
+    IDR_SCHEMASOURCES_SYNC  "Synchronize tree with view\nSynchronize Tree"
+    IDC_TREE_COLLAPSE       "Collapse all nodes.\nCollapse All"
+    IDC_TREE_COLLAPSE_KNOT  "Collapse all nodes beneath the selected.\nCollapse all children"
+    IDC_TREE_EXPAND_KNOT    "Expand all nodes beneath the selected.\nExpand all children"
+    IDC_TREE_EXPANDALL      "Expand all nodes.\nExpand All"
+    IDC_TREE_SAME_LEVEL     "Expand/ Collapse all node to this level\nShow all nodes to the same level"
+    IDC_SCHEMASOURCES_CONVERT_TO_ELEMENTS 
+                            "Add schema elements to selected element\nAdd schema elements"
+    IDC_SCHEMASOURCES_CONVERT_TO_ATTRIBUTES 
+                            "Add schema attributes to selected element\nAdd schema attributes"
+    IDC_SCHEMASOURCES_SURROUND_TEMPLATE 
+                            "Add schema element with template around of selection\nAdd schema surround"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_STYLES_VIEWMODE_ALPHA "Show all items in a list.\nList All"
+    IDR_STYLES_VIEWMODE_ALPHA_SET 
+                            "Show all non-empty items in a list.\nList Non-Empty"
+    IDR_STYLES_VIEWMODE_GROUPED "Show items grouped.\nGrouped"
+    IDC_DESIGNTREE_ADD_COVERPAGE "Add coverpage\nAdd Coverpage"
+    IDC_DESIGNTREE_ADD_FOOTER_ALL "Add footer for all pages\nAdd Footer"
+    IDC_DESIGNTREE_ADD_FOOTER_EVEN "Add footer for even pages\nAdd Footer"
+    IDC_DESIGNTREE_ADD_FOOTER_ODD "Add footer for odd pages\nAdd Footer"
+    IDC_DESIGNTREE_ADD_HEADER_ALL "Add header for all pages\nAdd Header"
+    IDC_DESIGNTREE_ADD_HEADER_EVEN "Add header for even pages\nAdd Header"
+    IDC_DESIGNTREE_ADD_HEADER_ODD "Add header for odd pages\nAdd Header"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DESIGNTREE_ADD       "Add Item\nAdd"
+    ID_DESIGNTREE_REMOVE    "Remove Item\nRemove Item"
+    ID_DESIGNTREE_SYNC      "Synchronize tree with view\nSynchronize Tree"
+    IDS_STYLEVISIONTAB_PDFOUTPUT "Preview PDF"
+    IDS_STYLEVISIONTAB_PDFXSLT "XSLT-FO"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SCHEMA_FROMDB       "Add schema from database\nAdd DB Schema"
+    IDC_SCHEMA_FROMFILE     "Add XML schema (XSD) or DTD\nAdd XSD/DTD Schema"
+    IDC_SCHEMA_USER         "Add user-defined schema\nAdd user-defined schema"
+    IDR_SCHEMASOURCES_ADD_ATTRIBUTE 
+                            "Append new attribute\nAppend New Attribute"
+    IDR_SCHEMASOURCES_ADD_ELEMENT "Append new element\nAppend New Element"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_MESSAGE_GENERATING_RTF 
+                            "Wait while generating RTF file ..."
+    IDS_STYLEVISION_MESSAGE_GENERATING_PDF 
+                            "Wait while generating PDF file ..."
+    IDS_STYLEVISION_MESSAGE_GENERATING_FO "Wait while generating FO file ..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE xs:schema [
+	<!ENTITY flour '071012051007'>
+	<!ENTITY eggs '099489000221'>
+	<!ENTITY bread '793617000104'>
+]>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.1">
+	<xs:element name="Shopping-List">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Item" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="upc-code" type="upc-code-type"/>
+							<xs:element name="description" type="xs:string"/>
+							<xs:element name="quantity" type="xs:positiveInteger"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:assert test="Item[(upc-code=&flour;) and (xs:positiveInteger(quantity) eq 1)] and
+                             Item[(upc-code=&eggs;) and (xs:positiveInteger(quantity) eq 2)] and
+                             Item[(upc-code=&bread;) and (xs:positiveInteger(quantity) eq 1)]"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="upc-code-type">
+		<xs:restriction base="xs:string">
+			<xs:length value="12"/>
+			<xs:pattern value="\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

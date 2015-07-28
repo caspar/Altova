@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Setting up the Eclipse IDE</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="java_howto.xhtml">Next: Working with Java</a>
+		</div>
+		<div class="previous">
+			<a href="install.xhtml">Previous: Installing software</a>
+		</div>
+		<h1>Setting up the Eclipse IDE</h1>
+		<h2>
+			<a name="1" />Starting Eclipse</h2>
+		<div class="p">When starting Eclipse for the first time, you will usually be asked about a "Workspace" path. You can safely select the default suggested to you here, and continue. Should you need to work on a different set of project, say for testing Altova plugins, etc., you may want to create a separate Workspace for this (although it is not required). Once the IDE itself has started, there will be a few thing you need to set up.</div>
+		<h2>
+			<a name="2" />Basic Eclipse setup</h2>
+		<div class="p">There are a few common Eclipse options which are necessary or useful to set. They are all present under <i>Window menu &gt; Preferences</i>. Please navigate through the tree list and dialogs, and set the following:
+		<ul>
+				<li>
+					<i>Java &gt; Compiler</i>: Set <i>Compiler compliance level</i>  to 6.0 (or whatever is your latest Java version)</li>
+				<li>
+					<i>General &gt; Editors &gt; Text Editors </i>: Enable <i>Show line numbers</i>
+				</li>
+				<li>
+					<i>General &gt; Workspace</i>: Enable all three options: <i>Build automatically</i>, <i>Refresh automatically</i>, and <i>Save automatically before build</i>
+				</li>
+			</ul>
+			<a href="eclipse_general_pref.wmv">You can see a short movie of these steps here.</a>
+		</div>
+		<h2>
+			<a name="3" />Creating a new project</h2>
+		<div class="p">Once you've closed the welcome screen, you will see the default Java "Perspective". From here, please do the following:
+		<ul>
+				<li>Click <i>File &gt; New &gt; Project</i>
+				</li>
+				<li>In the <i>New Project</i> dialog, select <i>Java Project</i> and Next</li>
+				<li>In the <i>New Java Project</i> dialog, type <i>
+						<b>gui-automation</b>
+					</i> as project name, select <i>Create project from existing source</i> and provide the path <div class="file">C:\work\gui-automation</div>, and then click Next.</li>
+				<li>In the final dialog, switch to the <i>Libraries</i> tab, click <i>Add External JARS...</i>, locate your JUnit jar, usually under <div class="file">C:\java\junit4.2\junit-4.2.jar</div>, and add this.</li>
+				<li>Then click <i>Finish</i>.</li>
+			</ul>
+			<a href="eclipse_new_prj.wmv">You can see a short movie of how to create the project here.</a>
+		</div>
+		<h2>
+			<a name="4" />Setting up the robots project</h2>
+		<div class="p">Once the project is created, there are still some adjustments to be made. From the <i>Package Explorer</i> window, right-click the <b>gui-automation</b> entry and select <i>Properties</i> from the context menu. Select <i>Java Build Path</i> from the left hand list. In the <i>Source</i> tab, please do the following:
+		<ul>
+				<li>Expand the <b>gui-automation/src</b> entry</li>
+				<li>Select <i>Native library location</i> and click the <i>Edit</i> button to the right. </li>
+				<li>In this small dialog, click the <i>Workspace...</i> button</li>
+				<li>Now you get a list of folder in you project. Make sure you select the top/root folder, i.e. <b>gui-automation</b>, and click OK.</li>
+				<li>OK the two other dialogs as well.</li>
+				<li>Now,  please repeat this step for the <b>gui-automation/test</b> entry</li>
+				<li>Finally, check that there are not any more folders listed in the Source tab apart from the mentioned gui-automation/src and gui-automation/test. If there is any, ( it might probably happen with gui-automation/data/umodel/examples_UModel, for example) , use Eclipse's Remove button to keep it out of the source code </li>
+			</ul>
+		</div>
+		<div class="p">Once those settings are in place, you could set the logging output options for the entire workspace, so you don't have to worry about it for each test run. The logging options suitable for Eclipse are stored in a file called <b>robotsLog.properties</b>. In this file, the Java Virtual Machine (JVM) argument is shown, and to set this JVM option, please do the following:
+			<ul>
+				<li>Right -click once again the <b>gui-automation</b> project,open the <i>Properties</i> window and then select <i>Java Build Path</i>. However, this time select the entry <i>JRE System Library [jdk1.6.0]</i> under the <i>Libraries</i> tab. 
+				</li>
+				<li>In the <i>Edit Library</i> dialog, click <i>Installed JREs</i>
+				</li>
+				<li>In the Preferences dialog, select the default JRE (probably the only one listed), and click the <i>Edit</i> button</li>
+				<li>In the <i>Default VM Arguments</i> field, paste in the string <b>-Djava.util.logging.config.file=robotsLog.properties</b>
+				</li>
+				<li>Click OK/Finish on all the dialogs, and you're done.</li>
+			</ul>
+			<a href="eclipse_prj_settings.wmv">You can see a short movie of how to set the project and VM options here.</a>
+		</div>
+		<h2>
+			<a name="5" />Testing your new project</h2>
+		<div class="p">Finally, you can run one of the tests or small applications in the gui-automation project. To run Java classes which contain a main-method, please follow these steps:
+		<ul>
+				<li>I'll use the a very small test-application called <i>TestSpy</i> for this example. (It has nothing to do with XMLSpy.</li>
+				<li>Under the <b>gui-automation</b> project, drill down to <b>src &gt; com.altova.nativegui &gt; TestSpy</b>
+				</li>
+				<li>Right-click this class, and select <i>Run As &gt; Java Application</i>
+				</li>
+				<li>The application will start, show a small window, and give some information about the components under the mouse cursor.</li>
+				<li>Stop the application by closing the window.</li>
+				<li>If you want to rerun a recently run application, you can select it from the "play" list.</li>
+			</ul>
+		</div>
+		<div class="p">The way to run a JUnit test is very similar. For this example I'll use one of the very simple example tests. Please do the following:
+		<ul>
+				<li>Under the <b>gui-automation</b> project, drill down to <b>test &gt; com.altova.examples.junit &gt; JUnitTestCase</b>
+				</li>
+				<li>Right-click this class, and select <i>Run As &gt; JUnit Test</i>
+				</li>
+				<li>The test will start, and Eclipse will switch to the JUnit test overview. Here you can see the results of the resent tests.</li>
+				<li>If you would like to run the test again, you can select it from the "play" list.</li>
+			</ul>
+			<a href="eclipse_run.wmv">You can see a short movie of how run Java applications and JUnit test here.</a>
+		</div>
+	</body>
+</html>

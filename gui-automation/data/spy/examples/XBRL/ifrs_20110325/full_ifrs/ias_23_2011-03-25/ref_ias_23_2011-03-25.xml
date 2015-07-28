@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfBorrowingCostsExplanatory" xlink:label="loc"/>
+    <link:reference xlink:type="resource" xlink:label="res" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>23</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Disclosure</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=23&amp;date=2011-03-25&amp;anchor=sect_Disclosure&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_BorrowingCostsCapitalised" xlink:label="loc_2"/>
+    <link:reference xlink:type="resource" xlink:label="res_2" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>23</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>26</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=23&amp;date=2011-03-25&amp;anchor=para_26_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_2" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_CapitalisationRateOfBorrowingCostsEligibleForCapitalisation" xlink:label="loc_3"/>
+    <link:reference xlink:type="resource" xlink:label="res_3" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IAS</ref:Name>
+      <ref:Number>23</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>26</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IAS&amp;num=23&amp;date=2011-03-25&amp;anchor=para_26_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_3" xlink:to="res_3"/>
+  </link:referenceLink>
+</link:linkbase>

@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="15">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties SelectedLanguage="cs"/>
+		<structure>
+			<children>
+				<component name="xbrl" library="xbrl" uid="1" kind="27">
+					<properties XSLTTargetEncoding="UTF-8" XBRLShowAllConcepts="1" XBRLShowAllConceptsRaw="1"/>
+					<view ltx="58" lty="6" rbx="866" rby="581"/>
+					<data>
+						<root scrollposition="511">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.xbrl.org/2003/instance"/>
+									<namespace uid="http://xbrl.org/2006/xbrldi"/>
+									<namespace uid="http://xbrl.iasb.org/taxonomy/2010-04-30/ifrs"/>
+									<namespace uid="view"/>
+									<namespace uid="http://www.xbrl.org/2003/linkbase"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="6" expanded="1">
+								<entry name="document" ns="6" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="xbrl" ns="1" expanded="1" showdefaultsnode="1">
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_10_2010-04-30_role-815000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfNonadjustingEventsAfterReportingPeriodTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="NonadjustingEventsAfterReportingPeriodAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="NonadjustingEventsAfterReportingPeriodAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_11_2010-04-30_role-831710" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_12_2010-04-30_role-835110" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfTemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="TemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="TemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_16_2010-04-30_role-822100" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfPropertyPlantAndEquipmentTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfPropertyPlantAndEquipmentAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfPropertyPlantAndEquipmentAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600a" ns="4">
+											<entry name="DisclosureOfRecognisedFinanceLeaseAsAssetsByLesseeTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfAssetsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfAssetsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600b" ns="4">
+											<entry name="DisclosureOfFinanceLeaseAndOperatingLeaseByLesseeTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ReconciliationByEndOfReportingPeriodAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ReconciliationByEndOfReportingPeriodAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600c" ns="4">
+											<entry name="DisclosureOfFinanceLeaseAndOperatingLeaseByLessorTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ReconciliationByEndOfReportingPeriodAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ReconciliationByEndOfReportingPeriodAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_18_2010-04-30_role-831110" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_19_2010-04-30_role-834480" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfDefinedBenefitPlansTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="DefinedBenefitPlansAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="DefinedBenefitPlansAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-110000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-210005" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-310005" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-410005" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-610005" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="StatementOfChangesInEquityTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ComponentsOfEquityAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ComponentsOfEquityAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-810000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfObjectivesPoliciesAndProcessesForManagingCapitalTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="CapitalRequirementsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="CapitalRequirementsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-832000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-832100" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-861200" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-861200a" ns="4">
+											<entry name="DisclosureOfClassesOfShareCapitalTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfShareCapitalAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfShareCapitalAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-861200b" ns="4">
+											<entry name="DisclosureOfReservesWithinEquityTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ReservesWithinEquityAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ReservesWithinEquityAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_20_2010-04-30_role-831400" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_21_2010-04-30_role-842000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_23_2010-04-30_role-836200" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_24_2010-04-30_role-818000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfTransactionsBetweenRelatedPartiesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="CategoriesOfRelatedPartiesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="CategoriesOfRelatedPartiesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_26_2010-04-30_role-710000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_27_2010-04-30_role-825480" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_27_2010-04-30_role-825480a" ns="4">
+											<entry name="DisclosureOfSignificantInvestmentsInSubsidiariesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="SignificantInvestmentsInSubsidiariesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="SignificantInvestmentsInSubsidiariesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_27_2010-04-30_role-825480b" ns="4">
+											<entry name="DisclosureOfSignificantInvestmentsInJointlyControlledEntitiesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="SignificantInvestmentsInJointlyControlledEntitiesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="SignificantInvestmentsInJointlyControlledEntitiesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_27_2010-04-30_role-825480c" ns="4">
+											<entry name="DisclosureOfSignificantInvestmentsInAssociatesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="SignificantInvestmentsInAssociatesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="SignificantInvestmentsInAssociatesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_28_2010-04-30_role-825600" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_29_2010-04-30_role-816000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_2_2010-04-30_role-826380" ns="4" expanded="1">
+											<entry name="Dimensionless (presentation)" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+												<entry name="identifier" ns="1" expanded="1">
+													<entry name="identifier" ns="1" expanded="1"/>
+													<entry name="period" ns="1" expanded="1">
+														<entry name="period" ns="1" expanded="1"/>
+														<entry name="context" ns="1" expanded="1">
+															<entry name="DisclosureOfInventoriesExplanatory" ns="3" expanded="1">
+																<entry name="footnote" ns="5" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_31_2010-04-30_role-825500" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfInterestsInSignificantJointVenturesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="InterestsInSignificantJointVenturesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="InterestsInSignificantJointVenturesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_33_2010-04-30_role-838000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_34_2010-04-30_role-813000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_36_2010-04-30_role-832410" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_36_2010-04-30_role-832410a" ns="4">
+											<entry name="DisclosureOfImpairmentLossAndReversalOfImpairmentLossTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfAssetsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfAssetsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_36_2010-04-30_role-832410b" ns="4">
+											<entry name="DisclosureOfInformationForEachMaterialImpairmentLossRecognisedOrReversedForIndividualAssetOrCashgeneratingUnitTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="IndividualAssetsOrCashgeneratingUnitsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="IndividualAssetsOrCashgeneratingUnitsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_36_2010-04-30_role-832410c" ns="4">
+											<entry name="DisclosureOfInformationForIndividualAssetOrCashgeneratingUnitWithSignificantAmountOfGoodwillOrIntangibleAssetsWithIndefiniteUsefulLivesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="IndividualAssetsOrCashgeneratingUnitsWithSignificantAmountOfGoodwillOrIntangibleAssetsWithIndefiniteUsefulLivesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="IndividualAssetsOrCashgeneratingUnitsWithSignificantAmountOfGoodwillOrIntangibleAssetsWithIndefiniteUsefulLivesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570a" ns="4">
+											<entry name="DisclosureOfOtherProvisionsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfProvisionsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfProvisionsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_37_2010-04-30_role-827570b" ns="4">
+											<entry name="DisclosureOfContingentLiabilitiesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfContingentLiabilitiesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfContingentLiabilitiesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_38_2010-04-30_role-823180" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfIntangibleAssetsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfIntangibleAssetsOtherThanGoodwillAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfIntangibleAssetsOtherThanGoodwillAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_40_2010-04-30_role-825100" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfInvestmentPropertyTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="MeasurementAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="MeasurementAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_41_2010-04-30_role-824180" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfReconciliationOfChangesInBiologicalAssetsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="MeasurementAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="MeasurementAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_7_2010-04-30_role-510005" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_7_2010-04-30_role-851100" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ias_8_2010-04-30_role-811000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifric_2_2010-04-30_role-868500" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifric_5_2010-04-30_role-868200" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs-dim_role-901000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs-dim_role-901500" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs-dim_role-903000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs-dim_role-913000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_1_2010-04-30_role-819100" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_1_2010-04-30_role-819100a" ns="4">
+											<entry name="DisclosureOfComparativeInformationPreparedUnderPreviousGAAPTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="FinancialEffectOfTransitionFromPreviousGAAPToIFRSsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="FinancialEffectOfTransitionFromPreviousGAAPToIFRSsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_1_2010-04-30_role-819100b" ns="4">
+											<entry name="DisclosureOfRedesignatedFinancialAssetsAndLiabilitiesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="RedesignationAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="RedesignationAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_1_2010-04-30_role-819100c" ns="4">
+											<entry name="DisclosureOfFairValuesOfItemsUsedAsDeemedCostTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="FairValueAsDeemedCostAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="FairValueAsDeemedCostAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_2_2010-04-30_role-834120" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfNumberAndWeightedAverageExercisePricesOfShareOptionsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="GroupsOfShareOptionsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="GroupsOfShareOptionsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_3_2010-04-30_role-817000" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfBusinessCombinationsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="BusinessCombinationsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="BusinessCombinationsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_4_2010-04-30_role-836500" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_5_2010-04-30_role-825900" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_6_2010-04-30_role-822200" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390a" ns="4">
+											<entry name="DisclosureOfFinancialAssetsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfFinancialAssetsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfFinancialAssetsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390b" ns="4">
+											<entry name="DisclosureOfFinancialLiabilitiesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfFinancialLiabilitiesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfFinancialLiabilitiesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390c" ns="4">
+											<entry name="DisclosureOfFinancialAssetsTransferredDuringPeriodWhichDoNotQualifyForDerecognitionTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="FinancialAssetsWhichDoNotQualifyForDerecognitionAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="FinancialAssetsWhichDoNotQualifyForDerecognitionAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390d" ns="4">
+											<entry name="DisclosureOfFinancialInstrumentsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfFinancialInstrumentsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfFinancialInstrumentsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390e" ns="4">
+											<entry name="DisclosureOfFinancialAssetsThatAreEitherPastDueOrImpairedTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ClassesOfFinancialAssetsThatAreEitherPastDueOrImpairedAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390f" ns="4">
+											<entry name="DisclosureOfHedgeAccountingTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="TypesOfHedgesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="TypesOfHedgesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_7_2010-04-30_role-822390g" ns="4">
+											<entry name="DisclosureOfNatureAndExtentOfRisksArisingFromFinancialInstrumentsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="TypesOfRisksAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="TypesOfRisksAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100a" ns="4">
+											<entry name="DisclosureOfOperatingSegmentsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="OperatingSegmentsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="OperatingSegmentsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100b" ns="4">
+											<entry name="DisclosureOfProductsAndServicesTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ProductsAndServicesAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ProductsAndServicesAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100c" ns="4">
+											<entry name="DisclosureOfGeographicalAreasTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="GeographicalAreasAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="GeographicalAreasAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100d" ns="4">
+											<entry name="DisclosureOfMajorCustomersTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="MajorCustomersAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="MajorCustomersAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/sic_27_2010-04-30_role-832800" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfArrangementsInvolvingLegalFormOfLeaseTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ArrangementsInvolvingLegalFormOfLeaseAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ArrangementsInvolvingLegalFormOfLeaseAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="//xbrl.iasb.org/role/ifrs/sic_29_2010-04-30_role-832900" ns="4">
+											<entry name="Dimensionless (presentation)">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+											</entry>
+											<entry name="DisclosureOfServiceConcessionArrangementsTable" ns="3">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+													<qname name="ServiceConcessionArrangementsAxis" ns="3"/>
+												</dimensions>
+												<entry name="identifier" ns="1">
+													<entry name="period" ns="1">
+														<entry name="ServiceConcessionArrangementsAxis" ns="3">
+															<entry name="explicitMember" ns="2" expanded="1"/>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="viewallconcepts" ns="4" expanded="1">
+											<entry name="Dimensionless" expanded="1">
+												<dimensions>
+													<qname name="identifier" ns="1"/>
+													<qname name="period" ns="1"/>
+												</dimensions>
+												<entry name="identifier" ns="1" expanded="1">
+													<entry name="period" ns="1" expanded="1">
+														<entry name="context" ns="1" expanded="1">
+															<entry name="DescriptionOfAccountingPolicyForMeasuringInventories" ns="3" expanded="1">
+																<entry name="footnote" ns="5" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<xbrl schema="entry-point_2010-06-13.xsd" outputinstance="entry-point_2010-06-13.xml"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<vertices/>
+			</graph>
+		</structure>
+	</component>
+</mapping>

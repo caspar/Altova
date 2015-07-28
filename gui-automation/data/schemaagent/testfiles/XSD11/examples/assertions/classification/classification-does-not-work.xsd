@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:element name="Document">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Para" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="paraType">
+                                <xs:attribute name="classification" type="classificationLevels" use="required"/>
+                                <xs:assert test="((@classification = 'secret') and ((/Document/@classification='top-secret') or (/Document/@classification='secret'))) or
+                                                 ((@classification = 'confidential') and ((/Document/@classification='top-secret') or (/Document/@classification='secret') or (/Document/@classification='confidential'))) or
+                                                 ((@classification = 'unclassified') and ((/Document/@classification='top-secret') or (/Document/@classification='secret') or (/Document/@classification='confidential') or (/Document/@classification='unclassified')))" />
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="classification" type="classificationLevels" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="classificationLevels">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="top-secret"/>
+            <xs:enumeration value="secret"/>
+            <xs:enumeration value="confidential"/>
+            <xs:enumeration value="unclassified"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="paraType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="200"/>
+            <xs:pattern value="[\sa-zA-Z0-9,;:\.]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

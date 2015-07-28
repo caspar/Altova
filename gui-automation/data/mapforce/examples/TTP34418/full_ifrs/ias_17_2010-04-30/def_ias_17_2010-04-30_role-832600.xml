@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    --><link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600" xlink:href="rol_ias_17_2010-04-30.xsd#ias_17_2010-04-30_role-832600" xlink:type="simple"/>
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600a" xlink:href="rol_ias_17_2010-04-30.xsd#ias_17_2010-04-30_role-832600a" xlink:type="simple"/>
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600b" xlink:href="rol_ias_17_2010-04-30.xsd#ias_17_2010-04-30_role-832600b" xlink:type="simple"/>
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600c" xlink:href="rol_ias_17_2010-04-30.xsd#ias_17_2010-04-30_role-832600c" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain" xlink:type="simple"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension" xlink:type="simple"/>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600" xlink:title="[832600] Notes - Leases" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfLeasesExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfRecognisedFinanceLeaseAsAssetsByLesseeExplanatory" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLesseeExplanatory" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_3" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LeaseAndSubleasePaymentsRecognisedAsExpenseAbstract" xlink:label="loc_5" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_3" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentRentsRecognisedAsExpenseClassifiedAsFinanceLease" xlink:label="loc_8" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentRentsRecognisedAsExpenseClassifiedAsOperatingLease" xlink:label="loc_9" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentRentsRecognisedAsExpense" xlink:label="loc_10" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_SubleasePaymentsRecognisedAsExpense" xlink:label="loc_11" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MinimumOperatingLeasePayments" xlink:label="loc_12" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_LeaseAndSubleasePaymentsRecognisedAsExpense" xlink:label="loc_13" xlink:type="locator"/>
+    <link:definitionArc order="60.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExpectedFutureMinimumSubleasePaymentsReceivableUnderNoncancellableSubleasesClassifiedFinanceLease" xlink:label="loc_14" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_3" xlink:to="loc_14" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExpectedFutureMinimumSubleasePaymentsReceivableUnderNoncancellableSubleasesClassifiedAsOperatingLease" xlink:label="loc_15" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_3" xlink:to="loc_15" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfMaterialLeasingArrangementsByLesseeClassifiedAsFinanceLease" xlink:label="loc_16" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_3" xlink:to="loc_16" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfMaterialLeasingArrangementsByLesseeClassifiedAsOperatingLease" xlink:label="loc_17" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_3" xlink:to="loc_17" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLessorExplanatory" xlink:label="loc_4" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentRentsRecognisedAsIncomeAbstract" xlink:label="loc_19" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_4" xlink:to="loc_19" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentRentsRecognisedAsIncomeClassifiedAsFinanceLease" xlink:label="loc_21" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_19" xlink:to="loc_21" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentRentsRecognisedAsIncomeClassifiedAsOperatingLease" xlink:label="loc_22" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_19" xlink:to="loc_22" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ContingentRentsRecognisedAsIncome" xlink:label="loc_23" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_19" xlink:to="loc_23" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfUnguaranteedResidualValuesAccruingToBenefitOfLessor" xlink:label="loc_6" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_4" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AccumulatedAllowanceForCollectibleMinimumLeasePaymentsReceivable" xlink:label="loc_7" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_4" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfMaterialLeasingArrangementsByLessorClassifiedAsFinanceLease" xlink:label="loc_18" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_4" xlink:to="loc_18" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfMaterialLeasingArrangementsByLessorClassifiedAsOperatingLease" xlink:label="loc_20" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_4" xlink:to="loc_20" xlink:type="arc"/>
+  </link:definitionLink>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600a" xlink:title="[832600a] Notes - Leases" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfRecognisedFinanceLeaseAsAssetsByLesseeExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfRecognisedFinanceLeaseAsAssetsByLesseeAbstract" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfRecognisedFinanceLeaseAsAssetsByLesseeTable" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xbrldt:closed="true" xbrldt:contextElement="scenario" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_2" xlink:to="loc_3" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ClassesOfAssetsAxis" xlink:label="loc_4" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_3" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ClassesOfAssetsMember" xlink:label="loc_5" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_4" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ClassesOfAssetsMember" xlink:label="loc_11" xlink:type="locator"/>
+    <link:definitionArc order="20.0" priority="1" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_4" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_PropertyPlantAndEquipmentMember" xlink:label="loc_6" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IntangibleAssetsMember" xlink:label="loc_7" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_InvestmentPropertyMember" xlink:label="loc_8" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_BiologicalAssetsMember" xlink:label="loc_9" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherAssetsMember" xlink:label="loc_10" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfRecognisedFinanceLeaseAsAssetsByLesseeLineItems" xlink:label="loc_12" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_2" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RecognisedFinanceLeaseAsAssets" xlink:label="loc_15" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_12" xlink:to="loc_15" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RecognisedFinanceLeaseAsAssetsGross" xlink:label="loc_13" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_12" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_RecognisedFinanceLeaseAsAssetsAccumulatedDepreciationAndImpairment" xlink:label="loc_14" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_12" xlink:to="loc_14" xlink:type="arc"/>
+  </link:definitionLink>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600b" xlink:title="[832600b] Notes - Leases" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLesseeExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLesseeAbstract" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLesseeTable" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xbrldt:closed="true" xbrldt:contextElement="scenario" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_2" xlink:to="loc_3" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReconciliationByEndOfReportingPeriodAxis" xlink:label="loc_4" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_3" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AggregatedPeriodsMember" xlink:label="loc_5" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_4" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AggregatedPeriodsMember" xlink:label="loc_9" xlink:type="locator"/>
+    <link:definitionArc order="20.0" priority="1" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_4" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_EndOfPeriodNotLaterThanOneYearMember" xlink:label="loc_6" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_EndOfPeriodLaterThanOneYearAndNotLaterThanFiveYearsMember" xlink:label="loc_7" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_EndOfPeriodLaterThanFiveYearsMember" xlink:label="loc_8" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLesseeLineItems" xlink:label="loc_10" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_2" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MinimumFinanceLeasePaymentsPayable" xlink:label="loc_11" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_FutureFinanceChargeOnFinanceLease" xlink:label="loc_13" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MinimumFinanceLeasePaymentsPayableAtPresentValue" xlink:label="loc_12" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MinimumLeasePaymentsPayableUnderNoncancellableOperatingLease" xlink:label="loc_15" xlink:type="locator"/>
+    <link:definitionArc order="50.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_15" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_FutureFinanceChargeOnFinanceLeaseAtPresentValue" xlink:label="loc_14" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_14" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MinimumLeasePaymentsOfOtherArrangementsThatDoNotIncludePaymentsForNonleaseElements" xlink:label="loc_16" xlink:type="locator"/>
+    <link:definitionArc order="60.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_16" xlink:type="arc"/>
+  </link:definitionLink>
+  <link:definitionLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_17_2010-04-30_role-832600c" xlink:title="[832600c] Notes - Leases" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReconciliationByEndOfReportingPeriodAxis" xlink:label="loc_4" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AggregatedPeriodsMember" xlink:label="loc_10" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="loc_4" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AggregatedPeriodsMember" xlink:label="loc_14" xlink:type="locator"/>
+    <link:definitionArc order="20.0" priority="1" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="loc_4" xlink:to="loc_14" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_EndOfPeriodNotLaterThanOneYearMember" xlink:label="loc_11" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_EndOfPeriodLaterThanOneYearAndNotLaterThanFiveYearsMember" xlink:label="loc_12" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_EndOfPeriodLaterThanFiveYearsMember" xlink:label="loc_13" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_10" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLessorExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLessorAbstract" xlink:label="loc_2" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLessorTable" xlink:label="loc_3" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xbrldt:closed="true" xbrldt:contextElement="scenario" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="loc_2" xlink:to="loc_3" xlink:type="arc"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="loc_3" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfFinanceLeaseAndOperatingLeaseByLessorLineItems" xlink:label="loc_5" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_2" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_GrossInvestmentInFinanceLease" xlink:label="loc_6" xlink:type="locator"/>
+    <link:definitionArc order="10.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_UnearnedFinanceIncomeOnFinanceLease" xlink:label="loc_7" xlink:type="locator"/>
+    <link:definitionArc order="20.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MinimumFinanceLeasePaymentsReceivableAtPresentValue" xlink:label="loc_8" xlink:type="locator"/>
+    <link:definitionArc order="30.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MinimumLeasePaymentsReceivableUnderNoncancellableOperatingLease" xlink:label="loc_9" xlink:type="locator"/>
+    <link:definitionArc order="40.0" use="optional" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="loc_5" xlink:to="loc_9" xlink:type="arc"/>
+  </link:definitionLink>
+</link:linkbase>

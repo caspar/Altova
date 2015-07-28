@@ -1,0 +1,73 @@
+                          JNI Tips and tricks for the Java test automation framework
+
+* What files to keep in mind?
+
+   src\com\altova\nativegui\NativeGUI.java
+    On the Java side this file contains the Java interface between the native code
+    and the other Java classes. The native methods are private, and only called from
+    within this class.
+
+   src\jni\nativegui\com_altova_nativegui_NativeGUI.h
+    The header / interface on the C++ side. This file should not be edited.
+
+   src\jni\nativegui\com_altova_nativegui_NativeGUI.cpp
+    The code on the C++ side, which implements the few methods defined in the header.
+    It is currently depending upon the C++ windows.h header and the Java jni.h header.
+
+   src\jni\nativegui\Debug\nativegui.dll
+    This is most likely where the DLL will end up. Copy it as you need.
+    Make sure it is in the system PATH (not the CLASSPATH)
+
+* How to generate the native header file?
+    cd ..\src\
+    set classpath=.
+    javac com\altova\nativegui\NativeGUI.java
+    javah -jni -d jni\nativegui com.altova.nativegui.NativeGUI
+
+
+
+* How to compile the C++ project and create the DLL?
+
+    The Visual C++ Solution and Project files are checked into CVS, but they might not
+    work on all systems. If you need to start from scratch, the
+    following should get you up and running:
+
+    Create a new empty Visual C++ project, W32 Console EXE application
+    Add the .h and .cpp file from the Java project
+
+    Set the following project options (see attached images):
+    C/C++ -> Command Line = /DLL -LD
+    Linker -> General -> Output File = $(OutDir)\$(ProjectName).dll
+    Linker -> Advanced -> No Entry Point = Yes (/NOENTRY)
+    Linker -> Command Line = /DLL /NOENTRY
+
+    Under menu Tools -> Options, add the included paths as shown in the attaced picture, e.g.
+    C:\Java\jdk1.5.0_07\include
+    C:\Java\jdk1.5.0_07\include\win32
+
+    
+
+* Ok. Got the DLL. How to use it in Java?
+    Make sure the directory of the nativegui.DLL is in a location which is in the PATH.
+    That's right, not the Java CLASSPATH, but the system PATH variable.
+
+* But this is breaking the Eclipse build and run. What to do?
+    Two things to watch out for here:
+    First, if the binary solutions files from VC are on the build path of Eclipse, it will stop.
+    Therefore, the jni/** path must be added to the exclude list of the Eclipse project.
+    See attached picture.
+
+    Secondly, the DLL must be on the PATH when you run any JNI related Java files. 
+    This has to be set for each Run Configuration. Please see attached picture for this as well.
+
+
+* Help – I'm still getting a UnsatisfiedLinkError
+    Usually, this "occurs when the library can't be found, native function declarations aren't what
+    they should be, or a C compiler has mangled the exported names of functions in the DLL".
+    Download the Anywhere PE Viewer, might help clearing up some of this. 
+
+    http://www.ucware.com/apev/JNI-dll-and-UnsatisfiedLinkError.htm
+
+    Match the entries in the Export that to those in the Java file, the .H header file and
+    the .CPP file. If there is a mismatch, that's probably why it will not load.
+

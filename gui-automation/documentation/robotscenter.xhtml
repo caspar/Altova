@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>The Robots Center internal application</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="lookout.xhtml">Next: Other things to look out for</a>
+		</div>
+		<div class="previous">
+			<a href="toolbar_rc.xhtml">Previous: Maintaining toolbar resource files</a>
+		</div>
+		<h1>The Robots Center internal application</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">The Robot Center is a small internal application quickly put together to test the behaviour of some of the find methods in the ImageRecognitionRobot. You can search for buttons by their resource ID (or name), images, and text. Furthermore, it contains a magnifier, and "Spy++" functionality to investigate Windows native components; it will give information about text, class name and the coordinates of the component. All of this calls directly in to the robot framework classes, so you can use the corresponding methods in your source code in the same way.
+			<img alt="" src="rc_find.png" class="screen"/>
+		</div>
+		<h2>
+			<a name="2" />Starting up</h2>
+		<div class="p">Assuming you've installed everything, starting up the application is straight forward:
+		<pre class="cmd">
+	cd cd:\work\gui-automation
+	ant rc
+		</pre>
+		</div>
+		<h2>
+			<a name="3" />Searching for images and text</h2>
+		<div class="p">There are three different ways to do picture recognition. You can type in a resource ID, like <i>ID_FILE_NEW</i> for XMLSpy, or <i>Class</i> for the Class icon in UModel. Secondly, you can type in any image path or name. If you give a full absolute path, it will from there, while only a file name will have to be on the Java CLASSPATH in order to be found. (The same applies when you use this in the source code.) Finally, the String search will look for a text on the screen matching the font, size and colour you set. A dropdown for the <a href="lookout.xhtml#2">most commonly used fonts</a> is provided.</div>
+		<div class="p">The four boxes below the input fields are, in the following order: a magnifier, the icon which was searched for, the area where this icon was found (if it was found), and the screen debug image (which is not very useful right now, since it does not scroll or center or the found location).</div>
+				<h2>
+			<a name="4" />Native component info</h2>
+		<div class="p">
+		<img alt="" src="rc_info.png" class="screen"/>
+		The second tab, Info, of the application, is a small window showing information about the native Windows components under the mouse cursor. This information is relevant to the <i>findComponent*</i> methods in <i>ApplicationRobot</i>. When you see that some component as a certain text it is possible to search for this using the <i>findComponentName(String)</i> method. Similarly, you can search for the class name of a component, however, you should use this with care, since it might change in various cases. This was one of the main problems with Test Complete, which relied almost only on this kind of information.
+		</div>
+
+	</body>
+</html>

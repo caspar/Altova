@@ -1,0 +1,557 @@
+<!-- edited with XMLSpy v2012 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:test="http://www.altova.com/test" targetNamespace="http://www.altova.com/test" elementFormDefault="qualified">
+	<xs:element name="test-suite">
+		<xs:annotation>
+			<xs:documentation>
+test-suite - top level element
+	            Version 1, MAG - adapted from the XQTS catalog
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="test:test-suite-info"/>
+				<xs:element ref="test:citations" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+            Identify any specifications related to this test.
+         </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="test:roles" minOccurs="0"/>
+				<xs:element ref="test:scenarios" minOccurs="0"/>
+				<xs:element ref="test:sources" minOccurs="0"/>
+				<xs:element ref="test:implementation-defined-items" minOccurs="0"/>
+				<xs:element ref="test:context-properties" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>
+            Identify each of the properties 
+         </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="test:test-group" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>
+            Group of test cases and test groups.
+            The grouping of the tests helps organize the tests in functional  
+            groups used when reporting results. 
+         </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="CatalogDesignDate" type="xs:date" use="optional" default="2007-12-12"/>
+			<xs:attribute name="version" type="xs:string" use="required">
+				<xs:annotation>
+					<xs:documentation>
+                  XQTS version
+               </xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="targetLanguage" type="test:targetLanguage" use="optional">
+				<xs:annotation>
+					<xs:documentation>
+                  not used
+               </xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="SourceOffsetPath" type="test:SimplifiedRelativeFilePath" use="required">
+				<xs:annotation>
+					<xs:documentation>
+                  offset from XQTS root to source documents and schemas
+               </xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+			<xs:attribute name="ReferenceOffsetPath" type="test:SimplifiedRelativeFilePath" use="required">
+				<xs:annotation>
+					<xs:documentation>
+                  offset from XQTS root to result documents
+               </xs:documentation>
+				</xs:annotation>
+			</xs:attribute>
+		</xs:complexType>
+		<xs:unique name="unique-test-case">
+			<xs:selector xpath=".//test:test-case"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:simpleType name="targetLanguage">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Java"/>
+			<xs:enumeration value="CS"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SimplifiedRelativeFilePath">
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="([a-zA-Z0-9/-/./_]+(/|\\)?)?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="test-suite-info">
+		<xs:annotation>
+			<xs:documentation>
+            Identify the test suite.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="title" type="xs:string"/>
+				<xs:element name="description" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="citations">
+		<xs:annotation>
+			<xs:documentation>
+            Identify any documents refered to.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="citation-spec" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:sequence>
+									<xs:element name="spec-URI" type="xs:anyURI"/>
+								</xs:sequence>
+								<xs:attribute name="name" type="test:citation-spec-enum" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="unique-citation-specs">
+			<xs:selector xpath=".//test:citation-spec"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="keywords">
+		<xs:annotation>
+			<xs:documentation>
+            Identify any keywords used to describe tests (eg. XMLDiff etc.)
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="keywords" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:attribute name="name" type="test:keyword-enum" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="unique-comparisons">
+			<xs:selector xpath=".//test:comparison"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="roles">
+		<xs:annotation>
+			<xs:documentation>
+            Identify each of the roles that will be used in test cases.
+            This is provided for the purpose of documentation and is not needed by implementors.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="role">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:attribute name="name" type="test:role-enum" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="unique-roles">
+			<xs:selector xpath=".//test:role"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="scenarios">
+		<xs:annotation>
+			<xs:documentation>
+            Identify each of the scenarios that will be used in test cases.
+            This is provided for the purpose of documentation and is not needed by implementors.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="scenario">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:attribute name="name" type="test:scenarios-enum" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="unique-scenarios">
+			<xs:selector xpath=".//test:scenario"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="sources">
+		<xs:complexType>
+			<xs:annotation>
+				<xs:documentation>
+               Identify each of the sources that will be used in test cases.
+               Test cases will use these ID's to identify their source documents, collections, schemas, and modules.
+            </xs:documentation>
+			</xs:annotation>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="source" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:attribute name="ID" type="xs:ID" use="required"/>
+								<xs:attribute name="FileName" type="xs:anyURI" use="required"/>
+								<xs:attribute name="Creator" type="xs:string" use="required"/>
+								<xs:attribute name="schema" type="xs:IDREF" use="optional"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="schema" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:attribute name="ID" type="xs:ID" use="required"/>
+								<xs:attribute name="uri" type="xs:anyURI" use="required"/>
+								<xs:attribute name="FileName" type="xs:anyURI" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="collection" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:sequence>
+									<xs:element name="input-document" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+                                    One or more input files that will be used by this query.
+                                 </xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:simpleContent>
+												<xs:extension base="xs:IDREF"/>
+											</xs:simpleContent>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+								<xs:attribute name="ID" type="xs:ID" use="required"/>
+								<xs:attribute name="Creator" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="module" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:attribute name="ID" type="xs:ID" use="required"/>
+								<xs:attribute name="FileName" type="xs:anyURI" use="required"/>
+								<xs:attribute name="Creator" type="xs:string" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="implementation-defined-items">
+		<xs:annotation>
+			<xs:documentation>
+            Identify each of the implementation-defined-items.
+               </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="implementation-defined-item" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="test:infoBase">
+								<xs:attribute name="name" type="xs:string" use="required"/>
+								<xs:attribute name="spec" type="test:citation-spec-enum" use="required"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="unique-implementation-defined-item">
+			<xs:selector xpath=".//test:implementation-defined-item"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="features">
+		<xs:annotation>
+			<xs:documentation>
+            Identify each of the optional features that occur.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="feature" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="name" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="unique-feature">
+			<xs:selector xpath=".//test:feature"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="context-properties">
+		<xs:annotation>
+			<xs:documentation>
+            Identify each of the properties that occur.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="context-property" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="name" type="xs:string" use="required"/>
+						<xs:attribute name="context-type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="static"/>
+									<xs:enumeration value="dynamic"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="unique-context-property">
+			<xs:selector xpath=".//test:context-property"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="test-group">
+		<xs:annotation>
+			<xs:documentation>
+            Group of test cases and test groups.
+            The grouping of the tests helps the XML Query WG organize its work 
+            and is used when reporting our results. Implementors need only 
+            execute the test contained in these groups.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="GroupInfo" type="test:GroupInfo"/>
+				<xs:choice>
+					<xs:element name="test-case" type="test:test-case" minOccurs="0" maxOccurs="unbounded">
+						<xs:unique name="unique-expected-error">
+							<xs:selector xpath=".//test:expected-error"/>
+							<xs:field xpath="."/>
+						</xs:unique>
+					</xs:element>
+					<xs:element ref="test:test-group" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="featureOwner" type="xs:string" use="optional"/>
+			<xs:attribute name="is-XPath2" type="xs:boolean" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="GroupInfo">
+		<xs:sequence>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="description" type="test:description"/>
+			<xs:element name="note" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="test-case">
+		<xs:sequence>
+			<xs:element name="description" type="test:description"/>
+			<xs:element name="spec-citation" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+                  Identify the parts  being tested.
+               </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="section-number" type="xs:string" use="required"/>
+							<xs:attribute name="spec" type="test:citation-spec-enum" use="required"/>
+							<xs:attribute name="section-title" type="xs:string" use="required"/>
+							<xs:attribute name="section-pointer" type="xs:string" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="basefile" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>base file name for test</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="furtherfiles" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Imported, included or otherwise needed files </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="input-file" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>input instance</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="input-URI" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation> Input URI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="output" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of output file (if one is generated).
+               </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="compare" type="test:keyword-enum" use="required"/>
+					<xs:attribute name="name" type="xs:string" use="optional">
+						<xs:annotation>
+							<xs:documentation>The base file name is always equal to the name of the test case.
+                     </xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>command line parameters . </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="name" type="xs:QName" use="required">
+								<xs:annotation>
+									<xs:documentation>
+                              this attribute contains only principal-data
+                           </xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+							<xs:attribute name="value" type="xs:string" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="expected-error" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Expected errors for this test. One of these should be matched.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="test:ErrorCode"/>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute name="FilePath" type="test:SimplifiedRelativeFilePath" use="required"/>
+		<xs:attribute name="scenario" type="test:scenarios-enum" use="required"/>
+		<xs:attribute name="Creator" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:simpleType name="citation-spec-enum">
+		<xs:annotation>
+			<xs:documentation>
+            Identify the item being cited.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="22232-JavaFunctions"/>
+			<xs:enumeration value="23505-.NET"/>
+			<xs:enumeration value="All"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="keyword-enum">
+		<xs:annotation>
+			<xs:documentation>
+            Identify the type of comparison used to determine whether an
+            expected result and an actual result match.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="XML"/>
+			<xs:enumeration value="Fragment"/>
+			<xs:enumeration value="Text"/>
+			<xs:enumeration value="Inspect"/>
+			<xs:enumeration value="Ignore"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="role-enum">
+		<xs:annotation>
+			<xs:documentation>
+            Identify how a document is being used.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="input"/>
+			<xs:enumeration value="supplemental-data"/>
+			<xs:enumeration value="schema"/>
+			<xs:enumeration value="output"/>
+			<xs:enumeration value="console-log"/>
+			<xs:enumeration value="dtd"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="scenarios-enum">
+		<xs:annotation>
+			<xs:documentation>
+            Identify whether a test should execute normally, cause a parse 
+            error, or cause a runtime error.
+         </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="standard"/>
+			<xs:enumeration value="parse-error"/>
+			<xs:enumeration value="runtime-error"/>
+			<xs:enumeration value="trivial"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="input-document-enum">
+		<xs:annotation>
+			<xs:documentation>
+            Identify expected results that are specific to either typed or
+            untyped input documents.                  
+         </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="typed"/>
+			<xs:enumeration value="untyped"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="description">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="last-mod" type="xs:date"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ErrorCode">
+		<xs:annotation>
+			<xs:documentation>
+* is used to mean that any error code is acceptable
+. This could be altered to an enumerated type containing all error strings</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="infoBase">
+		<xs:sequence>
+			<xs:element name="description" type="test:description"/>
+			<xs:element name="note" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

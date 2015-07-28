@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by ﻿AXA (axa belgium) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="businessLogic">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="businessRule"/>
+				<xs:element ref="businessFunction"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="businessRule">
+		<xs:annotation>
+			<xs:documentation>Business Rule</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="textualDescription"/>
+				<xs:element ref="contexts" minOccurs="0"/>
+				<xs:element name="changeTypes" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="changeType" maxOccurs="unbounded">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="adaptationDuBonusMalus"/>
+										<xs:enumeration value="ajoutGarantieAutreQuePV"/>
+										<xs:enumeration value="ajoutGarantiePV"/>
+										<xs:enumeration value="ajoutRemorque(s)Gratuite(s)"/>
+										<xs:enumeration value="ajoutRemorque(s)Payante(s)"/>
+										<xs:enumeration value="changementDeVéhicule"/>
+										<xs:enumeration value="changementDUsage"/>
+										<xs:enumeration value="complète devient partiel"/>
+										<xs:enumeration value="modificationDeLaPrime(Budget)"/>
+										<xs:enumeration value="modificationDeLaPprime(BudgetConfort)"/>
+										<xs:enumeration value="modificationDeLaPrime(Rétrocession)"/>
+										<xs:enumeration value="modificationDeLaValeurAssurée (+ 10% / -10%)"/>
+										<xs:enumeration value="modificationDesAccessoiresPlacésUltérieures"/>
+										<xs:enumeration value="modificationFractionnement"/>
+										<xs:enumeration value="modificationNombreDePlaces"/>
+										<xs:enumeration value="modificationOptionDeGarantieAutreQuePV"/>
+										<xs:enumeration value="modificationOptionDeGarantiePV"/>
+										<xs:enumeration value="modificationRemorque(s)Gratuite(s)"/>
+										<xs:enumeration value="modificationRemorque(s)Payante(s)"/>
+										<xs:enumeration value="modificationTVA"/>
+										<xs:enumeration value="package"/>
+										<xs:enumeration value="pasDeChandementSpecifiqueDétecté"/>
+										<xs:enumeration value="remiseEnVigueur"/>
+										<xs:enumeration value="remiseEnVigueurAvecChangementDeVéhicule"/>
+										<xs:enumeration value="suppressionDePV"/>
+										<xs:enumeration value="suppressionGarantie(s)HorsPV"/>
+										<xs:enumeration value="suppressionRemorque(s)Gratuite(s)"/>
+										<xs:enumeration value="suppressionRemorque(s)Payante(s)"/>
+										<xs:enumeration value="suspension"/>
+										<xs:enumeration value="transfertDuConducteurPrincipal"/>
+										<xs:enumeration value="transfertEntreEpoux"/>
+										<xs:enumeration value="tranfertPreneur"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ruleSets">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ruleSet" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ruleSetName">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Party"/>
+													<xs:enumeration value="Risk"/>
+													<xs:enumeration value="Agreement"/>
+													<xs:enumeration value="Coverage"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="instances" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="instance" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ruleLogic">
+					<xs:annotation>
+						<xs:documentation>Composed of a IFLogic XOR a CaseLogic expression</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="targets" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Responsible object id's</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="target" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="bcm"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="includes" minOccurs="0"/>
+				<xs:element ref="comments" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="RuleID" type="xs:string" use="required"/>
+			<xs:attribute name="CreationDate" use="required"/>
+			<xs:attribute name="Category" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Acceptation"/>
+						<xs:enumeration value="Autorisation"/>
+						<xs:enumeration value="Coherence"/>
+						<xs:enumeration value="Validation"/>
+						<xs:enumeration value="Generation"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Status" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="DIO"/>
+						<xs:enumeration value="BSP"/>
+						<xs:enumeration value="Review"/>
+						<xs:enumeration value="Approved"/>
+						<xs:enumeration value="Rejected"/>
+						<xs:enumeration value="Question"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ownerBSP">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Marcel Lorette"/>
+						<xs:enumeration value="Christian De Hairs"/>
+						<xs:enumeration value="Etienne Loraux"/>
+						<xs:enumeration value="Claude Lamine"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="ownerIT">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Carl Seghers"/>
+						<xs:enumeration value="Marcelle Mrowka"/>
+						<xs:enumeration value="Laurent Ezran"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="businessFunction">
+		<xs:annotation>
+			<xs:documentation>Business Function</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="textualDescription"/>
+				<xs:element name="params">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="param" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="resultType">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="boolean"/>
+							<xs:enumeration value="numeric"/>
+							<xs:enumeration value="string"/>
+							<xs:enumeration value="list"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="body">
+					<xs:complexType mixed="true">
+						<xs:choice minOccurs="0">
+							<xs:group ref="bodyText" maxOccurs="unbounded"/>
+							<xs:element ref="if"/>
+							<xs:element ref="ifNot"/>
+							<xs:element ref="case"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="includes" minOccurs="0"/>
+				<xs:element ref="comments" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="FunctionID" type="xs:integer" use="required"/>
+			<xs:attribute name="Status" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="DIO"/>
+						<xs:enumeration value="BSP"/>
+						<xs:enumeration value="Review"/>
+						<xs:enumeration value="Approved"/>
+						<xs:enumeration value="Question"/>
+						<xs:enumeration value="Rejected"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="bcmTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="bcmDefinition" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="bcmId"/>
+							<xs:element name="bcmEntity"/>
+							<xs:element name="bcmAttribute"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="codesTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="codeGroup" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="codeNumber"/>
+							<xs:element name="codeSource"/>
+							<xs:element name="codeDefinition" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="codeName"/>
+										<xs:element name="codeValue"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="constantsTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="constantDefinition" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="constantName" type="xs:string"/>
+							<xs:element ref="AgreementType" minOccurs="0"/>
+							<xs:element ref="Application" minOccurs="0"/>
+							<xs:element ref="Branche" minOccurs="0"/>
+							<xs:element ref="CompagnieJuridique" minOccurs="0"/>
+							<xs:element ref="CompagnieMarque" minOccurs="0"/>
+							<xs:element ref="Product" minOccurs="0"/>
+							<xs:element ref="UserProfile" minOccurs="0"/>
+							<xs:element ref="SalesChannel" minOccurs="0"/>
+							<xs:element ref="SegmentMarche" minOccurs="0"/>
+							<xs:element ref="Transaction" minOccurs="0"/>
+							<xs:element name="constantValue" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="errorCodesTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="errorCodeDefinition" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="errorCodeValue"/>
+							<xs:element name="errorCodeMessage"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="functionsTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="functionDefinition" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="functionId" type="xs:string"/>
+							<xs:element name="functionName" type="xs:string"/>
+							<xs:element name="functionArguments">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="functionArgument" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="functionType" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="boolean"/>
+										<xs:enumeration value="date"/>
+										<xs:enumeration value="day"/>
+										<xs:enumeration value="duration"/>
+										<xs:enumeration value="float"/>
+										<xs:enumeration value="int"/>
+										<xs:enumeration value="month"/>
+										<xs:enumeration value="monthDay"/>
+										<xs:enumeration value="string"/>
+										<xs:enumeration value="year"/>
+										<xs:enumeration value="yearMonth"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="listsTable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="listDefinition" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="listName" type="xs:string"/>
+							<xs:element ref="AgreementType" minOccurs="0"/>
+							<xs:element ref="Application" minOccurs="0"/>
+							<xs:element ref="Branche" minOccurs="0"/>
+							<xs:element ref="CompagnieJuridique" minOccurs="0"/>
+							<xs:element ref="CompagnieMarque" minOccurs="0"/>
+							<xs:element ref="Product" minOccurs="0"/>
+							<xs:element ref="UserProfile" minOccurs="0"/>
+							<xs:element ref="SalesChannel" minOccurs="0"/>
+							<xs:element ref="SegmentMarche" minOccurs="0"/>
+							<xs:element ref="Transaction" minOccurs="0"/>
+							<xs:element name="listValues">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="listValue" type="xs:string" maxOccurs="unbounded"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="action">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="errorCode" type="xs:string"/>
+				<xs:element ref="contexts" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="backOffice"/>
+						<xs:enumeration value="error"/>
+						<xs:enumeration value="refusal"/>
+						<xs:enumeration value="warning"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="add">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="and">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="condition" minOccurs="2" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AgreementType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="quotation"/>
+				<xs:enumeration value="offer"/>
+				<xs:enumeration value="contract"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Application">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="AXA Link"/>
+				<xs:enumeration value="Back Office"/>
+				<xs:enumeration value="GVI / IMS"/>
+				<xs:enumeration value="Phoenix"/>
+				<xs:enumeration value="Siebel"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="bcm">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="version">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="new"/>
+								<xs:enumeration value="old"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="id"/>
+					<xs:attribute name="index">
+						<xs:simpleType>
+							<xs:restriction base="xs:string"/>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="name"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="bodyText">
+		<xs:choice>
+			<xs:element ref="p" minOccurs="0"/>
+		</xs:choice>
+	</xs:group>
+	<xs:element name="Branche">
+		<xs:annotation>
+			<xs:documentation>Branche</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="accident"/>
+				<xs:enumeration value="car"/>
+				<xs:enumeration value="fire"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="case">
+		<xs:annotation>
+			<xs:documentation>Expression Type CASE --- END CASE</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="if" maxOccurs="unbounded"/>
+				<xs:element ref="else" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="codes">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="code" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="code">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="source" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string"/>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="name"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="comments">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="comment" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="comment" type="xs:string"/>
+	<xs:element name="CompagnieJuridique">
+		<xs:annotation>
+			<xs:documentation>CompagnieMarque</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="AXA"/>
+				<xs:enumeration value="TATV"/>
+				<xs:enumeration value="Service"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CompagnieMarque">
+		<xs:annotation>
+			<xs:documentation>CompagnieMarque</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="AXA"/>
+				<xs:enumeration value="CHEVROLET"/>
+				<xs:enumeration value="CITROEN"/>
+				<xs:enumeration value="NISSAN"/>
+				<xs:enumeration value="OPEL"/>
+				<xs:enumeration value="other"/>
+				<xs:enumeration value="PEUGEOT"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="condition">
+		<xs:complexType>
+			<xs:choice minOccurs="0">
+				<xs:element ref="equal"/>
+				<xs:element ref="notEqual"/>
+				<xs:element ref="less"/>
+				<xs:element ref="notLess"/>
+				<xs:element ref="greater"/>
+				<xs:element ref="notGreater"/>
+				<xs:element ref="in"/>
+				<xs:element ref="not"/>
+				<xs:element ref="and"/>
+				<xs:element ref="or"/>
+				<xs:element ref="function"/>
+				<xs:element ref="foreach"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="constants">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="constant" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="constant">
+		<xs:annotation>
+			<xs:documentation>Constant Name</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="contexts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="context" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="context">
+		<xs:annotation>
+			<xs:documentation>Context definition</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element ref="AgreementType"/>
+					<xs:element ref="Application"/>
+					<xs:element ref="SegmentMarche"/>
+					<xs:element ref="CompagnieMarque"/>
+					<xs:element ref="CompagnieJuridique"/>
+					<xs:element ref="Branche"/>
+					<xs:element ref="Product"/>
+					<xs:element ref="UserProfile"/>
+					<xs:element ref="SalesChannel"/>
+					<xs:element ref="Transaction"/>
+				</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="version">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="new"/>
+						<xs:enumeration value="old"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="description">
+		<xs:choice>
+			<xs:element ref="placeHolder" minOccurs="0"/>
+			<xs:element ref="placeHolderList" minOccurs="0"/>
+			<xs:element ref="placeHolderValue" minOccurs="0"/>
+			<xs:element ref="p" minOccurs="0"/>
+		</xs:choice>
+	</xs:group>
+	<xs:element name="divide">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="else">
+		<xs:complexType>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="action" maxOccurs="unbounded">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ActionCode"/>
+								<xs:element name="ActionType">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="01 Show Message"/>
+											<xs:enumeration value="02 Calculate a value "/>
+											<xs:enumeration value="03 Call anpther rule"/>
+											<xs:enumeration value="04 Create an object"/>
+											<xs:enumeration value="05 Destroy an object"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element ref="context"/>
+								<xs:element name="TargetID">
+									<xs:annotation>
+										<xs:documentation>Message, Objet, rule ID</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+				<xs:element ref="if"/>
+				<xs:element ref="case"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="equal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="expression">
+		<xs:complexType>
+			<xs:choice>
+				<xs:group ref="operand" minOccurs="0"/>
+				<xs:element ref="add" minOccurs="0"/>
+				<xs:element ref="minus" minOccurs="0"/>
+				<xs:element ref="multiply" minOccurs="0"/>
+				<xs:element ref="divide" minOccurs="0"/>
+				<xs:element ref="min" minOccurs="0"/>
+				<xs:element ref="max" minOccurs="0"/>
+				<xs:element ref="fmod" minOccurs="0"/>
+				<xs:element ref="function" minOccurs="0"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="fmod">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="foreach">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="condition"/>
+			</xs:sequence>
+			<xs:attribute name="var" use="required"/>
+			<xs:attribute name="until" default="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="true"/>
+						<xs:enumeration value="end"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="function">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" use="required"/>
+			<xs:attribute name="class"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="greater">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="if">
+		<xs:annotation>
+			<xs:documentation>Expression type IFnot --- THEN --- ELSE</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="condition"/>
+				<xs:element ref="then"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ifNot">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="condition"/>
+				<xs:element ref="then"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="in">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="includes">
+		<xs:annotation>
+			<xs:documentation>Included Business Functions</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="include" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="less">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:choice minOccurs="0">
+				<xs:element ref="codes"/>
+				<xs:element ref="constants"/>
+				<xs:element ref="literals"/>
+			</xs:choice>
+			<xs:attribute name="name"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="literals">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element ref="literal" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="literal">
+		<xs:annotation>
+			<xs:documentation>Literal Value</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="longDescription">
+		<xs:complexType mixed="true">
+			<xs:group ref="description" maxOccurs="unbounded"/>
+			<xs:attribute name="language" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="FR"/>
+						<xs:enumeration value="EN"/>
+						<xs:enumeration value="NL"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="usage">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="error"/>
+						<xs:enumeration value="help"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="userProfile">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="courtier"/>
+						<xs:enumeration value="gestionnaire"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="max">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="min">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="minus">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="multiply">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="not">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="condition"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="notEqual">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="notGreater">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="notLess">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="2" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="operand">
+		<xs:choice>
+			<xs:element ref="bcm"/>
+			<xs:element ref="code"/>
+			<xs:element ref="literal"/>
+			<xs:element ref="constant"/>
+			<xs:element ref="parameter"/>
+			<xs:element ref="list"/>
+			<xs:element ref="var"/>
+		</xs:choice>
+	</xs:group>
+	<xs:element name="or">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="condition" minOccurs="2" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="parameter">
+		<xs:annotation>
+			<xs:documentation>Donnée provenant du client, non répertotiée dans BCM</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="placeHolder">
+		<xs:complexType mixed="true">
+			<xs:attribute name="type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="description"/>
+						<xs:enumeration value="constant"/>
+						<xs:enumeration value="bcm"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="name"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="placeHolderList">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element name="listAgreement">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<xs:element ref="function"/>
+								<xs:element ref="bcm"/>
+								<xs:element ref="list"/>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="listGeneral">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="list"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="listRestricted">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="list"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="label" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="literal"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="placeHolderValue">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="expression" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="name"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Product">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="non-confort"/>
+				<xs:enumeration value="confort"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ruleLogic">
+		<xs:annotation>
+			<xs:documentation>Composed of a IFLogic XOR a CaseLogic expression</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:choice minOccurs="0">
+				<xs:element ref="if"/>
+				<xs:element ref="ifNot"/>
+				<xs:element ref="case"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SalesChannel">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="courtier"/>
+				<xs:enumeration value="gestionnaireCC"/>
+				<xs:enumeration value="gestionnaireInterne"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="SegmentMarche">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="private"/>
+				<xs:enumeration value="corporate"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="shortDescription">
+		<xs:complexType mixed="true">
+			<xs:group ref="description" maxOccurs="unbounded"/>
+			<xs:attribute name="language" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="FR"/>
+						<xs:enumeration value="EN"/>
+						<xs:enumeration value="NL"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="textualDescription">
+		<xs:annotation>
+			<xs:documentation>Composed of Short and Long Description</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element ref="shortDescription" maxOccurs="unbounded"/>
+					<xs:element ref="longDescription" maxOccurs="unbounded"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="then">
+		<xs:complexType>
+			<xs:choice minOccurs="0">
+				<xs:sequence>
+					<xs:element ref="action" maxOccurs="unbounded"/>
+				</xs:sequence>
+				<xs:element ref="ifNot"/>
+				<xs:element ref="case"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Transaction">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="avenant"/>
+				<xs:enumeration value="consultation"/>
+				<xs:enumeration value="correction"/>
+				<xs:enumeration value="new"/>
+				<xs:enumeration value="renewal"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="UserProfile">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="courtier"/>
+				<xs:enumeration value="gestionnaire"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="p">
+		<xs:complexType mixed="true">
+			<xs:group ref="description" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="var"/>
+</xs:schema>

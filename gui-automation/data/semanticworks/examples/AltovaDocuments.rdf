@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<rdf:RDF xml:base="file:///C:/workarea/SemanticWorks/tutorial/AltovaDocuments_0921.rdf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:doc="http://www.altova.com/ontologies/document#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Document">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#PrintManual">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Document"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#WebPage">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Document"/>
+		</rdfs:subClassOf>
+		<owl:unionOf rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EnglishWebPage"/>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#GermanWebPage"/>
+			<rdf:Description>
+				<rdf:type>
+					<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Restriction"/>
+				</rdf:type>
+				<owl:hasValue>
+					<rdf:Description rdf:about="http://www.altova.com/ontologies/document#HTML"/>
+				</owl:hasValue>
+				<owl:onProperty>
+					<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format"/>
+				</owl:onProperty>
+			</rdf:Description>
+		</owl:unionOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EnglishWebPage">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#WebPage"/>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<rdf:Description>
+				<owl:hasValue>
+					<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EN"/>
+				</owl:hasValue>
+				<owl:onProperty>
+					<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language"/>
+				</owl:onProperty>
+				<rdf:type>
+					<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Restriction"/>
+				</rdf:type>
+			</rdf:Description>
+		</rdfs:subClassOf>
+		<owl:disjointWith>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#GermanWebPage"/>
+		</owl:disjointWith>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#GermanWebPage">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#WebPage"/>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<rdf:Description>
+				<owl:hasValue>
+					<rdf:Description rdf:about="http://www.altova.com/ontologies/document#DE"/>
+				</owl:hasValue>
+				<owl:onProperty>
+					<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language"/>
+				</owl:onProperty>
+				<rdf:type>
+					<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Restriction"/>
+				</rdf:type>
+			</rdf:Description>
+		</rdfs:subClassOf>
+		<owl:disjointWith>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EnglishWebPage"/>
+		</owl:disjointWith>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Languages">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<owl:oneOf rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EN">
+				<rdf:type>
+					<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Languages"/>
+				</rdf:type>
+			</rdf:Description>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#DE"/>
+		</owl:oneOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#OutputFormats">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<owl:oneOf rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#HTML"/>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#PDF"/>
+		</owl:oneOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#DE">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Languages"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#FR">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#HTML">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#OutputFormats"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#PDF">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#OutputFormats"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Document"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Document"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Languages"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#Document"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#OutputFormats"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#XMLSpyEnterpriseUserManualENHTML">
+		<dc:format>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#HTML"/>
+		</dc:format>
+		<dc:language>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EN"/>
+		</dc:language>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EnglishWebPage"/>
+		</rdf:type>
+		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-03</dc:date>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#XMLSpyEnterpriseUserManualDEHTML">
+		<dc:format>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#HTML"/>
+		</dc:format>
+		<dc:language>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#DE"/>
+		</dc:language>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#GermanWebPage"/>
+		</rdf:type>
+		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-03</dc:date>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#XMLSpyEnterpriseUserManualENPDF">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#PrintManual"/>
+		</rdf:type>
+		<dc:format>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#PDF"/>
+		</dc:format>
+		<dc:language>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#EN"/>
+		</dc:language>
+		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-03</dc:date>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/document#XMLSpyEnterpriseUserManualDEPDF">
+		<dc:format>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#PDF"/>
+		</dc:format>
+		<dc:language>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#DE"/>
+		</dc:language>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/document#PrintManual"/>
+		</rdf:type>
+		<dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-03</dc:date>
+	</rdf:Description>
+</rdf:RDF>

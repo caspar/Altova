@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sml:SensorML xmlns:sml="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xsi:schemaLocation="http://www.opengis.net/sensorML ../base/sensorML.xsd" version="1.0">
+	<sml:Sensor id="AIRDAS_SCANNER">
+		<!--~~~~~~~~~~~~~~~~~~~-->
+		<!--General Sensor Info-->
+		<!--~~~~~~~~~~~~~~~~~~~-->
+		<sml:identification>
+			<sml:IdentifierList>
+				<sml:identifier name="short_name">
+					<sml:Term  qualifier="urn:ogc:identifier:shortName">AIRDAS</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="long_name">
+					<sml:Term qualifier="urn:ogc:identifier:longName">Airborne Infrared Disaster Assessment System</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="uid">
+					<sml:Term qualifier="urn:ogc:identifier:uid">urn:nasa:arc:sensor:airdas:scanner:v1:001</sml:Term>
+				</sml:identifier>
+				<sml:identifier name="serial_number">
+					<sml:Term qualifier="urn:ogc:identifier:serialNumber">scanner001</sml:Term>
+				</sml:identifier>
+			</sml:IdentifierList>
+		</sml:identification>
+		<sml:classification>
+			<sml:ClassifierList>
+				<sml:classifier name="sensor_type">
+					<sml:Term qualifier="urn:ogc:classifier:sensorType">Multispectral IR Scanner</sml:Term>
+				</sml:classifier>
+				<sml:classifier name="application">
+					<sml:Term qualifier="urn:ogc:classifier:application">Fire Imaging</sml:Term>
+				</sml:classifier>
+			</sml:ClassifierList>
+		</sml:classification>
+		<!--~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Sensor Characteristics-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:characteristics>
+			<sml:PropertyList>
+				<sml:property name="ground_resolution">
+					<swe:ConditionalValue>
+						<swe:condition name="altitude">
+							<swe:Quantity definition="urn:ogc:phenomenon:distance" uom="ft">10e3</swe:Quantity>
+						</swe:condition>
+						<swe:value>
+							<swe:Quantity definition="urn:ogc:phenomenon:distance" uom="m">8.0</swe:Quantity>
+						</swe:value>
+					</swe:ConditionalValue>
+				</sml:property>
+				<sml:property name="minimum_scan_rate">
+					<swe:Quantity definition="urn:ogc:phenomenon:frequency" uom="Hz">5</swe:Quantity>
+				</sml:property>
+				<sml:property name="maximum_scan_rate">
+					<swe:Quantity definition="urn:ogc:phenomenon:frequency" uom="Hz">22</swe:Quantity>
+				</sml:property>
+				<sml:property name="ifov">
+					<swe:Quantity definition="urn:ogc:phenomenon:angle" uom="rad" scale="1e-3">2.62</swe:Quantity>
+				</sml:property>
+			</sml:PropertyList>
+		</sml:characteristics>
+		<!--~~~~~~~~-->
+		<!--Contacts-->
+		<!--~~~~~~~~-->
+		<sml:contact role="operator">
+			<sml:ResponsibleParty>
+				<sml:individualName>Jian Zheng</sml:individualName>
+				<sml:organizationName>NASA Ames Research Center</sml:organizationName>
+				<sml:contactInfo>
+					<sml:phone>
+						<sml:voice>+1 (650) 604-3617</sml:voice>
+					</sml:phone>
+					<sml:address>
+						<sml:deliveryPoint>Mail Stop 242-2</sml:deliveryPoint>
+						<sml:city>Moffett Field</sml:city>
+						<sml:administrativeArea>CA</sml:administrativeArea>
+						<sml:postalCode>94035-1000</sml:postalCode>
+					</sml:address>
+				</sml:contactInfo>
+			</sml:ResponsibleParty>
+		</sml:contact>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Sensor Coordinate Frame-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:referenceFrame>
+			<sml:LocalSpatialCRS id="SENSOR_FRAME">
+				<sml:srsName>Sensor Frame</sml:srsName>
+				<sml:usesCS xlink:href="urn:ogc:cs:xyzFrame"/>
+				<sml:usesDatum>
+					<sml:LocalSpatialDatum>
+						<sml:datumName>Scanner Sensor Spatial Datum</sml:datumName>
+						<sml:anchorPoint>
+							origin is on the bottom left nut marked with a red dot
+						</sml:anchorPoint>
+						<sml:orientation>
+							x along the long edge of the scanner frame,
+							y along the scanner sweep rotation axis,
+							z toward the top of the sensor, orthogonal to the frame.
+						</sml:orientation>
+					</sml:LocalSpatialDatum>
+				</sml:usesDatum>
+			</sml:LocalSpatialCRS>
+		</sml:referenceFrame>
+		<sml:referenceFrame>
+			<sml:LocalTimeCRS id="SENSOR_TIME">
+				<sml:srsName>Sensor Local Time</sml:srsName>
+				<sml:usesCS xlink:href="urn:ogc:crs:localTime"/>
+				<sml:usesDatum>
+					<sml:LocalTimeDatum>
+						<sml:datumName>Scanner Sensor Temporal Datum</sml:datumName>
+						<sml:origin>
+							origin is time at beginning of scan
+						</sml:origin>
+					</sml:LocalTimeDatum>
+				</sml:usesDatum>
+			</sml:LocalTimeCRS>
+		</sml:referenceFrame>
+		<!--~~~~~~~~~~~~~-->
+		<!--Sensor Inputs-->
+		<!--~~~~~~~~~~~~~-->
+		<sml:inputs>
+			<sml:InputList>
+				<sml:input name="radiation">
+					<swe:Quantity definition="urn:ogc:phenomenon:radiation"/>						
+				</sml:input>
+				<sml:input name="scan_index">
+					<swe:Count definition="urn:ogc:data:index" min="1" max="720"/>
+				</sml:input>
+			</sml:InputList>
+		</sml:inputs>
+		<!--~~~~~~~~~~~~~~-->
+		<!--Sensor Outputs-->
+		<!--~~~~~~~~~~~~~~-->
+		<sml:outputs>
+			<sml:OutputList>
+				<sml:output name="measured_values">
+					<swe:DataArray arraySize="720">
+						<swe:component>
+							<swe:DataGroup>
+								<swe:component name="band1_DN">
+									<swe:Quantity definition="urn:ogc:data:digitalNumber"/>
+								</swe:component>
+								<swe:component name="band2_DN">
+									<swe:Quantity definition="urn:ogc:data:digitalNumber"/>
+								</swe:component>
+								<swe:component name="band3_DN">
+									<swe:Quantity definition="urn:ogc:data:digitalNumber"/>
+								</swe:component>
+								<swe:component name="band4_DN">
+									<swe:Quantity definition="urn:ogc:data:digitalNumber"/>
+								</swe:component>
+							</swe:DataGroup>
+						</swe:component>
+					</swe:DataArray>						
+				</sml:output>					
+			</sml:OutputList>
+		</sml:outputs>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Sensor taskable Parameters-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:parameters>
+			<sml:ParameterList>
+				<sml:parameter name="scan_period">
+					<swe:Quantity definition="urn:ogc:data:quantity:duration" uom="s">0.2</swe:Quantity>
+				</sml:parameter>
+			</sml:ParameterList>
+		</sml:parameters>			
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Sensor internal processes-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<sml:processes>
+			<sml:ProcessList>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--           Band1 Response Model            -->
+				<!--                                           -->
+				<!-- Describes calibration, frequency response -->
+				<!-- look angles, ifov, etc...                 -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<sml:process name="band1_model">
+					<sml:Transducer>
+						<sml:inputs>
+							<sml:InputList>
+								<sml:input>
+									<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+								</sml:input>
+								<sml:index>
+									<swe:Count definition="urn:ogc:data:index" min="1" max="720"/>
+								</sml:index>
+							</sml:InputList>
+						</sml:inputs>
+						<sml:outputs>
+							<sml:OutputList>
+								<sml:output>
+									<swe:Quantity definition="urn:ogc:data:DN" min="0" max="65535"/>
+								</sml:output>
+							</sml:OutputList>
+						</sml:outputs>
+						<sml:parameters>
+							<sml:ParameterList>
+								<!--  This section describes calibration or steady state response   -->
+								<!-- The curve maps input values to output (interpolation = linear) -->
+								<sml:steadyStateResponse>
+									<sml:NormalizedCurve>
+										<sml:interpolationMethod>
+											<swe:Category>linear</swe:Category>
+										</sml:interpolationMethod>
+										<sml:function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="radiance">
+															<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+														</swe:axis>
+														<swe:axis name="DN">
+															<swe:Quantity definition="urn:ogc:data:DN"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>1e-9,0 234.5,65535</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:steadyStateResponse>
+								<!-- This section describes radiation frequency response (spectral power density) -->
+								<sml:frequencyResponse>
+									<sml:NormalizedCurve>
+										<sml:function>
+											<swe:Curve arraySize="4">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="frequency">
+															<swe:Quantity definition="urn:ogc:phenomenon:wavelength" uom="nm"/>
+														</swe:axis>
+														<swe:axis name="gain">
+															<swe:Quantity definition="urn:ogc:phenomenon:gain"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>0.61,0.0 0.61,1.0 0.68,1.0 0.68,0.0</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:frequencyResponse>
+								<!-- This section describes the shape of one sample (ifov) -->
+								<sml:ambiguityShape>
+									<sml:PowerPatternCurves id="SAMPLE_SHAPE">
+										<sml:curve name="acrossSweep">
+											<sml:NormalizedCurve>
+												<sml:function>
+													<swe:Curve arraySize="4">
+														<swe:definition>
+															<swe:Coordinates>
+																<swe:axis name="sweepAxis">
+																	<swe:Quantity axisCode="X" definition="urn:ogc:phenomenon:angle" uom="rad" scale="1e-3"/>
+																</swe:axis>
+																<swe:axis name="gain">
+																	<swe:Quantity definition="urn:ogc:phenomenon:gain"/>
+																</swe:axis>
+															</swe:Coordinates>
+														</swe:definition>
+														<swe:tupleValues>-1.31,0.0 -1.31,1.0 1.31,1.0 1.31,0.0</swe:tupleValues>
+													</swe:Curve>
+												</sml:function>
+											</sml:NormalizedCurve>
+										</sml:curve>
+										<sml:curve name="radial">
+											<sml:NormalizedCurve>
+												<sml:function>
+													<swe:Curve arraySize="2">
+														<swe:definition>
+															<swe:Coordinates>
+																<swe:axis name="radialAngle">
+																	<swe:Quantity axisCode="Z" definition="urn:ogc:phenomenon:angle" uom="deg"/>
+																</swe:axis>
+																<swe:axis name="gain">
+																	<swe:Quantity definition="urn:ogc:phenomenon:gain"/>
+																</swe:axis>
+															</swe:Coordinates>
+														</swe:definition>
+														<swe:tupleValues>-180.0,1.0 180.0,1.0</swe:tupleValues>
+													</swe:Curve>
+												</sml:function>
+											</sml:NormalizedCurve>
+										</sml:curve>
+									</sml:PowerPatternCurves>
+								</sml:ambiguityShape>
+								<!-- This section describes the position of the sample (look angles and time) -->
+								<!-- relative to sensor frame. -->
+								<sml:samplePosition>
+									<sml:PositionCurves id="SAMPLE_POSITION" referenceFrame="#SENSOR_FRAME">
+										<sml:curve name="time">
+											<sml:NormalizedCurve>
+												<sml:outputGain>
+													<swe:Quantity>0.5</swe:Quantity>
+												</sml:outputGain>
+												<sml:function>
+													<sml:IndexedCurve arraySize="2">
+														<sml:definition>
+															<sml:Coordinates>
+																<sml:index>
+																	<swe:Count definition="urn:ogc:data:index" min="1" max="720"/>
+																</sml:index>
+																<sml:value name="samplingTime">
+																	<swe:Time definition="urn:ogc:phenomenon:time" uom="s"/>
+																</sml:value>
+															</sml:Coordinates>
+														</sml:definition>
+														<swe:tupleValues>1,0.0 720,1.0</swe:tupleValues>
+													</sml:IndexedCurve>
+												</sml:function>
+											</sml:NormalizedCurve>
+										</sml:curve>
+										<sml:curve name="sweepAngle">
+											<sml:NormalizedCurve>
+												<sml:function>
+													<sml:IndexedCurve arraySize="2">
+														<sml:definition>
+															<sml:Coordinates>
+																<sml:index>
+																	<swe:Count definition="urn:ogc:data:index" min="1" max="720"/>
+																</sml:index>
+																<sml:value name="lookAngle">
+																	<swe:Quantity axisCode="Y" definition="urn:ogc:phenomenon:angle" uom="deg"/>
+																</sml:value>
+															</sml:Coordinates>
+														</sml:definition>
+														<swe:tupleValues>1,-54.0 720,54.0</swe:tupleValues>
+													</sml:IndexedCurve>
+												</sml:function>
+											</sml:NormalizedCurve>
+										</sml:curve>
+									</sml:PositionCurves>
+								</sml:samplePosition>
+							</sml:ParameterList>
+						</sml:parameters>
+						<sml:method xlink:href="urn:ogc:process:transducer"/>
+					</sml:Transducer>
+				</sml:process>					
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--           Band2 Response Model            -->
+				<!--                                           -->
+				<!-- Describes calibration, frequency response -->
+				<!-- look angles, ifov, etc...                 -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<sml:process name="band2_model">
+					<sml:Transducer>
+						<sml:inputs>
+							<sml:InputList>
+								<sml:input>
+									<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+								</sml:input>
+								<sml:index>
+									<swe:Count definition="urn:ogc:data:index" min="1" max="720"/>
+								</sml:index>
+							</sml:InputList>
+						</sml:inputs>
+						<sml:outputs>
+							<sml:OutputList>
+								<sml:output>
+									<swe:Quantity definition="urn:ogc:data:DN" min="0" max="65535"/>
+								</sml:output>
+							</sml:OutputList>
+						</sml:outputs>
+						<sml:parameters>
+							<sml:ParameterList>
+								<!--  This section describes calibration or steady state response   -->
+								<!-- The curve maps input values to output (interpolation = linear) -->
+								<sml:steadyStateResponse>
+									<sml:NormalizedCurve>
+										<sml:interpolationMethod>
+											<swe:Category>linear</swe:Category>
+										</sml:interpolationMethod>
+										<sml:function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="radiance">
+															<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+														</swe:axis>
+														<swe:axis name="DN">
+															<swe:Quantity definition="urn:ogc:data:DN"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>1e-9,0 234.5,65535</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:steadyStateResponse>
+								<!-- This section describes radiation frequency response (spectral power density) -->
+								<sml:frequencyResponse>
+									<sml:NormalizedCurve>
+										<sml:function>
+											<swe:Curve arraySize="4">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="frequency">
+															<swe:Quantity definition="urn:ogc:phenomenon:wavelength" uom="nm"/>
+														</swe:axis>
+														<swe:axis name="gain">
+															<swe:Quantity definition="urn:ogc:phenomenon:gain"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>1.57,0.0 1.57,1.0 1.70,1.0 1.70,0.0</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:frequencyResponse>
+								<sml:ambiguityShape xlink:href="#SAMPLE_SHAPE"/>
+								<sml:samplePosition xlink:href="#SAMPLE_POSITION"/>
+							</sml:ParameterList>
+						</sml:parameters>
+						<sml:method xlink:href="urn:ogc:process:transducer"/>
+					</sml:Transducer>
+				</sml:process>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--           Band3 Response Model            -->
+				<!--                                           -->
+				<!-- Describes calibration, frequency response -->
+				<!-- look angles, ifov, etc...                 -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<sml:process name="band3_model">
+					<sml:Transducer>
+						<sml:inputs>
+							<sml:InputList>
+								<sml:input>
+									<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+								</sml:input>
+								<sml:index>
+									<swe:Count definition="urn:ogc:data:index" min="1" max="720"/>
+								</sml:index>
+							</sml:InputList>
+						</sml:inputs>
+						<sml:outputs>
+							<sml:OutputList>
+								<sml:output>
+									<swe:Quantity definition="urn:ogc:data:DN" min="0" max="65535"/>
+								</sml:output>
+							</sml:OutputList>
+						</sml:outputs>
+						<sml:parameters>
+							<sml:ParameterList>
+								<!--  This section describes calibration or steady state response   -->
+								<!-- The curve maps input values to output (interpolation = linear) -->
+								<sml:steadyStateResponse>
+									<sml:NormalizedCurve>
+										<sml:interpolationMethod>
+											<swe:Category>linear</swe:Category>
+										</sml:interpolationMethod>
+										<sml:function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="radiance">
+															<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+														</swe:axis>
+														<swe:axis name="DN">
+															<swe:Quantity definition="urn:ogc:data:DN"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>1e-9,0 234.5,65535</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:steadyStateResponse>
+								<!-- This section describes radiation frequency response (spectral power density) -->
+								<sml:frequencyResponse>
+									<sml:NormalizedCurve>
+										<sml:function>
+											<swe:Curve arraySize="4">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="frequency">
+															<swe:Quantity definition="urn:ogc:phenomenon:wavelength" uom="nm"/>
+														</swe:axis>
+														<swe:axis name="gain">
+															<swe:Quantity definition="urn:ogc:phenomenon:gain"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>3.60,0.0 3.60,1.0 5.50,1.0 5.50,0.0</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:frequencyResponse>
+								<sml:ambiguityShape xlink:href="#SAMPLE_SHAPE"/>
+								<sml:samplePosition xlink:href="#SAMPLE_POSITION"/>
+							</sml:ParameterList>
+						</sml:parameters>
+						<sml:method xlink:href="urn:ogc:process:transducer"/>
+					</sml:Transducer>
+				</sml:process>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--           Band4 Response Model            -->
+				<!--                                           -->
+				<!-- Describes calibration, frequency response -->
+				<!-- look angles, ifov, etc...                 -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<sml:process name="band4_model">
+					<sml:Transducer>
+						<sml:inputs>
+							<sml:InputList>
+								<sml:input>
+									<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+								</sml:input>
+								<sml:index>
+									<swe:Count definition="urn:ogc:data:index" min="1" max="720"/>
+								</sml:index>
+							</sml:InputList>
+						</sml:inputs>
+						<sml:outputs>
+							<sml:OutputList>
+								<sml:output>
+									<swe:Quantity definition="urn:ogc:data:DN" min="0" max="65535"/>
+								</sml:output>
+							</sml:OutputList>
+						</sml:outputs>
+						<sml:parameters>
+							<sml:ParameterList>
+								<!--  This section describes calibration or steady state response   -->
+								<!-- The curve maps input values to output (interpolation = linear) -->
+								<sml:steadyStateResponse>
+									<sml:NormalizedCurve>
+										<sml:interpolationMethod>
+											<swe:Category>linear</swe:Category>
+										</sml:interpolationMethod>
+										<sml:function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="radiance">
+															<swe:Quantity definition="urn:ogc:phenomenon:radiance" uom="cd.m-2"/>
+														</swe:axis>
+														<swe:axis name="DN">
+															<swe:Quantity definition="urn:ogc:data:DN"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>1e-9,0 234.5,65535</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:steadyStateResponse>
+								<!-- This section describes radiation frequency response (spectral power density) -->
+								<sml:frequencyResponse>
+									<sml:NormalizedCurve>
+										<sml:function>
+											<swe:Curve arraySize="4">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="frequency">
+															<swe:Quantity definition="urn:ogc:phenomenon:wavelength" uom="nm"/>
+														</swe:axis>
+														<swe:axis name="gain">
+															<swe:Quantity definition="urn:ogc:phenomenon:gain"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>5.50,0.0 5.50,1.0 13.0,1.0 13.0,0.0</swe:tupleValues>
+											</swe:Curve>
+										</sml:function>
+									</sml:NormalizedCurve>
+								</sml:frequencyResponse>
+								<sml:ambiguityShape xlink:href="#SAMPLE_SHAPE"/>
+								<sml:samplePosition xlink:href="#SAMPLE_POSITION"/>
+							</sml:ParameterList>
+						</sml:parameters>
+						<sml:method xlink:href="urn:ogc:process:transducer"/>
+					</sml:Transducer>
+				</sml:process>
+			</sml:ProcessList>
+		</sml:processes>
+		<!--~~~~~~~~~~~-->
+		<!--Connections-->
+		<!--~~~~~~~~~~~-->
+		<sml:connections>
+			<sml:ConnectionList>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/radiation"/>
+						<sml:destination ref="band1_model/inputs/input"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/scan_index"/>
+						<sml:destination ref="band1_model/inputs/index"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/parameters/scan_period"/>
+						<sml:destination ref="band1_model/parameters/samplePosition/time/outputGain"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/radiation"/>
+						<sml:destination ref="band2_model/inputs/input"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/scan_index"/>
+						<sml:destination ref="band2_model/inputs/index"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/parameters/scan_period"/>
+						<sml:destination ref="band2_model/parameters/samplePosition/time/outputGain"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/radiation"/>
+						<sml:destination ref="band3_model/inputs/input"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/scan_index"/>
+						<sml:destination ref="band3_model/inputs/index"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/parameters/scan_period"/>
+						<sml:destination ref="band3_model/parameters/samplePosition/time/outputGain"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/radiation"/>
+						<sml:destination ref="band4_model/inputs/input"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/inputs/scan_index"/>
+						<sml:destination ref="band4_model/inputs/index"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:Link>
+						<sml:source ref="this/parameters/scan_period"/>
+						<sml:destination ref="band4_model/parameters/samplePosition/time/outputGain"/>
+					</sml:Link>
+				</sml:connection>
+				<sml:connection>
+					<sml:ArrayLink>
+						<sml:destinationArray ref="this/outputs/measured_values"/>
+						<sml:indexSource ref="this/inputs/scan_index"/>
+						<sml:connection>
+							<sml:Link>
+								<sml:source ref="band1_model/ouputs/output"/>
+								<sml:destination ref="component/band1_DN"/>
+							</sml:Link>
+						</sml:connection>
+						<sml:connection>
+							<sml:Link>
+								<sml:source ref="band2_model/ouputs/output"/>
+								<sml:destination ref="component/band2_DN"/>
+							</sml:Link>
+						</sml:connection>
+						<sml:connection>
+							<sml:Link>
+								<sml:source ref="band3_model/ouputs/output"/>
+								<sml:destination ref="component/band3_DN"/>
+							</sml:Link>
+						</sml:connection>
+						<sml:connection>
+							<sml:Link>
+								<sml:source ref="band4_model/ouputs/output"/>
+								<sml:destination ref="component/band4_DN"/>
+							</sml:Link>
+						</sml:connection>
+					</sml:ArrayLink>
+				</sml:connection>
+			</sml:ConnectionList>
+		</sml:connections>		
+	</sml:Sensor>
+</sml:SensorML>

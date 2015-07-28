@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/commonPracticeRef" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/reference-2009-12-16.xsd#commonPracticeRef"/>
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfRedemptionProhibitionTransferBetweenFinancialLiabilitiesAndEquityExplanatory" xlink:label="loc"/>
+    <link:reference xlink:type="resource" xlink:label="res" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRIC</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Section>Disclosure</ref:Section>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRIC&amp;num=2&amp;date=2011-03-25&amp;anchor=sect_Disclosure&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TimingAndReasonForTransferBetweenFinancialLiabilitiesAndEquityAttributableToChangeInRedemptionProhibition" xlink:label="loc_2"/>
+    <link:reference xlink:type="resource" xlink:label="res_2" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRIC</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>13</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRIC&amp;num=2&amp;date=2011-03-25&amp;anchor=para_13&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_2" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TransferBetweenFinancialLiabilitiesAndEquityAttributableToChangeInRedemptionProhibition" xlink:label="loc_3"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_3" xlink:to="res_2"/>
+  </link:referenceLink>
+</link:linkbase>

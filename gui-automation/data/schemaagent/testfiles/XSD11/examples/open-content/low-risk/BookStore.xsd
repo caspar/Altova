@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.bookstore.org" targetNamespace="http://www.bookstore.org" elementFormDefault="qualified" version="1.1">
+	<element name="BookStore">
+		<complexType>
+			<sequence>
+				<element name="Book" maxOccurs="unbounded">
+					<complexType>
+						<openContent mode="interleave">
+							<any namespace="http://www.book.org" processContents="strict"/>
+						</openContent>
+						<sequence>
+							<element name="Title" type="string"/>
+							<element name="Author" type="string"/>
+							<element name="Date" type="gYear"/>
+							<element name="ISBN" type="string"/>
+							<element name="Publisher" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

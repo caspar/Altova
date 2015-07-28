@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    --><xsd:schema xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:rol_ifrs_8_2010-04-30="http://xbrl.iasb.org/role/ifrs/rol_ifrs_8_2010-04-30" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xbrl.iasb.org/role/ifrs/rol_ifrs_8_2010-04-30">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:roleType id="ifrs_8_2010-04-30_role-871100" roleURI="http://xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100">
+        <link:definition>[871100] Notes - Operating segments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ifrs_8_2010-04-30_role-871100a" roleURI="http://xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100a">
+        <link:definition>[871100a] Notes - Operating segments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ifrs_8_2010-04-30_role-871100b" roleURI="http://xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100b">
+        <link:definition>[871100b] Notes - Operating segments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>	  
+      <link:roleType id="ifrs_8_2010-04-30_role-871100c" roleURI="http://xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100c">
+        <link:definition>[871100c] Notes - Operating segments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>
+      <link:roleType id="ifrs_8_2010-04-30_role-871100d" roleURI="http://xbrl.iasb.org/role/ifrs/ifrs_8_2010-04-30_role-871100d">
+        <link:definition>[871100d] Notes - Operating segments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+      </link:roleType>	  
+	</xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"/>
+</xsd:schema>

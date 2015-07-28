@@ -1,0 +1,1860 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "bcgprores.h"
+
+#include "../../libs/SPSBase/resource.h"
+#include "../../libs/SPSDesign/resource.h"
+#include "../../libs/SPSData/resource.h"
+#include "../../libs/AuthenticSPSData/resource.h"
+#include "../../libs/AuthenticGUI/resource.h"
+#include "../../libs/SPSGUI/resource.h"
+#include "../../libs/StyleVisionGUI/resource.h"
+#include "../../libs/ICDB/resource.h"
+#include "../../libs/ICImpExp/resource.h"
+#include "../../libs/ICCSSRecognizer/resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\StyleVision.ico"
+IDR_SPSTYPE             ICON    DISCARDABLE     "res\\StyleVisionDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SPLASH              BITMAP  DISCARDABLE     "res\\Stylevision.bmp"
+IDR_AUTHENTIC           BITMAP  DISCARDABLE     "res\\authentic.bmp"
+IDR_FORMAT              BITMAP  DISCARDABLE     "res\\format.bmp"
+IDR_HYPERLINK           BITMAP  DISCARDABLE     "res\\hyperlinktoolbar.bmp"
+IDR_MAINFRAME           BITMAP  DISCARDABLE     "res\\main.bmp"
+IDR_TABLE               BITMAP  DISCARDABLE     "res\\tbtable.bmp"
+IDT_ABOUT               BITMAP  MOVEABLE PURE   "res\\about.bmp"
+IDT_HELP                BITMAP  MOVEABLE PURE   "res\\idt_help.bmp"
+IDT_IMAGES_ONLY         BITMAP  MOVEABLE PURE   "res\\idt_imag.bmp"
+IDR_AA_STYLEVISION256   BITMAP  DISCARDABLE     "res\\aa_stylevision256.bmp"
+IDB_AA_STYLEVISION256   BITMAP  DISCARDABLE     "res\\ab_stylevision256.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "New from XML &Schema / DTD...", 
+                                                    IDC_FILE_NEW_FROM_SCHEMA
+            MENUITEM "New from &DB...",             IDC_FILE_NEW_FROM_DB
+            MENUITEM "New from &HTML file...",      IDC_FILE_NEW_FROM_HTML
+            MENUITEM "New (&empty)",                IDC_FILE_NEW_EMPTY
+        END
+        MENUITEM "&Open...",                    ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close A&ll",                  ID_FILE_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Save Design",                ID_FILE_SAVE
+        MENUITEM "Save Design &As...",          ID_FILE_SAVE_AS
+        MENUITEM "Sa&ve All",                   ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Save A&uthentic XML Data...", ID_SAVE_AUTHENTIC_XML
+        POPUP "Save &Generated Files"
+        BEGIN
+            MENUITEM "Save Generated XSLT-HTML File...", 
+                                                    IDC_SAVE_GEN_XSLT_HTML
+            MENUITEM "Save Generated &HTML File...", IDC_SAVE_GEN_HTML
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated XSLT-RTF File...", 
+                                                    IDC_SAVE_GEN_XSLT_RTF
+            MENUITEM "Save Generated &RTF File...", IDC_SAVE_GEN_RTF
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated XSLT-FO File...", IDC_SAVE_GEN_XSLT_FO
+            MENUITEM "Save Generated &FO File...",  IDC_SAVE_GEN_FO
+            MENUITEM "Save Generated &PDF File...", IDC_SAVE_GEN_PDF
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated DB Schema...", IDC_SAVE_GEN_DB_SCHEMA
+            MENUITEM "Save Generated DB XML Data...", IDC_SAVE_GEN_DB_XML
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated User-Defined Schema...", 
+                                                    IDC_SAVE_GEN_USERDEF_SCHEMA
+
+            MENUITEM "Save Generated User-Defined XML Data...", 
+                                                    IDC_SAVE_GEN_USERDEF_XML
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Schema &Definition in XMLSpy", IDC_FILE_EDIT_SCHEMA
+        MENUITEM SEPARATOR
+        MENUITEM "&Encoding...",                IDC_FILE_ENCODING
+        MENUITEM SEPARATOR
+        MENUITEM "Print Previe&w...",           ID_FILE_PRINT_PREVIEW
+        MENUITEM "&Print...",                   ID_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File List",            ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Schema Sources",             ID_VIEW_SCHEMASOURCES
+        MENUITEM "&Design Tree",                ID_VIEW_DESIGNTREE
+        MENUITEM "Style &Repository",           ID_VIEW_STYLEREPOSITORY
+        MENUITEM "Context &Properties",         ID_VIEW_CONTEXTPROPERTY_COMMON
+
+        MENUITEM "&Context Styles",             ID_VIEW_CONTEXTPROPERTY_STYLES
+
+        MENUITEM SEPARATOR
+        MENUITEM "Status &Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "T&ools"
+    BEGIN
+        MENUITEM "&Spelling...",                IDC_SPSGUI_SPELL_CHECK
+        MENUITEM "S&pelling Options...",        IDC_SPSGUI_SPELL_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               IDC_CUSTOMIZE_VIEW
+        MENUITEM "&Options...",                 IDC_TOOLS_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Table of Contents",          ID_HELP_FINDER
+        MENUITEM "&Index...",                   ID_HELP_INDEX
+        MENUITEM "&Search...",                  ID_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "&Registration...",            ID_HELP_REGISTRATION
+        MENUITEM "&Order form...",              ID_HELP_ORDERFORM
+        MENUITEM SEPARATOR
+        MENUITEM "S&upport center...",          ID_HELP_SUPPORTCENTER
+        MENUITEM "&FAQ on the web...",          ID_HELP_FAQ
+        MENUITEM "&Components Download...",     ID_HELP_COMPONENTS
+        MENUITEM SEPARATOR
+        MENUITEM "St&yleVision on the Internet...", ID_HELP_INTERNET
+        MENUITEM SEPARATOR
+        MENUITEM "&About StyleVision...",       ID_APP_ABOUT
+    END
+END
+
+IDR_SPSTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "New from XML &Schema / DTD...", 
+                                                    IDC_FILE_NEW_FROM_SCHEMA
+            MENUITEM "New from &DB...",             IDC_FILE_NEW_FROM_DB
+            MENUITEM "New from &HTML file...",      IDC_FILE_NEW_FROM_HTML
+            MENUITEM "New (&empty)",                IDC_FILE_NEW_EMPTY
+        END
+        MENUITEM "&Open...",                    ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close A&ll",                  ID_FILE_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Save Design",                ID_FILE_SAVE
+        MENUITEM "Save Design &As...",          ID_FILE_SAVE_AS
+        MENUITEM "Sa&ve All",                   ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Save A&uthentic XML Data...", ID_SAVE_AUTHENTIC_XML
+        POPUP "Save &Generated Files"
+        BEGIN
+            MENUITEM "Save Generated XSLT-HTML File...", 
+                                                    IDC_SAVE_GEN_XSLT_HTML
+            MENUITEM "Save Generated &HTML File...", IDC_SAVE_GEN_HTML
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated XSLT-RTF File...", 
+                                                    IDC_SAVE_GEN_XSLT_RTF
+            MENUITEM "Save Generated &RTF File...", IDC_SAVE_GEN_RTF
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated XSLT-FO File...", IDC_SAVE_GEN_XSLT_FO
+            MENUITEM "Save Generated &FO File...",  IDC_SAVE_GEN_FO
+            MENUITEM "Save Generated &PDF File...", IDC_SAVE_GEN_PDF
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated DB Schema...", IDC_SAVE_GEN_DB_SCHEMA
+            MENUITEM "Save Generated DB XML Data...", IDC_SAVE_GEN_DB_XML
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated User-Defined Schema...", 
+                                                    IDC_SAVE_GEN_USERDEF_SCHEMA
+
+            MENUITEM "Save Generated User-Defined XML Data...", 
+                                                    IDC_SAVE_GEN_USERDEF_XML
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Schema &Definition in XMLSpy", IDC_FILE_EDIT_SCHEMA
+        MENUITEM SEPARATOR
+        MENUITEM "&Encoding...",                IDC_FILE_ENCODING
+        MENUITEM SEPARATOR
+        MENUITEM "Print Previe&w...",           ID_FILE_PRINT_PREVIEW
+        MENUITEM "&Print...",                   ID_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File Fist",            ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\t ",                    ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo",                       ID_EDIT_UNDO
+        MENUITEM "&Redo",                       ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM "&Delete",                     ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Find",                       ID_EDIT_FIND
+        MENUITEM "Find &Next",                  ID_EDIT_FINDNEXT
+        MENUITEM "R&eplace",                    ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "Ed&it DB Filter...",          IDC_EDIT_DBFILTERS
+        MENUITEM "C&lear DB Filter",            IDC_CLEAR_DBFILTERS
+        MENUITEM SEPARATOR
+        MENUITEM "&Stylesheet Parameters...",   IDC_EDIT_PARAMETERS
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All",                 ID_EDIT_SELECT_ALL
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Schema Sources",             ID_VIEW_SCHEMASOURCES
+        MENUITEM "&Design Tree",                ID_VIEW_DESIGNTREE
+        MENUITEM "Style &Repository",           ID_VIEW_STYLEREPOSITORY
+        MENUITEM "Context &Properties",         ID_VIEW_CONTEXTPROPERTY_COMMON
+
+        MENUITEM "&Context Styles",             ID_VIEW_CONTEXTPROPERTY_STYLES
+
+        MENUITEM SEPARATOR
+        MENUITEM "Status &Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Insert"
+    BEGIN
+        MENUITEM "&Image...",                   IDC_IMAGE_INSERT
+        MENUITEM SEPARATOR
+        MENUITEM "&Paragraph",                  IDC_PARAGRAPH_INSERT
+        POPUP "&Format"
+        BEGIN
+            MENUITEM "&Address",                    IDC_ADDRESS_INSERT
+            MENUITEM "&Block (div)",                IDC_BLOCK_INSERT
+            MENUITEM "Block&quote",                 IDC_BLOCKQUOTE_INSERT
+            MENUITEM "&Center",                     IDC_CENTER_INSERT
+            MENUITEM "&Fieldset",                   IDC_FIELDSET_INSERT
+            MENUITEM "Formatted (&pre)",            IDC_FORMATTED_INSERT
+            MENUITEM "Heading &1 (h1)",             IDC_HEADING1_INSERT
+            MENUITEM "Heading &2 (h2)",             IDC_HEADING2_INSERT
+            MENUITEM "Heading &3 (h3)",             IDC_HEADING3_INSERT
+            MENUITEM "Heading &4 (h4)",             IDC_HEADING4_INSERT
+            MENUITEM "Heading &5 (h5)",             IDC_HEADING5_INSERT
+            MENUITEM "Heading &6 (h6)",             IDC_HEADING6_INSERT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Bullets and Numbering",      IDC_FORMAT_BULLETS
+        MENUITEM "Horizontal &Line",            IDC_INSERT_HORIZONTAL_LINE
+        MENUITEM SEPARATOR
+        MENUITEM "&Contents",                   IDC_INSERT_CONTENTS
+        MENUITEM "&Rest of Contents",           IDC_INSERT_REST_OF_CONTENTS
+        MENUITEM "&Date Picker",                IDC_INSERT_DATEPICKER
+        MENUITEM SEPARATOR
+        POPUP "Pa&ge"
+        BEGIN
+            MENUITEM "&Break",                      IDC_INSERT_PAGE_BREAK
+            MENUITEM "&Number",                     IDC_INSERT_PAGE_NUMBER
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Boo&kmark...",                IDC_BOOKMARK
+        MENUITEM "&Hyperlink...",               IDC_LINKED
+        MENUITEM SEPARATOR
+        POPUP "&Auto-Calculation"
+        BEGIN
+            MENUITEM "&Value...",                   IDC_INSERT_AUTOCALC_VALUE
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Input Field...",             IDC_INSERT_AUTOCALC_FIELD
+
+            MENUITEM "&Multiline Input Field...",   IDC_INSERT_AUTOCALC_MULTILINE_FIELD
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Co&ndition...",               IDC_INSERT_CHOICE
+    END
+    POPUP "&Table"
+    BEGIN
+        MENUITEM "&Insert Table...",            IDC_TABLE_INSERT_FIX
+        MENUITEM "&Delete Table",               IDC_TABLE_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Append Ro&w",                 IDC_TABLE_APPEND_ROW
+        MENUITEM "Append Colum&n",              IDC_TABLE_APPEND_COL
+        MENUITEM "Insert &Row",                 IDC_TABLE_INSERT_ROW
+        MENUITEM "Insert &Column",              IDC_TABLE_INSERT_COL
+        MENUITEM SEPARATOR
+        MENUITEM "Delete R&ow",                 IDC_TABLE_DELETE_ROW
+        MENUITEM "Delete Co&lumn",              IDC_TABLE_DELETE_COL
+        MENUITEM SEPARATOR
+        MENUITEM "Join Cell Le&ft",             IDC_TABLE_JOIN_LEFT
+        MENUITEM "Join Cell Ri&ght",            IDC_TABLE_JOIN_RIGHT
+        MENUITEM "Join Cell B&elow",            IDC_TABLE_JOIN_DOWN
+        MENUITEM "Join Cell &Above",            IDC_TABLE_JOIN_UP
+        MENUITEM SEPARATOR
+        MENUITEM "Split Cell &Horizontally",    IDC_TABLE_SPLIT_HORZ
+        MENUITEM "Split Cell &Vertically",      IDC_TABLE_SPLIT_VERT
+        MENUITEM SEPARATOR
+        MENUITEM "View Cell &Bounds",           IDC_TABLE_SHOW_ZERO_BORDER
+        MENUITEM SEPARATOR
+        MENUITEM "Table &Properties...",        IDC_TABLE_EDIT_PROPERTIES
+    END
+    POPUP "&Authentic"
+    BEGIN
+        MENUITEM "Text State &Icons...",        IDC_TEXT_STATE_ICONS
+        MENUITEM "&CALS / HTML Tables...",      IDC_CALS_HTML_TABLES
+        MENUITEM SEPARATOR
+        MENUITEM "Assign &Working XML File...", IDC_ASSIGN_WORKING_XML_FILE
+        MENUITEM "U&nassign Working XML File...", 
+                                                IDC_UNASSIGN_WORKING_XML_FILE
+
+        MENUITEM SEPARATOR
+        MENUITEM "&Assign Template XML File...", 
+                                                IDC_ASSIGN_TEMPLATE_XML_FILE
+        MENUITEM "&Unassign Template XML File...", 
+                                                IDC_UNASSIGN_TEMPLATE_XML_FILE
+
+        MENUITEM SEPARATOR
+        MENUITEM "Auto-add Date &Picker",       IDC_TOGGLE_DATEPICKER_AUTOINSERT
+        , CHECKED
+        MENUITEM "Auto-add &DB Controls",       IDC_TOGGLE_DBCONTROL_AUTOINSERT
+        , CHECKED
+        MENUITEM SEPARATOR
+        POPUP "&Table"
+        BEGIN
+            MENUITEM "&Append Row",                 IDC_ROW_APPEND
+            MENUITEM "&Insert Row",                 IDC_ROW_INSERT
+            MENUITEM "&Duplicate Row",              IDC_ROW_DUPLICATE
+            MENUITEM SEPARATOR
+            MENUITEM "Move Row &Up",                IDC_ROW_MOVE_UP
+            MENUITEM "Move Row Do&wn",              IDC_ROW_MOVE_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "D&elete Row",                 IDC_ROW_DELETE
+        END
+        POPUP "&Markup"
+        BEGIN
+            MENUITEM "&Hide Markup",                IDC_MARKUP_HIDE
+            MENUITEM "Show &Small Markup",          IDC_MARKUP_SMALL
+            MENUITEM "Show &Large Markup",          IDC_MARKUP_LARGE
+            MENUITEM "Show &Mixed Markup",          IDC_MARKUP_MIXED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Define DTD &Entities...",     IDC_DEFINE_ENTITIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Validate XML",               IDC_VALIDATE
+    END
+    POPUP "Properties"
+    BEGIN
+        MENUITEM "&Bullets and Numbering...",   IDC_FORMAT_BULLETS
+        MENUITEM "&Predefined Input Formatting Strings...", 
+                                                IDC_FORMAT_PREDEFINES
+    END
+    POPUP "T&ools"
+    BEGIN
+        MENUITEM "&Spelling...",                IDC_SPSGUI_SPELL_CHECK
+        MENUITEM "S&pelling Options...",        IDC_SPSGUI_SPELL_OPTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               IDC_CUSTOMIZE_VIEW
+        MENUITEM "&Options...",                 IDC_TOOLS_OPTIONS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Table of Contents",          ID_HELP_FINDER
+        MENUITEM "&Index...",                   ID_HELP_INDEX
+        MENUITEM "&Search...",                  ID_HELP_SEARCH
+        MENUITEM SEPARATOR
+        MENUITEM "&Registration...",            ID_HELP_REGISTRATION
+        MENUITEM "&Order Form...",              ID_HELP_ORDERFORM
+        MENUITEM SEPARATOR
+        MENUITEM "S&upport Center...",          ID_HELP_SUPPORTCENTER
+        MENUITEM "&FAQ on the Web...",          ID_HELP_FAQ
+        MENUITEM "&Components Download...",     ID_HELP_COMPONENTS
+        MENUITEM SEPARATOR
+        MENUITEM "St&yleVision on the Internet...", ID_HELP_INTERNET
+        MENUITEM SEPARATOR
+        MENUITEM "&About StyleVision...",       ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP_TOOLBAR MENU DISCARDABLE 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR1
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR2
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR3
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR4
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR5
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR6
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR7
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR8
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR9
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR10
+        MENUITEM SEPARATOR
+        MENUITEM "&Table",                      IDR_TABLE
+        MENUITEM "&Authentic",                  IDR_AUTHENTIC
+        MENUITEM "&Formatting",                 IDR_FORMAT
+        MENUITEM SEPARATOR
+        MENUITEM "&Standard Toolbar",           IDR_TOOLBAR_STANDARD
+        MENUITEM SEPARATOR
+    END
+END
+
+IDR_POPUP_CHANGE MENU DISCARDABLE 
+BEGIN
+    POPUP "Change to"
+    BEGIN
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        POPUP "&Insert"
+        BEGIN
+            MENUITEM "&Contents",                   IDC_INSERT_CONTENTS
+            MENUITEM "&Rest of Contents",           IDC_INSERT_REST_OF_CONTENTS
+
+            MENUITEM "Date Picker",                 IDC_INSERT_DATEPICKER
+            MENUITEM SEPARATOR
+            MENUITEM "&Paragraph",                  IDC_PARAGRAPH_INSERT
+            POPUP "&Format"
+            BEGIN
+                MENUITEM "&Address",                    IDC_ADDRESS_INSERT
+                MENUITEM "Block (&div)",                IDC_BLOCK_INSERT
+                MENUITEM "Block&quote",                 IDC_BLOCKQUOTE_INSERT
+
+                MENUITEM "&Center",                     IDC_CENTER_INSERT
+                MENUITEM "&Fieldset",                   IDC_FIELDSET_INSERT
+                MENUITEM "Formatted (&pre)",            IDC_FORMATTED_INSERT
+                MENUITEM "Heading &1 (h1)",             IDC_HEADING1_INSERT
+                MENUITEM "Heading &2 (h2)",             IDC_HEADING2_INSERT
+                MENUITEM "Heading &3 (h3)",             IDC_HEADING3_INSERT
+                MENUITEM "Heading &4 (h4)",             IDC_HEADING4_INSERT
+                MENUITEM "Heading &5 (h5)",             IDC_HEADING5_INSERT
+                MENUITEM "Heading &6 (h6)",             IDC_HEADING6_INSERT
+            END
+            MENUITEM SEPARATOR
+            MENUITEM "Bullets and &Numbering...",   IDC_FORMAT_BULLETS
+            MENUITEM "&Horizontal Line",            IDC_INSERT_HORIZONTAL_LINE
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Image...",                   IDC_IMAGE_INSERT
+            MENUITEM SEPARATOR
+            MENUITEM "RemoveInsertPage",            IDC_REMOVE_SUBMENU_INSERTPAGE
+
+            POPUP "Pa&ge"
+            BEGIN
+                MENUITEM "&Break",                      IDC_INSERT_PAGE_BREAK
+
+                MENUITEM "&Number",                     IDC_INSERT_PAGE_NUMBER
+
+            END
+            MENUITEM SEPARATOR
+            MENUITEM "&Bookmark...",                IDC_BOOKMARK
+            MENUITEM "Hyper&link...",               IDC_LINKED
+            MENUITEM SEPARATOR
+            MENUITEM "RemoveInsertAutoCalc",        IDC_REMOVE_SUBMENU_INSERTAUTOCALC
+
+            POPUP "&Auto-Calculation"
+            BEGIN
+                MENUITEM "&Value...",                   IDC_INSERT_AUTOCALC_VALUE
+
+                MENUITEM SEPARATOR
+                MENUITEM "&Input Field...",             IDC_INSERT_AUTOCALC_FIELD
+
+                MENUITEM "&Multiline Input Field...",   IDC_INSERT_AUTOCALC_MULTILINE_FIELD
+
+            END
+            MENUITEM SEPARATOR
+            MENUITEM "RemoveInsertDBControl",       IDC_REMOVE_SUBMENU_INSERTDBCONTROL
+
+            POPUP "DB Control"
+            BEGIN
+                MENUITEM "&Navigation",                 IDC_INSERT_DBNAVIGATION
+
+                MENUITEM "Navigation + &Goto",          IDC_INSERT_DBNAVIGATIONGOTO
+
+                MENUITEM SEPARATOR
+                MENUITEM "&Query Button",               IDC_INSERT_DBQUERY
+            END
+            MENUITEM SEPARATOR
+            MENUITEM "C&ondition...",               IDC_INSERT_CHOICE
+        END
+        MENUITEM "RemoveChangeTo",              IDC_REMOVE_SUBMENU_CHANGETO
+        POPUP "C&hange to"
+        BEGIN
+            MENUITEM "&Contents",                   IDC_CHANGE_TO_ALL_CONTENTS
+
+            MENUITEM "&Paragraph",                  IDC_CHANGE_TO_PARAGRAPH
+            MENUITEM SEPARATOR
+            MENUITEM "&Table...",                   IDC_CHANGE_TO_TABLE
+            MENUITEM "Bullets and &Numbering...",   IDC_CHANGE_TO_LIST
+            MENUITEM SEPARATOR
+            MENUITEM "&Image...",                   IDC_CHANGE_TO_IMAGE
+            MENUITEM SEPARATOR
+            MENUITEM "Input Field",                 IDC_CHANGE_TO_FIELD
+            MENUITEM "Multiline Input Field",       IDC_CHANGE_TO_MULTILINE_FIELD
+
+            MENUITEM "Combo Box...",                IDC_CHANGE_TO_SELECTION
+            MENUITEM "Check Box...",                IDC_CHANGE_TO_CHECKBOX
+            MENUITEM "Radio Button...",             IDC_CHANGE_TO_RADIO_BUTTON
+
+            MENUITEM "Button",                      IDC_CHANGE_TO_BUTTON
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "RemoveCondition",             IDC_REMOVE_SUBMENU_CONDITION
+        POPUP "C&ondition"
+        BEGIN
+            MENUITEM "Move Branch &Up",             IDC_MOVE_OPTION_UP
+            MENUITEM "Move Branch Do&wn",           IDC_MOVE_OPTION_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "&Add New Branch",             IDC_ADD_NEW_OPTION
+            MENUITEM "&Copy Branch",                IDC_ADD_COPY_OPTION
+            MENUITEM "&Delete Branch",              IDC_DELETE_OPTION
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Make Global Template",        IDC_CONVERT_TO_GLOBAL_TEMPLATE
+
+        MENUITEM "Use Global Template",         IDC_CONVERT_TO_GLOBAL_TEMPLATE_WITH_EXISTS
+
+        MENUITEM "Copy Global Template Locally", 
+                                                IDC_CONVERT_FROM_GLOBAL_TEMPLATE
+
+        MENUITEM SEPARATOR
+        MENUITEM "RemoveImportAdd",             IDC_REMOVE_SUBMENU_IMPORTADD
+        POPUP "&Add to Parent"
+        BEGIN
+            MENUITEM "Convert selection to &elements", 
+                                                    IDC_ADD_CHILD_ELEMENTS_WITHOUT_TABLE
+
+            MENUITEM "Convert selection to &attributes", 
+                                                    IDC_ADD_CHILD_ATTRIBUTES_WITHOUT_TABLE
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Surround selection with element", 
+                                                    IDC_ADD_CHILD_SURROUND
+            MENUITEM SEPARATOR
+            MENUITEM "&Convert selected table/list to elements", 
+                                                    IDC_ADD_CHILD_ELEMENTS
+            MENUITEM "C&onvert selected table/list to attributes", 
+                                                    IDC_ADD_CHILD_ATTRIBUTES
+        END
+        MENUITEM "RemoveImportInsert",          IDC_REMOVE_SUBMENU_IMPORTINSERT
+
+        POPUP "&Insert"
+        BEGIN
+            MENUITEM "Convert selection to &elements", 
+                                                    IDC_ADD_INSERT_ELEMENTS_WITHOUT_TABLE
+
+            MENUITEM "Convert selection to &attributes", 
+                                                    IDC_ADD_INSERT_ATTRIBUTES_WITHOUT_TABLE
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Surround selection with element", 
+                                                    IDC_ADD_INSERT_SURROUND
+            MENUITEM SEPARATOR
+            MENUITEM "&Convert selected table/list to elements", 
+                                                    IDC_ADD_INSERT_ELEMENTS
+            MENUITEM "C&onvert selected table/list to attributes", 
+                                                    IDC_ADD_INSERT_ATTRIBUTES
+
+        END
+        MENUITEM "RemoveImportAppend",          IDC_REMOVE_SUBMENU_IMPORTAPPEND
+
+        POPUP "A&ppend"
+        BEGIN
+            MENUITEM "Convert selection to &elements", 
+                                                    IDC_ADD_APPEND_ELEMENTS_WITHOUT_TABLE
+
+            MENUITEM "Convert selection to &attributes", 
+                                                    IDC_ADD_APPEND_ATTRIBUTES_WITHOUT_TABLE
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Surround selection with element", 
+                                                    IDC_ADD_APPEND_SURROUND
+            MENUITEM SEPARATOR
+            MENUITEM "&Convert selected table/list to elements", 
+                                                    IDC_ADD_APPEND_ELEMENTS
+            MENUITEM "C&onvert selected table/list to attributes", 
+                                                    IDC_ADD_APPEND_ATTRIBUTES
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Input Formatting...",         IDC_FORMAT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Properties...",          IDC_EDIT_STRUCTURE
+        MENUITEM "Image Properties...",         IDC_IMAGE_PROPERTIES
+        MENUITEM "&Bookmark Properties...",     IDC_BOOKMARK_PROPERTIES
+        MENUITEM "Hyper&link Properties...",    IDC_HYPERLINK_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Authentic Node Settings...",  IDC_EDITOR_NODE_SETTINGS
+    END
+END
+
+IDR_POPUP_FORMATFIELDTYPES MENU DISCARDABLE 
+BEGIN
+    POPUP "Field Types"
+    BEGIN
+        MENUITEM "Year as number",              ID_FIELDTYPES_YEARASNUMBER
+        MENUITEM "Month as number",             ID_FIELDTYPES_MONTHASNUMBER
+        MENUITEM "Day as number",               ID_FIELDTYPES_DAYASNUMBER
+        MENUITEM "Week as number",              ID_FIELDTYPES_WEEKASNUMBER
+        MENUITEM "Weekday as number",           ID_FIELDTYPES_WEEKDAYASNUMBER
+
+        MENUITEM "Day-in-year as number",       ID_FIELDTYPES_DAYINYEARASNUMBER
+
+        MENUITEM SEPARATOR
+        MENUITEM "Year as short number",        ID_FIELDTYPES_YEARASSHORTNUMBER
+
+        MENUITEM "Century ('2004' -> '20')",    ID_FIELDTYPES_CENTURY
+        MENUITEM "Century ('2004' -> '21')",    ID_FIELDTYPES_CENTURY1
+        MENUITEM SEPARATOR
+        MENUITEM "Month as Text, long format",  ID_FIELDTYPES_MONTHASTEXTLONGFORMAT
+
+        MENUITEM "Month as Text, abbrev.",      ID_FIELDTYPES_MONTHASTEXTABBREV
+
+        MENUITEM "Weekday as text, long format", 
+                                                ID_FIELDTYPES_WEEKDAYASTEXTLONGFORMAT
+
+        MENUITEM "Weekday as Text, abbrev.",    ID_FIELDTYPES_WEEKDAYASTEXTABBREV
+
+        MENUITEM "'AD' / 'BC'",                 ID_FIELDTYPES_AD
+        MENUITEM "'CE' / 'BCE'",                ID_FIELDTYPES_CE
+        MENUITEM SEPARATOR
+        MENUITEM "Hour as number",              ID_FIELDTYPES_HOURASNUMBER24
+        MENUITEM "Hour as number (1 - 12)",     ID_FIELDTYPES_HOURASNUMBER12
+        MENUITEM "Minutes as number",           ID_FIELDTYPES_MINUTESASNUMBER
+
+        MENUITEM "Seconds as number",           ID_FIELDTYPES_SECONDSASNUMBER
+
+        MENUITEM "Seconds as decimal number",   ID_FIELDTYPES_SECONDSASDECIMALNUMBER
+
+        MENUITEM "'AM' / 'PM'",                 ID_FIELDTYPES_AM
+        MENUITEM SEPARATOR
+        MENUITEM "Timezone hours",              ID_FIELDTYPES_TIMEZONEHOURS
+        MENUITEM "Timezone minutes",            ID_FIELDTYPES_TIMEZONEMINUTES
+
+        MENUITEM SEPARATOR
+        MENUITEM "Number (3 digits)",           ID_FIELDTYPES_NUMBER3
+        MENUITEM "Number (6 digits with separator)", ID_FIELDTYPES_NUMBER6
+        MENUITEM "Number (4 digits with leading 0's)", 
+                                                ID_FIELDTYPES_NUMBER4_0
+        MENUITEM "Fraction (2 digits)",         ID_FIELDTYPES_FRACTION2
+        MENUITEM "Fraction (2 or more digits)", ID_FIELDTYPES_FRACTION2PLUS
+        MENUITEM SEPARATOR
+        MENUITEM "Digit or space",              ID_FIELDTYPES_DIGITORSPACE
+        MENUITEM "Digit or leading zero",       ID_FIELDTYPES_DIGITORLEADINGZERO
+
+        MENUITEM "Comma",                       ID_FIELDTYPES_COMMA
+        MENUITEM "Digit separator",             ID_FIELDTYPES_DIGITSEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "Quoted text",                 ID_FIELDTYPES_QUOTEDTEXT
+    END
+END
+
+IDR_POPUP_FORMATOPTIONS MENU DISCARDABLE 
+BEGIN
+    POPUP "Format Options"
+    BEGIN
+        MENUITEM "(Empty option)",              ID_FORMATOPTIONS_EMPTY
+        MENUITEM SEPARATOR
+        MENUITEM "UPPER CASE",                  ID_FORMATOPTIONS_UPPERCASE
+        MENUITEM "lower case",                  ID_FORMATOPTIONS_LOWERCASE
+        MENUITEM SEPARATOR
+        MENUITEM "Set decimal point character (needs input)", 
+                                                ID_FORMATOPTIONS_DEC
+        MENUITEM "Set digit separator character (needs input)", 
+                                                ID_FORMATOPTIONS_SEP
+        MENUITEM "Set fill character (needs input)", ID_FORMATOPTIONS_FILL
+        MENUITEM SEPARATOR
+        MENUITEM "Long format",                 ID_FORMATOPTIONS_LONG
+        MENUITEM "Short format",                ID_FORMATOPTIONS_SHORT
+        MENUITEM "Initial character only",      ID_FORMATOPTIONS_INIT
+        MENUITEM SEPARATOR
+        MENUITEM "Set base year (needs input)", ID_FORMATOPTIONS_BASE
+        MENUITEM SEPARATOR
+        MENUITEM "Hours from 1-12",             ID_FORMATOPTIONS_H12
+        MENUITEM "Hours from 0-23",             ID_FORMATOPTIONS_H24
+        MENUITEM SEPARATOR
+        MENUITEM "Show as positive number",     ID_FORMATOPTIONS_POS
+        MENUITEM SEPARATOR
+        MENUITEM "Read-only",                   ID_FORMATOPTIONS_READONLY
+    END
+END
+
+IDR_POPUP_INSERT MENU DISCARDABLE 
+BEGIN
+    POPUP "Insert"
+    BEGIN
+        MENUITEM "Insert Image ...",            IDC_IMAGE_INSERT
+        MENUITEM "Insert Paragraph",            IDC_PARAGRAPH_INSERT
+        MENUITEM "Insert Table...",             IDC_TABLE_INSERT_FIX
+        MENUITEM "Insert List",                 IDC_LIST_INSERT_FIX
+    END
+END
+
+IDR_POPUP_MARKUP MENU DISCARDABLE 
+BEGIN
+    POPUP "Markup"
+    BEGIN
+        MENUITEM "Show:  %s ",                  IDC_SHOW_OPTION_FIRST
+        MENUITEM SEPARATOR
+        MENUITEM "Move to &Prev",               IDC_MOVE_OPTION_UP
+        MENUITEM "Move to &Next",               IDC_MOVE_OPTION_DOWN
+        MENUITEM SEPARATOR
+        MENUITEM "Add &New",                    IDC_ADD_NEW_OPTION
+        MENUITEM "Add &Copy",                   IDC_ADD_COPY_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit Condition",             IDC_EDIT_OPTION_CONDITION
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     IDC_DELETE_OPTION
+    END
+END
+
+IDR_POPUP_PAGE_LAYOUT_CHILDREN MENU DISCARDABLE 
+BEGIN
+    POPUP "Popup for Page Layout children"
+    BEGIN
+        MENUITEM "Remove",                      IDC_REMOVE_PAGE_LAYOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Change page margins...",      IDC_CHANGE_PAGE_MARGINS
+    END
+END
+
+IDR_POPUP_TABLE MENU DISCARDABLE 
+BEGIN
+    POPUP "Table"
+    BEGIN
+        MENUITEM "Insert Table ...",            IDC_TABLE_INSERT_FIX
+        MENUITEM "Delete Table",                IDC_TABLE_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Append Row",                  IDC_TABLE_APPEND_ROW
+        MENUITEM "Append Column",               IDC_TABLE_APPEND_COL
+        MENUITEM "Insert Row",                  IDC_TABLE_INSERT_ROW
+        MENUITEM "Insert Column",               IDC_TABLE_INSERT_COL
+        MENUITEM SEPARATOR
+        MENUITEM "Delete Row",                  IDC_TABLE_DELETE_ROW
+        MENUITEM "Delete Column",               IDC_TABLE_DELETE_COL
+        MENUITEM SEPARATOR
+        MENUITEM "Join Cell Left",              IDC_TABLE_JOIN_LEFT
+        MENUITEM "Join Cell Right",             IDC_TABLE_JOIN_RIGHT
+        MENUITEM "Join Cell Below",             IDC_TABLE_JOIN_DOWN
+        MENUITEM "Join Cell Above",             IDC_TABLE_JOIN_UP
+        MENUITEM SEPARATOR
+        MENUITEM "View Cell Bounds",            IDC_TABLE_SHOW_ZERO_BORDER
+        MENUITEM SEPARATOR
+        MENUITEM "Table Properties ...",        IDC_TABLE_EDIT_PROPERTIES
+    END
+END
+
+IDR_POPUP_TEXTVIEWS MENU DISCARDABLE 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM "&Delete",                     ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Select A&ll\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find\tCtrl+F",               ID_EDIT_FIND
+        MENUITEM "R&eplace\tCtrl+H",            ID_EDIT_REPLACE
+    END
+END
+
+IDR_POPUP_TREE MENU DISCARDABLE 
+BEGIN
+    POPUP "Popup of tree ctrl"
+    BEGIN
+        MENUITEM "Remove  Global Template",     IDC_REMOVE_TEMPLATE
+    END
+END
+
+IDR_POPUP_TREE_HTML_IMPORT MENU DISCARDABLE 
+BEGIN
+    POPUP "Popup of tree ctrl in HTML Import mode"
+    BEGIN
+        MENUITEM "&Rename",                     IDC_RENAME_NODE
+        MENUITEM SEPARATOR
+        MENUITEM "Add &Child element",          IDC_ADD_SUB_NODE
+        MENUITEM "&Insert element",             IDC_ADD_PREV_NODE
+        MENUITEM "A&ppend element",             IDC_ADD_NEXT_NODE
+        MENUITEM SEPARATOR
+        MENUITEM "Convert to &attribute",       IDC_CONVERT_TO_ATTRIBUTE
+        MENUITEM "Convert to &element ",        IDC_CONVERT_TO_ELEMENT
+        MENUITEM SEPARATOR
+        MENUITEM "&Delete",                     IDC_DELETE_NODE
+    END
+END
+
+IDR_APPLOOK_UNUSED MENU DISCARDABLE 
+BEGIN
+    POPUP "&Application Look"
+    BEGIN
+        MENUITEM "Office &2000",                ID_VIEW_APPLOOK_2000
+        MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_XP
+        MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_2003
+        MENUITEM "Visual Studio.NET 200&5",     ID_VIEW_APPLOOK_VS2005
+        MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+    END
+END
+
+IDR_FILE_TAB MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "Close All",                   ID_FILE_CLOSE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Save Design\tCtrl+S",        ID_FILE_SAVE
+        MENUITEM "Save Design &As...",          ID_FILE_SAVE_AS
+        MENUITEM "Save A&ll",                   ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Save Authentic XML Data...",  ID_SAVE_AUTHENTIC_XML
+        POPUP "Save Generated Files"
+        BEGIN
+            MENUITEM "Save Generated XSLT-HTML File...", 
+                                                    IDC_SAVE_GEN_XSLT_HTML
+            MENUITEM "Save Generated HTML File...", IDC_SAVE_GEN_HTML
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated XSLT-RTF File...", 
+                                                    IDC_SAVE_GEN_XSLT_RTF
+            MENUITEM "Save Generated RTF File...",  IDC_SAVE_GEN_RTF
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated XSLT-FO File...", IDC_SAVE_GEN_XSLT_FO
+            MENUITEM "Save Generated FO File...",   IDC_SAVE_GEN_FO
+            MENUITEM "Save Generated PDF File...",  IDC_SAVE_GEN_PDF
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated DB Schema...", IDC_SAVE_GEN_DB_SCHEMA
+            MENUITEM "Save Generated DB XML Data...", IDC_SAVE_GEN_DB_XML
+            MENUITEM SEPARATOR
+            MENUITEM "Save Generated User-Defined Schema...", 
+                                                    IDC_SAVE_GEN_USERDEF_SCHEMA
+
+            MENUITEM "Save Generated User-Defined XML Data...", 
+                                                    IDC_SAVE_GEN_USERDEF_XML
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Assign &Working XML File...", IDC_ASSIGN_WORKING_XML_FILE
+        MENUITEM "Edit Schema Definition in XMLSpy", IDC_FILE_EDIT_SCHEMA
+        MENUITEM SEPARATOR
+        MENUITEM "Print Pre&view...",           ID_FILE_PRINT_PREVIEW
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "B",            IDC_BOLD,               VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "I",            IDC_ITALIC,             VIRTKEY, CONTROL, NOINVERT
+    "K",            IDC_BOOKMARK,           VIRTKEY, CONTROL, NOINVERT
+    "L",            IDC_LINKED,             VIRTKEY, CONTROL, NOINVERT
+    "N",            IDC_FILE_NEW_FROM_SCHEMA, VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE_ALL,       VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "U",            IDC_UNDERLINE,          VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CLEAR,          VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE,         VIRTKEY, NOINVERT
+    VK_F1,          ID_HELP_FINDER,         VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          IDC_GOTONEXTBOOKMARK,   VIRTKEY, NOINVERT
+    VK_F2,          IDC_TOGGLE_BOOKMARK,    VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          IDC_GOTOPREVBOOKMARK,   VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          IDC_REMOVEALLBOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F3,          ID_EDIT_FINDNEXT,       VIRTKEY, NOINVERT
+    VK_F4,          ID_FILE_CLOSE,          VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F8,          IDC_VALIDATE,           VIRTKEY, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Altova®\0"
+            VALUE "FileDescription", "StyleVision®\0"
+            VALUE "FileVersion", "8, 3, 1, 0\0"
+            VALUE "InternalName", "StyleVision®\0"
+            VALUE "LegalCopyright", "Copyright © 1998-2006 Altova GmbH\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "StyleVision.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "StyleVision®\0"
+            VALUE "ProductVersion", "8, 3, 1, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "xptheme.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_AUTHENTIC TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_SAVE_AUTHENTIC_XML
+    SEPARATOR
+    BUTTON      IDC_VALIDATE
+    SEPARATOR
+    BUTTON      IDC_MARKUP_HIDE
+    BUTTON      IDC_MARKUP_SMALL
+    BUTTON      IDC_MARKUP_LARGE
+    BUTTON      IDC_MARKUP_MIXED
+    SEPARATOR
+    BUTTON      IDC_ROW_APPEND
+    BUTTON      IDC_ROW_INSERT
+    BUTTON      IDC_ROW_DUPLICATE
+    BUTTON      IDC_ROW_MOVE_UP
+    BUTTON      IDC_ROW_MOVE_DOWN
+    BUTTON      IDC_ROW_DELETE
+    SEPARATOR
+    BUTTON      IDC_DEFINE_ENTITIES
+END
+
+IDR_FORMAT TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDC_PARAGRAPH_PLACEHOLDER
+    SEPARATOR
+    BUTTON      IDC_BOLD
+    BUTTON      IDC_ITALIC
+    BUTTON      IDC_UNDERLINE
+    SEPARATOR
+    BUTTON      IDC_ALIGN_LEFT
+    BUTTON      IDC_ALIGN_CENTER
+    BUTTON      IDC_ALIGN_RIGHT
+    BUTTON      IDC_ALIGN_JUSTIFY
+    SEPARATOR
+    BUTTON      IDC_BULLET_UNORDERED
+    BUTTON      IDC_BULLET_ORDERED
+END
+
+IDR_HYPERLINK TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDC_HYPERLINK
+    BUTTON      IDC_HYPERLINK_PROPERTIES
+END
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVE_ALL
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_FILE_PRINT_PREVIEW
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    BUTTON      ID_EDIT_CLEAR
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_FINDNEXT
+    SEPARATOR
+    BUTTON      IDC_PARAGRAPH_INSERT
+    BUTTON      IDC_LINKED
+    BUTTON      IDC_IMAGE_INSERT
+    SEPARATOR
+    BUTTON      IDC_TOGGLE_DATEPICKER_AUTOINSERT
+    BUTTON      IDC_TOGGLE_DBCONTROL_AUTOINSERT
+    SEPARATOR
+    BUTTON      IDC_XSLT_VERSION_1
+    BUTTON      IDC_XSLT_VERSION_2
+    SEPARATOR
+    BUTTON      IDC_SPSGUI_SPELL_CHECK
+    SEPARATOR
+    BUTTON      IDC_EDIT_DBFILTERS
+    BUTTON      IDC_CLEAR_DBFILTERS
+    SEPARATOR
+    BUTTON      IDC_EDIT_PARAMETERS
+END
+
+IDR_TABLE TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDC_TABLE_INSERT_FIX
+    BUTTON      IDC_TABLE_DELETE
+    SEPARATOR
+    BUTTON      IDC_TABLE_APPEND_ROW
+    BUTTON      IDC_TABLE_INSERT_ROW
+    BUTTON      IDC_TABLE_DELETE_ROW
+    SEPARATOR
+    BUTTON      IDC_TABLE_APPEND_COL
+    BUTTON      IDC_TABLE_INSERT_COL
+    BUTTON      IDC_TABLE_DELETE_COL
+    SEPARATOR
+    BUTTON      IDC_TABLE_JOIN_RIGHT
+    BUTTON      IDC_TABLE_JOIN_LEFT
+    BUTTON      IDC_TABLE_JOIN_UP
+    BUTTON      IDC_TABLE_JOIN_DOWN
+    SEPARATOR
+    BUTTON      IDC_TABLE_SPLIT_HORZ
+    BUTTON      IDC_TABLE_SPLIT_VERT
+    SEPARATOR
+    BUTTON      IDC_VALIGN_TOP
+    BUTTON      IDC_VALIGN_CENTER
+    BUTTON      IDC_VALIGN_BOTTOM
+    SEPARATOR
+    BUTTON      IDC_TABLE_SHOW_ZERO_BORDER
+    SEPARATOR
+    BUTTON      IDC_TABLE_EDIT_PROPERTIES
+END
+
+IDT_ABOUT TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDT_HELP TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_HELP_FINDER
+    BUTTON      ID_HELP_INDEX
+    BUTTON      ID_HELP_SEARCH
+    BUTTON      ID_HELP_REGISTRATION
+    BUTTON      ID_HELP_ORDERFORM
+    BUTTON      ID_HELP_SUPPORTCENTER
+    BUTTON      ID_HELP_FAQ
+    BUTTON      ID_HELP_COMPONENTS
+    BUTTON      ID_HELP_INTERNET
+    BUTTON      ID_APP_ABOUT
+END
+
+IDT_IMAGES_ONLY TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      IDC_FORMAT_BULLETS
+    BUTTON      IDC_FILE_NEW_FROM_HTML
+    BUTTON      IDC_FILE_NEW_FROM_SCHEMA
+    BUTTON      IDC_FILE_NEW_FROM_DB
+    BUTTON      IDC_FILE_NEW_EMPTY
+END
+
+IDR_AA_STYLEVISION256 TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_STYLEVISION
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_STYLEVISIONAPI      REGISTRY DISCARDABLE    "StyleVisionAPI.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDR_AUTHENTIC           "Show or hide the Authentic toolbar\nToggle Authentic toolbar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SAVE_GEN_DB_SCHEMA  "Save the schema generated from the current DB source\nSave DB schema"
+    IDC_SAVE_GEN_DB_XML     "Save the XML data generated from the current DB source\nSave generated DB XML data"
+    IDC_EDIT_DBFILTERS      "Edit the filter expression for the current DB source\nEdit DB filter"
+    IDC_CLEAR_DBFILTERS     "Clear any filter expression for the current DB source\nClear DB filter"
+    IDC_SAVE_GEN_XSLT_FO    "Save the generated XSLT file for FO\nSave generated XSLT-FO file"
+    IDC_SAVE_GEN_XSLT_HTML  "Save the generated XSLT file for HTML\nSave generated XSLT-HTML file"
+    IDC_SAVE_GEN_XSLT_RTF   "Save the generated XSLT file for RTF\nSave generated XSLT-RTF file"
+    IDC_SAVE_GEN_FO         "Save the generated FO file\nSave generated FO file"
+    IDC_SAVE_GEN_HTML       "Save the generated HTML file\nSave generated HTML file"
+    IDC_SAVE_GEN_PDF        "Save the generated PDF file\nSave generated PDF file"
+    IDC_SAVE_GEN_RTF        "Save the generated RTF file\nSave generated RTF file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Altova StyleVision"
+    IDS_STANDARD_TOOLBAR    "Standard"
+    IDS_FORMAT_TOOLBAR      "Format"
+    IDS_TABLE_TOOLBAR       "Table"
+    IDS_AUTHENTIC_TOOLBAR   "Authentic"
+    IDS_WINDOWS_MANAGER     "&Windows..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WRONG_GRAMMAR       "The Grammar-File ""%s"" describing the XML grammar rules for the Parser module PARSO could not be found or contains an error. Please reinstall this file from the setup program."
+    IDS_FILTER_HTML_IMPORT  "HTML files (*.htm;*.html;*.shtm;*.shtml;*.xhtm;*.xhtml)|*.htm;*.html;*.shtm;*.shtml;*.xhtm;*.xhtml||"
+    IDS_TITLE_HTML_IMPORT   "Open HTML source file"
+    ID_HELP_SEARCH          "Search for a key-word in help\nSearch"
+    ID_HELP_REGISTRATION    "Register your copy of StyleVision\nRegistration"
+    ID_HELP_ORDERFORM       "Open order form\nOrder form"
+    ID_HELP_SUPPORTCENTER   "Open support form\nSupport form"
+    ID_HELP_FAQ             "Show Frequently Asked Questions\nFAQ on the web"
+    ID_HELP_COMPONENTS      "Download components\nComponents Download"
+    ID_HELP_INTERNET        "Open StyleVision Homepage\nStyleVision on the Internet"
+    ID_HELP_TRAINING        "Open StyleVision Training Partner web page"
+    IDS_EDIT_TOOLBAR        "Edit"
+    IDR_TOOLBAR_STANDARD    "Show or hide the Standard toolbar\nToggle Standard toolbar"
+    IDS_PROMPT_OPENFAILED   "File open failed: %s is not a SPS design file"
+    IDS_SAVEDIALOG_TITLE    "Save %s as"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_BATCHOUTPUT_GEN_FILE_XSLT_FO 
+                            "Generating XSLT-FO file %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_GEN_FILE_XSLT_HTML 
+                            "Generating XSLT-HTML file %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_GEN_FILE_XSLT_RTF 
+                            "Generating XSLT-RTF file %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_LOADFILE "Loading PowerStylesheet %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_PROCESS_BEGIN 
+                            "Starting silent mode processing..."
+    IDS_STYLEVISION_BATCHOUTPUT_PROCESS_CMD_BEGIN "Processing command %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_PROCESS_CMD_END "Command %s complete."
+    IDS_STYLEVISION_BATCHOUTPUT_PROCESS_END "Silent mode processing complete."
+    IDS_STYLEVISION_BATCHWARNING_NONEXISTANT_PARAM 
+                            "Warning: No parameter '%s' exists in the SPS file."
+    IDS_STYLEVISION_BATCHWARNING_SUPERFLUOUS_FLAG 
+                            "Warning: Some flags are not relevant for the supplied commands and were ignored."
+    IDS_STYLEVISION_BATCHWARNING_SUPERFLUOUS_GUI_OPTION 
+                            "Warning: Some command line parameters were not relevant for GUI mode and were ignored.\nTo perform batch processing, use StyleVisionBatch."
+    IDS_STYLEVISION_BATCHWARNING_SUPERFLUOUS_VALUE 
+                            "Warning: The option '%s' does not require a value. The value was ignored."
+    IDS_STYLEVISION_BATCHWARNING_UNKNOWNPARAM 
+                            "Warning: StyleVision ignored the unrecognized option '%s'."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_SELECTION           "Selection"
+    IDR_SPSTYPE             "\nSPS\nSPS\nStyleVision Power Stylesheets (*.sps)\n.sps\nStyleVision.Document\nStyleVision Power Stylesheet"
+    IDR_TABLE               "Show or hide the Table toolbar\nToggle Table toolbar"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "StyleVision"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active design\nSave"
+    ID_FILE_SAVE_AS         "Save the active design with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Preview the current document/design before printing\nPrint preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_USER_TOOLBAR8   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR9   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR10  "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_WINDOW_MANAGER       "Manages the currently opened window\nWindow List"
+    IDC_ADD_APPEND_ATTRIBUTES 
+                            "Convert selected table or list to attributes\nConvert table/list to attributes"
+    IDC_ADD_APPEND_ATTRIBUTES_WITHOUT_TABLE 
+                            "Convert selection to attributes\nConvert to attributes"
+    IDC_ADD_APPEND_ELEMENTS "Convert selected table or list to elements\nConvert table/list to elements"
+    IDC_ADD_APPEND_ELEMENTS_WITHOUT_TABLE 
+                            "Convert selection to elements\nConvert to elements"
+    IDC_ADD_APPEND_SURROUND "Surround selection with an element\nSourround with element"
+    IDC_ADD_CHILD_ATTRIBUTES 
+                            "Convert selected table or list to attributes\nConvert table/list to attributes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CUSTOMIZE       "Customize toolbars and menus.\nCustomize"
+    ID_VIEW_DESIGNTREE      "Show or hide the Design Tree\nToggle Design Tree"
+    ID_VIEW_INFOBAR         "Show or hide the Context Information\nToggle Context Information"
+    ID_VIEW_SCHEMASOURCES   "Show or hide the Schema Sources bar\nToggle Schema Sources"
+    ID_VIEW_STYLEREPOSITORY "Show or hide the Style Repository\nToggle Style Repository"
+    ID_VIEW_USER_STYLEREPOSITORY 
+                            "Show or hide the Style Repository bar\nToggle Style Repository"
+    ID_VIEW_USER_TOOLBAR1   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR2   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR3   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR4   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR5   "Insert table\nInsert table"
+    ID_VIEW_USER_TOOLBAR6   "Delete currently selected row\nDelete row"
+    ID_VIEW_USER_TOOLBAR7   "Delete currently selected column\nDelete column"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_CONTEXTPROPERTY_COMMON 
+                            "Show or hide the Properties bar\nToggle Properties"
+    ID_VIEW_CONTEXTPROPERTY_STYLES "Show or hide the Styles\nToggle Styles"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DESIGN_SAVE          "Save current design\nSave design"
+    ID_FILE_SAVE_ALL        "Save all unsaved designs\nSave All"
+    ID_FILE_CLOSE_ALL       "Close all documents\nClose All"
+    ID_SAVE_AUTHENTIC_XML   "Save the XML data for the current Authentic form\nSave Authentic XML data"
+    ID_VIEW_APPLOOK_2000    "Activate Office 2000 application look\nOffice 2000 Look"
+    ID_VIEW_APPLOOK_2003    "Activate Office 2003 application look\nOffice 2003 Look"
+    ID_VIEW_APPLOOK_WIN_XP  "Activate Windows XP application look\nWindows XP Look"
+    ID_VIEW_APPLOOK_XP      "Activate Office XP application look\nOffice XP Look"
+    ID_VIEW_APPLOOK_VS2005  "Activate Visual Studio.NET 2005 application look\nVS.NET 2005 Look"
+    ID_VIEW_AUTHENTICPROPERTIES 
+                            "Show or hide theAuthentic Properties bar\nToggle Authentic Properties"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_LINKED              "Insert a hyperlink at the cursor/Transform selection into a hyperlink\nInsert hyperlink"
+    IDC_MARKUP_HIDE         "Hide markup tags\nHide markup"
+    IDC_MARKUP_LARGE        "Show large markup tags\nShow large markup"
+    IDC_OPEN_COMPONENTS_PAGE 
+                            "Download additional components\nComponents download"
+    IDC_OPEN_ORDER_PAGE     "Go to online order form for Altova products\nOnline order form"
+    IDC_OPEN_SUPPORT_PAGE   "Go to online Altova support center\nOnline support"
+    IDC_OPEN_XML_SPY_HOME   "Go to Altova homepage\nAltova homepage"
+    IDC_PARAGRAPH           "Insert a paragraph at the cursor\nInsert paragraph"
+    IDC_PARAGRAPH_INSERT    "Insert a new paragraph at the cursor/Surround selection with paragraph\nInsert paragraph"
+    IDC_MARKUP_SMALL        "Show small markup tags\nShow small markup"
+    IDC_PDF_PAGE_SETUP      "Set PDF and RTF page properties\nPDF/RTF page properties"
+    IDC_REGISTRATION        "Show registration information\nRegistration"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_TABLE_SHOW_ZERO_BORDER "View cell bounds\nView cell bounds"
+    IDC_TEXT_STATE_ICONS    "Define text state icons\nText state icons"
+    IDC_TOGGLE_DATEPICKER_AUTOINSERT 
+                            "Toggle automatic insertion of date picker where appropriate\nToggle date picker auto-add"
+    IDC_TOGGLE_DBCONTROL_AUTOINSERT 
+                            "Toggle automatic insertion of DB controls where appropriate\nToggle DB controls auto-add"
+    IDC_TOOLS_OPTIONS       "Set options\nOptions"
+    IDC_UNASSIGN_TEMPLATE_XML_FILE 
+                            "Remove assigned template XML file\nUnassign template XML file"
+    IDC_MARKUP_MIXED        "Show mixed markup tags\nShow mixed markup"
+    IDC_VALIDATE            "Validate the current document\nValidate"
+    IDC_VALIGN_BOTTOM       "Align Bottom\nAlign Bottom"
+    IDC_VALIGN_CENTER       "Center Vertically\nCenter Vertically"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ROW_APPEND          "Append a new row\nAppend row"
+    IDC_ROW_INSERT          "Insert new row at cursor point\nInsert row"
+    IDC_ROW_DELETE          "Delete current row\nDelete row"
+    IDC_ROW_DUPLICATE       "Duplicate the current row\nDuplicate row"
+    IDC_ROW_MOVE_UP         "Move the current row up\nMove row up"
+    IDC_ROW_MOVE_DOWN       "Move the current row down\nMove row down"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SHOW_FAQ            "Go to online FAQ\nOnline FAQ"
+    IDC_SPELL_CHECK         "Check spelling in current document\nSpelling check"
+    IDC_SPELL_OPTIONS       "Set spell-checker options\nSpelling options"
+    IDC_TABLE_INSERT_FIX    "Insert new Table\nInsert Table"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_IMAGE_INSERT        "Insert an image at the cursor\nInsert image"
+    IDC_INSERT_AUTOCALC_FIELD 
+                            "Insert edit-field with Auto-Calculation at cursor\nInsert AutoValue edit-field"
+    IDC_INSERT_AUTOCALC_MULTILINE_FIELD 
+                            "Insert multi-line edit-field with Auto-Calculation at cursor\nInsert AutoValue multi-line edit-field"
+    IDC_INSERT_AUTOCALC_VALUE 
+                            "Insert Auto-Calculation field at cursor\nInsert AutoValue"
+    IDC_INSERT_CHOICE       "Insert a condition at the cursor/Wrap selection with a condition\nInsert condition"
+    IDC_INSERT_CONTENTS     "Insert a content field at the cursor\nInsert content"
+    IDC_INSERT_DATEPICKER   "Insert a date picker at the cursor\nInsert date picker"
+    IDC_INSERT_HORIZONTAL_LINE 
+                            "Insert a horizontal at the cursor\nInsert horizontal line"
+    IDC_INSERT_PAGE_BREAK   "Insert page break at cursor\nInsert page break"
+    IDC_INSERT_PAGE_NUMBER  "Insert page number at cursor\nInsert page number"
+    IDC_INSERT_REST_OF_CONTENTS 
+                            "Insert a ""Rest of Contents"" field at the cursor\nInsert Rest of Contents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_TABLE_APPEND_COL    "Append column to table\nAppend column"
+    IDC_TABLE_DELETE_ROW    "Delete selected row\nDelete row"
+    IDC_TABLE_DELETE_COL    "Delete selected column\nDelete column"
+    IDC_TABLE_EDIT_PROPERTIES "Set table properties\nTable properties"
+    IDC_TABLE_DELETE        "Delete selected table\nDelete table"
+    IDC_TABLE_JOIN_LEFT     "Join current cell with left neighbour cell\nJoin left"
+    IDC_TABLE_JOIN_RIGHT    "Join current cell with right neighbour cell\nJoin right"
+    IDC_TABLE_JOIN_DOWN     "Join current cell with the cell below\nJoin below"
+    IDC_TABLE_JOIN_UP       "Join current cell with the cell above\nJoin above"
+    IDC_TABLE_SPLIT_HORZ    "Split current cell into 2. New cells are horizontal neighbours\nSplit horizontally"
+    IDC_TABLE_SPLIT_VERT    "Split current cell into 2. New cells are vertical neighbours\nSplit vertically"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_FINDNEXT        "Find the next occurence of the previously specified text\nFind next"
+    IDC_SPSGUI_SPELL_CHECK  "Check spelling in current document\nSpell check"
+    IDC_SPSGUI_SPELL_OPTIONS "Set spell-checker options\nSpelling options"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_EDIT_PARAMETERS     "Edit the parameters and their defaults for the current design\nEdit Parameters"
+    IDC_EDIT_STRUCTURE      "Set properties for selected object"
+    IDC_EDITOR_NODE_SETTINGS 
+                            "Authentic node settings\nAuthentic node settings"
+    IDC_FIELDSET_INSERT     "Format current selection as 'Fieldset'\nFormat 'Fieldset'"
+    IDC_FILE_EDIT_SCHEMA    "Edit the schema defintiion for the current schema source in XMLSpy\nEdit schema definition  in XMLSpy"
+    IDC_FILE_ENCODING       "Set output encodings\nSet output encodings"
+    IDC_FORMAT_BULLETS      "Insert a bulleted or numbered list at the cursor/Change selection to bulleted or numbered list\nBullets and Numbering"
+    IDC_FORMAT_PREDEFINES   "Predefine input formatting strings\nPredefine input formatting strings"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ADD_CHILD_ATTRIBUTES_WITHOUT_TABLE 
+                            "Convert selection to attributes\nConvert to attributes"
+    IDC_ADD_CHILD_ELEMENTS  "Convert selected table or list to elements\nConvert table/list to elements"
+    IDC_ADD_CHILD_ELEMENTS_WITHOUT_TABLE 
+                            "Convert selection to elements\nConvert to elements"
+    IDC_ADD_CHILD_SURROUND  "Surround selection with an element\nSourround with element"
+    IDC_ADD_INSERT_ATTRIBUTES 
+                            "Convert selected table or list to attributes\nConvert table/list to attributes"
+    IDC_ADD_INSERT_ATTRIBUTES_WITHOUT_TABLE 
+                            "Convert selection to attributes\nConvert to attributes"
+    IDC_ADD_INSERT_ELEMENTS "Convert selected table or list to elements\nConvert table/list to elements"
+    IDC_ADD_INSERT_ELEMENTS_WITHOUT_TABLE 
+                            "Convert selection to elements\nConvert to elements"
+    IDC_ADD_INSERT_SURROUND "Surround selection with an element\nSourround with element"
+    IDC_DESIGN_SAVEAS       "Save current design under a new file name/URL\nSave design as..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_DEFINE_ENTITIES     "Define DTD entitites for current document\nDefine DTD entities"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_FORMATTED_INSERT    "Set current selection as pre-formatted ('pre')\nFormat 'pre'"
+    IDC_HEADING1_INSERT     "Format current selection as heading-1 ('h1')\nFormat 'h1'"
+    IDC_HEADING2_INSERT     "Format current selection as heading-2 ('h2')\nFormat 'h2'"
+    IDC_HEADING3_INSERT     "Format current selection as heading-3 ('h3')\nFormat 'h3'"
+    IDC_HEADING4_INSERT     "Format current selection as heading-4 ('h4')\nFormat 'h4'"
+    IDC_HEADING5_INSERT     "Format current selection as heading-5 ('h5')\nFormat 'h5'"
+    IDC_HEADING6_INSERT     "Format current selection as heading-6 ('h6')\nFormat 'h6'"
+    IDC_HELP_CONTENTS       "Show table of contents\nTable of contents"
+    IDC_HELP_INDEX          "Show help index\nHelp index"
+    IDC_HELP_SEARCH         "Search in help file\nSearch help"
+    IDC_HTML_IMPORT_SETTINGS "HTML import settings\nHTML import settings"
+    IDC_HTML_PAGE_PROPERTIES "Set HTML page properties\nHTML page properties"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ASSIGN_TEMPLATE_XML_FILE 
+                            "Assign a template XML file\nAssign template XML file"
+    IDC_ASSIGN_WORKING_XML_FILE 
+                            "Assign a Working XML file to selected schema source\nAssign Working XML file"
+    IDC_BLOCK_INSERT        "Format current selection as Block ('div')\nFormat 'div'"
+    IDC_BLOCKQUOTE_INSERT   "Format current selection as 'Blockquote'\nFormat 'Blockquote'"
+    IDC_BOOKMARK            "Insert a bookmark at the cursor\nInsert bookmark"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_TABLE_INSERT_COL    "Insert column into table at cursor point\nInsert column"
+    IDC_TABLE_INSERT_ROW    "Insert row into table at cursor point\nInsert row"
+    IDC_TABLE_APPEND_ROW    "Append row to table\nAppend row"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_VALIGN_TOP          "Align Top\nAlign Top"
+    IDC_XML_TABLE_PROPERTIES "Define CALS/HTML tables\nCALS/HTML tables"
+    IDC_XSLT_VERSION_1      "Generate XSLT Version 1.0\nGenerate XSLT Version 1.0"
+    IDC_XSLT_VERSION_2      "Generate XSLT Version 2.0\nGenerate XSLT Version 2.0"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ADDRESS_INSERT      "Format current selection as 'Address'\nFormat 'Address'"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_CENTER_INSERT       "Center current selection\nCenter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_CUSTOMIZE_VIEW      "Customize toolbars and commands\nCustomize"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROMPT_FILEISRO     "The file is read-only, or you don't have permission to overwrite it - please select another file name/URL."
+    IDS_PROMPT_FILEREADONLY "Error: Saving failed - either the file is read-only or you don't have the necessary permissions."
+    IDS_PROMPT_SAVEFAILEDMISC "Error: Saving failed: %s"
+    IDS_PROMPT_SAVENEWVERSION 
+                            "The original design is from an older version of StyleVision. Do you want to overwrite the original file using the current SPS version?"
+    IDS_PROMPT_SAVETOOPENDOC 
+                            "There is already an open document with the same path. Do you want to close that document and discard any changes you made?"
+    IDS_PROMPT_SAVETOOPENDOC_SILENT 
+                            "Error: Can't save document - there already is another open document with the same file path/URL."
+    IDS_PROMPT_SAVETOURLFAILED "Error: Saving your document to a URL failed."
+    IDS_PROMPT_SAVETOURLFAILEDQUERYSAVEAS 
+                            "Error: Saving your document to a URL failed. Would you like to save the document on your computer instead?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_BATCHERROR_BAD_TAG 
+                            "Error: The syntax of tag '%s' is incorrect."
+    IDS_STYLEVISION_BATCHERROR_CANT_LOAD_SPS 
+                            "Error: StyleVision was unable to open %s."
+    IDS_STYLEVISION_BATCHERROR_COMMAND_MISSING_INPUT 
+                            "Error: The option '%s' requires additional input."
+    IDS_STYLEVISION_BATCHERROR_COMMAND_ONLY_ENT_EDITION 
+                            "Error: You specified an option that requires %s."
+    IDS_STYLEVISION_BATCHERROR_DUPLICATE_OPTION 
+                            "Error: The option '%s' may be supplied only once."
+    IDS_STYLEVISION_BATCHERROR_EXECUTE_CMD 
+                            "Error: StyleVision failed to process the command %s."
+    IDS_STYLEVISION_BATCHERROR_MAIN_SCHEMA_OVERSPECIFIED 
+                            "Error: XML data was supplied both via -InpXML and via a stylesheet parameter for schema source '%s'."
+    IDS_STYLEVISION_BATCHERROR_MISPLACED_SCHEMA_NAME 
+                            "Error: The tag '%s' does not allow a schema name."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STYLEVISION_BATCHERROR_MISSING_CMD 
+                            "Error: No command was supplied for silent mode."
+    IDS_STYLEVISION_BATCHERROR_MISSING_VALUE 
+                            "Error: The option '%s' requires a value."
+    IDS_STYLEVISION_BATCHERROR_NO_DB_SCHEMA 
+                            "Error: The SPS file does not contain a database schema source named '%s'."
+    IDS_STYLEVISION_BATCHERROR_NONEXISTANT_DIR 
+                            "Error: The destination directory for %s does not exist."
+    IDS_STYLEVISION_BATCHERROR_NONEXISTANT_FILE 
+                            "Error: The file %s does not exist."
+    IDS_STYLEVISION_BATCHERROR_NONUNIQUE_VALUE 
+                            "Error: The value supplied for the option '%s' must be unique."
+    IDS_STYLEVISION_BATCHERROR_PARAM_NONFILE_SCHEMA 
+                            "Error: The stylesheet parameter '%s' refers to a schema source that is not file based."
+    IDS_STYLEVISION_BATCHERROR_PARAMETER_MISSING_NAME 
+                            "Error: A stylesheet parameter was supplied without a name."
+    IDS_STYLEVISION_BATCHERROR_PARAMETER_MISSING_VALUE 
+                            "Error: The stylesheet parameter '%s' was supplied without a value."
+    IDS_STYLEVISION_BATCHERROR_READING_XML 
+                            "Error: StyleVision was unable to parse %s."
+    IDS_STYLEVISION_BATCHERROR_SCHEMA_NEEDS_XML_FILE 
+                            "Error: No XML data was supplied for schema source '%s'."
+    IDS_STYLEVISION_BATCHERROR_SYNTAX_MIXED 
+                            "Error: Please use old syntax or new syntax only."
+    IDS_STYLEVISION_BATCHOUTPUT_GEN_FILE_FO "Generating FO file %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_GEN_FILE_HTML "Generating HTML file %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_GEN_FILE_PDF "Generating PDF file %s..."
+    IDS_STYLEVISION_BATCHOUTPUT_GEN_FILE_RTF "Generating RTF file %s..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_PARAGRAPH_PLACEHOLDER "Change Format\nChange Format"
+    IDC_BOLD                "Bold\nBold"
+    IDC_ITALIC              "Italic\nItalic"
+    IDC_UNDERLINE           "Underline\nUnderline"
+    IDC_ALIGN_LEFT          "Align Left\nAlign Left"
+    IDC_ALIGN_CENTER        "Center\nCenter"
+    IDC_ALIGN_RIGHT         "Align Right\nAlign Right"
+    IDC_ALIGN_JUSTIFY       "Justify\nJustify"
+    IDC_BULLET_ORDERED      "Numbering\nNumbering"
+    IDC_BULLET_UNORDERED    "Bullets\nBullets"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SAVE_GEN_USERDEF_XML 
+                            "Save the generated User-Defined XML Data\nSave generated User-Defined XML Data"
+    IDC_FILE_NEW_EMPTY      "Create a new design\nNew design"
+    IDC_FILE_NEW_FROM_DB    "Create a new design from Database\nNew design from Database"
+    IDC_FILE_NEW_FROM_SCHEMA 
+                            "Create a new design from XML Schema / DTD\nNew design from XML Schema / DTD"
+    IDC_FILE_NEW_FROM_HTML  "Create a new design from HTML file\nNew design from HTML file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_SAVE_GEN_USERDEF_SCHEMA 
+                            "Save the generated User-Defined Schema\nSave generated User-Defined Schema"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_FORMAT              "Show or hide the Formatting toolbar\nToggle Formatting toolbar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_UNASSIGN_WORKING_XML_FILE 
+                            "Remove assigned working XML file\nUnassign working XML file"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Austria) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEA)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN_AUSTRIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""bcgprores.h""\r\n"
+    "\r\n"
+    "#include ""../../libs/SPSBase/resource.h""\r\n"
+    "#include ""../../libs/SPSDesign/resource.h""\r\n"
+    "#include ""../../libs/SPSData/resource.h""\r\n"
+    "#include ""../../libs/AuthenticSPSData/resource.h""\r\n"
+    "#include ""../../libs/AuthenticGUI/resource.h""\r\n"
+    "#include ""../../libs/SPSGUI/resource.h""\r\n"
+    "#include ""../../libs/StyleVisionGUI/resource.h""\r\n"
+    "#include ""../../libs/ICDB/resource.h""\r\n"
+    "#include ""../../libs/ICImpExp/resource.h""\r\n"
+    "#include ""../../libs/ICCSSRecognizer/resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\StyleVision.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#include ""BCGCBPro.rc""                               // BCG ControlBar resources\r\n"
+    "\r\n"
+    "#include ""../../libs/ICApplication/ICApplication.rc""\r\n"
+    "#include ""../../libs/ICDB/ICDB.rc""\r\n"
+    "#include ""../../libs/ICURLUtil/ICURLUtil.rc""\r\n"
+    "#include ""../../libs/ICGUI/ICGUI.rc""\r\n"
+    "#include ""../../libs/ICImpExp/ICImpExp Resources.rc""\r\n"
+    "#include ""../../libs/ICLicMan/ICLicMan.rc""\r\n"
+    "#include ""../../libs/ICRelDisp/ICRelDisp.rc""\r\n"
+    "#include ""../../libs/ICUIManager/ICUIManager.rc""\r\n"
+    "#include ""../../libs/ICXPath/ICXPath.rc""\r\n"
+    "#include ""../../libs/ICXPath2/ICXPath2.rc""\r\n"
+    "#include ""../../libs/ICXMLValidator/src/ICXMLValidator.rc""\r\n"
+    "#include ""../../libs/ICXSLT/ICXSLT.rc""\r\n"
+    "#include ""../../libs/ICXSLT2/ICXSLT2.rc""\r\n"
+    "#include ""../../libs/scintilla/ScintRes.rc""\r\n"
+    "#include ""../../libs/XMLData/XMLData.rc""\r\n"
+    "#include ""../../libs/ySpellChk/ySpellChk.rc""\r\n"
+    "#include ""../../libs/ICXMLTables/ICXMLTables.rc""\r\n"
+    "#include ""../../libs/ICCSSRecognizer/ICCSSRecognizer.rc""\r\n"
+    "\r\n"
+    "#include ""../../libs/SPSBase/SPSBase.rc""\r\n"
+    "#include ""../../libs/SPSDesign/SPSDesign.rc""\r\n"
+    "#include ""../../libs/SPSData/SPSData.rc""\r\n"
+    "#include ""../../libs/AuthenticSPSData/AuthenticSPSData.rc""\r\n"
+    "#include ""../../libs/AuthenticGUI/AuthenticGUI.rc""\r\n"
+    "#include ""../../libs/SPSGUI/SPSGUI.rc""\r\n"
+    "#include ""../../libs/StyleVisionGUI/StyleVisionGUI.rc""\r\n"
+    "\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Austria) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\StyleVision.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#include "BCGCBPro.rc"                               // BCG ControlBar resources
+
+#include "../../libs/ICApplication/ICApplication.rc"
+#include "../../libs/ICDB/ICDB.rc"
+#include "../../libs/ICURLUtil/ICURLUtil.rc"
+#include "../../libs/ICGUI/ICGUI.rc"
+#include "../../libs/ICImpExp/ICImpExp Resources.rc"
+#include "../../libs/ICLicMan/ICLicMan.rc"
+#include "../../libs/ICRelDisp/ICRelDisp.rc"
+#include "../../libs/ICUIManager/ICUIManager.rc"
+#include "../../libs/ICXPath/ICXPath.rc"
+#include "../../libs/ICXPath2/ICXPath2.rc"
+#include "../../libs/ICXMLValidator/src/ICXMLValidator.rc"
+#include "../../libs/ICXSLT/ICXSLT.rc"
+#include "../../libs/ICXSLT2/ICXSLT2.rc"
+#include "../../libs/scintilla/ScintRes.rc"
+#include "../../libs/XMLData/XMLData.rc"
+#include "../../libs/ySpellChk/ySpellChk.rc"
+#include "../../libs/ICXMLTables/ICXMLTables.rc"
+#include "../../libs/ICCSSRecognizer/ICCSSRecognizer.rc"
+
+#include "../../libs/SPSBase/SPSBase.rc"
+#include "../../libs/SPSDesign/SPSDesign.rc"
+#include "../../libs/SPSData/SPSData.rc"
+#include "../../libs/AuthenticSPSData/AuthenticSPSData.rc"
+#include "../../libs/AuthenticGUI/AuthenticGUI.rc"
+#include "../../libs/SPSGUI/SPSGUI.rc"
+#include "../../libs/StyleVisionGUI/StyleVisionGUI.rc"
+
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

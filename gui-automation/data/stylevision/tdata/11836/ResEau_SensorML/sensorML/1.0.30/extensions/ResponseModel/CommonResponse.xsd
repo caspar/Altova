@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:swe="http://www.opengis.net/swe" xmlns:sml="http://www.opengis.net/sensorML" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="../../../../sweCommon/1.0.30/parameters.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://schemas.opengis.net/gml/3.1.0/xlink/xlinks.xsd"/>
+	<xs:include schemaLocation="../../base/process.xsd"/>
+	<!--===================-->
+	<!--  Property Groups  -->
+	<!--===================-->
+	<xs:element name="FrequencyCharacteristics" substitutionGroup="swe:_DataGroup">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_GroupBaseType">
+					<xs:sequence>
+						<xs:sequence minOccurs="0">
+							<xs:element name="bandCenter">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="swe:Quantity"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="bandPeak">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="swe:Quantity"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:choice>
+								<xs:element name="bandWidth">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element ref="swe:Quantity"/>
+										</xs:sequence>
+										<xs:attribute name="criteria" type="xs:string" use="required"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="bandBounds">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element ref="swe:QuantityRange"/>
+										</xs:sequence>
+										<xs:attribute name="criteria" type="xs:string" use="required"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+						</xs:sequence>
+						<xs:element name="spectralCurve" minOccurs="0">
+							<xs:complexType>
+								<xs:choice minOccurs="0">
+									<xs:element ref="swe:Curve"/>
+									<xs:element ref="swe:NormalizedCurve"/>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PolarizationCharacteristics" substitutionGroup="swe:_DataGroup">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_GroupBaseType">
+					<xs:sequence>
+						<xs:element name="receivePolarizationCode" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Vertical"/>
+									<xs:enumeration value="Horizontal"/>
+									<xs:enumeration value="Left Circular"/>
+									<xs:enumeration value="Right Circular"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="transmitPolarizationCode" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Vertical"/>
+									<xs:enumeration value="Horizontal"/>
+									<xs:enumeration value="Left Circular"/>
+									<xs:enumeration value="Right Circular"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="isolationMinimum" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="swe:Quantity"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="receivePolarizationAngle" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="swe:Quantity"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="transmitPolarizationAngle" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="swe:Quantity"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Calibration" substitutionGroup="swe:_DataGroup">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:NormalizedCurveType">
+					<xs:sequence>
+						<xs:element name="time" minOccurs="0">
+							<xs:complexType>
+								<xs:group ref="swe:Time"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="calibrationMethod" type="xs:string" minOccurs="0"/>
+						<xs:element name="calibrationSource" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EnvironmentalLimits">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_GroupBaseType">
+					<xs:sequence>
+						<xs:element name="limit" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="swe:QuantityRange"/>
+								</xs:sequence>
+								<xs:attribute name="name" type="swe:nameSimpleType" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!--==============-->
+	<!--  properties  -->
+	<!--==============-->
+	<xs:element name="bandName" type="xs:string"/>
+	<xs:element name="bandNumber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="swe:Count"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="integrationTime">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="swe:Quantity"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resolution">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="swe:Quantity"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sml:Calibration"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="relativeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="swe:NormalizedCurve"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="timeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="swe:NormalizedCurve"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!--=============-->
+	<!--  Processes  -->
+	<!--=============-->
+	<xs:element name="BasicResponseModel" substitutionGroup="sml:_Process">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="sml:_AbstractProcessType">
+					<xs:sequence>
+						<xs:element name="inputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:inputsType">
+										<xs:sequence>
+											<xs:element name="InputList" minOccurs="0">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:IOListType">
+															<xs:sequence>
+																<xs:element name="realValue">
+																	<xs:complexType>
+																		<xs:group ref="swe:AnyScalar" minOccurs="0"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="outputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:outputsType">
+										<xs:sequence>
+											<xs:element name="OutputList" minOccurs="0">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:IOListType">
+															<xs:sequence>
+																<xs:element name="measuredValue">
+																	<xs:complexType>
+																		<xs:group ref="swe:AnyScalar" minOccurs="0"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="parameters">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:parametersType">
+										<xs:sequence>
+											<xs:element name="ParameterList" minOccurs="0">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:IOListType">
+															<xs:sequence>
+																<xs:element ref="sml:resolution" minOccurs="0"/>
+																<xs:element ref="sml:response"/>
+																<xs:element ref="sml:timeResponse" minOccurs="0"/>
+																<!-- Do we need an error curve?? -->
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="method">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:methodType">
+										<xs:attribute ref="xlink:href" use="required" fixed="urn:ogc:process:basicResponse"/>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

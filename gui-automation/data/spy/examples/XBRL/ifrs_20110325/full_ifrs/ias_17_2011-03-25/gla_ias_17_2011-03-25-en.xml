@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://xbrl.org/2008/label http://www.xbrl.org/2008/generic-label.xsd http://xbrl.org/2008/generic http://www.xbrl.org/2008/generic-link.xsd http://www.w3.org/1999/xlink http://www.xbrl.org/2003/xlink-2003-12-31.xsd" xmlns:gen="http://xbrl.org/2008/generic" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:label="http://xbrl.org/2008/label">
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/link" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-link.xsd#standard-link-role"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#standard-label"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/element-label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#element-label"/>
+  <gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2008/role/link">
+    <link:loc xlink:type="locator" xlink:href="rol_ias_17_2011-03-25.xsd#ias_17_2011-03-25_role-832600" xlink:label="loc"/>
+    <label:label xlink:type="resource" xlink:label="loc_5" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">[832600] Notes - Leases</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="loc" xlink:to="loc_5"/>
+    <link:loc xlink:type="locator" xlink:href="rol_ias_17_2011-03-25.xsd#ias_17_2011-03-25_role-832600a" xlink:label="loc_2"/>
+    <label:label xlink:type="resource" xlink:label="loc_6" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">[832600a] Notes - Leases</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="loc_2" xlink:to="loc_6"/>
+    <link:loc xlink:type="locator" xlink:href="rol_ias_17_2011-03-25.xsd#ias_17_2011-03-25_role-832600b" xlink:label="loc_3"/>
+    <label:label xlink:type="resource" xlink:label="loc_7" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">[832600b] Notes - Leases</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="loc_3" xlink:to="loc_7"/>
+    <link:loc xlink:type="locator" xlink:href="rol_ias_17_2011-03-25.xsd#ias_17_2011-03-25_role-832600c" xlink:label="loc_4"/>
+    <label:label xlink:type="resource" xlink:label="loc_8" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">[832600c] Notes - Leases</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="loc_4" xlink:to="loc_8"/>
+  </gen:link>
+</link:linkbase>

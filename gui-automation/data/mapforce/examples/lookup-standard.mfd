@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="11">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties ShowAnnotations="0" SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="1" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" ParameterName="Parameter1"/>
+					<view ltx="-37" lty="-18" rbx="88" rby="109"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ShortPO" expanded="1">
+								<entry name="LineItems" outkey="289627736" expanded="1">
+									<entry name="LineItem" outkey="289622888" expanded="1">
+										<entry name="ArticleNr" outkey="289618584"/>
+										<entry name="Amount" outkey="289597984"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ShortPO.xsd" inputinstance="ShortPO.xml" outputinstance="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\ShortPO.xml" instanceroot="{}ShortPO"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" ParameterName="Parameter2"/>
+					<view ltx="355" lty="-18" rbx="515" rby="163"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="CompletePO" expanded="1">
+								<entry name="LineItems" inpkey="289798144" expanded="1">
+									<entry name="LineItem" inpkey="289797880" expanded="1">
+										<entry name="Article" expanded="1">
+											<entry name="Number" inpkey="289797616"/>
+											<entry name="Name" inpkey="289797352"/>
+											<entry name="Amount" inpkey="289797088"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="CompletePO.xsd" instanceroot="{}CompletePO"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="LookupArticle" library="user" blackbox="0" uid="8" kind="19" visible="0">
+					<view ltx="154" lty="3" rbx="276" rby="20"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="ArticleNr" inpkey="289499416" componentid="7"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Name" outkey="289495136" componentid="3"/>
+						</root>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="289495136">
+						<edges>
+							<edge vertexkey="289797352" edgekey="301981272"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289597984">
+						<edges>
+							<edge vertexkey="289797088" edgekey="301981192"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289618584">
+						<edges>
+							<edge vertexkey="289797616" edgekey="301981376"/>
+							<edge vertexkey="289499416" edgekey="301981480"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289622888">
+						<edges>
+							<edge vertexkey="289797880" edgekey="301981584"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289627736">
+						<edges>
+							<edge vertexkey="289798144" edgekey="301981664"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="artice" library="user" blackbox="0" editable="1" inline="1">
+		<properties/>
+		<sources>
+			<datapoint name="ponr" datatype="string"/>
+		</sources>
+		<targets>
+			<datapoint name="result" datatype="string"/>
+		</targets>
+		<structure>
+			<children>
+				<component name="input (1)" library="core" uid="11" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289312536"/>
+					</targets>
+					<view ltx="55" lty="11" rbx="-324" rby="-231"/>
+					<data>
+						<input name="ponr" datatype="string" number="1"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="12" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289306840"/>
+						<datapoint pos="1" key="289306040"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289305272"/>
+					</targets>
+					<view ltx="286" lty="13" rbx="30" rby="5"/>
+				</component>
+				<component name="Name" library="core" uid="13" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289300104"/>
+						<datapoint pos="1" key="289294176"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289289904"/>
+						<datapoint/>
+					</targets>
+					<view ltx="271" lty="87" rbx="-89" rby="-155"/>
+				</component>
+				<component name="output" library="core" uid="9" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289275944"/>
+					</sources>
+					<view ltx="426" lty="39" rbx="-254" rby="-61"/>
+					<data>
+						<output name="result" datatype="string" number="1"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="10" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" UsageKind="input" ParameterName="Parameter10"/>
+					<view ltx="38" lty="81" rbx="187" rby="171"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Article" expanded="1">
+								<entry name="Number" outkey="289271056"/>
+								<entry name="Name" outkey="289259200"/>
+							</entry>
+						</root>
+						<document schema="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\Articles.xsd" outputinstance="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\Articles.xml" instanceroot="Articles/Article"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="289259200">
+						<edges>
+							<edge vertexkey="289300104" edgekey="302093896"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289271056">
+						<edges>
+							<edge vertexkey="289306040" edgekey="302093840"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289289904">
+						<edges>
+							<edge vertexkey="289275944" edgekey="302094080"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289305272">
+						<edges>
+							<edge vertexkey="289294176" edgekey="302093976"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289312536">
+						<edges>
+							<edge vertexkey="289306840" edgekey="302094184"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="xml-out" library="user" blackbox="0" editable="1" inline="1">
+		<properties/>
+		<sources>
+			<datapoint name="ponr" datatype="string"/>
+		</sources>
+		<targets>
+			<datapoint name="Name" datatype="string"/>
+		</targets>
+		<structure>
+			<children>
+				<component name="input (1)" library="core" uid="17" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289169016"/>
+					</targets>
+					<view ltx="39" lty="18" rbx="-340" rby="-224"/>
+					<data>
+						<input name="ponr" datatype="string" number="1"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="output" library="core" uid="20" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289164488"/>
+					</sources>
+					<view ltx="380" lty="30" rbx="-300" rby="-70"/>
+					<data>
+						<output name="Name" datatype="string" number="1"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="18" kind="5" prioritycontext="289151936">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289151936"/>
+						<datapoint pos="1" key="289147288"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289146904"/>
+					</targets>
+					<view ltx="169" lty="26" rbx="-87" rby="18"/>
+				</component>
+				<component name="document" library="xml" uid="21" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" ParameterName="Parameter21"/>
+					<view ltx="-25" lty="98" rbx="134" rby="221"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Articles" expanded="1">
+								<entry name="Article" expanded="1">
+									<entry name="Number" outkey="289103416"/>
+									<entry name="Name" outkey="289090152"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\Articles.xsd" inputinstance="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\Articles.xml" outputinstance="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\Articles.xml" instanceroot="{}Articles"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="28" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" UsageKind="output" ParameterName="Parameter28"/>
+					<view ltx="401" lty="118" rbx="599" rby="312"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="LineItems" expanded="1">
+								<entry name="LineItem" expanded="1">
+									<entry name="Article" inpkey="288999544" expanded="1">
+										<entry name="Number" inpkey="288993648"/>
+										<entry name="Name" inpkey="289012824"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\CompletePO.xsd" outputinstance="C:\Documents and Settings\b.lopez\My Documents\Altova\MapForce2009\MapForceExamples\CompletePO.xml" instanceroot="CompletePO/LineItems"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Number" library="core" uid="19" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289143168"/>
+						<datapoint pos="1" key="289113064"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289108024"/>
+						<datapoint/>
+					</targets>
+					<view ltx="253" lty="69" rbx="-107" rby="-173"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="289090152">
+						<edges>
+							<edge vertexkey="289012824" edgekey="302107608"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289103416">
+						<edges>
+							<edge vertexkey="289147288" edgekey="302100584"/>
+							<edge vertexkey="288993648" edgekey="302100744"/>
+							<edge vertexkey="289143168" edgekey="302107448"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289108024">
+						<edges>
+							<edge vertexkey="288999544" edgekey="302100216"/>
+							<edge vertexkey="289164488" edgekey="302100400"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289146904">
+						<edges>
+							<edge vertexkey="289113064" edgekey="302100080"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289169016">
+						<edges>
+							<edge vertexkey="289151936" edgekey="302099944"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="LookupArticle" library="user" blackbox="0" editable="1">
+		<properties/>
+		<sources>
+			<datapoint name="ArticleNr" datatype="string"/>
+		</sources>
+		<targets>
+			<datapoint name="Name" datatype="string"/>
+		</targets>
+		<structure>
+			<children>
+				<component name="equal" library="core" uid="5" kind="5" prioritycontext="289439912">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289439912"/>
+						<datapoint pos="1" key="289434488"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289429728"/>
+					</targets>
+					<view ltx="205" lty="46" rbx="-58" rby="-77"/>
+				</component>
+				<component name="Name" library="core" uid="6" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289425672"/>
+						<datapoint pos="1" key="289420152"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289419888"/>
+						<datapoint/>
+					</targets>
+					<view ltx="278" lty="104" rbx="-129" rby="-126"/>
+				</component>
+				<component name="ArticleNr" library="core" uid="7" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="289419624"/>
+					</targets>
+					<view ltx="12" lty="14" rbx="-395" rby="-216"/>
+					<data>
+						<input name="ArticleNr" datatype="string" number="1"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Name" library="core" uid="3" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="289418872"/>
+					</sources>
+					<view ltx="427" lty="137" rbx="-348" rby="37"/>
+					<data>
+						<output name="Name" datatype="string" number="1"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" ParameterName="Parameter4"/>
+					<view ltx="6" lty="87" rbx="158" rby="207"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Articles" expanded="1">
+								<entry name="Article" expanded="1">
+									<entry name="Number" outkey="289418648"/>
+									<entry name="Name" outkey="289418384"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" inputinstance="Articles.xml" outputinstance="Articles.xml" instanceroot="{}Articles"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="289418384">
+						<edges>
+							<edge vertexkey="289425672" edgekey="302087440"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289418648">
+						<edges>
+							<edge vertexkey="289434488" edgekey="302087360"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289419624">
+						<edges>
+							<edge vertexkey="289439912" edgekey="302087304"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289419888">
+						<edges>
+							<edge vertexkey="289418872" edgekey="302087248"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289429728">
+						<edges>
+							<edge vertexkey="289420152" edgekey="302087192"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

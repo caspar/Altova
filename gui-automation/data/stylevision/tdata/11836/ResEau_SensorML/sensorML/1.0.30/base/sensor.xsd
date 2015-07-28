@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Mike Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:sml="http://www.opengis.net/sensorML" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Sensor object for core SensorML</xs:documentation>
+	</xs:annotation>
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:include schemaLocation="./system.xsd"/>
+	<xs:include schemaLocation="./process.xsd"/>
+	<xs:include schemaLocation="./coordinateSystem.xsd"/>
+	<!--============================-->
+	<!--  Global Concrete Elements  -->
+	<!--============================-->
+	<xs:element name="Sensor" type="sml:SensorType" substitutionGroup="sml:_Process">
+		<xs:annotation>
+			<xs:documentation>Sensor is a specific process which inputs real values and outputs measured values</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!--=================-->
+	<!--  Complex Types  -->
+	<!--=================-->
+	<xs:complexType name="SensorType">
+		<xs:complexContent>
+			<xs:extension base="sml:SystemType"/>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

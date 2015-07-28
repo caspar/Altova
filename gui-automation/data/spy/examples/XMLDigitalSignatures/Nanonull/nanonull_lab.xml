@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linkbase xmlns="http://www.xbrl.org/2003/linkbase"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <roleRef xlink:type="simple" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-roles-2008-03-31.xsd#negated" roleURI="http://xbrl.us/us-gaap/role/label/negated"/>
+  <labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AccountsPayable" xlink:label="us-gaap_AccountsPayable"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_AccountsPayable_lbl" xml:lang="en-US">Accounts payable</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AccountsPayable" xlink:to="us-gaap_AccountsPayable_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AccruedLiabilities" xlink:label="us-gaap_AccruedLiabilities"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_AccruedLiabilities_lbl" xml:lang="en-US">Accrued liabilities and other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AccruedLiabilities" xlink:to="us-gaap_AccruedLiabilities_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AccumulatedOtherComprehensiveIncomeLossNetOfTax" xlink:label="us-gaap_AccumulatedOtherComprehensiveIncomeLossNetOfTax"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_AccumulatedOtherComprehensiveIncomeLossNetOfTax_lbl" xml:lang="en-US">Accumulated other comprehensive income</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AccumulatedOtherComprehensiveIncomeLossNetOfTax" xlink:to="us-gaap_AccumulatedOtherComprehensiveIncomeLossNetOfTax_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AdditionalPaidInCapital" xlink:label="us-gaap_AdditionalPaidInCapital"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_AdditionalPaidInCapital_lbl" xml:lang="en-US">Additional paid-in capital</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AdditionalPaidInCapital" xlink:to="us-gaap_AdditionalPaidInCapital_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AdjustmentsToReconcileIncomeLossToNetCashProvidedByUsedInContinuingOperationsAbstract" xlink:label="us-gaap_AdjustmentsToReconcileIncomeLossToNetCashProvidedByUsedInContinuingOperationsAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_AdjustmentsToReconcileIncomeLossToNetCashProvidedByUsedInContinuingOperationsAbstract_lbl" xml:lang="en-US">Adjustments to reconcile net income to net cash provided by operating activities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AdjustmentsToReconcileIncomeLossToNetCashProvidedByUsedInContinuingOperationsAbstract" xlink:to="us-gaap_AdjustmentsToReconcileIncomeLossToNetCashProvidedByUsedInContinuingOperationsAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AssetsAbstract" xlink:label="us-gaap_AssetsAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_AssetsAbstract_lbl" xml:lang="en-US">ASSETS</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AssetsAbstract" xlink:to="us-gaap_AssetsAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AssetsCurrent" xlink:label="us-gaap_AssetsCurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_AssetsCurrent_lbl" xml:lang="en-US">Total current assets</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AssetsCurrent" xlink:to="us-gaap_AssetsCurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_AssetsCurrentAbstract" xlink:label="us-gaap_AssetsCurrentAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_AssetsCurrentAbstract_lbl" xml:lang="en-US">Current Assets</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_AssetsCurrentAbstract" xlink:to="us-gaap_AssetsCurrentAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CashAndCashEquivalentsAtCarryingValue" xlink:label="us-gaap_CashAndCashEquivalentsAtCarryingValue"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CashAndCashEquivalentsAtCarryingValue_lbl" xml:lang="en-US">Cash and cash equivalents</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodEndLabel" xlink:label="us-gaap_CashAndCashEquivalentsAtCarryingValue_lbl" xml:lang="en-US">Cash and cash equivalents at end of period</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/periodStartLabel" xlink:label="us-gaap_CashAndCashEquivalentsAtCarryingValue_lbl" xml:lang="en-US">Cash and cash equivalents at beginning of period</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CashAndCashEquivalentsAtCarryingValue" xlink:to="us-gaap_CashAndCashEquivalentsAtCarryingValue_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CashAndCashEquivalentsPeriodIncreaseDecrease" xlink:label="us-gaap_CashAndCashEquivalentsPeriodIncreaseDecrease"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_CashAndCashEquivalentsPeriodIncreaseDecrease_lbl" xml:lang="en-US">Net (decrease) increase in cash and cash equivalents</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CashAndCashEquivalentsPeriodIncreaseDecrease" xlink:to="us-gaap_CashAndCashEquivalentsPeriodIncreaseDecrease_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CommitmentsAndContingencies" xlink:label="us-gaap_CommitmentsAndContingencies"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CommitmentsAndContingencies_lbl" xml:lang="en-US">Contingencies (Note 3)</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CommitmentsAndContingencies" xlink:to="us-gaap_CommitmentsAndContingencies_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CommonStockAdditionalSeriesValue" xlink:label="us-gaap_CommonStockAdditionalSeriesValue"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CommonStockAdditionalSeriesValue_lbl" xml:lang="en-US">Ordinary shares</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CommonStockAdditionalSeriesValue" xlink:to="us-gaap_CommonStockAdditionalSeriesValue_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CommonStockDividendsPerShareCashPaid" xlink:label="us-gaap_CommonStockDividendsPerShareCashPaid"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CommonStockDividendsPerShareCashPaid_lbl" xml:lang="en-US">Dividends Per Share</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CommonStockDividendsPerShareCashPaid" xlink:to="us-gaap_CommonStockDividendsPerShareCashPaid_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CommonStockValue" xlink:label="us-gaap_CommonStockValue"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CommonStockValue_lbl" xml:lang="en-US">Common stock</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CommonStockValue" xlink:to="us-gaap_CommonStockValue_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ConcessionsCosts" xlink:label="us-gaap_ConcessionsCosts"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ConcessionsCosts_lbl" xml:lang="en-US">Food</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ConcessionsCosts" xlink:to="us-gaap_ConcessionsCosts_lbl"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_ContingenciesDisclosureTextBlock" xlink:label="nanonull_ContingenciesDisclosureTextBlock"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="nanonull_ContingenciesDisclosureTextBlock_lbl" xml:lang="en-US">Describes any existing condition, situation, or set of circumstances involving uncertainty as of the balance sheet date (or prior to issuance of the financial statements) as to a probable or reasonably possible gain or loss incurred by an entity and typically discloses the amount of range of possible gain or loss recorded.</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="nanonull_ContingenciesDisclosureTextBlock_lbl" xml:lang="en-US">Contingencies Disclosure [Text Block]</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="nanonull_ContingenciesDisclosureTextBlock" xlink:to="nanonull_ContingenciesDisclosureTextBlock_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ConvertibleDebtCurrent" xlink:label="us-gaap_ConvertibleDebtCurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ConvertibleDebtCurrent_lbl" xml:lang="en-US">Convertible debt subject to current put options</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ConvertibleDebtCurrent" xlink:to="us-gaap_ConvertibleDebtCurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CostOfGoodsAndServicesSoldAbstract" xlink:label="us-gaap_CostOfGoodsAndServicesSoldAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CostOfGoodsAndServicesSoldAbstract_lbl" xml:lang="en-US">Cruise</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CostOfGoodsAndServicesSoldAbstract" xlink:to="us-gaap_CostOfGoodsAndServicesSoldAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_CostOfOnboardAndOther" xlink:label="nanonull_CostOfOnboardAndOther"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="nanonull_CostOfOnboardAndOther_lbl" xml:lang="en-US">This represents costs that vary directly with onboard and other revenues, and include the costs of liquor and some beverages, costs of tangible goods sold by us from our gift, photo and art auction activities, pre and post-cruise land packages and credit card fees. Concession revenues do not have any significant amount of costs associated with them, as the costs and services incurred for these activities are provided by our concessionaires.</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="nanonull_CostOfOnboardAndOther_lbl" xml:lang="en-US">Onboard and other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="nanonull_CostOfOnboardAndOther" xlink:to="nanonull_CostOfOnboardAndOther_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CostOfRevenue" xlink:label="us-gaap_CostOfRevenue"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_CostOfRevenue_lbl" xml:lang="en-US">Total</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CostOfRevenue" xlink:to="us-gaap_CostOfRevenue_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CostOfServicesDirectLabor" xlink:label="us-gaap_CostOfServicesDirectLabor"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CostOfServicesDirectLabor_lbl" xml:lang="en-US">Payroll and related</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CostOfServicesDirectLabor" xlink:to="us-gaap_CostOfServicesDirectLabor_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CostsAndExpensesAbstract" xlink:label="us-gaap_CostsAndExpensesAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CostsAndExpensesAbstract_lbl" xml:lang="en-US">Costs and Expenses</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CostsAndExpensesAbstract" xlink:to="us-gaap_CostsAndExpensesAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_CruiseCommissionsTransportationAndOther" xlink:label="nanonull_CruiseCommissionsTransportationAndOther"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="nanonull_CruiseCommissionsTransportationAndOther_lbl" xml:lang="en-US">Cruise costs of commissions, transporation and other.</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="nanonull_CruiseCommissionsTransportationAndOther_lbl" xml:lang="en-US">Commissions, transportation and other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="nanonull_CruiseCommissionsTransportationAndOther" xlink:to="nanonull_CruiseCommissionsTransportationAndOther_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_CustomerDepositsCurrent" xlink:label="us-gaap_CustomerDepositsCurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_CustomerDepositsCurrent_lbl" xml:lang="en-US">Customer deposits</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_CustomerDepositsCurrent" xlink:to="us-gaap_CustomerDepositsCurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_DepreciationAndAmortization" xlink:label="us-gaap_DepreciationAndAmortization"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_DepreciationAndAmortization_lbl" xml:lang="en-US">Depreciation and amortization</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_DepreciationAndAmortization" xlink:to="us-gaap_DepreciationAndAmortization_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_DirectOperatingCosts" xlink:label="us-gaap_DirectOperatingCosts"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_DirectOperatingCosts_lbl" xml:lang="en-US">Other ship operating</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_DirectOperatingCosts" xlink:to="us-gaap_DirectOperatingCosts_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_DirectOperatingCostsAbstract" xlink:label="us-gaap_DirectOperatingCostsAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_DirectOperatingCostsAbstract_lbl" xml:lang="en-US">Operating</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_DirectOperatingCostsAbstract" xlink:to="us-gaap_DirectOperatingCostsAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_EarningsPerShareAbstract" xlink:label="us-gaap_EarningsPerShareAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_EarningsPerShareAbstract_lbl" xml:lang="en-US">Earnings Per Share</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_EarningsPerShareAbstract" xlink:to="us-gaap_EarningsPerShareAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_EarningsPerShareBasic" xlink:label="us-gaap_EarningsPerShareBasic"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_EarningsPerShareBasic_lbl" xml:lang="en-US">Basic</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_EarningsPerShareBasic" xlink:to="us-gaap_EarningsPerShareBasic_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_EarningsPerShareDiluted" xlink:label="us-gaap_EarningsPerShareDiluted"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_EarningsPerShareDiluted_lbl" xml:lang="en-US">Diluted</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_EarningsPerShareDiluted" xlink:to="us-gaap_EarningsPerShareDiluted_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_EffectOfExchangeRateOnCashAndCashEquivalents" xlink:label="us-gaap_EffectOfExchangeRateOnCashAndCashEquivalents"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_EffectOfExchangeRateOnCashAndCashEquivalents_lbl" xml:lang="en-US">Effect of exchange rate changes on cash and cash equivalents</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_EffectOfExchangeRateOnCashAndCashEquivalents" xlink:to="us-gaap_EffectOfExchangeRateOnCashAndCashEquivalents_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_FuelCosts" xlink:label="us-gaap_FuelCosts"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_FuelCosts_lbl" xml:lang="en-US">Fuel</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_FuelCosts" xlink:to="us-gaap_FuelCosts_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_Goodwill" xlink:label="us-gaap_Goodwill"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_Goodwill_lbl" xml:lang="en-US">Goodwill</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_Goodwill" xlink:to="us-gaap_Goodwill_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments" xlink:label="us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments_lbl" xml:lang="en-US">Income Before Income Taxes</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments" xlink:to="us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncomeTaxExpenseBenefit" xlink:label="us-gaap_IncomeTaxExpenseBenefit"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_IncomeTaxExpenseBenefit_lbl" xml:lang="en-US">Income Tax Expense, Net</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncomeTaxExpenseBenefit" xlink:to="us-gaap_IncomeTaxExpenseBenefit_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncreaseDecreaseInAccountsPayable" xlink:label="us-gaap_IncreaseDecreaseInAccountsPayable"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_IncreaseDecreaseInAccountsPayable_lbl" xml:lang="en-US">Accounts payable</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncreaseDecreaseInAccountsPayable" xlink:to="us-gaap_IncreaseDecreaseInAccountsPayable_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncreaseDecreaseInAccruedLiabilities" xlink:label="us-gaap_IncreaseDecreaseInAccruedLiabilities"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_IncreaseDecreaseInAccruedLiabilities_lbl" xml:lang="en-US">Accrued and other liabilities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncreaseDecreaseInAccruedLiabilities" xlink:to="us-gaap_IncreaseDecreaseInAccruedLiabilities_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncreaseDecreaseInCustomerDeposits" xlink:label="us-gaap_IncreaseDecreaseInCustomerDeposits"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_IncreaseDecreaseInCustomerDeposits_lbl" xml:lang="en-US">Customer deposits</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncreaseDecreaseInCustomerDeposits" xlink:to="us-gaap_IncreaseDecreaseInCustomerDeposits_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncreaseDecreaseInInventories" xlink:label="us-gaap_IncreaseDecreaseInInventories"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_IncreaseDecreaseInInventories_lbl" xml:lang="en-US">Inventories</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncreaseDecreaseInInventories" xlink:to="us-gaap_IncreaseDecreaseInInventories_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncreaseDecreaseInOperatingCapitalAbstract" xlink:label="us-gaap_IncreaseDecreaseInOperatingCapitalAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_IncreaseDecreaseInOperatingCapitalAbstract_lbl" xml:lang="en-US">Changes in operating assets and liabilities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncreaseDecreaseInOperatingCapitalAbstract" xlink:to="us-gaap_IncreaseDecreaseInOperatingCapitalAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncreaseDecreaseInPrepaidExpense" xlink:label="us-gaap_IncreaseDecreaseInPrepaidExpense"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_IncreaseDecreaseInPrepaidExpense_lbl" xml:lang="en-US">Prepaid expenses and other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncreaseDecreaseInPrepaidExpense" xlink:to="us-gaap_IncreaseDecreaseInPrepaidExpense_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IncreaseDecreaseInReceivables" xlink:label="us-gaap_IncreaseDecreaseInReceivables"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_IncreaseDecreaseInReceivables_lbl" xml:lang="en-US">Receivables</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IncreaseDecreaseInReceivables" xlink:to="us-gaap_IncreaseDecreaseInReceivables_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_IndefiniteLivedTrademarks" xlink:label="us-gaap_IndefiniteLivedTrademarks"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_IndefiniteLivedTrademarks_lbl" xml:lang="en-US">Trademarks</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_IndefiniteLivedTrademarks" xlink:to="us-gaap_IndefiniteLivedTrademarks_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_InterestExpense" xlink:label="us-gaap_InterestExpense"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_InterestExpense_lbl" xml:lang="en-US">Interest expense, net of capitalized interest</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_InterestExpense" xlink:to="us-gaap_InterestExpense_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_InventoryNet" xlink:label="us-gaap_InventoryNet"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_InventoryNet_lbl" xml:lang="en-US">Inventories</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_InventoryNet" xlink:to="us-gaap_InventoryNet_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_InvestmentIncomeInterest" xlink:label="us-gaap_InvestmentIncomeInterest"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_InvestmentIncomeInterest_lbl" xml:lang="en-US">Interest income</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_InvestmentIncomeInterest" xlink:to="us-gaap_InvestmentIncomeInterest_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_LiabilitiesAndStockholdersEquityAbstract" xlink:label="us-gaap_LiabilitiesAndStockholdersEquityAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_LiabilitiesAndStockholdersEquityAbstract_lbl" xml:lang="en-US">LIABILITIES AND SHAREHOLDERS' EQUITY</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_LiabilitiesAndStockholdersEquityAbstract" xlink:to="us-gaap_LiabilitiesAndStockholdersEquityAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_LiabilitiesCurrent" xlink:label="us-gaap_LiabilitiesCurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_LiabilitiesCurrent_lbl" xml:lang="en-US">Total current liabilities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_LiabilitiesCurrent" xlink:to="us-gaap_LiabilitiesCurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_LiabilitiesCurrentAbstract" xlink:label="us-gaap_LiabilitiesCurrentAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_LiabilitiesCurrentAbstract_lbl" xml:lang="en-US">Current Liabilities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_LiabilitiesCurrentAbstract" xlink:to="us-gaap_LiabilitiesCurrentAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_LongTermDebtCurrent" xlink:label="us-gaap_LongTermDebtCurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_LongTermDebtCurrent_lbl" xml:lang="en-US">Current portion of long-term debt</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_LongTermDebtCurrent" xlink:to="us-gaap_LongTermDebtCurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_LongTermDebtNoncurrent" xlink:label="us-gaap_LongTermDebtNoncurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_LongTermDebtNoncurrent_lbl" xml:lang="en-US">Long-Term Debt</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_LongTermDebtNoncurrent" xlink:to="us-gaap_LongTermDebtNoncurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities" xlink:label="us-gaap_NetCashProvidedByUsedInFinancingActivities"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_NetCashProvidedByUsedInFinancingActivities_lbl" xml:lang="en-US">Net cash used for financing activities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NetCashProvidedByUsedInFinancingActivities" xlink:to="us-gaap_NetCashProvidedByUsedInFinancingActivities_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:label="us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract_lbl" xml:lang="en-US">FINANCING ACTIVITIES</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="us-gaap_NetCashProvidedByUsedInFinancingActivitiesAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities" xlink:label="us-gaap_NetCashProvidedByUsedInInvestingActivities"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_NetCashProvidedByUsedInInvestingActivities_lbl" xml:lang="en-US">Net cash used in investing activities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NetCashProvidedByUsedInInvestingActivities" xlink:to="us-gaap_NetCashProvidedByUsedInInvestingActivities_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivitiesAbstract" xlink:label="us-gaap_NetCashProvidedByUsedInInvestingActivitiesAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_NetCashProvidedByUsedInInvestingActivitiesAbstract_lbl" xml:lang="en-US">INVESTING ACTIVITIES</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NetCashProvidedByUsedInInvestingActivitiesAbstract" xlink:to="us-gaap_NetCashProvidedByUsedInInvestingActivitiesAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities" xlink:label="us-gaap_NetCashProvidedByUsedInOperatingActivities"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_NetCashProvidedByUsedInOperatingActivities_lbl" xml:lang="en-US">Net cash provided by operating activities</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NetCashProvidedByUsedInOperatingActivities" xlink:to="us-gaap_NetCashProvidedByUsedInOperatingActivities_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract" xlink:label="us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract_lbl" xml:lang="en-US">OPERATING ACTIVITIES</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract" xlink:to="us-gaap_NetCashProvidedByUsedInOperatingActivitiesAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NetIncomeLoss" xlink:label="us-gaap_NetIncomeLoss"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_NetIncomeLoss_lbl" xml:lang="en-US">Net income</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_NetIncomeLoss_lbl" xml:lang="en-US">Net Income</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NetIncomeLoss" xlink:to="us-gaap_NetIncomeLoss_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_NonoperatingIncomeExpenseAbstract" xlink:label="us-gaap_NonoperatingIncomeExpenseAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_NonoperatingIncomeExpenseAbstract_lbl" xml:lang="en-US">Nonoperating (Expense) Income</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_NonoperatingIncomeExpenseAbstract" xlink:to="us-gaap_NonoperatingIncomeExpenseAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_NotesToFinancialStatementsAbstract" xlink:label="nanonull_NotesToFinancialStatementsAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="nanonull_NotesToFinancialStatementsAbstract_lbl" xml:lang="en-US">Notes to Financial Statements [Abstract]</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="nanonull_NotesToFinancialStatementsAbstract_lbl" xml:lang="en-US">Notes to Financial Statements [Abstract]</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="nanonull_NotesToFinancialStatementsAbstract" xlink:to="nanonull_NotesToFinancialStatementsAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_OnboardAndOther" xlink:label="nanonull_OnboardAndOther"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/documentation" xlink:label="nanonull_OnboardAndOther_lbl" xml:lang="en-US">This is the sale of goods and/or services primarily onboard our ships (which include bar and some beverage sales, casino gaming, shore excursions, gift shop and spa sales and photo and art sales) and pre and post-cruise land packages. These goods and services are either provided directly by us or by independent concessionaires, from which we receive a percentage of their revenues or a fee.</label>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="nanonull_OnboardAndOther_lbl" xml:lang="en-US">Onboard and other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="nanonull_OnboardAndOther" xlink:to="nanonull_OnboardAndOther_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_OperatingIncomeLoss" xlink:label="us-gaap_OperatingIncomeLoss"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_OperatingIncomeLoss_lbl" xml:lang="en-US">Operating Income</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_OperatingIncomeLoss" xlink:to="us-gaap_OperatingIncomeLoss_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations" xlink:label="us-gaap_OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations_lbl" xml:lang="en-US">Other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations" xlink:to="us-gaap_OtherAdjustmentsForNoncashItemsIncludedInIncomeLossFromContinuingOperations_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_OtherAssetsNoncurrent" xlink:label="us-gaap_OtherAssetsNoncurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_OtherAssetsNoncurrent_lbl" xml:lang="en-US">Other Assets</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_OtherAssetsNoncurrent" xlink:to="us-gaap_OtherAssetsNoncurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_OtherCostOfOperatingRevenue" xlink:label="us-gaap_OtherCostOfOperatingRevenue"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_OtherCostOfOperatingRevenue_lbl" xml:lang="en-US">Other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_OtherCostOfOperatingRevenue" xlink:to="us-gaap_OtherCostOfOperatingRevenue_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_OtherLiabilitiesNoncurrent" xlink:label="us-gaap_OtherLiabilitiesNoncurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_OtherLiabilitiesNoncurrent_lbl" xml:lang="en-US">Other Long-Term Liabilities and Deferred Income</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_OtherLiabilitiesNoncurrent" xlink:to="us-gaap_OtherLiabilitiesNoncurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_OtherNonoperatingIncomeExpense" xlink:label="us-gaap_OtherNonoperatingIncomeExpense"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_OtherNonoperatingIncomeExpense_lbl" xml:lang="en-US">Other income, net</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_OtherNonoperatingIncomeExpense" xlink:to="us-gaap_OtherNonoperatingIncomeExpense_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_OtherSalesRevenueNet" xlink:label="us-gaap_OtherSalesRevenueNet"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_OtherSalesRevenueNet_lbl" xml:lang="en-US">Other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_OtherSalesRevenueNet" xlink:to="us-gaap_OtherSalesRevenueNet_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PassengerRevenue" xlink:label="us-gaap_PassengerRevenue"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_PassengerRevenue_lbl" xml:lang="en-US">Passenger tickets</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PassengerRevenue" xlink:to="us-gaap_PassengerRevenue_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PaymentsForProceedsFromOtherInvestingActivities" xlink:label="us-gaap_PaymentsForProceedsFromOtherInvestingActivities"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_PaymentsForProceedsFromOtherInvestingActivities_lbl" xml:lang="en-US">Other, net</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PaymentsForProceedsFromOtherInvestingActivities" xlink:to="us-gaap_PaymentsForProceedsFromOtherInvestingActivities_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PaymentsForRepurchaseOfCommonStock" xlink:label="us-gaap_PaymentsForRepurchaseOfCommonStock"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_PaymentsForRepurchaseOfCommonStock_lbl" xml:lang="en-US">Purchases of treasury stock</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PaymentsForRepurchaseOfCommonStock" xlink:to="us-gaap_PaymentsForRepurchaseOfCommonStock_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PaymentsOfDividends" xlink:label="us-gaap_PaymentsOfDividends"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_PaymentsOfDividends_lbl" xml:lang="en-US">Dividends paid</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PaymentsOfDividends" xlink:to="us-gaap_PaymentsOfDividends_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PaymentsToAcquirePropertyPlantAndEquipment" xlink:label="us-gaap_PaymentsToAcquirePropertyPlantAndEquipment"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_PaymentsToAcquirePropertyPlantAndEquipment_lbl" xml:lang="en-US">Additions to property and equipment</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PaymentsToAcquirePropertyPlantAndEquipment" xlink:to="us-gaap_PaymentsToAcquirePropertyPlantAndEquipment_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PaymentsToAcquireShortTermInvestments" xlink:label="us-gaap_PaymentsToAcquireShortTermInvestments"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_PaymentsToAcquireShortTermInvestments_lbl" xml:lang="en-US">Purchases of short-term investments</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PaymentsToAcquireShortTermInvestments" xlink:to="us-gaap_PaymentsToAcquireShortTermInvestments_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PrepaidExpenseCurrent" xlink:label="us-gaap_PrepaidExpenseCurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_PrepaidExpenseCurrent_lbl" xml:lang="en-US">Prepaid expenses and other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PrepaidExpenseCurrent" xlink:to="us-gaap_PrepaidExpenseCurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ProceedsFromIssuanceOfLongTermDebt" xlink:label="us-gaap_ProceedsFromIssuanceOfLongTermDebt"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ProceedsFromIssuanceOfLongTermDebt_lbl" xml:lang="en-US">Proceeds from issuance of long-term debt</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ProceedsFromIssuanceOfLongTermDebt" xlink:to="us-gaap_ProceedsFromIssuanceOfLongTermDebt_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ProceedsFromPaymentsForOtherFinancingActivities" xlink:label="us-gaap_ProceedsFromPaymentsForOtherFinancingActivities"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ProceedsFromPaymentsForOtherFinancingActivities_lbl" xml:lang="en-US">Other</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ProceedsFromPaymentsForOtherFinancingActivities" xlink:to="us-gaap_ProceedsFromPaymentsForOtherFinancingActivities_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ProceedsFromSaleOfShortTermInvestments" xlink:label="us-gaap_ProceedsFromSaleOfShortTermInvestments"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ProceedsFromSaleOfShortTermInvestments_lbl" xml:lang="en-US">Sales of short-term investments</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ProceedsFromSaleOfShortTermInvestments" xlink:to="us-gaap_ProceedsFromSaleOfShortTermInvestments_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ProceedsFromStockOptionsExercised" xlink:label="us-gaap_ProceedsFromStockOptionsExercised"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ProceedsFromStockOptionsExercised_lbl" xml:lang="en-US">Proceeds from exercise of stock options</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ProceedsFromStockOptionsExercised" xlink:to="us-gaap_ProceedsFromStockOptionsExercised_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_PropertyPlantAndEquipmentNet" xlink:label="us-gaap_PropertyPlantAndEquipmentNet"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_PropertyPlantAndEquipmentNet_lbl" xml:lang="en-US">Property and Equipment, Net</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_PropertyPlantAndEquipmentNet" xlink:to="us-gaap_PropertyPlantAndEquipmentNet_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ReceivablesNetCurrent" xlink:label="us-gaap_ReceivablesNetCurrent"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ReceivablesNetCurrent_lbl" xml:lang="en-US">Trade and other receivables, net</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ReceivablesNetCurrent" xlink:to="us-gaap_ReceivablesNetCurrent_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_RepaymentsOfLongTermDebt" xlink:label="us-gaap_RepaymentsOfLongTermDebt"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_RepaymentsOfLongTermDebt_lbl" xml:lang="en-US">Principal repayments of long-term debt</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_RepaymentsOfLongTermDebt" xlink:to="us-gaap_RepaymentsOfLongTermDebt_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_RepaymentsOfShortTermDebt" xlink:label="us-gaap_RepaymentsOfShortTermDebt"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_RepaymentsOfShortTermDebt_lbl" xml:lang="en-US">Repayments of short-term borrowings, net</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_RepaymentsOfShortTermDebt" xlink:to="us-gaap_RepaymentsOfShortTermDebt_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_RetainedEarningsAccumulatedDeficit" xlink:label="us-gaap_RetainedEarningsAccumulatedDeficit"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_RetainedEarningsAccumulatedDeficit_lbl" xml:lang="en-US">Retained earnings</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_RetainedEarningsAccumulatedDeficit" xlink:to="us-gaap_RetainedEarningsAccumulatedDeficit_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_RevenuesAbstract" xlink:label="us-gaap_RevenuesAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_RevenuesAbstract_lbl" xml:lang="en-US">Revenues</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_RevenuesAbstract" xlink:to="us-gaap_RevenuesAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_SalesRevenueNetAbstract" xlink:label="us-gaap_SalesRevenueNetAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_SalesRevenueNetAbstract_lbl" xml:lang="en-US">Cruise</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_SalesRevenueNetAbstract" xlink:to="us-gaap_SalesRevenueNetAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_SellingGeneralAndAdministrativeExpense" xlink:label="us-gaap_SellingGeneralAndAdministrativeExpense"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_SellingGeneralAndAdministrativeExpense_lbl" xml:lang="en-US">Selling and administrative</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_SellingGeneralAndAdministrativeExpense" xlink:to="us-gaap_SellingGeneralAndAdministrativeExpense_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ShareBasedCompensation" xlink:label="us-gaap_ShareBasedCompensation"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ShareBasedCompensation_lbl" xml:lang="en-US">Share-based compensation</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ShareBasedCompensation" xlink:to="us-gaap_ShareBasedCompensation_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ShortTermBorrowings" xlink:label="us-gaap_ShortTermBorrowings"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ShortTermBorrowings_lbl" xml:lang="en-US">Short-term borrowings</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ShortTermBorrowings" xlink:to="us-gaap_ShortTermBorrowings_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_ShortTermInvestments" xlink:label="us-gaap_ShortTermInvestments"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_ShortTermInvestments_lbl" xml:lang="en-US">Short-term investments</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_ShortTermInvestments" xlink:to="us-gaap_ShortTermInvestments_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_StockholdersEquity" xlink:label="us-gaap_StockholdersEquity"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/totalLabel" xlink:label="us-gaap_StockholdersEquity_lbl" xml:lang="en-US">Total shareholders' equity</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_StockholdersEquity" xlink:to="us-gaap_StockholdersEquity_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_StockholdersEquityAbstract" xlink:label="us-gaap_StockholdersEquityAbstract"/>
+    <label xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/label" xlink:label="us-gaap_StockholdersEquityAbstract_lbl" xml:lang="en-US">Shareholders' Equity</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_StockholdersEquityAbstract" xlink:to="us-gaap_StockholdersEquityAbstract_lbl"/>
+    <loc xlink:type="locator" xlink:href="http://xbrl.us/us-gaap/1.0/elts/us-gaap-2008-03-31.xsd#us-gaap_TreasuryStockValue" xlink:label="us-gaap_TreasuryStockValue"/>
+    <label xlink:type="resource" xlink:role="http://xbrl.us/us-gaap/role/label/negated" xlink:label="us-gaap_TreasuryStockValue_lbl" xml:lang="en-US">Treasury stock</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="us-gaap_TreasuryStockValue" xlink:to="us-gaap_TreasuryStockValue_lbl"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_Asia" xlink:label="Asia"/>
+    <label xlink:type="resource" xlink:label="label_Asia" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en-US" id="label_Asia">Asia</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="Asia" xlink:to="label_Asia"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_Europe" xlink:label="Europe"/>
+    <label xlink:type="resource" xlink:label="label_Europe" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en-US" id="label_Europe">Europe</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="Europe" xlink:to="label_Europe"/>
+    <loc xlink:type="locator" xlink:href="nanonull.xsd#nanonull_USA" xlink:label="USA"/>
+    <label xlink:type="resource" xlink:label="label_USA" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en-US" id="label_USA">USA</label>
+    <labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="USA" xlink:to="label_USA"/>
+  </labelLink>
+</linkbase>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 U (http://www.altova.com) by John Cree (Environment Canada) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sml="http://www.opengis.net/sensorML" targetNamespace="http://www.opengis.net/sensorML" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:annotation>
+    <xs:documentation>SensorML document root definition</xs:documentation>
+  </xs:annotation>
+   <xs:include schemaLocation="./system.xsd"/>
+  <!--<xs:include schemaLocation="./sensor.xsd"/>
+  <xs:include schemaLocation="./process.xsd"/>
+  <xs:include schemaLocation="./genericResponse.xsd"/>
+  <xs:include schemaLocation="./genericPosition.xsd"/> 
+  <xs:include schemaLocation="./genericSampling.xsd"/>
+  <xs:include schemaLocation="./genericProcess.xsd"/>
+  <xs:include schemaLocation="./transducer.xsd"/> -->
+  <xs:element name="SensorML">
+    <xs:annotation>
+      <xs:documentation>SensorML document root</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="sml:_Process"/>
+        <xs:element ref="sml:PropertyList"/>
+        <xs:element ref="sml:DocumentList"/>
+        <xs:element ref="sml:ContactList"/>
+      </xs:choice>
+      <xs:attribute name="version" type="xs:token" use="required" fixed="1.0"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

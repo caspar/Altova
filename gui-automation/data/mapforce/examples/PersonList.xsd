@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Mr. Nobody (Altova) -->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PersonList">
+		<xs:annotation>
+			<xs:documentation>List of Persons</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Person" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="First" type="xs:string"/>
+							<xs:element name="Last" type="xs:string"/>
+							<xs:element name="Details" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+						<xs:attribute name="role" type="xs:string" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

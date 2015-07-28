@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfNumberAndWeightedAverageExercisePricesOfShareOptionsExplanatory" xlink:label="loc"/>
+    <link:reference xlink:type="resource" xlink:label="res" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfSharebasedPaymentArrangementsExplanatory" xlink:label="loc_2"/>
+    <link:reference xlink:type="resource" xlink:label="res_2" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>44</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_44&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_2" xlink:to="res_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_LiabilitiesFromSharebasedPaymentTransactions2011" xlink:label="loc_3"/>
+    <link:reference xlink:type="resource" xlink:label="res_3" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>51</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>i</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_51_b_i&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_3" xlink:to="res_3"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfNumberAndWeightedAverageExercisePricesOfShareOptionsTable" xlink:label="loc_4"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_4" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_GroupsOfShareOptionsAxis" xlink:label="loc_5"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_5" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsMember" xlink:label="loc_6"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_6" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsGrantedMember" xlink:label="loc_7"/>
+    <link:reference xlink:type="resource" xlink:label="res_4" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>ii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b_ii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_7" xlink:to="res_4"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsForfeitedMember" xlink:label="loc_8"/>
+    <link:reference xlink:type="resource" xlink:label="res_5" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>iii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b_iii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_8" xlink:to="res_5"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsExercisedMember" xlink:label="loc_10"/>
+    <link:reference xlink:type="resource" xlink:label="res_6" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>iv</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b_iv&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_10" xlink:to="res_6"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsExpiredMember" xlink:label="loc_12"/>
+    <link:reference xlink:type="resource" xlink:label="res_8" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>v</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b_v&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_12" xlink:to="res_8"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsExercisableMember" xlink:label="loc_17"/>
+    <link:reference xlink:type="resource" xlink:label="res_9" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>vii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b_vii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_17" xlink:to="res_9"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ShareOptionsOutstandingMember" xlink:label="loc_18"/>
+    <link:reference xlink:type="resource" xlink:label="res_13" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>i</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b_i&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_18" xlink:to="res_13"/>
+    <link:reference xlink:type="resource" xlink:label="res_16" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>vi</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_b_vi&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_18" xlink:to="res_16"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfShareOptionsInSharebasedPaymentArrangement" xlink:label="loc_24"/>
+    <link:reference xlink:type="resource" xlink:label="res_17" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_24" xlink:to="res_17"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_NumberOfShareOptionsInSharebasedPaymentArrangement" xlink:label="loc_25"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_25" xlink:to="res"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WeightedAverageExercisePriceOfShareOptionsInSharebasedPaymentArrangement" xlink:label="loc_26"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_26" xlink:to="res"/>
+    <link:reference xlink:type="resource" xlink:label="res_18" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_26" xlink:to="res_18"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfVestingRequirementsForSharebasedPaymentArrangement" xlink:label="loc_23"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_23" xlink:to="res_17"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfMaximumTermOfOptionsGrantedForSharebasedPaymentArrangement" xlink:label="loc_27"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_27" xlink:to="res_17"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfMethodOfSettlementForSharebasedPaymentArrangement" xlink:label="loc_28"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_28" xlink:to="res_17"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfTermsAndConditionsOfSharebasedPaymentArrangementExplanatory" xlink:label="loc_29"/>
+    <link:reference xlink:type="resource" xlink:label="res_20" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_29" xlink:to="res_20"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfTermsAndConditionsOfSharebasedPaymentArrangementTable" xlink:label="loc_32"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_32" xlink:to="res_20"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_TypesOfSharebasedPaymentArrangementsAxis" xlink:label="loc_37"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_37" xlink:to="res_20"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_SharebasedPaymentArrangementsMember" xlink:label="loc_38"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_38" xlink:to="res_20"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DeterminationOfFairValueOfGoodsOrServicesReceivedOrFairValueOfEquityInstrumentsGrantedOnSharebasedPayments" xlink:label="loc_11"/>
+    <link:reference xlink:type="resource" xlink:label="res_21" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>46</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_46&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_11" xlink:to="res_21"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfDirectMeasurementOfFairValueOfGoodsOrServicesReceived" xlink:label="loc_13"/>
+    <link:reference xlink:type="resource" xlink:label="res_25" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>48</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_48&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_13" xlink:to="res_25"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfReasonWhyFairValueOfGoodsOrServicesReceivedCannotEstimateReliable" xlink:label="loc_14"/>
+    <link:reference xlink:type="resource" xlink:label="res_28" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>49</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_49&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_14" xlink:to="res_28"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfEffectOfSharebasedPaymentsOnFinancialPositions" xlink:label="loc_15"/>
+    <link:reference xlink:type="resource" xlink:label="res_41" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>50</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_50&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_15" xlink:to="res_41"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IntrinsicValueOfLiabilitiesFromSharebasedPaymentTransactionsForWhichCounterpartysRightToCashOrOtherAssetsVested2011" xlink:label="loc_22"/>
+    <link:reference xlink:type="resource" xlink:label="res_11" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>51</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>ii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_51_b_ii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_22" xlink:to="res_11"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_AdditionalInformationAboutSharebasedPaymentArrangements" xlink:label="loc_19"/>
+    <link:reference xlink:type="resource" xlink:label="res_31" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>52</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_52&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_19" xlink:to="res_31"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfIndirectMeasurementOfFairValueOfGoodsOrServicesReceivedShareOptionsGrantedDuringPeriodExplanatory" xlink:label="loc_20"/>
+    <link:reference xlink:type="resource" xlink:label="res_38" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_20" xlink:to="res_38"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfIndirectMeasurementOfFairValueOfGoodsOrServicesReceivedOtherEquityInstrumentsGrantedDuringPeriodExplanatory" xlink:label="loc_21"/>
+    <link:reference xlink:type="resource" xlink:label="res_39" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_b&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_21" xlink:to="res_39"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfIndirectMeasurementOfFairValueOfGoodsOrServicesReceivedSharebasedPaymentArrangementsModifiedDuringPeriodExplanatory" xlink:label="loc_30"/>
+    <link:reference xlink:type="resource" xlink:label="res_40" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_c&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_30" xlink:to="res_40"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DateOfGrantOfSharebasedPaymentArrangement" xlink:label="loc_34"/>
+    <link:reference xlink:type="resource" xlink:label="res_26" xlink:role="http://www.xbrl.org/2003/role/exampleRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>IG23</ref:Paragraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_IG23&amp;doctype=Implementation%20Guidance</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_34" xlink:to="res_26"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfOptionPricingModelShareOptionsGranted" xlink:label="loc_39"/>
+    <link:reference xlink:type="resource" xlink:label="res_27" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:Clause>i</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_a_i&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_39" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationAboutHowExpectedVolatilityWasDeterminedShareOptionsGranted" xlink:label="loc_42"/>
+    <link:reference xlink:type="resource" xlink:label="res_29" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:Clause>ii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_a_ii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_42" xlink:to="res_29"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationWhetherAndHowOtherFeaturesWereIncorporatedIntoMeasurementOfFairValueShareOptionsGranted" xlink:label="loc_52"/>
+    <link:reference xlink:type="resource" xlink:label="res_30" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:Clause>iii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_a_iii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_52" xlink:to="res_30"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationAboutHowFairWasDeterminedIfNotOnBasisOfObservableMarketOtherEquityInstrumentsGranted" xlink:label="loc_53"/>
+    <link:reference xlink:type="resource" xlink:label="res_32" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>i</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_b_i&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_53" xlink:to="res_32"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationWhetherAndHowExpectedDividendsWereIncorporatedIntoMeasurementOfFairValueOtherEquityInstrumentsGranted" xlink:label="loc_57"/>
+    <link:reference xlink:type="resource" xlink:label="res_33" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>ii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_b_ii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_57" xlink:to="res_33"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationWhetherAndHowOtherFeaturesWereIncorporatedIntoMeasurementOfFairValueOtherEquityInstrumentsGranted" xlink:label="loc_59"/>
+    <link:reference xlink:type="resource" xlink:label="res_34" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>b</ref:Subparagraph>
+      <ref:Clause>iii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_b_iii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_59" xlink:to="res_34"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfModificationsModifiedSharebasedPaymentArrangements" xlink:label="loc_60"/>
+    <link:reference xlink:type="resource" xlink:label="res_35" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:Clause>i</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_c_i&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_60" xlink:to="res_35"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_IncrementalFairValueGrantedModifiedSharebasedPaymentArrangements" xlink:label="loc_61"/>
+    <link:reference xlink:type="resource" xlink:label="res_36" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:Clause>ii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_c_ii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_61" xlink:to="res_36"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationOnHowIncrementalFairValueGrantedWasMeasuredModifiedSharebasedPaymentArrangements" xlink:label="loc_62"/>
+    <link:reference xlink:type="resource" xlink:label="res_37" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>47</ref:Paragraph>
+      <ref:Subparagraph>c</ref:Subparagraph>
+      <ref:Clause>iii</ref:Clause>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_47_c_iii&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_62" xlink:to="res_37"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExpenseFromEquitysettledSharebasedPaymentTransactionsInWhichGoodsOrServicesReceivedDidNotQualifyForRecognitionAsAssets" xlink:label="loc_33"/>
+    <link:reference xlink:type="resource" xlink:label="res_19" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>51</ref:Paragraph>
+      <ref:Subparagraph>a</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_51_a&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_33" xlink:to="res_19"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfNumberAndWeightedAverageRemainingContractualLifeOfOutstandingShareOptionsExplanatory" xlink:label="loc_9"/>
+    <link:reference xlink:type="resource" xlink:label="res_23" xlink:role="http://www.xbrl.org/2003/role/disclosureRef">
+      <ref:Name>IFRS</ref:Name>
+      <ref:Number>2</ref:Number>
+      <ref:IssueDate>2011-01-01</ref:IssueDate>
+      <ref:Paragraph>45</ref:Paragraph>
+      <ref:Subparagraph>d</ref:Subparagraph>
+      <ref:URI>http://eifrs.ifrs.org/eifrs/XBRL?type=IFRS&amp;num=2&amp;date=2011-03-25&amp;anchor=para_45_d&amp;doctype=Standard</ref:URI>
+      <ref:URIDate>2011-03-25</ref:URIDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_9" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WeightedAverageExercisePriceOfShareOptionsInSharebasedPaymentArrangementExercisedDuringPeriodAtDateOfExercise" xlink:label="loc_31"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_31" xlink:to="res_18"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExplanationOfEffectOfSharebasedPaymentsOnProfitOrLoss" xlink:label="loc_16"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_16" xlink:to="res_41"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WeightedAverageFairValueAtMeasurementDateShareOptionsGranted" xlink:label="loc_35"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_35" xlink:to="res_38"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationAboutHowFairValueWasMeasuredShareOptionsGranted" xlink:label="loc_41"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_41" xlink:to="res_38"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_NumberOfInstrumentsOtherEquityInstrumentsGranted" xlink:label="loc_54"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_54" xlink:to="res_39"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WeightedAverageFairValueAtMeasurementDateOtherEquityInstrumentsGranted" xlink:label="loc_55"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_55" xlink:to="res_39"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_InformationHowFairValueWasMeasuredOtherEquityInstrumentsGranted" xlink:label="loc_56"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_56" xlink:to="res_39"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfInputsToOptionPricingModelShareOptionsGranted" xlink:label="loc_43"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_43" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WeightedAverageSharePriceShareOptionsGranted" xlink:label="loc_44"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_44" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExercisePriceShareOptionsGranted" xlink:label="loc_45"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_45" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfExpectedVolatilityShareOptionsGranted" xlink:label="loc_46"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_46" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfOptionLifeShareOptionsGranted" xlink:label="loc_47"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_47" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExpectedDividendShareOptionsGranted" xlink:label="loc_48"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_48" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfRiskFreeInterestRateShareOptionsGranted" xlink:label="loc_49"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_49" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfOtherInputsToOptionsPricingModelShareOptionsGranted" xlink:label="loc_50"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_50" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfMethodUsedAndAssumptionsMadeToIncorporateEffectsOfExpectedEarlyExerciseShareOptionsGranted" xlink:label="loc_51"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_51" xlink:to="res_27"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_ExpenseFromSharebasedPaymentTransactionsInWhichGoodsOrServicesReceivedDidNotQualifyForRecognitionAsAssets" xlink:label="loc_68"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_68" xlink:to="res_19"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfNumberAndWeightedAverageRemainingContractualLifeOfOutstandingShareOptionsTable" xlink:label="loc_63"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_63" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RangesOfExercisePricesForOutstandingShareOptionsAxis" xlink:label="loc_64"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_64" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_RangesOfExercisePricesForOutstandingShareOptionsMember" xlink:label="loc_65"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_65" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_NumberOfOutstandingShareOptions" xlink:label="loc_66"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_66" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_WeightedAverageRemainingContractualLifeOfOutstandingShareOptions" xlink:label="loc_67"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_67" xlink:to="res_23"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2011-03-25.xsd#ifrs_NumberOfInstrumentsGrantedInSharebasedPaymentArrangement" xlink:label="loc_40"/>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="loc_40" xlink:to="res_26"/>
+  </link:referenceLink>
+</link:linkbase>

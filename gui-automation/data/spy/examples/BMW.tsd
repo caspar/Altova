@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v5 rc 1 U (http://www.xmlspy.com) by Mohan Gulati (Altova) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tsd="http://namespaces.softwareag.com/tamino/TaminoSchemaDefinition" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:appinfo>
+			<tsd:schemaInfo name="BMW">
+				<tsd:collection name="cars"/>
+				<tsd:doctype name="Limousine">
+					<tsd:logical>
+						<tsd:content>closed</tsd:content>
+					</tsd:logical>
+				</tsd:doctype>
+			</tsd:schemaInfo>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:element name="Limousine">
+		<xs:annotation>
+			<xs:documentation>The root element is usually named the same as the doctype.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EngineSpec" type="xs:string"/>
+				<xs:element name="Type" type="xs:string"/>
+				<xs:element name="Interior">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="HiFiSystem" type="xs:string"/>
+							<xs:element name="Covering" type="xs:string"/>
+							<xs:element name="SatNav" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Extras">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Metalic" type="xs:boolean"/>
+							<xs:element name="Sunroof" type="xs:boolean"/>
+							<xs:element name="Magwheels" type="xs:boolean"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

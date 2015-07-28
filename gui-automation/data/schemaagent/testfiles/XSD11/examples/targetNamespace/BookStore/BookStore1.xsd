@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2013 rel. 2 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.bookstore.org" xmlns:b="http://www.book.org" xmlns:ns="http://www.org.com" targetNamespace="http://www.bookstore.org" elementFormDefault="qualified" version="1.1">
+	<xs:import namespace="http://www.book.org" schemaLocation="Book1.xsd"/>
+	<xs:complexType name="BookTypeMyNamespace">
+		<xs:complexContent>
+			<xs:restriction base="b:BookType">
+				<xs:sequence>
+					<xs:element name="Title" type="xs:string" targetNamespace="http://www.book.org"/>
+					<xs:element name="Author" type="xs:string" targetNamespace="http://www.book.org" maxOccurs="2"/>
+					<xs:element name="Date" type="xs:gYear" targetNamespace="http://www.book.org"/>
+					<xs:element name="ISBN" type="xs:string" targetNamespace="http://www.book.org"/>
+					<xs:element name="Publisher" type="xs:string" targetNamespace="http://www.book.org"/>
+				</xs:sequence>
+				<xs:attribute name="myBookTypeAttr" type="xs:boolean" use="required" targetNamespace="http://www.book.org"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="BookStore">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Book" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="BookTypeMyNamespace"/>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

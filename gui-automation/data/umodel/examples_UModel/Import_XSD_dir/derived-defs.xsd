@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--include base types-->
+<xsd:include schemaLocation="base-defs.xsd"/>
+<!--derived types -->
+	<xsd:complexType name="Human">
+		<xsd:complexContent>
+			<xsd:extension base="starWarsEntity">
+				<xsd:sequence>
+					<xsd:element name="gender" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="Ewok">
+		<xsd:complexContent>
+			<xsd:extension base="starWarsEntity">
+				<xsd:sequence>
+					<xsd:element name="vehicle" type="xsd:string"/>
+					<xsd:element name="society" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping version="7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<component name="defaultmap1" blackbox="0" uid="70652024" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="equal" library="core" uid="70093856" kind="5">
+					<sources>
+						<datapoint pos="0" key="83639648"/>
+						<datapoint pos="1" key="83640168"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="83640592"/>
+					</targets>
+					<view ltx="246" lty="309" rbx="15" rby="-52"/>
+				</component>
+				<component name="filter" library="core" uid="70103432" kind="3">
+					<sources>
+						<datapoint pos="0" key="83641912"/>
+						<datapoint pos="1" key="118890760"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="118891184"/>
+						<datapoint/>
+					</targets>
+					<view ltx="346" lty="405" rbx="-294" rby="-36"/>
+				</component>
+				<component name="equal" library="core" uid="70074480" kind="5">
+					<sources>
+						<datapoint pos="0" key="118892400"/>
+						<datapoint pos="1" key="118892824"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="118893248"/>
+					</targets>
+					<view ltx="247" lty="474" rbx="24" rby="-14"/>
+				</component>
+				<component name="constant" library="core" uid="76856224" kind="2">
+					<targets>
+						<datapoint pos="0" key="118894392"/>
+					</targets>
+					<view ltx="133" lty="382" rbx="-507" rby="-59"/>
+					<data>
+						<constant value="Marketing" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="70208912" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="76254472"/>
+						<datapoint pos="1" key="76597248"/>
+						<datapoint pos="2" key="76597616"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="76598056"/>
+					</targets>
+					<view ltx="349" lty="22" rbx="284" rby="-291"/>
+				</component>
+				<component name="constant" library="core" uid="76604440" kind="2">
+					<targets>
+						<datapoint pos="0" key="76903672"/>
+					</targets>
+					<view ltx="255" lty="49" rbx="-385" rby="-392"/>
+					<data>
+						<constant value=" " datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="67496512" kind="2">
+					<targets>
+						<datapoint pos="0" key="76905600"/>
+					</targets>
+					<view ltx="107" lty="497" rbx="-533" rby="56"/>
+					<data>
+						<constant value="2003-01-02" datatype="anySimpleType"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="71148272" kind="14">
+					<properties/>
+					<view ltx="495" lty="5" rbx="674" rby="191"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:marketing-expenses" expanded="1">
+								<entry name="0:Person" expanded="1" inpkey="83343760">
+									<entry name="0:FullName" inpkey="83343320"/>
+									<entry name="0:Title" inpkey="83342392"/>
+									<entry name="0:Phone" inpkey="83341952"/>
+									<entry name="0:Email" inpkey="83703296"/>
+								</entry>
+								<entry name="0:expense-item" expanded="1" inpkey="83342880">
+									<entry name="0:type" inpkey="76792608"/>
+									<entry name="0:Date" inpkey="77097288"/>
+									<entry name="0:expense" inpkey="83341584"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="MarketingExpenses.xsd" instanceroot="{}marketing-expenses"/>
+					</data>
+				</component>
+				<component name="filter" library="core" uid="76640272" kind="3">
+					<sources>
+						<datapoint pos="0" key="118729512"/>
+						<datapoint pos="1" key="83638152"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="83638504"/>
+						<datapoint/>
+					</targets>
+					<view ltx="320" lty="248" rbx="-320" rby="-193"/>
+				</component>
+				<component name="document" library="xml" uid="71150632" kind="14">
+					<properties/>
+					<view rbx="197" rby="277"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:expense-report" expanded="1">
+								<entry name="0:Person" expanded="1" outkey="83318608">
+									<entry name="0:First" outkey="83319536"/>
+									<entry name="0:Last" outkey="83319976"/>
+									<entry name="0:Title" outkey="83320416"/>
+									<entry name="0:Phone" outkey="83320856"/>
+									<entry name="0:Email" outkey="77099024"/>
+								</entry>
+								<entry name="0:expense-item" expanded="1" outkey="83319096">
+									<entry name="0:@type" outkey="77118384"/>
+									<entry name="0:@expto" outkey="83317288"/>
+									<entry name="0:Date" outkey="83317728"/>
+									<entry name="0:expense" outkey="83318168"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ExpReport.xsd" inputinstance="ExpReport.xml" instanceroot="{}expense-report"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="67911480" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="495" lty="235" rbx="670" rby="438"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:daily-expenses" expanded="1">
+								<entry name="0:Person" expanded="1" inpkey="83331496"/>
+								<entry name="0:expense-item" expanded="1" inpkey="119738440">
+									<entry name="0:@expense" inpkey="83333080"/>
+									<entry name="0:@type" inpkey="83333520"/>
+									<entry name="0:@expto" inpkey="83333960"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="DailyExpenses.xsd" instanceroot="{}daily-expenses"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="77116848"/>
+					<edge edgekey="77117608"/>
+					<edge edgekey="77119192"/>
+					<edge edgekey="77120360"/>
+					<edge edgekey="83316080"/>
+					<edge edgekey="83359160"/>
+					<edge edgekey="83359408"/>
+					<edge edgekey="83359904"/>
+					<edge edgekey="83360152"/>
+					<edge edgekey="83360648"/>
+					<edge edgekey="83360896"/>
+					<edge edgekey="83361144"/>
+					<edge edgekey="83361392"/>
+					<edge edgekey="83361640"/>
+					<edge edgekey="83361888"/>
+					<edge edgekey="83362136"/>
+					<edge edgekey="83362384"/>
+					<edge edgekey="83362632"/>
+					<edge edgekey="83362880">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="83363128"/>
+					<edge edgekey="83363376"/>
+					<edge edgekey="83363872"/>
+					<edge edgekey="83364120"/>
+					<edge edgekey="83364616"/>
+					<edge edgekey="83364864"/>
+				</edges>
+				<vertices>
+					<vertex vertexkey="76598056">
+						<edges>
+							<edge vertexkey="83343320" edgekey="83361144"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76903672">
+						<edges>
+							<edge vertexkey="76597248" edgekey="83360896"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76905600">
+						<edges>
+							<edge vertexkey="118892824" edgekey="77117608"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77099024">
+						<edges>
+							<edge vertexkey="83703296" edgekey="83364120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77118384">
+						<edges>
+							<edge vertexkey="76792608" edgekey="83361640"/>
+							<edge vertexkey="83333520" edgekey="83361888"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83317288">
+						<edges>
+							<edge vertexkey="83639648" edgekey="83362136"/>
+							<edge vertexkey="83333960" edgekey="83362384"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83317728">
+						<edges>
+							<edge vertexkey="77097288" edgekey="83359160"/>
+							<edge vertexkey="118892400" edgekey="83359408"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83318168">
+						<edges>
+							<edge vertexkey="83341584" edgekey="77120360"/>
+							<edge vertexkey="83333080" edgekey="83316080"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83318608">
+						<edges>
+							<edge vertexkey="83343760" edgekey="83362632"/>
+							<edge vertexkey="83331496" edgekey="83362880"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83319096">
+						<edges>
+							<edge vertexkey="118729512" edgekey="83363128"/>
+							<edge vertexkey="83641912" edgekey="83363376"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83319536">
+						<edges>
+							<edge vertexkey="76254472" edgekey="83363872"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83319976">
+						<edges>
+							<edge vertexkey="76597616" edgekey="83359904"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83320416">
+						<edges>
+							<edge vertexkey="83342392" edgekey="77116848"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83320856">
+						<edges>
+							<edge vertexkey="83341952" edgekey="83360152"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83638504">
+						<edges>
+							<edge vertexkey="83342880" edgekey="77119192"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83640592">
+						<edges>
+							<edge vertexkey="83638152" edgekey="83364864"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="118891184">
+						<edges>
+							<edge vertexkey="119738440" edgekey="83364616"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="118893248">
+						<edges>
+							<edge vertexkey="118890760" edgekey="83361392"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="118894392">
+						<edges>
+							<edge vertexkey="83640168" edgekey="83360648"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

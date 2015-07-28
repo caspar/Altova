@@ -1,0 +1,12 @@
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.1">
+<xsd:complexType name="FluxCapacitorType">
+  <xsd:choice>
+       <xsd:element name="autoFunction" type="AutoFunctionType"/>
+       <xsd:all>
+            <xsd:element name="timeCalibrator" type="string" maxOccurs="unbounded"/>
+            <xsd:element name="needsRecharge" type="boolean" minOccurs="3" maxOccurs="unbounded"/>
+      </xsd:all>
+   </xsd:choice>
+</xsd:complexType>
+</xsd:schema>

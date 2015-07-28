@@ -1,0 +1,9 @@
+<!-- edited with XMLSpy v2012 rel. 2 sp1 (http://www.altova.com) by k (Altova GmbH) -->
+<link:linkbase xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:link="http://www.xbrl.org/2003/linkbase">
+	<link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+		<link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="us-gaap_CapitalLeasesLessorBalanceSheetNetInvestmentInDirectFinancingLeasesCurrent1" xlink:to="label"/>
+		<link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2011/elts/us-gaap-2011-01-31.xsd#us-gaap_CapitalLeasesLessorBalanceSheetNetInvestmentInDirectFinancingLeasesCurrent" xlink:label="us-gaap_CapitalLeasesLessorBalanceSheetNetInvestmentInDirectFinancingLeasesCurrent1"/>
+		<link:reference xlink:type="resource" xlink:role="http://www.xbrl.org/2003/role/disclosureRef" xlink:label="label"/>
+		<link:loc xlink:type="locator" xlink:href="http://xbrl.fasb.org/us-gaap/2011/elts/us-gaap-2011-01-31.xsd#us-gaap_CapitalLeasesLessorBalanceSheetNetInvestmentInDirectFinancingLeasesCurrent" xlink:label="us-gaap_CapitalLeasesLessorBalanceSheetNetInvestmentInDirectFinancingLeasesCurrent"/>
+	</link:referenceLink>
+</link:linkbase>

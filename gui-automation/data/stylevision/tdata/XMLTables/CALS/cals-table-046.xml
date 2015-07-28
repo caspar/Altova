@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
++........+........+
+ |A       |B       |
++........+........+
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+               "http://www.altova.com/schemas/docbook/docbookx.dtd">
+<?altova_sps cals-table-maindesign.sps?>
+<book>
+	<article>
+		<articleinfo>
+			<title>CALS Table Test: 046   ErrorCase - cols missing is tgroup  - required element</title>
+			<releaseinfo>Release 2011</releaseinfo>
+			<author>
+				<firstname>rip</firstname>
+				<surname></surname>
+				<affiliation>
+					<address>
+						<email>rip@altova.com</email>
+					</address>
+				</affiliation>
+			</author>
+			<subtitle>neg TCAse: Test tgroup with no cols attribute</subtitle>
+		</articleinfo>
+		<table frame="all" colsep="1" rowsep="1">
+			<title>Test tgroup with no cols attribute</title>
+			<tgroup>
+				<colspec colname="col1" colnum="1"/>
+				<tbody>
+					<row>
+						<entry>A</entry>
+						<entry>B</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</article>
+</book>

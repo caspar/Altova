@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Robots class hierarchy</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="robots_classes.xhtml">Next: Robots class hierarchy</a>
+		</div>
+		<div class="previous">
+			<a href="jni_howto.xhtml">Previous: Using Java Native Interface (JNI)</a>
+		</div>
+		<h1>Overview of the Automation Framework</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">
+		The GUI automation framework involves several pieces of technology. The previous sections have already looked at how to install and use most of the various bits involved. This and the next sections will look in more detail at the Java code which seams all the bits together.</div>
+		<div class="p">
+		This Java source code full own by Altova, which means we have full control over how the automated tests are designed, run, and maintained and also how reporting is generated. Although I believe it is not more complex than a third-party testing tool, there certainly are more small details to know about. I would encourage anybody continuing work on the testing framework to update these pages, Java doc, and other notes, to keep and overview of all the new and old details at all times.</div>
+		<h2>
+			<a name="2" />Framework classes and test classes</h2>
+		<div class="p">
+		As we've seen, JUnit is used to drive the automated tests, while various <i>Robot</i> classes execute each of the steps involved in a test. This separation between framework classes and test classes is illustrated in the diagram below. On the left hand side, the <i>AbstractUmodelTest</i> and <i>FileMenuTest</i> classes contain the code for each test. In <i>FileMenuTest</i> some of the methods are shown, like <i>testNewPrj()</i>, <i>testLoadPrj()</i>, etc. If you look at the source code for these tests at <div class="file">C:\work\gui-automation\src\com\altova\umodel\regression\testcases\FileMenuTest.java</div> you will see that each method is very small, containing only 2 till 5 lines of code. There will typically be one or more calls to methods in the <i>robot</i> class, and then an <i>assert</i>-method at the end. This is important, as the it means it is easy to construct new test based on existing, general code in the <i>Robot</i> class. </div>
+		<div class="p">
+		On the right hand side of the diagram, the <i>AltovaApplicationRobot</i> and <i>UModelRobot</i> classes contain general methods like <i>newPrj()</i>, <i>openPrj(String name)</i>, <i>exitWithoutSave()</i>, etc. (most of the other methods have been hidden to keep the diagram small). As seen, these methods take parameters based on the tasks they perform. E.g the <i>openPrj(String name)</i> method takes the path and file name of the UMP project file to be loaded. This is all that is needed to get this project in an open and ready to use state. The method will take care of possible dialog boxes of the previous project. It will also check if the file actually exists, and throw a Java Exception (more specifically our own <i>ScriptMistakeException</i>), if the file was not found.</div>
+		<div class="p">
+		There are more classes in the hierarchy shown here. Please refer to the sections <a href="robots_classes.xhtml">Robots class hierarchy</a>, and <a href="junit_classes.xhtml">JUnit classes</a> for further details.
+			<map id="robots_overview">
+				<area alt="AbstractUmodelTest" coords="277,227,397,245" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\testcases\AbstractUmodelTest.html" />
+				<area alt="AltovaApplicationRobot" coords="584,35,728,53" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\robots\AltovaApplicationRobot.html" />
+				<area alt="UModelRobot" coords="614,156,697,175" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\gui\UModelRobot.html" />
+				<area alt="FileMenuTest" coords="294,334,379,353" href="file://S:\QA\Internal\Test-Cases\Automated_GUI_Tests\src-code\robotsapi\com\altova\umodel\regression\testcases\FileMenuTest.html" />
+			</map>
+			<img alt="robot hierarchy" src="robots_overview.png" class="diagram" usemap="#robots_overview" />
+			<i>Click on the classes to go directly to the Java Doc.</i>
+		</div>
+		<h2>
+			<a name="Image_Recognition" />Image Recognition</h2>
+		<div class="p">
+		The GUI automation test cases are mostly driven by mouse clicks on menus and icons, and some keyboard typing in dialog boxes etc. The latter is easy, the letters will show up on screen in whatever dialog or window that is active when a key is pressed. The challenge is usually to get the focus there in the first place, and usually this is done through mouse clicks.</div>
+		<div class="p">
+		However, before the mouse is clicked, the cursor has to be positioned at the appropriate location, and to find this location becomes the problem to be solved. The solutions which exists in various testing software out there, can broadly be categories as:
+		<ol>
+			<li><b>Record and play back:</b> Stores exact screen coordinates (x,y) and clicks the exact same locations when the test is run. This breaks down as soon as a button is shifted because of new features, the window is smaller than last time, etc.</li>
+			<li><b>Scripting with UI component IDs:</b> To mitigate the hard coded coordinates problem, some software stores Window component IDs, and searches for them when the test is run. Test Complete used this strategy, and it would break down since the IDs changed with almost every build. Furthermore, it could not handle diagrams like in UModel, MapForce or Schema View in any way.</li>
+			<li><b>Image and text Recognition:</b> To get rid of both the coordinate and component ID problems, a few tools use picture matching to find where to click. This searches the whole screen for icons, buttons or text and dynamically finds the locations this way. However, some pitfalls exits, including changes in color resolution, anti-aliasing and special problems with Windows XP and Vista themes.</li>
+		</ol>
+		Our GUI testing framework use the later method of image recognition, and this is proved to work very well across all the platforms we test on, including Windows XP, 2003 , 2008, Vista and Windows 7. As long as the <i>Windows Classic theme</i> is used, and some appearence settings are set in the cases of Windows 7, the tests are quite reliable. A detailed description about this issue can be found under section  <a href="lookout.xhtml#5"/>"Other things to look out for : Windows frames"<a/> within this tutorial. As an added benefit, it also works on virtual machines, however, due to CPU power on those, the tests might have to be slowed down a bit. If using virtual machines to run the tests, however, it is recommended to establish the connection with the VMWare or VSphere clients and not via Remote Desktop Connection to avoid external interruptions.  
+		</div>
+		<div class="p">
+		For more details about image recognition, refer to the section <a href="robots_classes.xhtml#4">ImageRecognitionRobot</a>, and the class with the same name. Also, see special section <a href="lookout.xhtml#1">Picture recognition</a>. Finally, the <a href="robotscenter.xhtml">Robots Center application</a> might be of help.
+		</div>
+		<h2>
+			<a name="4" />Text Recognition</h2>
+		<div class="p">
+		As mentioned, text recognition is also deployed in our testing code. This is merely a specialization of the image recognition, with some special issues to look out for. The text to search for is encoded as an image on the fly, and the problem is recast into a image recognition task. This has the added benefit of intercepting all text searches at a single point, which is an advantage if testing of translated software is to be attempted. For more on text recognition, see section <a href="lookout.xhtml#2">Different fonts</a>. Finally, the <a href="robotscenter.xhtml">Robots Center application</a> might be of help.
+		</div>
+	</body>
+</html>

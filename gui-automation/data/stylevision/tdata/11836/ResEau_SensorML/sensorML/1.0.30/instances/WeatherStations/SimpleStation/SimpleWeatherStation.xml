@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<SensorML xmlns="http://www.opengis.net/sensorML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink"
+          xsi:schemaLocation="http://www.opengis.net/sensorML ../../../base/sensorML.xsd" version="1.0">
+	<System xmlns="http://www.opengis.net/sensorML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink"
+	        xsi:schemaLocation="http://www.opengis.net/sensorML ../../../base/sensorML.xsd" id="Davis_Simple_Station">
+		<identification>
+			<IdentifierList>
+				<identifier name="longName">
+					<Term>Davis Weather Monitor II Station</Term>
+				</identifier>
+				<identifier name="shortName">
+					<Term>Davis Weather Station</Term>
+				</identifier>
+				<identifier name="modelNumber">
+					<Term qualifier="urn:ogc:identifier:modelNumber">7440</Term>
+				</identifier>
+				<identifier name="manufacturer">
+					<Term qualifier="urn:ogc:identifier:manufacturer">Davis Instruments</Term>
+				</identifier>
+			</IdentifierList>
+		</identification>
+		<classification>
+			<ClassifierList>
+				<classifier name="intendedApplication">
+					<Term qualifier="urn:sensor:classifier:application">weather</Term>
+				</classifier>
+				<classifier name="sensorType">
+					<Term qualifier="urn:sensor:classifier:sensorType">thermometer</Term>
+				</classifier>
+				<classifier name="sensorType">
+					<Term qualifier="urn:sensor:classifier:sensorType">barometer</Term>
+				</classifier>
+				<classifier name="sensorType">
+					<Term qualifier="urn:sensor:classifier:sensorType">anemometer</Term>
+				</classifier>
+				<classifier name="sensorType">
+					<Term qualifier="urn:sensor:classifier:sensorType">rain gauge</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">atmospheric temperature</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">barometric pressure</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">wind speed</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">wind direction</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">wind chill</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">rainfall amount</Term>
+				</classifier>
+			</ClassifierList>
+		</classification>
+		<description/>
+		<contact xlink:href="./DavisInstruments" role="urn:ogc:role:manufacturer"/>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!--Station Coordinate Frame -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<referenceFrame>
+			<LocalSpatialCRS id="STATION_FRAME">
+				<srsName>Station Frame</srsName>
+				<usesCS xlink:href="urn:ogc:cs:xyzFrame"/>
+				<usesDatum>
+					<LocalSpatialDatum>
+						<datumName>Station Datum</datumName>
+						<anchorPoint>origin is at the base of the mounting</anchorPoint>
+						<orientation>x and Y are orthogonal to z but undetermined
+						z is along the axis of the mounting pole - typically vertical</orientation>
+					</LocalSpatialDatum>
+				</usesDatum>
+			</LocalSpatialCRS>
+		</referenceFrame>
+		<!--~~~~~~~~~~~~~-->
+		<!--Sensor Inputs-->
+		<!--~~~~~~~~~~~~~-->
+		<inputs>
+			<InputList>
+				<input name="atmosphericTemperature">
+					<swe:Quantity definition="urn:ogc:phenomenon:temperature"/>
+				</input>
+				<input name="wind">
+					<swe:Quantity definition="urn:ogc:phenomenon:windSpeed"/>
+				</input>
+				<input name="rainfall">
+					<swe:Quantity definition="urn:ogc:phenomenon:rainfall"/>
+				</input>
+				<input name="atmosphericPressure">
+					<swe:Quantity definition="urn:ogc:phenomenon:pressure"/>
+				</input>
+			</InputList>
+		</inputs>
+		<!--~~~~~~~~~~~~~~-->
+		<!--Sensor Outputs-->
+		<!--~~~~~~~~~~~~~~-->
+		<outputs>
+			<OutputList>
+				<output name="weatherMeasurements">
+					<swe:DataGroup id="outputGroup">
+						<swe:component name="time">
+							<swe:Quantity definition="urn:ogc:phenomenon:time"/>
+						</swe:component>
+						<swe:component name="measuredTemperature">
+							<swe:Quantity definition="urn:ogc:phenomenon:temperature"/>
+						</swe:component>
+						<swe:component name="measuredWindSpeed">
+							<swe:Quantity definition="urn:ogc:phenomenon:windSpeed"/>
+						</swe:component>
+						<swe:component name="measuredWindDirection">
+							<swe:Quantity definition="urn:ogc:phenomenon:windDirection"/>
+						</swe:component>
+						<swe:component name="measuredRainfall">
+							<swe:Quantity definition="urn:ogc:phenomenon:rainfall"/>
+						</swe:component>
+						<swe:component name="measuredBarometricPressure">
+							<swe:Quantity definition="urn:ogc:phenomenon:pressure"/>
+						</swe:component>
+					</swe:DataGroup>
+				</output>
+			</OutputList>
+		</outputs>
+		<processes>
+			<ProcessList>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--  Barometric Pressure Measurement  -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<process name="barometer">
+					<Transducer id="davisBarometer">
+						<identification>
+							<IdentifierList>
+								<identifier name="shortName">
+									<Term>Davis Internal Barometer</Term>
+								</identifier>
+							</IdentifierList>
+						</identification>
+						<inputs>
+							<InputList>
+								<input name="barometricPressure">
+									<swe:Quantity definition="urn:ogc:phenomenon:barometricPressure"/>
+								</input>
+							</InputList>
+						</inputs>
+						<outputs>
+							<OutputList>
+								<output name="measuredBarometricPressure">
+									<swe:Quantity definition="urn:ogc:phenomenon:barometricPressure"/>
+								</output>
+							</OutputList>
+						</outputs>
+						<parameters>
+							<ParameterList>
+								<steadyStateResponse>
+									<NormalizedCurve>
+										<function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<!-- this needs better definition -->
+														<!-- i.e. relative to North, direction upwind or down? -->
+														<swe:axis name="atmosphericPressure">
+															<swe:Quantity definition="urn:ogc:phenomenon:barometricPressure" uom="urn:ogc:unit:pascal" scale="1000"/>
+														</swe:axis>
+														<swe:axis name="measuredBarometricPressure">
+															<swe:Quantity definition="urn:ogc:phenomenon:barometricPressure" uom="urn:ogc:unit:pascal" scale="1000"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>880.0,880.0 1080.0,1080.0</swe:tupleValues>
+											</swe:Curve>
+										</function>
+									</NormalizedCurve>
+								</steadyStateResponse>
+							</ParameterList>
+						</parameters>
+						<method xlink:href="urn:ogc:process:transducer"/>
+					</Transducer>
+				</process>
+				<process name="thermometer">
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<!-- Description of Temperature Transducer -->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<Transducer id="Davis_7817">
+						<!--~~~~~~~~~~~~~-->
+						<!--Sensor Inputs-->
+						<!--~~~~~~~~~~~~~-->
+						<inputs>
+							<InputList>
+								<input name="temperature">
+									<swe:Quantity definition="urn:ogc:phenomenon:temperature"/>
+								</input>
+							</InputList>
+						</inputs>
+						<!--~~~~~~~~~~~~~~-->
+						<!--Sensor Outputs-->
+						<!--~~~~~~~~~~~~~~-->
+						<outputs>
+							<OutputList>
+								<output name="measuredTemperature">
+									<swe:Quantity definition="urn:ogc:phenomenon:temperature"/>
+								</output>
+							</OutputList>
+						</outputs>
+						<!--~~~~~~~~~~~~~~~~~-->
+						<!--Sensor Parameters-->
+						<!--~~~~~~~~~~~~~~~~~-->
+						<parameters>
+							<ParameterList>
+								<steadyStateResponse>
+									<NormalizedCurve>
+										<function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="realTemperature">
+															<swe:Quantity definition="urn:ogc:data:quantity:temperature" uom="urn:ogc:unit:degree:celsius"/>
+														</swe:axis>
+														<swe:axis name="measuredTemperature">
+															<swe:Quantity definition="urn:ogc:data:quantity:temperature" uom="urn:ogc:unit:degree:celsius"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>-50,-50 140,140</swe:tupleValues>
+											</swe:Curve>
+										</function>
+									</NormalizedCurve>
+								</steadyStateResponse>
+							</ParameterList>
+						</parameters>
+						<method xlink:href="urn:ogc:process:transducer"/>
+					</Transducer>
+				</process>
+				<!-- ~~~~~~~~~ End of Thermometer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!-- Description of Anemometer Sensor      -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<process name="windSpeedTransducer">
+					<Transducer id="windSpd_7911">
+						<identification>
+							<IdentifierList>
+								<identifier name="shortName">
+									<Term>Davis 7911 Wind Speed</Term>
+								</identifier>
+							</IdentifierList>
+						</identification>
+						<inputs>
+							<InputList>
+								<input name="windSpeed">
+									<swe:Quantity definition="urn:ogc:phenomenon:speed"/>
+								</input>
+							</InputList>
+						</inputs>
+						<outputs>
+							<OutputList>
+								<output name="measuredWindSpeed">
+									<swe:Quantity definition="urn:ogc:phenomenon:speed"/>
+								</output>
+							</OutputList>
+						</outputs>
+						<parameters>
+							<ParameterList>
+								<steadyStateResponse>
+									<NormalizedCurve>
+										<function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="windSpeed">
+															<swe:Quantity definition="urn:ogc:phenomenon:speed" uom="urn:ogc:unit:metersPerSecond"/>
+														</swe:axis>
+														<swe:axis name="measuredWindSpeed">
+															<swe:Quantity definition="urn:ogc:phenomenon:speed" uom="urn:ogc:unit:metersPerSecond"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>0.9,0.9 78,78</swe:tupleValues>
+											</swe:Curve>
+										</function>
+									</NormalizedCurve>
+								</steadyStateResponse>
+							</ParameterList>
+						</parameters>
+						<method xlink:href="urn:ogc:process:transducer"/>
+					</Transducer>
+				</process>
+				<process name="windDirectionTransducer">
+					<Transducer id="windDir_7911">
+						<identification>
+							<IdentifierList>
+								<identifier name="shortName">
+									<Term>Davis 7911 Wind Direction</Term>
+								</identifier>
+							</IdentifierList>
+						</identification>
+						<inputs>
+							<InputList>
+								<input name="windDirection">
+									<swe:Quantity definition="urn:ogc:phenomenon:direction"/>
+								</input>
+							</InputList>
+						</inputs>
+						<outputs>
+							<OutputList>
+								<output name="measuredWindDirection">
+									<swe:Quantity definition="urn:ogc:phenomenon:direction"/>
+								</output>
+							</OutputList>
+						</outputs>
+						<parameters>
+							<ParameterList>
+								<steadyStateResponse>
+									<NormalizedCurve>
+										<function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<!-- this needs better definition -->
+														<!-- i.e. relative to North, direction upwind or down? -->
+														<swe:axis name="windDirection">
+															<swe:Quantity definition="urn:ogc:phenomenon:direction" uom="urn:ogc:unit:angularDegree"/>
+														</swe:axis>
+														<swe:axis name="measuredWindDirection">
+															<swe:Quantity definition="urn:ogc:phenomenon:direction" uom="urn:ogc:unit:angularDegree"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>0.0,0.0 360.0,360.0</swe:tupleValues>
+											</swe:Curve>
+										</function>
+									</NormalizedCurve>
+								</steadyStateResponse>
+							</ParameterList>
+						</parameters>
+						<method xlink:href="urn:ogc:process:transducer"/>
+					</Transducer>
+				</process>
+				<!-- ~~~~~~~~~ End of Anemometer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+				<process name="rainGaugeSensor">
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<!-- Description of Rain Gauge Transducer -->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<Transducer id="Davis_7852M">
+						<identification>
+							<IdentifierList>
+								<identifier name="shortName">
+									<Term>Davis 7852 Rain Gauge</Term>
+								</identifier>
+							</IdentifierList>
+						</identification>
+						<inputs>
+							<InputList>
+								<input name="rainFall">
+									<swe:Quantity definition="urn:ogc:phenomenon:rainfall"/>
+								</input>
+							</InputList>
+						</inputs>
+						<!--~~~~~~~~~~~~~~-->
+						<!--Sensor Outputs-->
+						<!--~~~~~~~~~~~~~~-->
+						<outputs>
+							<OutputList>
+								<output name="measuredRainfall">
+									<swe:Quantity definition="urn:ogc:phenomenon:rainfall"/>
+								</output>
+							</OutputList>
+						</outputs>
+						<!--~~~~~~~~~~~~~~~~~-->
+						<!--Sensor Parameters-->
+						<!--~~~~~~~~~~~~~~~~~-->
+						<parameters>
+							<ParameterList>
+								<steadyStateResponse>
+									<NormalizedCurve>
+										<function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="cumulativeRainfall">
+															<swe:Quantity definition="urn:ogc:data:quantity:rainfall" uom="urn:ogc:unit:mm"/>
+														</swe:axis>
+														<swe:axis name="measuredCumulativeRainfall">
+															<swe:Quantity definition="urn:ogc:data:quantity:rainfall" uom="urn:ogc:unit:mm"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>0,0 999,999</swe:tupleValues>
+											</swe:Curve>
+										</function>
+									</NormalizedCurve>
+								</steadyStateResponse>
+								<accuracy>
+									<NormalizedCurve>
+										<function>
+											<swe:Curve arraySize="4">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="rainfallRate">
+															<swe:Quantity definition="urn:ogc:data:quantity:rainfalRate" uom="urn:ogc:unit:mmPerHour"/>
+														</swe:axis>
+														<swe:axis name="percentError">
+															<swe:Quantity definition="urn:ogc:data:quantity:accuracy" uom="urn:ogc:unit:percent"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>0.2,4.0 49.0,4.0 50.0,5.0 100.0,5.0</swe:tupleValues>
+											</swe:Curve>
+										</function>
+									</NormalizedCurve>
+								</accuracy>
+							</ParameterList>
+						</parameters>
+						<method xlink:href="urn:ogc:process:transducer"/>
+					</Transducer>
+					<!-- ~~~~~~~~~ End of Rain Gauge ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+				</process>
+			</ProcessList>
+		</processes>
+		<connections>
+			<ConnectionList>
+				<connection name="inputToCalibration">
+					<Link>
+						<source ref="this/inputs/temperature"/>
+						<destination ref="steadyStateResponse/inputs/temperature"/>
+					</Link>
+				</connection>
+				<connection name="inputToError">
+					<Link>
+						<source ref="this/inputs/temperature"/>
+						<destination ref="errorCurve/inputs/temperature"/>
+					</Link>
+				</connection>
+				<connection name="calibrationToOutput">
+					<Link>
+						<source ref="steadyStateResponse/outputs/resistance"/>
+						<destination ref="this/output/resistance"/>
+					</Link>
+				</connection>
+			</ConnectionList>
+		</connections>
+		<positions>
+			<PositionList>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!-- Position of Station in Lat, Lon, Alt -->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<position>
+					<swe:Position localFrame="#STATION_FRAME" referenceFrame="urn:ogc:crs:EPSG:4329">
+						<swe:location>
+							<swe:Location definition="urn:ogc:phenomenon:location">
+								<swe:x><swe:Quantity uom="urn:ogc:unit:degree">34.72450</swe:Quantity></swe:x>
+								<swe:y><swe:Quantity uom="urn:ogc:unit:degree">-86.94533</swe:Quantity></swe:y>
+								<swe:z><swe:Quantity uom="urn:ogc:unit:meter">20.1169</swe:Quantity></swe:z>
+							</swe:Location>
+						</swe:location>
+					</swe:Position>									
+				</position>
+			</PositionList>
+		</positions>
+	</System>
+	<!-- ~~~~~~~~~ End of System ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</SensorML>

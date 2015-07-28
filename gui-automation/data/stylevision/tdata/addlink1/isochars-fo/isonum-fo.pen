@@ -1,0 +1,104 @@
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOnum PUBLIC
+       "ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN//XML">
+     %ISOnum;
+-->
+<!-- This version of the entity set can be used with any SGML document
+     which uses ISO 10646 as its document character set. 
+     This includes XML documents and ISO HTML documents.
+     This entity set uses hexadecimal numeric character references. 
+          
+     Creator: Rick Jelliffe, Allette Systems
+     
+     Version: 1997-07-07
+-->
+
+<!ENTITY half   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#189;</inline>" ><!--=fraction one-half-->
+<!ENTITY frac12 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#189;</inline>" ><!--=fraction one-half-->
+<!ENTITY frac14 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#188;</inline>" ><!--=fraction one-quarter-->
+<!ENTITY frac34 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#190;</inline>" ><!--=fraction three-quarters-->
+<!ENTITY frac18 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x215B;</inline>" > 
+    <!-- or "&#xB1;&#x202;&#x2044;&#x2088;" --><!--=fraction one-eighth-->
+<!ENTITY frac38 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x215C;</inline>" >
+    <!-- or "&#xB3;&#x2044;&#x2088;" --><!--=fraction three-eighths-->
+<!ENTITY frac58 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x215D;</inline>" >
+    <!-- or "&#x2075;&#x2044;&#x2088;" --><!--=fraction five-eighths-->
+<!ENTITY frac78 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x215E;</inline>" >
+    <!-- or "&#x2077;&#x2044;&#x2088;" --><!--=fraction seven-eighths-->
+
+<!ENTITY sup1   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#185;</inline>" ><!--=superscript one-->
+<!ENTITY sup2   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#178;</inline>" ><!--=superscript two-->
+<!ENTITY sup3   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#179;</inline>" ><!--=superscript three-->
+
+<!ENTITY plus   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>+</inline>" ><!--=plus sign B:-->
+<!ENTITY plusmn "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xB1;</inline>" ><!--/pm B: =plus-or-minus sign-->
+<!-- <!ENTITY lt "<" predefined  in XML  =less-than sign R:-->
+<!ENTITY equals "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>=</inline>"      ><!--=equals sign R:-->
+<!ENTITY divide "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#247;</inline>" ><!--/div B: =divide sign-->
+<!ENTITY times  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#215;</inline>" ><!--/times B: =multiply sign-->
+
+<!ENTITY curren "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#164;</inline>" ><!--=general currency sign-->
+<!ENTITY pound  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#165;</inline>" ><!--=pound sign-->
+<!ENTITY dollar "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>$</inline>"      ><!--=dollar sign-->
+<!ENTITY cent   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#162;</inline>" ><!--=cent sign-->
+<!ENTITY yen    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#165;</inline>" ><!--/yen =yen sign-->
+
+<!ENTITY num    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>#</inline>" ><!--=number sign-->
+<!ENTITY percnt "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#37;</inline>" ><!--=percent sign-->
+<!-- "amp" predefined in XML !ENTITY amp    "&" =ampersand-->
+<!ENTITY ast    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>*</inline>" ><!--/ast B: =asterisk-->
+<!ENTITY commat "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>@</inline>" ><!--=commercial at-->
+<!ENTITY lsqb   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>[</inline>" ><!--/lbrack O: =left square bracket-->
+<!ENTITY bsol   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>\</inline>" ><!--/backslash =reverse solidus-->
+<!ENTITY rsqb   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>]</inline>" ><!--/rbrack C: =right square bracket-->
+<!ENTITY lcub   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>{</inline>" ><!--/lbrace O: =left curly bracket-->
+<!ENTITY horbar "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2015;</inline>" ><!--=horizontal bar-->
+<!ENTITY verbar "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>|</inline>" ><!--/vert =vertical bar-->
+<!ENTITY rcub   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>}</inline>" ><!--/rbrace C: =right curly bracket-->
+<!ENTITY micro  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#181;</inline>" ><!--=micro sign-->
+<!ENTITY ohm    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#2126;</inline>" ><!--=ohm sign-->
+<!ENTITY deg    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#176;</inline>" ><!--=degree sign-->
+<!ENTITY ordm   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#186;</inline>" ><!--=ordinal indicator, masculine-->
+<!ENTITY ordf   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#170;</inline>" ><!--=ordinal indicator, feminine-->
+<!ENTITY sect   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#167;</inline>" ><!--=section sign-->
+<!ENTITY para   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#182;</inline>" ><!--=pilcrow (paragraph sign)-->
+<!ENTITY middot "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#183;</inline>" ><!--/centerdot B: =middle dot-->
+<!ENTITY larr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2190;</inline>" ><!--/leftarrow /gets A: =leftward arrow-->
+<!ENTITY rarr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2192;</inline>" ><!--/rightarrow /to A: =rightward arrow-->
+<!ENTITY uarr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2191;</inline>" ><!--/uparrow A: =upward arrow-->
+<!ENTITY darr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2193;</inline>" ><!--/downarrow A: =downward arrow-->
+<!ENTITY copy   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#169;</inline>" ><!--=copyright sign-->
+<!ENTITY reg    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#174;</inline>" ><!--/circledR =registered sign-->
+<!ENTITY trade  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#8482;</inline>" ><!--=trade mark sign-->
+<!ENTITY brvbar "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xA6;</inline>" ><!--=bren (vertical) bar-->
+<!ENTITY not    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xAC;</inline>" ><!--/neg /lnot =not sign-->
+<!ENTITY sung   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x266A;</inline>" ><!--=music note (sung text sign)-->
+
+<!ENTITY excl   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>!</inline>" ><!--=exclamation mark-->
+<!ENTITY iexcl  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xA1;</inline>" ><!--=inverted exclamation mark-->
+<!ENTITY lpar   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>(</inline>" ><!--O: =left parenthesis-->
+<!ENTITY rpar   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>)</inline>" ><!--C: =right parenthesis-->
+<!ENTITY comma  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>,</inline>" ><!--P: =comma-->
+<!ENTITY lowbar "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>_</inline>" ><!--=low line-->
+<!ENTITY hyphen "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2010;</inline>" ><!--=hyphen-->
+<!ENTITY period "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>.</inline>" ><!--=full stop, period-->
+<!ENTITY sol    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>/</inline>" ><!--=solidus-->
+<!ENTITY colon  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>:</inline>" ><!--/colon P:-->
+<!ENTITY semi   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>;</inline>" ><!--=semicolon P:-->
+<!ENTITY quest  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>?</inline>" ><!--=question mark-->
+<!ENTITY iquest "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xBF;</inline>" ><!--=inverted question mark-->
+<!ENTITY laquo  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2039;</inline>" ><!--=angle quotation mark, left
+ But note that Unicode 1 & Maler & el Andaloussi give &#xAB; -->
+<!ENTITY raquo  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x203A;</inline>" ><!--=angle quotation mark, right
+ But note that Unicode 1 & Maler & el Andaloussi give &#xBB; -->
+<!ENTITY lsquo  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2018;</inline>" ><!--=single quotation mark, left-->
+<!ENTITY rsquo  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2019;</inline>" ><!--=single quotation mark, right-->
+<!ENTITY ldquo  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x201C;</inline>" ><!--=double quotation mark, left-->
+<!ENTITY rdquo  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x201D;</inline>" ><!--=double quotation mark, right-->
+<!ENTITY nbsp   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#160;</inline>" ><!--=no break (required) space-->
+<!ENTITY shy    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#173;</inline>" ><!--=soft hyphen-->

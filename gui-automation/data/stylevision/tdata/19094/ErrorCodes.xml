@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_sps C:\data\SOF\ErrorCodesTable.sps?>
+<?xml-stylesheet type="text/xsl" href="..\ErrorCodesTable.xsl"?>
+<errorCodesTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\data\SOF\BusinessRule.xsd">
+	<errorCodeDefinition>
+		<errorCodeValue>AU003</errorCodeValue>
+		<errorCodeMessage>Accès aux nouveaux projets non autorisé</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B002</errorCodeValue>
+		<errorCodeMessage>Garantie protection du véhicule non autorisée (véhicules lents)</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B004</errorCodeValue>
+		<errorCodeMessage>Valeur catalogue du véhicule trop élévée</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B017</errorCodeValue>
+		<errorCodeMessage>Acceptation réservée à la compagnie (âge preneur et/ou conducteur /source BM/antécédents)</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B019</errorCodeValue>
+		<errorCodeMessage>Antécédents du preneur d&apos;assurance défavorables</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B030</errorCodeValue>
+		<errorCodeMessage>Suspension examinée par la compagnie (circulation limitée)</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B032</errorCodeValue>
+		<errorCodeMessage>Paiement mensuel</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B033</errorCodeValue>
+		<errorCodeMessage>plaque CD ou &quot;plaque BZ&quot;</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B034</errorCodeValue>
+		<errorCodeMessage>Motif de suspension alimenté à &quot;autre&quot;</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B041</errorCodeValue>
+		<errorCodeMessage>Calcul des primes réservé à la compagnie (E201)</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B046</errorCodeValue>
+		<errorCodeMessage>Présence de clause(s) nécessitant un examen compagnie</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B052</errorCodeValue>
+		<errorCodeMessage>Rétroactivité supérieure à 60 jours pour la RC</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B057</errorCodeValue>
+		<errorCodeMessage>Genre = cyclo et Preneur d&apos;assurance de moins de 25 ans</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B326</errorCodeValue>
+		<errorCodeMessage>La date d&apos;effet de la modification est différée mais antérieure à la prochaine échéance</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>B513</errorCodeValue>
+		<errorCodeMessage>Police connexe &quot; famille&quot; ne répond pas aux critères d&apos;acceptation &quot; jeune&quot;</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>D001</errorCodeValue>
+		<errorCodeMessage>La compagnie de gestion n est pas AXA Belgium</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>D005</errorCodeValue>
+		<errorCodeMessage>Partage de commission avec autre producteur</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>D006</errorCodeValue>
+		<errorCodeMessage>Type de contrat hors Phoenix</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>D219</errorCodeValue>
+		<errorCodeMessage>Contrat suspendu depuis plus de 12 mois établissement d&apos;un nouveau contrat obligatoire.</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>D301</errorCodeValue>
+		<errorCodeMessage>Les actions &quot;correction&quot; et &quot;avenant&quot; sont inaccessibles au départ de la consultation de la situation historique d&apos;un contrat.</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>P851</errorCodeValue>
+		<errorCodeMessage>Attestation antivol non complétée. Si basculer offre vers nouveau projet : veuillez confirmer l&apos;attestation antivol.</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>P866</errorCodeValue>
+		<errorCodeMessage>Contrat connexe : numéro connexe doit être de la branche auto: le 4è chiffre du numéro est un &apos; 6 &apos;. N°d&apos;offre ou de tarification non autorisé</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>R502</errorCodeValue>
+		<errorCodeMessage>Usage &apos;courrier express&apos; non autorisé</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>R506</errorCodeValue>
+		<errorCodeMessage>Preneur trop âgé</errorCodeMessage>
+	</errorCodeDefinition>
+	<errorCodeDefinition>
+		<errorCodeValue>TBD</errorCodeValue>
+		<errorCodeMessage>To Be Defined</errorCodeMessage>
+	</errorCodeDefinition>
+</errorCodesTable>

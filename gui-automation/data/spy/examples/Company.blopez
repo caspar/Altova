@@ -1,0 +1,45 @@
+<html xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xmlns:my="http://my-company.com/namespace">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-16">
+<title>Your company</title></head>
+<body>
+<h1><center>Your Company</center></h1><strong>Name: </strong>US dependency<br><strong>Street: </strong>Noble Ave.<br><strong>City: </strong>New York<br><strong>State: </strong>Atlanta<br><strong>Zip: </strong>04812<br><br><table border="1" bgcolor="lime">
+<thead align="center">
+<td><strong>First</strong></td>
+<td><strong>Last</strong></td>
+<td><strong>Ext.</strong></td>
+<td><strong>E-Mail</strong></td>
+<td><strong>Manager</strong></td>
+<td><strong>Degree</strong></td>
+<td><strong>Programmer</strong></td>
+</thead>
+<tr>
+<td>Alfred</td>
+<td>Aldrich</td>
+<td>33</td>
+<td>Aldrich@work</td>
+<td>false</td>
+<td>MA</td>
+<td>true</td>
+</tr>
+<tr>
+<td>Colin</td>
+<td>Coletti</td>
+<td>44</td>
+<td>Coletti@work.com</td>
+<td>true</td>
+<td>Ph.D</td>
+<td>false</td>
+</tr>
+<tr>
+<td>Fred</td>
+<td>Smith</td>
+<td>22</td>
+<td>Smith@work.com</td>
+<td>true</td>
+<td>BA</td>
+<td>false</td>
+</tr>
+</table>
+</body>
+</html>

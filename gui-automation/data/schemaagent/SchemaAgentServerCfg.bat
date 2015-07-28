@@ -1,0 +1,1 @@
+copy "C:\Work\gui-automation\data\schemaagent\SchemaAgentServerCfg.xml" %1"\My Documents\Altova\SchemaAgentLocalServer2010"

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Using JUnit to create simple unit tests</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="jni_howto.xhtml">Next: Using Java Native Interface (JNI)</a>
+		</div>
+		<div class="previous">
+			<a href="eclipse_howto.xhtml">Previous: Working with Eclipse</a>
+		</div>
+		<h1>Using JUnit to create simple unit tests</h1>
+		<h2><a name="1"/>Background</h2>
+		<div class="p">
+			<i>"JUnit is a program used to perform unit testing  of virtually any software. JUnit testing is accomplished by writing test cases using Java, compiling these test cases and running the resultant classes with a JUnit Test Runner" </i> (<a href="http://admc.com/blaine/howtos/junit/ch01.html">JUnit Howto by B. Simpson</a>). JUnit is one of those de facto cornerstones of Java development, and fits snuggly into Eclipse, Ant and other basic developer tools. It takes about 10 minutes to learn the basics of JUnit.</div>
+		<h2><a name="2"/>Basic JUnit test</h2>
+		<div class="p">
+			<pre class="javacode">
+	public class My<b>Test </b>{
+	
+		<b>@Test</b>
+		public void test<b>Add</b>() {
+			int a = 3; 
+			int b = 4;
+			int c = myclass.<b>add</b>(a, b);
+			
+			<b>assertEquals(a+b, c);</b>
+		}
+	}
+			</pre>
+			
+			The above is a very simple JUnit test case, with only one test (or method). This is all you need to write to be able to compile, run and get a report from the test. Everything else is already taken care of for you. There are a few things to be aware of here:
+		</div>
+		<ul>
+			<li>The name of the class ends with <i>Test</i>. This is by convention.</li>
+			<li>Notice the <i>@Test</i>. The at-symbol (@) means that is is a Java <i>annotation</i>. Furthermore, it means it's a JUnit test method.</li>
+			<li>The name of the method is the same as the method under test. This is by convention. E.g. the method under test is <i>add</i>, an the JUnit method is <i>testAdd</i>. Also, the test is self contained. That means, it does not rely on any other tests to pass, and also, no other methods will fail if this test fails.</li>
+			<li>The final call to the method assertEquals (or equivalent assert method) is the key to get JUnit reporting. It takes two arguments, first the expected result, and then the actual output from the method under test.</li>
+			<li>This style of tests requires Java 1.5 or later an JUnit 4.0 or later.</li>
+		</ul>
+		<h2><a name="3"/>More efficient JUnit test</h2>
+		<div class="p">Even though each test should be self contained, it is very often the case that some steps has to be repeated for each test. E.g. some basic parameters have to be set, or cleared, a file has to be opened... For the example below, imagine a calculator is under test.
+			<pre class="javacode">
+	public class CalculatorTest {
+		<b>@BeforeClass</b>
+		public static void oneTimeSetUp() {
+			//init with some numbers
+			a = 3; 
+			b = 4;
+			
+			calculator.start();
+		}
+	
+		<b>@AfterClass</b>
+		public static void oneTimeTearDown() {
+			calculator.close();
+		}
+	
+		<b>@Before</b>
+		public void setUp() {
+			calculator.clearScreen();
+		}
+	
+		<b>@After</b>
+		public void tearDown() {
+			//check if the calculator crashed, etc.
+		}
+		
+		@Test
+		public void testAdd() {
+			int c = calculator.add(a, b);
+			assertEquals(a+b, c);
+		}
+		
+		@Test
+		public void testSubtract() {
+			int c = calculator.subtract(a, b);
+			assertEquals(a-b, c);
+		}
+	}
+			</pre>
+			
+			Here some more methods are added, and their purpose should be clear. Points to note:
+			<ul>
+				<li>The method with the annotation <i>@BeforeClass</i> will be run exactly once at the beginning of the whole test class. In this example it sets some variables and start the application under test.</li>
+				<li>The method with the annotation <i>@AfterClass</i> will be run exactly once after all the tests have finished, regardless of success or failure. In this example it closes the application under test.</li>
+				<li>The method with the annotation <i>@Before</i> is run once for each test method. In the example it clears the screen of the calculator.</li>
+				<li>The method with the annotation <i>@After</i> is run once for each test method. In the example it could check if the application crashed.</li>
+				<li>There are now two test methods, using the same test variables, but with different assert calls.</li>
+			</ul>
+			
+		Now you already know 90% of all there is to know about JUnit tests. The rest is just details, reporting and running.
+		</div>
+		<h2><a name="4"/>Super efficient JUnit test</h2>
+		<div class="p">Sometimes the exact same test method has to be run many times with different input values. Imagine testing all the possible numbers one could input to the sum method of the calculator. It would not be efficient to create one test method for each. Instead, JUnit offers an annotation <i>@Parameters</i>, which should be used with a method like this: <i>public static Collection data()</i>. 
+			<pre class="javacode">
+	<b>@RunWith(value = Parameterized.class)</b>
+	public class JUnitParameterizedTest {
+		private int input1;
+		private int input2;
+		private int expected;
+		
+		public JUnitParameterizedTest(<b>int input1, int input2, int expected</b>) {
+			this.input1 = input1;
+			this.input2 = input2;
+			this.expected = expected;
+		}
+		
+		<b>@Parameters</b>
+		public static <b>Collection</b> data() {
+			Object[][] data = new Object[][] { { <b>1, 1, 2</b> }, { 2, 2, 4 }, { 3, 5, 8 }, { 4, 0, 4 } };
+			return Arrays.asList(data);
+		}
+		
+		@Test
+		public void testAdd() {
+			int sum = calculator.add(<b>input1, input2</b>);
+			assertEquals("testNumber(" + input1 + "+" + input2 + ")", <b>expected</b>, sum);
+		}
+	}
+			</pre>
+		
+		Points to note here:
+		<ul>
+			<li>The whole test class in annotated with <i>@RunWith(value = Parameterized.class)</i></li>
+			<li>There is one public static method which return a Collection, and is annotated with <i>@Parameters</i>.</li>
+			<li>This Collection as to contain elements of Object[], which in turn contains the values passed to the constructor of the test.</li>
+			<li>Each method annotated with <i>@Test</i> will be run once for each of the elements in the Collection returned from the data() method.</li>
+		</ul>
+		</div>
+		<div class="p">Another usage is of this type of test, is to pass in source and reference files to the constructor, and run the test one time for each of the test case files you have on disk. Example: populate the Collection with the XSD files you want to pass along to the validator.</div>
+		<h2><a name="5"/>How to create a test based on an existing class in Eclipse</h2>
+		<div class="p">Using Eclipse, it is very easy to create the test class filled out with the test methods you select.
+			<ul>
+				<li>Find the class you want to test in the Package Explorer and right-click.</li>
+				<li>Select New -&gt; JUnit Test Case</li>
+				<li>In the dialog which appears, select the name of your new test class.</li>
+				<li>Select if you want to have the before/after methods generated as well.</li>
+				<li>Click Next and select which methods you want to include in the test.</li>
+			</ul>
+			<a href="eclipse_new_junit.wmv">You can see a short movie of how to create a new JUnit test here.</a>
+		</div>
+		<h2><a name="6"/>How to run a test using Ant</h2>
+		<div class="p">Running your new test using the existing Ant script is easy. Assuming you've set up your environment according to the <a href="quick_start.xhtml#3">introduction article</a>, you can type in this in your command window:
+		<pre class="cmd">
+		cd c:\work\gui-automation
+		ant
+		ant test -Dclassname=MyNewTest</pre>
+		</div>
+		<div class="p">There is an easier way to run the tests via the script <b>Run_All_FullMenuRegressionTests.bat </b>located in YOUR_CVS_ROOT\gui-automation . For more information about this, have a look at <a href="junit_running.xhtml#4">Details about running the test cases : Setting up your environment variables and running the tests</a>
+		</div >
+		<h2><a name="7"/>JUnit reporting</h2>
+		<div class="p">Finally, if you run your tests with the Ant script shown above, it will put the <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html">final report of the test here</a>. The format, layout and information on that page is what is provided from Ant's JUnit runner. No effort was put in on my part to get it that way. The basic reporting format is XML, so it is of course possible to do all kind of stuff with it, if you're into that kind of thing.</div>
+	</body>
+</html>

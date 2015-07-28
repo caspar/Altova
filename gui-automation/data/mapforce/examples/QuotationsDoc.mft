@@ -1,0 +1,84 @@
+<FlexText>
+	<Commands>
+		<Project FileName="QuotationsDoc.txt">
+			<Version/>
+			<RootName Value="Document"/>
+			<Connections>
+				<Connection>
+					<SplitSingle>
+						<Version/>
+						<Upper Offset="1"/>
+						<Lower/>
+						<Name Value="Sections"/>
+						<Connections>
+							<Connection>
+								<SplitSingle>
+									<Version/>
+									<Upper Offset="1"/>
+									<Lower/>
+									<Name Value="Header"/>
+									<Connections>
+										<Connection>
+											<Store Type="string" TrimCharSet="%20">
+												<Version/>
+												<Name Value="Title"/>
+											</Store>
+										</Connection>
+										<Connection>
+											<Ignore>
+												<Connections>
+													<Connection/>
+												</Connections>
+												<XData>
+													<Dimension TextHeight="140"/>
+													<OpenState Property="1" Preview="1" Connector="1"/>
+												</XData>
+											</Ignore>
+										</Connection>
+									</Connections>
+									<XData>
+										<Dimension TextHeight="140"/>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+									</XData>
+								</SplitSingle>
+							</Connection>
+							<Connection>
+								<FLF>
+									<Version/>
+									<RecordName Value="Body"/>
+									<Fields>
+										<Field Type="string" Size="20">
+											<Name Value="Name"/>
+										</Field>
+										<Field Type="integer" Size="4">
+											<Name Value="Year"/>
+										</Field>
+										<Field Type="string" Size="120">
+											<Name Value="Text"/>
+										</Field>
+									</Fields>
+									<Connections>
+										<Connection/>
+									</Connections>
+									<XData>
+										<Dimension FullWidth="311" FullHeight="4294967114" TextHeight="243"/>
+										<OpenState Property="1" Preview="1" Connector="1"/>
+									</XData>
+								</FLF>
+							</Connection>
+						</Connections>
+						<XData>
+							<Dimension TextHeight="140"/>
+							<OpenState Property="1" Preview="1" Connector="1"/>
+						</XData>
+					</SplitSingle>
+				</Connection>
+			</Connections>
+			<XData>
+				<Dimension/>
+				<OpenState Property="1" Preview="1" Connector="1"/>
+			</XData>
+		</Project>
+	</Commands>
+	<Functions/>
+</FlexText>

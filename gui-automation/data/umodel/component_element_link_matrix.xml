@@ -1,0 +1,30 @@
+<!-- edited with XMLSpy v2006 rel. 3 U (http://www.altova.com) by Markus Kreska (Altova GmbH) -->
+<Links diagram="Component" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\user_files\work\uml_link_matrix.xsd">
+	<StartElement name="Component">
+		<Link name="Realization">
+			<EndElement name="Component"/>
+		</Link>
+		<Link name="InterfaceRealization">
+			<EndElement name="Interface"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Class"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Artifact">
+		<Link name="Realization">
+			<EndElement name="Component"/>
+		</Link>
+		<Link name="Usage">
+			<EndElement name="Package"/>
+			<EndElement name="Interface"/>
+			<EndElement name="Class"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+		</Link>
+	</StartElement>
+</Links>

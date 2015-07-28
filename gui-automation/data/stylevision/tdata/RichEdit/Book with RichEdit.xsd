@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:element name="book">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="Book_Type"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Book_Type">
+		<xs:sequence>
+			<xs:element ref="overview" minOccurs="0"/>
+			<xs:element name="chapter" type="Chapter_Type" maxOccurs="unbounded"/>
+		</xs:sequence>
+
+		<xs:attribute name="author" type="xs:string" use="optional"/>
+		<xs:attribute name="publisher" type="xs:string" use="optional"/>
+		<xs:attribute name="ISBN" type="xs:string" use="optional"/>
+		<xs:attribute name="volumes" type="xs:string" use="optional"/>
+	</xs:complexType>
+
+	<xs:complexType name="Chapter_Type">
+		<xs:sequence>
+			<xs:element ref="heading"/>
+
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="subchapter" type="SubChapter_Type"/>
+				<xs:group ref="ParagraphsAndStyles_Group"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:attribute name="css" type="xs:string"/>
+
+	<xs:element name="heading">
+		<xs:complexType mixed="true">
+			<xs:choice>
+				<xs:element name="HeadingStyleA" type="xs:string" minOccurs="0"/>
+				<xs:element name="HeadingStyleB" type="xs:string" minOccurs="0"/>
+				<xs:element name="HeadingStyleC" type="xs:string" minOccurs="0"/>
+			</xs:choice>
+
+			<xs:attribute name="heading-style" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:group name="HeadingChildren_Group">
+		<xs:sequence>
+			<xs:element name="Style" type="StyleInHeading_Type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:element name="overview">
+		<xs:complexType>
+			<xs:group ref="ParagraphsAndStyles_Group" maxOccurs="unbounded"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:group name="ParagraphsAndStyles_Group">
+		<xs:choice>
+			<xs:element name="p" type="Paragraph_Type" minOccurs="0"/>
+			<xs:element name="Style" type="StyleInPAS" minOccurs="0"/>
+		</xs:choice>
+	</xs:group>
+
+	<xs:complexType name="Paragraph_Type" mixed="true">
+		<xs:group ref="StyleInParagraph_Group"/>
+	</xs:complexType>
+
+	<xs:complexType name="StyleInHeading_Type" mixed="true">
+		<xs:group ref="HeadingChildren_Group"/>
+		<xs:attribute ref="css"/>
+	</xs:complexType>
+
+	<xs:group name="StyleInParagraph_Group">
+		<xs:sequence>
+			<xs:element name="Style" type="StyleInParagraph_Type" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:complexType name="StyleInParagraph_Type" mixed="true">
+		<xs:group ref="StyleInParagraph_Group"/>
+		<xs:attribute ref="css"/>
+	</xs:complexType>
+
+	<xs:complexType name="StyleInPAS">
+		<xs:group ref="ParagraphsAndStyles_Group"/>
+		<xs:attribute ref="css"/>
+	</xs:complexType>
+
+	<xs:complexType name="SubChapter_Type">
+		<xs:sequence>
+			<xs:element ref="heading"/>
+			<xs:group ref="ParagraphsAndStyles_Group" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

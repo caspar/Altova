@@ -1,0 +1,385 @@
+Buildfile: C:\work\gui-automation\build.xml
+     [echo] 
+     [echo] 	
+     [echo] 		Type ant help to get an overview of tasks in this build.xml file.
+     [echo] 		
+     [echo] 		At least Ant 1.7.0 is required. You have Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+     [echo] 		
+     [echo] 	
+     [echo] End of Ant
+
+find:
+     [echo] classfile: 'com.altova.umodel.regression.functional.RegressionTestsEntryPoint'
+     [echo] Class found at: jar:file:/C:/work/gui-automation/robots.jar!/com/altova/umodel/regression/functional/RegressionTestsEntryPoint.class
+
+run:
+     [echo] 
+     [echo] 	
+     [echo] 		Type ant help to get an overview of tasks in this build.xml file.
+     [echo] 		
+     [echo] 		At least Ant 1.7.0 is required. You have Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+     [echo] 		
+     [echo] 	
+     [echo] End of Ant
+
+checkEnvironment:
+     [echo] At least Ant 1.7.0 is required. You have Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+     [echo] At least JDK 1.6.0 is required. You have 1.8.0_45
+     [echo] At least JUnit 4.2 is required. You seem to have that.
+     [echo] The runtime environment seems to be up to date.
+
+javarun:
+     [echo] Running com.altova.umodel.regression.functional.RegressionTestsEntryPoint
+     [echo] 
+     [echo] 			Using Java log properties file: ${env.ROBOTS_LOGGING_FILE}.
+     [echo] 			To set this, use the environment varialbe ROBOTS_LOGGING_FILE.
+     [echo] 			A good valus is ROBOTS_LOGGING_FILE=testSuiteLog.properties
+     [echo] 		
+     [java] AltovaXMLJar: C:\Program Files\Altova\AltovaXML2013\AltovaXML.jar
+     [java] resolving c : other : C:\work\umodel\regression-tests\source
+     [java] resolving c : DiffDogBatch.exe : C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe
+     [java] resolving c : AltovaXML.jar : C:\Program Files\Altova\AltovaXML2013\AltovaXML.jar
+     [java] resolving c : UModelBatch.exe : C:\Program Files\Altova\UModel2016\UModelBatch.exe
+     [java] resolving c : XMLSpyInterface.jar : C:\Program Files\Altova\XmlSpy2015\XMLSpyInterface.jar
+     [java] CG_JAVA_7> start time: 2:42:45 PM
+     [java] 1
+     [java] >>>>src:C:\work\umodel\regression-tests\test-cases\cg\java7\src
+     [java] >>>>and:[net.hblok.io.AndFileFilter: [DirectoryFileFilter, [NegateFileFilter: [FilterAdapter: [RegexFilenameFilter: svn]]]]]
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\binary_literals
+     [java] setupTest
+     [java] source	: binary_literals
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\binary_literals.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\binary_literals" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\binary_literals.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\binary_literals" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\binary_literals.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\binary_literals-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\1binary_literals-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\final1binary_literals-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\2binary_literals.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\final2binary_literals.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\final1binary_literals-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\binary_literals\final2binary_literals.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:0
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\catching_multiple_exception_types
+     [java] setupTest
+     [java] source	: catching_multiple_exception_types
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\catching_multiple_exception_types.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\catching_multiple_exception_types" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\catching_multiple_exception_types.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\catching_multiple_exception_types" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\catching_multiple_exception_types.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\catching_multiple_exception_types-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\1catching_multiple_exception_types-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\final1catching_multiple_exception_types-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\2catching_multiple_exception_types-ref.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\final2catching_multiple_exception_types-ref.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\final1catching_multiple_exception_types-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\final2catching_multiple_exception_types-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:1
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\final1catching_multiple_exception_types-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\final2catching_multiple_exception_types-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir /rX C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\catching_multiple_exception_types\catching_multiple_exception_types-generated-code-import.ump_v_catching_multiple_exception_types-ref.ump.xml
+     [java] 
+     [java] exit value:1
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\multipleExample
+     [java] setupTest
+     [java] source	: multipleExample
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\multipleExample.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\multipleExample" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\multipleExample.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\multipleExample" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\multipleExample.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\multipleExample-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\1multipleExample-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\final1multipleExample-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\2multipleExample-ref.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\final2multipleExample-ref.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\final1multipleExample-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\final2multipleExample-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:1
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\final1multipleExample-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\final2multipleExample-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir /rX C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\multipleExample\multipleExample-generated-code-import.ump_v_multipleExample-ref.ump.xml
+     [java] 
+     [java] exit value:1
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message
+     [java] setupTest
+     [java] source	: non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\non-reifiable_formal_parameters_with_varargs_methods_warning_and_error_message" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:1
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\rethrowing_exceptions
+     [java] setupTest
+     [java] source	: rethrowing_exceptions
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\rethrowing_exceptions.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\rethrowing_exceptions" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\rethrowing_exceptions.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\rethrowing_exceptions" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\rethrowing_exceptions.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\rethrowing_exceptions-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\1rethrowing_exceptions-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\final1rethrowing_exceptions-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\2rethrowing_exceptions-ref.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\final2rethrowing_exceptions-ref.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\final1rethrowing_exceptions-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\final2rethrowing_exceptions-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:1
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\final1rethrowing_exceptions-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\final2rethrowing_exceptions-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir /rX C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\rethrowing_exceptions\rethrowing_exceptions-generated-code-import.ump_v_rethrowing_exceptions-ref.ump.xml
+     [java] 
+     [java] exit value:1
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\string_in_switch_statement
+     [java] setupTest
+     [java] source	: string_in_switch_statement
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\string_in_switch_statement.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\string_in_switch_statement" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\string_in_switch_statement.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\string_in_switch_statement" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\string_in_switch_statement.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\string_in_switch_statement-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\1string_in_switch_statement-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\final1string_in_switch_statement-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\2string_in_switch_statement-ref.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\final2string_in_switch_statement-ref.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\final1string_in_switch_statement-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\final2string_in_switch_statement-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:1
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\final1string_in_switch_statement-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\final2string_in_switch_statement-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir /rX C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\string_in_switch_statement\string_in_switch_statement-generated-code-import.ump_v_string_in_switch_statement-ref.ump.xml
+     [java] 
+     [java] exit value:1
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\try_with_resources_statement
+     [java] setupTest
+     [java] source	: try_with_resources_statement
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\try_with_resources_statement.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\try_with_resources_statement" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\try_with_resources_statement.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\try_with_resources_statement" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\try_with_resources_statement.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\try_with_resources_statement-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\1try_with_resources_statement-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\final1try_with_resources_statement-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\2try_with_resources_statement-ref.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\final2try_with_resources_statement-ref.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\final1try_with_resources_statement-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\final2try_with_resources_statement-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:1
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\final1try_with_resources_statement-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\final2try_with_resources_statement-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir /rX C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\try_with_resources_statement\try_with_resources_statement-generated-code-import.ump_v_try_with_resources_statement-ref.ump.xml
+     [java] 
+     [java] exit value:1
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\type_inference_for_generic_instance_creation
+     [java] setupTest
+     [java] source	: type_inference_for_generic_instance_creation
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\type_inference_for_generic_instance_creation.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\type_inference_for_generic_instance_creation" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\type_inference_for_generic_instance_creation.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\type_inference_for_generic_instance_creation" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\type_inference_for_generic_instance_creation.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\type_inference_for_generic_instance_creation-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\1type_inference_for_generic_instance_creation-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\final1type_inference_for_generic_instance_creation-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\2type_inference_for_generic_instance_creation-ref.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\final2type_inference_for_generic_instance_creation-ref.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\final1type_inference_for_generic_instance_creation-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\final2type_inference_for_generic_instance_creation-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:1
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\final1type_inference_for_generic_instance_creation-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\final2type_inference_for_generic_instance_creation-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir /rX C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\type_inference_for_generic_instance_creation\type_inference_for_generic_instance_creation-generated-code-import.ump_v_type_inference_for_generic_instance_creation-ref.ump.xml
+     [java] 
+     [java] exit value:1
+     [java] ************************************* testCG :C:\work\umodel\regression-tests\test-cases\cg\java7\src\underscore_in_numeric_literals
+     [java] setupTest
+     [java] source	: underscore_in_numeric_literals
+     [java] log 	: C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\delete_ui_settings.bat"
+     [java] 
+     [java] exit value:1
+     [java] importSourceCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\underscore_in_numeric_literals.ump" /isd="C:\work\umodel\regression-tests\test-cases\cg\java7\src\underscore_in_numeric_literals" /iclg=Java7.0 /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] generateCode
+     [java] 
+     [java] cmd : "C:\work\umodel\regression-tests\source\dossr.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\underscore_in_numeric_literals.ump" "C:\work\umodel\regression-tests\test-cases\cg\java7\src\underscore_in_numeric_literals" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals"
+     [java] 
+     [java] exit value:0
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\underscore_in_numeric_literals.ump" /m2c /ejdc=1 /egfn=1 /eusc=1
+     [java] 
+     [java] exit value:0
+     [java] importGeneratedCode
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\UModel2016\UModelBatch.exe" /new="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\underscore_in_numeric_literals-generated-code-import.ump" /isd="C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals" /iclg="Java7.0" /ipsd=1 /dgen=1 /dopn=0 /irpf=0 /chk
+     [java] 
+     [java] exit value:0
+     [java] umpDiffTests
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\1underscore_in_numeric_literals-generated-code-import.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\final1underscore_in_numeric_literals-generated-code-import.ump
+     [java] outputfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\2underscore_in_numeric_literals-ref.ump
+     [java] outputOOfile : C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\final2underscore_in_numeric_literals-ref.ump
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\final1underscore_in_numeric_literals-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\final2underscore_in_numeric_literals-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir
+     [java] 
+     [java] exit value:1
+     [java] 
+     [java] cmd : "C:\Program Files\Altova\DiffDog2015\DiffDogBatch.exe" /cF "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\final1underscore_in_numeric_literals-generated-code-import.ump" "C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\final2underscore_in_numeric_literals-ref.ump" /q /mX /iB /iNT C /iOA /iOC /wN /wS /f ignore-component-dir /rX C:\work\umodel\regression-tests\logs\22_07_15\code_gen\CG_JAVA_7\underscore_in_numeric_literals\underscore_in_numeric_literals-generated-code-import.ump_v_underscore_in_numeric_literals-ref.ump.xml
+     [java] 
+     [java] exit value:1
+     [java] 5
+     [java] CG_JAVA_7> end time	: 2:43:48 PM
+     [java] CG_JAVA_7> duration	: 00:01:62
+     [java] CG_JAVA_7> total 	: 00:01:62
+     [java] writing DomDoc to xml file on disk...
+     [java] transforming xml to html results...
+
+BUILD SUCCESSFUL
+Total time: 1 minute 3 seconds

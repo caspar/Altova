@@ -1,0 +1,1 @@
+SELECT [EMail] FROM [Office];

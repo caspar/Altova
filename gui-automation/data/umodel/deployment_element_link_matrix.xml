@@ -1,0 +1,127 @@
+<!-- edited with XMLSpy v2006 rel. 3 U (http://www.altova.com) by Markus Kreska (Altova GmbH) -->
+<Links diagram="Deployment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="uml_link_matrix.xsd">
+	<StartElement name="Package">
+		<Link name="Dependency">
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Component">
+		<Link name="Association">
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Component"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Artifact">
+		<Link name="Association">
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Manifestation">
+			<EndElement name="Package"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Deployment">
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Artifact"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Node">
+		<Link name="Association">
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Node"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+	</StartElement>
+	<StartElement name="Device">
+		<Link name="Association">
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+	</StartElement>
+	<StartElement name="ExecutionEnvironment">
+		<Link name="Association">
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Node"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+		<Link name="Dependency">
+			<EndElement name="Package"/>
+			<EndElement name="Component"/>
+			<EndElement name="Artifact"/>
+			<EndElement name="Node"/>
+			<EndElement name="Device"/>
+			<EndElement name="ExecutionEnvironment"/>
+		</Link>
+	</StartElement>
+</Links>

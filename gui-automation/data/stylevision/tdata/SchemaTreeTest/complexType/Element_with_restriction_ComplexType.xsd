@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by baa (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="base">
+		<xs:choice maxOccurs="2">
+			<xs:element name="elem1"/>
+			<xs:sequence maxOccurs="2">
+				<xs:element name="elem2" minOccurs="0"/>
+				<xs:element name="elem3" minOccurs="0"/>
+			</xs:sequence>
+		</xs:choice>
+		<xs:attribute name="attr1" type="xs:string"/>
+		<xs:anyAttribute namespace="##any"/>
+	</xs:complexType>
+	<xs:element name="globalElement">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="base">
+					<xs:sequence>
+						<xs:element name="elem1" type="xs:boolean"/>
+						<xs:sequence maxOccurs="2">
+							<xs:element name="elem2"/>
+							<xs:element name="elem3"/>
+						</xs:sequence>
+					</xs:sequence>
+					<xs:attribute name="attr1" type="xs:token"/>
+					<xs:anyAttribute namespace="##targetNamespace"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

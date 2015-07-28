@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Plugin robots class hierarchy</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="robots_new_release.xhtml">Next: Maintaining GUI tests for a new release</a>
+		</div>
+		<div class="previous">
+			<a href="robots_examples.xhtml">Previous: Usage examples of robot classes and methods</a>
+		</div>
+		<h1>Plugin robots class hierarchy</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">
+			<img alt="plugin robots hierarchy" src="robots_plugin_classes_simple.png" class="diagram" usemap="#robots_plugin_classes_simple" />		
+		Currently, three of the Altova applications support integration with Eclipse and Visual Studio .Net (VS) through plugins. The behaviour of these integration plugins mimic the stand-alone applications most of the time, however there are some differences for each of the IDE. E.g. to open a new file in XMLSpy, you click <i>File -&gt; Open</i>, however in Visual Studio you will have to click <i>File -&gt; Open -&gt; File...</i>, and in Eclipse it's <i>File -&gt; Open File</i>, however, most of the other actions remain the same, like checking if the file actually exists first, typing in the file name, and pressing Enter.</div>
+		<div class="p">Thus it is possible to run the GUI automation tests for the plugins with only minor modifications to the Robots code. The way this is handled is through further subclassing of the robots hierarchy, as seen in the diagram above. (See section <a href="robots_class.xhtml">
+				<i>Robots class hierarchy</i>
+			</a> for the full overview). If you inspect the source code of these classes, you'll see that they are rather small; only in some places does the plugin deviate from the stand-alone application.</div>
+		<h2>
+			<a name="2" />Plugins for more applications</h2>
+		<div class="p">As mentioned, several of the Altova applications can be installed as plugins. And the diagram above only looks at the XMLSpy case. The UModel and MapForce will of course look similar, as seen in the diagram below.
+		<img alt="plugin robots hierarchy" src="robots_plugin_classes_spy-eclipse.png" class="diagram" usemap="#robots_plugin_classes_spy-eclipse" />
+		
+			This is all nice, until we starting implementing the plugin specific classes for each of the applications. It quickly becomes apparent that much of the code is similar, like the <i>File -&gt; Open</i> case mentioned above. And we don't want to duplicate all this code across three or more classes.</div>
+		<div class="p">If multiple inheritance was a possibility in Java, one might have used that, to have the EclipseUModelRobot extend both a UModel and Eclipse specific class. However, only single inheritance is possible, so an interface is the only option, as seen in the diagram below.
+			<img alt="plugin robots hierarchy" src="robots_plugin_classes_interface.png" class="diagram" usemap="#robots_plugin_classes_interface" />
+		</div>
+		<div class="p">
+		This should then be repeated for the Visual Studio robots, with a <i>VSnetRobot</i> interface. In some very few cases, it might be useful to know if we are dealing with plugin specific robot class in general, so we'll add a very small interface at the top to combine the two plugin interface. We then get this shape:
+		<img alt="plugin robots hierarchy" src="robots_plugin_classes_pluginrobot.png" class="diagram" usemap="#robots_plugin_classes_pluginrobot" />
+		</div>
+		<div class="p">
+		Now there's only one part missing; the actual code we wanted to avoid duplication of. It cannot go in the interfaces, since they cannot contain any method bodies, so one solution is to create implementation classes of these interfaces, which can be called from each of the plugin classes. These implementations will need access to a robot implementation as well, so we'll add a reference back to instances of the plugin robots, however, we'll only need it at the <i>AltovaApplicationRobot</i> level. The end result can be seen below. One design pattern which is relevant to this result, is the <a href="http://www.javacamp.org/designPattern/facade.html">Façade pattern</a> for hiding implementation details using interfaces.
+		<img alt="plugin robots hierarchy" src="robots_plugin_classes_complete.png" class="diagram" usemap="#robots_plugin_classes_complete" />
+		</div>
+		<h2>
+			<a name="3" />The final view</h2>
+		<div class="p">Finally, here's to more views of the same classes, first focusing on those involved with one application, e.g. XMLSpy:
+		<img alt="plugin robots hierarchy" src="robots_plugin_classes_spy.png" class="diagram" usemap="#robots_plugin_classes_spy" />
+		and secondly on those for one IDE plugin, e.g. Eclipse
+		<img alt="plugin robots hierarchy" src="robots_plugin_classes_eclipse.png" class="diagram" usemap="#robots_plugin_classes_eclipse" />
+		</div>
+	</body>
+</html>

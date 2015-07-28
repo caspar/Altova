@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:prod="http://www.altova.com/ontologies/product#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Product">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpy">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Product"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Edition">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#hasEdition">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpy"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Edition"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#version">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpy"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Enterprise">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Edition"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpyEnterprise">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpy"/>
+		</rdf:type>
+		<prod:version>2006</prod:version>
+		<prod:hasEdition>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Enterprise"/>
+		</prod:hasEdition>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpyHome">
+		<prod:hasEdition>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Home">
+				<rdf:type>
+					<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Edition"/>
+				</rdf:type>
+			</rdf:Description>
+		</prod:hasEdition>
+		<prod:version>2006</prod:version>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpy"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Professional">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Edition"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpyProfessional">
+		<prod:hasEdition>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Professional"/>
+		</prod:hasEdition>
+		<prod:version>2006</prod:version>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpy"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description>
+		<rdf:first>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Enterprise"/>
+		</rdf:first>
+		<rdf:rest>
+			<rdf:Description>
+				<rdf:rest>
+					<rdf:Description>
+						<rdf:rest rdf:parseType="Collection"/>
+						<rdf:first>
+							<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Home"/>
+						</rdf:first>
+					</rdf:Description>
+				</rdf:rest>
+				<rdf:first>
+					<rdf:Description rdf:about="http://www.altova.com/ontologies/product#Professional"/>
+				</rdf:first>
+			</rdf:Description>
+		</rdf:rest>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpyEditions">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#AllDifferent"/>
+		</rdf:type>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpyEnterprise"/>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpyProfessional"/>
+			<rdf:Description rdf:about="http://www.altova.com/ontologies/product#XMLSpyHome"/>
+		</owl:distinctMembers>
+	</rdf:Description>
+</rdf:RDF>

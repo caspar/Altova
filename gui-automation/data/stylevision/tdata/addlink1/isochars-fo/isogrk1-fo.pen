@@ -1,0 +1,74 @@
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+
+    Creator: version from ISO 8879:1986
+    
+    Version: 0.21 1992-12-04
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOGRK1 PUBLIC
+       "ISO 9573-15:1993//ENTITIES Greek Letters//EN//XML">
+     %ISOGRK1;
+-->
+<!-- This version of the entity set can be used with any SGML document
+     which uses ISO 10646 as its document character set. 
+     This includes XML documents and ISO HTML documents.
+     
+     Creator: Rick Jelliffe, from HTMLlat1
+     
+     Version: 1997-07-07
+-->
+
+<!ENTITY agr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#945;</inline>" ><!--small alpha, Greek, U03B1 -->
+<!ENTITY Agr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#913;</inline>" ><!--capital Alpha, Greek, U0391 -->
+<!ENTITY bgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#946;</inline>" ><!--small beta, Greek, U03B2 -->
+<!ENTITY Bgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#914;</inline>" ><!--capital Beta, Greek, U0392 -->
+<!ENTITY ggr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#947;</inline>" ><!--small gamma, Greek, U03B3 -->
+<!ENTITY Ggr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#915;</inline>" ><!--capital Gamma, Greek, U0393 -->
+<!ENTITY dgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#948;</inline>" ><!--small delta, Greek, U03B4 -->
+<!ENTITY Dgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#916;</inline>" ><!--capital Delta, Greek, U0394 -->
+<!ENTITY egr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#949;</inline>" ><!--small epsilon, Greek, U03B5 -->
+<!ENTITY Egr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#917;</inline>" ><!--capital Epsilon, Greek, U0395 -->
+<!ENTITY zgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#950;</inline>" ><!--small zeta, Greek, U03B6 -->
+<!ENTITY Zgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#918;</inline>" ><!--capital Zeta, Greek, U0396 -->
+<!ENTITY eegr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#951;</inline>" ><!--small eta, Greek, U03B7 -->
+<!ENTITY EEgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#919;</inline>" ><!--capital Eta, Greek, U0397 -->
+<!ENTITY thgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#952;</inline>" ><!--small theta, Greek, U03B8 -->
+<!ENTITY THgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#920;</inline>" ><!--capital Theta, Greek, U0398 -->
+<!ENTITY igr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#953;</inline>" ><!--small iota, Greek, U03B9 -->
+<!ENTITY Igr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#921;</inline>" ><!--capital Iota, Greek, U0399 -->
+<!ENTITY kgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#954;</inline>" ><!--small kappa, Greek, U03BA -->
+<!ENTITY Kgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#922;</inline>" ><!--capital Kappa, Greek, U039A -->
+<!ENTITY lgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#955;</inline>" ><!--small lambda, Greek, U03BB -->
+<!ENTITY Lgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#923;</inline>" ><!--capital Lambda, Greek, U039B -->
+<!ENTITY mgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#956;</inline>" ><!--small mu, Greek, U03BC -->
+<!ENTITY Mgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#924;</inline>" ><!--capital Mu, Greek, U039C -->
+<!ENTITY ngr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#957;</inline>" ><!--small nu, Greek, U03BD -->
+<!ENTITY Ngr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#925;</inline>" ><!--capital Nu, Greek, U039D -->
+<!ENTITY xgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#958;</inline>" ><!--small xi, Greek, U03BE -->
+<!ENTITY Xgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#926;</inline>" ><!--capital Xi, Greek, U039E -->
+<!ENTITY ogr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#959;</inline>" ><!--small omicron, Greek, U03BF -->
+<!ENTITY Ogr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#927;</inline>" ><!--capital Omicron, Greek, U039F -->
+<!ENTITY pgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#960;</inline>" ><!--small pi, Greek, U03C0 -->
+<!ENTITY Pgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#928;</inline>" ><!--capital Pi, Greek, U03A0 -->
+<!ENTITY rgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#961;</inline>" ><!--small rho, Greek, U03C1 -->
+<!ENTITY Rgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#929;</inline>" ><!--capital Rho, Greek, U03A1 -->
+<!ENTITY sfgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#962;</inline>" ><!--final small sigma, Greek, U03C2 --> 
+<!ENTITY sgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#963;</inline>" ><!--small sigma, Greek, U03C3 -->
+<!ENTITY Sgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#931;</inline>" ><!--capital Sigma, Greek, U03A3 -->
+<!ENTITY tgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#964;</inline>" ><!--small tau, Greek, U03C4 -->
+<!ENTITY Tgr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#932;</inline>" ><!--capital Tau, Greek, U03A4 -->
+<!ENTITY ugr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#965;</inline>" ><!--small upsilon, Greek, U03C5 -->
+<!ENTITY Ugr     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#933;</inline>" ><!--capital Upsilon, Greek, U03A5 -->
+<!ENTITY phgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#966;</inline>" ><!--small phi, Greek, U03C6 -->
+<!ENTITY PHgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#934;</inline>" ><!--capital Phi, Greek, U03A6 -->
+<!ENTITY khgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#967;</inline>" ><!--small chi, Greek, U03C7 -->
+<!ENTITY KHgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#935;</inline>" ><!--capital Chi, Greek, U03A7 -->
+<!ENTITY psgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#968;</inline>" ><!--small psi, Greek, U03C8 -->
+<!ENTITY PSgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#936;</inline>" ><!--capital Psi, Greek, U03A8 -->
+<!ENTITY ohgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#969;</inline>" ><!--small omega, Greek, U03C9 -->
+<!ENTITY OHgr    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#937;</inline>" ><!--capital Omega, Greek, U03A9 -->
+ 
+

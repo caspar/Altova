@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Mike Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:swe="http://www.opengis.net/swe" xmlns:sml="http://www.opengis.net/sensorML" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>System object for core SensorML</xs:documentation>
+	</xs:annotation>
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:include schemaLocation="./process.xsd"/>
+	<xs:include schemaLocation="./coordinateSystem.xsd"/>
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="./sweImports.xsd"/>
+	<!--===================-->
+	<!--  Global Elements  -->
+	<!--===================-->
+	<xs:element name="System" type="sml:SystemType" substitutionGroup="sml:_Process">
+		<xs:annotation>
+			<xs:documentation>System containing components</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!--=================-->
+	<!--  Complex Types  -->
+	<!--=================-->
+	<xs:complexType name="_AbstractSystemType">
+		<xs:complexContent>
+			<xs:restriction base="sml:_AbstractProcessType">
+				<xs:sequence>
+					<xs:group ref="sml:processMetadataGroup" minOccurs="0"/>
+					<xs:element ref="sml:referenceFrame" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element ref="sml:inputs" minOccurs="0"/>
+					<xs:element ref="sml:outputs" minOccurs="0"/>
+					<xs:element ref="sml:parameters" minOccurs="0"/>
+					<xs:element ref="sml:processes" minOccurs="0"/>
+					<xs:element ref="sml:connections" minOccurs="0"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SystemType">
+		<xs:complexContent>
+			<xs:extension base="sml:_AbstractSystemType">
+				<xs:sequence>
+					<xs:element ref="sml:positions" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--=================-->
+	<!--  Complex Types  -->
+	<!--=================-->
+	<xs:element name="positions">
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:element name="PositionList">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:restriction base="sml:_AbstractListType">
+								<xs:sequence>
+									<xs:element name="position" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:choice minOccurs="0">
+												<xs:element ref="sml:_Process"/>
+												<xs:element ref="swe:PositionData"/>
+											</xs:choice>												
+											<xs:attribute name="name" type="swe:qnameSimpleType"/>
+											<xs:attributeGroup ref="swe:AssociationAttributes"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:restriction>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attributeGroup ref="swe:AssociationAttributes"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

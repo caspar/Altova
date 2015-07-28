@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "xhtml1-transitional.dtd">
+<!-- saved from url=(0080)http://www.mozilla.org/quality/browser/front-end/testcases/printing/tables2.html -->
+<html>
+	<head>
+		<meta name="generator" content="HTML Tidy, see www.w3.org"/>
+		<title>mozilla.org</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+		<link href="Table Align Test_files/persistent-style.css" type="text/css" rel="stylesheet"/>
+		<link href="../../../../../images/mozilla-16.png" type="image/png" rel="icon"/>
+		<meta content="MSHTML 6.00.2600.0" name="GENERATOR"/>
+	</head>
+	<body><center><b>Table Align Test</b></center><p><br/></p><table width="25%" bgcolor="#ffe4c4" border="1">
+			<caption align="top"><b>Table with Left default
+alignment:&nbsp;</b></caption>
+			<tbody>
+				<tr>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+				</tr>
+				<tr>
+					<td><p>cell 1</p></td>
+					<td><p>cell 2</p></td>
+					<td><p>cell 3</p></td>
+				</tr>
+			</tbody>
+		</table><p></p><hr width="100%" size="5"/><h4>Tables showing LEFT|CENTER|RIGHT alignment:</h4><table width="25%" align="right" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table Align=Right</caption>
+			<tbody>
+				<tr>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+				</tr>
+				<tr>
+					<td><p>cell 1</p></td>
+					<td><p>cell 2</p></td>
+					<td><p>cell 3</p></td>
+				</tr>
+			</tbody>
+		</table><table align="center" bgcolor="#ffe4c4" border="1" width="25%">
+			<caption align="top">Table Align=Center</caption>
+			<tbody>
+				<tr width="#%">
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+				</tr>
+				<tr>
+					<td><p>invalid cell 1</p></td>
+					<td><p>invalid cell 2</p></td>
+					<td><p>cell 3</p></td>
+				</tr>
+			</tbody>
+		</table><table width="100%" align="left" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table Align=Left</caption>
+			<tbody align="left">
+				<tr>
+					<th align="right"><p>table head</p></th>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+				</tr>
+				<tr>
+					<td align="right"><p >cell 1</p></td>
+					<td><p>cell 2</p></td>
+					<td><p>cell 3</p></td>
+				</tr>
+			</tbody>
+		</table><p><font color="#808000">This text should be on the right side of
+the table.</font><br/><font color="#808000">Is it doing so ????</font><br/><font color="#808000">Well! What do you think ??</font></p><p></p><hr width="100%" size="5"/><h4>Table showing text flow:</h4><p>This is text placed above the table and</p>
+
+<table width="75%" bgcolor="#ffe4c4" border="1">
+			<caption align="top">Table Title</caption>
+			<tbody>
+				<tr>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+					<th><p>table head</p></th>
+				</tr>
+				<tr>
+					<td><p>cell 1</p></td>
+					<td><p>cell 2</p></td>
+					<td><p>cell 3</p></td>
+				</tr>
+			</tbody>
+		</table></body>
+</html>

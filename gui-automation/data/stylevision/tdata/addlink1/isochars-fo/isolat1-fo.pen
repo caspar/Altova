@@ -1,0 +1,79 @@
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % HTMLlat1 PUBLIC
+       "ISO 8879:1986//ENTITIES Added Latin 1//EN//XML">
+     %ISOlat1;
+-->
+<!-- This version of the entity set can be used with any SGML document
+     which uses ISO 8859-1 or ISO 10646 as its document character 
+     set. This includes XML documents and ISO HTML documents. 
+-->
+ 
+    <!ENTITY Agrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#192;</inline>" ><!-- capital A, grave accent -->
+    <!ENTITY Aacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#193;</inline>" ><!-- capital A, acute accent -->
+    <!ENTITY Acirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#194;</inline>" ><!-- capital A, circumflex accent -->
+    <!ENTITY Atilde  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#195;</inline>" ><!-- capital A, tilde -->
+    <!ENTITY Auml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#196;</inline>" ><!-- capital A, dieresis or umlaut mark -->
+    <!ENTITY Aring   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#197;</inline>" ><!-- capital A, ring -->
+    <!ENTITY AElig   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#198;</inline>" ><!-- capital AE diphthong (ligature) -->
+    <!ENTITY Ccedil  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#199;</inline>" ><!-- capital C, cedilla -->
+    <!ENTITY Egrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#200;</inline>" ><!-- capital E, grave accent -->
+    <!ENTITY Eacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#201;</inline>" ><!-- capital E, acute accent -->
+    <!ENTITY Ecirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#202;</inline>" ><!-- capital E, circumflex accent -->
+    <!ENTITY Euml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#203;</inline>" ><!-- capital E, dieresis or umlaut mark -->
+    <!ENTITY Igrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#204;</inline>" ><!-- capital I, grave accent -->
+    <!ENTITY Iacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#205;</inline>" ><!-- capital I, acute accent -->
+    <!ENTITY Icirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#206;</inline>" ><!-- capital I, circumflex accent -->
+    <!ENTITY Iuml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#207;</inline>" ><!-- capital I, dieresis or umlaut mark -->
+    <!ENTITY ETH     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#208;</inline>" ><!-- capital Eth, Icelandic -->
+    <!ENTITY Ntilde  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#209;</inline>" ><!-- capital N, tilde -->
+    <!ENTITY Ograve  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#210;</inline>" ><!-- capital O, grave accent -->
+    <!ENTITY Oacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#211;</inline>" ><!-- capital O, acute accent -->
+    <!ENTITY Ocirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#212;</inline>" ><!-- capital O, circumflex accent -->
+    <!ENTITY Otilde  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#213;</inline>" ><!-- capital O, tilde -->
+    <!ENTITY Ouml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#214;</inline>" ><!-- capital O, dieresis or umlaut mark -->
+    <!ENTITY Oslash  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#216;</inline>" ><!-- capital O, slash -->
+    <!ENTITY Ugrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#217;</inline>" ><!-- capital U, grave accent -->
+    <!ENTITY Uacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#218;</inline>" ><!-- capital U, acute accent -->
+    <!ENTITY Ucirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#219;</inline>" ><!-- capital U, circumflex accent -->
+    <!ENTITY Uuml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#220;</inline>" ><!-- capital U, dieresis or umlaut mark -->
+    <!ENTITY Yacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#221;</inline>" ><!-- capital Y, acute accent -->
+    <!ENTITY THORN   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#222;</inline>" ><!-- capital THORN, Icelandic -->
+    <!ENTITY szlig   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#223;</inline>" ><!-- small sharp s, German (sz ligature) -->
+    <!ENTITY agrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#224;</inline>" ><!-- small a, grave accent -->   
+    <!ENTITY aacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#225;</inline>" ><!-- small a, acute accent -->
+    <!ENTITY acirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#226;</inline>" ><!-- small a, circumflex accent -->
+    <!ENTITY atilde  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#227;</inline>" ><!-- small a, tilde -->
+    <!ENTITY auml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#228;</inline>" ><!-- small a, dieresis or umlaut mark -->
+    <!ENTITY aring   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#229;</inline>" ><!-- small a, ring -->
+    <!ENTITY aelig   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#230;</inline>" ><!-- small ae diphthong (ligature) -->
+    <!ENTITY ccedil  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#231;</inline>" ><!-- small c, cedilla -->
+    <!ENTITY egrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#232;</inline>" ><!-- small e, grave accent -->
+    <!ENTITY eacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#233;</inline>" ><!-- small e, acute accent -->
+    <!ENTITY ecirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#234;</inline>" ><!-- small e, circumflex accent -->
+    <!ENTITY euml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#235;</inline>" ><!-- small e, dieresis or umlaut mark -->
+    <!ENTITY igrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#236;</inline>" ><!-- small i, grave accent -->
+    <!ENTITY iacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#237;</inline>" ><!-- small i, acute accent -->
+    <!ENTITY icirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#238;</inline>" ><!-- small i, circumflex accent -->
+    <!ENTITY iuml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#239;</inline>" ><!-- small i, dieresis or umlaut mark -->
+    <!ENTITY eth     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#240;</inline>" ><!-- small eth, Icelandic -->
+    <!ENTITY ntilde  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#241;</inline>" ><!-- small n, tilde -->
+    <!ENTITY ograve  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#242;</inline>" ><!-- small o, grave accent -->
+    <!ENTITY oacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#243;</inline>" ><!-- small o, acute accent -->
+    <!ENTITY ocirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#244;</inline>" ><!-- small o, circumflex accent -->
+    <!ENTITY otilde  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#245;</inline>" ><!-- small o, tilde -->
+    <!ENTITY ouml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#246;</inline>" ><!-- small o, dieresis or umlaut mark -->
+
+    <!ENTITY oslash  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#248;</inline>" ><!-- small o, slash -->
+    <!ENTITY ugrave  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#249;</inline>" ><!-- small u, grave accent -->
+    <!ENTITY uacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#250;</inline>" ><!-- small u, acute accent -->
+    <!ENTITY ucirc   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#251;</inline>" ><!-- small u, circumflex accent -->
+    <!ENTITY uuml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#252;</inline>" ><!-- small u, dieresis or umlaut mark -->
+    <!ENTITY yacute  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#253;</inline>" ><!-- small y, acute accent -->
+    <!ENTITY thorn   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#254;</inline>" ><!-- small thorn, Icelandic -->
+    <!ENTITY yuml    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#255;</inline>" ><!-- small y, dieresis or umlaut mark -->
+

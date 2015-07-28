@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes_2011-03-25_role-510000" xlink:type="simple" xlink:href="rol_ifrs_for_smes_2011-03-25.xsd#ifrs_for_smes_2011-03-25_role-510000"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/negatedLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedLabel"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/netLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd#netLabel"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/negatedTerseLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedTerseLabel"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes_2011-03-25_role-510000">
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_StatementOfCashFlowsAbstract" xlink:label="loc_8"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsFromUsedInOperatingActivitiesAbstract" xlink:label="loc_2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc_2" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DividendsPaidClassifiedAsOperatingActivities" xlink:label="loc_12"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_12" order="30.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DividendsReceivedClassifiedAsOperatingActivities" xlink:label="loc_13"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_13" order="40.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_InterestPaidClassifiedAsOperatingActivities" xlink:label="loc_14"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_14" order="50.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_InterestReceivedClassifiedAsOperatingActivities" xlink:label="loc_15"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_15" order="60.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncomeTaxesPaidRefundClassifiedAsOperatingActivities" xlink:label="loc_16"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_16" order="70.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherInflowsOutflowsOfCashClassifiedAsOperatingActivities" xlink:label="loc_17"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_17" order="80.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsFromUsedInOperatingActivities" xlink:label="loc_18"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_18" order="90.0" preferredLabel="http://www.xbrl.org/2009/role/netLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfCashReceiptsFromOperatingActivitiesAbstract" xlink:label="loc_10"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_10" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ReceiptsFromSalesOfGoodsAndRenderingOfServices" xlink:label="loc_19"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_10" xlink:to="loc_19" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ReceiptsFromRoyaltiesFeesCommissionsAndOtherRevenue" xlink:label="loc_20"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_10" xlink:to="loc_20" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ReceiptsFromContractsHeldForDealingOrTradingPurpose" xlink:label="loc_21"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_10" xlink:to="loc_21" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ReceiptsFromPremiumsAndClaimsAnnuitiesAndOtherPolicyBenefits" xlink:label="loc_22"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_10" xlink:to="loc_22" order="40.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherCashReceiptsFromOperatingActivities" xlink:label="loc_23"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_10" xlink:to="loc_23" order="50.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ClassesOfCashPaymentsAbstract" xlink:label="loc_11"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_11" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PaymentsToSuppliersForGoodsAndServices" xlink:label="loc_24"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_11" xlink:to="loc_24" order="10.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PaymentsFromContractsHeldForDealingOrTradingPurpose" xlink:label="loc_25"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_11" xlink:to="loc_25" order="20.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PaymentsToAndOnBehalfOfEmployees" xlink:label="loc_26"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_11" xlink:to="loc_26" order="30.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PaymentsForPremiumsAndClaimsAnnuitiesAndOtherPolicyBenefits" xlink:label="loc_27"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_11" xlink:to="loc_27" order="40.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherCashPaymentsFromOperatingActivities" xlink:label="loc_28"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_11" xlink:to="loc_28" order="50.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsFromUsedInInvestingActivitiesAbstract" xlink:label="loc_3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc_3" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsFromLosingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities" xlink:label="loc_29"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_29" order="10.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsUsedInObtainingControlOfSubsidiariesOrOtherBusinessesClassifiedAsInvestingActivities" xlink:label="loc_30"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_30" order="20.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherCashReceiptsFromSalesOfEquityOrDebtInstrumentsOfOtherEntitiesClassifiedAsInvestingActivities" xlink:label="loc_31"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_31" order="30.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherCashPaymentsToAcquireEquityOrDebtInstrumentsOfOtherEntitiesClassifiedAsInvestingActivities" xlink:label="loc_32"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_32" order="40.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherCashReceiptsFromSalesOfInterestsInJointVenturesClassifiedAsInvestingActivities" xlink:label="loc_33"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_33" order="50.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherCashPaymentsToAcquireInterestsInJointVenturesClassifiedAsInvestingActivities" xlink:label="loc_34"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_34" order="60.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ProceedsFromSalesOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities" xlink:label="loc_35"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_35" order="70.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities" xlink:label="loc_36"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_36" order="80.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ProceedsFromSalesOfIntangibleAssetsClassifiedAsInvestingActivities" xlink:label="loc_37"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_37" order="90.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities" xlink:label="loc_38"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_38" order="100.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ProceedsFromOtherLongtermAssetsClassifiedAsInvestingActivities" xlink:label="loc_39"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_39" order="110.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PurchaseOfOtherLongtermAssetsClassifiedAsInvestingActivities" xlink:label="loc_40"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_40" order="120.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashAdvancesAndLoansMadeToOtherPartiesClassifiedAsInvestingActivities" xlink:label="loc_41"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_41" order="130.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashReceiptsFromRepaymentOfAdvancesAndLoansMadeToOtherPartiesClassifiedAsInvestingActivities" xlink:label="loc_42"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_42" order="140.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashPaymentsForFutureContractsForwardContractsOptionContractsAndSwapContractsClassifiedAsInvestingActivities" xlink:label="loc_43"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_43" order="150.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashReceiptsFromFutureContractsForwardContractsOptionContractsAndSwapContractsClassifiedAsInvestingActivities" xlink:label="loc_44"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_44" order="160.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DividendsReceivedClassifiedAsInvestingActivities" xlink:label="loc_45"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_45" order="170.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_InterestReceivedClassifiedAsInvestingActivities" xlink:label="loc_46"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_46" order="190.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncomeTaxesPaidRefundClassifiedAsInvestingActivities" xlink:label="loc_47"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_47" order="200.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherInflowsOutflowsOfCashClassifiedAsInvestingActivities" xlink:label="loc_48"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_48" order="210.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsFromUsedInInvestingActivities" xlink:label="loc_49"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_49" order="220.0" preferredLabel="http://www.xbrl.org/2009/role/netLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_InterestPaidClassifiedAsInvestingActivities" xlink:label="loc_50"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_50" order="180.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsFromUsedInFinancingActivitiesAbstract" xlink:label="loc_4"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc_4" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ProceedsFromIssuingShares" xlink:label="loc_51"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_51" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ProceedsFromIssuingOtherEquityInstruments" xlink:label="loc_52"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_52" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PaymentsToAcquireOrRedeemEntitysShares" xlink:label="loc_53"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_53" order="30.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PaymentsOfOtherEquityInstruments" xlink:label="loc_54"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_54" order="40.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_RepaymentsOfBorrowingsClassifiedAsFinancingActivities" xlink:label="loc_56"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_56" order="60.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_PaymentsOfFinanceLeaseLiabilitiesClassifiedAsFinancingActivities" xlink:label="loc_57"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_57" order="70.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DividendsPaidClassifiedAsFinancingActivities" xlink:label="loc_58"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_58" order="80.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_InterestPaidClassifiedAsFinancingActivities" xlink:label="loc_59"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_59" order="100.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncomeTaxesPaidRefundClassifiedAsFinancingActivities" xlink:label="loc_60"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_60" order="120.0" preferredLabel="http://www.xbrl.org/2009/role/negatedTerseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_OtherInflowsOutflowsOfCashClassifiedAsFinancingActivities" xlink:label="loc_61"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_61" order="130.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashFlowsFromUsedInFinancingActivities" xlink:label="loc_62"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_62" order="140.0" preferredLabel="http://www.xbrl.org/2009/role/netLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ProceedsFromBorrowingsClassifiedAsFinancingActivities" xlink:label="loc_55"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_55" order="50.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_InterestReceivedClassifiedAsFinancingActivities" xlink:label="loc_63"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_63" order="110.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DividendsReceivedClassifiedAsFinancingActivities" xlink:label="loc_64"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_64" order="90.0" preferredLabel="http://www.xbrl.org/2003/role/terseLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChanges" xlink:label="loc_5"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc_5" order="40.0" preferredLabel="http://www.xbrl.org/2009/role/netLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_EffectOfExchangeRateChangesOnCashAndCashEquivalentsAbstract" xlink:label="loc_6"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc_6" order="50.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_EffectOfExchangeRateChangesOnCashAndCashEquivalents" xlink:label="loc_65"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_6" xlink:to="loc_65" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_IncreaseDecreaseInCashAndCashEquivalents" xlink:label="loc_7"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc_7" order="60.0" preferredLabel="http://www.xbrl.org/2009/role/netLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashAndCashEquivalents" xlink:label="loc_9"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc_9" order="70.0" preferredLabel="http://www.xbrl.org/2003/role/periodStartLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_CashAndCashEquivalents" xlink:label="loc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_8" xlink:to="loc" order="80.0" preferredLabel="http://www.xbrl.org/2003/role/periodEndLabel"/>
+  </link:presentationLink>
+</link:linkbase>

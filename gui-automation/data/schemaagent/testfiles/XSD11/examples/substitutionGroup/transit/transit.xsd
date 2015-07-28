@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2013 rel. 2 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.1">
+	<xs:element name="metrorail" type="xs:string"/>
+	<xs:element name="subway" type="xs:string"/>
+	<xs:element name="metro" type="xs:normalizedString" substitutionGroup="metrorail subway"/>
+	<xs:element name="Example">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="metrorail"/>
+				<xs:element ref="subway"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

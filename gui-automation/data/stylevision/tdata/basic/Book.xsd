@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:f="http://www.xmlspy.com/schemas/formatting" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.xmlspy.com/schemas/formatting" schemaLocation="formatting.xsd"/>
+	<xs:complexType name="BookType">
+		<xs:sequence>
+			<xs:element ref="chapter" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="author" type="xs:string" use="optional"/>
+		<xs:attribute name="publisher" type="xs:string" use="optional"/>
+		<xs:attribute name="ISBN" type="xs:string" use="optional"/>
+		<xs:attribute name="volumes" type="xs:string" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="ChapterType">
+		<xs:sequence>
+			<xs:element ref="heading"/>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element ref="subchapter" maxOccurs="unbounded"/>
+				<xs:group ref="BlockElementsGroup"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubChapterType">
+		<xs:sequence>
+			<xs:element ref="heading"/>
+			<xs:group ref="BlockElementsGroup" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="book">
+		<xs:annotation>
+			<xs:documentation>a book</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="BookType"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="chapter" type="ChapterType"/>
+	<xs:element name="subchapter" type="SubChapterType"/>
+	<xs:element name="heading" type="f:MarkedTextType"/>
+	<xs:group name="BlockElementsGroup">
+		<xs:choice>
+			<xs:element ref="p"/>
+		</xs:choice>
+	</xs:group>
+	<xs:element name="p" type="f:ParagraphTextType"/>
+	<xs:element name="glossary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="entry" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="f:ParagraphTextType">
+								<xs:attribute name="concept" type="xs:string"/>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

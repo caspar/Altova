@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Example xmlns="http://www.example.org"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:ex="http://www.example.org">
+
+        <Value xsi:type="xs:string">Hello World</Value>
+        <Value xsi:type="xs:decimal">12.36</Value>
+        <Value xsi:type="xs:boolean">true</Value>
+
+        <Value xsi:type="ex:LotteryNumbers">3 2 4</Value>
+
+</Example>

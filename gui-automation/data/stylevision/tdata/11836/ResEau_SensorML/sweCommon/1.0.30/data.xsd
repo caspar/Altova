@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Mike Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/swe" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Defines basic ResponseType definition and commonly used sensor characteristics</xs:documentation>
+	</xs:annotation>
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://schemas.opengis.net/gml/3.1.0/xlink/xlinks.xsd"/>
+	<xs:include schemaLocation="./parameters.xsd"/>
+	<!-- ==============================          
+	Substitution groups 
+     ==========================-->
+	<xs:element name="_Encoding" type="swe:_EncodingType" abstract="true"/>
+	<xs:element name="_Binary" type="swe:_BinaryType" abstract="true"/>
+	<xs:element name="_Data" type="swe:_DataType" abstract="true"/>
+	<!-- ==============================          
+	Concrete elements 
+      ==========================-->
+	<!-- BEGIN change schema patterns to match GML use of global types - SJDC 2005-08-07-->
+	<!-- Does not change model but enables re-use in other contexts -->
+	<xs:complexType name="DataDefinitionType">
+		<xs:sequence>
+			<xs:element name="dataComponents">
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:group ref="swe:AnyData"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="swe:AssociationAttributes"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="encoding">
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element ref="swe:_Encoding"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="swe:AssociationAttributes"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID" use="optional"/>
+	</xs:complexType>
+	<!-- .............. -->
+	<xs:element name="DataDefinition" type="swe:DataDefinitionType"/>
+	<!-- .............. -->
+	<xs:complexType name="DataDefinitionPropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="swe:DataDefinition"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="swe:AssociationAttributes"/>
+	</xs:complexType>
+	<!-- ============ -->
+	<xs:complexType name="DataType">
+		<xs:complexContent>
+			<xs:extension base="swe:_DataType">
+				<xs:sequence>
+					<xs:element name="definition" type="swe:DataDefinitionPropertyType"/>
+					<xs:element name="value" type="swe:DataValueType" nillable="true">
+						<xs:annotation>
+							<xs:documentation>either provide inline data iin ascii format (e.g. tuple list, base64) or use URI link for external source (e.g. file, service, mime attachment, etc.). </xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- .............. -->
+	<xs:element name="Data" type="swe:DataType" substitutionGroup="swe:_Data"/>
+	<!-- .............. -->
+	<xs:complexType name="DataPropertyType">
+		<xs:sequence minOccurs="0">
+			<xs:element ref="swe:Data"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="swe:AssociationAttributes"/>
+	</xs:complexType>
+	<!-- ============ -->
+	<xs:complexType name="DataValueType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="externalLink" type="xs:anyURI" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- END change schema patterns to match GML use of global types -->
+	<!-- ============ -->
+	<xs:element name="BinaryValue" substitutionGroup="swe:_Binary">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_BinaryType">
+					<xs:attribute name="dataType" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="urn:ogc:data:float"/>
+								<xs:enumeration value="urn:ogc:data:double"/>
+								<xs:enumeration value="urn:ogc:data:boolean"/>
+								<xs:enumeration value="urn:ogc:data:signedByte"/>
+								<xs:enumeration value="urn:ogc:data:unsignedByte"/>
+								<xs:enumeration value="urn:ogc:data:signedShort"/>
+								<xs:enumeration value="urn:ogc:data:unsignedShort"/>
+								<xs:enumeration value="urn:ogc:data:signedInt"/>
+								<xs:enumeration value="urn:ogc:data:unsignedInt"/>
+								<xs:enumeration value="urn:ogc:data:signedLong"/>
+								<xs:enumeration value="urn:ogc:data:unsignedLong"/>
+								<xs:enumeration value="urn:ogc:data:UTF-string"/>
+								<xs:enumeration value="urn:ogc:data:padding"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="bitOffset" type="xs:integer" use="optional" default="0"/>
+					<xs:attribute name="bitLength" type="xs:positiveInteger" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BinaryGroup" substitutionGroup="swe:_Binary">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_BinaryType">
+					<xs:sequence>
+						<xs:element name="component" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="swe:_Binary"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BinaryArray" substitutionGroup="swe:_Binary">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_BinaryType">
+					<xs:sequence>
+						<xs:element name="component">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="swe:_Binary"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="arraySize" type="swe:arraySizeSimpleType" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="StandardFormat" substitutionGroup="swe:_Encoding">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_EncodingType">
+					<xs:attribute name="mimeType" type="xs:token" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="XMLTuple" substitutionGroup="swe:_Encoding">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_EncodingType">
+					<xs:attribute name="decimalSeparator" type="xs:string" use="required"/>
+					<xs:attribute name="tokenSeparator" type="xs:string" use="required"/>
+					<xs:attribute name="tupleSeparator" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BinaryBlock" substitutionGroup="swe:_Encoding">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_EncodingType">
+					<xs:sequence>
+						<xs:element name="byteLength" type="xs:positiveInteger"/>
+						<xs:element name="byteEncoding">
+							<xs:simpleType>
+								<xs:restriction base="xs:anyURI">
+									<xs:enumeration value="urn:ogc:data:raw"/>
+									<xs:enumeration value="urn:ogc:data:hex"/>
+									<xs:enumeration value="urn:ogc:data:base64"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="byteOrder">
+							<xs:simpleType>
+								<xs:restriction base="xs:anyURI">
+									<xs:enumeration value="urn:ogc:data:bigEndian"/>
+									<xs:enumeration value="urn:ogc:data:littleEndian"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="encryption" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:anyURI">
+									<xs:enumeration value="urn:ogc:data:XOR"/>
+									<xs:enumeration value="urn:ogc:data:MD5"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="compression" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:anyURI">
+									<xs:enumeration value="urn:ogc:data:gzip"/>
+									<xs:enumeration value="urn:ogc:data:bzip"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="structure" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="swe:_Binary"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AsciiBlock" substitutionGroup="swe:_Encoding">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="swe:_EncodingType">
+					<xs:attribute name="tokenSeparator" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- ============================== 
+           Complex Types 
+        ===========================-->
+	<xs:complexType name="_EncodingType">
+		<xs:attribute name="id" type="xs:ID" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="_BinaryType">
+		<xs:attribute name="id" type="xs:ID" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="_DataType">
+		<xs:attribute name="id" type="xs:ID" use="optional"/>
+	</xs:complexType>
+</xs:schema>

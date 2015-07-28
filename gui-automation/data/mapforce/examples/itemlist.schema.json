@@ -1,0 +1,17 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "array",
+	"title": "item",
+	"items": {
+		"type": "object",
+		"required": [ "partNum", "productName", "quantity", "price" ],
+		"properties": {
+			"partNum": { "type": "string", "title": "Part Identifier", "description": "Is an alphanumeric code consisting of three digits, an hyphen and the product acronym, e. g. 150-RS"  },
+			"productName": { "type": "string", "title": "Name of the product" },
+			"quantity": { "type": "number", "title": "Quantity in pieces" },
+			"price": { "type": "number", "title": "Price", "description": "Price in US-Dollar" },
+			"comment": { "type": "string", "description": "Any further shipment comments" },
+			"shipDate": { "type": "string", "title": "Date of shipping" }
+		}
+	}	
+}

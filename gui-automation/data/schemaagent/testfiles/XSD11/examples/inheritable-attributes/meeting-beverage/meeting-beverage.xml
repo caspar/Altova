@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Example xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="meeting-beverage.xsd">
+	<Meeting start-time="08:00:00" end-time="09:00:00">
+		<Beverage>juice</Beverage>
+	</Meeting>
+	<Meeting start-time="13:00:00" end-time="14:00:00">
+		<Beverage></Beverage>
+	</Meeting>
+</Example>

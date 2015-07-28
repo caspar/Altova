@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 U (http://www.xmlspy.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Customer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Number" type="xs:integer"/>
+				<xs:element name="FirstName" type="xs:string"/>
+				<xs:element name="LastName" type="xs:string"/>
+				<xs:element name="Address">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Street" type="xs:string"/>
+							<xs:element name="City" type="xs:string"/>
+							<xs:element name="ZIP" type="xs:string"/>
+							<xs:element name="State" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

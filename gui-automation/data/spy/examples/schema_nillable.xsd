@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Beilla (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="test" nillable="true">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="e5" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute name="at11"/>
+						<xs:attribute name="att12" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="e4">
+					<xs:complexType>
+						<xs:attribute name="att21" use="required"/>
+						<xs:attribute name="att22"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="e3">
+					<xs:complexType>
+						<xs:attribute name="att31" use="prohibited"/>
+						<xs:attribute name="att32"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="e2" minOccurs="0"/>
+				<xs:element name="e1">
+					<xs:complexType>
+						<xs:attribute name="e12" use="required"/>
+						<xs:attribute name="e11" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:choice>
+					<xs:sequence>
+						<xs:element name="min11"/>
+						<xs:element name="min12"/>
+					</xs:sequence>
+					<xs:element name="min1"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

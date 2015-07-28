@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Using Java Native Interface (JNI)</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="robots_overview.xhtml">Next: Overview of the Automation Framework</a>
+		</div>
+		<div class="previous">
+			<a href="junit.xhtml">Previous:Using JUnit to create simple unit tests</a>
+		</div>
+		<h1>Using Java Native Interface (JNI) and setting up Visual Studio</h1>
+		<h2>
+			<a name="1" />Background</h2>
+		<div class="p">
+		All of the functionality needed for the automated GUI tests are available through the <i>java.awt.Robot</i> class. However, in some cases it is possible to get a worth while speed up of the test, and slim down of the code, that other methods are justified. In the GUI automation framework, we take advantage of a few so called native calls to do certain tasks. This includes getting information about a window, toolbar, or other Windows native component, getting information about which window has focus, and finally switching between windows (as in ALT+TAB, or clicking the Taskbar). This page gives an overview of these Java Native Interface calls, and shows how to setup up Visual Studio to change and compile the code.
+		</div>
+		<h2>
+			<a name="2" />Overview</h2>
+		<div class="p">
+			<a href="http://java.sun.com/javase/6/docs/technotes/guides/jni/index.html">Java Native Interface (JNI)</a> is a way to call native (usually C or C++ code) from within Java classes. From the Java code side, the method looks like an almost normal method (it has no body, and used the <i>native</i> keyword). On the C/C++ side, some special header files and method signatures are required. These are generated automatically for you by the <i>javah</i> command. The process of creating JNI code includes the following steps:
+		<ol>
+				<li>Create <i>native</i> methods in the Java class.</li>
+				<li>Compile this class.</li>
+				<li>Create a C header file using the <i>javah</i> command (which comes with the Java JDK).</li>
+				<li>Implement C/C++ code using the generated header file.</li>
+				<li>Compile the C++ code for you platform, in our case Visual Studio for Windows.</li>
+				<li>Put the resulting DLL in convient location.</li>
+				<li>Make sure the system PATH variable point to the directory where the DLL is located. (That was PATH and <b>not</b> CLASSPATH).</li>
+			</ol>
+		</div>
+		<h2>
+			<a name="3" />Relevant files</h2>
+		<div class="p">
+			<ul>
+				<li>
+					<div class="file">C:\work\gui-automation\src\com\altova\nativegui\NativeGUI.java</div>
+					<div class="p">On the Java side this file contains the Java interface between the native code
+    and the other Java classes. The native methods are private, and only called from
+    within this class.</div>
+				</li>
+				<li>
+					<div class="file">C:\work\gui-automation\src\jni\nativegui\com_altova_nativegui_NativeGUI.h</div>
+					<div class="p">The header / interface on the C++ side. This file should not be edited.</div>
+				</li>
+				<li>
+					<div class="file">C:\work\gui-automation\src\jni\nativegui\com_altova_nativegui_NativeGUI.cpp</div>
+					<div class="p">The code on the C++ side, which implements the few methods defined in the header.
+    It is currently depending upon the C++ windows.h header and the Java jni.h header.</div>
+				</li>
+				<li>
+					<div class="file">C:\work\gui-automation\src\jni\nativegui\Debug\nativegui.dll</div>
+					<div class="p">This is most likely where the DLL will end up. Copy it as you need.
+    Make sure it is in the system PATH (not the CLASSPATH).</div>
+				</li>
+			</ul>
+		</div>
+		<h2>
+			<a name="4" />How to generate the native header file</h2>
+		<div class="p">
+		If you have made changes to native methods in <i>NativeGUI.java</i>, you will need to go through the steps to genereate a new header, code and DLL. Here is the first bit, which gives you a new .h header file:
+		<pre class="cmd">
+cd C:\work\gui-automation\src
+set classpath=.
+javac com\altova\nativegui\NativeGUI.java
+javah -jni -d jni\nativegui com.altova.nativegui.NativeGUI
+		</pre>
+		</div>
+		<h2>
+			<a name="5" />Setting up Visual Studio, and compiling the C++ code</h2>
+		<h3>The easy way</h3>
+			<div class="p">The dirertory <div class="file">C:\work\gui-automation\src\jni\nativegui </div> already contains a file VS .Net project and solution file <i>nativegui.sln</i>. Opening this, setting the Java included files and compiling should hopefully get you the DLL, if you're using VS .Net 2005.
+			<a href="vsnet_easy.wmv">You can see a short movie of how to do this here.</a></div>
+		<h3>From scratch</h3>
+		<div class="p">
+	    However, if the Visual C++ Solution and Project files which are checked into CVS, do not work on your systems, or if you need to start from scratch, the
+    following should get you up and running:
+	<ol>
+				<li>Remove the existing VS project and solution files from your local disk. (Do not remove from CVS)</li>
+				<li>Create a new Visual C++ Empty project (see picture).</li>
+				<li>Add the .h and .cpp file from the Java project.</li>
+				<li>Set the following project options (see attached images):
+					<ul>
+						<li>C/C++ -&gt; Code Generation -&gt; Runtime Library = Multi-threaded (/MT)</li>
+						<li>C/C++ -&gt; Command Line = /DLL -LD</li>
+						<li>Linker -&gt; General -&gt; Output File = $(OutDir)\$(ProjectName).dll</li>
+						<li>Linker -&gt; Debugging -&gt; Generate Debug Info = No</li>						
+						<li>Linker -&gt; Advanced -&gt; No Entry Point = Yes (/NOENTRY)</li>
+						<li>Linker -&gt; Command Line = /DLL /NOENTRY</li>
+					</ul>
+				</li>
+				<li>Under menu Tools -&gt; Options, add the include paths as shown in the attaced picture, e.g.<br />
+    C:\Java\jdk1.6.0\include<br />
+    C:\Java\jdk1.6.0\include\win32
+    </li>
+		<li>Now the project should compile.</li>
+		<li>The <i>nativegui.dll</i> should now be under <div class="file">C:\work\gui-automation\src\jni\nativegui\Debug </div>. This can now be copied to <div class="file">C:\work\gui-automation</div></li>
+		<li>Commit it the new DLL CVS, and also commit any changes to the C++ files. However, <b>DO NOT</b> commit changes to the VS .Net project and solution files.</li>
+		
+			</ol>
+			<b><a href="vsnet_setup_empty.wmv">You can see a short movie of these steps here.</a></b><br/>
+			
+			</div>
+	<div class="p">
+			<img alt="" src="vsnet_newprj.png" class="screen" />
+			<img alt="" src="vc_cpp_project_options.jpg" class="screen" />
+			<img alt="" src="vc_cpp_properties.jpg" class="screen" />
+			<img alt="" src="vc_cpp_codegen.png" class="screen" />
+			<img alt="" src="vc_cpp_output_file.jpg" class="screen" />
+			<img alt="" src="vc_cpp_debug.png" class="screen" />
+			<img alt="" src="vc_cpp_linker_cmd.jpg" class="screen" />
+			<img alt="" src="vc_cpp_include_options.jpg" class="screen" />
+		</div>
+		<h2>
+			<a name="6" />Got the DLL. How to use it in Java?</h2>
+		<div class="p">
+		Make sure the directory of the nativegui.DLL is in a location which is in the PATH. That's right, not the Java CLASSPATH, but the system PATH variable. In Eclipse 3.2 and later, you can set up the <i>Native library location</i> for your source code. Please see the <a href="eclipse.xhtml#4">Setting up the Eclipse IDE section</a> for this, it also includes <a href="eclipse_prj_settings.wmv">a short movie of how to set the project and VM options.</a>
+			<img alt="" src="eclipse_run_system_path.jpg" class="screen" />
+		</div>
+		<h2>
+			<a name="7" />Help - Eclipse build and run is breaking</h2>
+		<div class="p">
+		    Two things to watch out for here:
+    First, if the binary solutions files from VC are on the build path of Eclipse, it will stop.
+    Therefore, the jni/** path must be added to the exclude list of the Eclipse project.
+    See picture below. Secondly, the DLL must be on the PATH when you run any JNI related Java files. 
+    This has to be set for each Run Configuration. Please see section above.
+    <img alt="" src="eclipse_exclude.jpg" class="screen" />
+		</div>
+		<h2>
+			<a name="8" />Help!  I'm still getting a UnsatisfiedLinkError</h2>
+		<div class="p">
+		Usually, this "occurs when the library can't be found, native function declarations aren't what
+    they should be, or a C compiler has mangled the exported names of functions in the DLL".
+    <a href="http://www.ucware.com/apev/JNI-dll-and-UnsatisfiedLinkError.htm">Download the Anywhere PE Viewer</a>, which might help clearing up some of this. 
+
+    Match the entries in the Export that to those in the Java file, the .H header file and
+    the .CPP file. If there is a mismatch, that's probably why it will not load.
+		</div>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--this is a comment-->
+<!DOCTYPE element1 [
+  <!ELEMENT element1 (#PCDATA)>
+]>
+
+<?altova  test?>
+
+<element1 attr1="hello">
+	<script><![CDATA[
+function matchwo(a,b)
+{
+if (a < b && a < 0) then
+  {
+  return 1;
+  }
+else
+  {
+  return 0;
+  }
+}
+]]></script>here we go</element1>

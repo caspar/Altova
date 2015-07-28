@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>CVS Howto</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="ant_howto.xhtml">Next: Using Ant to run automated tests</a>
+		</div>
+		<div class="previous">
+			<a href="java_howto.xhtml">Previous: Working with Java</a>
+		</div>
+		<h1>CVS Howto</h1>
+		<h2>
+			<a name="1" />Getting started</h2>
+		<div class="p">
+		The environment variable CVSROOT has to be set for login and the initial checkout. Either <b>add it to your system variables under Control Panel -> System</b> or set it in the shell like this example:
+<pre class="cmd">
+set CVSROOT=:pserver:<b>username</b>@viepcvs01.vie.altova.com:/cvs/qa
+</pre>
+		</div>
+		<div class="p">
+Then make sure you have the CVS application on your system path, so you can run it from the command line. Here in QA, it will usually be here: <div class="file">C:\Program Files\GNU\WinCvs 1.2 </div>, or <div class="file">C:\java\WinCVS 1.2 </div>, if you followed these instructions.
+		</div>
+		<div class="p">
+Now you can log in. For our QA CVS server, your username and password will be the same.
+<pre class="cmd">
+cvs login
+</pre>
+Should you need to read files in the <b>developer cvs</b>, the CVSROOT would be as below. It seems everybody has read access, and the password is your Windows password. <i>Actually, that is not true in all cases. For myself, it is directly connected to my Windows password, so when it changes, I'll have to log in again from CVS. However, others have the same password as username, just like the QA CVS (e.g. hab/hab). Yet others have a third password for this.</i>
+			<pre class="cmd">
+set CVSROOT=:pserver:<b>username</b>@cvs.vie.altova.com:f:/sources/altova
+</pre>
+		</div>
+		<h2>
+			<a name="2" />Checking out</h2>
+		<div class="p">
+		When you want to look at other's code (or changed it later), you first need to make a local copy on your machine. You have to know the module name on the sever. In this example, let's use the GUI automation test module.
+
+First change directory to where you want the files to be stored, for example:
+<pre class="cmd">
+cd c:\work
+</pre>
+
+Then check out the module. You only need this once:
+<pre class="cmd">
+cvs checkout gui-automation
+</pre>
+		</div>
+		<h2>
+			<a name="3" />Updating your local files</h2>
+		<div class="p">
+		If others work on the same project and files as you, your local copy will become out of date. To update, run this command in the <b>base directory of your CVS module</b>. (the -d switch will create any new directories as well).
+<pre class="cmd">
+cvs update -d
+</pre>
+		</div>
+		<h2>
+			<a name="4" />Committing your changes</h2>
+		<div class="p">
+		When you have made a change to a local copy of a file which is already in CVS, you can "upload" your change with the commit command, like this:
+<pre class="cmd">
+cvs commit -m "My comment here" [file1.java file2.txt]
+</pre>
+
+If you'd like to update all files in the directory you're in and down into sub directories, just <b>skip the file names</b>.
+
+		</div>
+		<h2>
+			<a name="5" />Adding new files</h2>
+		<div class="p">
+		When you have created some new files locally, and want to upload them to the CVS server, you first need to add them, and then commit:
+		<pre class="cmd">
+cvs add myfile.txt
+cvs commit -m "My comment" myfile.txt
+</pre>
+
+If you're adding a binary file, picture, DLL, etc. use the -kb switch:
+<pre class="cmd">
+cvs add <b>-kb</b> mypicture.jpg
+cvs commit -m "My comment" mypicture.jpg
+</pre>
+
+Should you ever forget the <i>-kb</i> option for a binary file, there is a resecue, which has to be carried out on the machine for the orginal file was checked it.
+<pre class="cmd">
+cvs admin <b>-kb</b> mypicture.jpg
+cvs update <b>-A</b> mypicture.jpg
+cvs commit -m "My comment" mypicture.jpg
+</pre>
+Afterward, you will then have to do a new update on another machine, and confirm that the picture, Word document, etc. actually loads and works.
+		</div>
+		<h2>
+			<a name="6" />Removing files</h2>
+		<div class="p">
+		<pre class="cmd">
+del file.txt
+cvs rm file.txt
+cvs commit -m "Removed file" file.txt		
+</pre>
+		</div>
+
+
+		<h2>
+			<a name="7" />Other options</h2>
+		<div class="p">
+		
+		<pre class="cmd">
+cvs --help
+cvs --help-commands
+cvs --help-synonyms
+cvs --help-options
+</pre>
+		</div>
+		
+		
+		<h2>
+			<a name="8" />Listing modules</h2>
+		<div class="p">
+		You can list available top level modules in a repository provided you have Cygwin installed. From within a <b>bash shell</b>, in a <b>directory which is under CVS control</b>, type:
+		<pre class="cmd">
+cvs history -c -a -l | awk '{sub(/[/].*/,"",$8); print $8;}' | sort -u
+</pre>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-410005" xlink:type="simple" xlink:href="rol_ias_1_2010-04-30.xsd#ias_1_2010-04-30_role-410005"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/negatedLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedLabel"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://xbrl.iasb.org/role/ifrs/ias_1_2010-04-30_role-410005" xlink:title="[410005] Statement of comprehensive income - Separate financial statements">
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_StatementOfComprehensiveIncomeAbstract" xlink:label="loc_2"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ProfitLoss" xlink:label="loc_4"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_4" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ComprehensiveIncome" xlink:label="loc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc" order="30.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeAbstract" xlink:label="loc_3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_3" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncome" xlink:label="loc_10"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_10" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ComponentsOfOtherComprehensiveIncomeNetOfTaxAbstract" xlink:label="loc_21"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_21" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExchangeDifferencesOnTranslationAbstract" xlink:label="loc_5"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_21" xlink:to="loc_5" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_GainsLossesOnExchangeDifferencesOnTranslationNetOfTax" xlink:label="loc_11"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_5" xlink:to="loc_11" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReclassificationAdjustmentsOnExchangeDifferencesOnTranslationNetOfTax" xlink:label="loc_12"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_5" xlink:to="loc_12" order="20.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeNetOfTaxExchangeDifferencesOnTranslation" xlink:label="loc_13"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_5" xlink:to="loc_13" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AvailableforsaleFinancialAssetsAbstract" xlink:label="loc_6"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_21" xlink:to="loc_6" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_GainsLossesOnRemeasuringAvailableforsaleFinancialAssetsNetOfTax" xlink:label="loc_14"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_6" xlink:to="loc_14" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReclassificationAdjustmentsOnAvailableforsaleFinancialAssetsNetOfTax" xlink:label="loc_15"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_6" xlink:to="loc_15" order="20.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeNetOfTaxAvailableforsaleFinancialAssets" xlink:label="loc_16"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_6" xlink:to="loc_16" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CashFlowHedgesAbstract" xlink:label="loc_7"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_21" xlink:to="loc_7" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_GainsLossesOnCashFlowHedgesNetOfTax" xlink:label="loc_17"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_7" xlink:to="loc_17" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReclassificationAdjustmentsOnCashFlowHedgesNetOfTax" xlink:label="loc_18"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_7" xlink:to="loc_18" order="20.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AdjustmentsForAmountsTransferredToInitialCarryingAmountOfHedgedItems" xlink:label="loc_19"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_7" xlink:to="loc_19" order="30.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeNetOfTaxCashFlowHedges" xlink:label="loc_20"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_7" xlink:to="loc_20" order="40.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeNetOfTaxGainsLossesOnRevaluation" xlink:label="loc_8"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_21" xlink:to="loc_8" order="60.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeNetOfTaxActuarialGainsLossesOnDefinedBenefitPlans" xlink:label="loc_9"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_21" xlink:to="loc_9" order="70.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeNetOfTaxGainsLossesFromInvestmentsInEquityInstruments" xlink:label="loc_22"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_21" xlink:to="loc_22" order="50.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_HedgesOfNetInvestmentsInForeignOperationsAbstract" xlink:label="loc_23"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_21" xlink:to="loc_23" use="optional" order="40.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_GainsLossesOnHedgesOfNetInvestmentsInForeignOperationsNetOfTax" xlink:label="loc_24"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_23" xlink:to="loc_24" use="optional" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReclassificationAdjustmentsOnHedgesOfNetInvestmentsInForeignOperationsNetOfTax" xlink:label="loc_25"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_23" xlink:to="loc_25" use="optional" order="20.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComprehensiveIncomeNetOfTaxHedgesOfNetInvestmentsInForeignOperations" xlink:label="loc_26"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_23" xlink:to="loc_26" use="optional" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeExpenseRecognisedInOtherComprehensiveIncomeRelatingToNoncurrentAssetsOrDisposalGroupClassifiedAsHeldForSale" xlink:label="loc_27"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_27" use="optional" order="20.0"/>
+  </link:presentationLink>
+</link:linkbase>

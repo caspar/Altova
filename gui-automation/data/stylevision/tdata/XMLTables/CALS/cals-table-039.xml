@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by rip  (Altova GmbH) -->
+<!--
+This documment is invalid. A tgroup must have a tbody.
++........+........+
+ |A       |B       |
++........+........+
+-->
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+               "http://www.altova.com/schemas/docbook/docbookx.dtd">
+<?altova_sps cals-table-maindesign.sps?>
+<book>
+	<article>
+		<articleinfo>
+			<title>CALS Table Test 039    - ErrorCase - missing tbody element</title>
+			<releaseinfo>Release 2011</releaseinfo>
+			<author>
+				<firstname>rip</firstname>
+				<surname></surname>
+				<affiliation>
+					<address>
+						<email>rip@altova.com</email>
+					</address>
+				</affiliation>
+			</author>
+			<subtitle>neg Tcase: missing tbody</subtitle>
+		</articleinfo>
+		<table frame="all" colsep="1" rowsep="1">
+			<title>CALS Table Test 039</title>
+			<tgroup cols="2">
+				<colspec colname="col1" colnum="1"/>
+				<thead>
+					<row>
+						<entry>Col 1</entry>
+						<entry>Col 2</entry>
+					</row>
+				</thead>
+			</tgroup>
+		</table>
+	</article>
+</book>

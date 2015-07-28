@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by Lloyd Hamilton (LexisNexis Canada Inc) -->
+<xs:schema xmlns:xdb="http://xmlns.oracle.com/xdb" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+	<xs:element name="act" xdb:defaultTable="ACTS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="repealed" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="reason" type="repealed_T"/>
+							<xs:element name="repealed-date" type="xs:date"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="products" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="product" type="product_T" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="act-version" maxOccurs="2">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="title" type="act_title_T"/>
+							<xs:element name="designated-cite" type="cite_T"/>
+							<xs:element name="unofficial-designated-cite" type="cite_T" minOccurs="0"/>
+							<xs:element name="act-effective" type="act-effective_T" minOccurs="0"/>
+							<xs:element name="act-amended" type="act-amended_T" minOccurs="0" maxOccurs="3"/>
+							<xs:choice maxOccurs="unbounded">
+								<xs:element name="level" type="level_T" maxOccurs="unbounded"/>
+								<xs:element name="doc" type="doc_T" maxOccurs="unbounded"/>
+							</xs:choice>
+						</xs:sequence>
+						<xs:attribute name="type" use="optional" default="English">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="French"/>
+									<xs:enumeration value="English"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="juris" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="AB"/>
+						<xs:enumeration value="BC"/>
+						<xs:enumeration value="CD"/>
+						<xs:enumeration value="MB"/>
+						<xs:enumeration value="NB"/>
+						<xs:enumeration value="NF"/>
+						<xs:enumeration value="NS"/>
+						<xs:enumeration value="NT"/>
+						<xs:enumeration value="NU"/>
+						<xs:enumeration value="ON"/>
+						<xs:enumeration value="PE"/>
+						<xs:enumeration value="PQ"/>
+						<xs:enumeration value="SK"/>
+						<xs:enumeration value="YT"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="product_T">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="3"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="act-effective_T">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="7"/>
+			<xs:maxLength value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="act-amended_T" mixed="true">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="repealed_T">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Repealed"/>
+			<xs:enumeration value="Replaced"/>
+			<xs:enumeration value="Revoked"/>
+			<xs:enumeration value="Terminated"/>
+			<xs:enumeration value="Expired"/>
+			<xs:enumeration value="Spent"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- You can't restrict and extend simultaneously -->
+	<xs:complexType name="act_title_T">
+		<xs:simpleContent>
+			<xs:extension base="act_title_base">
+				<xs:attribute name="sort-override" type="act_title_base"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="act_title_base">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="5"/>
+			<xs:maxLength value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="cite_T">
+		<xs:simpleContent>
+			<xs:extension base="cite_base">
+				<xs:attribute name="display-override" type="cite_base" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="cite_base">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="12"/>
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="level_T">
+		<xs:sequence>
+			<xs:element name="title" type="title_base"/>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="level" type="level_T" maxOccurs="unbounded"/>
+				<xs:element name="doc" type="doc_T" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="doc_T">
+		<xs:sequence>
+			<xs:element name="version" type="version_T" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="version_T">
+		<xs:sequence>
+			<xs:element name="title" type="title_T"/>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="heading" type="heading_base"/>
+				<xs:element name="p" type="p_T"/>
+				<xs:element name="verbatim" type="verbatim_T"/>
+				<xs:element name="margin-note" type="margin-note_T"/>
+				<xs:element name="editor-table" type="verbatim_T">
+					<xs:annotation>
+						<xs:documentation>Goes into leg:tableofamend</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="section-history" type="section-history_T"/>
+				<xs:element name="long-title" type="long-title_T"/>
+				<xs:element name="section-level" type="section-level_T">
+					<xs:annotation>
+						<xs:documentation>Section or sub-section identifier</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="attachment" type="object_T"/>
+				<xs:element name="inlineobject" type="object_T"/>
+				<xs:element name="editor-note" type="editor-note_T"/>
+				<xs:element name="transitional-provisions" type="editor-note_T"/>
+				<xs:element name="related-provisions" type="editor-note_T"/>
+				<xs:element name="priors" type="priors_T"/>
+				<xs:element name="not-in-force" type="not-in-force_T"/>
+				<xs:element name="definition" type="definition_T"/>
+				<xs:element name="table" type="table_T"/>
+			</xs:choice>
+			<xs:element name="designated-cite" type="cite_T"/>
+		</xs:sequence>
+		<xs:attribute name="repealed" type="repealed_T" use="optional"/>
+		<xs:attribute name="start" type="xs:date" use="optional"/>
+		<xs:attribute name="end" type="xs:date" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="title_base">
+		<xs:complexContent>
+			<xs:extension base="heading_base"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="title_T">
+		<xs:complexContent>
+			<xs:extension base="title_base">
+				<xs:attribute name="display" type="xs:boolean" use="optional" default="true"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="heading_base" mixed="true">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+		</xs:sequence>
+		<xs:attribute name="align" type="align_base" use="optional" default="center"/>
+	</xs:complexType>
+	<xs:simpleType name="align_base">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="center"/>
+			<xs:enumeration value="right"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="text_T" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+			<xs:element name="b" type="b_T"/>
+			<xs:element name="i" type="i_T"/>
+			<xs:element name="u" type="u_T"/>
+			<xs:element name="sup" type="sup_T"/>
+			<xs:element name="sub" type="sub_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:attributeGroup name="format-attributes">
+		<xs:attribute name="align" type="align_base" use="optional" default="left"/>
+		<xs:attribute name="first-line" type="xs:integer" use="optional" default="0"/>
+		<xs:attribute name="left-margin" type="xs:integer" use="optional" default="0"/>
+	</xs:attributeGroup>
+	<xs:complexType name="p_T">
+		<xs:complexContent>
+			<xs:extension base="text_T">
+				<xs:attributeGroup ref="format-attributes"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="section-level_T">
+		<xs:complexContent>
+			<xs:extension base="text_T"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="p_term_T" mixed="true">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="nl" type="nl_T"/>
+				<xs:element name="b" type="b_T"/>
+				<xs:element name="i" type="i_T"/>
+				<xs:element name="u" type="u_T"/>
+				<xs:element name="sup" type="sup_T"/>
+				<xs:element name="sub" type="sub_T"/>
+			</xs:choice>
+			<xs:element name="term" type="term_T" maxOccurs="10"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="nl" type="nl_T"/>
+				<xs:element name="b" type="b_T"/>
+				<xs:element name="i" type="i_T"/>
+				<xs:element name="u" type="u_T"/>
+				<xs:element name="sup" type="sup_T"/>
+				<xs:element name="sub" type="sub_T"/>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attributeGroup ref="format-attributes"/>
+	</xs:complexType>
+	<xs:simpleType name="term_T">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="b_T" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+			<xs:element name="i" type="i_T"/>
+			<xs:element name="u" type="u_T"/>
+			<xs:element name="sup" type="sup_T"/>
+			<xs:element name="sub" type="sub_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="i_T" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+			<xs:element name="b" type="b_T"/>
+			<xs:element name="u" type="u_T"/>
+			<xs:element name="sup" type="sup_T"/>
+			<xs:element name="sub" type="sub_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="u_T" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+			<xs:element name="i" type="i_T"/>
+			<xs:element name="b" type="b_T"/>
+			<xs:element name="sup" type="sup_T"/>
+			<xs:element name="sub" type="sub_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="sup_T" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+			<xs:element name="i" type="i_T"/>
+			<xs:element name="u" type="u_T"/>
+			<xs:element name="b" type="b_T"/>
+			<xs:element name="sub" type="sub_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="sub_T" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="nl" type="nl_T"/>
+			<xs:element name="i" type="i_T"/>
+			<xs:element name="u" type="u_T"/>
+			<xs:element name="sup" type="sup_T"/>
+			<xs:element name="b" type="b_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:simpleType name="verbatim_T">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="6"/>
+			<xs:whiteSpace value="preserve"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="section-history_T">
+		<xs:restriction base="limited_text_T"/>
+	</xs:simpleType>
+	<xs:simpleType name="long-title_T">
+		<xs:restriction base="limited_text_T"/>
+	</xs:simpleType>
+	<xs:simpleType name="limited_text_T">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="6"/>
+			<xs:maxLength value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="margin-note_T">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="500"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="nl_T"/>
+	<xs:complexType name="editor-note_T">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="p" type="p_T"/>
+			<xs:element name="heading" type="heading_base"/>
+			<xs:element name="table" type="table_T"/>
+			<xs:element name="verbatim" type="verbatim_T"/>
+			<xs:element name="margin-note" type="margin-note_T"/>
+			<xs:element name="definition" type="definition_T"/>
+			<xs:element name="section-level" type="section-level_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="not-in-force_T">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="p" type="p_T"/>
+			<xs:element name="heading" type="heading_base"/>
+			<xs:element name="table" type="table_T"/>
+			<xs:element name="verbatim" type="verbatim_T"/>
+			<xs:element name="margin-note" type="margin-note_T"/>
+			<xs:element name="editor-note" type="editor-note_T"/>
+			<xs:element name="definition" type="definition_T"/>
+			<xs:element name="section-level" type="section-level_T"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="definition_T">
+		<xs:sequence>
+			<xs:element name="p-term" type="p_term_T"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="p" type="p_T"/>
+				<xs:element name="table" type="table_T"/>
+				<xs:element name="verbatim" type="verbatim_T"/>
+				<xs:element name="editor-note" type="editor-note_T"/>
+				<xs:element name="not-in-force" type="not-in-force_T"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="object_T">
+		<xs:annotation>
+			<xs:documentation>Attachment maps to link element in GLP DTD</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="filename" type="xs:string" use="required"/>
+		<xs:attribute name="objtype" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="pdf"/>
+					<xs:enumeration value="wordprocess"/>
+					<xs:enumeration value="spreadsheet"/>
+					<xs:enumeration value="HTML"/>
+					<xs:enumeration value="hotdoc"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- Will nail down the structure of the priors table in Stylevision or want to rely on the rest-of-contents (i.e. apply-templates) processing -->
+	<xs:complexType name="priors_T">
+		<xs:sequence>
+			<xs:element name="prior" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="title" type="act_title_T" minOccurs="0"/>
+						<!-- do I really want the main ref element here -->
+						<xs:element name="designated-cite" type="cite_T" minOccurs="0"/>
+						<!-- do I really want the main cite element here -->
+						<xs:element name="changed-by" type="limited_text_T" minOccurs="0"/>
+						<xs:element name="effective" type="limited_text_T" minOccurs="0"/>
+						<xs:element name="authority" type="limited_text_T" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="table_T">
+		<xs:sequence>
+			<xs:element name="caption" minOccurs="0">
+				<xs:complexType>
+					<xs:attribute name="align">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="top"/>
+								<xs:enumeration value="bottom"/>
+								<xs:enumeration value="left"/>
+								<xs:enumeration value="right"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="thead" type="trs_T" minOccurs="0"/>
+			<xs:element name="tfoot" type="trs_T" minOccurs="0"/>
+			<xs:element name="tbody" type="trs_T" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="align" type="align_T"/>
+		<xs:attribute name="border" type="xs:string"/>
+		<xs:attribute name="cellpadding" type="xs:string"/>
+		<xs:attribute name="bgcolor" type="xs:string"/>
+		<xs:attribute name="width" type="xs:string"/>
+		<xs:attribute name="cellspacing" type="xs:string"/>
+		<xs:attribute name="frame" type="xs:string"/>
+		<xs:attribute name="rules" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="tr">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="th" type="cell_T"/>
+			<xs:element name="td" type="cell_T"/>
+		</xs:choice>
+		<xs:attribute name="align" type="align_T"/>
+		<xs:attribute name="valign" type="valign_T"/>
+		<xs:attribute name="bgcolor" type="xs:string"/>
+		<xs:attribute name="width" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="trs_T">
+		<xs:sequence>
+			<xs:element name="tr" type="tr" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cell_T" mixed="true">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="table" type="table_T"/>
+			<xs:element name="para" type="xs:string"/>
+			<xs:element name="bold" type="xs:string"/>
+			<xs:element name="italic" type="xs:string"/>
+		</xs:choice>
+		<xs:attribute name="bgcolor" type="xs:string"/>
+		<xs:attribute name="rowspan" type="xs:string"/>
+		<xs:attribute name="colspan" type="xs:string"/>
+		<xs:attribute name="width" type="xs:string"/>
+		<xs:attribute name="align" type="align_T"/>
+		<xs:attribute name="valign" type="valign_T"/>
+		<xs:attribute name="height" type="xs:string"/>
+	</xs:complexType>
+	<xs:simpleType name="align_T">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="center"/>
+			<xs:enumeration value="justify"/>
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="right"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="valign_T">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="baseline"/>
+			<xs:enumeration value="top"/>
+			<xs:enumeration value="middle"/>
+			<xs:enumeration value="bottom"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

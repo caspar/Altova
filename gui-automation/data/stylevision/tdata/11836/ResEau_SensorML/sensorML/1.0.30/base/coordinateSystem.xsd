@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:swe="http://www.opengis.net/swe" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sml="http://www.opengis.net/sensorML" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="../../../sweCommon/1.0.30/parameters.xsd"/>
+	<!--========================-->
+	<!--  Global Elements  -->
+	<!--========================-->
+	<!-- LocalSpatialCRS is based on the gml:EngineeringCRS but has been restricted to only necessary components and have added -->
+	<!-- orientation to the Datum description, where it belongs -->
+	<xs:element name="LocalSpatialCRS">
+		<xs:annotation>
+			<xs:documentation>Mathematical orthogonal frame attached perhaps to an object, used to define relative spatial coordinates</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="srsName" type="xs:token"/>
+				<xs:element name="usesCS">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element ref="sml:CartesianCS"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="usesDatum">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element ref="sml:LocalSpatialDatum"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LocalTimeCRS">
+		<xs:annotation>
+			<xs:documentation>Coordinate Reference System for local or engineering temporal coordinates</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="srsName" type="xs:token"/>
+				<xs:element name="usesCS">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element ref="sml:TimeCS"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="usesDatum">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element ref="sml:LocalTimeDatum"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CartesianCS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="csName" type="xs:token"/>
+				<xs:element name="usesAxis" maxOccurs="3">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element ref="sml:CoordinateSystemAxis"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TimeCS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="csName" type="xs:token"/>
+				<xs:element name="usesAxis">
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element ref="sml:CoordinateSystemAxis"/>
+						</xs:sequence>
+						<xs:attributeGroup ref="swe:AssociationAttributes"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CoordinateSystemAxis">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="axisName" type="xs:token"/>
+				<xs:element name="axisAbbrev">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:enumeration value="x"/>
+							<xs:enumeration value="y"/>
+							<xs:enumeration value="z"/>
+							<xs:enumeration value="t"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="axisDirection" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+			<xs:attribute name="uom" type="xs:anyURI" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LocalSpatialDatum">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="datumName" type="xs:token"/>
+				<xs:element ref="sml:referenceDocument" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="anchorPoint" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>A textual description of the spatial frames origin, such as at the center of rotation of an aircraft, or the focal point of a camera</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="orientation" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>A textual description of the orientation of the CS axes relative to physical space</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LocalTimeDatum">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="datumName" type="xs:token"/>
+				<xs:element ref="sml:referenceDocument" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="origin" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>A textual description of the time reference for this frame. Time values expressed in this frame might be relative to this time origin. such as scan start time or mission start time</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<!--========================-->
+	<!--  Global Properties  -->
+	<!--========================-->
+	<xs:element name="referenceFrame">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="sml:LocalSpatialCRS"/>
+				<xs:element ref="sml:LocalTimeCRS"/>
+			</xs:choice>
+			<xs:attribute name="name" type="swe:nameSimpleType" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="referenceDocument" nillable="true">
+		<xs:annotation>
+			<xs:documentation>allows one to link to documents or images that assist the explanation of the datum</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="link" type="xs:anyURI" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<SensorML xmlns="http://www.opengis.net/sensorML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink"
+          xsi:schemaLocation="http://www.opengis.net/sensorML ../../base/sensorML.xsd" version="1.0">
+	<Sensor xmlns="http://www.opengis.net/sensorML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swe="http://www.opengis.net/swe" xmlns:xlink="http://www.w3.org/1999/xlink"
+	        xsi:schemaLocation="http://www.opengis.net/sensorML ../../base/sensorML.xsd" id="Iris_GPS">
+		<identification>
+			<IdentifierList>
+				<identifier name="longName">
+					<Term>Unknown GPS</Term>
+				</identifier>
+				<identifier name="shortName">
+					<Term>Unknown GPS</Term>
+				</identifier>
+				<identifier name="modelNumber">
+					<Term qualifier="urn:ogc:identifier:modelNumber">unknown</Term>
+				</identifier>
+				<identifier name="manufacturer">
+					<Term qualifier="urn:ogc:identifier:manufacturer">unknown</Term>
+				</identifier>
+			</IdentifierList>
+		</identification>
+		<classification>
+			<ClassifierList>
+				<classifier name="intendedApplication">
+					<Term qualifier="urn:sensor:classifier:application">position</Term>
+				</classifier>
+				<classifier name="sensorType">
+					<Term qualifier="urn:sensor:classifier:sensorType">gps</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">location</Term>
+				</classifier>
+				<classifier name="phenomenon">
+					<Term qualifier="urn:ogc:phenomenon">time</Term>
+				</classifier>
+			</ClassifierList>
+		</classification>
+		<capabilities>
+			<PropertyList>
+				<!-- add Discoverable Capabilities -->
+				<property name="unknown"/>
+			</PropertyList>
+		</capabilities>
+		<characteristics>
+			<PropertyList>
+				<!-- add characteristics you wish to expose -->
+				<property name="unknown"/>
+			</PropertyList>
+		</characteristics>
+		<!-- add any desired contacts and references 
+		<contact xlink:href="./unknown" role="urn:ogc:role:manufacturer"/>
+		<documentation xlink:href="http://www.davisnet.com/product_documents/weather/spec_sheets/weather_monitor2_station.pdf" role="urn:ogc:role:specificationSheet"/>
+		<documentation xlink:href="http://www.davisnet.com/product_documents/weather/diagrams/wm2_installation.pdf" role="urn:ogc:role:image"/>
+		~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--Station Coordinate Frame-->
+		<referenceFrame>
+			<LocalSpatialCRS id="GPS_FRAME">
+				<srsName>GPS Frame</srsName>
+				<usesCS xlink:href="urn:ogc:cs:xyzFrame"/>
+				<usesDatum>
+					<LocalSpatialDatum>
+						<datumName>GPS Datum</datumName>
+						<anchorPoint>origin is at the top center mark</anchorPoint>
+						<orientation>orientation is irrelevant</orientation>
+					</LocalSpatialDatum>
+				</usesDatum>
+			</LocalSpatialCRS>
+		</referenceFrame>
+		<!--~~~~~~~~~~~~~-->
+		<!--Sensor Inputs-->
+		<!--~~~~~~~~~~~~~-->
+		<inputs>
+			<InputList>
+				<input name="physicalPhenomena">
+					<swe:DataGroup>
+						<swe:component name="time">
+							<swe:Quantity definition="urn:ogc:phenomenon:time"/>
+						</swe:component>
+						<swe:component name="location">
+							<swe:Quantity definition="urn:ogc:phenomenon:location"/>
+						</swe:component>
+					</swe:DataGroup>
+				</input>
+			</InputList>
+		</inputs>
+		<!--~~~~~~~~~~~~~~-->
+		<!--Sensor Outputs-->
+		<!--~~~~~~~~~~~~~~-->
+		<outputs>
+			<OutputList>
+				<output name="LLA">
+					<swe:DataGroup>
+						<swe:component name="latitude">
+							<swe:Quantity definition="urn:ogc:phenomenon:latitude" uom="urn:ogc:unit:degree"/>
+						</swe:component>
+						<swe:component name="longitude">
+							<swe:Quantity definition="urn:ogc:phenomenon:longitude" uom="urn:ogc:unit:degree"/>
+						</swe:component>
+						<swe:component name="altitude">
+							<swe:Quantity definition="urn:ogc:phenomenon:altitude" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="groundSpeed">
+							<swe:Quantity definition="urn:ogc:phenomenon:speed" uom="urn:ogc:unit:metersPerSecond"/>
+						</swe:component>
+						<swe:component name="trackAngle">
+							<swe:Quantity definition="urn:ogc:phenomenon:angleToTrueNorth" uom="urn:ogc:unit:radians"/>
+						</swe:component>
+						<swe:component name="northVelocity">
+							<swe:Quantity definition="urn:ogc:phenomenon:velocity" uom="urn:ogc:unit:metersPerSecond"/>
+						</swe:component>
+						<swe:component name="eastVelocity">
+							<swe:Quantity definition="urn:ogc:phenomenon:velocity" uom="urn:ogc:unit:metersPerSecond"/>
+						</swe:component>
+						<swe:component name="verticalVelocity">
+							<swe:Quantity definition="urn:ogc:phenomenon:velocity" uom="urn:ogc:unit:metersPerSecond"/>
+						</swe:component>
+					</swe:DataGroup>
+				</output>
+				<output name="ECF-xyz">
+					<swe:DataGroup>
+						<swe:component name="x">
+							<swe:Time definition="urn:ogc:phenomenon:ECEF-X" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="y">
+							<swe:Quantity definition="urn:ogc:phenomenon:ECEF-Y" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="z">
+							<swe:Quantity definition="urn:ogc:phenomenon:ECEF-Z" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="deltaX">
+							<swe:Quantity definition="urn:ogc:phenomenon:ECEF-delX" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="deltaX">
+							<swe:Quantity definition="urn:ogc:phenomenon:ECEF-delY" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="deltaX">
+							<swe:Quantity definition="urn:ogc:phenomenon:ECEF-delZ" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+					</swe:DataGroup>
+				</output>
+				<!-- ISO encoded Time stamp -->
+				<output name="Timestamp_ISO">
+					<swe:IsoDateTime/>
+				</output>
+				<!-- GPS specific Time stamp -->
+				<!-- YEAR MONTH DAY HOUR MIN SEC-->
+				<!-- 2004 11 09 09 27 04.01 -->	
+				<output name="TimeStamp_GPS">
+					<swe:DataGroup>
+						<swe:component name="year">
+							<swe:Count definition="urn:ogc:data:year_4Digit"/>
+						</swe:component>
+						<swe:component name="month">
+							<swe:Count definition="urn:ogc:data:month_2Digit"/>
+						</swe:component>
+						<swe:component name="day">
+							<swe:Count definition="urn:ogc:data:day_2Digit"/>
+						</swe:component>
+						<swe:component name="hour">
+							<swe:Count definition="urn:ogc:data:hour_2Digit"/>
+						</swe:component>
+						<swe:component name="minute">
+							<swe:Count definition="urn:ogc:data:minute_2Digit"/>
+						</swe:component>
+						<swe:component name="second">
+							<swe:Quantity definition="urn:ogc:data:second_decimal"/>
+						</swe:component>
+					</swe:DataGroup>
+				</output>
+				<output name="GPS_status">
+					<swe:DataGroup>
+						<swe:component name="HFOM">
+							<swe:Time definition="urn:ogc:data:gps:HFOM" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="VFOM">
+							<swe:Quantity definition="urn:ogc:data:gps:VFOM" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="HDOP">
+							<swe:Quantity definition="urn:ogc:data:gps:HDOP" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="VDOP">
+							<swe:Quantity definition="urn:ogc:data:gps:VDOP" uom="urn:ogc:unit:meter"/>
+						</swe:component>
+						<swe:component name="NUMSYS">
+							<swe:Count definition="urn:ogc:data:gps:NUMSYS"/>
+						</swe:component>
+						<swe:component name="NAV_MODE">
+							<swe:Count definition="urn:ogc:data:gps:navMode"/>
+						</swe:component>
+					</swe:DataGroup>
+				</output>
+				<output name="channelAssignment1">
+					<swe:DataGroup>
+						<swe:component name="channel1">
+							<swe:DataGroup id="ChannelAssign">
+								<swe:component name="channel">
+									<swe:Count definition="urn:ogc:data:gps:channelNumber"/>
+								</swe:component>
+								<swe:component name="sv">
+									<swe:Count definition="urn:ogc:data:gps:sv"/>
+								</swe:component>
+								<swe:component name="svType">
+									<swe:Count definition="urn:ogc:data:gps:svType"/>
+								</swe:component>
+								<swe:component name="carrier">
+									<swe:Count definition="urn:ogc:data:gps:carrierFreqRes"/>
+								</swe:component>
+								<swe:component name="snr">
+									<swe:Quantity definition="urn:ogc:data:gps:signalToNoiseRatio" uom="urn:ogc:unit:dB-Hz"/>
+								</swe:component>
+								<swe:component name="track">
+									<swe:Count definition="urn:ogc:data:gps:trackState"/>
+								</swe:component>
+								<swe:component name="allocState">
+									<swe:Count definition="urn:ogc:data:gps:allocationState"/>
+								</swe:component>
+								<swe:component name="channelMode">
+									<swe:Count definition="urn:ogc:data:gps:channelMode"/>
+								</swe:component>
+								<swe:component name="snrLevel">
+									<swe:Count definition="urn:ogc:data:gps:snrLevel"/>
+								</swe:component>
+							</swe:DataGroup>
+						</swe:component>
+						<swe:component name="channel_2" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_3" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_4" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_5" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_6" xlink:href="#ChannelAssign"/>
+					</swe:DataGroup>
+				</output>
+				<output name="channelAssignment2">
+					<swe:DataGroup>
+						<swe:component name="channel_7" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_8" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_9" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_10" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_11" xlink:href="#ChannelAssign"/>
+						<swe:component name="channel_12" xlink:href="#ChannelAssign"/>
+					</swe:DataGroup>
+				</output>
+			</OutputList>
+		</outputs>
+		<!-- parameters such as accuracy, etc can go here if you wish -->
+		<!-- otherwise remove parameters -->
+		<parameters>
+			<ParameterList>
+				<parameter name="missingOrNotExisting"/>
+			</ParameterList>
+		</parameters>
+		<!-- could describe internal clock as its own transducer with accuracies, etc -->
+		<!--
+		<processes>
+			<ProcessList>
+				<process name="clock">
+					<Transducer id="Clock">
+						<identification>
+							<IdentifierList>
+								<identifier name="shortName">
+									<Term>Internal Clock</Term>
+								</identifier>
+							</IdentifierList>
+						</identification>
+						<classification>
+							<ClassifierList>
+								<classifier name="sensorType">
+									<Term qualifier="urn:sensor:classifier:sensorType">clock</Term>
+								</classifier>
+								<classifier name="phenomenon">
+									<Term qualifier="urn:ogc:phenomenon">time</Term>
+								</classifier>
+							</ClassifierList>
+						</classification>
+						<description/>
+						<capabilities>
+							<PropertyList>
+								<property name="resolution">
+									<swe:Quantity definition="urn:ogc:phenomenon:time" uom="urn:ogc:unit:second">1.0</swe:Quantity>
+								</property>
+							</PropertyList>
+						</capabilities>
+						<inputs>
+							<InputList>
+								<input name="time">
+									<swe:Time definition="urn:ogc:phenomenon:time"/>
+								</input>
+							</InputList>
+						</inputs>
+						<outputs>
+							<OutputList>
+								<output name="measuredTime">
+									<swe:Time definition="urn:ogc:data:time" uom="urn:ogc:unit:iso8601"/>
+								</output>
+							</OutputList>
+						</outputs>
+						<parameters>
+							<ParameterList>
+								<steadyStateResponse>
+									<NormalizedCurve>
+										<function>
+											<swe:Curve arraySize="2">
+												<swe:definition>
+													<swe:Coordinates>
+														<swe:axis name="realTime">
+															<swe:Time definition="urn:ogc:phenomenon:time" uom="urn:ogc:unit:iso8601"/>
+														</swe:axis>
+														<swe:axis name="measuredTime">
+															<swe:Time definition="urn:ogc:phenomenon:time" uom="urn:ogc:unit:iso8601"/>
+														</swe:axis>
+													</swe:Coordinates>
+												</swe:definition>
+												<swe:tupleValues>
+													2005-03-09T10.01.12,2005-03-09T10.01.12 2010-03-09T10.01.12,2010-03-09T10.20.34
+												</swe:tupleValues>
+											</swe:Curve>
+										</function>
+									</NormalizedCurve>
+								</steadyStateResponse>
+								<accuracy>
+									<swe:Quantity definition="urn:ogc:phenomenon:accuracy" uom="urn:ogc:unit:second">1.0</swe:Quantity>
+								</accuracy>
+							</ParameterList>
+						</parameters>
+						<method xlink:href="urn:ogc:process:transducer"/>
+					</Transducer>
+				</process>
+			</ProcessList>
+		</processes> -->
+	</Sensor>
+	<!-- ~~~~~~~~~ End of GPS Sensor ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</SensorML>

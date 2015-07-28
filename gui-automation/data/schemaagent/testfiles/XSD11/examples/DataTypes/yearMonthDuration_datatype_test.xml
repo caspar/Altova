@@ -1,0 +1,16 @@
+<?xml version="1.1"?>
+<!-- yearMonthDuration_datatype_test.xml
+ - Copyright (c) 2013 by Dr. Herong Yang, herongyang.com
+-->
+<YearMonthDuration_Datatype_Test xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="yearMonthDuration_datatype_test.xsd">
+	<!-- 3 valid "YearMonthDuration" elements -->
+	<YearMonthDuration>P2147483647Y</YearMonthDuration>
+	<YearMonthDuration>-P93333333333333Y3M</YearMonthDuration>
+	<YearMonthDuration>-P2147483647M</YearMonthDuration>
+	<YearMonthDuration>P2147483647Y2147483647M</YearMonthDuration>
+	<YearMonthDuration>P9223372036854775808Y</YearMonthDuration>
+	<!-- 3 invalid "YearMonthDuration" elements -->
+	<YearMonthDuration>P2147483648Y</YearMonthDuration>
+	<YearMonthDuration>P1D</YearMonthDuration>
+	<YearMonthDuration>PT1H1M1S</YearMonthDuration>
+</YearMonthDuration_Datatype_Test>

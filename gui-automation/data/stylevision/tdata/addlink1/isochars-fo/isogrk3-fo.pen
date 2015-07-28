@@ -1,0 +1,65 @@
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOgrk3 PUBLIC
+       "ISO 8879:1986//ENTITIES Greek Symbols//EN//XML">
+     %ISOgrk3;
+-->
+<!-- This version of the entity set can be used with any SGML document
+     which uses ISO 10646 as its document character set. 
+     This includes XML documents and ISO HTML documents.
+     This entity set uses hexadecimal numeric character references. 
+          
+     Creator: Rick Jelliffe
+     
+     Version: 1997-07-07
+-->
+<!ENTITY alpha    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B1;</inline>"><!--=small alpha, Greek-->
+<!ENTITY beta     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B2;</inline>"><!--=small beta, Greek-->
+<!ENTITY gamma    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B3;</inline>"><!--=small gamma, Greek-->
+<!ENTITY Gamma    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x393;</inline>"><!--=capital Gamma, Greek-->
+<!ENTITY gammad   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3DC;</inline>"><!--/digamma-->
+<!ENTITY delta    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B4;</inline>"><!--=small delta, Greek-->
+<!ENTITY Delta    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x394;</inline>"><!--=capital Delta, Greek-->
+<!ENTITY epsi     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B5;</inline>"><!--=small epsilon, Greek -->
+<!ENTITY epsiv    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2107;</inline>"><!--/varepsilon ?-->
+<!ENTITY epsis    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x1B8;</inline>"><!--/straightepsilon ?-->
+<!ENTITY zeta     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B6;</inline>"><!--=small zeta, Greek-->
+<!ENTITY eta      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B7;</inline>"><!--=small eta, Greek-->
+<!ENTITY thetas   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B8;</inline>"><!--straight theta-->
+<!ENTITY Theta    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x398;</inline>"><!--=capital Theta, Greek-->
+<!ENTITY thetav   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3D1;</inline>"><!--/vartheta - curly or open theta-->
+<!ENTITY iota     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3B9;</inline>"><!--=small iota, Greek-->
+<!ENTITY kappa    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3BA;</inline>"><!--=small kappa, Greek-->
+<!ENTITY kappav   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3F0;</inline>"><!--/varkappa-->
+<!ENTITY lambda   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3BB;</inline>"><!--=small lambda, Greek-->
+<!ENTITY Lambda   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x39B;</inline>"><!--=capital Lambda, Greek-->
+<!ENTITY mu       "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3BC;</inline>"><!--=small mu, Greek-->
+<!ENTITY nu       "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3BD;</inline>"><!--=small nu, Greek-->
+<!ENTITY xi       "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3BE;</inline>"><!--=small xi, Greek-->
+<!ENTITY Xi       "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x39E;</inline>"><!--=capital Xi, Greek-->
+<!ENTITY pi       "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C0;</inline>"><!--=small pi, Greek-->
+<!ENTITY piv      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3D6;</inline>"><!--/varpi-->
+<!ENTITY Pi       "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3A0;</inline>"><!--=capital Pi, Greek-->
+<!ENTITY rho      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3c1;</inline>"><!--=small rho, Greek-->
+<!ENTITY rhov     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3F1;</inline>"><!--/varrho-->
+<!ENTITY sigma    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C3;</inline>"><!--=small sigma, Greek-->
+<!ENTITY Sigma    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3A3;</inline>"><!--=capital Sigma, Greek-->
+<!ENTITY sigmav   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C2;</inline>"><!--/varsigma-->
+<!ENTITY tau      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C4;</inline>"><!--=small tau, Greek-->
+<!ENTITY upsi     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C5;</inline>"><!--=small upsilon, Greek-->
+<!ENTITY Upsi     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3A5;</inline>"><!--=capital Upsilon, Greek-->
+<!ENTITY phis     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C6;</inline>"><!--/straightphi - straight phi-->
+<!ENTITY Phi      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3A6;</inline>"><!--=capital Phi, Greek-->
+<!ENTITY phiv     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3D5;</inline>"><!--/varphi - curly or open phi-->
+<!ENTITY chi      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C7;</inline>"><!--=small chi, Greek-->
+<!ENTITY psi      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C8;</inline>"><!--=small psi, Greek-->
+<!ENTITY Psi      "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3A8;</inline>"><!--=capital Psi, Greek-->
+<!ENTITY omega    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3C9;</inline>"><!--=small omega, Greek-->
+<!ENTITY Omega    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x3A9;</inline>"><!--=capital Omega, Greek-->
+
+
+

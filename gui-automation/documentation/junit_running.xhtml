@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Details about running the test cases</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="junit_classes.xhtml">Next: JUnit classes</a>
+		</div>
+		<div class="previous">
+			<a href="enhancements_translation.xhtml">Previous: Testing German (an other language) projects</a>
+		</div>
+		<h1>Details about running the test cases</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">The section among the installation pages explained briefly <a href="ant_howto.xhtml">how to use Ant to run the tests.</a> This section will look at some finer details about the JUnit tests, including small but essential setup steps, how to read the reports, and some hints about debugging issues with the test cases and robot framework.
+		</div>
+		<h2>
+			<a name="2" />Preparing the environment</h2>
+		<div class="p">
+			<a href="quick_start.xhtml">Several</a>
+			<a href="install.xhtml">earlier</a> sections have talked about setting up the environment, and <a href="junit.xhtml">creating and running</a> JUnit test cases. Here are a few more "nitty gritty" details related to everyday work with the tests.</div>
+		<div class="p">Before you start the tests, there are a few things to do take care of. Luckily, these are usually one-time-task: You want to make sure you are running with the <i>Windows Classic Theme</i> setup. To change this, close/minimize all open applications, right-click the Desktop and choose Properties ( or Personalize in Windows7)  from the menu. Make sure the selected Theme is <i>Windows Classic</i>. This is so the picture recognition gets an easier job; there are less faded buttons, etc. Also, on Vista, this is <b>essential</b>.
+		<img alt="windows theme" src="windows_theme.png" class="screen" />
+		</div>
+		<div class="p">Secondly, set the background colour of your command line window to white. This prevents the image recognition to pick up on all the black in the default command line window, and match it against some black text with transparent background. To change this, right click the top-left corner of the Command Prompt window, and select Properties. On the "Color" tab to the right, select a white background and black text. While you're at it, you might also want to set the <i>Screen Buffer Size</i> (under the Layout tab) to 3000 instead of 300.
+		<img alt="cmd options" src="cmd_color_option.png" class="screen" />
+		</div>
+		<div class="p">Finally, if you notice any other nuances on the screen, make sure to close or get rid of them before you run your tests. This might includes things like:
+		<ul>
+				<li>Any other running applications <i>might</i> get in the way; close them to be sure.</li>
+				<li>Windows update 30 min nag dialog. - You need to restart the machine.</li>
+				<li>Anti-virus updates or similar tools.</li>
+				<li>MSN or "Office Communicator" or similar clients.</li>
+			</ul>
+		</div>
+		<div class="p">If you are running your tests on a <b>Windows7</b> machine, you'd better change some additional settings. This topic is fully described in section  <a href="lookout.xhtml#5">Other things to look out for : Windows themes</a>
+		</div>
+		<h2>
+			<a name="3" />Output and expected images</h2>
+		<div class="p">The base directory for the output and expected images is currently at <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\test_images </div>. Below this level, it is organised into the releases, and then the different machines the tests are run on. This has to be in the variables OUT and EXPECTED (also know as ROBOTS_OUT_DIR and ROBOTS_EXPECTED_DIR). The section <a href="quick_start.xhtml#2">
+				<i>Setting environment variables</i>
+			</a> goes into detail about how to set up these. The values you want, depending on release and machine, will be something like:
+		<ul>
+				<li>ROBOTS_OUT_DIR = S:\QA\Internal\Test-Cases\Automated_GUI_Tests\test_images\<b>2008\win2003</b>\out</li>
+				<li>ROBOTS_EXPECTED_DIR = S:\QA\Internal\Test-Cases\Automated_GUI_Tests\test_images\<b>2008\win2003</b>\expected</li>
+			</ul>
+		This will be for the 2008 release testing on the physical Windows 2003 machine.
+		</div>
+		<h2>
+			<a name="4" />Setting up the environment variables and running the tests</h2>
+		<div class="p">Once all the steps above have been taken care of, you are ready to run on of the JUnit test classes, let it work for some hours, and finally generate the JUnit test report for you. There are some settings in the robot that you should take into account whenever you run any testsuite with our robot:
+		<ul>
+				<li>
+					<b>JUnitDryRun: </b>Set it to true if you want the screenshots only to be saved but not compared to the expected ones. This is specially recommended if you run the tests for the first time for a given class, or for a new machine, OS, colour theme, etc., as you will probably get hundreds of "file not found" or "expected and actual images differ" messages in the log.</li>
+				<li>
+					<b>VS2010: </b>Set it to true if you are running a Visual Studio plugin testsuite with version 2010</li>
+				<li>
+					<b>X64: </b>Set it to true if the application under test is a 64 bit one. Otherwise, the tests will be run for 32 bit versions.  </li>
+			</ul>
+		</div>
+		<div class="p">There are two scripts available under YOUR_CVS_ROOT \gui_automation , that set up all these variables or not up to the user input before running the tests:
+			<ul>
+				<li>
+					<b>Run_All_FullMenuRegressionTests.bat : </b>With this script, you are not only able to set up variables, but also to run any FullMenuRegressionTest for our applications, Visual Studio and Eclipse plugins , i.e the 'ant test...' routine is also called. </li>
+				<li>
+					<b>Set_Variables_Before_Tests.bat : </b> This one only helps the user to set up the environment variables, but not to run the tests</li>
+			</ul>
+		</div>
+		<div class="p">If you prefer to run a test class manually, make sure the current directory is <i>c:\work\gui-automation</i>, and then run, where <b>
+				<i>MyTest</i>
+			</b> is the unique name of the test. For more examples here, please see the section <a href="ant_howto.xhtml#test">test - Running a JUnit test class</a>.
+		<pre class="cmd">
+	ant
+	ant test -Dclassname=MyTest
+		</pre>
+		</div>
+		<div class="p">The first call to only <i>ant</i> above, takes care of the CVS update, compile and generating the Jar file. It is a good habit to do this before each test you run, since somebody might have changed some source code since your last update (that somebody will of course usually be yourself). If you really want to separate the running of the test from CVS, the easiest is probably just to copy the complete <i>gui-automation</i> directory, and just skip the first <i>ant</i> call above. The <i>ant test</i> target will not need CVS to run the tests. However, the <i>test</i> target is still assuming you have access to the <i>S:</i> drive, where logs, reports, and probably output/expected images are stored. If you want to run without access to the S: drive as well, you need to investigate the files <i>build.xml</i> and <i>testSuiteLog.properties</i>, both under <i>gui-automation</i>, and changes two paths in there.</div>
+		<h2>
+			<a name="5" />Running the tests for Visual Studio 2010</h2>
+		<div class="p">Due to the totally different looks and hard-coding of windows native classes in the new Microsoft Visual Studio 2010 , big changes in our robot core framework had to be done from our side. The flag VS2010 had also to be added . For further details about how to set it, have a look at the previous section <a href="junit_running.xhtml#4">Details about running the test cases: Setting up the environment variables and running the tests</a>. Please, make sure that you don't set the flag for the rest of the suites, as you will otherwise experience an unexpected behaviour. </div>
+		<div class="p">The biggest difficulty encountered in this case was the hard coded native classes, which makes impossible to find our application entry helpers the way we always did in the robots. As a result, and please avoid doing this in the future unless it is the only possible solution, the robot takes for granted in some cases the approximate position of the windows in the screen for generating the output images. For this reason, you should make sure that our application panels / entry helpers are in the position described below:  </div>
+		<h3>XMLSpy</h3>
+		<div class="p">
+			<img alt="XMLSpy_inVS2010" src="spy_inVS2010.png" class="screen" />
+		</div>
+		<h3>MapForce</h3>
+		<div class="p">
+			<img alt="MapForce_inVS2010" src="mapforce_inVS2010.png" class="screen" />
+		</div>
+		<h3>UModel</h3>
+		<div class="p">
+			<img alt="UModel_inVS2010" src="umodel_inVS2010.png" class="screen" />
+		</div>
+		<h2>
+			<a name="6" />Looking at the report</h2>
+		<div class="p">The reports for the JUnit tests run with the Ant script are all collected under <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\reports</div> . Then after the test is finished, a XML to HTML report summary task is run, and the final viewable report can be seen at <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html">file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html</a>. It resembles the Java API Doc layout, and you will find your test report in the expected package. A time stamp has been added to the "class names", so that it is easier to distinguish. If the list gets very full, it makes sense to remove or backup some of the XML files under <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\reports</div> . 
+		</div>
+		<div class="p">
+			<img alt="junit report" src="junit_report_class_overview.png" class="screen" />
+		From the summary at the top of the test, you will notice the name, time and host machine (OS also included) for the test. Furthermore, it will show the total number of tests (methods with @Test and not @Ignore) and how many that did not succeed. In traditional unit tests, failures are faults in the output from the class under test, while errors are other faults and exceptions. That distinction is not that useful in our black box tests, and for us, both failures and errors might mean either a problem with the application under test (i.e. UModel), or something wrong in our own Java code. Either way, they need further investigation by yourself.
+		</div>
+		<div class="p">
+			<img alt="junit report" src="junit_report_test_file_not_found.png" class="screen" />
+		The picture above shows the result from three of the tests in the report, there the <i>undo</i> and <i>redo</i> tests where ok, but the <b>testCut</b> failed. However, the message is most interesting in this example. It says: "<b>File not found</b>: ...\exp\<b>UModel\EditMenuTest\testCut_model_tree.png</b>". What this means is the the expected image for this test was not found in this location. Probably, this was the first time the test was run, and there was no expected image to begin with. However, an output image was generated, it is on the corresponding output directory, e.g. ...<b>\out\</b>UModel\EditMenuTest\testCut_model_tree.png. You need to manually copy the output file from this directory to the expected directory, and then run again.
+		</div>
+		<div class="p">
+			<img alt="junit report" src="junit_report_test_images_differ.png" class="screen" />
+		The picture above shows a different kind of problem, where it says <b>"Expected and actual images differ"</b>. Well, the problem is just that: A difference was detected between the screenshot taken after the test, and the image file in the expected directory. Again, there might be several causes here, <b>including a failure in one of the tests higher up</b>. You can click on the two links and compare the the images, to get some clue, but at the end, manual work is required, which might result in a TTP report, update to the test code, robot code, or no clue at all, in which case you should look at the sections below.
+		</div>
+		<div class="p">
+			<img alt="junit report" src="junit_report_test_icon_not_found.png" class="screen" />
+		The final example of JUnit output (but by no means the final type of problem which might show up) is this where it says "Icon not found on screen", and a whole lot of other details. There are some links to debug images, which will usually be on the local machine, so you need to click from there. More important, there is a Java stack trace to give a clue about where the failure occurred. There is nothing else to do, than to follow that trail, understand each method call which occurred, and go into long term debug mode. However, there are some more information, which might help.
+		</div>
+		<h2>
+			<a name="7" />Examining the detailed log file</h2>
+		<div class="p">So, you are lost as to what could have caused the failure in your test. You could of course run it again, and sit beside and supervise it, however this might take a long time. (Although, it should not be thrown out as an option to debugging). Either way, you will in the end need the super fine grained details about what went on. This is where the debug log file comes in to the picture.</div>
+		<div class="p">Currently located under <div class="file">S:\QA\Internal\Test-Cases\Automated_GUI_Tests\loggers </div>, they come in the form of XML files based on slightly modified Java Logging XML output. Please be aware, the each file is just part of a stream, so they might be slightly corrupted, e.g. not containing end-tags etc. This might occurs if the test is stopped, or is in the middle of a run. If you manually add the tags, you can view the files in Grid-view, which is the easiest way.		
+		<img alt="log file" src="detailed_logs.png" class="screen" />
+			<img alt="log file" src="detailed_logs_msg.png" class="screen" />
+		The most detailed level, at the <i>record</i>-element, you will find is the attribute <i>message</i>, which contains the output from the Java logger call. (The values in the <i>class</i> and <i>method</i> attributes might also be interesting). These messages are not formatted for being pretty, nor easy reading. They each are very high in information density, which means it might in some cases take several minutes to read, locate in the source code, and understand why it gives you the output you see in the log. (At least this is how it was for me, and I wrote all those log messages). Very often, you need to roll back and forth between several messages, and understand how they fit together. If possible, might be easier to run the <a href="eclipse_howto.xhtml#4">Eclipse debugger</a>, however it is not always possible with GUI tests, where the mouse constantly moves.
+		</div>
+		<h2>
+			<a name="8" />Examining debug images</h2>
+		<div class="p">Finally, as source of information for the debugging, might be all the images which are saved off during the tests. Of course, you should look at the output images, which also include <i>*_final.png</i> images for each test. These are always full screen snapshots, and not compare to any expected images. They are there for debug only. More extensive debug images are located under <div class="file">c:\temp\debug</div>  or the directory in the <i>ROBOTS_DEBUG_DIR</i> setting (the location will always be mentioned in the detailed log file above).</div>
+		<div class="p">One type of debug image set, is saved only if the icon or text to search for was not found. Typically, there are four images that get saved off. They get a random number to indicate that they belong together. They are overwritten if already present from previous tests, but never deleted; so you should probably take care of them once in a while.
+			<ol>
+				<li>robotdebug_167_<b>icon</b>.png - Shows only the icon which the search algorithm tried to find. It will also give you clues about colours etc.</li>
+				<li>robotdebug_167_<b>screen</b>.png - Shows the portion of the screen where the algorithm searched for the icon above. Sometimes this is the full screen, sometimes just a subset.</li>
+				<li>robotdebug_167_<b>screen-debug</b>.png - Tries to give a hint about how the search algorithm worked. The blue/yellow colour indicates a match against the icon. While <b>red indicates a mismatch after two pixel lines that matched</b>. This picture is not present if nothing even started to match.</li>
+				<li>robotdebug_167_<b>fullscreen</b>.png - Always shows a full screen image. This is taken <b>after</b> the real <i>screen</i> image above, so it <i>might</i> in some cases be different.</li>
+			</ol>
+		</div>
+		<div class="p">Very often, it is not possible to see the <b>very subtle differences</b> between the icon and the screen image. Sometimes it comes down to one or two pixels difference in a single character, or sometimes the colour is of a slight different hue. Either way, you need an imaging tool to detected the differences: copy the icon-image into the screen image and compare. Or study the colour composition. <a href="http://www.gimp.org/">GIMP</a> is one useful and free, open source tool which might help you.</div>
+	</body>
+</html>

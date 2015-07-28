@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2011 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:roleRef roleURI="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes_2011-03-25_role-825600" xlink:type="simple" xlink:href="rol_ifrs_for_smes_2011-03-25.xsd#ifrs_for_smes_2011-03-25_role-825600"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://xbrl.ifrs.org/role/ifrs/ifrs_for_smes_2011-03-25_role-825600">
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DisclosureOfInvestmentInAssociatesExplanatory" xlink:label="loc"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_FairValueOfInvestmentsInAssociatesWherePriceQuotationsPublished" xlink:label="loc_2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_2" order="50.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ShareOfProfitLossOfDiscontinuedOperationsOfAssociates" xlink:label="loc_7"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_7" order="60.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_ShareOfProfitLossOfAssociates" xlink:label="loc_5"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_5" order="40.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DescriptionOfAccountingPolicyForInvestmentInAssociates" xlink:label="loc_3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_3" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_DividendsAndOtherDistributionsRecognisedAsIncome" xlink:label="loc_4"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_4" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../ifrs-cor_2011-03-25.xsd#ifrs_InvestmentsInAssociates" xlink:label="loc_6"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_6" order="20.0"/>
+  </link:presentationLink>
+</link:linkbase>

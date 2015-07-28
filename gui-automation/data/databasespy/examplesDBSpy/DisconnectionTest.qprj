@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  DatabaseSpy Project File  -->
+<Project Version="2" Expanded="Yes" Type="Root" Title="DisconnectionTest">
+	<Folder FolderName="Data Sources" Expanded="Yes" Type="DataSourceFolder">
+		<datasource database_kind="MS Access" import_kind="ADO" version="04.00.0000" rootobject="OrgChart" name="nnnnnnnnnn" auto_load="Yes" Type="DataSourceItem">
+			<properties>
+				<property name="Database Kind" value="MS Access"/>
+				<property name="Import Kind" value="ADO"/>
+				<property name="Root Object" value="OrgChart"/>
+				<property name="Data Source" value="OrgChart.mdb"/>
+				<property name="Provider" value="Microsoft.Jet.OLEDB.4.0"/>
+				<property name="User ID"/>
+				<property name="Password"/>
+				<property name="Persist Security Info" value="false"/>
+				<property name="Jet OLEDB:System Database"/>
+				<property name="Jet OLEDB:Sandbox Mode"/>
+				<property name="Jet OLEDB:Exclusive Async Delay"/>
+				<property name="Jet OLEDB:Flush Transaction Timeout"/>
+				<property name="Jet OLEDB:Implicit Commit Sync"/>
+				<property name="Jet OLEDB:Lock Delay"/>
+				<property name="Jet OLEDB:Lock Retry"/>
+				<property name="Jet OLEDB:Max Buffer Size"/>
+				<property name="Jet OLEDB:Max Locks Per File"/>
+				<property name="Jet OLEDB:Page Locks to Table Lock"/>
+				<property name="Jet OLEDB:Page Timeout"/>
+				<property name="Jet OLEDB:Recycle Long-Valued Pages"/>
+				<property name="Jet OLEDB:Shared Async Delay"/>
+				<property name="Jet OLEDB:User Commit Sync"/>
+				<property name="Jet OLEDB:Compact Without Replica Repair"/>
+				<property name="Jet OLEDB:Create System Database"/>
+				<property name="Jet OLEDB:Database Locking Mode"/>
+				<property name="Jet OLEDB:Database Password"/>
+				<property name="Jet OLEDB:New Database Password"/>
+				<property name="Jet OLEDB:Registry Path"/>
+			</properties>
+			<LocalViewStorage/>
+			<LocalRelationsStorage/>
+		</datasource>
+	</Folder>
+	<Folder FolderName="SQL" Type="SQLRootFolder" database_kind="Unknown" datasource="Offline" description="Store and organize SQL files for this project." blockingstrategy="semi"/>
+	<Folder FolderName="Design" Type="DesignRootFolder" database_kind="Unknown" datasource="Offline" description="Store and organize Design files for this project."/>
+	<Folder FolderName="Data Diff" Type="DataDiffRootFolder"/>
+	<Folder FolderName="Favorites" Type="FavoriteFolder"/>
+</Project>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 (x64) (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DentalClaim">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Submitter">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Organization"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Receiver">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="Organization"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BillingProvider">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:sequence>
+								<xs:choice>
+									<xs:element ref="Organization"/>
+									<xs:element ref="Name"/>
+								</xs:choice>
+							</xs:sequence>
+							<xs:element name="Subscriber">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element ref="Name"/>
+										<xs:element name="Patient">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="Name"/>
+													<xs:element name="Services">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Service" maxOccurs="50">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="ProcedureID" type="xs:string"/>
+																			<xs:element name="AditionalNotes" type="xs:string" minOccurs="0" maxOccurs="4"/>
+																			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+																			<xs:element name="Amount" type="xs:string"/>
+																			<xs:element name="Tooth" minOccurs="0" maxOccurs="32">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="Code" type="xs:string"/>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="number" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ElectronicPath">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ClaimNumber" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Name">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="First" type="xs:string"/>
+				<xs:element name="Last" type="xs:string"/>
+				<xs:element ref="Address" minOccurs="0"/>
+				<xs:element name="Sex" type="xs:string" minOccurs="0"/>
+				<xs:element name="PayerID" type="xs:string" minOccurs="0"/>
+				<xs:element name="DateOfBirth" type="xs:date" minOccurs="0"/>
+				<xs:element name="UIN" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Organization">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OrganizationName" type="xs:string"/>
+				<xs:element name="ID" type="xs:string" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Address">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Street" type="xs:string"/>
+				<xs:element name="City" type="xs:string"/>
+				<xs:element name="State" type="xs:string"/>
+				<xs:element name="Zip" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

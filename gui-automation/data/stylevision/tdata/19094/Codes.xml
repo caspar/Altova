@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_sps C:\data\SOF\CodesTable.sps?>
+<codesTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../BusinessRule.xsd">
+	<codeGroup>
+		<codeNumber>1</codeNumber>
+		<codeSource>Code.branche</codeSource>
+		<codeDefinition>
+			<codeName>Accident</codeName>
+			<codeValue>50</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Auto</codeName>
+			<codeValue>60</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Incendie</codeName>
+			<codeValue>80</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>2</codeNumber>
+		<codeSource>Code.mouvement</codeSource>
+		<codeDefinition>
+			<codeName>Assurnet</codeName>
+			<codeValue>AS</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Nouvelle affaire</codeName>
+			<codeValue>C0</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Reprise manuelle</codeName>
+			<codeValue>C1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Tarification</codeName>
+			<codeValue>C9</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Consultation police</codeName>
+			<codeValue>I0</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Consultation par plaque</codeName>
+			<codeValue>I1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Consultation flotte</codeName>
+			<codeValue>I2</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Gestion des paramètres</codeName>
+			<codeValue>I3</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Consultation par producteur</codeName>
+			<codeValue>I4</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Consultation police archivée</codeName>
+			<codeValue>I5</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Mise à jour informatique</codeName>
+			<codeValue>I9</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Mise à jour avec conditions générales</codeName>
+			<codeValue>M0</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Mise à jour sans condition générale</codeName>
+			<codeValue>M1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Mise à jour administrative (correction)</codeName>
+			<codeValue>M3</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Mise à jour flotte</codeName>
+			<codeValue>M4</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Conversion devise</codeName>
+			<codeValue>M5</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>3</codeNumber>
+		<codeSource>Code.compagnieRegroupement</codeSource>
+		<codeDefinition>
+			<codeName>Royale Belge</codeName>
+			<codeValue>01</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Gblex</codeName>
+			<codeValue>02</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>UAB</codeName>
+			<codeValue>47</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Poste</codeName>
+			<codeValue>60</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>4</codeNumber>
+		<codeSource>Code.particularité</codeSource>
+		<codeDefinition>
+			<codeName>Conducteur habituel &lt; 23 ans</codeName>
+			<codeValue>12</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Ne pas accepter le fractionnement</codeName>
+			<codeValue>31</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Annuler le contrat si PCX</codeName>
+			<codeValue>71</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>5</codeNumber>
+		<codeSource>Vehicle.genre</codeSource>
+		<codeDefinition>
+			<codeName>Voiture</codeName>
+			<codeValue>A10</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Ambulance</codeName>
+			<codeValue>A40</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Moto - 2 roues</codeName>
+			<codeValue>B10</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Jeep</codeName>
+			<codeValue>CD1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Camion</codeName>
+			<codeValue>C10</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Cyclomoteur classe B</codeName>
+			<codeValue>D12</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Remorque normale</codeName>
+			<codeValue>F21</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>6</codeNumber>
+		<codeSource>Vehicle.usage</codeSource>
+		<codeDefinition>
+			<codeName>Vie privée et professionnelle</codeName>
+			<codeValue>0110</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Transport de Choses &lt;= 3,5T</codeName>
+			<codeValue>0320</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Transport agricole</codeName>
+			<codeValue>0534</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Voiture de cérémonie</codeName>
+			<codeValue>0720</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Transport funéraire</codeName>
+			<codeValue>0741</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Auto école</codeName>
+			<codeValue>0980</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>7</codeNumber>
+		<codeSource>Type.plaque1</codeSource>
+		<codeDefinition>
+			<codeName>Nationale</codeName>
+			<codeValue>01</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Marchand (2 ou 4 roues)</codeName>
+			<codeValue>02</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Diplomatique - CD</codeName>
+			<codeValue>05</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Forces Belges en Allemagne</codeName>
+			<codeValue>06</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Membre du gouvernement</codeName>
+			<codeValue>12</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Sénateur - Député</codeName>
+			<codeValue>13</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>8</codeNumber>
+		<codeSource>Code.puissance</codeSource>
+		<codeDefinition>
+			<codeName>Pas de type de puissance</codeName>
+			<codeValue>0</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Kw</codeName>
+			<codeValue>1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Cylindrée</codeName>
+			<codeValue>2</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>9</codeNumber>
+		<codeSource>Code.présenceMobilophone</codeSource>
+		<codeDefinition>
+			<codeName>Anciens produits</codeName>
+			<codeValue>0</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Véhicule neuf</codeName>
+			<codeValue>1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Véhicule d&apos;occasion</codeName>
+			<codeValue>2</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>10</codeNumber>
+		<codeSource>Vehicle.type</codeSource>
+		<codeDefinition>
+			<codeName>Sportif</codeName>
+			<codeValue>1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Tout terrain</codeName>
+			<codeValue>2</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Cabriolet</codeName>
+			<codeValue>3</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>SANS</codeName>
+			<codeValue>100</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>11</codeNumber>
+		<codeSource>Code.fractionnement</codeSource>
+		<codeDefinition>
+			<codeName>Annuelle</codeName>
+			<codeValue>01</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Semestrielle</codeName>
+			<codeValue>02</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Trimestrielle</codeName>
+			<codeValue>03</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Mensuelle</codeName>
+			<codeValue>04</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Prime unique</codeName>
+			<codeValue>05</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>12</codeNumber>
+		<codeSource>Code.motifFinDeGarantie</codeSource>
+		<codeDefinition>
+			<codeName>Suspension vente du véhicule</codeName>
+			<codeValue>02</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Suspension causes diverses</codeName>
+			<codeValue>09</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Résiliation après sinistre</codeName>
+			<codeValue>23</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Police remplacée par une autre</codeName>
+			<codeValue>51</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>13</codeNumber>
+		<codeSource>Code.sexe</codeSource>
+		<codeDefinition>
+			<codeName>Masculin</codeName>
+			<codeValue>1</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Feminin</codeName>
+			<codeValue>2</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Organisation</codeName>
+			<codeValue>9</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>14</codeNumber>
+		<codeSource>Code.motifPoliceConnexeOuRemplacee</codeSource>
+		<codeDefinition>
+			<codeName>Police connexe</codeName>
+			<codeValue>01</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Police conjointe</codeName>
+			<codeValue>02</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Police remplacee totalement</codeName>
+			<codeValue>10</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Police remplacee partiellement</codeName>
+			<codeValue>11</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Police remplacee totalement par</codeName>
+			<codeValue>20</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Police remplacee partiellement par</codeName>
+			<codeValue>21</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Police remplacee pour memoire par</codeName>
+			<codeValue>22</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Motif connexite indeterminee</codeName>
+			<codeValue>99</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>15</codeNumber>
+		<codeSource>Code.compagnieOrigine</codeSource>
+		<codeDefinition>
+			<codeName>Axa</codeName>
+			<codeValue>01</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Juris</codeName>
+			<codeValue>02</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Urbaine UAP</codeName>
+			<codeValue>04</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Assurance Liegoise</codeName>
+			<codeValue>06</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>LLoyd Belge</codeName>
+			<codeValue>08</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Ex-Axa</codeName>
+			<codeValue>10</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Uranus</codeName>
+			<codeValue>15</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Foyer Belge</codeName>
+			<codeValue>16</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>La famille</codeName>
+			<codeValue>19</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>UAB</codeName>
+			<codeValue>47</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Poste</codeName>
+			<codeValue>60</codeValue>
+		</codeDefinition>
+	</codeGroup>
+	<codeGroup>
+		<codeNumber>16</codeNumber>
+		<codeSource>Code.compagnieDeGestion</codeSource>
+		<codeDefinition>
+			<codeName>AXA</codeName>
+			<codeValue>01</codeValue>
+		</codeDefinition>
+		<codeDefinition>
+			<codeName>Servis</codeName>
+			<codeValue>60</codeValue>
+		</codeDefinition>
+	</codeGroup>
+</codesTable>

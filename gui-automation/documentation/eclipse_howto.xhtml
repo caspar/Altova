@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by eeeeasfasf﻿Markus Kreska (Altova GmbH) -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Working with Eclipse</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="junit.xhtml">Next: Using JUnit to create simple unit tests</a>
+		</div>
+		<div class="previous">
+			<a href="ant_howto.xhtml">Previous: Using Ant to run automated tests</a>
+		</div>
+		<h1>Working with Eclipse</h1>
+		<h2>
+			<a name="1" />About Eclipse</h2>
+		<div class="p">
+		I think it is no exaggeration to say that <a href="http://eclipse.org">Eclipse</a> is the most powerful Java IDE around today. Partly, this comes from a multitude of features to assist Java development, but more importantly, it is because the user interaction is streamlined and very slick. And best of all, Eclipse is free open source software. This section covers some tips and tricks for working effectively with Eclipse. If you have not done so already, please see the <a href="eclipse.xhtml">Eclipse installation section</a> before moving on.
+		</div>
+		<h2>
+			<a name="2" />Keyboard shortcuts</h2>
+		<div class="p">
+		Eclipse offers many keyboard shortcuts for useful tasks. Here's a list and brief explanation of the ones I find most useful.
+		</div>
+		<h3><a name="21" />CTRL + SPACE: Auto complete</h3>
+		<div class="p">
+			While typing any variable name, method name or class name, try pressing <b>CTRL + SPACE</b> before you've finished the full name, or even better, only after two or three letters. A list will pop up, and give you the most relevant options. Keep your hands on the keyboard, and use the up and down arrows to quickly navigate the list. Select with Enter. See the screen shoot below for an example. You should also try this for common language keywords, like <i>for</i>, <i>while</i>, and <i>try</i>.
+		<img alt="CTRL+SPACE popup" src="eclipse_ctrl_space.png" class="screen" />
+		</div>
+		<h3><a name="22" />CTRL + 1: Auto correct mistakes</h3>
+		<div class="p">
+		Often, writing or changing one part of the code, requires updates to other places as well, and just as often, Eclipse can take care of this for you. Place your cursor over a word which is underlined in red, and press <b>CTRL + 1</b>. A popup will give you multiple solutions to the problem, and the first one is very often the correct. In the example below, a class is missing the import statement, and the yellow window shows the change to your code if you select the solution.
+		<img alt="CTRL+1 popup" src="eclipse_ctrl_1.png" class="screen" />
+		</div>
+		<h3><a name="23" />SHIFT + CTRL + O: Organize import statements</h3>
+		<div class="p">
+		Furthermore, there are a few functions to tidy up your code. The first, <b>SHIFT + CTRL + O</b> will organize the important statements at the top of the source file, that is remove any class that is no longer used, insert the once which are needed, and sort them neatly. The default format is to have an explicit import for each class, but this can be adjusted under <i>Preferences &gt; Java &gt; Code Style &gt; Organize Imports &gt; "Number of imports needed for .*"</i>
+		</div>
+		<h3><a name="24" />SHIFT + CTRL + F: Auto format code</h3>
+		<div class="p">
+		Finally, to keep your code "lean and mean", format it according to standard Java code conventions. You can achieve this by pressing <b>SHIFT + CTRL + F</b> anywhere in your source file. It is especially useful to use a standard format when many are working on the same code. 
+		</div>
+		<div class="p">The only problem with the default, I think, is the line length, set to 80 characters. A better option to avoid line breaks for typical method signatures, is 200. This can be adjusted under <i>Preferences &gt; Java &gt; Code Style &gt; Formatter</i>, click the <i>Edit</i> button. In the new window, select the <i>Line Wrapping</i> tab (second from the right), and change the <i>Maximum line with</i> to 200. When clicking OK, you will be prompted to save this formatting profile with a new name.
+		</div>
+		<h2>
+			<a name="3" />Refactoring</h2>
+		<div class="p">
+		Eclipse includes many options to quickly change code which affects many other classes and methods. For a complete list, look at the selection from the <b>Source</b> and <b>Refactor</b> menus. The available options will change depending on which element is selected. One example from the list is the <i>Rename</i> from the <i>Refactor</i> menu. Place the cursor on a class or method in the source code, and click Rename. A series of window will now guide you through some steps which show useful warnings, and an overview of the impact. When you're happy, click OK, and Eclipse will do the rest of the work for you.
+		<img alt="Eclipse rename" src="eclipse_rename.png" class="screen" />
+		</div>
+		<h2>
+			<a name="4" />Debugging</h2>
+		<div class="p">
+		Finally, Eclipse offers some of the most powerful Java debugging functionality around. As expected, you can set break points, step through code line by line, etc. Furthermore, you can inspect variables in runtime, but also change their values. Debugging is activated by right clicking any main-class or JUnit class and selecting <i>Debug As</i> from the menu. When the executing hits a break point you've set, Eclipse will switch to the debug "perspective", and you will have a number of windows to work with. Below the main points are highlighted.
+		<img alt="Eclipse debugger" src="eclipse_debugger.png" class="screen" />
+		</div>
+	</body>
+</html>

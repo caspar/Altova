@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by eeeeasfasf﻿Markus Kreska (Altova GmbH) -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Working with Java</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="cvs_howto.xhtml">Next: CVS in 5 minutes</a>
+		</div>
+		<div class="previous">
+			<a href="Eclipse.xhtml">Previous: Eclipse</a>
+		</div>
+		<h1>Java tips &amp; tricks</h1>
+		<h2>
+			<a name="1" />Introduction</h2>
+		<div class="p">In this section I have included a few pieces of advice for Java programming. It is by no means an introduction to the language, but rather some small things to keep in mind, which might have a big impact on your code. Please note that these are also just rules of thumb, and can be broken, but you should know why you want to do so.
+		</div>
+		<h2>
+			<a name="2" />Keep It Simple</h2>
+		<div class="p">First of all, Keep It Simple. Less code is better code, if it archives the same goal. Very often, this is done by hiding the complex bits of a problem in a method of its own. This method in turn, will necessarily also be simpler then, since it can focus on one specific part of the problem. However, make sure it is not so specific that it cannot be reused. Which brings us to the second point...
+		</div>
+		<h2>
+			<a name="3" />Avoid Copy &amp; Paste</h2>
+		<div class="p">Never, ever use copy and past on any piece of code, classes, etc. If similar lines of code exists in your project, it is time for refactoring. Make one general method or or class which takes parameters based on the specific task.</div>
+		<div class="p">
+		Example: Don't make a method <i>deleteTemporaryFiles()</i>, with a hard coded temporary directory. Instead, create a <i>delete(File directory)</i> method. Then pass in the path of the temporary directory, which it self should be stored in a single variable, probably i a central class.
+		</div>
+		<h2>
+			<a name="4" />Benefits from Java 1.5</h2>
+		<div class="p">Java 5 brought a range of new language features which make the code easier to read, and easier to use. Below is an example using three new features: generics (also known as templates), auto boxing/unboxing, and the iterator for-loop.
+		<pre class="javacode">
+	List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+	
+	//automatic boxing of primitive types
+	list.add(1);
+	list.add(2);
+	list.add(3);
+	
+	int sum = 0;
+	for(int i : list) {
+		sum += i;
+	}
+	
+	System.out.println(sum);
+		</pre>
+		</div>
+		<div class="p">First, the list is specified to contain only Integer objects. This make the code less prone to errors, especially the infamous ClassCastException which occurs if you think you have a list of Integers, when it's really Floating point numbers.</div>
+		<div class="p">Secondly, the auto boxing and unboxing takes place in the add() methods and implicitly in the for loop. Previously, you would have had to create a new Integer object for each element in the list, and then get the int value each time in the for-loop. This is no longer necessary, and saves code.</div>
+		<div class="p">Finally, the for-loop is the short form of the old <i>for(int i=0; i &lt; list.size(); i++)</i> The same type of for-loop can be applied to other <i>Collection</i> types, so you no longer need the old Iterator / hasNext() / next() lines of code.</div>
+		<h2>
+			<a name="5" />Code conventions</h2>
+		<div class="p">Finally, to keep your code in good shape and professionally looking, adhere to the standard <a href="http://java.sun.com/docs/codeconv/html/CodeConvTOC.doc.html">Java Code conventions</a>. Most noteworthy for Java, is <a href="http://java.sun.com/docs/codeconv/html/CodeConventions.doc8.html">"camel case" class, method and variable names; and UPPERCASE_STATIC fields</a>.
+		</div>
+		<div class="p">When working in Eclipse, you can <a href="eclipse_howto.xhtml#24">auto-format your code</a>, which saves you a lot of work.</div>
+	</body>
+</html>

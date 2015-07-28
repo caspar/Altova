@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13">
+	<component name="defaultmap1" blackbox="0" uid="48863048" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="38630235" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="196163560"/>
+					</targets>
+					<view ltx="304" lty="76" rbx="-96" rby="-4"/>
+					<data>
+						<constant value="Organization Chart" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="38630236" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="196185312"/>
+					</targets>
+					<view ltx="303" lty="53" rbx="-97" rby="-27"/>
+					<data>
+						<constant value="1" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="38630238" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="234908984"/>
+						<datapoint pos="1" key="204348264"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="204348448"/>
+					</targets>
+					<view ltx="379" lty="120" rbx="-11" rby="-47"/>
+				</component>
+				<component name="constant" library="core" uid="38630237" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="228238920"/>
+					</targets>
+					<view ltx="228" lty="147" rbx="-66" rby="-107"/>
+					<data>
+						<constant value="read from file: " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="38630233" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" AddSchemaLocation="0"/>
+					<view ltx="8" lty="7" rbx="183" rby="308"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" outkey="196569696" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Altova" expanded="1">
+										<entry name="Office" outkey="196570240" expanded="1">
+											<entry name="PrimaryKey" outkey="199901312"/>
+											<entry name="ForeignKey" outkey="199901832"/>
+											<entry name="EMail" outkey="236184152"/>
+											<entry name="Established" outkey="196567592"/>
+											<entry name="Fax" outkey="196568136"/>
+											<entry name="Name" outkey="196568656"/>
+											<entry name="Phone" outkey="196569176"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Altova_Hierarchical.xsd" inputinstance="Nanonull-*.xml" instanceroot="{}Altova" userdefinedschemalocation="C:/Projects/Files/XMLSpyExeFolder/MapForceExamples/Altova_Hierarchical.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="38630234" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="510" lty="7" rbx="685" rby="308"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Altova" expanded="1">
+										<entry name="PrimaryKey" inpkey="193773456"/>
+										<entry name="Name" inpkey="200897344"/>
+										<entry name="Office" inpkey="200897864" expanded="1">
+											<entry name="PrimaryKey" inpkey="200898384"/>
+											<entry name="ForeignKey" inpkey="200898904"/>
+											<entry name="Desc" inpkey="200899424"/>
+											<entry name="EMail" inpkey="200899944"/>
+											<entry name="Established" inpkey="193770832"/>
+											<entry name="Fax" inpkey="193771376"/>
+											<entry name="Name" inpkey="193771896"/>
+											<entry name="Phone" inpkey="193772416"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Altova_Hierarchical.xsd" instanceroot="{}Altova" userdefinedschemalocation="Altova_Hierarchical.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="196163560">
+						<edges>
+							<edge vertexkey="200897344" edgekey="200926832"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="196185312">
+						<edges>
+							<edge vertexkey="193773456" edgekey="200873800"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="196567592">
+						<edges>
+							<edge vertexkey="193770832" edgekey="200928432"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="196568136">
+						<edges>
+							<edge vertexkey="193771376" edgekey="200928832"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="196568656">
+						<edges>
+							<edge vertexkey="193771896" edgekey="225418448"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="196569176">
+						<edges>
+							<edge vertexkey="193772416" edgekey="225418720"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="196569696">
+						<edges>
+							<edge vertexkey="204348264" edgekey="200926032"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="196570240">
+						<edges>
+							<edge vertexkey="200897864" edgekey="200926432"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="199901312">
+						<edges>
+							<edge vertexkey="200898384" edgekey="200927232"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="199901832">
+						<edges>
+							<edge vertexkey="200898904" edgekey="200927632"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="204348448">
+						<edges>
+							<edge vertexkey="200899424" edgekey="200874120"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="228238920">
+						<edges>
+							<edge vertexkey="234908984" edgekey="200874520"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="236184152">
+						<edges>
+							<edge vertexkey="200899944" edgekey="200928032"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

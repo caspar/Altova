@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "xhtml1-transitional.dtd">
+<?altova_sps cannot-resize.sps?>
+<html>
+	<head>
+		<title>Tables Rowspan Test</title>
+	</head>
+	<body>
+		<table cellspacing="0" cellpadding="3" width="100%" border="0">
+			<tbody>
+				<tr>
+					<td valign="top">
+							&nbsp;Tables Rowspan Test
+							
+							Table Header Cells spanning
+multiple rows:
+							<table width="65%" border="1">
+							<tbody>
+								<tr>
+									<th bgcolor="#ffe4c4" rowspan="2" width="103">
+											Header 1
+span=2 rows
+										</th>
+									<td bgcolor="#ee82ee" width="286">
+											col 1
+										
+										</td>
+									<td bgcolor="#ee82ee" width="127">
+											col 2
+										</td>
+									<td bgcolor="#ee82ee" width="193">
+											col 3
+										</td>
+									<td bgcolor="#ee82ee">
+											col 4
+										</td>
+									<td bgcolor="#ee82ee">
+											col 5
+										</td>
+									<td bgcolor="#ee82ee">
+											col 6
+										</td>
+									<td bgcolor="#ee82ee">
+											col 7
+										</td>
+									<td bgcolor="#ee82ee" width="1">
+											col 8
+										</td>
+									<td bgcolor="#ee82ee" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<td colspan="9" width="286" bgcolor="#ee82ee">
+										<table border="1" >
+											<tbody>
+												<tr>
+													<td>titable col1</td>
+													<td>titable col2</td>
+													<td>titable col3</td>
+												</tr>
+												<tr>
+													<td>titable col1</td>
+													<td>titable col2</td>
+													<td>titable col3</td>
+												</tr>
+												<tr>
+													<td>titable col1</td>
+													<td>titable col2</td>
+													<td>titable col3</td>
+												</tr>
+											</tbody>
+										</table>titable col1col1
+											col 2
+										
+											col 3
+										
+											col 4
+										
+											col 5
+										
+											col 6
+										
+											col 7
+										
+											col 8
+										
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<th bgcolor="#ffe4c4" rowspan="5" width="103">
+											Header 2
+span=5 rows
+										</th>
+									<td bgcolor="#90ee90" width="286">
+											col 1
+										</td>
+									<td bgcolor="#90ee90" width="127">
+											col 2
+										</td>
+									<td bgcolor="#90ee90" width="193">
+											col 3
+										</td>
+									<td bgcolor="#90ee90">
+											col 4
+										</td>
+									<td bgcolor="#90ee90">
+											col 5
+										</td>
+									<td bgcolor="#90ee90">
+											col 6
+										</td>
+									<td bgcolor="#90ee90">
+											col 7
+										</td>
+									<td bgcolor="#90ee90" width="1">
+											col 8
+										</td>
+									<td bgcolor="#90ee90" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<td bgcolor="#90ee90" height="1" width="286">
+											col 1
+										</td>
+									<td bgcolor="#90ee90" height="1" width="127">
+											col 2
+										</td>
+									<td bgcolor="#90ee90" height="1" width="193">
+											col 3
+										</td>
+									<td bgcolor="#90ee90" height="1">
+											col 4
+										</td>
+									<td bgcolor="#90ee90" height="1">
+											col 5
+										</td>
+									<td bgcolor="#90ee90" height="1">
+											col 6
+										</td>
+									<td bgcolor="#90ee90" height="1">
+											col 7
+										</td>
+									<td bgcolor="#90ee90" height="1" width="1">
+											col 8
+										</td>
+									<td bgcolor="#90ee90" height="1" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr bgcolor="#ffe4c4">
+									<td bgcolor="#90ee90" width="286">
+											col 1
+										</td>
+									<td bgcolor="#90ee90" width="127">
+											col 2
+										</td>
+									<td bgcolor="#90ee90" width="193">
+											col 3
+										</td>
+									<td bgcolor="#90ee90">
+											col 4
+										</td>
+									<td bgcolor="#90ee90">
+											col 5
+										</td>
+									<td bgcolor="#90ee90">
+											col 6
+										</td>
+									<td bgcolor="#90ee90">
+											col 7
+										</td>
+									<td bgcolor="#90ee90" width="1">
+											col 8
+										</td>
+									<td bgcolor="#90ee90" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<td bgcolor="#90ee90" width="286">
+											col 1
+										</td>
+									<td bgcolor="#90ee90" width="127">
+											col 2
+										</td>
+									<td bgcolor="#90ee90" width="193">
+											col 3
+										</td>
+									<td bgcolor="#90ee90">
+											col 4
+										</td>
+									<td bgcolor="#90ee90">
+											col 5
+										</td>
+									<td bgcolor="#90ee90">
+											col 6
+										</td>
+									<td bgcolor="#90ee90">
+											col 7
+										</td>
+									<td bgcolor="#90ee90" width="1">
+											col 8
+										</td>
+									<td bgcolor="#90ee90" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<td bgcolor="#90ee90" width="286">
+											col 1
+										</td>
+									<td bgcolor="#90ee90" width="127">
+											col 2
+										</td>
+									<td bgcolor="#90ee90" width="193">
+											col 3
+										</td>
+									<td bgcolor="#90ee90">
+											col 4
+										</td>
+									<td bgcolor="#90ee90">
+											col 5
+										</td>
+									<td bgcolor="#90ee90">
+											col 6
+										</td>
+									<td bgcolor="#90ee90">
+											col 7
+										</td>
+									<td bgcolor="#90ee90" width="1">
+											col 8
+										</td>
+									<td bgcolor="#90ee90" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<th bgcolor="#ffe4c4" rowspan="3" width="103">
+											Header 3
+span=3 rows
+										</th>
+									<td bgcolor="#add8e6" width="286">
+											col 1
+										</td>
+									<td bgcolor="#add8e6" width="127">
+											col 2
+										</td>
+									<td bgcolor="#add8e6" width="193">
+											col 3
+										</td>
+									<td bgcolor="#add8e6">
+											col 4
+										</td>
+									<td bgcolor="#add8e6">
+											col 5
+										</td>
+									<td bgcolor="#add8e6">
+											col 6
+										</td>
+									<td bgcolor="#add8e6">
+											col 7
+										</td>
+									<td bgcolor="#add8e6" width="1">
+											col 8
+										</td>
+									<td bgcolor="#add8e6" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<td bgcolor="#add8e6" width="286">
+											col 1
+										</td>
+									<td bgcolor="#add8e6" width="127">
+											col 2
+										</td>
+									<td bgcolor="#add8e6" width="193">
+											col 3
+										</td>
+									<td bgcolor="#add8e6">
+											col 4
+										</td>
+									<td bgcolor="#add8e6">
+											col 5
+										</td>
+									<td bgcolor="#add8e6">
+											col 6
+										</td>
+									<td bgcolor="#add8e6">
+											col 7
+										</td>
+									<td bgcolor="#add8e6" width="1">
+											col 8
+										</td>
+									<td bgcolor="#add8e6" width="153">
+											col 9
+										</td>
+								</tr>
+								<tr>
+									<td bgcolor="#add8e6" width="286">
+											col 1
+										</td>
+									<td bgcolor="#add8e6" width="127">
+											col 2
+										</td>
+									<td bgcolor="#add8e6" width="193">
+											col 3
+										</td>
+									<td bgcolor="#add8e6">
+											col 4
+										</td>
+									<td bgcolor="#add8e6">
+											col 5
+										</td>
+									<td bgcolor="#add8e6">
+											col 6
+										</td>
+									<td bgcolor="#add8e6">
+											col 7
+										</td>
+									<td bgcolor="#add8e6" width="1">
+											col 8
+										</td>
+									<td bgcolor="#add8e6" width="153">
+											col 9
+										</td>
+								</tr>
+							</tbody>
+						</table>
+							Table Data Cells spanning multiple
+rows:
+							
+						Nested Table Header Cells &amp; Data Cells spanning multiple
+rows:
+	
+							&nbsp;
+							</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

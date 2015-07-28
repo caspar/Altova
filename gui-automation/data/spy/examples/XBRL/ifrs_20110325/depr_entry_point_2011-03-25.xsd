@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2011-03-25 (Final release)
+        ********************** 
+        Copyright © 2010 International Financial Reporting Standards (IFRS) Foundation
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IFRS Foundation.
+        For more information on the IFRS Foundation's copyright, please refer to http://www.ifrs.org/XBRL/Legal/
+        **********************
+    -->
+<xsd:schema targetNamespace="http://xbrl.ifrs.org/taxonomy/2011-03-25/ifrs/depr_entry_point" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:depr_entry_point="http://xbrl.ifrs.org/taxonomy/2011-03-25/ifrs/depr_entry_point" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:deprecated="http://www.xbrl.org/2009/role/deprecated" xmlns:ifrs="http://xbrl.iasb.org/taxonomy/2010-04-30/ifrs" xmlns:xl="http://www.xbrl.org/2003/XLink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="deprecated/depr-lab_ifrs-en_2011-03-25.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:import namespace="http://xbrl.iasb.org/taxonomy/2010-04-30/ifrs" schemaLocation="deprecated/ifrs-depr_2011-03-25.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/2009/role/deprecated" schemaLocation="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd"/>
+</xsd:schema>

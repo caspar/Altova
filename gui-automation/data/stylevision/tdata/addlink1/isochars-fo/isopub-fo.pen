@@ -1,0 +1,110 @@
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOpub PUBLIC
+       "ISO 8879:1986//ENTITIES Publishing//EN//XML">
+     %ISOpub;
+-->
+<!-- This version of the entity set can be used with any SGML document
+     which uses ISO 10646 as its document character set. 
+     This includes XML documents and ISO HTML documents.
+     This entity set uses hexadecimal numeric character references. 
+          
+     Creator: Rick Jelliffe, Allette Systems
+     
+     Version: 1997-07-07
+-->
+<!ENTITY emsp   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2003;</inline>" ><!--=em space-->
+<!ENTITY ensp   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2002;</inline>" ><!--=en space (1/2-em)-->
+<!ENTITY emsp13 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2004;</inline>" ><!--=1/3-em space-->
+<!ENTITY emsp14 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2005;</inline>" ><!--=1/4-em space-->
+<!ENTITY numsp  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2007;</inline>" ><!--=digit space (width of a number)-->
+<!ENTITY puncsp "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2008;</inline>" ><!--=punctuation space (width of comma)-->
+<!ENTITY thinsp "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2009;</inline>" ><!--=thin space (1/6-em)-->
+<!ENTITY hairsp "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x200A;</inline>" ><!--=hair space-->
+<!ENTITY mdash  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2014;</inline>" ><!--=em dash-->
+<!ENTITY ndash  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2013;</inline>" ><!--=en dash-->
+<!ENTITY dash   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2010;</inline>" ><!--=hyphen (true graphic)-->
+<!ENTITY blank  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2423;</inline>" ><!--=significant blank symbol-->
+<!ENTITY hellip "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2026;</inline>" ><!--=ellipsis (horizontal)-->
+<!ENTITY nldr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2025;</inline>" ><!--=double baseline dot (en leader)-->
+<!ENTITY frac13 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2153;</inline>" ><!--=fraction one-third-->
+<!ENTITY frac23 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2154;</inline>" ><!--=fraction two-thirds-->
+<!ENTITY frac15 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2155;</inline>" ><!--=fraction one-fifth-->
+<!ENTITY frac25 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2156;</inline>" ><!--=fraction two-fifths-->
+<!ENTITY frac35 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2157;</inline>" ><!--=fraction three-fifths-->
+<!ENTITY frac45 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2158;</inline>" ><!--=fraction four-fifths-->
+<!ENTITY frac16 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2159;</inline>" ><!--=fraction one-sixth-->
+<!ENTITY frac56 "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x215a;</inline>" ><!--=fraction five-sixths-->
+<!ENTITY incare "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2105;</inline>" ><!--=in-care-of symbol-->
+<!ENTITY block  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2588;</inline>" ><!--=full block-->
+<!ENTITY uhblk  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2580;</inline>" ><!--=upper half block-->
+<!ENTITY lhblk  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2584;</inline>" ><!--=lower half block-->
+<!ENTITY blk14  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2591;</inline>" ><!--=25% shaded block-->
+<!ENTITY blk12  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2592;</inline>" ><!--=50% shaded block-->
+<!ENTITY blk34  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2593;</inline>" ><!--=75% shaded block-->
+<!ENTITY marker "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25AE;</inline>" ><!--=histogram marker-->
+<!ENTITY cir    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25CB;</inline>" ><!--/circ B: =circle, open-->
+<!ENTITY squ    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25A1;</inline>" ><!--=square, open-->
+<!ENTITY rect   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25AD;</inline>" ><!--=rectangle, open-->
+<!ENTITY utri   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25B5;</inline>" ><!--/triangle =up triangle, open-->
+<!ENTITY dtri   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25BF;</inline>" ><!--/triangledown =down triangle, open-->
+<!ENTITY star   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2606;</inline>" ><!--=star, open-->
+<!ENTITY bull   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2022;</inline>" ><!--/bullet B: =round bullet, filled-->
+<!ENTITY squf   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25AA;</inline>" ><!--/blacksquare =sq bullet, filled-->
+<!ENTITY utrif  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25B4;</inline>" ><!--/blacktriangle =up tri, filled-->
+<!ENTITY dtrif  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25BE;</inline>" ><!--/blacktriangledown =dn tri, filled-->
+<!ENTITY ltrif  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25C2;</inline>" ><!--/blacktriangleleft R: =l tri, filled-->
+<!ENTITY rtrif  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25B8;</inline>" ><!--/blacktriangleright R: =r tri, filled-->
+<!ENTITY clubs  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2663;</inline>" ><!--/clubsuit =club suit symbol-->
+<!ENTITY diams  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2662;</inline>" ><!--/diamondsuit =diamond suit symbol-->
+<!ENTITY hearts "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2661;</inline>" ><!--/heartsuit =heart suit symbol-->
+<!ENTITY spades "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2660;</inline>" ><!--/spadesuit =spades suit symbol-->
+<!ENTITY malt   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2720;</inline>" ><!--/maltese =maltese cross-->
+<!ENTITY dagger "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2020;</inline>" ><!--/dagger B: =dagger-->
+<!ENTITY Dagger "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2021;</inline>" ><!--/ddagger B: =double dagger-->
+<!ENTITY check  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2713;</inline>" ><!--/checkmark =tick, check mark-->
+<!ENTITY cross  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2717;</inline>" ><!--=ballot cross-->
+<!ENTITY sharp  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x266F;</inline>" ><!--/sharp =musical sharp-->
+<!ENTITY flat   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x266D;</inline>" ><!--/flat =musical flat-->
+<!ENTITY male   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2642;</inline>" ><!--=male symbol-->
+<!ENTITY female "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2640;</inline>" ><!--=female symbol-->
+<!ENTITY phone  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x26E0;</inline>" ><!--=telephone symbol-->
+<!ENTITY telrec "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2315;</inline>" ><!--=telephone recorder symbol-->
+<!ENTITY copysr "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2117;</inline>" ><!--=sound recording copyright sign-->
+<!ENTITY caret  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2041;</inline>" ><!--=caret (insertion mark)-->
+<!ENTITY lsquor "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x201A;</inline>" ><!--=rising single quote, left (low)-->
+<!ENTITY ldquor "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x201E;</inline>" ><!--=rising dbl quote, left (low)-->
+
+<!ENTITY fflig  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xFB00;</inline>" ><!--small ff ligature-->
+<!ENTITY filig  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xFB01;</inline>" ><!--small fi ligature-->
+<!ENTITY fjlig  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>fj</inline>" ><!--small fj ligature-->
+<!ENTITY ffilig "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xFB03;</inline>" ><!--small ffi ligature-->
+<!ENTITY ffllig "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xFB04;</inline>" ><!--small ffl ligature-->
+<!ENTITY fllig  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#xFB02;</inline>" ><!--small fl ligature-->
+
+<!ENTITY mldr   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2025;</inline>" ><!--em leader-->
+<!ENTITY rdquor "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x201D;</inline>" ><!--rising dbl quote, right (high)-->
+<!ENTITY rsquor "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2019;</inline>" ><!--rising single quote, right (high)-->
+<!ENTITY vellip "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x22EE;</inline>" ><!--vertical ellipsis-->
+
+<!ENTITY hybull "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2043;</inline>" ><!--rectangle, filled (hyphen bullet)-->
+<!ENTITY loz    "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2727;</inline>" ><!--/lozenge - lozenge or total mark-->
+<!ENTITY lozf   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2726;</inline>" ><!--/blacklozenge - lozenge, filled-->
+<!ENTITY ltri   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25C3;</inline>" ><!--/triangleleft B: l triangle, open-->
+<!ENTITY rtri   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x25B9;</inline>" ><!--/triangleright B: r triangle, open-->
+<!ENTITY starf  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2605;</inline>" ><!--/bigstar - star, filled-->
+
+<!ENTITY natur  "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x266E;</inline>" ><!--/natural - music natural-->
+<!ENTITY rx     "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x211E;</inline>" ><!--pharmaceutical prescription (Rx)-->
+<!ENTITY sext   "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2736;</inline>" ><!--sextile (6-pointed star)-->
+
+<!ENTITY target "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x2316;</inline>" ><!--register mark or target-->
+<!ENTITY dlcrop "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x230D;</inline>" ><!--downward left crop mark -->
+<!ENTITY drcrop "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x230C;</inline>" ><!--downward right crop mark -->
+<!ENTITY ulcrop "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x230F;</inline>" ><!--upward left crop mark -->
+<!ENTITY urcrop "<inline xmlns='http://www.w3.org/1999/XSL/Format' font-family='Arial Unicode'>&#x230E;</inline>" ><!--upward right crop mark -->
+

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.1">
+	<xs:override schemaLocation="office-calendar.xsd">
+		<xs:element name="meeting">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="track-id" type="xs:string"/>
+					<xs:element name="speaker" type="xs:string"/>
+					<xs:element name="room-capacity" type="xs:nonNegativeInteger"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+	</xs:override>
+</xs:schema>

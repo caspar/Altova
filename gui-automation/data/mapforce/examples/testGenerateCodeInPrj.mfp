@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  MapForce Project File  -->
+<Project Expanded="Yes" Type="Root" language="java" OutputDir="C:\temp\mapforce\EntireProject" Title="testGenerateCodeInPrj" OutputName="testGenerateCodeInPrj" Version="6">
+	<Folder FolderName="Web Services Folder" Expanded="Yes" Type="WebServiceFolder">
+		<File Expanded="Yes" Type="WebServiceRoot" FilePath="UPSRates.wsdl">
+			<Folder FolderName="{http://mackeybros.com/WebServices/}UPSRates" Expanded="Yes" Type="WebServiceService" WSQualifiedName="{http://mackeybros.com/WebServices/}UPSRates">
+				<Folder FolderName="UPSRatesSoap" Expanded="Yes" Type="WebServicePort" WSQualifiedName="UPSRatesSoap">
+					<Folder FolderName="{http://mackeybros.com/WebServices/}GetShippingRate" Expanded="Yes" Type="WebServiceOperation" WSQualifiedName="{http://mackeybros.com/WebServices/}GetShippingRate">
+						<File Type="Mapping" FilePath="GetShippingRate.mfd"/>
+					</Folder>
+					<Folder FolderName="{http://mackeybros.com/WebServices/}PossibleValues" Expanded="Yes" Type="WebServiceOperation" WSQualifiedName="{http://mackeybros.com/WebServices/}PossibleValues">
+						<File Type="Mapping" FilePath="PossibleValues.mfd"/>
+					</Folder>
+				</Folder>
+			</Folder>
+		</File>
+	</Folder>
+</Project>

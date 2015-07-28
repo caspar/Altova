@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by eeeeasfasf﻿Markus Kreska (Altova GmbH) -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css" />
+		<title>Using Ant to run automated tests</title>
+	</head>
+	<body>
+		<div class="top"><a href="toc.xhtml">Top - Contents</a></div>
+		<div class="next">
+			<a href="eclipse_howto.xhtml">Next: Working with Eclipse</a>
+		</div>
+		<div class="previous">
+			<a href="cvs_howto.xhtml">Previous: CVS Howto</a>
+		</div>
+		<h1>Using Ant to run the automated tests, and other tasks</h1>
+		<h2>
+			<a name="1" />Overview</h2>
+		<div class="p">
+		The following assumes you have followed the steps under <a href="quick_start.xhtml">Quick start</a> or <a href="install.xhtml">Installing the development environment</a>, and have Java 1.6, Ant 1.7 and CVS in your PATH, and also have checked out the automation framework from CVS. 
+		</div>
+		<div class="p">Ant is a Java based build and execution tool, akin to the Unix <i>make</i> tool. You can think of it as a rather simple batch script language, written in XML. The default Ant script is called <i>build.xml</i>, and for the automation project it's located in <div class="file">C:\work\gui-automation\build.xml </div>. The general usage of Ant is to build, run and test a Java project, which is what it is used for here. Ant scripts are organised into "targets", which can be thought of as methods, and is typically the first argument of ant on the command line. The rest of this page explains the main targets in our Ant script for GUI test automation. For further details about the JUnit tests, please see the section <a href="junit_running.xhtml"><i>Running the test cases</i></a>.</div>
+		<h2>
+			<a name="2" />Default target</h2>
+		<div class="p">
+		An Ant script can have a single <b>default</b> target, which is run if only ant is executed on the command line. For our script, the default target <i>1)</i> updates the files from CVS, <i>2)</i> compiles the source code and <i>3)</i> builds a Java Jar file. You can try this right away:
+		<pre class="cmd">
+	cd C:\work\gui-automation
+	ant
+		</pre>
+		</div>
+		<h2>
+			<a name="rc" />rc - Robots Center</h2>
+		<div class="p">
+			The <a href="robotscenter.xhtml">Robots Center</a> is a small internal application to test and work with various aspects of the robot classes. For example, you can test the text and image search algorithms, get information about screen components and coordinates, etc. For more details, please see the section about <a href="robotscenter.xhtml">the Robot Center application</a>. You can start this from the command line by typing:
+		<pre class="cmd">
+	ant rc
+		</pre>
+		</div>
+		<h2>
+			<a name="doc" />doc - Generate Java documentation</h2>
+		<div class="p">This will generate Java documentation for all the Robots classes, and put them in a directory one level below the <i>gui-automation</i> directory. Give that you've followed the instructions so far, and used <i>C:\work</i> as you check out location, the documentation will be in <div class="file">c:\work\robotsapi </div>.
+		<pre class="cmd">
+	ant doc
+		</pre>
+		</div>
+		<h2>
+			<a name="test" />test - Running a JUnit test class</h2>
+		<div class="p">Here is the most important target for running the JUnit tests, right after making sure you have the latest source code (using the <a href="#2">default task</a> mentioned above). The target takes one argument, which is specified on the JVM format, e.g. <i>-D<b>key</b>=<b>value</b></i>. In this case, the "key" is always <b>classname</b>, and the value is the <i>partial path of the class</i>. That means, that it needs a unique path to identify the JUnit class you want to run, but necessarily not more (although it is not a mistake to write more). This is important for the test cases which have the same name, like <i>FileMenuTest</i>, which is both in XMLSpy and UModel packages. Below is a list of examples of <b>valid</b> usages. Note the single command <b>ant</b> right before each test is started.
+		</div>
+		<pre class="cmd">
+	ant
+	ant test -Dclassname=StylesTest
+		
+	ant
+	ant test -Dclassname=umodel/regression/testcases/StylesTest
+	
+	ant
+	ant test -Dclassname=XMLMenuXMLTest
+	
+	ant
+	ant test -Dclassname=spy/XMLMenuXMLTest
+		
+	ant
+	ant test -Dclassname=spy/FileMenuTest
+		
+	ant
+	ant test -Dclassname=umodel/regression/testcases/FileMenuTest
+
+	ant
+	ant test -Dclassname=testcases/FileMenuTest
+		</pre>
+		<div class="p">After the test has finished, a report will be stored on the <i>S:</i> drive. Then, a summary of all the previous reports will be converted into HTML, and presented at <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html">file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html</a>.</div>
+		<h2>
+			<a name="run" />run - Running a Java executable class</h2>
+		<div class="p">Most of the runnable classes we have are currently JUnit test classes, with a very few exceptions like the <i>RobotsCenter</i> application. The <a href="#rc"><b>ant rc</b> shortcut above</a> is preferred, however here the same class is started with the run target, as an example:
+		<pre class="cmd">
+	ant run -Dclassname=RobotsCenter
+		</pre>
+		</div>
+		<h2>
+			<a name="report" />report - (Re)Generate the HTML report for the JUnit tests</h2>
+		<div class="p">The final target which might be relevant here, generates the HTML report for the JUnit tests, stored on the <i>S:</i>-drive. (The specific location is inside the <i>build.xml</i> file (currently at <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html">file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports/html/index.html</a>). Usually, it will not be necessary, since the <i>test</i> target already includes a call to this at the end, however, in some rare occasions, this target corrupts the report. One example of that, is if you manually stop it (with CTRL+C) in the middle of generating HTML-files. It is then useful to run only the <i>report</i> target again.
+		<pre class="cmd">
+	ant report
+		</pre>
+		</div>
+		<div class="p">
+			<b>Please, note that.... </b>  some of our test machines, including our physical Win7 x64 ones , are experiencing performance problems at generating the JUnit report via the 'ant report' task.  Apparently, the problem is the xalan XSL transformation, but we didn't find a solution for this so far. So in case you run a test and the report keeps hanging in your pc, take one of our VM and type 'ant report' on it to be able to visualize the test suite results. </div>
+		
+		<div class="p">
+			<b>Tipp:  </b>  Whenever the amount of files contained in the final html report file got too big, you will see that following error message is displayed once an 'ant report' was attempted:	
+			<pre class="cmd">
+	Buildfile: build.xml
+     [echo]
+     [echo]
+     [echo]             Type ant help to get an overview of tasks in this build.
+xml file.
+     [echo]
+     [echo]             At least Ant 1.7.0 is required. You have Apache Ant vers
+ion 1.7.1 compiled on June 27 2008
+     [echo]
+     [echo]
+     [echo] End of Ant
+
+report:
+     [echo] Start generating report
+   [delete] Deleting directory S:\QA\Internal\Test-Cases\Automated_GUI_Tests\rep
+orts\html
+[junitreport] Processing S:\QA\Internal\Test-Cases\Automated_GUI_Tests\reports\T
+ESTS-TestSuites.xml to C:\DOCUME~1\Bea\LOCALS~1\Temp\null1561110228
+[junitreport] Loading stylesheet jar:file:/C:/Java/apache-ant-1.7.1/lib/ant-juni
+t.jar!/org/apache/tools/ant/taskdefs/optional/junit/xsl/junit-frames.xsl
+
+BUILD FAILED
+java.lang.OutOfMemoryError: Java heap space
+		</pre>
+		To solve the Out Of Memory Error, just delete or save to the old folder part of the XML files starting with "Test-*.xml  contained in <a href="file:///S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports">S:/QA/Internal/Test-Cases/Automated_GUI_Tests/reports</a>   and generate the report again. 
+		 </div>
+	</body>
+</html>

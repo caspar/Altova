@@ -1,0 +1,51 @@
+body
+{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.p {
+  display: blokck;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+
+.file {
+	font-style: italic;
+	display: inline;
+}
+
+.cmd
+{
+	background-color: #000000;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Courier, monospace;
+	width: 70%;
+    overflow:auto;
+}
+
+.javacode {
+  white-space: pre;
+  font-family: "Courier", "Courier new", mono-space;
+  font-size: small;
+  background-color: #EEEEFF;
+  display: block;
+  width: 80%;
+  overflow:auto;
+}
+
+.screen {
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+  display: block;
+}
+
+.diagram {
+  padding: 10px;
+  margin-left: auto; 
+  margin-right: auto;
+  display: block;
+  border: 0;
+}

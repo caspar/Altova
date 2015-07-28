@@ -1,0 +1,14 @@
+<?xml version="1.1"?>
+<!-- edited with XMLSpy v2014 (http://www.altova.com) by test (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.1">
+	<!-- dayTimeDuration_datatype_test.xsd
+ - Copyright (c) 2013 by Dr. Herong Yang, herongyang.com
+-->
+	<xs:element name="DayTimeDuration_Datatype_Test">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DayTimeDuration" type="xs:dayTimeDuration" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

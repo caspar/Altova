@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 (http://www.altova.com) by Mr. Nobody (Altova GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="directory">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="file">
+					<xs:complexType>
+						<xs:attribute name="name" type="xs:string"/>
+						<xs:attribute name="size" type="xs:unsignedLong"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="directory"/>
+			</xs:choice>
+			<xs:attribute name="name"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

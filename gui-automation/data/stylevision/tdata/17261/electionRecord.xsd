@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://dca.tufts.edu/aas" xmlns:doc="http://dca.tufts.edu/doc" xmlns:aas="http://dca.tufts.edu/aas" elementFormDefault="qualified">
+
+ <!-- Root element of the election record -->
+	<xsd:element name="election_record">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<doc:description>
+					<doc:title>American Antiquarian Society Voting Records Project: XML schema</doc:title>
+					<doc:version>Version 1.0</doc:version>
+					<doc:editor>Robert Chavez</doc:editor>
+					<doc:dateCreated>August 2005</doc:dateCreated>
+				</doc:description>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:extension base="aas:ElectionRecordType"/>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+
+<!-- sub_unit element declaration; allows unlimited self-nesting; referenced by admin_unit element -->
+	<xsd:element name="sub_unit">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:sequence>
+					<xsd:element name="result" type="aas:ResultType" minOccurs="0" maxOccurs="unbounded" />
+					<xsd:element ref="aas:reference" minOccurs="0" maxOccurs="unbounded" />
+					<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+				<xsd:choice minOccurs="0" maxOccurs="unbounded">
+					<xsd:element ref="aas:sub_unit"/>
+				</xsd:choice>
+			</xsd:sequence>
+			<xsd:attribute name="type" default="null" >
+			<xsd:simpleType>
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="City" />
+				<xsd:enumeration value="County" />
+				<xsd:enumeration value="District" />
+				<xsd:enumeration value="Federal" />
+				<xsd:enumeration value="State" />
+				<xsd:enumeration value="Territory" />
+				<xsd:enumeration value="Town" />
+				<xsd:enumeration value="Ward" />
+				<xsd:enumeration value="Parish" />
+				<xsd:enumeration value="null" />
+			</xsd:restriction>
+			</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="name" type="xsd:string" use="required" />
+			<xsd:attribute name="geog_id" type="xsd:string" default="null"/>
+		</xsd:complexType>
+	</xsd:element>
+
+<!-- note element declaration; referenced in multiple locations -->
+<xsd:element name="note">
+	<xsd:complexType>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="resp" type="xsd:string" use="required" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:element>
+
+<!-- reference element declaration; referenced in multiple locations -->
+<xsd:element name="reference">
+	<xsd:complexType>
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="type" type="xsd:string" use="required" />
+				<xsd:attribute name="urn" type="xsd:string" default="null"/>
+				<xsd:attribute name="resp" type="xsd:string" use="required" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:element>
+
+ <!-- election_record simpleType for date attribute:  alow gYear or gYearMonth-->
+	<xsd:simpleType name="anyDate">
+		<xsd:union memberTypes=" xsd:gYear xsd:gYearMonth"/>
+	</xsd:simpleType>
+
+<!-- election_record Complex Type Declaration -->
+	<xsd:complexType name="ElectionRecordType">
+		<xsd:sequence>
+			<xsd:element name="office" type="aas:OfficeType" minOccurs="1" maxOccurs="1">
+
+		<!-- Candidate key reference -->
+				<xsd:key name="candidateNumKey">
+					<xsd:selector xpath=".//aas:candidate" />
+					<xsd:field xpath="@candidate_num" />
+				</xsd:key>
+				<xsd:keyref name="candidateNumKeyRef" refer="aas:candidateNumKey">
+					<xsd:selector xpath=".//aas:candidate_summary" />
+					<xsd:field xpath="@candidate_ref" />
+				</xsd:keyref>
+				<xsd:keyref name="candidateResultKeyRef" refer="aas:candidateNumKey">
+					<xsd:selector xpath=".//aas:result" />
+					<xsd:field xpath="@candidate_ref" />
+				</xsd:keyref>
+
+		<!-- Elector key reference -->
+				<xsd:key name="electorNumKey">
+					<xsd:selector xpath=".//aas:elector" />
+					<xsd:field xpath="@elector_num" />
+				</xsd:key>
+				<xsd:keyref name="electorNumKeyRef" refer="aas:electorNumKey">
+					<xsd:selector xpath=".//aas:elector_summary" />
+					<xsd:field xpath="@elector_ref" />
+				</xsd:keyref>
+				<xsd:keyref name="electorResultKeyRef" refer="aas:electorNumKey">
+					<xsd:selector xpath=".//aas:result" />
+					<xsd:field xpath="@elector_ref" />
+				</xsd:keyref>
+
+			</xsd:element>
+			<xsd:element ref="aas:reference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="label" type="xsd:string" use="required" />
+		<xsd:attribute name="date" type="aas:anyDate" use="required" />
+		<xsd:attribute name="type" type="xsd:string" default="null" />
+		<xsd:attribute name="iteration" type="xsd:string" default="null" />
+		<xsd:attribute name="election_id" type="xsd:string" use="required" />
+	</xsd:complexType>
+
+<!-- office Complex Type Declaration -->
+	<xsd:complexType name="OfficeType">
+		<xsd:sequence>
+			<xsd:element name="role" type="aas:RoleType" minOccurs="1" maxOccurs="1" />
+			<xsd:element ref="aas:reference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="office_id" type="xsd:string" default="null" />
+		<xsd:attribute name="scope" default="null">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="City" />
+				<xsd:enumeration value="County" />
+				<xsd:enumeration value="District" />
+				<xsd:enumeration value="Federal" />
+				<xsd:enumeration value="State" />
+				<xsd:enumeration value="Territory" />
+				<xsd:enumeration value="Town" />
+				<xsd:enumeration value="Ward" />
+				<xsd:enumeration value="Parish" />
+				<xsd:enumeration value="null" />
+			</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+<!-- role Complex Type Declaration -->
+	<xsd:complexType name="RoleType">
+		<xsd:sequence>
+			<xsd:element name="ballot" type="aas:BallotType" minOccurs="1" maxOccurs="1" />
+			<xsd:element name="overview" type="aas:OverviewType" maxOccurs="1" />
+			<xsd:element name="admin_unit" type="aas:AdminUnitType" minOccurs="1"/>
+			<xsd:element ref="aas:reference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="title" type="xsd:string" use="required" />
+		<xsd:attribute name="scope" default="null">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="City" />
+				<xsd:enumeration value="County" />
+				<xsd:enumeration value="District" />
+				<xsd:enumeration value="Federal" />
+				<xsd:enumeration value="State" />
+				<xsd:enumeration value="Territory" />
+				<xsd:enumeration value="Town" />
+				<xsd:enumeration value="Ward" />
+				<xsd:enumeration value="Parish" />
+				<xsd:enumeration value="null" />
+			</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+<!-- ballot Complex Type Declaration -->
+	<xsd:complexType name="BallotType">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element name="candidate" type="aas:CandidateType" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element name="elector" type="aas:ElectorType" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:choice>
+			<xsd:element ref="aas:reference" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+<!-- candidate Complex Type Declaration -->
+	<xsd:complexType name="CandidateType">
+		<xsd:sequence>
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="name_id" type="xsd:string" default="null" />
+		<xsd:attribute name="affiliation" type="xsd:string" use="required" />
+		<xsd:attribute name="affiliation_id" type="xsd:string" default="null" />
+		<xsd:attribute name="candidate_num" type="xsd:integer" use="required" />
+	</xsd:complexType>
+
+<!-- elector Complex Type Declaration -->
+	<xsd:complexType name="ElectorType">
+		<xsd:sequence>
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="name_id" type="xsd:string" default="null" />
+		<xsd:attribute name="affiliation" type="xsd:string" use="required" />
+		<xsd:attribute name="affiliation_id" type="xsd:string" default="null" />
+		<xsd:attribute name="elector_num" type="xsd:integer" use="required" />
+		<xsd:attribute name="declared_for" type="xsd:string" default="null" />
+	</xsd:complexType>
+
+<!-- overview Complex Type Declaration -->
+	<xsd:complexType name="OverviewType">
+		<xsd:sequence>
+			<xsd:element name="candidate_summary" type="aas:CandidateSummaryType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="elector_summary" type="aas:ElectorSummaryType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="aas:reference" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="status" type="xsd:string" default="null" />
+		<xsd:attribute name="modified" type="xsd:date" use="required" />
+	</xsd:complexType>
+
+<!-- candidate_summary Complex Type Declaration -->
+	<xsd:complexType name="CandidateSummaryType">
+		<xsd:attribute name="candidate_ref" type="xsd:integer" use="required" />
+		<xsd:attribute name="vote_total" type="xsd:integer" />
+		<xsd:attribute name="resp" type="xsd:string" use="required"/>
+	</xsd:complexType>
+
+<!-- elector_summary Complex Type Declaration -->
+	<xsd:complexType name="ElectorSummaryType">
+		<xsd:attribute name="elector_ref" type="xsd:integer" use="required" />
+		<xsd:attribute name="vote_total" type="xsd:integer" />
+		<xsd:attribute name="resp" type="xsd:string" use="required"/>
+	</xsd:complexType>
+
+<!-- admin_unit  Complex Type Declaration -->
+	<xsd:complexType name="AdminUnitType">
+		<xsd:sequence>
+			<xsd:element name="result" type="aas:ResultType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="aas:sub_unit" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="aas:reference" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element ref="aas:note" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="type" default="null">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="City" />
+				<xsd:enumeration value="County" />
+				<xsd:enumeration value="District" />
+				<xsd:enumeration value="Federal" />
+				<xsd:enumeration value="State" />
+				<xsd:enumeration value="Territory" />
+				<xsd:enumeration value="Town" />
+				<xsd:enumeration value="Ward" />
+				<xsd:enumeration value="Parish" />
+				<xsd:enumeration value="null" />
+			</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="geog_id" type="xsd:string" default="null"/>
+	</xsd:complexType>
+
+<!-- result Complex Type Declaration -->
+	<xsd:complexType name="ResultType">
+		<xsd:attribute name="candidate_ref" type="xsd:integer" />
+		<xsd:attribute name="elector_ref" type="xsd:integer" />
+		<xsd:attribute name="vote" type="xsd:integer" />
+		<xsd:attribute name="resp" type="xsd:string" default="null" />
+	</xsd:complexType>
+
+</xsd:schema>

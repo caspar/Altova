@@ -1,0 +1,1 @@
+validate couples.xml couples.xsd

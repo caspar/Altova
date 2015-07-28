@@ -1,0 +1,26 @@
+<!-- edited with XMLSpy v2006 rel. 3 U (http://www.altova.com) by Markus Kreska (Altova GmbH) -->
+<Links diagram="UseCase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\user_files\work\uml_link_matrix.xsd">
+	<StartElement name="Actor">
+		<Link name="Association">
+			<EndElement name="UseCase"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="Actor"/>
+		</Link>
+	</StartElement>
+	<StartElement name="UseCase">
+		<Link name="Association">
+			<EndElement name="Actor"/>
+			<EndElement name="UseCase"/>
+		</Link>
+		<Link name="Generalization">
+			<EndElement name="UseCase"/>
+		</Link>
+		<Link name="Include">
+			<EndElement name="UseCase"/>
+		</Link>
+		<Link name="Extend">
+			<EndElement name="UseCase"/>
+		</Link>
+	</StartElement>
+</Links>

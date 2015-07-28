@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by Mike Botts (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Alexandre Robin (University of Alabama in Huntsville) -->
+<!-- edited with XML Spy v4.3 U (http://www.xmlspy.com) by Michael E Botts (University of Alabama in Huntsville) -->
+<xs:schema targetNamespace="http://www.opengis.net/sensorML" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:swe="http://www.opengis.net/swe" xmlns:sml="http://www.opengis.net/sensorML" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!--========================-->
+	<!--  Includes and Imports  -->
+	<!--========================-->
+	<xs:import namespace="http://www.opengis.net/swe" schemaLocation="../../../sweCommon/1.0.30/parameters.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="http://schemas.opengis.net/gml/3.1.0/xlink/xlinks.xsd"/>
+	<xs:include schemaLocation="./process.xsd"/>
+	<!--=============-->
+	<!--  Processes  -->
+	<!--=============-->
+	<!-- CONSIDER NOT HAVING GENERIC RESPONSE MODEL, BUT ONLY GENERIC RESPONSE PARAMETERS THAT CAN BE LINKED -->
+	<xs:element name="GenericResponse" substitutionGroup="sml:_Process">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="sml:_AbstractProcessType">
+					<xs:sequence>
+						<xs:group ref="sml:processMetadataGroup" minOccurs="0"/>
+						<xs:element name="inputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:inputsType">
+										<xs:sequence minOccurs="0">
+											<xs:element name="InputList">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:_AbstractListType">
+															<xs:sequence>
+																<xs:element name="realValue">
+																	<xs:complexType>
+																		<xs:group ref="swe:AnyScalar"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="frequency" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:Quantity"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="outputs">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:outputsType">
+										<xs:sequence minOccurs="0">
+											<xs:element name="OutputList">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:_AbstractListType">
+															<xs:sequence>
+																<xs:element name="measuredValue">
+																	<xs:complexType>
+																		<xs:group ref="swe:AnyScalar"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="parameters">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:parametersType">
+										<xs:sequence minOccurs="0">
+											<xs:element name="ParameterList">
+												<xs:complexType>
+													<xs:complexContent>
+														<xs:restriction base="sml:_AbstractListType">
+															<xs:sequence>
+																<xs:element name="calibration">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:NormalizedCurve"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="frequencyResponse" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element ref="swe:NormalizedCurve"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:restriction>
+													</xs:complexContent>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="method">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="sml:methodType">
+										<xs:attribute ref="xlink:href" use="required" fixed="urn:ogc:process:genericResponse"/>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<!--================================-->
+	<!--  Generic Response Parameter Groups  -->
+	<!--================================-->
+	<xs:element name="GenericResponseParameters" type="sml:GenericResponseParametersType" substitutionGroup="swe:_DataGroup"/>
+	<xs:complexType name="GenericResponseParametersType">
+		<xs:complexContent>
+			<xs:extension base="swe:_GroupBaseType">
+				<xs:sequence>
+					<xs:element ref="sml:steadyStateResponse" maxOccurs="2"/>
+					<xs:element ref="sml:frequencyResponse" minOccurs="0"/>
+					<xs:element ref="sml:impulseResponse" minOccurs="0"/>
+					<xs:element ref="sml:latencyTime" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--===========================-->
+	<!--  Generic Response Parameters  -->
+	<!--===========================-->
+	<xs:element name="frequencyResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:group ref="swe:Curves"/>
+			</xs:sequence>
+			<xs:attribute name="type" use="optional" default="carrier">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="carrier"/>
+						<xs:enumeration value="modulation"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="impulseResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:group ref="swe:Curves"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="relativeResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:group ref="swe:Curves"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="steadyStateResponse">
+		<xs:annotation>
+			<xs:documentation>one may provide two calibration curves, one with increasing input values (forward direction) and one for decreaaing (reverse direction) input values</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:group ref="swe:Curves"/>
+			</xs:sequence>
+			<xs:attribute name="direction" use="optional" default="both">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="forward"/>
+						<xs:enumeration value="reverse"/>
+						<xs:enumeration value="both"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="latencyTime">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="swe:Quantity"/>
+			</xs:sequence>
+			<xs:attribute name="condition" type="xs:anyURI" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- move to genericSampling? -->
+	<xs:element name="integrationTime">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="swe:Quantity"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- move to genericPosition? -->
+	<xs:element name="spatialResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:group ref="swe:Curves"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

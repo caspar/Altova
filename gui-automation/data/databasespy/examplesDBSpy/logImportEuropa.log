@@ -1,0 +1,6 @@
+﻿CREATE TABLE [europa] ( [PrimaryKey] TEXT (255)  , [ForeignKey] TEXT (255)  , [country] TEXT (255)  , [capital] TEXT (255)  , [currency] TEXT (255)  ) ;
+INSERT INTO [europa] ( [PrimaryKey], [ForeignKey], [country], [capital], [currency] ) VALUES ( '1', '0', 'Austria', 'Vienna', 'euro' );
+INSERT INTO [europa] ( [PrimaryKey], [ForeignKey], [country], [capital], [currency] ) VALUES ( '2', '0', 'Italy', 'Rome', 'euro' );
+INSERT INTO [europa] ( [PrimaryKey], [ForeignKey], [country], [capital], [currency] ) VALUES ( '3', '0', 'Spain', 'Madrid', 'euro' );
+INSERT INTO [europa] ( [PrimaryKey], [ForeignKey], [country], [capital], [currency] ) VALUES ( '4', '0', 'Great Britain', 'London', 'pound' );
+INSERT INTO [europa] ( [PrimaryKey], [ForeignKey], [country], [capital], [currency] ) VALUES ( '5', '0', 'France', 'Paris', 'euro' );

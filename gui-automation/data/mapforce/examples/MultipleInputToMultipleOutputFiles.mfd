@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="13">
+	<component name="defaultmap1" blackbox="0" uid="48863048" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="xslt2" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="38630245" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="550" rbx="736" rby="153"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" inpkey="196655016" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="PersonList" expanded="1">
+										<entry name="Person" inpkey="190723464" expanded="1">
+											<entry name="role" type="attribute" inpkey="190724424"/>
+											<entry name="First" inpkey="196655560"/>
+											<entry name="Last" inpkey="190723904"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="PersonList.xsd" instanceroot="{}PersonList" userdefinedschemalocation="PersonList.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="38630243" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="190720976"/>
+						<datapoint pos="1" key="190721160"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="190721344"/>
+					</targets>
+					<view ltx="430" lty="5" rbx="40" rby="-162"/>
+				</component>
+				<component name="constant" library="core" uid="38630244" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="190721968"/>
+					</targets>
+					<view ltx="272" lty="17" rbx="-1" rby="-47"/>
+					<data>
+						<constant value="Persons-" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="remove-folder" library="core" uid="38630246" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="190722592"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="190722944"/>
+					</targets>
+					<view ltx="267" lty="54" rbx="-18" rby="-34"/>
+				</component>
+				<component name="document" library="xml" uid="38630233" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" AddSchemaLocation="0"/>
+					<view ltx="4" rbx="196" rby="451"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" outkey="190725208" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Altova" expanded="1">
+										<entry name="Office" expanded="1">
+											<entry name="Department" expanded="1">
+												<entry name="Person" outkey="190403440" expanded="1">
+													<entry name="First" outkey="190403880"/>
+													<entry name="Last" outkey="190404400"/>
+													<entry name="Title" outkey="190404920"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Altova_Hierarchical.xsd" inputinstance="Nanonull-*.xml" instanceroot="{}Altova" userdefinedschemalocation="Altova_Hierarchical.xsd"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="190403440">
+						<edges>
+							<edge vertexkey="190723464" edgekey="196994256"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190403880">
+						<edges>
+							<edge vertexkey="196655560" edgekey="196994656"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190404400">
+						<edges>
+							<edge vertexkey="190723904" edgekey="190873000"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190404920">
+						<edges>
+							<edge vertexkey="190724424" edgekey="190873400"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190721344">
+						<edges>
+							<edge vertexkey="196655016" edgekey="196993248"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190721968">
+						<edges>
+							<edge vertexkey="190720976" edgekey="196993520"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190722944">
+						<edges>
+							<edge vertexkey="190721160" edgekey="196992392"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="190725208">
+						<edges>
+							<edge vertexkey="190722592" edgekey="196993856"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

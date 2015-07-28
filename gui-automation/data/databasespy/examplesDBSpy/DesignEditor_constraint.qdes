@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design version="1" datasource="OrgChart" kind="MS Access" root="OrgChart">
+	<Table left="-30" right="240" bottom="274" id="1" expanded="1" resized="1">
+		<ColumnWidths col0="22.000000" col1="68.000000" col2="60.000000" col3="98.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="Person" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Table left="430" top="70" right="790" bottom="249" id="2" expanded="1" resized="1">
+		<ColumnWidths col0="22.000000" col1="65.000000" col2="48.000000" col3="44.000000" col4="20.000000"/>
+		<CollapsedCompartments Indexes="1" CheckConstraints="3"/>
+		<ObjectPath>
+			<PathElement Name="Processes" Kind="Table"/>
+		</ObjectPath>
+	</Table>
+	<Line left="245" top="210" right="424" bottom="251" fromObj="2" toObj="1" XPos="375" labelX="-17">
+		<ObjectPathFrom>
+			<PathElement Name="Processes" Kind="Table"/>
+			<PathElement Name="FK_ID" Kind="ForeignKey"/>
+		</ObjectPathFrom>
+		<ObjectPathFrom_VirtualParent/>
+		<ObjectPathTo>
+			<PathElement Name="Person" Kind="Table"/>
+			<PathElement Name="PK_PK" Kind="PrimaryKey"/>
+		</ObjectPathTo>
+	</Line>
+</Design>

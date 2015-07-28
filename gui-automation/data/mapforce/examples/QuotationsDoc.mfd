@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping version="6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<component name="defaultmap1" blackbox="0" uid="72082976" editable="1">
+		<properties ShowSchemaTypes="1" ShowAnnotations="0" SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="72121480" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="72123984"/>
+					</targets>
+					<view ltx="303" lty="21" rbx="-193" rby="-149"/>
+					<data>
+						<constant value="Quotations of famous people" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="72124352" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="72125960"/>
+						<datapoint pos="1" key="72126448"/>
+						<datapoint pos="2" key="72126936"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="72127440"/>
+					</targets>
+					<view ltx="343" lty="159" rbx="-6" rby="46"/>
+				</component>
+				<component name="constant" library="core" uid="72127736" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="72129944"/>
+					</targets>
+					<view ltx="251" lty="198" rbx="-245" rby="28"/>
+					<data>
+						<constant value=" " datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="txt" library="text" uid="84708840" kind="16" visible="0">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="508" lty="9" rbx="664" rby="166"/>
+					<data>
+						<root scrollposition="1">
+							<header/>
+							<entry name="Document" expanded="1">
+								<entry name="Sections" expanded="1">
+									<entry name="Header" expanded="1">
+										<entry name="Title" inpkey="84788536"/>
+									</entry>
+									<entry name="Body" expanded="1" inpkey="84788312">
+										<entry name="Name" inpkey="84789056"/>
+										<entry name="Year" inpkey="84789576"/>
+										<entry name="Text" inpkey="84790096"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="txt" outputinstance="QuotationsDoc.txt" encoding="52" byteorder="1" config="QuotationsDoc.mft"/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="72130312" kind="14">
+					<properties/>
+					<view ltx="35" lty="7" rbx="234" rby="143"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:People" expanded="1">
+								<entry name="0:Person" expanded="1" outkey="84781224">
+									<entry name="0:FirstName" outkey="84783304"/>
+									<entry name="0:LastName" outkey="84781744"/>
+									<entry name="0:DOB" outkey="84782176"/>
+									<entry name="0:Quotation" outkey="84782784"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Quotations.xsd" inputinstance="Quotations.xml" instanceroot="{}People"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="string" library="core" uid="84833120" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="84833504"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="84570344"/>
+					</targets>
+					<view ltx="346" lty="93" rbx="14" rby="13"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="84569536"/>
+					<edge edgekey="84575720"/>
+					<edge edgekey="84777064"/>
+					<edge edgekey="84777184"/>
+					<edge edgekey="84800200"/>
+					<edge edgekey="84800704"/>
+					<edge edgekey="84801000"/>
+					<edge edgekey="84801296"/>
+					<edge edgekey="84801592"/>
+				</edges>
+				<vertices>
+					<vertex vertexkey="72123984">
+						<edges>
+							<edge vertexkey="84788536" edgekey="84800704"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72127440">
+						<edges>
+							<edge vertexkey="84789056" edgekey="84777184"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72129944">
+						<edges>
+							<edge vertexkey="72126448" edgekey="84801592"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84570344">
+						<edges>
+							<edge vertexkey="84789576" edgekey="84575720"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84781224">
+						<edges>
+							<edge vertexkey="84788312" edgekey="84800200"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84781744">
+						<edges>
+							<edge vertexkey="72126936" edgekey="84801296"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84782176">
+						<edges>
+							<edge vertexkey="84833504" edgekey="84569536"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84782784">
+						<edges>
+							<edge vertexkey="84790096" edgekey="84777064"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="84783304">
+						<edges>
+							<edge vertexkey="72125960" edgekey="84801000"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

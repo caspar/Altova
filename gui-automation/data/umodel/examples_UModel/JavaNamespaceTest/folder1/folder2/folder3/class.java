@@ -1,0 +1,36 @@
+package folder1.folder2.folder3;
+class Point {
+	int x, y;
+	Point() { System.out.println("default"); }
+	Point(int x, int y) { this.x = x; this.y = y; }
+	// A Point instance is explicitly created at class initialization time:
+	static Point origin = new Point(0,0);
+	// A String can be implicitly created by a + operator:
+	public String toString() {
+		return "(" + x + "," + y + ")";
+	}
+}
+class Test {
+	static Point p = null;
+	static Point a[] = { new Point(0,0), new Point(1,1) };
+	public static void main(String[] args) {
+		// A Point is explicitly created using newInstance:
+		
+		try {
+			p = (Point)Class.forName("Point").newInstance();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		// An array is implicitly created by an array constructor:
+		
+		// Strings are implicitly created by + operators:
+		System.out.println("p: " + p);
+		System.out.println("a: { " + a[0] + ", "
+										   + a[1] + " }");
+		// An array is explicitly created by an array creation expression:
+		String sa[] = new String[2];
+		sa[0] = "he"; sa[1] = "llo";
+		System.out.println(sa[0] + sa[1]);
+	}
+}
+

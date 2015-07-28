@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" href="plain.css"/>
+		<title>Installing the development environment</title>
+	</head>
+	<body>
+		<div class="top">
+			<a href="toc.xhtml">Top - Contents</a>
+		</div>
+		<div class="next">
+			<a href="eclipse.xhtml">Next: Setting up Eclipse</a>
+		</div>
+		<div class="previous">
+			<a href="intro.xhtml">Previous: Introduction to GUI Automation at Altova</a>
+		</div>
+		<h1>Installing the development environment</h1>
+		<p>This outlines how to manually install your developer environment for the GUI automation. For a quicker, automated installation, please refer to the <a href="quick_start.xhtml">Quick start document</a>. If everything worked there, this page is redundant.</p>
+		<h2>
+			<a name="1"/>Sun Java</h2>
+		<div class="p">Please download the <b>latest version</b> of <a href="http://java.sun.com/javase/downloads/index.jsp">Java JDK from Sun</a>, and to avoid problems install only the JDK and source code bits. That means, choose advanced installation and avoid installing the JRE part. For this example (and for your future peace of mind) install to <div class="file">c:\java\jdk1.6.0</div> (or whatever the latest version is), and not "Program Files".</div>
+		<p>
+			<img alt="Java JDK install" src="java_jdk.png"/>
+		</p>
+		<h2>
+			<a name="2"/>Apache Ant</h2>
+		<div class="p">Download the latest version of <a href="http://ant.apache.org/bindownload.cgi">Apache Ant</a> as a ZIP file, and unpack it to <div class="file">C:\java\apache-ant-1.7.0</div> (or whatever the latest version is).</div>
+		<h2>
+			<a name="3"/>JUnit</h2>
+		<div class="p">Download version 4.3 of <a href="http://www.junit.org/index.htm">JUnit</a> as a ZIP file, and unpack it to <div class="file">C:\java\junit4.3</div> .</div>
+		<div class="p">
+			<b>Note:</b> version 4.5 is not compatible</div>
+		<h2>
+			<a name="4"/>CVS</h2>
+		<div class="p">Get WinCVS from <a href="http://www.wincvs.org/">http://www.wincvs.org/</a> (or from the installation location of you colleague at <div class="file">C:\Program Files\GNU\WinCvs 1.2</div> ), and copy to <div class="file">C:\java\WinCVS 1.2</div>.</div>
+		<h2>
+			<a name="5"/>Setting up your PATH</h2>
+		<div class="p">Now that you've installed all the basic software, you can add these to your system environment PATH variable, and also add the CVSROOT variable. Either press the Windows Key and Pause/Break, or Go Start -&gt; Settings -&gt; Control Panel -&gt; System. Then in the Advanced tab, click the Environment Variables button at the bottom. Based on the paths and versions used in this example, you should add
+		<code>PATH = C:\java\apache-ant-1.7.0\bin;C:\java\jdk1.6.0\bin;C:\java\WinCvs 1.2;</code>
+		and 
+		<code>CVSROOT = :pserver:<b>your_windows_username</b>@viepcvs01.vie.altova.com:/cvs/qa</code>
+		</div>
+		<p>
+			<img src="sys_env.png" alt="System environment variables"/>
+		</p>
+		<div class="p">Since you will need the junit-4.x.jar to be able to run or compile your project,you should also add/set in your system environment the following variable: 
+		<ul>
+		<li>
+				<code>CLASSPATH= your Junit_Root_Path\junit-4.x.jar  ( if case you used the paths suggested in this tutorial, CLASSPATH=C:\java\junit4.3\junit-4.3.jar).</code>
+			</li>
+			</ul>
+		</div>
+		
+		<div class="p">
+		Also note that this step includes some variables for the robot test cases. Please put in the once shown below, and change them later if you like.
+
+		<ul>
+				<li>
+					<code>ROBOTS_DEBUG_DIR = c:\temp\debug</code>
+				</li>
+				<li>
+					<code>ROBOTS_OUT_DIR = c:\temp\out</code>
+				</li>
+				<li>
+					<code>ROBOTS_EXPECTED_DIR = c:\temp\expected</code>
+				</li>
+				<li>
+					<code>ROBOTS_LOGGING_FILE = testSuiteLog.properties</code>
+				</li>
+			</ul>
+		</div>
+		<h2>
+			<a name="5"/>Testing what has been installed so far</h2>
+		<div class="p">You're almost done. Let's see that the main programs run. Please open a command line prompt (Start -&gt; Run and type "cmd"). Type in the following commands, and you should get the version output as shown in the picture below. If this give an error <i>"... not recognized as an internal or external command operable program or batch file."</i>, or an unexpected version, please revisit the previous steps. </div>
+		<p>
+			<img alt="Application versions" src="app_versions.png"/>
+		</p>
+		<h2>
+			<a name="6"/>Eclipse</h2>
+		<div class="p">Finally, download the latest production build of <a href="http://www.eclipse.org/downloads/">Eclipse IDE</a>. Unpack the ZIP to <div class="file">c:\Program Files\eclipse</div>. You might also want to add an Eclipse shortcut icon to your desktop or something like. For detailed Eclipse setup, please see the <a href="eclipse.xhtml">next section</a>.</div>
+	</body>
+</html>

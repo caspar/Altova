@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dtd XHTML 1.0 Transitional//EN" "xhtml1-transitional.dtd">
+<?altova_sps frame-above.sps?>
+<html>
+	<head>
+		<title>HTML Table Test 001</title>
+	</head>
+	<body>
+		<table border="1" frame="above" summary="This table charts the number of cups of coffee consumed by each senator, the type of coffee (decaf or regular), and whether taken with sugar.">
+			<tbody>
+				<tr>
+					<th>Name</th>
+					<th>Cups</th>
+					<th>Type of Coffee</th>
+					<th>Sugar?</th>
+				</tr>
+				<tr>
+					<td>T. Sexton</td>
+					<td>10</td>
+					<td>Espresso</td>
+					<td>No</td>
+				</tr>
+				<tr>
+					<td>J. Dinnen</td>
+					<td>5</td>
+					<td>Decaf</td>
+					<td>Yes</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

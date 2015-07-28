@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="11">
+	<component name="defaultmap1" blackbox="0" uid="39122552" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="concat" library="core" uid="49360792" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="114480112"/>
+						<datapoint pos="1" key="114299280"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="114298064"/>
+					</targets>
+					<view ltx="520" lty="-55" rbx="-249" rby="-6"/>
+				</component>
+				<component name="auto-number" library="lang" uid="39061568" kind="5">
+					<sources>
+						<datapoint pos="0" key="114734472"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="106445632"/>
+					</targets>
+					<view ltx="396" lty="-47" rbx="49" rby="-73"/>
+				</component>
+				<component name="constant" library="core" uid="37312944" kind="2">
+					<targets>
+						<datapoint pos="0" key="106640544"/>
+					</targets>
+					<view ltx="311" lty="-26" rbx="-154" rby="-188"/>
+					<data>
+						<constant value="1000" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="49342296" kind="2">
+					<targets>
+						<datapoint pos="0" key="106422432"/>
+					</targets>
+					<view ltx="415" lty="-73" rbx="-50" rby="-235"/>
+					<data>
+						<constant value="A" datatype="string"/>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="49606848" kind="15">
+					<properties XSLTDefaultOutput="1" JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.mdb);" DBDataSource="CustomersTarget.mdb" DBCatalog="CustomersTarget" OLEDBProvider="Microsoft.Jet.OLEDB.4.0"/>
+					<view ltx="661" lty="-30" rbx="824" rby="401"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="Customers" type="table" inpkey="114711352" DBUseTransactions="1" expanded="1">
+								<tableactions>
+									<action operation="update" deletewithchildren="1" proceedchildren="1">
+										<field name="FirstName" function="equalignorecase"/>
+										<field name="LastName" function="equalignorecase"/>
+									</action>
+								</tableactions>
+								<entry name="Number" valuekeygeneration="databasegenerated"/>
+								<entry name="FirstName" inpkey="107116624"/>
+								<entry name="LastName" inpkey="107117744"/>
+								<entry name="CustomerID" inpkey="107118640"/>
+								<entry name="Addresses|CustomerNr" type="table" inpkey="112219040" expanded="1">
+									<entry name="Number" valuekeygeneration="databasegenerated"/>
+									<entry name="City" inpkey="115198280"/>
+									<entry name="State" inpkey="107117968"/>
+									<entry name="Street" inpkey="107118376"/>
+									<entry name="ZIP" inpkey="107117032"/>
+								</entry>
+							</entry>
+							<entry name="Customers" type="table" inpkey="115198072" DBUseTransactions="1" expanded="1" clone="1">
+								<tableactions>
+									<action operation="update" deletewithchildren="1" proceedchildren="1">
+										<field name="FirstName" function="equalignorecase"/>
+										<field name="LastName" function="equalignorecase"/>
+									</action>
+									<action proceedchildren="1"/>
+								</tableactions>
+								<entry name="Number" valuekeygeneration="databasegenerated"/>
+								<entry name="FirstName" inpkey="107117256"/>
+								<entry name="LastName" inpkey="107117520"/>
+								<entry name="CustomerID" inpkey="107116520"/>
+								<entry name="Addresses|CustomerNr" type="table" inpkey="115197968" expanded="1">
+									<entry name="Number" valuekeygeneration="databasegenerated"/>
+									<entry name="City" inpkey="115198176"/>
+									<entry name="State" inpkey="107118152"/>
+									<entry name="Street" inpkey="107116416"/>
+									<entry name="ZIP" inpkey="107116848"/>
+								</entry>
+							</entry>
+						</root>
+						<database>
+							<database_connection database_kind="MS Access" import_kind="ADO" rootobject="CustomersTarget" name="CustomersTarget" path="CustomersTarget">
+								<properties>
+									<property name="Database Kind" value="MS Access"/>
+									<property name="Import Kind" value="ADO"/>
+									<property name="Root Object" value="CustomersTarget"/>
+									<property name="Data Source" value="CustomersTarget.mdb"/>
+									<property name="Provider" value="Microsoft.Jet.OLEDB.4.0"/>
+									<property name="User ID"/>
+									<property name="Password"/>
+									<property name="Persist Security Info" value="false"/>
+									<property name="Jet OLEDB:System Database"/>
+									<property name="Jet OLEDB:Sandbox Mode"/>
+									<property name="Jet OLEDB:Exclusive Async Delay"/>
+									<property name="Jet OLEDB:Flush Transaction Timeout"/>
+									<property name="Jet OLEDB:Implicit Commit Sync"/>
+									<property name="Jet OLEDB:Lock Delay"/>
+									<property name="Jet OLEDB:Lock Retry"/>
+									<property name="Jet OLEDB:Max Buffer Size"/>
+									<property name="Jet OLEDB:Max Locks Per File"/>
+									<property name="Jet OLEDB:Page Locks to Table Lock"/>
+									<property name="Jet OLEDB:Page Timeout"/>
+									<property name="Jet OLEDB:Recycle Long-Valued Pages"/>
+									<property name="Jet OLEDB:Shared Async Delay"/>
+									<property name="Jet OLEDB:User Commit Sync"/>
+									<property name="Jet OLEDB:Compact Without Replica Repair"/>
+									<property name="Jet OLEDB:Create System Database"/>
+									<property name="Jet OLEDB:Database Locking Mode"/>
+									<property name="Jet OLEDB:Database Password"/>
+									<property name="Jet OLEDB:New Database Password"/>
+									<property name="Jet OLEDB:Registry Path"/>
+								</properties>
+								<LocalViewStorage/>
+								<LocalRelationsStorage/>
+								<selections>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Addresses" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="CustomersTarget" Kind="DataSource"/>
+										<PathElement Name="CustomersTarget" Kind="Database"/>
+										<PathElement Name="Customers" Kind="Table"/>
+									</selection>
+								</selections>
+							</database_connection>
+						</database>
+					</data>
+				</component>
+				<component name="structure" library="db" uid="52503568" kind="15">
+					<properties JDBCDriver="sun.jdbc.odbc.JdbcOdbcDriver" JDBCDatabaseURL="jdbc:odbc:;DRIVER=Microsoft Access Driver (*.mdb);" DBDataSource="altova.mdb" OLEDBProvider="Microsoft.Jet.OLEDB.4.0" DBUseTransactions="1"/>
+					<view ltx="144" lty="185" rbx="339" rby="865"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="Altova" type="table">
+								<entry name="PrimaryKey" valuekeygeneration="maxnumber" expanded="1"/>
+								<entry name="Name" expanded="1"/>
+								<entry name="Office|ForeignKey" type="table" expanded="1">
+									<entry name="PrimaryKey" valuekeygeneration="maxnumber" expanded="1"/>
+									<entry name="ForeignKey" expanded="1"/>
+									<entry name="Desc" expanded="1"/>
+									<entry name="EMail" expanded="1"/>
+									<entry name="Established" expanded="1"/>
+									<entry name="Fax" expanded="1"/>
+									<entry name="Name" expanded="1"/>
+									<entry name="Phone" expanded="1"/>
+									<entry name="Address|ForeignKey" type="table">
+										<entry name="PrimaryKey" valuekeygeneration="maxnumber" expanded="1"/>
+										<entry name="ForeignKey" expanded="1"/>
+										<entry name="city" expanded="1"/>
+										<entry name="state" expanded="1"/>
+										<entry name="street" expanded="1"/>
+										<entry name="zip" expanded="1"/>
+									</entry>
+									<entry name="Department|ForeignKey" type="table" expanded="1">
+										<entry name="PrimaryKey" valuekeygeneration="maxnumber" expanded="1"/>
+										<entry name="ForeignKey" expanded="1"/>
+										<entry name="Name" expanded="1"/>
+										<entry name="Person|ForeignKey" type="table" expanded="1">
+											<entry name="PrimaryKey" valuekeygeneration="maxnumber" expanded="1"/>
+											<entry name="ForeignKey" expanded="1"/>
+											<entry name="EMail" expanded="1"/>
+											<entry name="First" expanded="1"/>
+											<entry name="Last" expanded="1"/>
+											<entry name="PhoneExt" expanded="1"/>
+											<entry name="Title" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="Office" type="table" expanded="1">
+								<entry name="Address|ForeignKey" type="table" outkey="99294704" expanded="1">
+									<entry name="city" outkey="113916744"/>
+									<entry name="state" outkey="113917232"/>
+									<entry name="street" outkey="113916968"/>
+									<entry name="zip" outkey="113916296"/>
+								</entry>
+								<entry name="Department|ForeignKey" type="table" expanded="1">
+									<entry name="Person|ForeignKey" type="table" outkey="99294480" expanded="1">
+										<entry name="First" outkey="113916152"/>
+										<entry name="Last" outkey="113916520"/>
+									</entry>
+								</entry>
+							</entry>
+							<entry name="Person" type="table">
+								<entry name="Department|ForeignKey" type="table" expanded="1"/>
+							</entry>
+						</root>
+						<database>
+							<database_connection database_kind="MS Access" import_kind="ADO" rootobject="altova" name="altova" path="altova">
+								<properties>
+									<property name="Database Kind" value="MS Access"/>
+									<property name="Import Kind" value="ADO"/>
+									<property name="Root Object" value="altova"/>
+									<property name="Data Source" value="altova.mdb"/>
+									<property name="Provider" value="Microsoft.Jet.OLEDB.4.0"/>
+									<property name="User ID"/>
+									<property name="Password"/>
+									<property name="Persist Security Info" value="false"/>
+									<property name="Jet OLEDB:System Database"/>
+									<property name="Jet OLEDB:Sandbox Mode"/>
+									<property name="Jet OLEDB:Exclusive Async Delay"/>
+									<property name="Jet OLEDB:Flush Transaction Timeout"/>
+									<property name="Jet OLEDB:Implicit Commit Sync"/>
+									<property name="Jet OLEDB:Lock Delay"/>
+									<property name="Jet OLEDB:Lock Retry"/>
+									<property name="Jet OLEDB:Max Buffer Size"/>
+									<property name="Jet OLEDB:Max Locks Per File"/>
+									<property name="Jet OLEDB:Page Locks to Table Lock"/>
+									<property name="Jet OLEDB:Page Timeout"/>
+									<property name="Jet OLEDB:Recycle Long-Valued Pages"/>
+									<property name="Jet OLEDB:Shared Async Delay"/>
+									<property name="Jet OLEDB:User Commit Sync"/>
+									<property name="Jet OLEDB:Compact Without Replica Repair"/>
+									<property name="Jet OLEDB:Create System Database"/>
+									<property name="Jet OLEDB:Database Locking Mode"/>
+									<property name="Jet OLEDB:Database Password"/>
+									<property name="Jet OLEDB:New Database Password"/>
+									<property name="Jet OLEDB:Registry Path"/>
+								</properties>
+								<LocalViewStorage/>
+								<LocalRelationsStorage/>
+								<selections>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Address" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Altova" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Department" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Office" Kind="Table"/>
+									</selection>
+									<selection>
+										<PathElement Name="altova" Kind="DataSource"/>
+										<PathElement Name="altova" Kind="Database"/>
+										<PathElement Name="Person" Kind="Table"/>
+									</selection>
+								</selections>
+							</database_connection>
+						</database>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="49356800" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="143" lty="-30" rbx="284" rby="145"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Customers" expanded="1">
+								<entry name="Customer" outkey="111917608" expanded="1">
+									<entry name="FirstName" outkey="111917384"/>
+									<entry name="LastName" outkey="111917832"/>
+									<entry name="Address" outkey="111916528" expanded="1">
+										<entry name="Street" outkey="111917120"/>
+										<entry name="City" outkey="111916896"/>
+										<entry name="ZIP" outkey="111916712"/>
+										<entry name="State" outkey="114736856"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Customers.xsd" inputinstance="Customers.xml" instanceroot="{}Customers"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="99294480">
+						<edges>
+							<edge vertexkey="115198072" edgekey="106977056"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="99294704">
+						<edges>
+							<edge vertexkey="115197968" edgekey="113722936"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="106422432">
+						<edges>
+							<edge vertexkey="114480112" edgekey="106975696"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="106445632">
+						<edges>
+							<edge vertexkey="114299280" edgekey="106975968"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="106640544">
+						<edges>
+							<edge vertexkey="114734472" edgekey="106975832"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111916528">
+						<edges>
+							<edge vertexkey="112219040" edgekey="112217744"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111916712">
+						<edges>
+							<edge vertexkey="107117032" edgekey="115197656"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111916896">
+						<edges>
+							<edge vertexkey="115198280" edgekey="106975424"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111917120">
+						<edges>
+							<edge vertexkey="107118376" edgekey="106975288"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111917384">
+						<edges>
+							<edge vertexkey="107116624" edgekey="106975016"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111917608">
+						<edges>
+							<edge vertexkey="114711352" edgekey="115197600"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="111917832">
+						<edges>
+							<edge vertexkey="107117744" edgekey="106975560"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113916152">
+						<edges>
+							<edge vertexkey="107117256" edgekey="106976512"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113916296">
+						<edges>
+							<edge vertexkey="107116848" edgekey="106976784"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113916520">
+						<edges>
+							<edge vertexkey="107117520" edgekey="106976648"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113916744">
+						<edges>
+							<edge vertexkey="115198176" edgekey="113722800"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113916968">
+						<edges>
+							<edge vertexkey="107116416" edgekey="106976920"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="113917232">
+						<edges>
+							<edge vertexkey="107118152" edgekey="106976376"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114298064">
+						<edges>
+							<edge vertexkey="107118640" edgekey="106976104"/>
+							<edge vertexkey="107116520" edgekey="106976240"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114736856">
+						<edges>
+							<edge vertexkey="107117968" edgekey="106975152"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

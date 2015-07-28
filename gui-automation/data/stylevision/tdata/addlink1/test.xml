@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_sps navy.sps?>
+<!DOCTYPE chapter PUBLIC "-//USA-DOD//DTD IN XML FOR NAVY ETMs 050512 MODIFIED BY WRYCAN//EN" "050512navy-etm-mod_wrycan.dtd" [
+    <!NOTATION jpg PUBLIC "Public Identifier for JPG">
+    <!ENTITY graphic SYSTEM "graphic.jpg" NDATA jpg>
+]>
+<chapter tocentry="1">
+    <title>This is a test file<docno>1</docno>
+        <change>TEST A</change>
+    </title>
+    <section tocentry="1">
+        <title>TEST</title>
+        <para>
+            <figure orient="port">
+                <title>Test File</title>
+                <graphic boardno="graphic" graphsty="outline" reprowid="5.5in" reprodep="7.0in"></graphic>
+            </figure>
+        </para>
+        <para>This is a paragraph that contains the greater than sign as an entity:  &gt;  This seems to work fine in all cases.  If I add another custom entity found in the DTD, such as the following:, it works during the initial author.  But if I save the document and reload it, the entity remains here BUT the image above, which is referenced by an entity does not work for some reason.  If the entitiy in the single quotes above is removed, this will render fine. I think this is a bug in Autentic/Stylevision or there is something wrong with the stylevision generated SPS.  This situation previously worked FINE in earlier version of Authentic.  Also, in previous versions of Authentic, the entity value for the figure shown above in red with the value &apos;graphic&apos; used to be black when the entity was found.  Now it seems they are always red.</para>
+        <para>Note that the xml code for the entity above is necessary because we need to substitute the font we are using with a Unicode font specifically for these entities, or else they do not render properly in our output.</para>
+        <?Note- Table(s) that follow were INTENTIONALLY left ‘BLANK’ with empty rows. They were inserted in this xml file for pagination [to ‘force’ the numbered table unto the next page or to keep a table ‘whole’ after rendering]?>
+        <para0 tocentry="1"></para0>
+    </section>
+</chapter>

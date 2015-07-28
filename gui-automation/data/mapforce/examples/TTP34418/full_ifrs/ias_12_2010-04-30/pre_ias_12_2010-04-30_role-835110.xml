@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        Taxonomy: 2010-04-30 (Final)
+        ********************** 
+        Copyright © 2010 International Accounting Standards Committee (IASC) Foundation*
+        All rights reserved.  No part of this publication may be translated, reprinted or reproduced 
+        or utilised in any form either in whole or in part without prior permission in writing from the IASC Foundation.
+        For more information on the IASC Foundation’s copyright, please refer to http://www.iasb.org/XBRL/Legal/
+        **********************
+        *To become IFRS Foundation
+    --><link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+  <link:roleRef roleURI="http://xbrl.iasb.org/role/ifrs/ias_12_2010-04-30_role-835110" xlink:href="rol_ias_12_2010-04-30.xsd#ias_12_2010-04-30_role-835110" xlink:type="simple"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/negatedLabel" xlink:href="http://www.xbrl.org/lrr/role/negated-2009-12-16.xsd#negatedLabel" xlink:type="simple"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/netLabel" xlink:href="http://www.xbrl.org/lrr/role/net-2009-12-16.xsd#netLabel" xlink:type="simple"/>
+  <link:presentationLink xlink:role="http://xbrl.iasb.org/role/ifrs/ias_12_2010-04-30_role-835110" xlink:title="[835110] Notes - Income tax" xlink:type="extended">
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfIncomeTaxExplanatory" xlink:label="loc" xlink:type="locator"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_MajorComponentsOfTaxExpenseIncomeAbstract" xlink:label="loc_2" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_2" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CurrentTaxExpenseIncome" xlink:label="loc_15" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_15" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AdjustmentsForCurrentTaxOfPriorPeriod" xlink:label="loc_16" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_16" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComponentsOfCurrentTaxExpenseIncome" xlink:label="loc_17" xlink:type="locator"/>
+    <link:presentationArc order="30.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_17" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxExpenseIncomeRelatingToOriginationAndReversalOfTemporaryDifferences" xlink:label="loc_18" xlink:type="locator"/>
+    <link:presentationArc order="40.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_18" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxExpenseIncomeRelatingToTaxRateChangesOrImpositionOfNewTaxes" xlink:label="loc_19" xlink:type="locator"/>
+    <link:presentationArc order="50.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_19" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxBenefitArisingFromPreviouslyUnrecognisedTaxLossTaxCreditOrTemporaryDifferenceOfPriorPeriodUsedToReduceCurrentTaxExpense" xlink:label="loc_20" xlink:type="locator"/>
+    <link:presentationArc order="60.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_20" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxBenefitArisingFromPreviouslyUnrecognisedTaxLossTaxCreditOrTemporaryDifferenceOfPriorPeriodUsedToReduceDeferredTaxExpense" xlink:label="loc_21" xlink:type="locator"/>
+    <link:presentationArc order="70.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_21" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxExpenseArisingFromWritedownOrReversalOfWritedownOfDeferredTaxAsset" xlink:label="loc_22" xlink:type="locator"/>
+    <link:presentationArc order="80.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_22" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxExpenseIncomeRelatingToChangesInAccountingPoliciesAndErrorsIncludedInProfitOrLoss" xlink:label="loc_23" xlink:type="locator"/>
+    <link:presentationArc order="90.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_23" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherComponentsOfDeferredTaxExpenseIncome" xlink:label="loc_24" xlink:type="locator"/>
+    <link:presentationArc order="100.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_24" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxExpenseIncome" xlink:label="loc_25" xlink:type="locator"/>
+    <link:presentationArc order="110.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_2" xlink:to="loc_25" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CurrentAndDeferredTaxRelatingToItemsChargedOrCreditedDirectlyToEquityAbstract" xlink:label="loc_3" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_3" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CurrentTaxRelatingToItemsChargedOrCreditedDirectlyToEquity" xlink:label="loc_26" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_26" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxRelatingToItemsChargedOrCreditedDirectlyToEquity" xlink:label="loc_27" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_27" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_CurrentAndDeferredTaxRelatingToItemsChargedOrCreditedDirectlyToEquity" xlink:label="loc_28" xlink:type="locator"/>
+    <link:presentationArc order="30.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_3" xlink:to="loc_28" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToComponentsOfOtherComprehensiveIncomeAbstract" xlink:label="loc_4" xlink:type="locator"/>
+    <link:presentationArc order="30.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_4" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToExchangeDifferencesOnTranslationOfOtherComprehensiveIncome" xlink:label="loc_29" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_29" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToAvailableforsaleFinancialAssetsOfOtherComprehensiveIncome" xlink:label="loc_30" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_30" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToCashFlowHedgesOfOtherComprehensiveIncome" xlink:label="loc_31" xlink:type="locator"/>
+    <link:presentationArc order="30.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_31" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToChangesInRevaluationSurplusOfOtherComprehensiveIncome" xlink:label="loc_32" xlink:type="locator"/>
+    <link:presentationArc order="40.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_32" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToDefinedBenefitPlansOfOtherComprehensiveIncome" xlink:label="loc_33" xlink:type="locator"/>
+    <link:presentationArc order="50.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_33" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToComponentsOfOtherComprehensiveIncome" xlink:label="loc_36" xlink:type="locator"/>
+    <link:presentationArc order="70.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_36" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToOtherComponentsOfOtherComprehensiveIncome" xlink:label="loc_35" xlink:type="locator"/>
+    <link:presentationArc order="60.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_4" xlink:to="loc_35" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxExpenseOfDiscontinuedOperationAbstract" xlink:label="loc_7" xlink:type="locator"/>
+    <link:presentationArc order="50.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_7" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxExpenseRelatingToGainLossOnDiscontinuance" xlink:label="loc_41" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_7" xlink:to="loc_41" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxExpenseRelatingToProfitLossFromOrdinaryActivitiesOfDiscontinuedOperations" xlink:label="loc_42" xlink:type="locator"/>
+    <link:presentationArc order="20.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_7" xlink:to="loc_42" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfNatureOfPotentialIncomeTaxConsequencesThatWouldResultFromPaymentOfDividendExplanatory" xlink:label="loc_13" xlink:type="locator"/>
+    <link:presentationArc order="170.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_13" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxRelatingToShareOfOtherComprehensiveIncomeOfAssociatesAndJointVenturesAccountedForUsingEquityMethod" xlink:label="loc_34" xlink:type="locator"/>
+    <link:presentationArc order="40.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_34" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ExplanationOfChangesInApplicableTaxRatesToPreviousAccountingPeriod" xlink:label="loc_43" xlink:type="locator"/>
+    <link:presentationArc order="60.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_43" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeductibleTemporaryDifferencesForWhichNoDeferredTaxAssetIsRecognised" xlink:label="loc_8" xlink:type="locator"/>
+    <link:presentationArc order="80.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_8" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_UnusedTaxLossesForWhichNoDeferredTaxAssetRecognised" xlink:label="loc_44" xlink:type="locator"/>
+    <link:presentationArc order="90.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_44" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_UnusedTaxCreditsForWhichNoDeferredTaxAssetRecognised" xlink:label="loc_45" xlink:type="locator"/>
+    <link:presentationArc order="100.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_45" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TemporaryDifferencesAssociatedWithInvestmentsInSubsidiariesBranchesAndAssociatesAndInterestsInJointVentures" xlink:label="loc_9" xlink:type="locator"/>
+    <link:presentationArc order="110.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_9" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_IncomeTaxConsequencesOfDividendsProposedOrDeclaredBeforeFinancialStatementsAuthorisedForIssueNotRecognisedAsLiability" xlink:label="loc_10" xlink:type="locator"/>
+    <link:presentationArc order="130.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_10" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ChangeInAmountRecognisedForPreacquisitionDeferredTaxAsset" xlink:label="loc_11" xlink:type="locator"/>
+    <link:presentationArc order="140.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_11" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfEventOrChangeInCircumstancesThatCausedRecognitionOfDeferredTaxBenefitsAcquiredInBusinessCombinationAfterAcquisitionDate" xlink:label="loc_46" xlink:type="locator"/>
+    <link:presentationArc order="150.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_46" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfEvidenceSupportingRecognitionOfDeferredTaxAssetsDependentOnFutureTaxableProfitsAndEntityHasSufferedALossInCurrentOrPrecedingPeriodExplanatory" xlink:label="loc_12" xlink:type="locator"/>
+    <link:presentationArc order="160.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_12" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfAmountsOfPotentialIncomeTaxConsequencesPracticablyDeterminableExplanatory" xlink:label="loc_14" xlink:type="locator"/>
+    <link:presentationArc order="180.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_14" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReconciliationOfAccountingProfitMultipliedByApplicableTaxRatesAbstract" xlink:label="loc_47" xlink:type="locator"/>
+    <link:presentationArc order="190.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_47" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxExpenseIncomeAtApplicableTaxRate" xlink:label="loc_49" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_49" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxEffectOfRevenuesExemptFromTaxation" xlink:label="loc_50" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_50" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxEffectOfExpenseNotDeductibleInDeterminingTaxableProfitTaxLoss" xlink:label="loc_51" xlink:type="locator"/>
+    <link:presentationArc order="30.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_51" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxEffectOfTaxLosses" xlink:label="loc_52" xlink:type="locator"/>
+    <link:presentationArc order="40.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_52" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxEffectOfForeignTaxRates" xlink:label="loc_53" xlink:type="locator"/>
+    <link:presentationArc order="50.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_53" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxEffectFromChangeInTaxRate" xlink:label="loc_54" xlink:type="locator"/>
+    <link:presentationArc order="60.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_54" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherTaxEffectsForReconciliationBetweenAccountingProfitAndTaxExpenseIncome" xlink:label="loc_55" xlink:type="locator"/>
+    <link:presentationArc order="70.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_55" xlink:type="arc"/>
+    <link:presentationArc order="80.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_47" xlink:to="loc_25" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ReconciliationOfAverageEffectiveTaxRateAndApplicableTaxRateAbstract" xlink:label="loc_48" xlink:type="locator"/>
+    <link:presentationArc order="200.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_48" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_ApplicableTaxRate" xlink:label="loc_57" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_57" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxRateEffectOfRevenuesExemptFromTaxation" xlink:label="loc_58" xlink:type="locator"/>
+    <link:presentationArc order="30.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_58" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxRateEffectOfExpenseNotDeductibleInDeterminingTaxableProfitTaxLoss" xlink:label="loc_59" xlink:type="locator"/>
+    <link:presentationArc order="40.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_59" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxRateEffectOfTaxLosses" xlink:label="loc_60" xlink:type="locator"/>
+    <link:presentationArc order="50.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_60" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxRateEffectOfForeignTaxRates" xlink:label="loc_63" xlink:type="locator"/>
+    <link:presentationArc order="60.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_63" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TaxRateEffectFromChangeInTaxRate" xlink:label="loc_64" xlink:type="locator"/>
+    <link:presentationArc order="70.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_64" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_OtherTaxRateEffectsForReconciliationBetweenAccountingProfitAndTaxExpenseIncome" xlink:label="loc_65" xlink:type="locator"/>
+    <link:presentationArc order="80.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_65" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AverageEffectiveTaxRate" xlink:label="loc_69" xlink:type="locator"/>
+    <link:presentationArc order="90.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_69" xlink:type="arc"/>
+    <link:presentationArc order="100.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_25" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_AccountingProfit" xlink:label="loc_61" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_48" xlink:to="loc_61" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DescriptionOfExpiryDateOfTemporaryDifferencesUnusedTaxLossesAndUnusedTaxCredits" xlink:label="loc_56" xlink:type="locator"/>
+    <link:presentationArc order="70.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_56" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfTemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsExplanatory" xlink:label="loc_62" xlink:type="locator"/>
+    <link:presentationArc order="120.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc" xlink:to="loc_62" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfTemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsAbstract" xlink:label="loc_66" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_62" xlink:to="loc_66" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfTemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsTable" xlink:label="loc_67" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_66" xlink:to="loc_67" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsAxis" xlink:label="loc_68" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_67" xlink:to="loc_68" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsMember" xlink:label="loc_70" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_68" xlink:to="loc_70" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_TemporaryDifferenceMember" xlink:label="loc_71" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_70" xlink:to="loc_71" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_UnusedTaxLossesMember" xlink:label="loc_72" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_70" xlink:to="loc_72" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_UnusedTaxCreditsMember" xlink:label="loc_73" xlink:type="locator"/>
+    <link:presentationArc order="30.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_70" xlink:to="loc_73" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DisclosureOfTemporaryDifferenceUnusedTaxLossesAndUnusedTaxCreditsLineItems" xlink:label="loc_74" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_66" xlink:to="loc_74" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxAssetsAndLiabilitiesAbstract" xlink:label="loc_5" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_74" xlink:to="loc_5" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxAssets" xlink:label="loc_39" xlink:type="locator"/>
+    <link:presentationArc order="10.0" preferredLabel="http://www.xbrl.org/2009/role/negatedLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_5" xlink:to="loc_39" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxLiabilities" xlink:label="loc_40" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_5" xlink:to="loc_40" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxLiabilityAsset" xlink:label="loc_75" xlink:type="locator"/>
+    <link:presentationArc order="30.0" preferredLabel="http://www.xbrl.org/2009/role/netLabel" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_5" xlink:to="loc_75" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxExpenseIncomeAbstract" xlink:label="loc_6" xlink:type="locator"/>
+    <link:presentationArc order="20.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_74" xlink:to="loc_6" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxExpenseIncome" xlink:label="loc_37" xlink:type="locator"/>
+    <link:presentationArc order="10.0" use="optional" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_6" xlink:to="loc_37" xlink:type="arc"/>
+    <link:loc xlink:href="../../ifrs-cor_2010-04-30.xsd#ifrs_DeferredTaxExpenseIncomeRecognisedInProfitOrLoss" xlink:label="loc_38" xlink:type="locator"/>
+    <link:presentationArc order="10.0" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="loc_37" xlink:to="loc_38" xlink:type="arc"/>
+  </link:presentationLink>
+</link:linkbase>

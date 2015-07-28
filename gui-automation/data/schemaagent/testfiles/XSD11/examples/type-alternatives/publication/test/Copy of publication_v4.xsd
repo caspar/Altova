@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+    <xs:element name="Example">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Publication" type="PublicationType" maxOccurs="unbounded">
+                    <xs:assert test="if (@kind eq 'book') then 
+                                        count(Title) eq 1 and
+                                        count(Author) ge 0 and
+                                        count(Date) eq 1 and 
+                                        count(ISBN) eq 1 and
+                                        count(Publisher) eq 1 and
+                                        count(*[name(self::.) ne 'Title' and
+                                                name(self::.) ne 'Author' and
+                                                name(self::.) ne 'Date' and
+                                                name(self::.) ne 'ISBN' and
+                                                name(self::.) ne 'Publisher] = 0)
+                                     else if (@kind eq 'magazine') then 
+                                        count(Title) eq 1 and
+                                        count(Date) eq 1 and 
+                                        count(*[name(self::.) ne 'Title' and
+                                                name(self::.) ne 'Date'] = 0)
+                                     else 
+                                        count(Title) eq 1 and
+                                        count(Author) ge 0 and
+                                        count(Date) eq 1 and
+                                        count(*[name(self::.) ne 'Title' and
+                                                name(self::.) ne 'Author' and
+                                                name(self::.) ne 'Date'] = 0" />
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PublicationType">
+        <xs:sequence>
+            <xs:element name="Title" type="xs:string"/>
+            <xs:element name="Author" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Date" type="xs:gYear"/>
+            <xs:element name="ISBN" type="xs:string"  minOccurs="0"/>
+            <xs:element name="Publisher" type="xs:string"  minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="kind" type="xs:string" />
+    </xs:complexType>
+
+</xs:schema>

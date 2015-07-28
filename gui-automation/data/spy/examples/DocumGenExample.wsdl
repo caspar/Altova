@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by CHARLES STEELE (AGILENT TECHNOLOGIES) -->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:y="http:schemas.agilent.com/GC7890/" xmlns:ns="http:schemas.agilent.com/GC7890/" targetNamespace="http:schemas.agilent.com/GC7890/">
+	<types>
+		<xs:schema targetNamespace="http:schemas.agilent.com/GC7890/">
+			<xs:complexType name="InstrumentConfiguration">
+				<xs:sequence>
+					<xs:element name="Instrument" minOccurs="0">
+						<xs:complexType>
+							<xs:attribute name="SN" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Version" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Oven" minOccurs="0">
+						<xs:complexType>
+							<xs:attribute name="Type" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Fast"/>
+										<xs:enumeration value="Regular"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Power" use="optional">
+								<xs:annotation>
+									<xs:documentation>Oven power, in Watts</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:double">
+										<xs:minInclusive value="0"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Voltage" use="optional">
+								<xs:annotation>
+									<xs:documentation>Oven votrages, in Volts</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:double">
+										<xs:minInclusive value="0"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="CryoType" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="None"/>
+										<xs:enumeration value="CO2"/>
+										<xs:enumeration value="N2"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Zone" minOccurs="0" maxOccurs="6">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="6"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Type" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="None"/>
+										<xs:enumeration value="FrontInlet"/>
+										<xs:enumeration value="BackInlet"/>
+										<xs:enumeration value="FrontDet"/>
+										<xs:enumeration value="BackDet"/>
+										<xs:enumeration value="ThirdDet"/>
+										<xs:enumeration value="Valve"/>
+										<xs:enumeration value="FrontSecondary"/>
+										<xs:enumeration value="BackSecondary"/>
+										<xs:enumeration value="Aux1"/>
+										<xs:enumeration value="Aux2"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Power" use="optional">
+								<xs:annotation>
+									<xs:documentation>Heated zone power, in Watts</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:double"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Cryo" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="None"/>
+										<xs:enumeration value="CO2"/>
+										<xs:enumeration value="N2"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Inlet" minOccurs="0" maxOccurs="2">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Front"/>
+										<xs:enumeration value="Back"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Type" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="None"/>
+										<xs:enumeration value="SS"/>
+										<xs:enumeration value="PP"/>
+										<xs:enumeration value="PTV"/>
+										<xs:enumeration value="VI"/>
+										<xs:enumeration value="COC"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="EPC" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value=""/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="MaxPressure" use="optional">
+								<xs:annotation>
+									<xs:documentation>MAximum gas pressure (dyn/cm2 ?)</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:nonNegativeInteger"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="GasType" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="He"/>
+										<xs:enumeration value="H2"/>
+										<xs:enumeration value="N2"/>
+										<xs:enumeration value="Ar"/>
+										<xs:enumeration value="ArMe"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="MaxFlow" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:decimal">
+										<xs:minInclusive value="0"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="MaxSprFlow" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:double"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Detector" minOccurs="0" maxOccurs="4">
+						<xs:complexType>
+							<xs:attribute name="Type" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="None"/>
+										<xs:enumeration value="FID"/>
+										<xs:enumeration value="NPD"/>
+										<xs:enumeration value="FPD"/>
+										<xs:enumeration value="TCD"/>
+										<xs:enumeration value="ECD"/>
+										<xs:enumeration value="AIB"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Front"/>
+										<xs:enumeration value="Back"/>
+										<xs:enumeration value="Third"/>
+										<xs:enumeration value="Fourth"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="EPC" type="xs:string" use="optional"/>
+							<xs:attribute name="DET" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="_2ND" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value=""/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="MakeupFlow" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:double"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="FuelFlow" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:double"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="AirFlow" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:double"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Column" minOccurs="0" maxOccurs="5">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Length" use="optional">
+								<xs:annotation>
+									<xs:documentation>Column length, in meters</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:double">
+										<xs:minInclusive value="0"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Diameter" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:double"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Film" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:double"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="InletConnection" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Unknown"/>
+										<xs:enumeration value="FrontInlet"/>
+										<xs:enumeration value="BackInlet"/>
+										<xs:enumeration value="PCI"/>
+										<xs:enumeration value="APC1"/>
+										<xs:enumeration value="APC2"/>
+										<xs:enumeration value="APC3"/>
+										<xs:enumeration value="APC4"/>
+										<xs:enumeration value="APC5"/>
+										<xs:enumeration value="APC6"/>
+										<xs:enumeration value="APC7"/>
+										<xs:enumeration value="APC8"/>
+										<xs:enumeration value="APC9"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="OutletConnection" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Unknown"/>
+										<xs:enumeration value="FrontDet"/>
+										<xs:enumeration value="BackDet"/>
+										<xs:enumeration value="PCI"/>
+										<xs:enumeration value="APC1"/>
+										<xs:enumeration value="APC2"/>
+										<xs:enumeration value="APC3"/>
+										<xs:enumeration value="APC4"/>
+										<xs:enumeration value="APC5"/>
+										<xs:enumeration value="APC6"/>
+										<xs:enumeration value="APC7"/>
+										<xs:enumeration value="APC8"/>
+										<xs:enumeration value="APC9"/>
+										<xs:enumeration value="Vacuum"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="AuxPressureZone" minOccurs="0" maxOccurs="9">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="6"/>
+										<xs:enumeration value="7"/>
+										<xs:enumeration value="8"/>
+										<xs:enumeration value="9"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Present" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:boolean"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="GasType" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="He"/>
+										<xs:enumeration value="H2"/>
+										<xs:enumeration value="N2"/>
+										<xs:enumeration value="Ar"/>
+										<xs:enumeration value="ArMe"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="MaxPressure" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:nonNegativeInteger"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Control" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="FowardPressure"/>
+										<xs:enumeration value="BackPressure"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PCI" minOccurs="0">
+						<xs:complexType>
+							<xs:attribute name="Present" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:boolean"/>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="GasType" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="He"/>
+										<xs:enumeration value="H2"/>
+										<xs:enumeration value="N2"/>
+										<xs:enumeration value="Ar"/>
+										<xs:enumeration value="ArMe"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="AuxPressureControl" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:boolean"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Valve" minOccurs="0" maxOccurs="4">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="InstrumentMethod">
+				<xs:annotation>
+					<xs:documentation>The entire collection of valid setpoints</xs:documentation>
+				</xs:annotation>
+				<xs:sequence>
+					<xs:element name="Oven" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element ref="y:TemperatureMethod" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Zone" minOccurs="0" maxOccurs="6">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element ref="y:TemperatureMethod" minOccurs="0"/>
+							</xs:sequence>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="6"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Inlet" minOccurs="0" maxOccurs="2">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element name="Pressure" minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="PressureProgram" minOccurs="0">
+												<xs:complexType>
+													<xs:sequence minOccurs="0">
+														<xs:element name="PressureProgramStage" minOccurs="0" maxOccurs="unbounded">
+															<xs:complexType>
+																<xs:attribute name="Duration" type="xs:double" use="optional"/>
+																<xs:attribute name="ToTemp" type="xs:double" use="optional"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+										<xs:attribute name="Setpoint" use="optional">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="sss"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+										<xs:attribute name="ON" use="optional">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="Yes | No"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:attribute>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Front"/>
+										<xs:enumeration value="Back"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Mode" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Split"/>
+										<xs:enumeration value="Splitless"/>
+										<xs:enumeration value="PulsedSplit"/>
+										<xs:enumeration value="PulsedSplitless"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="ControlMode" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Pressure"/>
+										<xs:enumeration value="Column"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="SplitRatio" type="xs:double" use="optional"/>
+							<xs:attribute name="Flow" type="xs:double" use="optional"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Detector" minOccurs="0" maxOccurs="4">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Front"/>
+										<xs:enumeration value="Back"/>
+										<xs:enumeration value="Third"/>
+										<xs:enumeration value="Fourth"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Polarity" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Positive"/>
+										<xs:enumeration value="Negative"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Column" minOccurs="0" maxOccurs="5">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="AuxPressureZone" minOccurs="0" maxOccurs="9">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="6"/>
+										<xs:enumeration value="7"/>
+										<xs:enumeration value="8"/>
+										<xs:enumeration value="9"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PCI" type="xs:string" minOccurs="0"/>
+					<xs:element name="Valve" minOccurs="0" maxOccurs="4">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element name="TemperatureStatus">
+				<xs:complexType>
+					<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+					<xs:attribute name="Actual" type="xs:double" use="optional"/>
+					<xs:attribute name="On" type="xs:boolean" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:complexType name="InstrumentStatus">
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="Instrument" minOccurs="0">
+						<xs:complexType>
+							<xs:attribute name="Status" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Oven" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element ref="y:TemperatureStatus" minOccurs="0"/>
+							</xs:sequence>
+							<xs:attribute name="Status" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Zone" minOccurs="0" maxOccurs="6">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element ref="y:TemperatureStatus" minOccurs="0"/>
+							</xs:sequence>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="6"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Status" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Inlet" minOccurs="0" maxOccurs="2">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element ref="y:PressureStatus" minOccurs="0"/>
+								<xs:element ref="y:FlowStatus" minOccurs="0"/>
+								<xs:element name="SeptumPurgeStatus" minOccurs="0">
+									<xs:complexType>
+										<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+										<xs:attribute name="Actual" type="xs:double" use="optional"/>
+										<xs:attribute name="On" type="xs:boolean" use="optional"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Front"/>
+										<xs:enumeration value="Back"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Status" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Detector" minOccurs="0" maxOccurs="4">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element name="MakeUp" minOccurs="0">
+									<xs:complexType>
+										<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+										<xs:attribute name="Actual" type="xs:double" use="optional"/>
+										<xs:attribute name="On" type="xs:boolean" use="optional"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="FuelStatus" minOccurs="0">
+									<xs:complexType>
+										<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+										<xs:attribute name="Actual" type="xs:double" use="optional"/>
+										<xs:attribute name="On" type="xs:boolean" use="optional"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="OxidizerStatus" minOccurs="0">
+									<xs:complexType>
+										<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+										<xs:attribute name="Actual" type="xs:double" use="optional"/>
+										<xs:attribute name="On" type="xs:boolean" use="optional"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="Front"/>
+										<xs:enumeration value="Back"/>
+										<xs:enumeration value="Third"/>
+										<xs:enumeration value="Fourth"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Status" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="[Status]"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Column" minOccurs="0" maxOccurs="5">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element ref="y:FlowStatus" minOccurs="0"/>
+							</xs:sequence>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Status" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="AuxPressureZone" minOccurs="0" maxOccurs="9">
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element ref="y:PressureStatus" minOccurs="0"/>
+							</xs:sequence>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="6"/>
+										<xs:enumeration value="7"/>
+										<xs:enumeration value="8"/>
+										<xs:enumeration value="9"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="Status" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="PCI" type="xs:string" minOccurs="0"/>
+					<xs:element name="Valve" minOccurs="0" maxOccurs="4">
+						<xs:complexType>
+							<xs:attribute name="ID" use="optional">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:complexType>
+			<xs:element name="BeginRunFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="BeginRunRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="BeginRunResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="ControlRequestHeader">
+				<xs:complexType>
+					<xs:attribute name="LicenseKey" type="xs:string"/>
+					<xs:attribute name="Token" type="xs:long"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FlowStatus">
+				<xs:complexType>
+					<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+					<xs:attribute name="Actual" type="xs:double" use="optional"/>
+					<xs:attribute name="On" type="xs:boolean" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetConfigurationFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="GetConfigurationRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="GetConfigurationResponse" type="ns:InstrumentConfiguration"/>
+			<xs:element name="GetMethodFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="GetMethodRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="GetMethodResponse" type="ns:InstrumentMethod"/>
+			<xs:element name="GetServiceStateFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="GetServiceStateRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="GetServiceStateResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="PressureStatus">
+				<xs:complexType>
+					<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+					<xs:attribute name="Actual" type="xs:double" use="optional"/>
+					<xs:attribute name="On" type="xs:boolean" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReadRequestHeader">
+				<xs:complexType>
+					<xs:attribute name="LicenseKey" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SetConfigurationRequest" type="ns:InstrumentConfiguration"/>
+			<xs:element name="SetConfigurationResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SetMethodRequest" type="ns:InstrumentMethod"/>
+			<xs:element name="SetMethodResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SetConfigurationFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="StopRunFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="StopRunRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="StopRunResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToDataFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToDataRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToDataResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToEventsFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToEventsRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToEventsResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToStatusFault">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToStatusRequest">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="SubscribeToStatusResponse">
+				<xs:complexType/>
+			</xs:element>
+			<xs:element name="TemperatureMethod">
+				<xs:complexType>
+					<xs:sequence minOccurs="0">
+						<xs:element name="TemperatureProgram" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence minOccurs="0">
+									<xs:element name="TemperatureProgramStage" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:attribute name="Duration" type="xs:double" use="optional"/>
+											<xs:attribute name="ToTemp" type="xs:double" use="optional"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="Setpoint" type="xs:double" use="optional"/>
+					<xs:attribute name="ON" type="xs:boolean" use="optional"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EchoRequest" type="xs:string"/>
+			<xs:element name="EchoResponse" type="xs:string"/>
+		</xs:schema>
+	</types>
+	<message name="SetConfigurationRequest">
+		<part name="header" element="y:ControlRequestHeader"/>
+		<part name="parameter" element="y:SetConfigurationRequest"/>
+	</message>
+	<message name="SetConfigurationResponse">
+		<part name="parameter" element="y:SetConfigurationResponse"/>
+	</message>
+	<message name="EchoRequest">
+		<part name="parameter" element="y:EchoRequest"/>
+	</message>
+	<message name="EchoResponse">
+		<part name="parameter" element="y:EchoResponse"/>
+	</message>
+	<message name="GetConfigurationRequest">
+		<part name="header" element="y:ReadRequestHeader"/>
+		<part name="parameter" element="y:GetConfigurationRequest"/>
+	</message>
+	<message name="GetConfigurationResponse">
+		<part name="parameter" element="y:GetConfigurationResponse"/>
+	</message>
+	<message name="SetMethodRequest">
+		<part name="header" element="y:ControlRequestHeader"/>
+		<part name="parameter" element="y:SetMethodRequest"/>
+	</message>
+	<message name="SetMethodResponse">
+		<part name="parameter" element="y:SetMethodResponse"/>
+	</message>
+	<message name="GetMethodRequest">
+		<part name="header" element="y:ReadRequestHeader"/>
+		<part name="parameter" element="y:GetMethodRequest"/>
+	</message>
+	<message name="GetMethodResponse">
+		<part name="parameter" element="y:GetMethodResponse"/>
+	</message>
+	<portType name="cmd">
+		<operation name="SetConfiguration">
+			<input name="SetConfigurationRequest" message="y:SetConfigurationRequest"/>
+			<output message="y:SetConfigurationResponse"/>
+		</operation>
+		<operation name="GetConfiguration">
+			<input message="y:GetConfigurationRequest"/>
+			<output message="y:GetConfigurationResponse"/>
+		</operation>
+		<operation name="SetMethod">
+			<input message="y:SetMethodRequest"/>
+			<output message="y:SetMethodResponse"/>
+		</operation>
+		<operation name="GetMethod">
+			<input message="y:GetMethodRequest"/>
+			<output message="y:GetMethodResponse"/>
+		</operation>
+		<!--
+		<operation name="SubscribeToStatus">
+			<input message="y:SubscribeToStatusRequest"/>
+			<output message="y:SubscribeToStatusResponse"/>
+			<fault name="FaultName" message="y:SubscribeToStatusFault"/>
+		</operation>
+		<operation name="SubscribeToEvents">
+			<input message="y:SubscribeToEventsRequest"/>
+			<output message="y:SubscribeToEventsResponse"/>
+			<fault name="FaultName" message="y:SubscribeToEventsFault"/>
+		</operation>
+		<operation name="StopRun">
+			<input message="y:StopRunRequest"/>
+			<output message="y:StopRunResponse"/>
+			<fault name="FaultName" message="y:StopRunFault"/>
+		</operation>
+		<operation name="BeginRun">
+			<input message="y:BeginRunRequest"/>
+			<output message="y:BeginRunResponse"/>
+			<fault name="FaultName" message="y:BeginRunFault"/>
+		</operation>
+		<operation name="GetServiceState">
+			<input message="y:GetServiceStateRequest"/>
+			<output message="y:GetServiceStateResponse"/>
+			<fault name="FaultName" message="y:GetServiceStateFault"/>
+		</operation>
+	       -->
+		<operation name="Echo">
+			<input message="y:EchoRequest"/>
+			<output message="y:EchoResponse"/>
+		</operation>
+	</portType>
+	<binding name="cmd" type="y:cmd">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SetConfiguration">
+			<soap:operation soapAction="urn:#SetConfiguration"/>
+			<input>
+				<soap:header message="ns:SetConfigurationRequest" part="header" use="literal"/>
+				<soap:body parts="parameter" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetConfiguration">
+			<soap:operation soapAction="urn:#GetConfiguration"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:GetConfigurationRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+		</operation>
+		<operation name="SetMethod">
+			<soap:operation soapAction="urn:#SetMethod"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:SetMethodRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMethod">
+			<soap:operation soapAction="urn:#GetMethod"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:GetMethodRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+		</operation>
+		<!--
+		<operation name="SubscribeToStatus">
+			<soap:operation soapAction="urn:#SubscribeToStatus"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:SubscribeToStatusRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+			<fault name="FaultName"/>
+		</operation>
+		<operation name="SubscribeToEvents">
+			<soap:operation soapAction="urn:#SubscribeToEvents"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:SubscribeToEventsRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+			<fault name="FaultName"/>
+		</operation>
+		<operation name="StopRun">
+			<soap:operation soapAction="urn:#StopRun"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:StopRunRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+			<fault name="FaultName"/>
+		</operation>
+		<operation name="BeginRun">
+			<soap:operation soapAction="urn:#BeginRun"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:BeginRunRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+			<fault name="FaultName"/>
+		</operation>
+		<operation name="GetServiceState">
+			<soap:operation soapAction="urn:#GetServiceState"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+				<soap:header message="ns:GetServiceStateRequest" part="header" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+			<fault name="FaultName"/>
+		</operation>
+	-->
+		<operation name="Echo">
+			<soap:operation soapAction="urn:#Echo"/>
+			<input>
+				<soap:body parts="parameter" use="literal"/>
+			</input>
+			<output>
+				<soap:body parts="parameter" use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="GC7890">
+		<xs:annotation>
+			<xs:documentation>The entire collection of valid setpoints</xs:documentation>
+		</xs:annotation>
+		<port name="cmd" binding="y:cmd">
+			<soap:address location="http://localhost:9110"/>
+		</port>
+		<!--
+		<port name="data" binding="y:data">
+			<soap:address location="No Target Adress"/>
+		</port>
+	-->
+	</service>
+	<!--
+	<message name="SubscribeToStatusRequest">
+		<part name="header" element="ns:ReadRequestHeader"/>
+		<part name="parameter" element="ns:SubscribeToStatusRequest"/>
+	</message>
+	<message name="SubscribeToStatusResponse">
+		<part name="parameter" type="ns:InstrumentStatus"/>
+	</message>
+	<message name="SubscribeToStatusFault"/>
+	<message name="SubscribeToEventsRequest">
+		<part name="header" element="ns:ReadRequestHeader"/>
+		<part name="parameter" element="ns:SubscribeToEventsRequest"/>
+	</message>
+	<message name="SubscribeToEventsResponse"/>
+	<message name="SubscribeToEventsFault"/>
+	<message name="StopRunRequest">
+		<part name="header" element="ns:ControlRequestHeader"/>
+		<part name="parameter" element="y:StopRunRequest"/>
+	</message>
+	<message name="StopRunResponse"/>
+	<message name="StopRunFault"/>
+	<message name="BeginRunRequest">
+		<part name="header" element="ns:ControlRequestHeader"/>
+	</message>
+	<message name="BeginRunResponse"/>
+	<message name="BeginRunFault"/>
+	<message name="GetServiceStateRequest">
+		<part name="header" element="ns:ReadRequestHeader"/>
+		<part name="parameter" element="ns:GetServiceStateRequest"/>
+	</message>
+	<message name="GetServiceStateResponse"/>
+	<message name="GetServiceStateFault"/>
+	-->
+	<!--
+	<message name="SubscribeToDataRequest">
+		<part name="header" element="ns:ReadRequestHeader"/>
+		<part name="parameter" element="ns:SubscribeToDataRequest"/>
+	</message>
+	<message name="SubscribeToDataFault"/>
+    -->
+	<!--
+	<portType name="data">
+		<operation name="SubscribeToData">
+			<input message="y:SubscribeToDataRequest"/>
+			<fault name="FaultName" message="y:SubscribeToDataFault"/>
+		</operation>
+	</portType>
+	-->
+	<!--
+	<binding name="data" type="y:data">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SubscribeToData">
+			<soap:operation soapAction="urn:#SubscribeToData"/>
+			<input>
+				<soap:header message="ns:SubscribeToDataRequest" part="header" use="literal"/>
+				<soap:body parts="parameter" use="literal"/>
+			</input>
+			<fault name="FaultName"/>
+		</operation>
+	</binding>
+	-->
+</definitions>

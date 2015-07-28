@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping version="6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MFD.xsd">
+	<component name="defaultmap1" blackbox="0" uid="70983992" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="document" library="xml" uid="72710160" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="343" lty="51" rbx="504" rby="186"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="0:PollutantsReport" expanded="1">
+								<entry name="0:Item" expanded="1" inpkey="90275216">
+									<entry name="0:Company" inpkey="90275456"/>
+									<entry name="0:Abbreviation" inpkey="90276160"/>
+									<entry name="0:Volume" inpkey="90276664"/>
+									<entry name="0:PPM" inpkey="90275696"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="PollutantsReport.xsd" instanceroot="{}PollutantsReport"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="txt" library="text" uid="90343608" kind="16" visible="0">
+					<view rbx="193" rby="258"/>
+					<data>
+						<root scrollposition="1">
+							<header/>
+							<entry name="Report" expanded="1">
+								<entry name="Sections" expanded="1">
+									<entry name="Header" expanded="1">
+										<entry name="Switch" expanded="1">
+											<entry name="CompanyInfo" expanded="1">
+												<entry name="Company" outkey="90303024"/>
+											</entry>
+										</entry>
+									</entry>
+									<entry name="Details" expanded="1">
+										<entry name="Items" expanded="1" outkey="92356664">
+											<entry name="Volume" outkey="90380872"/>
+											<entry name="ppm" outkey="90381792"/>
+											<entry name="Abbreviation" outkey="73225808"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="txt" encoding="1000" byteorder="0" config="InspectionReport.mft"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="55389816"/>
+					<edge edgekey="55448656"/>
+					<edge edgekey="70407344"/>
+					<edge edgekey="71048848"/>
+					<edge edgekey="90328232"/>
+				</edges>
+				<vertices>
+					<vertex vertexkey="73225808">
+						<edges>
+							<edge vertexkey="90276160" edgekey="70407344"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="90303024">
+						<edges>
+							<edge vertexkey="90275456" edgekey="71048848"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="90380872">
+						<edges>
+							<edge vertexkey="90276664" edgekey="55389816"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="90381792">
+						<edges>
+							<edge vertexkey="90275696" edgekey="55448656"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="92356664">
+						<edges>
+							<edge vertexkey="90275216" edgekey="90328232"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
