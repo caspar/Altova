@@ -1,15 +1,12 @@
 package com.altova.mapforce;
 
 import static com.altova.util.LoggerUtils.logger;
-
 import static java.awt.event.KeyEvent.*;
-
 import static com.altova.robots.SnapshotArea.CommonArea.DIAGRAM_MAIN_WINDOW;
 import static com.altova.robots.SnapshotArea.CommonArea.TOP_WINDOW;
 
 import java.awt.Color;
 import java.awt.Font;
-
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -19,7 +16,7 @@ import com.altova.nativegui.NativeGUI;
 import com.altova.robots.AltovaApplicationRobot;
 import com.altova.robots.ApplicationErrorException;
 import com.altova.robots.CheckboxOption;
-
+import com.altova.robots.DropDownOption;
 import com.altova.robots.ImageNotFoundException;
 import com.altova.robots.Option;
 import com.altova.robots.Options;
@@ -28,7 +25,6 @@ import com.altova.robots.PluginRobot;
 import com.altova.robots.RadioOption;
 import com.altova.robots.ScriptMistakeException;
 import com.altova.robots.TextFieldOption;
-
 import com.altova.util.IOUtils;
 import com.altova.util.RegressionAssert;
 import com.altova.util.Settings;
@@ -43,7 +39,7 @@ import com.altova.util.Settings.ApplicationSettings;
  */
 /**
  * @author B.Lopez
- *
+ * @author Caspar Lant
  */
 
 public class MapForceRobot extends AltovaApplicationRobot {
@@ -449,8 +445,6 @@ public class MapForceRobot extends AltovaApplicationRobot {
 	
 	@Deprecated
 	public void insertEDI(boolean ifedifact, String edicollection, File filename) {
-			 //TODO: change bool to String
-			 //TODO: put in switch block
 		leftClickMenuItem("Insert", "EDI");
 		delay(2000);
 		assertWindow("Browse EDI collections");
@@ -497,7 +491,7 @@ public class MapForceRobot extends AltovaApplicationRobot {
 	}
 		 
 	public void insertEDI(String ediType, String edicollection, File filename) {
-		int positionInList = 2; //comes in when down-keypresses are req'd
+		int positionInList = 3; //comes in when down-keypresses are req'd
 		//TODO: put in switch block
 		leftClickMenuItem("Insert", "EDI");
 		delay(2000);
@@ -509,7 +503,7 @@ public class MapForceRobot extends AltovaApplicationRobot {
 			leftClickMid(edif);delay(100);
 		} 
 		else if (ediType == "ASC X12"){
-			Rectangle x12 = findString("ASC X12", WINDOWS_DEFAULT_FONT, NativeGUI.getForegroundWindowInfo().getLocation(),false);
+			Rectangle x12 = findString(" ASC X12", WINDOWS_DEFAULT_FONT, NativeGUI.getForegroundWindowInfo().getLocation(),false);
 			leftClickMid(x12);delay(100);
 			keyType(KeyEvent.VK_DOWN);delay(100);
 			keyType(KeyEvent.VK_DOWN);
@@ -518,7 +512,7 @@ public class MapForceRobot extends AltovaApplicationRobot {
 			Rectangle iata = findString(" IATA", WINDOWS_DEFAULT_FONT, NativeGUI.getForegroundWindowInfo().getLocation(),false);
 			leftClickMid(iata);delay(100);
 			keyType(KeyEvent.VK_DOWN);
-			positionInList = 3;
+			positionInList = 5;
 		}
 		else if (ediType == "HIPAA.X12"){
 			Rectangle hipaa = findString("ASC X12", WINDOWS_DEFAULT_FONT, NativeGUI.getForegroundWindowInfo().getLocation(),false);
@@ -570,27 +564,62 @@ public class MapForceRobot extends AltovaApplicationRobot {
 		}
 	}
 	
-	public void insertJSON(){
+	public void insertJSON(boolean schema, File filename){
 		//switch to output first
 		leftClickMenuItem("Output", "Built-In");
+		delay(2000);
 		leftClickMenuItem("Insert", "JSON");
 		delay(2000);
+		assertWindow("Open");
+		typeStringEnter(filename.getAbsolutePath());
+		delay(500);
+		if(schema){
+			escapeDialog("Do you want use the selected file as a JSON instance or a JSON Schema?", KeyEvent.VK_S);
+			escapeDialog("Do you want to supply a sample JSON file, a global resource, or not sully any at all?", KeyEvent.VK_S);
+		}
+		else{
+			escapeDialog("Do you want use the selected file as a JSON instance or a JSON Schema?", KeyEvent.VK_I);
+			delay(500);
+			keyType(VK_ENTER);
+			delay(1000);
+			keyType(VK_ENTER);
+			delay(500);
+			keyType(KeyEvent.VK_Y);
+			delay(500);
+			keyType(VK_ENTER);
+		}
+
+
 	}
 	
-	public void insertInput(){
+	public void insertInput(String data, String datatype){
+		//switch to output first
+		leftClickMenuItem("Output", "Built-In");
+		delay(2000);
 		leftClickMenuItem("Insert", "Input");
 		delay(2000);
-
+		assertWindow("Create Input");
+		//RegressionAssert.assertAreas(TOP_WINDOW);
+		typeString(data); delay(100);
+		keyPress(VK_TAB);
+		//DropDownOption a = new DropDownOption(datatype,null);
+		typeStringEnter(datatype);
 	}
 	
-	public void insertOutput(){
+	public void insertOutput(String data){
+		//switch to output first
+		leftClickMenuItem("Output", "Built-In");
+		delay(200);
 		leftClickMenuItem("Insert", "Output");
-		delay(2000);
-
+		delay(200);
+		typeStringEnter(data);
 	}
 	
-	public void insertNodes(){
-		
+	public void insertSort(){
+		//switch to output first
+		leftClickMenuItem("Output", "Built-In");
+		delay(200);
+		leftClickMenuItem("Insert", "Sort: ");
 	}
 	
 		 /**This method can just be used to test the insertion of text through a txt,csv  or mft file,but
@@ -826,6 +855,17 @@ public class MapForceRobot extends AltovaApplicationRobot {
 		leftClickMenuItem("Component", "Refresh");
 	}
 	
+	public void createMapping(int num){
+		//should work with leftClickMenuItem("Component", "Create Mapping to EDI X12" + num); but doesn't
+		if (num == 997) leftClickMenuItem("Component", "Create Mapping to EDI X12 997");	
+		if (num == 999) leftClickMenuItem("Component", "Create Mapping to EDI X12 999");
+		keyType(VK_ENTER);
+	}
+	
+	public void writeContentsAsCDATA(){
+		leftClickMenuItem("Component", "Write Content as CDATA Section");
+		keyType(VK_ENTER);
+	}
 	public void duplicateInput(){
 		leftClickMenuItem("Component", "Duplicate Input");
 	}
@@ -1181,7 +1221,7 @@ public class MapForceRobot extends AltovaApplicationRobot {
 	 * @param iconFile: png image of the component's head we are searching for
 	 */
 	public Rectangle selectComponentFromImage(String iconFile){
-		//First of all, we try to try in the diagram to unselect all components
+		//First of all, we try to try in the diagram to deselect all components
 		Rectangle mainWdw=getMainWindow();
 		delay(500);
 		leftClick(mainWdw.x+5, mainWdw.y+5);
@@ -1255,5 +1295,4 @@ public class MapForceRobot extends AltovaApplicationRobot {
 			keyPress(VK_BACK_SPACE);
 		}
 	}
-	
 }

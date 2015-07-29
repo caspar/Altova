@@ -3,7 +3,7 @@ package com.altova.robots;
 import static com.altova.util.LoggerUtils.logger;
 import static com.altova.robots.ImageRecognitionRobot.*;
 import static java.awt.Color.BLACK;
-import java.awt.Font.*;
+//import java.awt.Font.*;
 
 import java.awt.Font;
 import java.awt.Rectangle;

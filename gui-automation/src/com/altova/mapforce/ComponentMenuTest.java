@@ -16,8 +16,8 @@ import com.altova.robots.RadioOption;
 import com.altova.robots.TextFieldOption;
 import com.altova.util.IOUtils;
 import com.altova.util.AltovaJUnitRunner.TestRobot;
-import static com.altova.robots.ImageRecognitionRobot.WINDOWS_DEFAULT_FONT;
 
+import static com.altova.robots.ImageRecognitionRobot.WINDOWS_DEFAULT_FONT;
 import static com.altova.robots.SnapshotArea.CommonArea.DIAGRAM_MAIN_WINDOW;
 import static com.altova.robots.SnapshotArea.CommonArea.MF_MAIN_WINDOW;
 import static com.altova.robots.SnapshotArea.CommonArea.TOP_WINDOW;
@@ -25,15 +25,19 @@ import static com.altova.robots.SnapshotArea.CommonArea.TOP_WINDOW;
 
 /**
  * @author b.lopez
- *
+ * @author Caspar Lant
  */
 
 //@TestRobot(VSnetMapForceRobot.class)
 //@TestRobot(EclipseMapForceRobot.class)
 public class ComponentMenuTest extends AbstractMapForceTest {
-	private final String CUSTOMERS_COMPONENT = IOUtils.findFile("tags_list/CUSTOMERS_XSD_TAG.PNG").getAbsolutePath();
-	
-	
+	private final String CUSTOMERS_COMPONENT 		= IOUtils.findFile("tags_list/CUSTOMERS_TAG.PNG").getAbsolutePath();
+	private final String X12_920_COMPONENT 			= IOUtils.findFile("tags_list/920_TAG.PNG").getAbsolutePath();
+	private final String HIPAA_Q2_837_COMPONENT 	= IOUtils.findFile("tags_list/837-Q2_TAG.PNG").getAbsolutePath();
+	//private final String ORGCHART_COMPONENT		 	= IOUtils.findFile("tags_list/ORGCHART_TAG.PNG").getAbsolutePath();
+	private final String NUMBER_COMPONENT		 		= IOUtils.findFile("tags_list/NUMBER_TAG.PNG").getAbsolutePath();
+
+
 	@Test
 	public void testAlignTreeRight(){
 		robot.openFile(EDI_ORDER_REVERSE_MFD);
@@ -70,6 +74,33 @@ public class ComponentMenuTest extends AbstractMapForceTest {
 		robot.selectComponentFromImage(ALTOVADB_COMPONENT);
 		robot.refreshDB();
 		delay(3000);
+		assertAreas(DIAGRAM_MAIN_WINDOW);
+	}
+	
+	@Test
+	public void testCreate997Mapping(){
+		//open examples/X12_920.mfd
+		robot.openFile(X12_920_MFD);
+		robot.selectComponentFromImage(X12_920_COMPONENT);
+		robot.createMapping(997);	
+		assertAreas(DIAGRAM_MAIN_WINDOW);
+	}
+	
+	@Test
+	public void testCreate999Mapping(){
+		robot.selectComponentFromImage(ALTOVADB_COMPONENT);
+		robot.openFile(HIPAA_Q2_837_MFD);
+		robot.selectComponentFromImage(HIPAA_Q2_837_COMPONENT);
+		robot.createMapping(999);		
+		assertAreas(DIAGRAM_MAIN_WINDOW);
+	}
+	
+	@Test
+	public void testWriteAsCDATA(){
+		robot.openFile(CUSTOMERS_XML_MFD);
+		robot.selectComponentFromImage(CUSTOMERS_COMPONENT);
+		robot.selectComponentFromImage(NUMBER_COMPONENT);
+		robot.writeContentsAsCDATA();
 		assertAreas(DIAGRAM_MAIN_WINDOW);
 	}
 	

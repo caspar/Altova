@@ -1,5 +1,4 @@
-package com.altova.spy
-y
+package com.altova.spy;
 import static com.altova.robots.ImageRecognitionRobot.DEFAULT_CONTENT_FONT;
 import static com.altova.robots.ImageRecognitionRobot.MS_SHELL_DLG_FONT;
 import static com.altova.robots.ImageRecognitionRobot.TRANSPARENT;

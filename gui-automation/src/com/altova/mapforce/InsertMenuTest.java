@@ -14,36 +14,39 @@ import com.altova.util.AltovaJUnitRunner.TestRobot;
 
 /**
  * @author b.lopez
- *
+ * @author Caspar Lant
  */
 
 //@TestRobot(EclipseMapForceRobot.class)
 public class InsertMenuTest extends AbstractMapForceTest {
 
-	private static File APPLICATIONS_PAGE_XML=IOUtils.findFile("examples/ApplicationsPage.xml");
-	private static File ARTICLES_XML=IOUtils.findFile("examples/Articles.xml");
-	private static File ARTICLES_XSD=IOUtils.findFile("examples/Articles.xsd");
-	private static File ORDERS_EDI=IOUtils.findFile("examples/ORDERS.EDI");
-	private static File COLLECTION920_x12=IOUtils.findFile("examples/920.x12");
-	private static File ORDERS_CSV=IOUtils.findFile("examples/Orders.csv");
-	private static File HEAD_DET_TXT=IOUtils.findFile("examples/head-det-txt.txt");
-	private static File SALES_PRESENTATION_XLSX=IOUtils.findFile("examples/Sales-presentation.xlsx");
-	private static File NEWS_DTD_FILE=IOUtils.findFile("examples/news.dtd");
-	private static File STRING_XML_FILE=IOUtils.findFile("examples/string.xml");
+	private static File APPLICATIONS_PAGE_XML   = IOUtils.findFile("examples/ApplicationsPage.xml");
+	private static File ARTICLES_XML            = IOUtils.findFile("examples/Articles.xml");
+	private static File ARTICLES_XSD            = IOUtils.findFile("examples/Articles.xsd");
+	private static File ORDERS_EDI              = IOUtils.findFile("examples/ORDERS.EDI");
+	private static File COLLECTION920_x12       = IOUtils.findFile("examples/920.x12");
+	private static File ORDERS_CSV              = IOUtils.findFile("examples/Orders.csv");
+	private static File HEAD_DET_TXT            = IOUtils.findFile("examples/head-det-txt.txt");
+	private static File SALES_PRESENTATION_XLSX = IOUtils.findFile("examples/Sales-presentation.xlsx");
+	private static File NEWS_DTD_FILE           = IOUtils.findFile("examples/news.dtd");
+	private static File STRING_XML_FILE         = IOUtils.findFile("examples/string.xml");
 	//Caspar
-	private static File QUOTATIONS_XML=IOUtils.findFile("examples/Quotations.xml"); //probably won't need this
-	private static File IATA_EDI=IOUtils.findFile("examples/IATA.edi");
-	private static File INVFIL_EDI=IOUtils.findFile("examples/INVFIL.edi");
-	private static File ADT_A28_HL7=IOUtils.findFile("examples/ADT_A28.1.hl7");
-	private static File Q2_837_XSD=IOUtils.findFile("examples/837-Q2.xsd");
+	private static File IATA_EDI   				= IOUtils.findFile("examples/IATA.edi");
+	private static File INVFIL_EDI  			= IOUtils.findFile("examples/INVFIL.edi");
+	private static File ADT_A28_HL7 			= IOUtils.findFile("examples/ADT_A28.1.hl7");
+	private static File Q2_837_X12  			= IOUtils.findFile("examples/837-Q2.x12");
+	private static File IPOS_JSON   			= IOUtils.findFile("examples/ipos.json");
+	private static File IPOS_SCHEMA_JSON		= IOUtils.findFile("examples/ipos.schema.json");
+	private static File EMPLOYEES_SCHEMA_JSON   = IOUtils.findFile("examples/employees.schema.json");
+	
 	@Before
 	public void setUp() throws Exception {
 
 		super.setUp();
 		
 //		String junitRun = AltovaJUnitRunner.getCurrentRunName(robot);
-		robot.startFromNewMapping();
-		delay(1000);
+//		robot.startFromNewMapping();
+//		delay(1000);
 	}
 
 	@Test
@@ -126,7 +129,7 @@ public class InsertMenuTest extends AbstractMapForceTest {
 	
 	@Test
 	public void testIndertEdi_HIPAA_withFile(){
-		robot.insertEDI("HIPAA.X12", "837-Q2", Q2_837_XSD);
+		robot.insertEDI("HIPAA.X12", "837-Q2", Q2_837_X12);
 		assertAreas(DIAGRAM_MAIN_WINDOW);
 	}
 	
@@ -198,24 +201,27 @@ public class InsertMenuTest extends AbstractMapForceTest {
 	
 	@Test
 	public void testInsertJSON(){
-		
+		robot.insertJSON(false, IPOS_JSON);
+		assertAreas(DIAGRAM_MAIN_WINDOW);
 	}
 	
 	@Test
-	public void testInsertInput(){
-
+	public void testInsertJSON_Schema(){
+		robot.insertJSON(true, EMPLOYEES_SCHEMA_JSON);
+		assertAreas(DIAGRAM_MAIN_WINDOW);
 	}
 	
 	@Test
-	public void testInsertOutput(){
-	
+	public void testInsertInput_String(){
+		robot.insertInput("CasparIsGod", "string");
+		assertAreas(DIAGRAM_MAIN_WINDOW);
 	}
 	
 	@Test
-	public void testInsertNodes(){
-		
+	public void testInsertOutput_String(){
+		robot.insertOutput("flooomp");
+		assertAreas(DIAGRAM_MAIN_WINDOW);
 	}
-	
 	
 	@Test
 	public void testInsertConstant_String(){
@@ -232,6 +238,12 @@ public class InsertMenuTest extends AbstractMapForceTest {
 	@Test
 	public void testInsertConstant_AllOther(){
 		robot.insertConstant("23-05-1981","All other");
+		assertAreas(DIAGRAM_MAIN_WINDOW);
+	}
+	
+	@Test
+	public void testInsertSort(){
+		robot.insertSort();
 		assertAreas(DIAGRAM_MAIN_WINDOW);
 	}
 	

@@ -22,9 +22,12 @@ public class AbstractMapForceTest extends AbstractJUnitTest{
 
 	protected static MapForceRobot robot;
 	protected static File CUSTOMERS_DB_MFD=IOUtils.findFile("examples/Customers_DB.mfd");
+	protected static File CUSTOMERS_XML_MFD=IOUtils.findFile("examples/Customers_XML.mfd");
 	protected static File COMPLETE_PO_MFD=IOUtils.findFile("examples/CompletePO.mfd");
 	protected static File EDI_ORDER_REVERSE_MFD = IOUtils.findFile("examples/EDI_OrderReverse.mfd");
 	protected static File EXCEL_COMPANY_TOXML_FILE=IOUtils.findFile("examples/Excel_Company_to_XML.mfd");
+	protected static File X12_920_MFD = IOUtils.findFile("examples/X12_920.mfd");
+	protected static File HIPAA_Q2_837_MFD = IOUtils.findFile("examples/HIPAA_Q2_837.mfd");
 	protected static final File UPSRATES_WSDL_FILE=IOUtils.findFile("examples/UPSRates.wsdl");
 	protected static final File FILE_OUTPUT_PATH=new File("C:\\temp\\mapforce");
 	protected static final File COMPLETE_POWS_MFD=IOUtils.findFile("examples/CompletePOws.mfd");
@@ -61,16 +64,17 @@ public class AbstractMapForceTest extends AbstractJUnitTest{
 		super.setUp();
 		
 //		String junitRun = AltovaJUnitRunner.getCurrentRunName(robot);
-		delay(500);
-		robot.openFile(CUSTOMERS_DB_MFD);
-		delay(3000);
-		if(counter_m == 0){
-		robot.hideOverviewWindow();
-		if (!Settings.isVS2010()) { //it does not work for VS2010, so don't lose time trying it ;)
-				robot.setPaneSize(MapForceRobot.MESSAGES, -1, 175);
-			}
-		}
-		counter_m ++;
+		//TODO
+//		delay(500);
+//		robot.openFile(CUSTOMERS_DB_MFD);
+//		delay(3000);
+//		if(counter_m == 0){
+//		robot.hideOverviewWindow();
+//		if (!Settings.isVS2010()) { //it does not work for VS2010, so don't lose time trying it ;)
+//				robot.setPaneSize(MapForceRobot.MESSAGES, -1, 175);
+//			}
+//		}
+//		counter_m ++;
 	}
 
 
