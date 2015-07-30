@@ -35,7 +35,7 @@ import com.altova.util.Settings.AltovaApplication;
 
 /**
  * @author B.Lopez
- * 
+ * @author Caspar Lant
  */
 //@TestRobot(VSnetUModelRobot.class)
 //@TestRobot(EclipseUModelRobot.class)
@@ -70,6 +70,9 @@ public class ProjectMenuTest2 extends AbstractUmodelTest {
 	protected final File UMP_SAVE_AS_FILE= new File("C:\\temp\\myump.ump");
 	protected final String XSD_SOURCE_DIR=(IOUtils.findFile("examples_UModel/Import_XSD_dir")).getAbsolutePath();
 	protected final String XSD_SOURCE_FILE=(IOUtils.findFile("examples_UModel/OrgChart.xsd")).getAbsolutePath();
+	protected final String SEQUENCE_FROM_CODE_FILE = (IOUtils.findFile("examples_UModel/SequenceDiagramToCode.ump")).getAbsolutePath();
+	protected final String CODE_FROM_SEQUENCE_FILE = (IOUtils.findFile("examples_UModel/CodeToSequenceDiagram.ump")).getAbsolutePath();
+	protected final String STATE_MACHINE_CODE_FILE = IOUtils.findFile("examples_UModel/AirCondition.ump").getAbsolutePath();
 	protected final File BANK_PRJ_JAVA_OUTPUT = new File("C:\\UML_Bank_Sample\\JavaCode");
 	protected final String BANK_JAVA_SOURCE=(IOUtils.findFile("examples_UModel/Bank_Java_Source.ump")).getAbsolutePath();
 	protected final String BANK_JAVA_TARGET=(IOUtils.findFile("examples_UModel/Bank_Java_Target.ump")).getAbsolutePath();
@@ -135,7 +138,28 @@ public class ProjectMenuTest2 extends AbstractUmodelTest {
 
 		assertFileExists(BANK_PRJ_JAVA_OUTPUT);
 	}
+	
+	@Test
+	public final void testSequenceDiagramsFromCode(){
+		robot.openPrj(SEQUENCE_FROM_CODE_FILE);
+		robot.sequenceDiagramsFromCodeAll();
+		assertAreas(TOP_WINDOW);
+	}
+	
+	@Test
+	public final void testCodeFromSequenceDiagrams(){
+		robot.openPrj(CODE_FROM_SEQUENCE_FILE);
+		robot.codeFromSequenceDiagramsAll();
+		assertAreas(TOP_WINDOW);
+	}
 
+	@Test
+	public final void testGenerateStateMachineCode(){
+		robot.openPrj(STATE_MACHINE_CODE_FILE);
+		robot.generateStateMachineCode();
+		assertAreas(TOP_WINDOW);
+	}
+	
 	@Test
 	public final void testProjectSettings() {
 		robot.projectSettings();

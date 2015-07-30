@@ -499,6 +499,9 @@ public class UModelRobot extends AltovaApplicationRobot {
 		return "Project";
 	}
 
+	/*
+	 * What does this do? Needs to be documented - Caspar
+	 */
 	protected String getExtraProjectMenu() {
 		return null;
 	}
@@ -601,6 +604,41 @@ public class UModelRobot extends AltovaApplicationRobot {
 		
 		
 	}
+	
+	public void sequenceDiagramsFromCodeAll(){
+		leftClickMenuItem(getProjectMenu(), getExtraProjectMenu(), "Generate Sequence Diagrams from Code");
+		for (int i = 0; i < 2; i++){
+			keyType(VK_TAB);
+			keyType(VK_TAB);
+			keyType(VK_ENTER);
+			delay(500);
+		}
+		keyType(VK_ENTER);
+
+	}
+	
+	public void codeFromSequenceDiagramsAll(){
+		leftClickMenuItem(getProjectMenu(), getExtraProjectMenu(), "Generate Code from Sequence Diagrams");
+		int[] keys = {VK_TAB, VK_TAB, VK_ENTER, VK_TAB, VK_ENTER};
+		for (int key : keys){
+			keyType(key);
+			delay(200);
+		}
+		delay(300);
+		keyType(VK_ENTER);
+	}
+	
+	public void generateStateMachineCode(){
+		leftClickMenuItem(getProjectMenu(), getExtraProjectMenu(), "Generate State Machine Code");
+		int[] keys = {VK_TAB, VK_TAB, VK_ENTER, VK_TAB, VK_ENTER};
+		for (int key : keys){
+			keyType(key);
+			delay(200);
+		}
+		delay(300);
+		keyType(VK_ENTER);
+	}
+	
 	public void codeToModel(Option options) {
 		if (this instanceof PluginRobot) {
 			leftClickMenuItem(getProjectMenu(), getExtraProjectMenu(), "Merge UModel Project from Program Code");
