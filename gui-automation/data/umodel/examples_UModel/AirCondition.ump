@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UModel version="12">
+	<Settings ReadJavaDocs="true" WriteJavaDocs="true" ReadCSharpDocComments="true" WriteCSharpDocComments="true" ReadVBasicDocComments="true" WriteVBasicDocComments="true">
+		<ProjectStyles showdotnetproperties="0" showregionnames="1"/>
+	</Settings>
+	<OpenDiagrams activeDiagram="597c25bf-f755-4070-bd77-d4cad47dd8a0">
+		<OpenDiagramEntry>820444ad-b385-490c-b3c6-06cdaed7be38</OpenDiagramEntry>
+		<OpenDiagramEntry>597c25bf-f755-4070-bd77-d4cad47dd8a0</OpenDiagramEntry>
+	</OpenDiagrams>
+	<Model>
+		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<packagedElement>
+				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public">
+					<packagedElement>
+						<Component uuid="5672b966-00ba-42b4-bfd1-8b73a8e5ca63" name="project" visibility="public" usedForCodeSyncronization="true" codeLang="Java6.0 (1.6)" isCodeProjectFile="true" codeProjectFileOrDirectory="nbproject\project.xml">
+							<realization>
+								<ComponentRealization uuid="b0d02019-2e46-40fb-a295-4bfde8a144f7" visibility="public" realizingClassifier="b830a3e0-a0ed-4c39-98f4-7f65f8a47c18"/>
+								<ComponentRealization uuid="286adbe2-825f-40ec-93f7-307a3d9ff471" visibility="public" realizingClassifier="3f7535e2-83ba-43f6-a675-5036b913566f"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package uuid="53a81225-55ac-4696-acc3-bd66d378bfcb" name="project" visibility="public">
+					<packagedElement>
+						<Package uuid="baa20f6d-ecc8-4d4c-98c8-d361a6294c92" name="AirCondition" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="c172fa0f-ca83-4a76-bd1b-bd62e0e3a074" classifier="c898c1a3-547b-4a84-ad06-908fd57678c2"/>
+							</appliedStereotype>
+							<packagedElement>
+								<CallEvent uuid="373e258e-bb81-49df-a449-139055c4dfc5" visibility="public" operation="c8a08ec3-d3fb-4657-afd0-1da419756a03"/>
+								<CallEvent uuid="d7d1e59b-ed75-4fbc-bb2e-6abfd53cc0f8" visibility="public" operation="53e14dcc-1413-4ddf-becf-b7236d02a650"/>
+								<CallEvent uuid="e7da6b3b-855f-49a3-b496-9c404b3c6831" visibility="public" operation="831c6732-ef7b-4660-89b9-10bd5f958943"/>
+								<CallEvent uuid="af2f59a1-ce10-4774-9987-59176eaa4746" visibility="public" operation="0570f5bb-4939-4490-b2c7-668ecd78652f"/>
+								<CallEvent uuid="e89ec62c-262e-4aea-ae70-88ef99683a75" visibility="public" operation="0570f5bb-4939-4490-b2c7-668ecd78652f"/>
+								<CallEvent uuid="333e85c6-f563-45be-a033-442733b58b6a" visibility="public" operation="0570f5bb-4939-4490-b2c7-668ecd78652f"/>
+								<CallEvent uuid="67d55dd3-3ca8-46b3-b4ab-6f5c636eb3a5" visibility="public" operation="c8a08ec3-d3fb-4657-afd0-1da419756a03"/>
+								<CallEvent uuid="f700f9b7-f88a-4688-8c4e-6ffa4cf0c83b" visibility="public" operation="53e14dcc-1413-4ddf-becf-b7236d02a650"/>
+								<Class uuid="b830a3e0-a0ed-4c39-98f4-7f65f8a47c18" name="AirConditionController" visibility="public" usedForCodeSyncronization="true">
+									<codeFileName>
+										<CodeFileName name="..\src\AirCondition\AirConditionController.java"/>
+									</codeFileName>
+									<ownedBehavior>
+										<StateMachine uuid="11e3fd12-9042-48bf-a23c-57a9a8e94d76" name="AirCondition" visibility="public" autoUpdateCode="true">
+											<codeGenerationOptions imports="&#13;&#10;@SuppressWarnings({&quot;serial&quot;, &quot;unused&quot;})"/>
+											<region>
+												<Region uuid="94dd96d8-58d6-4c6b-874e-e7c441c1bdcf" name="MainRegion">
+													<subvertex>
+														<Pseudostate uuid="1a55feaa-af45-4499-86fc-d7f148c457e0"/>
+														<State uuid="c5404a5d-f2e6-45db-b97c-f9c77efe7a97" name="Operating">
+															<region>
+																<Region uuid="0ee4c8aa-8550-42e5-a89d-879fa69ca9ca" name="RegionMode">
+																	<subvertex>
+																		<State uuid="1aa18c71-ffa2-4422-905a-047953acdfd8" name="Heater">
+																			<entry>
+																				<Activity uuid="565a5429-2b33-446a-bcc0-67219df2194f" name="OnEntryHeater" visibility="public" specification="625eeb9b-9b68-4c66-becf-9bdd10847d13"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="312e43dc-c57a-4662-aab2-3867886c9598" name="OnExitHeater" visibility="public" specification="ed508cf1-7fd0-4542-afc0-2aa4b7e981ce"/>
+																			</exit>
+																		</State>
+																		<State uuid="d5865d86-299b-4414-ba7d-a1ba7223706f" name="Cooler">
+																			<entry>
+																				<Activity uuid="4eabf09e-1f60-4892-88f7-046a5ae9fda7" name="OnEntryCooler" visibility="public" specification="7a7ecefa-c973-43b0-acf0-d156b5656b47"/>
+																			</entry>
+																			<exit>
+																				<Activity uuid="4bd3f627-4ce6-4af9-8785-1da0665f4af4" name="OnExitCooler" visibility="public" specification="00777f49-fd83-4624-9cd8-191ad2d388d9"/>
+																			</exit>
+																		</State>
+																		<Pseudostate kind="shallowHistory" uuid="d52d7d05-6990-4c93-9793-be45cf200d29"/>
+																		<Pseudostate uuid="81f53ec2-4583-4a14-981c-cbc88862f2bf"/>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="24397c52-9650-4fbb-b90c-0e51856c9003" source="d5865d86-299b-4414-ba7d-a1ba7223706f" target="1aa18c71-ffa2-4422-905a-047953acdfd8">
+																			<trigger>
+																				<Trigger uuid="0f6cdc46-671c-47e1-a780-9d2b5f215f99" event="f700f9b7-f88a-4688-8c4e-6ffa4cf0c83b"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="0084e401-50e0-488b-9cde-8e625a5713a3" source="1aa18c71-ffa2-4422-905a-047953acdfd8" target="d5865d86-299b-4414-ba7d-a1ba7223706f">
+																			<trigger>
+																				<Trigger uuid="84ad6c95-1670-4034-bd83-34ea48211f30" event="d7d1e59b-ed75-4fbc-bb2e-6abfd53cc0f8"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="e8f261fe-1397-4dec-bdce-440126328cef" source="81f53ec2-4583-4a14-981c-cbc88862f2bf" target="1aa18c71-ffa2-4422-905a-047953acdfd8"/>
+																	</transition>
+																</Region>
+																<Region uuid="8e8ee398-5262-45f8-b4b9-506198cd794a" name="RegionSpeed">
+																	<subvertex>
+																		<State uuid="2cb1e761-9b3a-4633-9390-978320342499" name="High"/>
+																		<State uuid="db26160b-1d24-4579-aa60-82fa92dd4872" name="Off"/>
+																		<State uuid="ceac8ee6-28e1-4b97-9ef1-52ff58432166" name="Low"/>
+																		<Pseudostate uuid="f20be5b3-42b1-4ac4-a574-3f74613c975c"/>
+																		<Pseudostate kind="shallowHistory" uuid="207031f2-882a-452e-b2b5-cf21d195a86e"/>
+																	</subvertex>
+																	<transition>
+																		<Transition uuid="c3e4f47f-b725-49c6-bfb7-1a75db5f4cb0" source="f20be5b3-42b1-4ac4-a574-3f74613c975c" target="db26160b-1d24-4579-aa60-82fa92dd4872"/>
+																		<Transition uuid="d72555b4-7429-42f2-accf-1c50ada237f9" source="ceac8ee6-28e1-4b97-9ef1-52ff58432166" target="2cb1e761-9b3a-4633-9390-978320342499">
+																			<trigger>
+																				<Trigger uuid="4768a882-99a3-4651-b737-f1ea91501106" event="af2f59a1-ce10-4774-9987-59176eaa4746"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="26e0e2d5-86ae-4f24-b900-67f462ab1b76" source="2cb1e761-9b3a-4633-9390-978320342499" target="db26160b-1d24-4579-aa60-82fa92dd4872">
+																			<trigger>
+																				<Trigger uuid="a69903b0-42e0-4486-b7fb-ea1fae23ea4f" event="e89ec62c-262e-4aea-ae70-88ef99683a75"/>
+																			</trigger>
+																		</Transition>
+																		<Transition uuid="5cc0a8fe-a628-468a-a125-d8b1c4659e4c" source="db26160b-1d24-4579-aa60-82fa92dd4872" target="ceac8ee6-28e1-4b97-9ef1-52ff58432166">
+																			<trigger>
+																				<Trigger uuid="468e395a-31c1-4ae0-9d48-75ae89e38acc" event="333e85c6-f563-45be-a033-442733b58b6a"/>
+																			</trigger>
+																		</Transition>
+																	</transition>
+																</Region>
+															</region>
+															<entry>
+																<Activity uuid="7b1cc9eb-157f-441d-ac67-3323ba67053a" name="OnEntryOperating" visibility="public" specification="cc88021b-a173-4b61-b25c-4ffb11d7f3fa"/>
+															</entry>
+															<exit>
+																<Activity uuid="accafe39-7a0d-4b6c-b62f-6f3ad705d0d7" name="OnExitOperating" visibility="public" specification="c7611f14-aef1-4a96-80d9-9de4fe43bd76"/>
+															</exit>
+														</State>
+														<State uuid="c9cd7d62-2a02-4150-b845-1f9d370e5107" name="Off"/>
+														<State uuid="72d4f4f3-974f-4d13-b8a1-3da4a16aa919" name="Standby">
+															<entry>
+																<Activity uuid="3fafabf3-7438-4a85-b5cf-2f79c1cebad1" name="OnEntryStandby" visibility="public" specification="8590d83a-ddd1-4cc4-982b-006b9dddff6a"/>
+															</entry>
+															<exit>
+																<Activity uuid="865b7490-14bb-4103-9e62-f99304aaed66" name="OnExitStandby" visibility="public" specification="6ae45cbf-0604-4c25-af05-b7f1d4f72e4f"/>
+															</exit>
+														</State>
+														<Pseudostate kind="fork" uuid="8e657acd-a39e-40d2-9872-148aeb6d985d"/>
+														<Pseudostate kind="fork" uuid="6645ec29-22b5-4275-86ae-aeaa86f9780c"/>
+													</subvertex>
+													<transition>
+														<Transition uuid="e35a5c29-c3c2-428b-aa64-9fa396b46a5a" source="1a55feaa-af45-4499-86fc-d7f148c457e0" target="c9cd7d62-2a02-4150-b845-1f9d370e5107"/>
+														<Transition uuid="39592217-8ee2-4e6f-a27c-28014d008ceb" source="c5404a5d-f2e6-45db-b97c-f9c77efe7a97" target="c9cd7d62-2a02-4150-b845-1f9d370e5107">
+															<effect>
+																<Activity uuid="eb6b3615-4029-4602-a6a9-9215fd24a6b6" name="effect" visibility="public" specification="dd114946-4cee-460a-b2fa-f5a2f7d4f73e"/>
+															</effect>
+															<trigger>
+																<Trigger uuid="33afcbd3-5a08-4e3b-bcd4-33384ebe858a" event="e7da6b3b-855f-49a3-b496-9c404b3c6831"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="47a93e38-e75a-480a-aebe-d4e9e421659e" source="c5404a5d-f2e6-45db-b97c-f9c77efe7a97" target="72d4f4f3-974f-4d13-b8a1-3da4a16aa919">
+															<trigger>
+																<Trigger uuid="ba6c4462-dc29-40fd-9f21-17213cc9aaff" event="67d55dd3-3ca8-46b3-b4ab-6f5c636eb3a5"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="a069b368-7478-46ff-8431-69744e3bd74b" source="72d4f4f3-974f-4d13-b8a1-3da4a16aa919" target="8e657acd-a39e-40d2-9872-148aeb6d985d">
+															<trigger>
+																<Trigger uuid="403d2384-fc02-449b-a300-6ebc2efe0e81" event="373e258e-bb81-49df-a449-139055c4dfc5"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="8bb90f74-b77f-4e9e-b989-61b687042e0e" source="8e657acd-a39e-40d2-9872-148aeb6d985d" target="d52d7d05-6990-4c93-9793-be45cf200d29"/>
+														<Transition uuid="a63f1f11-372c-4b83-9a55-f89655953b47" source="8e657acd-a39e-40d2-9872-148aeb6d985d" target="207031f2-882a-452e-b2b5-cf21d195a86e"/>
+														<Transition uuid="c11a6d75-ed56-4166-b18a-2eb979981e00" source="c9cd7d62-2a02-4150-b845-1f9d370e5107" target="6645ec29-22b5-4275-86ae-aeaa86f9780c">
+															<trigger>
+																<Trigger uuid="8f2f7c5a-32e8-4be9-83d1-64cc640c628b" event="8eabac65-07ff-4f96-9406-9adade86228b"/>
+															</trigger>
+														</Transition>
+														<Transition uuid="678cc847-2f42-4c67-8a77-5317ed123ac7" source="6645ec29-22b5-4275-86ae-aeaa86f9780c" target="ceac8ee6-28e1-4b97-9ef1-52ff58432166"/>
+														<Transition uuid="82e2bb57-d466-4da0-b4cd-e3cc46087ace" source="6645ec29-22b5-4275-86ae-aeaa86f9780c" target="1aa18c71-ffa2-4422-905a-047953acdfd8"/>
+													</transition>
+												</Region>
+											</region>
+										</StateMachine>
+									</ownedBehavior>
+									<nestedClassifier>
+										<Enumeration uuid="c484cd69-0cdb-4524-aee6-d87ab679e23c" name="TStateId" visibility="public" usedForCodeSyncronization="true">
+											<ownedLiteral>
+												<EnumerationLiteral uuid="a37cd329-e51c-4ef6-96b0-2394c1f85f3d" name="AirCondition_Root" visibility="public"/>
+												<EnumerationLiteral uuid="76d8f3f4-b67c-4990-b5b3-671c475e6283" name="AirCondition_MainRegion_Operating" visibility="public"/>
+												<EnumerationLiteral uuid="f5d911ee-3e9a-48f0-b0ad-261113282873" name="AirCondition_MainRegion_Operating_RegionMode_Heater" visibility="public"/>
+												<EnumerationLiteral uuid="baaab8e3-90ff-4c24-ab72-398c2eddad83" name="AirCondition_MainRegion_Operating_RegionMode_Cooler" visibility="public"/>
+												<EnumerationLiteral uuid="2350ac17-5fe8-4de3-b107-2f57470b8589" name="AirCondition_MainRegion_Operating_RegionSpeed_High" visibility="public"/>
+												<EnumerationLiteral uuid="286f87af-9854-406e-9b4d-2cc5fe5c3067" name="AirCondition_MainRegion_Operating_RegionSpeed_Off" visibility="public"/>
+												<EnumerationLiteral uuid="141beabc-393d-4e3a-812c-cbdec737fd1b" name="AirCondition_MainRegion_Operating_RegionSpeed_Low" visibility="public"/>
+												<EnumerationLiteral uuid="14498fec-a41b-4316-b707-32f556a54344" name="AirCondition_MainRegion_Off" visibility="public"/>
+												<EnumerationLiteral uuid="6c381b16-d8ae-4e89-89de-1d12bcbb923b" name="AirCondition_MainRegion_Standby" visibility="public"/>
+											</ownedLiteral>
+										</Enumeration>
+										<Interface uuid="67b90e2c-9ca1-4992-a517-607040a716aa" name="IState" visibility="public" usedForCodeSyncronization="true">
+											<ownedOperation>
+												<Operation uuid="4d898d59-28f1-4ca5-a9ae-6fe917b1610e" name="getName" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="47b65634-29ec-4127-b0b1-b3018477693f" name="return" direction="return" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="737d9c85-744b-4b6b-a916-d2f493f5ed2e" name="getId" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="9e42fef7-24a1-4e26-956d-d63ffeec982d" name="return" direction="return" type="c484cd69-0cdb-4524-aee6-d87ab679e23c"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="fe3213f1-9ad1-4c9f-841b-bec241b08af0" name="getRegions" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="4e985643-5a29-47fb-be29-9aa24675da0f" name="return" direction="return" type="68a28126-ab9a-4319-9671-2b1d6b04dfaa">
+															<lowerValue>
+																<LiteralString uuid="a2ce5962-c54c-4701-8733-9878a09de6ff" visibility="public" value="*"/>
+															</lowerValue>
+															<upperValue>
+																<LiteralString uuid="597499ce-a438-46fe-af4f-00de47caf9ab" visibility="public" value="*"/>
+															</upperValue>
+														</Parameter>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Interface>
+										<Interface uuid="68a28126-ab9a-4319-9671-2b1d6b04dfaa" name="IRegion" visibility="public" usedForCodeSyncronization="true">
+											<ownedOperation>
+												<Operation uuid="5c2065af-f6c5-4cf9-afd1-2a2ea77a9b6d" name="getName" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="940bfd94-1277-482c-aee6-f38fd49cde68" name="return" direction="return" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="0f61fe3c-e210-4c09-b540-a5ed7e4f2c83" name="getStates" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="bacafa67-306a-46d9-b197-1cb5d6e26710" name="return" direction="return" type="67b90e2c-9ca1-4992-a517-607040a716aa">
+															<lowerValue>
+																<LiteralString uuid="b46c0327-f732-4059-87fa-ea15e995656f" visibility="public" value="*"/>
+															</lowerValue>
+															<upperValue>
+																<LiteralString uuid="fa7ab3d9-e842-4cfd-91ba-096891044949" visibility="public" value="*"/>
+															</upperValue>
+														</Parameter>
+													</ownedParameter>
+												</Operation>
+												<Operation uuid="2c7125da-bd73-4178-9078-8aba4bb91e79" name="getCurrentState" visibility="public">
+													<ownedParameter>
+														<Parameter uuid="b0f20447-718d-4402-b39c-b1bcb0f8231f" name="return" direction="return" type="67b90e2c-9ca1-4992-a517-607040a716aa"/>
+													</ownedParameter>
+												</Operation>
+											</ownedOperation>
+										</Interface>
+									</nestedClassifier>
+									<ownedOperation>
+										<Operation uuid="831c6732-ef7b-4660-89b9-10bd5f958943" name="powerButton" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="bf1bfa76-60bd-4e5e-b37e-4b88814a6288" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="0570f5bb-4939-4490-b2c7-668ecd78652f" name="speedSelect" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="175bf486-8ad6-42f6-8fae-194492b8068a" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="53e14dcc-1413-4ddf-becf-b7236d02a650" name="modeSelect" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="f1b12193-806b-4df2-bbdc-bf75fd6eea59" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="c8a08ec3-d3fb-4657-afd0-1da419756a03" name="standbyButton" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="2b47e1df-29a9-41c2-b419-d921aff23258" name="return" direction="return" type="5281ff9f-1b8c-4bf7-9b56-9003e2791461"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="cc88021b-a173-4b61-b25c-4ffb11d7f3fa" name="OnEntryOperating" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="15597cb6-561d-4977-8c78-cd94cc8b65aa" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="c7611f14-aef1-4a96-80d9-9de4fe43bd76" name="OnExitOperating" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="4dbdd12e-02b1-4ea5-a729-71dccf8a976a" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="625eeb9b-9b68-4c66-becf-9bdd10847d13" name="OnEntryHeater" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="ecd53bb7-c59b-429c-90da-18ca5512a426" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="ed508cf1-7fd0-4542-afc0-2aa4b7e981ce" name="OnExitHeater" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="d518a6ae-50d3-4b7f-97e8-b7469142f986" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="7a7ecefa-c973-43b0-acf0-d156b5656b47" name="OnEntryCooler" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="40a7e165-3030-4f0b-b8f3-bcfd8018ad57" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="00777f49-fd83-4624-9cd8-191ad2d388d9" name="OnExitCooler" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="be6cfd5a-2b09-412a-a704-0213de714ddc" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="8590d83a-ddd1-4cc4-982b-006b9dddff6a" name="OnEntryStandby" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="90bd45f3-54a6-4fd9-a0ad-5722f6ea2674" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="6ae45cbf-0604-4c25-af05-b7f1d4f72e4f" name="OnExitStandby" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="4665bc31-f1e5-4801-b4ac-4f1e4a8b0295" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="dd114946-4cee-460a-b2fa-f5a2f7d4f73e" name="On_Off_Operating_Effect" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="51aa25b6-9b7c-4cb4-9c44-c9f0edce2e0c" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+										<Operation uuid="8a69389a-97f0-41a4-a089-b3f7c59105f1" name="OnDebugMessage" visibility="public">
+											<ownedParameter>
+												<Parameter uuid="dcd15763-19b0-4f5b-bf79-d6b6dff6c0ea" name="str" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+												<Parameter uuid="532bdc18-0f36-4681-9f39-5d17bf9f4a7c" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+								<CallEvent uuid="8eabac65-07ff-4f96-9406-9adade86228b" visibility="public" operation="831c6732-ef7b-4660-89b9-10bd5f958943"/>
+							</packagedElement>
+						</Package>
+						<Class uuid="3f7535e2-83ba-43f6-a675-5036b913566f" name="STMTester" visibility="public" usedForCodeSyncronization="true">
+							<codeFileName>
+								<CodeFileName name="..\src\STMTester.java"/>
+							</codeFileName>
+							<appliedStereotype>
+								<StereotypeApplication uuid="7d5667bc-e27f-490a-a1e6-054057781c74" classifier="00061102-7512-11d9-86f2-000476a22f44">
+									<slot>
+										<Slot uuid="19c0f0cd-581c-4b03-90ce-25904995a061" definingFeature="00071102-7512-11d9-86f2-000476a22f44">
+											<value>
+												<LiteralString uuid="7ab724c4-2110-4f2a-8d35-101f610eecca" visibility="public" value="SuppressWarnings(&quot;serial&quot;)"/>
+											</value>
+										</Slot>
+									</slot>
+								</StereotypeApplication>
+							</appliedStereotype>
+							<generalization>
+								<Generalization uuid="c531ba81-9c87-49c5-a002-2f3468ad6a43" general="14ff7b8b-7232-4dd4-b841-ae1b42816e8b"/>
+							</generalization>
+							<ownedAttribute>
+								<Property uuid="8b261a5a-1949-41a4-961c-da3bf6f80fa9" name="m_STM" visibility="private" type="4ca30c7c-91ad-4269-947b-05941e012cd1">
+									<defaultValue>
+										<LiteralString uuid="0ab2a51e-7a3b-4f1a-a9e8-d0674213aa78" visibility="public" value="new MySTM()"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="8811fe9c-546f-4ae4-bc2c-d9d8b44b3644" name="m_nEventCounter" visibility="private" type="308d9740-87d8-4fa8-91c3-85e1c8a42328">
+									<defaultValue>
+										<LiteralString uuid="3ab47d8a-30bb-4631-896d-d3eca43eb23e" visibility="public" value="0"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="9a683739-c9a2-42fd-8ce7-4cb2f1bc4fbf" name="jScrollPane1" visibility="private" type="29d5a605-9353-4347-b3ea-1e743b08d041"/>
+								<Property uuid="81bc8568-968f-48d3-b389-b9641244e8d3" name="jScrollPane2" visibility="private" type="29d5a605-9353-4347-b3ea-1e743b08d041"/>
+								<Property uuid="bef13221-7073-4104-841c-314898137e01" name="jSplitPane1" visibility="private" type="7e44f505-1563-40f8-b6cb-a23dc62036a2"/>
+								<Property uuid="44433683-62f8-458c-9152-2e05aeb7168c" name="m_CurrentStateTree" visibility="private" type="b6d4d8fb-68ad-41d5-8de3-6a384112dc21"/>
+								<Property uuid="4aa494c4-57ba-418f-8d30-db44c82e4325" name="m_DebugOutputTextBox" visibility="private" type="4c1ea993-1861-4c98-a479-43f896f3fb02"/>
+								<Property uuid="7a6da0d4-c593-4f42-a496-7bfdcf6c8072" name="m_ToolBar" visibility="private" type="a2fc0ec3-8d54-48a6-a7e8-5d3626dbf81a"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class uuid="4ca30c7c-91ad-4269-947b-05941e012cd1" name="MySTM" visibility="protected" usedForCodeSyncronization="true" DocComment="f1843b7e-14e6-4ee1-a737-36da96f3f3f4">
+									<ownedComment>
+										<Comment uuid="f1843b7e-14e6-4ee1-a737-36da96f3f3f4" body="&#13; derive from generated controller class to customize behavior, implement guard conditions,&#13; entry/exit/do actions, forward transition effects, handle debug messages...&#13;">
+											<annotatedElement idref="4ca30c7c-91ad-4269-947b-05941e012cd1"/>
+										</Comment>
+									</ownedComment>
+									<generalization>
+										<Generalization uuid="22800711-03f6-4b04-af7f-1d1bf70f17a1" general="b830a3e0-a0ed-4c39-98f4-7f65f8a47c18"/>
+									</generalization>
+									<ownedAttribute>
+										<Property uuid="3c1ff977-9104-4651-a790-9b94258f8e8e" name="m_sDebugMessage" visibility="public" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<defaultValue>
+												<LiteralString uuid="868dcf94-ad92-4a32-ab4f-44915eb5d473" visibility="public" value="&quot;&quot;"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation uuid="b87c2d03-8915-410b-ad1f-309e63ee6997" name="OnDebugMessage" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="1c4383fb-65ab-4188-bf0e-2d1034f3250e" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="dc8febaa-b9fa-4575-bee8-cc0dea87b404" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="8abf4db1-d047-44cb-bd2b-ac8f149f164a" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="b62e8b1e-8ced-4571-bc67-fa2aed658f5f" name="str" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+												<Parameter uuid="2205cbf0-2d9d-40eb-afba-46f2787c840f" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation uuid="8cec54e4-1ddb-46f7-912b-5882681e6c94" name="STMTester" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication uuid="16852024-bee2-4323-84f7-ff8fe0dbea8a" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+									</appliedStereotype>
+								</Operation>
+								<Operation uuid="f7be20ac-3c51-48d4-a14a-ebbd823069b8" name="UpdateDisplay" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="578d9f70-437f-4863-af84-a7c88d277c5c" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="51ae26f3-5a81-4564-8238-db9a88f33a17" name="UpdateCurrentStateTree" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="bd3fedcd-b2ed-4962-bd58-d358a910db88" name="state" type="67b90e2c-9ca1-4992-a517-607040a716aa"/>
+										<Parameter uuid="33baf88b-ec6a-4465-a123-6aee5aaa058c" name="node" type="913c916e-dcee-410b-a3f6-d08a96c82f5c"/>
+										<Parameter uuid="811004c0-ea8b-4c61-ba0c-577c541ec6d2" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="ce154a3e-9a5e-410e-9664-554b74087c3b" name="initComponents" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="880ca368-61b4-4b0d-ba9a-f26a6456f6fe" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="c88c1ce7-8749-4375-b3f4-a1361fe0912e" name="main" visibility="public" isStatic="true">
+									<ownedParameter>
+										<Parameter uuid="28cc64f3-5edd-4f1d-ab1d-b5c370a9b67f" name="args" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<lowerValue>
+												<LiteralString uuid="1da12cb9-bdac-4f22-9335-f4a061272951" visibility="public" value="*"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="0b688b31-cca3-4542-89e8-5bf6990e2b65" visibility="public" value="*"/>
+											</upperValue>
+										</Parameter>
+										<Parameter uuid="18ad9fad-278f-413e-be90-5d6d195a29ab" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+						<Dependency uuid="c318dbd9-9259-401f-b86b-945e48ebc8f8" visibility="public">
+							<supplier idref="00000102-7510-11d9-86f2-000476a22f44"/>
+							<client idref="baa20f6d-ecc8-4d4c-98c8-d361a6294c92"/>
+						</Dependency>
+						<Dependency uuid="ce5767b1-7284-4621-80ad-160e0f3a829a" visibility="public">
+							<supplier idref="00000102-7510-11d9-86f2-000476a22f44"/>
+							<client idref="53a81225-55ac-4696-acc3-bd66d378bfcb"/>
+						</Dependency>
+						<Dependency uuid="c6fdcffe-5be7-40f6-b13d-eaa15dd49459" visibility="public">
+							<supplier idref="00000004-7510-11d9-86f2-000476a22f44"/>
+							<client idref="baa20f6d-ecc8-4d4c-98c8-d361a6294c92"/>
+						</Dependency>
+						<Association uuid="8eb40c96-555c-4081-8752-54d5adffd6d5" visibility="public">
+							<memberEnd idref="8b261a5a-1949-41a4-961c-da3bf6f80fa9"/>
+							<ownedEnd>
+								<Property uuid="d4e9f4ae-c4d5-42cd-b6cd-42c5fc948861" type="3f7535e2-83ba-43f6-a675-5036b913566f"/>
+							</ownedEnd>
+						</Association>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication uuid="c00a935b-0c0f-4a63-972e-576ba06d00fe" appliedProfile="00000102-7510-11d9-86f2-000476a22f44"/>
+					</profileApplication>
+				</Package>
+				<Package uuid="00000004-7510-11d9-86f2-000476a22f44" name="Unknown Externals" visibility="public" editable="false">
+					<packagedElement>
+						<Class uuid="d95b43b0-037d-4ede-8de7-6f8b7157bf66" name="String" visibility="public"/>
+						<Class uuid="913c916e-dcee-410b-a3f6-d08a96c82f5c" name="DefaultMutableTreeNode" visibility="public"/>
+						<Class uuid="29d5a605-9353-4347-b3ea-1e743b08d041" name="javax.swing.JScrollPane" visibility="public"/>
+						<Class uuid="7e44f505-1563-40f8-b6cb-a23dc62036a2" name="javax.swing.JSplitPane" visibility="public"/>
+						<Class uuid="b6d4d8fb-68ad-41d5-8de3-6a384112dc21" name="javax.swing.JTree" visibility="public"/>
+						<Class uuid="4c1ea993-1861-4c98-a479-43f896f3fb02" name="javax.swing.JTextArea" visibility="public"/>
+						<Class uuid="a2fc0ec3-8d54-48a6-a7e8-5d3626dbf81a" name="javax.swing.JToolBar" visibility="public"/>
+						<Class uuid="14ff7b8b-7232-4dd4-b841-ae1b42816e8b" name="javax.swing.JFrame" visibility="public"/>
+					</packagedElement>
+				</Package>
+				<Profile href="Java Profile.ump#00000102-7510-11d9-86f2-000476a22f44" editable="false"/>
+			</packagedElement>
+		</Package>
+	</Model>
+	<Diagrams>
+		<RootElement uuid="00000002-7510-11d9-86f2-000476a22f44">
+			<guiRootGuiDiagram>
+				<StateMachineDiagram uuid="597c25bf-f755-4070-bd77-d4cad47dd8a0" name="AirConditionStateMachineDiagram" guiDiagramLinkedOwner="11e3fd12-9042-48bf-a23c-57a9a8e94d76">
+					<style snaptogrid="0"/>
+					<guiDiagramGuiLink>
+						<ConstrainedNode uuid="5a587ae2-a137-44fa-9aa1-99ad2c324645" constrainingAreaIndex="-1" guiLink_Element="1a55feaa-af45-4499-86fc-d7f148c457e0">
+							<nodeRect Left="21" Top="75" Right="41" Bottom="95"/>
+							<attached>
+								<AttachedNode uuid="57ba56cd-bc80-40dc-8e08-56635c488dde" attachedNodeKind="13">
+									<nodeRect Left="31" Top="105" Right="45" Bottom="120"/>
+								</AttachedNode>
+							</attached>
+						</ConstrainedNode>
+						<SeparatedNodeLink uuid="2fea2efb-9e55-4804-8a7e-87ff73c8845f" guiLink_Element="c5404a5d-f2e6-45db-b97c-f9c77efe7a97">
+							<style autosize="0"/>
+							<nodeRect Left="210" Top="-60" Right="525" Bottom="375"/>
+							<Separators>
+								<separator position="241"/>
+							</Separators>
+							<guiNodeLinkGuiNodeLink>
+								<SeparatedNodeLink uuid="e7985694-1be4-43fe-bcdb-5c168662f8ae" guiLink_Element="2cb1e761-9b3a-4633-9390-978320342499">
+									<nodeRect Left="420" Top="315" Right="471" Bottom="348"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="20ef8489-7245-4748-b9b0-ba40941c8e1d" guiLink_Element="db26160b-1d24-4579-aa60-82fa92dd4872">
+									<nodeRect Left="255" Top="315" Right="306" Bottom="348"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="58c044dc-4c59-44a3-a10d-be738bcca838" guiLink_Element="ceac8ee6-28e1-4b97-9ef1-52ff58432166">
+									<nodeRect Left="330" Top="210" Right="381" Bottom="243"/>
+								</SeparatedNodeLink>
+								<ConstrainedNode uuid="b47329f7-5bca-4003-8951-5f6f168d1fcf" constrainingAreaIndex="-1" guiLink_Element="f20be5b3-42b1-4ac4-a574-3f74613c975c">
+									<nodeRect Left="225" Top="270" Right="245" Bottom="290"/>
+								</ConstrainedNode>
+								<SeparatedNodeLink uuid="ecb2f138-1e0f-408b-865f-d3c291411796" guiLink_Element="1aa18c71-ffa2-4422-905a-047953acdfd8">
+									<style autosize="1"/>
+									<nodeRect Left="285" Right="424" Bottom="69"/>
+								</SeparatedNodeLink>
+								<SeparatedNodeLink uuid="ab28b562-99ba-42be-9696-c3ed6a9e6022" guiLink_Element="d5865d86-299b-4414-ba7d-a1ba7223706f">
+									<style autosize="0"/>
+									<nodeRect Left="285" Top="105" Right="424" Bottom="174"/>
+								</SeparatedNodeLink>
+								<ConstrainedNode uuid="2ad08002-96ff-4c0f-b85b-aea090c1cab9" constrainingAreaIndex="-1" guiLink_Element="d52d7d05-6990-4c93-9793-be45cf200d29">
+									<nodeRect Left="480" Top="135" Right="500" Bottom="155"/>
+								</ConstrainedNode>
+								<ConstrainedNode uuid="bf15826f-26d5-45f1-a515-4e2388450522" constrainingAreaIndex="-1" guiLink_Element="207031f2-882a-452e-b2b5-cf21d195a86e">
+									<nodeRect Left="480" Top="210" Right="500" Bottom="230"/>
+								</ConstrainedNode>
+								<ConstrainedNode uuid="e93683e2-00d2-4fa7-a148-e09332fff920" constrainingAreaIndex="-1" guiLink_Element="81f53ec2-4583-4a14-981c-cbc88862f2bf">
+									<nodeRect Left="460" Top="18" Right="480" Bottom="38"/>
+								</ConstrainedNode>
+							</guiNodeLinkGuiNodeLink>
+						</SeparatedNodeLink>
+						<SeparatedNodeLink uuid="c6ff3852-8e8e-4187-943d-aa83a9cffd5b" guiLink_Element="c9cd7d62-2a02-4150-b845-1f9d370e5107">
+							<style autosize="0"/>
+							<nodeRect Left="-15" Top="135" Right="75" Bottom="204"/>
+						</SeparatedNodeLink>
+						<LineLink uuid="b5fb0d4d-75f7-4f92-b428-28fb21f9146e" guiLink_Element="e35a5c29-c3c2-428b-aa64-9fa396b46a5a" guiLineLink_LineBegin="5a587ae2-a137-44fa-9aa1-99ad2c324645" guiLineLink_LineEnd="c6ff3852-8e8e-4187-943d-aa83a9cffd5b">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="8c54082f-0156-4c6f-95d8-953327d23562">
+									<pos X="30" Y="114"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="51717aaa-c90c-4fcd-9acf-990c0af5a2fc" alignment="3">
+									<pos X="30" Y="94"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="df9fd445-72ca-4d8b-ac94-2c6e224e3c00" alignment="2">
+									<pos X="30" Y="135"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="b913e129-59b0-4082-a340-38234d98d828" guiLink_Element="39592217-8ee2-4e6f-a27c-28014d008ceb" guiLineLink_LineBegin="2fea2efb-9e55-4804-8a7e-87ff73c8845f" guiLineLink_LineEnd="c6ff3852-8e8e-4187-943d-aa83a9cffd5b">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="be40522c-d583-4f94-b78b-d446553ac161">
+									<pos X="57" Y="330"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="c2b52928-37fc-4689-ba79-d55a124a54d2" textLabel="23" guiTextLabel_Element="39592217-8ee2-4e6f-a27c-28014d008ceb">
+											<pos X="-72" Y="7"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="97a7ce99-dd64-41d0-9510-cfa55c33f197" alignment="4">
+									<pos X="210" Y="330"/>
+								</EndWaypoint>
+								<Waypoint uuid="b6d9ec75-64ed-4469-9970-d401f126e211">
+									<pos X="30" Y="330"/>
+								</Waypoint>
+								<EndWaypoint uuid="04b9b32e-32e9-4ee9-8b82-58bce682530b" alignment="1">
+									<pos X="30" Y="204"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="e7799585-00fc-4474-b931-904d200947fc" guiLink_Element="c3e4f47f-b725-49c6-bfb7-1a75db5f4cb0" guiLineLink_LineBegin="b47329f7-5bca-4003-8951-5f6f168d1fcf" guiLineLink_LineEnd="20ef8489-7245-4748-b9b0-ba40941c8e1d">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="da5da8d9-64d3-430a-98e5-f8d1df793aa2">
+									<pos X="253" Y="301"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="faf33f9b-2240-49a5-a4b5-dc9124f79448" alignment="3">
+									<pos X="241" Y="287"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="9f7d3db2-030e-4c0a-b6ca-3dc967fac4b9" alignment="2">
+									<pos X="266" Y="317"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="ffd6d1c1-6d60-455c-8b74-bb659060351f" guiLink_Element="d72555b4-7429-42f2-accf-1c50ada237f9" guiLineLink_LineBegin="58c044dc-4c59-44a3-a10d-be738bcca838" guiLineLink_LineEnd="e7985694-1be4-43fe-bcdb-5c168662f8ae">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="6f3c1f78-f809-42c6-ac09-cc0a68986961">
+									<pos X="399" Y="279"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="710b769d-3dcc-4799-b08d-eb89aaf7ebcb" textLabel="23" guiTextLabel_Element="d72555b4-7429-42f2-accf-1c50ada237f9">
+											<pos X="3" Y="-18"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="4c6be78a-7386-4ed3-ad5a-55b5783bf4ca" alignment="4">
+									<pos X="369" Y="242"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="a83d29d7-dda7-4920-84c7-be44506b5c98" alignment="1">
+									<pos X="431" Y="317"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="512ab848-b1a5-4d0c-b721-8e103e0888cc" guiLink_Element="26e0e2d5-86ae-4f24-b900-67f462ab1b76" guiLineLink_LineBegin="e7985694-1be4-43fe-bcdb-5c168662f8ae" guiLineLink_LineEnd="20ef8489-7245-4748-b9b0-ba40941c8e1d">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="aaea0f4e-3e2e-4bc1-b2f0-28ac8ed2ca32">
+									<pos X="363" Y="331"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="dee73315-b39a-403a-a3dd-ed710a1faae6" textLabel="23" guiTextLabel_Element="26e0e2d5-86ae-4f24-b900-67f462ab1b76">
+											<pos X="-36" Y="-20"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="d2a50b82-195f-4bd1-a201-dc2a0db9b45a" alignment="4">
+									<pos X="420" Y="331"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="f1f29ee9-3a1c-4c73-9a15-666281328654" alignment="1">
+									<pos X="306" Y="331"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="75f30b80-266e-4a82-86e1-38828205cc9b" guiLink_Element="5cc0a8fe-a628-468a-a125-d8b1c4659e4c" guiLineLink_LineBegin="20ef8489-7245-4748-b9b0-ba40941c8e1d" guiLineLink_LineEnd="58c044dc-4c59-44a3-a10d-be738bcca838">
+							<style linestyle="0"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="aaffcb33-da53-4725-9d99-b36d62b03f29">
+									<pos X="318" Y="279"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="a0aa1d95-521e-475e-8249-6dab3c5bf137" textLabel="23" guiTextLabel_Element="5cc0a8fe-a628-468a-a125-d8b1c4659e4c">
+											<pos X="-65" Y="-24"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="547c8f23-202d-44bf-ada9-a9b755d2b5bb" alignment="1">
+									<pos X="292" Y="315"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="9d16f003-8123-4f56-b19c-37efda5eada9" alignment="4">
+									<pos X="344" Y="243"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="02024127-32a9-49d7-b94b-7417d96cb6b6" guiLink_Element="24397c52-9650-4fbb-b90c-0e51856c9003" guiLineLink_LineBegin="ab28b562-99ba-42be-9696-c3ed6a9e6022" guiLineLink_LineEnd="ecb2f138-1e0f-408b-865f-d3c291411796">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="5264aa61-b5d5-4d13-a5c1-238298105526">
+									<pos X="365" Y="87"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="81cf461a-b19d-4e6e-be1f-007be4c6f79a" textLabel="23" guiTextLabel_Element="24397c52-9650-4fbb-b90c-0e51856c9003">
+											<pos X="8" Y="-7"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c4569204-1fca-49bb-9450-612d7b8476ca" alignment="2">
+									<pos X="365" Y="105"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="1f9a1b1c-9bfd-4c4b-9703-a726115503d5" alignment="3">
+									<pos X="365" Y="69"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="805a7044-dd6d-4271-8590-3fb5a32c826f" guiLink_Element="0084e401-50e0-488b-9cde-8e625a5713a3" guiLineLink_LineBegin="ecb2f138-1e0f-408b-865f-d3c291411796" guiLineLink_LineEnd="ab28b562-99ba-42be-9696-c3ed6a9e6022">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="944a2b75-dbcb-4174-b257-ce64218c7a86">
+									<pos X="325" Y="87"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="42b9e5ab-52ee-4826-adac-2ddb86f641a3" textLabel="23" guiTextLabel_Element="0084e401-50e0-488b-9cde-8e625a5713a3">
+											<pos X="-72" Y="-10"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="0266624a-f34a-4980-a5f9-e3d874742882" alignment="3">
+									<pos X="325" Y="69"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="ed364bcc-8cd2-4550-a023-7429e160c572" alignment="2">
+									<pos X="325" Y="105"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<SeparatedNodeLink uuid="ea396394-bfe4-4912-a4e8-c3925a6604e1" guiLink_Element="72d4f4f3-974f-4d13-b8a1-3da4a16aa919">
+							<nodeRect Left="680" Top="134" Right="827" Bottom="203"/>
+						</SeparatedNodeLink>
+						<LineLink uuid="9db3d44b-2391-43b0-b17e-40c532f1d5e6" guiLink_Element="47a93e38-e75a-480a-aebe-d4e9e421659e" guiLineLink_LineBegin="2fea2efb-9e55-4804-8a7e-87ff73c8845f" guiLineLink_LineEnd="ea396394-bfe4-4912-a4e8-c3925a6604e1">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="9398322b-2f48-4101-a5f5-c561bbddb49c">
+									<pos X="702" Y="330"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="4271613c-2386-4672-abd8-ac19c2532eaf" textLabel="23" guiTextLabel_Element="47a93e38-e75a-480a-aebe-d4e9e421659e">
+											<pos X="-48" Y="-22"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="efd1ceb6-42db-4096-bf78-17bb23760f99" alignment="1">
+									<pos X="525" Y="330"/>
+								</EndWaypoint>
+								<Waypoint uuid="d3c2681f-19b0-429a-ac43-59fd5739ecc2">
+									<pos X="753" Y="330"/>
+								</Waypoint>
+								<EndWaypoint uuid="a19fb971-eef5-4256-9de0-3b3eaa67c257" alignment="4">
+									<pos X="753" Y="203"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<ConstrainedNode uuid="d76932b4-5838-4187-b858-6179b41da852" constrainingAreaIndex="-1" guiLink_Element="8e657acd-a39e-40d2-9872-148aeb6d985d">
+							<style autosize="0"/>
+							<nodeRect Left="570" Top="135" Right="580" Bottom="240"/>
+						</ConstrainedNode>
+						<LineLink uuid="c984d7f8-1c78-405d-a9e9-49f262fdf94b" guiLink_Element="a069b368-7478-46ff-8431-69744e3bd74b" guiLineLink_LineBegin="ea396394-bfe4-4912-a4e8-c3925a6604e1" guiLineLink_LineEnd="d76932b4-5838-4187-b858-6179b41da852">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="54e890d6-2db2-4e86-bc8a-4355892e24ba">
+									<pos X="630" Y="174"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="32eef239-d2e6-4d15-8f58-9f5e98a8cee2" textLabel="23" guiTextLabel_Element="a069b368-7478-46ff-8431-69744e3bd74b">
+											<pos X="-39" Y="-23"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="4df8a020-6cbe-42e8-afc8-396bfb76f812" alignment="3">
+									<pos X="680" Y="174"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="19ebe42d-8b3e-4782-aefc-9f25bc41fba2" alignment="2">
+									<pos X="580" Y="174"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="dcf1c234-aaf4-4d77-88a0-2a8caaff1f9f" guiLink_Element="8bb90f74-b77f-4e9e-b989-61b687042e0e" guiLineLink_LineBegin="d76932b4-5838-4187-b858-6179b41da852" guiLineLink_LineEnd="2ad08002-96ff-4c0f-b85b-aea090c1cab9">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="230ca23c-66be-486e-8351-c7840bad9ab4">
+									<pos X="535" Y="144"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="f8e9a561-f6cf-49d3-8d13-60720ccda29d" alignment="4">
+									<pos X="570" Y="144"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="448f7da6-0c55-4a5e-bb2d-ce6393c02ca8" alignment="1">
+									<pos X="499" Y="144"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="c2819ad9-7a81-4b16-9895-0fcfc68a9f55" guiLink_Element="a63f1f11-372c-4b83-9a55-f89655953b47" guiLineLink_LineBegin="d76932b4-5838-4187-b858-6179b41da852" guiLineLink_LineEnd="bf15826f-26d5-45f1-a515-4e2388450522">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="d3746d4f-a499-42e2-9edb-752df4e0ba3d">
+									<pos X="535" Y="220"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="c9cfb3a5-8516-4634-8925-b1a8320b35ac" alignment="4">
+									<pos X="570" Y="220"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="4a194b50-d98d-487b-a425-3ff6a871574c" alignment="1">
+									<pos X="500" Y="220"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="7232c131-58df-414d-be92-e1da21d49445" guiLink_Element="e8f261fe-1397-4dec-bdce-440126328cef" guiLineLink_LineBegin="e93683e2-00d2-4fa7-a148-e09332fff920" guiLineLink_LineEnd="ecb2f138-1e0f-408b-865f-d3c291411796">
+							<style linestyle="1"/>
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="6f0418cd-6958-4c9d-ad7e-eacdf31b0c33">
+									<pos X="442" Y="26"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="e425957e-1288-455d-a05f-c558f22ab79a" alignment="4">
+									<pos X="460" Y="26"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="c8570fe6-5e4c-49ba-a8ca-ab64753f6518" alignment="1">
+									<pos X="424" Y="26"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<ConstrainedNode uuid="8c2fe044-fdb2-4dee-9902-28dbf1ae6ee3" constrainingAreaIndex="-1" guiLink_Element="6645ec29-22b5-4275-86ae-aeaa86f9780c">
+							<style autosize="0"/>
+							<nodeRect Left="150" Top="135" Right="160" Bottom="240"/>
+						</ConstrainedNode>
+						<LineLink uuid="ed670491-4f57-4fe8-92f4-9d64c517db80" guiLink_Element="c11a6d75-ed56-4166-b18a-2eb979981e00" guiLineLink_LineBegin="c6ff3852-8e8e-4187-943d-aa83a9cffd5b" guiLineLink_LineEnd="8c2fe044-fdb2-4dee-9902-28dbf1ae6ee3">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="b0ac03ad-3816-4fba-a161-6e87d98b7842">
+									<pos X="112" Y="174"/>
+									<guiTextLabelWaypoint_TextLabel>
+										<TextLabel uuid="db6bd43b-97db-430b-afda-228e1b9cfc21" textLabel="23" guiTextLabel_Element="c11a6d75-ed56-4166-b18a-2eb979981e00">
+											<pos X="-34" Y="-21"/>
+										</TextLabel>
+									</guiTextLabelWaypoint_TextLabel>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="f8f59f83-bd23-4d0f-b0d7-7a75a237b6eb" alignment="1">
+									<pos X="75" Y="174"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="f23ae2ff-7365-4dff-8fe5-d820f5f5bc41" alignment="4">
+									<pos X="150" Y="174"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="1047ad0b-9cf7-4c5b-a821-ab29d7715cab" guiLink_Element="678cc847-2f42-4c67-8a77-5317ed123ac7" guiLineLink_LineBegin="8c2fe044-fdb2-4dee-9902-28dbf1ae6ee3" guiLineLink_LineEnd="58c044dc-4c59-44a3-a10d-be738bcca838">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="1a2a8a8d-c80f-41cb-8f4f-2af4cad1ecd6">
+									<pos X="245" Y="224"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="02b49dca-a709-4472-9da0-fa954dbe13de" alignment="1">
+									<pos X="160" Y="224"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="254cb387-badb-418a-b325-0e25bcd74af1" alignment="4">
+									<pos X="330" Y="224"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<LineLink uuid="0fb17410-0b8c-425b-a800-024d3e2985b5" guiLink_Element="82e2bb57-d466-4da0-b4cd-e3cc46087ace" guiLineLink_LineBegin="8c2fe044-fdb2-4dee-9902-28dbf1ae6ee3" guiLineLink_LineEnd="ecb2f138-1e0f-408b-865f-d3c291411796">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="77b15252-ad24-4c22-8c38-402442894d80">
+									<pos X="186" Y="53"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="fd39e011-a2e8-4ea8-9f5b-999c644dcf14" alignment="1">
+									<pos X="160" Y="149"/>
+								</EndWaypoint>
+								<Waypoint uuid="99200479-095a-4ca1-a055-ac0797362eb4">
+									<pos X="186" Y="149"/>
+								</Waypoint>
+								<Waypoint uuid="8213b1a8-94f5-4a77-a62a-cf8d710b283d">
+									<pos X="186" Y="30"/>
+								</Waypoint>
+								<EndWaypoint uuid="ec3031ac-ea6f-461a-b97b-6efef4cfefe9" alignment="4">
+									<pos X="285" Y="30"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="10ca7027-86f9-43e4-873e-921b5f90ba8c" name="Default"/>
+					</guiDiagramLayer>
+				</StateMachineDiagram>
+				<ClassDiagram uuid="820444ad-b385-490c-b3c6-06cdaed7be38" name="TestSTMAirCondition" guiDiagramLinkedOwner="53a81225-55ac-4696-acc3-bd66d378bfcb">
+					<guiDiagramGuiLink>
+						<NodeLink uuid="73d7231a-fa9e-4e2e-b52d-e0618783f776" guiLink_Element="b830a3e0-a0ed-4c39-98f4-7f65f8a47c18">
+							<nodeRect Left="210" Top="30" Right="422" Bottom="406"/>
+						</NodeLink>
+						<NodeLink uuid="2bbe8105-df29-4698-87e3-64cacce4dd9a" guiLink_Element="68a28126-ab9a-4319-9671-2b1d6b04dfaa">
+							<nodeRect Left="495" Top="390" Right="706" Bottom="521"/>
+						</NodeLink>
+						<NodeLink uuid="e34c181e-f0e9-4b34-96af-41852dd3e533" guiLink_Element="c484cd69-0cdb-4524-aee6-d87ab679e23c">
+							<nodeRect Left="495" Right="782" Bottom="226"/>
+						</NodeLink>
+						<NodeLink uuid="abdf92e5-ca97-4cc2-b4ab-6d0e985fce73" guiLink_Element="67b90e2c-9ca1-4992-a517-607040a716aa">
+							<nodeRect Left="495" Top="240" Right="706" Bottom="371"/>
+						</NodeLink>
+						<NodeLink uuid="114b5fa3-ce71-4dee-a9aa-563c76efa566" guiLink_Element="4ca30c7c-91ad-4269-947b-05941e012cd1">
+							<style showatt="1" showop="1" taggedvalues="0"/>
+							<nodeRect Left="165" Top="465" Right="448" Bottom="560"/>
+							<attached>
+								<AttachedNode uuid="c9407d2a-0b49-4a8b-bd9b-84f0cfddf533">
+									<nodeRect Left="45" Top="480" Right="253" Bottom="517"/>
+								</AttachedNode>
+							</attached>
+						</NodeLink>
+						<LineLink uuid="6a60811b-3a70-4823-8cc4-7c85eac001fc" guiLink_Element="22800711-03f6-4b04-af7f-1d1bf70f17a1" guiLineLink_LineBegin="114b5fa3-ce71-4dee-a9aa-563c76efa566" guiLineLink_LineEnd="73d7231a-fa9e-4e2e-b52d-e0618783f776">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="0f160073-8300-4473-b615-db678bc158c8">
+									<pos X="303" Y="436"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="6a8f38a2-a7e5-4cd7-a0af-f75f39d1712e" alignment="2">
+									<pos X="303" Y="465"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="66329c3d-0f1c-4ed6-8d58-e1a6d7031c09" alignment="3">
+									<pos X="303" Y="406"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</LineLink>
+						<NodeLink uuid="8f4bea07-d130-447b-9df3-a43c51a95050" guiLink_Element="3f7535e2-83ba-43f6-a675-5036b913566f">
+							<style showatt="0" shownested="0" showop="0" taggedvalues="0"/>
+							<nodeRect Left="30" Top="495" Right="112" Bottom="532"/>
+							<attached>
+								<AttachedNode uuid="acc390b7-a596-40ad-afd3-bada9efa68a7">
+									<nodeRect Left="-75" Top="510" Right="139" Bottom="547"/>
+								</AttachedNode>
+							</attached>
+						</NodeLink>
+						<ContainmentLink uuid="f091f856-adbf-43d0-af0b-e148914216d7" guiLineLink_LineBegin="114b5fa3-ce71-4dee-a9aa-563c76efa566" guiLineLink_LineEnd="8f4bea07-d130-447b-9df3-a43c51a95050">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="a9ee38a8-230d-4976-a8f1-dd241a4c05fb">
+									<pos X="139" Y="506"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="0765cdbd-adc9-4c70-b276-fa2676be6c99" alignment="1">
+									<pos X="165" Y="506"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="81ec7c1a-af23-45ec-99df-faac8a179c62" alignment="4">
+									<pos X="112" Y="506"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="ceef2a77-84e2-48eb-b00b-60864943d433" guiLineLink_LineBegin="e34c181e-f0e9-4b34-96af-41852dd3e533" guiLineLink_LineEnd="73d7231a-fa9e-4e2e-b52d-e0618783f776">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="04be0b37-5a64-4de2-a9f6-c89f64e86ef7">
+									<pos X="459" Y="128"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="49c5c5f0-dbe4-43cc-8926-9317c306a5c6" alignment="1">
+									<pos X="495" Y="128"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="e25fa38d-7540-4482-b656-84600c56fe0b" alignment="4">
+									<pos X="422" Y="128"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="905fca72-391f-4737-8b3f-af281e6cfb0c" guiLineLink_LineBegin="abdf92e5-ca97-4cc2-b4ab-6d0e985fce73" guiLineLink_LineEnd="73d7231a-fa9e-4e2e-b52d-e0618783f776">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="2d576df1-efff-4347-a79c-fb9b764bf63b">
+									<pos X="459" Y="307"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="b7d2b56c-6c3c-4be9-9801-11b0b3e0bb26" alignment="1">
+									<pos X="495" Y="307"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="92f5c838-2f3b-42a4-9d05-8969409e6063" alignment="4">
+									<pos X="422" Y="307"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<ContainmentLink uuid="c7490a05-71f6-4012-b96b-2d92e58a9f83" guiLineLink_LineBegin="2bbe8105-df29-4698-87e3-64cacce4dd9a" guiLineLink_LineEnd="73d7231a-fa9e-4e2e-b52d-e0618783f776">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="9cf5e032-5586-4fc2-9e84-63f38f24e744">
+									<pos X="459" Y="406"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="9c6d3506-d610-4d75-b2ae-692cc0d04551" alignment="1">
+									<pos X="495" Y="406"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="10f78035-1304-462d-b53e-fb42c25f513f" alignment="4">
+									<pos X="422" Y="406"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</ContainmentLink>
+						<NodeLink uuid="d535752a-4fbc-49c8-be2e-020ab431ea4e" guiLink_Element="f1843b7e-14e6-4ee1-a737-36da96f3f3f4">
+							<nodeRect Left="75" Top="600" Right="536" Bottom="661"/>
+						</NodeLink>
+						<NoteLink uuid="4ef5e7a6-62fd-464b-9cf7-f7a93198256c" guiLineLink_LineBegin="d535752a-4fbc-49c8-be2e-020ab431ea4e" guiLineLink_LineEnd="114b5fa3-ce71-4dee-a9aa-563c76efa566">
+							<guiLineLink_LineMiddleWaypoint>
+								<MiddleWaypoint uuid="ee6e2147-c65c-44b0-af0d-518de1fee2bb">
+									<pos X="303" Y="580"/>
+								</MiddleWaypoint>
+							</guiLineLink_LineMiddleWaypoint>
+							<guiLineLinkWaypoint>
+								<EndWaypoint uuid="e22ce4d2-1382-408e-a69b-52c08ecc4c12" alignment="2">
+									<pos X="303" Y="600"/>
+								</EndWaypoint>
+								<EndWaypoint uuid="ef394aa3-85a0-498b-96b6-3644a4635d07" alignment="3">
+									<pos X="303" Y="560"/>
+								</EndWaypoint>
+							</guiLineLinkWaypoint>
+						</NoteLink>
+					</guiDiagramGuiLink>
+					<guiDiagramLayer>
+						<DiagramLayer uuid="37707801-9a05-4505-b1e4-24a0c53d8cc6" name="Default"/>
+					</guiDiagramLayer>
+				</ClassDiagram>
+			</guiRootGuiDiagram>
+		</RootElement>
+	</Diagrams>
+	<ModelHistory>
+		<Package uuid="00000001-7510-11d9-86f2-000476a22f44" name="Root" visibility="public">
+			<packagedElement>
+				<Package uuid="00000003-7510-11d9-86f2-000476a22f44" name="Component View" visibility="public">
+					<packagedElement>
+						<Component uuid="5672b966-00ba-42b4-bfd1-8b73a8e5ca63" name="project" visibility="public" usedForCodeSyncronization="true" codeLang="Java6.0 (1.6)" isCodeProjectFile="true" codeProjectFileOrDirectory="nbproject\project.xml">
+							<realization>
+								<ComponentRealization uuid="b0d02019-2e46-40fb-a295-4bfde8a144f7" visibility="public" realizingClassifier="b830a3e0-a0ed-4c39-98f4-7f65f8a47c18"/>
+								<ComponentRealization uuid="286adbe2-825f-40ec-93f7-307a3d9ff471" visibility="public" realizingClassifier="3f7535e2-83ba-43f6-a675-5036b913566f"/>
+							</realization>
+						</Component>
+					</packagedElement>
+				</Package>
+				<Package uuid="53a81225-55ac-4696-acc3-bd66d378bfcb" name="project" visibility="public">
+					<packagedElement>
+						<Package uuid="baa20f6d-ecc8-4d4c-98c8-d361a6294c92" name="AirCondition" visibility="public">
+							<appliedStereotype>
+								<StereotypeApplication uuid="3ea54b14-54b9-4cf3-a584-5f9011d2451f" classifier="c898c1a3-547b-4a84-ad06-908fd57678c2"/>
+							</appliedStereotype>
+							<packagedElement>
+								<Class uuid="b830a3e0-a0ed-4c39-98f4-7f65f8a47c18" name="AirConditionController" visibility="public">
+									<nestedClassifier>
+										<Interface uuid="67b90e2c-9ca1-4992-a517-607040a716aa" name="IState" visibility="public"/>
+									</nestedClassifier>
+								</Class>
+							</packagedElement>
+						</Package>
+						<Class uuid="3f7535e2-83ba-43f6-a675-5036b913566f" name="STMTester" visibility="public" usedForCodeSyncronization="true">
+							<codeFileName>
+								<CodeFileName name="..\src\STMTester.java"/>
+							</codeFileName>
+							<appliedStereotype>
+								<StereotypeApplication uuid="7d5667bc-e27f-490a-a1e6-054057781c74" classifier="00061102-7512-11d9-86f2-000476a22f44">
+									<slot>
+										<Slot uuid="19c0f0cd-581c-4b03-90ce-25904995a061" definingFeature="00071102-7512-11d9-86f2-000476a22f44">
+											<value>
+												<LiteralString uuid="7ab724c4-2110-4f2a-8d35-101f610eecca" visibility="public" value="SuppressWarnings(&quot;serial&quot;)"/>
+											</value>
+										</Slot>
+									</slot>
+								</StereotypeApplication>
+							</appliedStereotype>
+							<generalization>
+								<Generalization uuid="c531ba81-9c87-49c5-a002-2f3468ad6a43" general="14ff7b8b-7232-4dd4-b841-ae1b42816e8b"/>
+							</generalization>
+							<ownedAttribute>
+								<Property uuid="8b261a5a-1949-41a4-961c-da3bf6f80fa9" name="m_STM" visibility="private" type="4ca30c7c-91ad-4269-947b-05941e012cd1">
+									<defaultValue>
+										<LiteralString uuid="0ab2a51e-7a3b-4f1a-a9e8-d0674213aa78" visibility="public" value="new MySTM()"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="8811fe9c-546f-4ae4-bc2c-d9d8b44b3644" name="m_nEventCounter" visibility="private" type="308d9740-87d8-4fa8-91c3-85e1c8a42328">
+									<defaultValue>
+										<LiteralString uuid="3ab47d8a-30bb-4631-896d-d3eca43eb23e" visibility="public" value="0"/>
+									</defaultValue>
+								</Property>
+								<Property uuid="9a683739-c9a2-42fd-8ce7-4cb2f1bc4fbf" name="jScrollPane1" visibility="private" type="29d5a605-9353-4347-b3ea-1e743b08d041"/>
+								<Property uuid="81bc8568-968f-48d3-b389-b9641244e8d3" name="jScrollPane2" visibility="private" type="29d5a605-9353-4347-b3ea-1e743b08d041"/>
+								<Property uuid="bef13221-7073-4104-841c-314898137e01" name="jSplitPane1" visibility="private" type="7e44f505-1563-40f8-b6cb-a23dc62036a2"/>
+								<Property uuid="44433683-62f8-458c-9152-2e05aeb7168c" name="m_CurrentStateTree" visibility="private" type="b6d4d8fb-68ad-41d5-8de3-6a384112dc21"/>
+								<Property uuid="4aa494c4-57ba-418f-8d30-db44c82e4325" name="m_DebugOutputTextBox" visibility="private" type="4c1ea993-1861-4c98-a479-43f896f3fb02"/>
+								<Property uuid="7a6da0d4-c593-4f42-a496-7bfdcf6c8072" name="m_ToolBar" visibility="private" type="a2fc0ec3-8d54-48a6-a7e8-5d3626dbf81a"/>
+							</ownedAttribute>
+							<nestedClassifier>
+								<Class uuid="4ca30c7c-91ad-4269-947b-05941e012cd1" name="MySTM" visibility="protected" usedForCodeSyncronization="true" DocComment="f1843b7e-14e6-4ee1-a737-36da96f3f3f4">
+									<ownedComment>
+										<Comment uuid="f1843b7e-14e6-4ee1-a737-36da96f3f3f4" body="&#13; derive from generated controller class to customize behavior, implement guard conditions,&#13; entry/exit/do actions, forward transition effects, handle debug messages...&#13;">
+											<annotatedElement idref="4ca30c7c-91ad-4269-947b-05941e012cd1"/>
+										</Comment>
+									</ownedComment>
+									<generalization>
+										<Generalization uuid="22800711-03f6-4b04-af7f-1d1bf70f17a1" general="b830a3e0-a0ed-4c39-98f4-7f65f8a47c18"/>
+									</generalization>
+									<ownedAttribute>
+										<Property uuid="3c1ff977-9104-4651-a790-9b94258f8e8e" name="m_sDebugMessage" visibility="public" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<defaultValue>
+												<LiteralString uuid="868dcf94-ad92-4a32-ab4f-44915eb5d473" visibility="public" value="&quot;&quot;"/>
+											</defaultValue>
+										</Property>
+									</ownedAttribute>
+									<ownedOperation>
+										<Operation uuid="b87c2d03-8915-410b-ad1f-309e63ee6997" name="OnDebugMessage" visibility="public">
+											<appliedStereotype>
+												<StereotypeApplication uuid="1c4383fb-65ab-4188-bf0e-2d1034f3250e" classifier="00121102-7512-11d9-86f2-000476a22f44">
+													<slot>
+														<Slot uuid="dc8febaa-b9fa-4575-bee8-cc0dea87b404" definingFeature="00131102-7512-11d9-86f2-000476a22f44">
+															<value>
+																<InstanceValue uuid="8abf4db1-d047-44cb-bd2b-ac8f149f164a" visibility="public" instance="00414102-7510-11d9-86f2-000476a22f44"/>
+															</value>
+														</Slot>
+													</slot>
+												</StereotypeApplication>
+											</appliedStereotype>
+											<ownedParameter>
+												<Parameter uuid="b62e8b1e-8ced-4571-bc67-fa2aed658f5f" name="str" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66"/>
+												<Parameter uuid="2205cbf0-2d9d-40eb-afba-46f2787c840f" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+											</ownedParameter>
+										</Operation>
+									</ownedOperation>
+								</Class>
+							</nestedClassifier>
+							<ownedOperation>
+								<Operation uuid="8cec54e4-1ddb-46f7-912b-5882681e6c94" name="STMTester" visibility="public">
+									<appliedStereotype>
+										<StereotypeApplication uuid="16852024-bee2-4323-84f7-ff8fe0dbea8a" classifier="11194c22-fedc-4e94-8547-ec925c28a37e"/>
+									</appliedStereotype>
+								</Operation>
+								<Operation uuid="f7be20ac-3c51-48d4-a14a-ebbd823069b8" name="UpdateDisplay" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="578d9f70-437f-4863-af84-a7c88d277c5c" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="51ae26f3-5a81-4564-8238-db9a88f33a17" name="UpdateCurrentStateTree" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="bd3fedcd-b2ed-4962-bd58-d358a910db88" name="state" type="67b90e2c-9ca1-4992-a517-607040a716aa"/>
+										<Parameter uuid="33baf88b-ec6a-4465-a123-6aee5aaa058c" name="node" type="913c916e-dcee-410b-a3f6-d08a96c82f5c"/>
+										<Parameter uuid="811004c0-ea8b-4c61-ba0c-577c541ec6d2" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="ce154a3e-9a5e-410e-9664-554b74087c3b" name="initComponents" visibility="private">
+									<ownedParameter>
+										<Parameter uuid="880ca368-61b4-4b0d-ba9a-f26a6456f6fe" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+								<Operation uuid="c88c1ce7-8749-4375-b3f4-a1361fe0912e" name="main" visibility="public" isStatic="true">
+									<ownedParameter>
+										<Parameter uuid="28cc64f3-5edd-4f1d-ab1d-b5c370a9b67f" name="args" type="d95b43b0-037d-4ede-8de7-6f8b7157bf66">
+											<lowerValue>
+												<LiteralString uuid="1da12cb9-bdac-4f22-9335-f4a061272951" visibility="public" value="*"/>
+											</lowerValue>
+											<upperValue>
+												<LiteralString uuid="0b688b31-cca3-4542-89e8-5bf6990e2b65" visibility="public" value="*"/>
+											</upperValue>
+										</Parameter>
+										<Parameter uuid="18ad9fad-278f-413e-be90-5d6d195a29ab" name="return" direction="return" type="71dff5dd-543f-46fe-8c5c-1f7884d610e9"/>
+									</ownedParameter>
+								</Operation>
+							</ownedOperation>
+						</Class>
+					</packagedElement>
+					<profileApplication>
+						<ProfileApplication uuid="c00a935b-0c0f-4a63-972e-576ba06d00fe" appliedProfile="00000102-7510-11d9-86f2-000476a22f44"/>
+					</profileApplication>
+				</Package>
+				<Profile uuid="00000102-7510-11d9-86f2-000476a22f44" name="Java Profile" visibility="public" editable="false">
+					<packagedElement>
+						<Enumeration uuid="00013102-7510-11d9-86f2-000476a22f44" name="AnnotationPresets" visibility="public">
+							<ownedLiteral>
+								<EnumerationLiteral uuid="00114102-7510-11d9-86f2-000476a22f44" name="Deprecated" visibility="public"/>
+								<EnumerationLiteral uuid="00214102-7510-11d9-86f2-000476a22f44" name="Documented" visibility="public"/>
+								<EnumerationLiteral uuid="00314102-7510-11d9-86f2-000476a22f44" name="Inherited" visibility="public"/>
+								<EnumerationLiteral uuid="00414102-7510-11d9-86f2-000476a22f44" name="Override" visibility="public"/>
+								<EnumerationLiteral uuid="00514102-7510-11d9-86f2-000476a22f44" name="Retention" visibility="public"/>
+								<EnumerationLiteral uuid="00614102-7510-11d9-86f2-000476a22f44" name="SuppressWarnings" visibility="public"/>
+								<EnumerationLiteral uuid="00714102-7510-11d9-86f2-000476a22f44" name="Target" visibility="public"/>
+							</ownedLiteral>
+						</Enumeration>
+						<Stereotype uuid="ed09a6a8-e0f4-4def-af8b-bbcdb59b0618" name="final" visibility="public" baseClass="Parameter" guiSortPriority="380"/>
+						<Stereotype uuid="f62d0f48-ea20-432d-8d80-cc6287ea9319" name="synchronized" visibility="public" baseClass="Operation" guiSortPriority="360"/>
+						<Stereotype uuid="b5a42000-424b-4275-b71d-1f491ca8a0ee" name="transient" visibility="public" baseClass="Property" guiSortPriority="350"/>
+						<Stereotype uuid="3f8b6371-98a3-4643-8864-1232db225757" name="volatile" visibility="public" baseClass="Property" guiSortPriority="340"/>
+						<Stereotype uuid="fc24c4b2-7e63-43bf-aa66-edbed0fc7dfc" name="native" visibility="public" baseClass="Operation" guiSortPriority="370"/>
+						<Stereotype uuid="9a715cf5-bf0a-4044-9a0e-058bc044465d" name="strictfp" visibility="public" baseClass="Operation" guiSortPriority="330"/>
+						<Stereotype uuid="8fa7f5ad-fed0-4d8e-8750-73827b236e29" name="strictfp" visibility="public" baseClass="Class" guiSortPriority="330"/>
+						<Stereotype uuid="004724ce-ec3e-4328-a4f9-32bf7db7dd93" name="strictfp" visibility="public" baseClass="Interface" guiSortPriority="330"/>
+						<Stereotype uuid="c898c1a3-547b-4a84-ad06-908fd57678c2" name="namespace" visibility="public" baseClass="Package" guiSortPriority="690"/>
+						<Stereotype uuid="11194c22-fedc-4e94-8547-ec925c28a37e" name="constructor" visibility="public" baseClass="Operation" guiSortPriority="690"/>
+						<Stereotype uuid="00011102-7512-11d9-86f2-000476a22f44" name="static" visibility="public" baseClass="Class" guiSortPriority="390"/>
+						<Stereotype uuid="00021102-7512-11d9-86f2-000476a22f44" name="static" visibility="public" baseClass="Enumeration" guiSortPriority="390"/>
+						<Stereotype uuid="00031102-7512-11d9-86f2-000476a22f44" name="static" visibility="public" baseClass="Interface" guiSortPriority="390"/>
+						<Stereotype uuid="00041102-7512-11d9-86f2-000476a22f44" name="annotationType" visibility="public" baseClass="Interface" guiSortPriority="690"/>
+						<Stereotype uuid="00051102-7512-11d9-86f2-000476a22f44" name="annotationTypeElement" visibility="public" baseClass="Property" guiSortPriority="690"/>
+						<Stereotype uuid="00061102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Class" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00071102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00081102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Enumeration" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00091102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="000a1102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Interface" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="000b1102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="000c1102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="EnumerationLiteral" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="000d1102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="000e1102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Parameter" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="000f1102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00101102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Property" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00111102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<Stereotype uuid="00121102-7512-11d9-86f2-000476a22f44" name="annotations" visibility="public" baseClass="Operation" guiSortPriority="590">
+							<ownedAttribute>
+								<Property uuid="00131102-7512-11d9-86f2-000476a22f44" name="modifiers" visibility="public" type="00013102-7510-11d9-86f2-000476a22f44"/>
+							</ownedAttribute>
+						</Stereotype>
+						<PrimitiveType uuid="80bf4906-7a11-45fc-b6ec-40ebe7fdbd38" name="byte" visibility="public"/>
+						<PrimitiveType uuid="14fce034-87ef-45fc-a003-d0300413e44b" name="char" visibility="public"/>
+						<PrimitiveType uuid="1256a74d-961a-4a8c-a25e-234c4bd3c55c" name="short" visibility="public"/>
+						<PrimitiveType uuid="308d9740-87d8-4fa8-91c3-85e1c8a42328" name="int" visibility="public"/>
+						<PrimitiveType uuid="6941bad4-9c46-4098-8d04-8afe8cf67c00" name="long" visibility="public"/>
+						<PrimitiveType uuid="d6f1dc72-e6ac-472b-81a4-78c87d437511" name="float" visibility="public"/>
+						<PrimitiveType uuid="bca1bdf5-bc77-4e79-b595-1f17af1e4de5" name="double" visibility="public"/>
+						<PrimitiveType uuid="5281ff9f-1b8c-4bf7-9b56-9003e2791461" name="boolean" visibility="public"/>
+						<PrimitiveType uuid="71dff5dd-543f-46fe-8c5c-1f7884d610e9" name="void" visibility="public"/>
+					</packagedElement>
+				</Profile>
+				<Package uuid="00000004-7510-11d9-86f2-000476a22f44" name="Unknown Externals" visibility="public" editable="false">
+					<packagedElement>
+						<Class uuid="a2fc0ec3-8d54-48a6-a7e8-5d3626dbf81a" name="javax.swing.JToolBar" visibility="public"/>
+						<Class uuid="4c1ea993-1861-4c98-a479-43f896f3fb02" name="javax.swing.JTextArea" visibility="public"/>
+						<Class uuid="b6d4d8fb-68ad-41d5-8de3-6a384112dc21" name="javax.swing.JTree" visibility="public"/>
+						<Class uuid="7e44f505-1563-40f8-b6cb-a23dc62036a2" name="javax.swing.JSplitPane" visibility="public"/>
+						<Class uuid="29d5a605-9353-4347-b3ea-1e743b08d041" name="javax.swing.JScrollPane" visibility="public"/>
+						<Class uuid="913c916e-dcee-410b-a3f6-d08a96c82f5c" name="DefaultMutableTreeNode" visibility="public"/>
+						<Class uuid="d95b43b0-037d-4ede-8de7-6f8b7157bf66" name="String" visibility="public"/>
+						<Class uuid="14ff7b8b-7232-4dd4-b841-ae1b42816e8b" name="javax.swing.JFrame" visibility="public"/>
+					</packagedElement>
+				</Package>
+			</packagedElement>
+		</Package>
+	</ModelHistory>
+</UModel>
