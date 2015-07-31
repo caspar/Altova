@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$ref": "#/definitions/object_03",
+  "definitions": {
+    "object_01": {
+      "title": "items",
+      "type": "object",
+      "required": [
+        "item"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "item": {
+          "type": "array",
+          "title": "item",
+          "items": {
+            "type": "object",
+            "required": [
+              "partNum",
+              "productName",
+              "quantity",
+              "price",
+              "shipDate"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "partNum": {
+                "type": "string"
+              },
+              "productName": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "number"
+              },
+              "price": {
+                "type": "number"
+              },
+              "comment": {
+                "type": "string"
+              },
+              "shipDate": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "object_02": {
+      "type": "object",
+      "required": [
+        "orderDate",
+        "shipTo",
+        "billTo",
+        "items"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "orderDate": {
+          "type": "string"
+        },
+        "shipTo": {
+          "type": "object",
+          "required": [
+            "name",
+            "street",
+            "city"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "street": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "postcode": {
+              "type": "number"
+            },
+            "zip": {
+              "type": "number"
+            }
+          }
+        },
+        "billTo": {
+          "type": "object",
+          "required": [
+            "name",
+            "street",
+            "city"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "street": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "postcode": {
+              "type": "number"
+            },
+            "zip": {
+              "type": "number"
+            }
+          }
+        },
+        "items": {
+          "$ref": "#/definitions/object_01"
+        }
+      }
+    },
+    "object_03": {
+      "type": "object",
+      "required": [
+        "Customer",
+        "PurchaseOrders"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "Customer": {
+          "type": "string"
+        },
+        "PurchaseOrders": {
+          "type": "array",
+          "title": "PurchaseOrders",
+          "items": {
+            "$ref": "#/definitions/object_02"
+          }
+        }
+      }
+    }
+  }
+}

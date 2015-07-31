@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="Customers" library="xml" uid="3" kind="14">
+					<properties/>
+					<view rbx="212" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Customers" expanded="1">
+										<entry name="Customer" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Customers.xsd" inputinstance="Customers.xml" outputinstance="Customers.xml" instanceroot="{}Customers"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<vertices/>
+			</graph>
+		</structure>
+	</component>
+</mapping>

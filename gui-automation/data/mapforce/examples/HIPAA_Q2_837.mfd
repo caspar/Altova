@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2016 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="837-Q2" library="text" uid="2" kind="16">
+					<properties/>
+					<view rbx="300" rby="200"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Envelope" expanded="1">
+										<entry name="Interchange" expanded="1">
+											<entry name="Group" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text inputinstance="C:\work\gui-automation\data\mapforce\examples\837-Q2.x12" encoding="1" byteorder="1" byteordermark="0" type="edi" kind="EDIX12" config="HIPAA.X12/Envelope.Config">
+							<settings isidoc="false" writeuna="true" syntaxlevel="A" controllingagency="UNO" syntaxversionnumber="4" requestacknowledgement="true" interchangecontrolversionnumber="" terminatewithlinefeed="true" autocompletedata="true" unpackedformat="false">
+								<separators repetition="%5E" escape="" decimal="." segment="~" segmentcode="*" subcomponent="" component="\" dataelement="*"/>
+								<validation>
+									<case action="stop" kind="undefined"/>
+									<case action="stop" kind="missing-segment"/>
+									<case action="stop" kind="missing-group"/>
+									<case action="report+reject" kind="missing-field-or-composite"/>
+									<case action="report+reject" kind="extra-data"/>
+									<case action="report+reject" kind="invalid-field-value"/>
+									<case action="report+reject" kind="invalid-date"/>
+									<case action="report+reject" kind="invalid-time"/>
+									<case action="report+reject" kind="extra-repeat"/>
+									<case action="report+reject" kind="numeric-overflow"/>
+									<case action="report+reject" kind="data-element-too-short"/>
+									<case action="report+reject" kind="data-element-too-long"/>
+									<case action="stop" kind="unexpected-eof"/>
+									<case action="report+reject" kind="invalid-codelist-value"/>
+									<case action="report+reject" kind="semantic"/>
+									<case action="stop" kind="segment-not-in-message"/>
+									<case action="stop" kind="unrecognized-segment-id"/>
+									<case action="report+reject" kind="impl-not-used-present"/>
+									<case action="report+reject" kind="not-all-data-parsed"/>
+								</validation>
+							</settings>
+							<messages>
+								<message type="837-Q2"/>
+							</messages>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<vertices/>
+			</graph>
+		</structure>
+	</component>
+</mapping>
